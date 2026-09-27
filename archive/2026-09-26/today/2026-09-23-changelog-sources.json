@@ -1,0 +1,91 @@
+{
+  "status": "preparation_only_not_shipped_manifest",
+  "previous_shipped_baseline": "2026-09-22 Android 17 Evolution X v12.2",
+  "repositories": [
+    {
+      "repository": "device_xiaomi_sm8250-common",
+      "branch": "aosp-17",
+      "candidate_head": "cbd5d4122d885b9015f6c220048169bcd76c7616"
+    },
+    {
+      "repository": "device_xiaomi_alioth",
+      "branch": "aosp-17",
+      "candidate_head": "c6c2e9834d0ab940791f5aac2067927f1b1466ae"
+    },
+    {
+      "repository": "vendor_xiaomi_alioth",
+      "branch": "aosp-17",
+      "candidate_head": "a3972583b004e3964766a48e681e007b9335ef67"
+    },
+    {
+      "repository": "vendor_xiaomi_sm8250-common",
+      "branch": "aosp-17",
+      "candidate_head": "ff4a56a52f50211e0d6a6147dabe5a1017faa95c"
+    },
+    {
+      "repository": "kernel_xiaomi_sm8250",
+      "branch": "aosp-16",
+      "candidate_head": "10f8a106de65d4fb5cd9c2f2fe2714f11d97bcd5"
+    },
+    {
+      "repository": "hardware_xiaomi",
+      "branch": "cnb",
+      "candidate_head": "cab7a52105183c03ed90f219250e88fb6e7d36db"
+    },
+    {
+      "repository": "device_xiaomi_camera",
+      "branch": "aosp-17",
+      "candidate_head": "d7356c295a5794a9af362e4553a745213da6e2d9"
+    },
+    {
+      "repository": "frameworks_av",
+      "branch": "cnb",
+      "candidate_head": "8fc27178f6fa4a1a1eb0cc3df66b33109f0ed300"
+    },
+    {
+      "repository": "frameworks_base",
+      "branch": "cnb",
+      "candidate_head": "315a6cb52f29f058238c6c6633866e19983134c7"
+    },
+    {
+      "repository": "hardware_qcom-caf_sm8250_display",
+      "branch": "cnb",
+      "candidate_head": "0e25857599b3a609e957a0d0418ec2b3dd264480"
+    },
+    {
+      "repository": "hardware_qcom-caf_sm8250_audio",
+      "branch": "cnb",
+      "candidate_head": "0782faad5715864c62912fda9749836d3f1cdd70"
+    },
+    {
+      "repository": "hardware_qcom-caf_sm8250_media",
+      "branch": "cnb",
+      "candidate_head": "6b3d466f134ef3b3f8b1da5c7ffa8bb234249292"
+    },
+    {
+      "repository": "android_hardware_nxp_nfc",
+      "branch": "lineage-24.0",
+      "candidate_head": "8be75516d6d3cfff3a95ca2f249f0b36ceededb9"
+    },
+    {
+      "repository": "decompiled_miui_camera",
+      "branch": "aosp-17",
+      "candidate_head": "5d44b65a922060da4e6af10566bb4fd8e29b5f7b"
+    },
+    {
+      "repository": "system_core",
+      "branch": "aosp-17",
+      "candidate_head": "49332070280a25dedec0373e9f4237a2babd4d57"
+    },
+    {
+      "repository": "vendor_qcom_opensource_usb",
+      "branch": "aosp-17",
+      "candidate_head": "e6c812452801a1d18445d31a08344ae72df25c04"
+    },
+    {
+      "repository": "system_memory_libmeminfo",
+      "branch": "alioth-dmabuf-fallback",
+      "candidate_head": "f0f3040dbe74aaa13c8d8a763661a873acd77798"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "status": "sanitized_public",
+  "archive_path": "archive/2026-09-26",
+  "archive_tree": "7f150614c5e143886a479e10712cd776d320b4d4",
+  "entries": [
+    {
+      "path": "memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe89c94066613444b87a6bfdf7b381d5dbb0bd8f"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56d13bd2685faa0a89bfb7f37cda5410a17c8c48"
+    },
+    {
+      "path": "continue-later",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db751d0e5af2998e4a2305663feb51ab5f956ee8"
+    },
+    {
+      "path": "evidence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79d9b9b9af84612832948a4e5eb9889e5621c195"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8678a3c060e360e17ed7a97dec7de1cbb9c7e9c8"
+    },
+    {
+      "path": "today",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40cad587afbc9679588b9d0a58a314f0bfcff250"
+    },
+    {
+      "path": "EVIDENCE_INDEX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad782315543400bb4a46d03e7f0e29f90fa470f9"
+    },
+    {
+      "path": "REMOTE_WORKFLOW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84e8b916b85f8be6fb8fcf17cf8c279e7ef2e74b"
+    },
+    {
+      "path": "CURRENT_STATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee98e081281c803a04d0058e44b541cd9fb20b6"
+    },
+    {
+      "path": "START_HERE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "027a20f4f620abffe1ccefff8c6b0429f7ff6256"
+    },
+    {
+      "path": "templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a8ab8d40ddd9a4bde41ebf3d9ccade6911ee617"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7a335931d1220da283782e9ff6b7a9dd77fdb48"
+    },
+    {
+      "path": "AGENTS.override.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bc5f74162c11262a099ef9c0c3162e7cd7454d9"
+    },
+    {
+      "path": "INDEX.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3699e3b50c498c79337b9554f1e94e45e3aa7658"
+    },
+    {
+      "path": "OFFLOAD_PROTOCOL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44efdf09831fd28510c7b668106855e88378e201"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0552bf26db7a130e1636840ae89921bd5946d35a"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-09-24T06:14:50.917351+00:00",
+  "scope": "Remote default heads, not installed state or AI attribution counts. Source-tree paths are logical paths, not required local access.",
+  "repositories": [
+    {
+      "name": "device_xiaomi_sm8250-common",
+      "html_url": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common",
+      "default_branch": "aosp-17",
+      "head": "3c30e7d416cd91e51c1c95ce81d55b20e60c570c",
+      "role": "build_source",
+      "source_tree_paths": [
+        "device/xiaomi/sm8250-common"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c"
+    },
+    {
+      "name": "device_xiaomi_alioth",
+      "html_url": "https://github.com/PocoF3Releases/device_xiaomi_alioth",
+      "default_branch": "aosp-17",
+      "head": "1a6be06d1f0ae7e2ed232ac565bec8f0c4eb0413",
+      "role": "build_source",
+      "source_tree_paths": [
+        "device/xiaomi/alioth"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/1a6be06d1f0ae7e2ed232ac565bec8f0c4eb0413"
+    },
+    {
+      "name": "vendor_xiaomi_alioth",
+      "html_url": "https://github.com/PocoF3Releases/vendor_xiaomi_alioth",
+      "default_branch": "aosp-17",
+      "head": "a3972583b004e3964766a48e681e007b9335ef67",
+      "role": "build_source",
+      "source_tree_paths": [
+        "vendor/xiaomi/alioth"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a3972583b004e3964766a48e681e007b9335ef67"
+    },
+    {
+      "name": "vendor_xiaomi_sm8250-common",
+      "html_url": "https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common",
+      "default_branch": "aosp-17",
+      "head": "ff4a56a52f50211e0d6a6147dabe5a1017faa95c",
+      "role": "build_source",
+      "source_tree_paths": [
+        "vendor/xiaomi/sm8250-common"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/ff4a56a52f50211e0d6a6147dabe5a1017faa95c"
+    },
+    {
+      "name": "kernel_xiaomi_sm8250",
+      "html_url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250",
+      "default_branch": "aosp-17",
+      "head": "10f8a106de65d4fb5cd9c2f2fe2714f11d97bcd5",
+      "role": "build_source",
+      "source_tree_paths": [
+        "kernel/xiaomi/sm8250"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/10f8a106de65d4fb5cd9c2f2fe2714f11d97bcd5"
+    },
+    {
+      "name": ".github",
+      "html_url": "https://github.com/PocoF3Releases/.github",
+      "default_branch": "main",
+      "head": "22dbc69cb507229ee4720375e7af84c22635c825",
+      "role": "organization_profile",
+      "source_tree_paths": [],
+      "commit_url": "https://github.com/PocoF3Releases/.github/commit/22dbc69cb507229ee4720375e7af84c22635c825"
+    },
+    {
+      "name": "references_code",
+      "html_url": "https://github.com/PocoF3Releases/references_code",
+      "default_branch": "android13-miui14-cn_beta",
+      "head": "d301665e4c8d442a98cdc636c9f12e260bd1de0b",
+      "role": "reference",
+      "source_tree_paths": [],
+      "commit_url": "https://github.com/PocoF3Releases/references_code/commit/d301665e4c8d442a98cdc636c9f12e260bd1de0b"
+    },
+    {
+      "name": "hardware_xiaomi",
+      "html_url": "https://github.com/PocoF3Releases/hardware_xiaomi",
+      "default_branch": "cnb",
+      "head": "cab7a52105183c03ed90f219250e88fb6e7d36db",
+      "role": "build_source",
+      "source_tree_paths": [
+        "hardware/xiaomi"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/hardware_xiaomi/commit/cab7a52105183c03ed90f219250e88fb6e7d36db"
+    },
+    {
+      "name": "device_xiaomi_camera",
+      "html_url": "https://github.com/PocoF3Releases/device_xiaomi_camera",
+      "default_branch": "aosp-17",
+      "head": "1335f9ada0a7b9450f3f10658154300fc795c64c",
+      "role": "build_source",
+      "source_tree_paths": [
+        "device/xiaomi/camera"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/device_xiaomi_camera/commit/1335f9ada0a7b9450f3f10658154300fc795c64c"
+    },
+    {
+      "name": "frameworks_av",
+      "html_url": "https://github.com/PocoF3Releases/frameworks_av",
+      "default_branch": "cnb",
+      "head": "ae242b56da334c3b1605bbbc526cc4e8a47cce45",
+      "role": "build_source",
+      "source_tree_paths": [
+        "frameworks/av"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/frameworks_av/commit/ae242b56da334c3b1605bbbc526cc4e8a47cce45"
+    },
+    {
+      "name": "frameworks_base",
+      "html_url": "https://github.com/PocoF3Releases/frameworks_base",
+      "default_branch": "cnb",
+      "head": "5b6364793b5ba32629b30e3bf899616897429f02",
+      "role": "build_source",
+      "source_tree_paths": [
+        "frameworks/base"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/frameworks_base/commit/5b6364793b5ba32629b30e3bf899616897429f02"
+    },
+    {
+      "name": "hardware_qcom-caf_sm8250_display",
+      "html_url": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display",
+      "default_branch": "cnb",
+      "head": "0e25857599b3a609e957a0d0418ec2b3dd264480",
+      "role": "build_source",
+      "source_tree_paths": [
+        "hardware/qcom-caf/sm8250/display"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/0e25857599b3a609e957a0d0418ec2b3dd264480"
+    },
+    {
+      "name": "hardware_qcom-caf_sm8250_audio",
+      "html_url": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio",
+      "default_branch": "cnb",
+      "head": "0782faad5715864c62912fda9749836d3f1cdd70",
+      "role": "build_source",
+      "source_tree_paths": [
+        "hardware/qcom-caf/sm8250/audio"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/0782faad5715864c62912fda9749836d3f1cdd70"
+    },
+    {
+      "name": "hardware_qcom-caf_sm8250_media",
+      "html_url": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media",
+      "default_branch": "cnb",
+      "head": "6b3d466f134ef3b3f8b1da5c7ffa8bb234249292",
+      "role": "build_source",
+      "source_tree_paths": [
+        "hardware/qcom-caf/sm8250/media"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/6b3d466f134ef3b3f8b1da5c7ffa8bb234249292"
+    },
+    {
+      "name": "android_hardware_nxp_nfc",
+      "html_url": "https://github.com/PocoF3Releases/android_hardware_nxp_nfc",
+      "default_branch": "lineage-24.0",
+      "head": "8be75516d6d3cfff3a95ca2f249f0b36ceededb9",
+      "role": "build_source",
+      "source_tree_paths": [
+        "hardware/nxp/nfc"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/8be75516d6d3cfff3a95ca2f249f0b36ceededb9"
+    },
+    {
+      "name": "system_core",
+      "html_url": "https://github.com/PocoF3Releases/system_core",
+      "default_branch": "aosp-17",
+      "head": "49332070280a25dedec0373e9f4237a2babd4d57",
+      "role": "build_source",
+      "source_tree_paths": [
+        "system/core"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/system_core/commit/49332070280a25dedec0373e9f4237a2babd4d57"
+    },
+    {
+      "name": "vendor_qcom_opensource_usb",
+      "html_url": "https://github.com/PocoF3Releases/vendor_qcom_opensource_usb",
+      "default_branch": "aosp-17",
+      "head": "e6c812452801a1d18445d31a08344ae72df25c04",
+      "role": "build_source",
+      "source_tree_paths": [
+        "vendor/qcom/opensource/usb"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/e6c812452801a1d18445d31a08344ae72df25c04"
+    },
+    {
+      "name": "system_memory_libmeminfo",
+      "html_url": "https://github.com/PocoF3Releases/system_memory_libmeminfo",
+      "default_branch": "cnb",
+      "head": "09538b692cb43562e0dca90aebc565920a4a0841",
+      "role": "build_source",
+      "source_tree_paths": [
+        "system/memory/libmeminfo"
+      ],
+      "commit_url": "https://github.com/PocoF3Releases/system_memory_libmeminfo/commit/09538b692cb43562e0dca90aebc565920a4a0841"
+    },
+    {
+      "name": "Agents.md",
+      "html_url": "https://github.com/PocoF3Releases/Agents.md",
+      "default_branch": "main",
+      "head": "043108e0b98697fb4f538790b8ff92a17b70b643",
+      "role": "knowledge",
+      "source_tree_paths": [],
+      "commit_url": "https://github.com/PocoF3Releases/Agents.md/commit/043108e0b98697fb4f538790b8ff92a17b70b643"
+    },
+    {
+      "name": "vendor_xiaomi_camera",
+      "html_url": "https://gitlab.com/johnmart19/vendor_xiaomi_camera",
+      "default_branch": "aosp-17",
+      "head": "f13797ef3d93508756e06a4a185c9208dbc3ee88",
+      "role": "required_camera_prebuilts",
+      "source_tree_paths": [
+        "vendor/xiaomi/camera"
+      ],
+      "commit_url": "https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/f13797ef3d93508756e06a4a185c9208dbc3ee88"
+    }
+  ]
+}

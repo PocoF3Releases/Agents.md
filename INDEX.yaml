@@ -1,0 +1,103 @@
+schema_version: 1
+last_refreshed: '2026-09-27'
+entrypoints:
+  rules: AGENTS.md
+  current_state: CURRENT_STATE.md
+  overview: README.md
+  subsystem_index: INDEX.yaml
+  offload_protocol: OFFLOAD_PROTOCOL.md
+  start_here: START_HERE.md
+  evidence: memory/validation.md
+  source_heads: memory/repositories/TRACKED_HEADS.yaml
+  archive: archive/README.md
+  record_template: templates/record.md
+read_order:
+  normal:
+  - AGENTS.md
+  - CURRENT_STATE.md
+  optional_router: INDEX.yaml
+  offload_or_write:
+  - memory/agent-memory-workflow.md
+subsystems:
+  project:
+    status: durable
+    memory: memory/kernel-frameworks.md
+  device_tree_workspace:
+    status: durable
+    memory: memory/kernel-frameworks.md
+  kernel_frameworks:
+    status: recorded_boot_with_limits
+    memory: memory/kernel-frameworks.md
+  nfc:
+    status: runtime_validated
+    memory: memory/kernel-frameworks.md
+  android_build_optimization:
+    status: durable
+    memory: memory/kernel-frameworks.md
+  dolby_audio:
+    status: ac4_stereo_validated
+    memory: memory/dolby-audio.md
+  miuicamera:
+    status: finalized_no_planned_changes
+    memory: memory/miuicamera.md
+  xiaomiparts:
+    status: system_dialog_user_confirmed
+    memory: memory/xiaomiparts-device-ux.md
+  localization:
+    status: durable
+    memory: memory/xiaomiparts-device-ux.md
+  release_state:
+    status: a16_installed_release_draft_a17_published_2026_09_23
+    memory: memory/android16-android17-release-state.md
+  release_assets:
+    status: durable
+    memory: memory/release-assets.md
+  agent_memory:
+    status: durable
+    memory: memory/agent-memory-workflow.md
+  reference_indexes:
+    status: historical_tool_checkpoint
+    memory: memory/agent-memory-workflow.md
+  git_history:
+    status: durable
+    memory: memory/agent-memory-workflow.md
+  validation:
+    status: recorded_evidence
+    memory: memory/validation.md
+  remote_sources:
+    status: recorded_not_live
+    memory: archive/README.md
+    heads: memory/repositories/TRACKED_HEADS.yaml
+  repository_ai_ledgers:
+    status: historical_not_reaudited
+    memory: archive/README.md
+cold_archives:
+- path: archive/2026-09-26
+  policy: skip_by_default
+  archive_tree: 7f150614c5e143886a479e10712cd776d320b4d4
+maintenance:
+  policy:
+    memory: memory/agent-memory-workflow.md
+  validation:
+    memory: memory/validation.md
+legacy_routes:
+  REMOTE_WORKFLOW.md: memory/agent-memory-workflow.md
+  EVIDENCE_INDEX.md: memory/validation.md
+  memory/project-overview.md: memory/kernel-frameworks.md
+  memory/device-tree-workspace.md: memory/kernel-frameworks.md
+  memory/nfc.md: memory/kernel-frameworks.md
+  memory/android-build-optimization.md: memory/kernel-frameworks.md
+  memory/localization.md: memory/xiaomiparts-device-ux.md
+  memory/git-history-conventions.md: memory/agent-memory-workflow.md
+  memory/reference-indexes.md: memory/agent-memory-workflow.md
+  memory/repositories/README.md: archive/README.md
+  memory/repositories/LATEST_COMMITS.json: memory/repositories/TRACKED_HEADS.yaml
+  memory/miuicamera-history.md: archive/2026-09-26/memory/miuicamera-history.md
+  continue-later/CAMERA.md: memory/miuicamera.md
+  templates/chat-offload-template.md: templates/record.md
+  templates/cross-model-handoff.md: templates/record.md
+  templates/model-compatibility-checks.md: archive/2026-09-26/templates/model-compatibility-checks.md
+budgets:
+  startup_bytes: 5000
+  root_rules_bytes: 3000
+  topic_bytes: 10000

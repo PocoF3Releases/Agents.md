@@ -1,0 +1,176 @@
+schema_version: 1
+last_refreshed: '2026-09-26'
+# Router maintenance date; not a refresh of recorded source heads or device tests.
+entrypoints:
+  rules: AGENTS.md
+  start_here: START_HERE.md
+  overview: README.md
+  current_state: CURRENT_STATE.md
+  subsystem_index: INDEX.yaml
+  offload_protocol: OFFLOAD_PROTOCOL.md
+  latest_changelog: today/2026-09-24-changelog-preparation.md
+  latest_audio_ux: today/2026-09-24-ac4-validation-and-thermal-dialog.md
+  latest_baseline: today/2026-09-24-repository-baseline-alignment.md
+  remote_workflow: REMOTE_WORKFLOW.md
+  evidence: EVIDENCE_INDEX.md
+  agent_memory: memory/agent-memory-workflow.md
+  cross_model_handoff: templates/cross-model-handoff.md
+  compatibility_checks: templates/model-compatibility-checks.md
+read_order:
+  normal:
+  - AGENTS.md
+  - START_HERE.md
+  - CURRENT_STATE.md
+  - selected subsystem memory
+  - newest relevant today records
+  optional_router: INDEX.yaml
+  reuse_loaded_revision: true
+  offload_or_write:
+  - OFFLOAD_PROTOCOL.md
+cold_archives:
+- path: today/2026-09-22-codex-memory-snapshot/
+  policy: skip_by_default
+  purpose: historical imported Codex memory snapshot
+- path: today/2026-09-22-codex-memory-import.md
+  policy: historical_index
+  purpose: provenance/index for the imported snapshot
+subsystems:
+  agent_memory:
+    status: durable
+    memory: memory/agent-memory-workflow.md
+    primary_today: today/2026-09-26-astra-sol-compatibility.md
+    related_today:
+    - today/2026-09-26-agent-memory-guidance-review.md
+    target_models:
+    - gpt-6-astra
+    - gpt-5.6-sol
+    compatibility_scope: shared-text-records-and-workflow
+    behavior_evaluation: not_run
+  project:
+    status: durable
+    memory: memory/project-overview.md
+  device_tree_workspace:
+    status: active
+    memory: memory/device-tree-workspace.md
+    primary_today: today/2026-09-24-repository-baseline-alignment.md
+    related_today:
+    - today/2026-09-23-sm8250-rootdir-android17-modernization.md
+    active_focus: Aligned Android 17 repository baseline and mandatory camera integration
+    branch: aosp-17
+    repository_roles:
+      device_specific: PocoF3Releases/device_xiaomi_alioth
+      common_platform: PocoF3Releases/device_xiaomi_sm8250-common
+      camera_integration: PocoF3Releases/device_xiaomi_camera
+    notes:
+    - Current remote heads and logical source-tree mappings are in memory/repositories/LATEST_COMMITS.json;
+      local access is not required.
+    - Both camera trees are mandatory device dependencies; latest runtime evidence
+      remains the September 23 camera checkpoint.
+    - Repo manifests were not changed during checkout alignment; verify state after
+      resync.
+  miuicamera:
+    status: finalized_no_planned_changes
+    resume_policy: explicit_user_request_only
+    memory: memory/miuicamera.md
+    primary_today: today/2026-09-24-camera-finalized.md
+    related_today:
+    - today/2026-09-23-camera-video-validation.md
+    repository_roles:
+      build_integration: PocoF3Releases/device_xiaomi_camera
+      build_integration_branch: aosp-17
+      proprietary_output: vendor/xiaomi/camera
+      proprietary_output_repository: GitLab johnmart19/vendor_xiaomi_camera:aosp-17
+    notes:
+    - Maintainer accepted the final implementation and known limitations; no further
+      development or test campaign is planned.
+    - Reopen only upon a new explicit user request. Historical rollback/experiment
+      records are not active instructions.
+    - Both camera trees remain required; existing fixes were already announced in
+      the September 23 release.
+    current_heads:
+      device_xiaomi_camera: 1335f9ada0a7b9450f3f10658154300fc795c64c
+      vendor_xiaomi_camera: f13797ef3d93508756e06a4a185c9208dbc3ee88
+  nfc:
+    status: runtime-validated
+    memory: memory/nfc.md
+    primary_today: today/2026-09-22-nxp-nfc-teardown-regression.md
+    repository_roles:
+      implementation: PocoF3Releases/android_hardware_nxp_nfc
+  dolby_audio:
+    status: ac4-stereo-playback-validated
+    primary_today: today/2026-09-24-ac4-validation-and-thermal-dialog.md
+    memory: memory/dolby-audio.md
+    repository_roles:
+      app_policy_ui: hardware/xiaomi/dolby
+      framework_native: frameworks/av
+    notes:
+    - Alioth uses legacy Audio HAL 6.0.
+    - Modern spatial-audio architecture is not a target.
+  xiaomiparts:
+    status: thermal-dialog-user-validated
+    primary_today: today/2026-09-24-ac4-validation-and-thermal-dialog.md
+    memory: memory/xiaomiparts-device-ux.md
+  kernel_frameworks:
+    status: boot-verified-with-remaining-issues
+    memory: memory/kernel-frameworks.md
+    primary_today: today/2026-09-23-latest-kernel-boot-verification.md
+  android_build_optimization:
+    status: durable
+    memory: memory/android-build-optimization.md
+  release_state:
+    status: checkpoint
+    memory: memory/android16-android17-release-state.md
+  release_assets:
+    status: durable
+    memory: memory/release-assets.md
+    preparation_today: today/2026-09-24-changelog-preparation.md
+    semantic_delta_index: today/2026-09-24-changelog-delta-index.md
+    shipped_semantic_cutoff: 2026-09-23
+  reference_indexes:
+    status: durable
+    memory: memory/reference-indexes.md
+    primary_today: today/2026-09-24-repoindex-upgrade.md
+    tool_repository: https://github.com/johnmart19/repoindex
+    tool_branch: main
+  git_history:
+    status: durable
+    memory: memory/git-history-conventions.md
+  localization:
+    status: durable
+    memory: memory/localization.md
+  repository_ai_ledgers:
+    status: historical_not_reaudited
+    memory: memory/repositories/README.md
+    notes:
+    - Per-repository Markdown ledgers are historical attribution evidence, not active
+      membership or live counts.
+  remote_sources:
+    status: remote-heads-observed
+    memory: memory/repositories/README.md
+    heads: memory/repositories/TRACKED_HEADS.yaml
+maintenance:
+  current_state:
+    update_when:
+    - active task status changes
+    - a pending runtime/build validation becomes verified
+    - the authoritative branch/commit for active work changes
+    do_not:
+    - copy full subsystem histories
+    - store speculative brainstorming
+  index:
+    update_when:
+    - a new durable subsystem file is created
+    - authoritative repository ownership changes
+    - a primary today record changes
+    do_not:
+    - list every dated file
+  repository_ledgers:
+    update_when:
+    - the user requests an AI contribution audit or refresh
+    - repository/branch topology materially changes
+    - a tracked AI-attributed commit is force-rewritten or removed
+    source_of_truth: GitHub commit history
+    index: memory/repositories/README.md
+    tracked_heads: memory/repositories/TRACKED_HEADS.yaml
+    normal_refresh: fetch branch heads only; inspect commit range only when a saved
+      head changes

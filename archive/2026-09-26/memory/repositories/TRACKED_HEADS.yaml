@@ -1,0 +1,122 @@
+schema_version: 3
+last_refreshed: '2026-09-24T06:14:50.917351+00:00'
+scope: Public GitHub organization plus separately accessible knowledge repo and required
+  GitLab camera delivery; not a flashed manifest
+repositories:
+- repository: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common
+  branch: aosp-17
+  saved_head: 3c30e7d416cd91e51c1c95ce81d55b20e60c570c
+  role: build_source
+  source_tree_paths:
+  - device/xiaomi/sm8250-common
+- repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
+  branch: aosp-17
+  saved_head: 1a6be06d1f0ae7e2ed232ac565bec8f0c4eb0413
+  role: build_source
+  source_tree_paths:
+  - device/xiaomi/alioth
+- repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
+  branch: aosp-17
+  saved_head: a3972583b004e3964766a48e681e007b9335ef67
+  role: build_source
+  source_tree_paths:
+  - vendor/xiaomi/alioth
+- repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
+  branch: aosp-17
+  saved_head: ff4a56a52f50211e0d6a6147dabe5a1017faa95c
+  role: build_source
+  source_tree_paths:
+  - vendor/xiaomi/sm8250-common
+- repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
+  branch: aosp-17
+  saved_head: 10f8a106de65d4fb5cd9c2f2fe2714f11d97bcd5
+  role: build_source
+  source_tree_paths:
+  - kernel/xiaomi/sm8250
+- repository: https://github.com/PocoF3Releases/.github
+  branch: main
+  saved_head: 22dbc69cb507229ee4720375e7af84c22635c825
+  role: organization_profile
+  source_tree_paths: []
+- repository: https://github.com/PocoF3Releases/references_code
+  branch: android13-miui14-cn_beta
+  saved_head: d301665e4c8d442a98cdc636c9f12e260bd1de0b
+  role: reference
+  source_tree_paths: []
+- repository: https://github.com/PocoF3Releases/hardware_xiaomi
+  branch: cnb
+  saved_head: cab7a52105183c03ed90f219250e88fb6e7d36db
+  role: build_source
+  source_tree_paths:
+  - hardware/xiaomi
+- repository: https://github.com/PocoF3Releases/device_xiaomi_camera
+  branch: aosp-17
+  saved_head: 1335f9ada0a7b9450f3f10658154300fc795c64c
+  role: build_source
+  source_tree_paths:
+  - device/xiaomi/camera
+- repository: https://github.com/PocoF3Releases/frameworks_av
+  branch: cnb
+  saved_head: ae242b56da334c3b1605bbbc526cc4e8a47cce45
+  role: build_source
+  source_tree_paths:
+  - frameworks/av
+- repository: https://github.com/PocoF3Releases/frameworks_base
+  branch: cnb
+  saved_head: 5b6364793b5ba32629b30e3bf899616897429f02
+  role: build_source
+  source_tree_paths:
+  - frameworks/base
+- repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
+  branch: cnb
+  saved_head: 0e25857599b3a609e957a0d0418ec2b3dd264480
+  role: build_source
+  source_tree_paths:
+  - hardware/qcom-caf/sm8250/display
+- repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio
+  branch: cnb
+  saved_head: 0782faad5715864c62912fda9749836d3f1cdd70
+  role: build_source
+  source_tree_paths:
+  - hardware/qcom-caf/sm8250/audio
+- repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media
+  branch: cnb
+  saved_head: 6b3d466f134ef3b3f8b1da5c7ffa8bb234249292
+  role: build_source
+  source_tree_paths:
+  - hardware/qcom-caf/sm8250/media
+- repository: https://github.com/PocoF3Releases/android_hardware_nxp_nfc
+  branch: lineage-24.0
+  saved_head: 8be75516d6d3cfff3a95ca2f249f0b36ceededb9
+  role: build_source
+  source_tree_paths:
+  - hardware/nxp/nfc
+- repository: https://github.com/PocoF3Releases/system_core
+  branch: aosp-17
+  saved_head: 49332070280a25dedec0373e9f4237a2babd4d57
+  role: build_source
+  source_tree_paths:
+  - system/core
+- repository: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb
+  branch: aosp-17
+  saved_head: e6c812452801a1d18445d31a08344ae72df25c04
+  role: build_source
+  source_tree_paths:
+  - vendor/qcom/opensource/usb
+- repository: https://github.com/PocoF3Releases/system_memory_libmeminfo
+  branch: cnb
+  saved_head: 09538b692cb43562e0dca90aebc565920a4a0841
+  role: build_source
+  source_tree_paths:
+  - system/memory/libmeminfo
+- repository: https://github.com/PocoF3Releases/Agents.md
+  branch: main
+  saved_head: 043108e0b98697fb4f538790b8ff92a17b70b643
+  role: knowledge
+  source_tree_paths: []
+- repository: https://gitlab.com/johnmart19/vendor_xiaomi_camera
+  branch: aosp-17
+  saved_head: f13797ef3d93508756e06a4a185c9208dbc3ee88
+  role: required_camera_prebuilts
+  source_tree_paths:
+  - vendor/xiaomi/camera
