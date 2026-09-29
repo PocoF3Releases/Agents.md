@@ -2,13 +2,7 @@
 
 ## Host context
 
-The Android build workstation used for this project has:
-
-- AMD Ryzen 7 5800X3D-class CPU;
-- 128 GB RAM;
-- Linux build environment.
-
-Despite the available RAM, an unrestricted `-j$(nproc)` MiuiCamera/ROM build previously coincided with an Ubuntu crash. For isolated validation, conservative concurrency such as `-j4` is a safer first step before increasing parallelism.
+An unrestricted `-j$(nproc)` MiuiCamera/ROM build previously coincided with an Ubuntu crash. For isolated validation, conservative concurrency such as `-j4` is a safer first step before increasing parallelism.
 
 ## Dexpreopt direction
 

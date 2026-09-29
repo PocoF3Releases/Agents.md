@@ -21,3 +21,15 @@ Read target-local `parts/AGENTS.md`, AGENTS.md or TRANSLATING.md; resolve the cu
 ## MiSound title correction
 
 September 24 source change [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9ba) hides both action-bar and collapsing titles in DiracActivity, sizes the toolbar to navigation content and disables expansion. The logo and back navigation remain. This prevents duplicate branding and blank expanded space. [V-UI](validation.md#v-ui) records its untested-on-device status.
+
+## September 28 source additions
+
+Common 71b3157 extends the existing per-app touch page, not a duplicate game service. Alioth firmware-backed aim sensitivity, tap stability and three expert presets are added; response/sensitivity use range 1..5. Preserve old four-value profiles. Zero selects firmware defaults/individual tuning; apply expert presets last because individual writes disable expert mode. Global sampling owns its preset while enabled and refreshes the foreground profile when disabled. Other devices keep existing controls. Locale commits 5d1ff87 and 0290d37 extend translations; validate newly introduced strings separately. Stock/shipped/installed HAL identity and kernel modes were inspected; resource/host tests passed, but this is not full new-UI device acceptance.
+
+0d7df19 reports buffered sysfs write failures, including close failures, instead of saving false success. Clear Speaker requests transient focus, prefers the built-in speaker, rejects communication mode, stops on focus loss/non-speaker routes/errors and is scoped to the visible screen. Refresh-service destruction state is visible to Binder callbacks. Host write tests and stub-assisted Java compilation passed; recorded node checks were on Android 16, not new Android 17 runtime certification. 9af4ed6 removes unused sensor helpers.
+
+## Alioth ultrasound proximity
+
+Alioth 05f9b24 patches the exact stock MIUS zero-result poll timeout branch to retry after its existing flush check and mutex unlock. Stock maps the eight-second idle timeout to EIO, causing repeated sensor-service errors. Preserve genuine errors and event handling. Extraction is guarded by stock/patched SHA-256, is idempotent and rejects unknown binaries; inspect extract-files for the exact hashes before operating on a new dump.
+
+Recorded temporary mount stopped idle errors and delivered near/far events (0/5 cm); the maintainer reported proximity working in a call. This is scoped acceptance of that test, not proof for all call apps or other SM8250 devices. Keep the source extraction fix and packaged blob consistent; do not require a permanent root mount. Later AW8697 work is owned by [haptics](haptics.md).

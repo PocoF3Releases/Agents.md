@@ -1,26 +1,28 @@
 # Current state and topic directory
 
-Updated **2026-09-27** from conversation evidence; no fresh device tests or head survey.
+Updated **2026-09-30**: public refs and tools inspected; device results retain their recorded scope.
 
-**Android 16:** Evolution X v11.11 was rebuilt and clean-installed by the maintainer, with Magisk installed. The maintainer confirmed audible AC-4 playback. September 27 release copy/banner is drafted; public release and ZIP identity remain unverified. See the [release ledger](memory/android16-android17-release-state.md) and [A16 acceptance](memory/validation.md#v-a16).
+**Android 17:** camera is finalized. Latest Alioth haptics source is pushed and compile/host-tested, but physical validation awaits the maintainer's rebuild/reconnection. Do not request the device again until available or claim PWLE/FOAM support. September 23 / v12.2 is the recorded published baseline, not the installed identity of later development builds.
 
-**Android 17:** September 23 / v12.2 remains its recorded published baseline. Prior acceptance retains its recorded scope; source checks alone do not prove installed behavior. Camera is finalized with accepted limitations and no planned work.
+**Android 16:** rebuilt and clean-installed; audible AC-4 confirmed. Exact ZIP identity/publication of later drafts remains unverified. See the release ledger before writing changelogs.
 
 ## Read one topic
 
-| Task | Canonical record |
+| Task | Record |
 | --- | --- |
-| Device trees, rootdir, kernel, NFC, ART/build flags, historical Turnip/UVC/input | [Platform](memory/kernel-frameworks.md) |
-| Dolby, game/VoIP processing, AC-4, stock ABI | [Audio](memory/dolby-audio.md) |
-| Camera delivery, accepted modes, rejected approaches | [Camera](memory/miuicamera.md) |
-| XiaomiParts, thermal/touch, MiSound, translations | [Device UX](memory/xiaomiparts-device-ux.md) |
-| New changelog, published features, Android 16 maintenance | [Release ledger](memory/android16-android17-release-state.md) |
-| Banner, avatar, typography and visual checks | [Artwork](memory/release-assets.md) |
-| A test result, acceptance limit or missing raw artifact | [Validation register](memory/validation.md) |
-| Knowledge writes, Git conventions, model handoffs, repoindex | [Maintenance](memory/agent-memory-workflow.md) |
+| Windows/WSL backup and recovery | [Recovery](memory/workstation-recovery.md) |
+| Ghidra, LLVM, JADX, ADB and build helpers | [Tools](memory/android-tooling.md) |
+| repoindex restore, copies and databases | [Indexing](memory/repoindex.md) |
+| AW8697 implementation and pending tests | [Haptics](memory/haptics.md) |
+| Rootdir, kernel, NFC, build compatibility | [Platform](memory/kernel-frameworks.md) |
+| Dolby, AC-4, stock audio ABI | [Audio](memory/dolby-audio.md) |
+| Camera delivery and accepted limitations | [Camera](memory/miuicamera.md) |
+| Parts, touch, proximity and translations | [Device UX](memory/xiaomiparts-device-ux.md) |
+| Changelog baseline and A16/A17 releases | [Release ledger](memory/android16-android17-release-state.md) |
+| Banner and visual checks | [Artwork](memory/release-assets.md) |
+| Acceptance and missing evidence | [Validation](memory/validation.md) |
+| Knowledge edits and model handoff | [Maintenance](memory/agent-memory-workflow.md) |
 
-[Recorded source map](memory/repositories/TRACKED_HEADS.yaml) owns repository URLs, branches and observed heads. Resolve only the relevant live head before new code work. It is not a flashed manifest; its knowledge-repository entry is historical too.
+[Source map](memory/repositories/TRACKED_HEADS.yaml) owns observed URLs/branches/heads. It is not a flashed manifest. Recheck relevant refs before code work; local font divergence and upstream libmeminfo ownership are recorded there.
 
-Validation limits and unresolved historical findings live in the [register](memory/validation.md); consult the relevant entry, not the full archive.
-
-Do not start work just because a record contains an old next step. For provenance not covered by a topic, use [the archive directory](archive/README.md), then retrieve only the required source record.
+Old next steps are not new authorization. Use [archive routing](archive/README.md) only for provenance missing from the current topic.

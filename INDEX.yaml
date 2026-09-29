@@ -1,5 +1,5 @@
 schema_version: 1
-last_refreshed: '2026-09-27'
+last_refreshed: '2026-09-30'
 entrypoints:
   rules: AGENTS.md
   current_state: CURRENT_STATE.md
@@ -56,8 +56,8 @@ subsystems:
     status: durable
     memory: memory/agent-memory-workflow.md
   reference_indexes:
-    status: historical_tool_checkpoint
-    memory: memory/agent-memory-workflow.md
+    status: tool_checked_databases_not_rescanned
+    memory: memory/repoindex.md
   git_history:
     status: durable
     memory: memory/agent-memory-workflow.md
@@ -65,16 +65,25 @@ subsystems:
     status: recorded_evidence
     memory: memory/validation.md
   remote_sources:
-    status: recorded_not_live
+    status: public_refs_verified_2026_09_30
     memory: archive/README.md
     heads: memory/repositories/TRACKED_HEADS.yaml
   repository_ai_ledgers:
     status: historical_not_reaudited
     memory: archive/README.md
+  workstation_recovery:
+    status: documented_not_reinstalled
+    memory: memory/workstation-recovery.md
+  android_tooling:
+    status: local_inventory_checked
+    memory: memory/android-tooling.md
+  haptics:
+    status: source_ready_physical_validation_pending
+    memory: memory/haptics.md
 cold_archives:
 - path: archive/2026-09-26
   policy: skip_by_default
-  archive_tree: 7f150614c5e143886a479e10712cd776d320b4d4
+  archive_tree: bf24e595a6ff1563ec45198e44ff92eb810f3b1f
 maintenance:
   policy:
     memory: memory/agent-memory-workflow.md

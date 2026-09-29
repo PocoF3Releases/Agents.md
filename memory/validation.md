@@ -1,10 +1,10 @@
 # Validation register
 
-All entries below summarize **recorded evidence**, not fresh tests by this reorganization. Source presence, host checks, device observation, user acceptance and publication are distinct. Follow a linked record only when its detail is needed. Unknown present device/root/install state remains unknown.
+Entries distinguish source, host, device and user evidence. Dates describe the observation; importing a result does not rerun it. Device/install state is unknown unless explicitly established.
 
 ## V-A16
 
-**Imported from this conversation on 2026-09-27; no fresh device commands in this update.** The maintainer reported Android 16 built, clean-installed and rooted with Magisk. After the AC-4 video test, the maintainer confirmed "Yes, sounds good." This establishes audible playback for that sample, not all presentations, codecs or routes. Exact installed ZIP hash and exported test transcript are unavailable here.
+**Imported from this conversation on 2026-09-27; no fresh device commands in this update.** The maintainer reported Android 16 built, clean-installed and rooted with Magisk. After the AC-4 video test, the maintainer confirmed "Yes, sounds good." This establishes audible playback for that sample, not all presentations, codecs or routes. Exact installed ZIP hash is unavailable.
 
 Prior-session summaries report boot/rootdir checks and Bluetooth dependency review; these remain reported results, not newly reproduced tests. No Bluetooth headphones or WFD receiver were available. Do not certify headset audio, WFD streaming, all controller inputs or Android 16 camera modes. Draft artwork is not publication evidence.
 
@@ -16,7 +16,7 @@ Opt-in on/off, 32/64-bit syntax checks were recorded. Acceptance supersedes the 
 
 ## V-PARTS
 
-**2026-09-24 — source-checked and user-confirmed.** Final common `3c30e7d` passed recorded source/diff checks; maintainer approved the System Profile screenshot/result. Earlier `db27251` was insufficient. Shared per-app source is not a separately executed per-app visual test. No original screenshot is stored here. [Approval and exact implementation](../archive/2026-09-26/today/2026-09-24-ac4-validation-and-thermal-dialog.md).
+**2026-09-24 — source-checked and user-confirmed.** Final common `3c30e7d` passed recorded source/diff checks; maintainer approved the System Profile screenshot/result. Earlier `db27251` was insufficient. Shared per-app source is not a separately executed per-app visual test. [Approval and exact implementation](../archive/2026-09-26/today/2026-09-24-ac4-validation-and-thermal-dialog.md).
 
 ## V-UI
 
@@ -69,10 +69,16 @@ Ultrasound poll errors remained. No fatal crash/ANR or restarting service was fo
 
 ## V-KNOWLEDGE
 
-**Historical governance evidence:** the first September 26 review recorded 22 unit tests and 95 local references; the follow-up recorded 115 references without rerunning unchanged tests. Its eight paired-model replay scenarios were not executed. These are not fresh Sol/Astra benchmarks. [First record](../archive/2026-09-26/today/2026-09-26-agent-memory-guidance-review.md); [follow-up](../archive/2026-09-26/today/2026-09-26-astra-sol-compatibility.md). Results of this structural migration are recorded separately in [archive/README.md](../archive/README.md).
-
-Official-guidance refresh 2026-09-27: fetched the Astra skills/prompts article and memory documentation, then updated completion and recall guidance. This is a documentation review, not a paired-model evaluation. See [maintenance](agent-memory-workflow.md#official-guidance-reviewed-2026-09-27).
+Earlier structural checks and unexecuted model scenarios remain in [archive/README.md](../archive/README.md). The September 30 [official-guidance review](agent-memory-workflow.md#official-guidance-reviewed-2026-09-30) is documentation research, not a paired-model benchmark. Local knowledge checks validate structure, not device behavior.
 
 ## Availability
 
 Shareable historical Android records remain under archive/2026-09-26; personal client-memory exports were removed. Selected AC-4 Java/output files remain active. Raw camera clips, full logcats, original screenshots, stock/Marble ELF dumps, WSL checkouts, local indexes and session transcripts were not made available merely by this move. Canonical APK delivery is on GitLab. Request only the identified missing artifact when needed for a new conclusion; never substitute a different stock version silently.
+
+## V-HAPTICS
+
+**2026-09-30 — source/target-compile/host-test checkpoint, no latest device acceptance.** Hardware dd9b48e and kernel 0dea12dc are published. The [haptics record](haptics.md) identifies firmware, ABI, tests, superseded approaches and remaining physical thresholds. Prior subjective approvals applied to earlier versions; the maintainer explicitly deferred reconnection until after a future rebuild. No full ROM build or new device test is claimed.
+
+## V-RECOVERY
+
+**2026-09-30 — inventory/documentation only.** Public refs, tooling and relevant source inspected. Recovery instructions were not executed; no distro export/install/restore or ROM build. Structural checks do not certify private backups or installed images.

@@ -24,10 +24,20 @@ The SNxxx client in `snxxx/halimpl/hal/phNxpNciHal.cc` must snapshot its queue h
 
 ## Build policy
 
-Recorded Android 17 choice: `PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed` for unprofiled preinstalled code, preserving profile-guided behavior where available. Do not globally force `everything` or restore obsolete `DEX_PREOPT_DEFAULT := generate-vdex-and-image` without current justification. Separate 6/8 GB device RAM tiers from the 128 GB build host. An unrestricted build previously coincided with a host crash; `-j4` was the conservative isolated-check starting point, not a measured universal optimum. Builds still require explicit authorization. [Original build record](../archive/2026-09-26/memory/android-build-optimization.md).
+Recorded Android 17 choice: `PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed` for unprofiled preinstalled code, preserving profile-guided behavior where available. Do not globally force `everything` or restore obsolete `DEX_PREOPT_DEFAULT := generate-vdex-and-image` without current justification. Separate 6/8 GB device RAM tiers from host build resources. An unrestricted build previously coincided with a host crash; `-j4` was the conservative isolated-check starting point, not a measured universal optimum. Builds still require explicit authorization. [Original build record](../archive/2026-09-26/memory/android-build-optimization.md).
 
 ## Historical work, not an active backlog
 
 Turnip: Endfield loaded stock `vulkan.adreno.so` despite package opt-in. Shell-domain R8 success did not prove app-domain selection; investigate GraphicsEnvironment / `getPackageInfo(MATCH_SYSTEM_ONLY|GET_META_DATA)` identity/filtering before repeating force-queryable workarounds. DeviceAsWebcam product gating was recorded uncommitted/unvalidated; kernel/HAL presence was not host UVC proof. DS4 composite-input repair required re-enabling an initially suppressed touchpad when gamepad/joystick interfaces joined. Current inclusion of these historical items is unestablished. [Removed raw-import boundary](../archive/PRIVACY.md).
 
 Latest recorded boot outcomes, unresolved Cirrus/ultrasound behavior and the later libmeminfo correction are owned by [V-BOOT](validation.md#v-boot) and [V-MEMINFO](validation.md#v-meminfo), not duplicated as current failures here.
+
+## September 30 source reconciliation
+
+The public libmeminfo fork remains available, but the inspected local checkout uses `Evolution-X/system_memory_libmeminfo`, detached at the source-map head. Its optional BPF iterator log-spam correction is present upstream. Do not restore a fork override just because it appears in an older ledger. Android 17 frameworks/base has independent high-FPS screen recording and blur suppression commits; inspect current upstream integration before replaying either.
+
+Optional font work belongs to vendor/extras branch `aosp-17-oh-my-font`, with actual font assets rather than a build-time downloader. The local head differs from its published branch; reconcile before build, preserving local changes. It is not a default requirement for every build.
+
+GPU donor-driver, Turnip and game-setting experiments were parked by the maintainer. No broadly validated Unity/Unreal optimization, F8 GPU-driver compatibility, frame-generation port or unlocked 120fps is established. Keep thermal protection intact. Experimental root modules are not production fixes or required recovery dependencies.
+
+Standalone hardware/xiaomi fixes: cbb57f1 rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; 30c28d4 initializes fingerprint pointers and cleans failed opens; a2cf3b4 replaces unsafe delayed-session references with weak references and idempotent close; 5e49959 initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.

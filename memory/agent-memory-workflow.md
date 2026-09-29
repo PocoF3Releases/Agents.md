@@ -44,7 +44,7 @@ Recorded external repoindex: `johnmart19/repoindex:main`, 1.1.0 / `c79c1508c3c7f
 
 Python 3.10+ / PyYAML 6.x. The checker validates active Markdown local links, YAML routes, validation IDs, frozen-archive metadata and project byte budgets. Archive originals are not auto-loaded into agent context. Connector inventory mode explicitly uses verified path/tree metadata for unavailable files; it does not pretend to have a full checkout. External URLs, technical truth, all historical links, privacy and model/device behavior require separate review. The archive's source tree and migration coverage are documented in [archive/README.md](../archive/README.md).
 
-## Official guidance reviewed 2026-09-27
+## Official guidance reviewed 2026-09-30
 
 Reviewed OpenAI's [Astra model guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra) and [skills/AGENTS guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra). Project application:
 
@@ -56,7 +56,7 @@ Reviewed OpenAI's [Astra model guidance](https://developers.openai.com/api/docs/
 
 For prompt processing, separate stable rules from changing task state/evidence. After context loss, recover the goal, constraints, decisions, exact work state and remaining step from its owner or optional handoff. Do not reload entire transcripts or store private reasoning. API caching/compaction is client behavior, not enabled by repository text. No claim of automatic account-memory synchronization or minimum token use is made.
 
-This is a documentation review, not an Astra/Sol behavior benchmark. The model-specific Markdown endpoint failed; the official HTML model guide and Astra article were retrieved. Historical guidance remains archive provenance.
+The September 30 refresh retrieved the official Astra article and model guidance. This is a documentation review, not an Astra/Sol behavior benchmark. Use narrow topic routing and explicit completion criteria; do not force full-tree scans, blanket tool calls, delegation or repeated tests. Reinstall/tooling instructions are optional task references, not startup requirements. Historical guidance remains archive provenance.
 
 ## Rendering and parser contract
 
