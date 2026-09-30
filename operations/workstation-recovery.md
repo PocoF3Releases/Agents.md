@@ -1,6 +1,6 @@
 # Restore after a Windows reinstall
 
-Status: source and tool inventory checked 2026-09-30; recovery procedure documented, not executed. These are portable instructions, not permission to erase, install, sync or rebuild. For analysis tools use [Android tooling](android-tooling.md); for code versions use the [source map](repositories/TRACKED_HEADS.yaml).
+Status: source and tool inventory checked 2026-09-30; recovery procedure documented, not executed. These are portable instructions, not permission to erase, install, sync or rebuild. For analysis tools use [Android tooling](android-tooling.md); for code versions use the [source map](../state/repositories.yaml).
 
 ## Before erasing the old installation
 
@@ -58,7 +58,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/check.py
 ```
 
-Read AGENTS.md, CURRENT_STATE.md, then only the task's topic. Without PC access an agent can still use the repository, public source refs and recorded validation. It cannot recover unavailable binaries or claim fresh device tests. Copying these records does not synchronize account memory or reinstall tools.
+Read AGENTS.md, CURRENT_STATE.md, then only the task's topic. The optional [Android-root router](../templates/android-root-AGENTS.md) can replace a generated full-tree census after preserving it separately and setting the correct workhub path. Without PC access an agent can still use the repository, public source refs and recorded validation. It cannot recover unavailable binaries or claim fresh device tests. Copying these records does not synchronize account memory or reinstall tools.
 
 ## Restore Android source deliberately
 

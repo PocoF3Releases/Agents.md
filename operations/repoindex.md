@@ -21,7 +21,7 @@ python3 ~/repoindex/repoindex.py status --root ~/evo17 --json
 python3 ~/repoindex/repoindex.py status --root ~/references_code --json
 ```
 
-`status` reports stored root, scan/provenance and coverage, not present freshness. After moving a root, verify stored paths and source identity; rebuild deliberately if mismatched. Do not claim the old September 9 snapshot describes today's checkout. [V-INDEX](validation.md#v-index) records historical checks and limitations.
+`status` reports stored root, scan/provenance and coverage, not present freshness. After moving a root, verify stored paths and source identity; rebuild deliberately if mismatched. The September 30 read-only query found stored A17 scan date September 28: 1756352 files, 10180486 symbols, schema 2, zero recorded errors and coverage known. `live_tree_verified=false`; this is not a new scan or proof of current freshness. [V-INDEX](../state/validation.md#v-index) records historical checks and limitations.
 
 ## Scan and generate only when needed
 

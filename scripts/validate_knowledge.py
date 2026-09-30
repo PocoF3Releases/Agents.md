@@ -144,6 +144,61 @@ def anchors(text):
     return result
 
 
+def repository_errors(data):
+    """Validate portable source identities without trusting them as installed state."""
+    errors = []
+    if not isinstance(data, dict) or data.get('schema_version') != 4:
+        return ['source map requires schema_version 4']
+    if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(data.get('observed', ''))):
+        errors.append('source map requires an observation date')
+    records = data.get('repositories')
+    if not isinstance(records, list):
+        return errors + ['source map requires repositories list']
+    urls, paths = set(), set()
+    for record in records:
+        if not isinstance(record, dict):
+            errors.append('invalid source record')
+            continue
+        url = record.get('repository', '')
+        if not isinstance(url, str) or not url.startswith('https://') or url in urls:
+            errors.append('invalid or duplicate repository URL')
+        urls.add(str(url))
+        refs = record.get('refs')
+        if not isinstance(refs, dict) or record.get('selected_ref') not in refs:
+            errors.append('selected source ref missing')
+            continue
+        for branch, sha in refs.items():
+            if not isinstance(branch, str) or not branch or not re.fullmatch(r'[0-9a-f]{40}', str(sha)):
+                errors.append('invalid branch or immutable source head')
+        source_paths = record.get('source_tree_paths')
+        if not isinstance(source_paths, list):
+            errors.append('source_tree_paths must be a list')
+            continue
+        for path in source_paths:
+            try:
+                norm, frag = local_path('', path)
+                if norm is None or frag or norm != path or path in paths:
+                    raise ValueError('duplicate or unsafe source tree path')
+                paths.add(path)
+            except (ValueError, TypeError):
+                errors.append('duplicate or unsafe source tree path')
+        local = record.get('local_a17')
+        if local is not None and local != 'matches_selected_ref':
+            if not isinstance(local, dict) or not re.fullmatch(r'[0-9a-f]{40}', str(local.get('head', ''))):
+                errors.append('invalid local source observation')
+    return errors
+
+
+def privacy_errors(text):
+    """Bounded pattern scan; do not echo possible secrets in diagnostics."""
+    checks = {
+        'personal home path': r'(?:/home/[A-Za-z0-9_.-]+|[A-Za-z]:[\\/]Users[\\/][A-Za-z0-9_.-]+)',
+        'private key': r'-----BEGIN (?:OPENSSH |RSA |EC |DSA )?PRIVATE KEY-----',
+        'credential-shaped token': r'\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-(?:proj-)?[A-Za-z0-9_-]{24,})\b',
+    }
+    return [name for name, pattern in checks.items() if re.search(pattern, text)]
+
+
 def validate(root: Path, inventory=None, extra=()):
     root = root.resolve()
     errors, refs = [], 0
@@ -242,14 +297,14 @@ def validate(root: Path, inventory=None, extra=()):
         if idx.get('cold_archives') != [expected_archive]:
             raise ValueError('cold archive route must match preservation manifest')
         md = {p.relative_to(root).as_posix() for p in root.glob('*.md')}
-        for folder in ('memory', 'templates', 'evidence'):
+        for folder in ('memory', 'operations', 'state', 'references', 'templates', 'evidence'):
             md.update(p.relative_to(root).as_posix() for p in (root / folder).rglob('*.md'))
-        md.add('archive/README.md')
+        md.update({'archive/README.md', 'archive/PRIVACY.md'})
         md.update(extra)
         paragraphs = {}
         for name in sorted(md):
             text = read(name)
-            for issue in markdown_errors(text):
+            for issue in markdown_errors(text) + privacy_errors(text):
                 fail(f'{name}: {issue}')
             for target in links(text):
                 check(name, target)
@@ -259,7 +314,7 @@ def validate(root: Path, inventory=None, extra=()):
                     if normalized in paragraphs and paragraphs[normalized] != name:
                         fail(f'duplicate substantial paragraph: {paragraphs[normalized]} / {name}')
                     paragraphs[normalized] = name
-            if name.startswith('memory/') and len(text.encode()) > idx['budgets']['topic_bytes']:
+            if name.startswith(('memory/', 'operations/', 'state/', 'references/')) and len(text.encode()) > idx['budgets']['topic_bytes']:
                 fail(f'{name}: topic byte budget exceeded')
         startup = sum(len(read(p).encode()) for p in idx['read_order']['normal'])
         if startup > idx['budgets']['startup_bytes']:
@@ -269,6 +324,19 @@ def validate(root: Path, inventory=None, extra=()):
         for p in root.rglob('*.yaml'):
             if not p.relative_to(root).as_posix().startswith('archive/'):
                 load_yaml(p.read_text(encoding='utf-8'))
+                for issue in privacy_errors(p.read_text(encoding='utf-8')):
+                    fail(f'{p.relative_to(root)}: {issue}')
+        if 'source_heads' in idx['entrypoints']:
+            sources = load_yaml(read(idx['entrypoints']['source_heads']))
+            for issue in repository_errors(sources):
+                fail(issue)
+            owned = {p for record in sources.get('repositories', [])
+                     for p in record.get('source_tree_paths', [])}
+            for name, record in idx['subsystems'].items():
+                if any(p not in owned for p in record.get('source_paths', [])):
+                    fail(f'{name}: unknown source-tree owner')
+        if any((root / '.github/workflows').glob('*')):
+            fail('hosted workflow present; this repository uses local checks')
         for name, expected in manifest.get('preserved_active_blobs', {}).items():
             if git_hash('blob', local_file(name).read_bytes()) != expected:
                 fail(f'reused artifact changed: {name}')

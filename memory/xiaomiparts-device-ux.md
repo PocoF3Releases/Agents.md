@@ -2,7 +2,7 @@
 
 ## Final dialog correction
 
-Common-tree `3c30e7d416cd91e51c1c95ce81d55b20e60c570c` fixes `parts/src/org/lineageos/settings/thermal/ThermalSettingsFragment.java` / `showProfileDialog`: measure overlap with actual topPanel/buttonPanel, clip rows between them and add only required padding while preserving original padding. Update padding only when needed to avoid layout loops. This supersedes `db27251`, whose fixed-inset removal let rows draw below the title and Cancel. System/per-app dialogs share source, but only the System Profile result has supplied visual acceptance. [V-PARTS](validation.md#v-parts).
+Common-tree `3c30e7d416cd91e51c1c95ce81d55b20e60c570c` fixes `parts/src/org/lineageos/settings/thermal/ThermalSettingsFragment.java` / `showProfileDialog`: measure overlap with actual topPanel/buttonPanel, clip rows between them and add only required padding while preserving original padding. Update padding only when needed to avoid layout loops. This supersedes `db27251`, whose fixed-inset removal let rows draw below the title and Cancel. System/per-app dialogs share source, but only the System Profile result has supplied visual acceptance. [V-PARTS](../state/validation.md#v-parts).
 
 ## Preserve functionality
 
@@ -20,7 +20,7 @@ Read target-local `parts/AGENTS.md`, AGENTS.md or TRANSLATING.md; resolve the cu
 
 ## MiSound title correction
 
-September 24 source change [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9ba) hides both action-bar and collapsing titles in DiracActivity, sizes the toolbar to navigation content and disables expansion. The logo and back navigation remain. This prevents duplicate branding and blank expanded space. [V-UI](validation.md#v-ui) records its untested-on-device status.
+September 24 source change [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9ba) hides both action-bar and collapsing titles in DiracActivity, sizes the toolbar to navigation content and disables expansion. The logo and back navigation remain. This prevents duplicate branding and blank expanded space. [V-UI](../state/validation.md#v-ui) records its untested-on-device status.
 
 ## September 28 source additions
 

@@ -13,9 +13,7 @@ lunch
 
 Choose the product/release/**user** combination offered by that checkout. Do not start a build merely to restore tools.
 
-Optional Gerrit helper: `repopick` is unrelated to **repoindex**. Current envsetup wraps `lineage/scripts/repopick/repopick.py`. Inspect `repopick --help`; an authorized exact patchset can use `repopick -g https://review.lineageos.org -s review-fix <change>/<patchset>`. Check existing Change-Ids first. Avoid abandon/reset/force/pull options unless required and authorized. GitHub commits use ordinary reviewed Git cherry-picks.
-
-The working tree supplies build JDK/toolchains. Do not change global Java or compiler symlinks to make an analysis tool start. For haptics-only builds, after an appropriate user lunch, targets are `android.hardware.vibrator-service.xiaomi_aw8697` and `xiaomi_aw8697_vibrator_test`. A target build still needs source/build prerequisites and authorization; it does not validate a complete image.
+The working tree supplies build JDK/toolchains. Do not change global Java or compiler symlinks to make an analysis tool start. For haptics-only builds, after an appropriate user lunch, the production target is `android.hardware.vibrator-service.xiaomi_aw8697`. The old device-test target was removed; do not request it from the current tree. A target build still needs source/build prerequisites and authorization; it does not validate a complete image.
 
 ## Android Clang and LLVM
 
@@ -70,7 +68,9 @@ Host utilities commonly needed: `git`, `git-lfs`, `python3`, `python3-venv`, `py
 
 ## ADB, fastboot and root boundary
 
-Linux `/usr/bin/adb` and `/usr/bin/fastboot` exist in the inspected distro. Windows Platform Tools can instead own the USB device. Choose one owner; competing servers or USB passthrough often explain an empty device list. Set an explicit private path to Windows `adb.exe` when calling it from WSL. After reinstall, accept the on-phone debugging authorization; do not publish its serial.
+Linux `/usr/bin/adb` and `/usr/bin/fastboot` exist in the inspected distro; the successful latest haptics session invoked `~/bin/adb`. Inspect `command -v adb` and any wrapper before choosing a server. Windows Platform Tools can instead own the USB device. Choose one owner; competing servers or USB passthrough often explain an empty device list. Set an explicit private path to Windows `adb.exe` when calling it from WSL. After reinstall, accept the on-phone debugging authorization; do not publish its serial.
+
+The temporary haptics test also showed that a bind from a nosuid data mount can prevent a vendor HAL from starting. Its [tested deployment record](../evidence/haptics/2026-09-30.md#temporary-deployment-and-recovery) used an isolated executable tmpfs; do not weaken SELinux or global mount flags to work around it.
 
 For native Linux USB access, follow [Microsoft usbipd guidance](https://learn.microsoft.com/en-us/windows/wsl/connect-usb): identify the bus with `usbipd list`, bind as administrator, then `usbipd attach --wsl --busid <bus-id>`. This removes the device from ordinary Windows ownership until detached. Recheck `adb devices -l`; fastboot is a separate USB mode and may need reattachment. Avoid exposing the ADB server on the network merely to bridge WSL.
 
@@ -78,6 +78,6 @@ Use `adb shell getprop ro.build.fingerprint`, `uname`, hashes and service state 
 
 ## Reference data
 
-For source indexing, use the dedicated [repoindex guide](repoindex.md).
+For source indexing, use the dedicated [repoindex guide](repoindex.md). repoindex is unrelated to Android Repo or Gerrit repopick.
 
 Common reference locations: `~/miui/out` (Alioth stock), `~/miui/decompiled/jadx-frameworks`, `~/references_code/miui_proprietary_cpp`, `~/munch/out`, `~/myron/out`, `~/oneplus9r/out`, `~/alioth-r-oss`, `~/kernel_devicetree_alioth-r-oss`. These are optional local conventions, not files hosted by this knowledge repo. Preserve firmware version/hashes with private dump backups. Public reference code is indexed in the source map. Reacquire only a needed artifact from its verified source if a backup is missing; do not silently substitute a newer OEM dump.

@@ -18,6 +18,7 @@ class KnowledgeTests(unittest.TestCase):
         self.put('CURRENT_STATE.md', '# State\n[Topic](memory/topic.md)\n')
         self.put('memory/topic.md', '# Topic\n## V-ONE\nTest scope.\n')
         self.put('archive/README.md', '# Archive\n')
+        self.put('archive/PRIVACY.md', '# Public boundary\n')
         self.put('archive/snapshot/old.txt', 'preserved\n')
         original = [dict(path='old.txt', mode='100644', type='blob', sha=git_hash('blob', b'preserved\n'))]
         self.put('archive/snapshot/AGENTS.override.md', '# Historical\n')

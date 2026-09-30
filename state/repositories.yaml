@@ -1,66 +1,68 @@
-schema_version: 3
-last_refreshed: '2026-09-30'
-scope: Verified public remote refs; not a flashed or complete effective manifest.
-  Fork existence does not prove build selection.
+schema_version: 4
+observed: '2026-09-30'
+scope: Public branch refs and bounded local A17 observations; not a flashed or complete effective manifest.
+  A16 refs were queried, not rebuilt here.
+workhub:
+  repository: https://github.com/PocoF3Releases/Agents.md
+  branch: main
+  revision: enclosing_git_commit
 repositories:
 - repository: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common
-  branch: aosp-17
-  saved_head: 070778fdfa9478ae8165e34050ddcfa5ba53d996
   role: build_source
   source_tree_paths:
   - device/xiaomi/sm8250-common
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: 070778fdfa9478ae8165e34050ddcfa5ba53d996
+    aosp-17: c9991e69213da966c219db0051971825d5100a1a
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
-  branch: aosp-17
-  saved_head: 551ee945d766e05e2526da68294f4e8351feb6db
   role: build_source
   source_tree_paths:
   - device/xiaomi/alioth
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: 8e4c4517a35fe652e5810724445a377381ed7b85
-    aosp-17: 551ee945d766e05e2526da68294f4e8351feb6db
+    aosp-17: 63ca83c0d74edbc7cc28cb26c8545329dbe9278e
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
-  branch: aosp-17
-  saved_head: b1cfe2a288ed5aff78e9699222960d27433baa5f
   role: build_source
   source_tree_paths:
   - vendor/xiaomi/alioth
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: a3972583b004e3964766a48e681e007b9335ef67
     aosp-17: b1cfe2a288ed5aff78e9699222960d27433baa5f
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
-  branch: aosp-17
-  saved_head: ff4a56a52f50211e0d6a6147dabe5a1017faa95c
   role: build_source
   source_tree_paths:
   - vendor/xiaomi/sm8250-common
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: 37ea70355f044e20e0921593e7a0c712ad9a8284
     aosp-17: ff4a56a52f50211e0d6a6147dabe5a1017faa95c
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
-  branch: aosp-17
-  saved_head: 0dea12dc2a81b4b172649b8389c79ee0e6cd9275
   role: build_source
   source_tree_paths:
   - kernel/xiaomi/sm8250
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: 10f8a106de65d4fb5cd9c2f2fe2714f11d97bcd5
-    aosp-17: 0dea12dc2a81b4b172649b8389c79ee0e6cd9275
+    aosp-17: 4830f4eaba5f92eefc1a50f73925960d77b5c8ad
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/.github
-  branch: main
-  saved_head: 18e4bf7951b4adc3d98cdf0f0560ac512eb69c58
   role: organization_profile
   source_tree_paths: []
-  available_refs:
+  selected_ref: main
+  refs:
     main: 18e4bf7951b4adc3d98cdf0f0560ac512eb69c58
 - repository: https://github.com/PocoF3Releases/references_code
-  branch: android13-miui14-cn_beta
-  saved_head: d301665e4c8d442a98cdc636c9f12e260bd1de0b
   role: reference
   source_tree_paths: []
-  available_refs:
+  selected_ref: android13-miui14-cn_beta
+  refs:
     LA.UM.8.12.r1-11900-sm8250.0: ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: 953194cfd08d028c2ccd718f5d0374531d9716d2
@@ -75,136 +77,153 @@ repositories:
     vendor_xiaomi_frameworks: 56aa2e9ed68fb484f18401ffdbae2698bc453c06
     vendor_xiaomi_proprietary: d22a991cdb0fbb1c85d361a642e5f93a1fdd9f43
 - repository: https://github.com/PocoF3Releases/hardware_xiaomi
-  branch: cnb
-  saved_head: dd9b48e08ee85bb1df3ea23fe88ce7abf2fcacf2
   role: build_source
   source_tree_paths:
   - hardware/xiaomi
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-16: 59188cfbdba67b63ecf1882cf6bba94cf33cf35a
-    cnb: dd9b48e08ee85bb1df3ea23fe88ce7abf2fcacf2
+    cnb: 13f83e57025867aefa2688b8e8bc3c19d361ebde
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
-  branch: aosp-17
-  saved_head: 1335f9ada0a7b9450f3f10658154300fc795c64c
   role: build_source
   source_tree_paths:
   - device/xiaomi/camera
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: f6b6335124e3ae6bee303a7a6285839004defda4
     aosp-17: 1335f9ada0a7b9450f3f10658154300fc795c64c
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/frameworks_av
-  branch: cnb
-  saved_head: b3f37d1e0d3fe9a81b22deec04fd94fcdae3d3da
   role: build_source
   source_tree_paths:
   - frameworks/av
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-16: 1ffb8dc867f8745da1b9d0244f677e236b8bc0f9
     bka: cf5631a5d076d6c26b3c11746708c093d7910f4e
     cnb: b3f37d1e0d3fe9a81b22deec04fd94fcdae3d3da
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/frameworks_base
-  branch: cnb
-  saved_head: 0c7e1960cd7b338240379fb380ce1784b9b93dd2
   role: build_source
   source_tree_paths:
   - frameworks/base
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-16: 51dbd44a23cdf6d8ee5240640e3e803dd96ca588
     cnb: 0c7e1960cd7b338240379fb380ce1784b9b93dd2
     ozo-unimplemented: c62e85dbb8102a1c93a5af698ab85f668811b860
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
-  branch: cnb
-  saved_head: 0e25857599b3a609e957a0d0418ec2b3dd264480
   role: build_source
   source_tree_paths:
   - hardware/qcom-caf/sm8250/display
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-16: 5d273826557a9fa552fe2bbe2782a77de88de3ba
     cnb: 0e25857599b3a609e957a0d0418ec2b3dd264480
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio
-  branch: cnb
-  saved_head: 0782faad5715864c62912fda9749836d3f1cdd70
   role: build_source
   source_tree_paths:
   - hardware/qcom-caf/sm8250/audio
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-16: 61933854acb722b202074e0885d9a15597c6658b
     cnb: 0782faad5715864c62912fda9749836d3f1cdd70
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media
-  branch: cnb
-  saved_head: 6b3d466f134ef3b3f8b1da5c7ffa8bb234249292
   role: build_source
   source_tree_paths:
   - hardware/qcom-caf/sm8250/media
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-16: dc0f8fc6f4840f0f1e11b6b454016ef4ed94dd5b
     cnb: 6b3d466f134ef3b3f8b1da5c7ffa8bb234249292
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/android_hardware_nxp_nfc
-  branch: lineage-24.0
-  saved_head: 8be75516d6d3cfff3a95ca2f249f0b36ceededb9
   role: build_source
   source_tree_paths:
   - hardware/nxp/nfc
-  available_refs:
+  selected_ref: lineage-24.0
+  refs:
     aosp-16: 8d875030628a4f8f93f53f47dfa9511bf195a48d
     lineage-24.0: 8be75516d6d3cfff3a95ca2f249f0b36ceededb9
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/system_core
-  branch: aosp-17
-  saved_head: d614cae1887d1a4efa8e83e22eac81be8538625c
-  role: build_source
+  role: retained_fork_upstream_used_locally
   source_tree_paths:
   - system/core
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: 5bda007290c19078c54767fcb780020f7f977f76
     aosp-17: d614cae1887d1a4efa8e83e22eac81be8538625c
+  local_a17:
+    branch: detached
+    head: 569a3d70d52b3a945c596726c7dac86e9ea1c144
+    tracked_changes: false
+    repository: https://github.com/Evolution-X/system_core
 - repository: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb
-  branch: aosp-17
-  saved_head: e6c812452801a1d18445d31a08344ae72df25c04
   role: build_source
   source_tree_paths:
   - vendor/qcom/opensource/usb
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: 5e998d729706c908d020d909835fd3e6de492a56
     aosp-17: e6c812452801a1d18445d31a08344ae72df25c04
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/system_memory_libmeminfo
-  branch: cnb
-  saved_head: 99e045dc5f65b828c50a2e8d96271f90a84b9ea1
   role: retained_fork_upstream_used_locally
   source_tree_paths:
   - system/memory/libmeminfo
-  available_refs:
+  selected_ref: cnb
+  refs:
     cnb: 99e045dc5f65b828c50a2e8d96271f90a84b9ea1
-  local_observation:
-    remote: https://github.com/Evolution-X/system_memory_libmeminfo
-    head: bf930d72e5fcab38ac143a800d1de39ed604a8cc
+  local_a17:
     branch: detached
-- repository: https://github.com/PocoF3Releases/Agents.md
-  branch: main
-  saved_head: 7b21393656315ae3cbd3a1e321d872c9e9e80570
-  role: knowledge
-  source_tree_paths: []
-  available_refs:
-    main: 7b21393656315ae3cbd3a1e321d872c9e9e80570
+    head: bf930d72e5fcab38ac143a800d1de39ed604a8cc
+    tracked_changes: false
+    repository: https://github.com/Evolution-X/system_memory_libmeminfo
 - repository: https://gitlab.com/johnmart19/vendor_xiaomi_camera
-  branch: aosp-17
-  saved_head: f13797ef3d93508756e06a4a185c9208dbc3ee88
   role: required_camera_prebuilts
   source_tree_paths:
   - vendor/xiaomi/camera
-  available_refs:
+  selected_ref: aosp-17
+  refs:
     aosp-16: f13797ef3d93508756e06a4a185c9208dbc3ee88
     aosp-17: f13797ef3d93508756e06a4a185c9208dbc3ee88
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_extras
-  branch: cnb
-  saved_head: 9ef7bd8cf8a20b853a90e42d23d8cff86ee54f8a
   role: optional_font_fork
   source_tree_paths:
   - vendor/extras
-  available_refs:
+  selected_ref: cnb
+  refs:
     aosp-17-oh-my-font: 2c11c3a9e0bce51e8bda3cf1aa487153680002bc
     cnb: 9ef7bd8cf8a20b853a90e42d23d8cff86ee54f8a
-  local_observation:
+  local_a17:
     branch: aosp-17-oh-my-font
     head: 32fdbdb9ee3c88045fb6bab85c2dc9f3ff7b56df
-    warning: Local head differs from published feature branch; reconcile before build,
-      do not discard local work.
+    tracked_changes: false
+    note: Local feature commit differs from published feature ref; preserve and reconcile only for an
+      authorized build/source task.
+- repository: https://github.com/johnmart19/repoindex
+  role: tool
+  source_tree_paths: []
+  selected_ref: main
+  refs:
+    main: c79c1508c3c7f2657ddaf0172e89b279f9ce4914
+workspace:
+  android17_root: ~/evo17
+  android16_root: ~/evo
+  manifest:
+    repository: https://github.com/Evolution-X/manifest
+    branch: cnb
+    observed_head: 8e10bbf38883d125fe127cfd7893c4c92080bcae
+  additional_local_sources:
+  - path: vendor/lineage
+    repository: https://github.com/Evolution-X/vendor_evolution
+    head: 61a7078bb1b782547a4ce9391b3410b0e0ae49e9
+    branch: detached
+  local_manifests: Previously inspected empty; restore a private effective manifest for a reproducible
+    full source checkout.

@@ -1,6 +1,6 @@
 # Release artwork
 
-Artwork summarizes the [decided release delta](android16-android17-release-state.md); it must not invent features or turn a pending test into a fix.
+Artwork summarizes the [decided release delta](../state/releases.md); it must not invent features or turn a pending test into a fix.
 
 ## Current release banner direction
 

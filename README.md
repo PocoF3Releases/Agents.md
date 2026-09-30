@@ -1,15 +1,54 @@
-# PocoF3Releases knowledge base
+# Alioth development workhub
 
-Use [AGENTS.md](AGENTS.md) for rules and [CURRENT_STATE.md](CURRENT_STATE.md) to route unfamiliar work to a relevant topic. The same plain-text records serve Astra, Sol and human readers.
+Portable project memory for **POCO F3 · Evolution X · Android 17 / Android 16**.
+Designed for a new chat with no previous context, including GPT-6 Astra,
+GPT-6.1 Sol and GPT-5.6 Sol. The same records work through GitHub alone or a local checkout.
 
-Current conclusions live in `memory/`; [validation](memory/validation.md) records what was actually checked; [the sanitized archive](archive/README.md) retains shareable Android evidence. Do not load the archive at startup.
+## Start a new chat
 
-For edits, see [maintenance](memory/agent-memory-workflow.md). Run `python3 scripts/check.py` with Python 3.10+ and PyYAML 6.x. No client memory, model selection or device access is changed by reading this repository.
+Paste this with the task:
 
-Checks run locally; no GitHub Actions workflow is used. EditorConfig supplies text-format defaults without reformatting the sanitized archive.
+```text
+Use https://github.com/PocoF3Releases/Agents.md as project context.
+Read AGENTS.md and CURRENT_STATE.md, then only the topic needed for this task.
+Goal: <concrete result>. Done when: <required behavior or artifact>.
+Use available access; distinguish recorded evidence from checks you run now.
+```
 
-Public preparation removes personal memory exports and uses noreply Git attribution. See the [privacy boundary](archive/PRIVACY.md); public proprietary-source references are retained.
+[Rules](AGENTS.md) → [Current state and topics](CURRENT_STATE.md) → one relevant record.
+A linked document is retrieved when needed; GitHub links do not preload its contents.
 
-Moving to a new PC? Start with [WSL recovery](memory/workstation-recovery.md), then [Android and analysis tools](memory/android-tooling.md). The public records preserve project knowledge; private dumps, signing keys and uncommitted work require a separate offline backup. Latest haptics handoff: [implementation and validation limits](memory/haptics.md).
+## Where information lives
 
-September 30 documentation validation: 39 local tests passed; 155 local references and archive integrity checked. Default startup is 4719 bytes. Recovery commands were syntax-reviewed, not executed as an installation.
+| Location | Owns |
+| --- | --- |
+| `memory/` | Current subsystem behavior, decisions, symbols and limitations |
+| [Source map](state/repositories.yaml) | Observed public refs and local checkout differences |
+| [Validation](state/validation.md) | What was checked, on which implementation, and what remains unknown |
+| [Releases](state/releases.md) | Announced changes versus candidates for the next build |
+| `operations/` | Recovery, analysis tools, indexing, artwork and maintenance |
+| [Evidence](evidence/README.md) | Small portable diagnostics and decisive sanitized results |
+| [Archive](archive/README.md) | Historical technical evidence; excluded from normal startup |
+
+Need to reinstall Windows? [Recover WSL and sources](operations/workstation-recovery.md),
+then [restore tools](operations/android-tooling.md). Private dumps, keys, local edits
+and research outputs still require an offline backup.
+
+## Read less, retain the details
+
+```bash
+python3 scripts/context.py --list
+python3 scripts/context.py --search 'gesture vibration'
+python3 scripts/context.py haptics --startup --sources
+python3 scripts/check.py
+```
+
+Python 3.10+ and PyYAML 6.x. The context helper reads selected local records only;
+it makes no network, model or device calls. GitHub-only readers can follow the
+same links manually. [Formatting and update contract](operations/maintenance.md).
+
+[OpenAI guidance](references/openai-guidance.md) explains the shared prompt design.
+[Cold-start checks](references/cold-start-checks.md) describe the measured retrieval
+coverage and its limits. No model settings or account memory are changed by this repo.
+Local checks enforce links, routing, source records, privacy patterns and size limits;
+there are no GitHub Actions workflows.

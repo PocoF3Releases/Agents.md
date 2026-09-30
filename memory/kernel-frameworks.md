@@ -2,7 +2,7 @@
 
 ## Ownership and source
 
-Target: POCO F3 / alioth, SM8250/Kona / Snapdragon 870-class hardware; Android 17 focus with separately checked Android 16 backports. [The source map](repositories/TRACKED_HEADS.yaml) owns observed branches/heads; old uploaded-archive heads are not current checkout instructions.
+Target: POCO F3 / alioth, SM8250/Kona / Snapdragon 870-class hardware; Android 17 focus with separately checked Android 16 backports. [The source map](../state/repositories.yaml) owns observed branches/heads; old uploaded-archive heads are not current checkout instructions.
 
 `device/xiaomi/alioth/BoardConfig.mk` includes common BoardConfigCommon.mk. Its device.mk inherits common kona.mk, includes camera/miuicamera.mk and inherits vendor/xiaomi/alioth. Common kona.mk packages XiaomiParts and inherits vendor/xiaomi/sm8250-common. Camera integration inherits vendor/xiaomi/camera. Both camera delivery trees remain mandatory. Alioth-specific configuration belongs in alioth; shared init/audio/media/SELinux and Parts belong in sm8250-common. Standalone hardware/xiaomi owns reusable Xiaomi/Dolby integration.
 
@@ -20,7 +20,7 @@ Early Bionic loader `thread_local`/PT_TLS changes caused Android and recovery fa
 
 ## NFC
 
-The SNxxx client in `snxxx/halimpl/hal/phNxpNciHal.cc` must snapshot its queue handle before the receive loop. Fix `8be75516d6d3cfff3a95ca2f249f0b36ceededb9` preserves upstream UAF mitigation `ad16c5c95a8613cc7ef8890c243068633e8d2f83`: global ID is cleared before timer cleanup while the running thread uses its saved handle through close completion and join. Do not revert the security fix or widen to PN8x/SNxxx v2 without evidence. Validation: [V-NFC](validation.md#v-nfc).
+The SNxxx client in `snxxx/halimpl/hal/phNxpNciHal.cc` must snapshot its queue handle before the receive loop. Fix `8be75516d6d3cfff3a95ca2f249f0b36ceededb9` preserves upstream UAF mitigation `ad16c5c95a8613cc7ef8890c243068633e8d2f83`: global ID is cleared before timer cleanup while the running thread uses its saved handle through close completion and join. Do not revert the security fix or widen to PN8x/SNxxx v2 without evidence. Validation: [V-NFC](../state/validation.md#v-nfc).
 
 ## Build policy
 
@@ -30,14 +30,32 @@ Recorded Android 17 choice: `PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed
 
 Turnip: Endfield loaded stock `vulkan.adreno.so` despite package opt-in. Shell-domain R8 success did not prove app-domain selection; investigate GraphicsEnvironment / `getPackageInfo(MATCH_SYSTEM_ONLY|GET_META_DATA)` identity/filtering before repeating force-queryable workarounds. DeviceAsWebcam product gating was recorded uncommitted/unvalidated; kernel/HAL presence was not host UVC proof. DS4 composite-input repair required re-enabling an initially suppressed touchpad when gamepad/joystick interfaces joined. Current inclusion of these historical items is unestablished. [Removed raw-import boundary](../archive/PRIVACY.md).
 
-Latest recorded boot outcomes, unresolved Cirrus/ultrasound behavior and the later libmeminfo correction are owned by [V-BOOT](validation.md#v-boot) and [V-MEMINFO](validation.md#v-meminfo), not duplicated as current failures here.
+Historical boot outcomes and then-unresolved Cirrus/ultrasound behavior and the later libmeminfo correction are owned by [V-BOOT](../state/validation.md#v-boot) and [V-MEMINFO](../state/validation.md#v-meminfo), not duplicated as current failures here.
 
 ## September 30 source reconciliation
 
-The public libmeminfo fork remains available, but the inspected local checkout uses `Evolution-X/system_memory_libmeminfo`, detached at the source-map head. Its optional BPF iterator log-spam correction is present upstream. Do not restore a fork override just because it appears in an older ledger. Android 17 frameworks/base has independent high-FPS screen recording and blur suppression commits; inspect current upstream integration before replaying either.
+The public system/core and libmeminfo forks remain available, but local system/core now uses Evolution X (including the absent-kernel-attribute ENOENT fix). The inspected libmeminfo checkout uses `Evolution-X/system_memory_libmeminfo`, detached at the source-map head. Its optional BPF iterator log-spam correction is present upstream. Do not restore a fork override just because it appears in an older ledger. Android 17 frameworks/base has independent high-FPS screen recording and blur suppression commits; inspect current upstream integration before replaying either.
 
 Optional font work belongs to vendor/extras branch `aosp-17-oh-my-font`, with actual font assets rather than a build-time downloader. The local head differs from its published branch; reconcile before build, preserving local changes. It is not a default requirement for every build.
 
 GPU donor-driver, Turnip and game-setting experiments were parked by the maintainer. No broadly validated Unity/Unreal optimization, F8 GPU-driver compatibility, frame-generation port or unlocked 120fps is established. Keep thermal protection intact. Experimental root modules are not production fixes or required recovery dependencies.
 
 Standalone hardware/xiaomi fixes: cbb57f1 rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; 30c28d4 initializes fingerprint pointers and cleans failed opens; a2cf3b4 replaces unsafe delayed-session references with weak references and idempotent close; 5e49959 initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
+
+## Android 16 and connectivity boundaries
+
+Port against the actual A16 API/resources and kernel, not by copying all A17
+flags. A16 HBM must not call the absent `hbmControllerEnabled()` helper. High-FPS
+screen recording and recording-blur suppression are independent features/commits;
+neither should require the other. Recheck WFD/ELF dependency rewrites and selected
+Clang against that branch instead of undoing or restoring them by age alone.
+
+Common `3621ad4` removed obsolete Bluetooth build configuration. Source policy
+and library presence were reviewed, but no Bluetooth audio headset or WFD sink
+was available. Xbox controller input does not establish headset audio through its
+3.5 mm jack over Bluetooth. No complete Bluetooth-audio/WFD certification or
+new workaround is claimed; use an actual endpoint for a future requested test.
+
+The SQLite MEMORY/OFF overlay overrides were removed to inherit framework
+durability defaults. Overlay table shape/monotonicity checks do not calibrate
+brightness, and enabled temperature-warning resources do not replace HAL events.
