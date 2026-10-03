@@ -297,7 +297,7 @@ def validate(root: Path, inventory=None, extra=()):
         if idx.get('cold_archives') != [expected_archive]:
             raise ValueError('cold archive route must match preservation manifest')
         md = {p.relative_to(root).as_posix() for p in root.glob('*.md')}
-        for folder in ('memory', 'operations', 'state', 'references', 'templates', 'evidence'):
+        for folder in ('memory', 'operations', 'state', 'references', 'templates', 'evidence', 'skills'):
             md.update(p.relative_to(root).as_posix() for p in (root / folder).rglob('*.md'))
         md.update({'archive/README.md', 'archive/PRIVACY.md'})
         md.update(extra)
@@ -314,7 +314,7 @@ def validate(root: Path, inventory=None, extra=()):
                     if normalized in paragraphs and paragraphs[normalized] != name:
                         fail(f'duplicate substantial paragraph: {paragraphs[normalized]} / {name}')
                     paragraphs[normalized] = name
-            if name.startswith(('memory/', 'operations/', 'state/', 'references/')) and len(text.encode()) > idx['budgets']['topic_bytes']:
+            if name.startswith(('memory/', 'operations/', 'state/', 'references/', 'skills/')) and len(text.encode()) > idx['budgets']['topic_bytes']:
                 fail(f'{name}: topic byte budget exceeded')
         startup = sum(len(read(p).encode()) for p in idx['read_order']['normal'])
         if startup > idx['budgets']['startup_bytes']:

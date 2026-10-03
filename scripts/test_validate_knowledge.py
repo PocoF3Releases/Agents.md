@@ -53,6 +53,10 @@ class KnowledgeTests(unittest.TestCase):
             archive_tree=self.manifest['archive_tree'])]
         self.save_index()
 
+    def test_skill_links_are_validated(self):
+        self.put('skills/example/SKILL.md', '# Example\n[Missing](missing.md)\n')
+        self.assertTrue(any('missing.md' in error for error in self.errors()))
+
     def test_sanitized_archive(self):
         self.make_sanitized()
         self.assertEqual(self.errors(), [])
