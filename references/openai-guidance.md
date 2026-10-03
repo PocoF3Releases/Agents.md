@@ -46,8 +46,9 @@ linked content explicitly; local auto-discovery does not apply to a remote link.
 
 [Skills guidance](https://learn.chatgpt.com/docs/build-skills) loads metadata first,
 then a selected SKILL.md and references as needed. The task router follows that
-principle without installing a skill, changing client settings or assuming that
-all referenced files were loaded.
+principle. The optional [AOSP skill](../skills/aosp-wsl/SKILL.md) can be installed
+using [first-chat setup](../operations/first-chat.md); cloning the workhub alone
+does not install it, change client settings or load every referenced file.
 
 ## Resume and evaluate
 

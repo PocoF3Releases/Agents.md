@@ -34,15 +34,16 @@ Either import the saved distribution, or install a clean one; do not run both ag
 wsl --import Ubuntu-Restored "D:\WSL\Ubuntu-Restored" "E:\Backups\Ubuntu.tar" --version 2
 wsl -d Ubuntu-Restored
 # Alternative: clean installation, when no distribution backup is available:
-wsl --install -d Ubuntu-24.04
+wsl --list --online
+# Then install the intended Ubuntu 26.04 distribution using its listed name.
 ```
 
-An imported distro may start as root. Confirm the existing Linux user, then set `[user]` / `default=<existing-linux-user>` in `/etc/wsl.conf`; restart that distro when no tasks are running. Preserve its other configuration. Do not assume a Windows username is the Linux username. The inspected environment was Ubuntu 24.04.5 LTS with OpenJDK 21; these are recorded versions, not requirements for all future releases.
+An imported distro may start as root. Confirm the existing Linux user, then set `[user]` / `default=<existing-linux-user>` in `/etc/wsl.conf`; restart that distro when no tasks are running. Preserve its other configuration. Do not assume a Windows username is the Linux username. The latest inspected environment is Ubuntu 26.04.1 LTS. Use the checkout-provided JDK for builds; analysis tools may require their own JDK.
 
-Keep Android source inside the Linux filesystem, such as `~/evo17`, rather than `/mnt/c`. Access it from Windows with `\\wsl.localhost\<distro>\home\<linux-user>\evo17`. After a Windows rename or distro import, update workspace shortcuts and tool paths instead of hardcoding the former account name. Run Linux tools through Bash:
+Keep Android source inside the Linux filesystem, such as `~/evo`, rather than `/mnt/c`. Access it from Windows with `\\wsl.localhost\<distro>\home\<linux-user>\evo`. After a Windows rename or distro import, update workspace shortcuts and tool paths instead of hardcoding the former account name. Run Linux tools through Bash:
 
 ```powershell
-wsl -d Ubuntu -- bash -lc 'cd ~/evo17 && git -C hardware/xiaomi status --short --branch'
+wsl -d Ubuntu -- bash -lc 'cd ~/evo && git -C hardware/xiaomi status --short --branch'
 ```
 
 Use a Bash script or pipe a Python script to `wsl -d Ubuntu -- python3 -` for complex operations; avoid interpolating PowerShell variables into shell code.
@@ -67,17 +68,17 @@ Use the saved effective manifest when available. For a clean checkout, follow [A
 Observed Android 17 manifest: `Evolution-X/manifest`, branch `cnb`, commit `8e10bbf38883d125fe127cfd7893c4c92080bcae`. The inspected `.repo/local_manifests` was empty: the source map is therefore essential, but it is not a complete effective manifest. An existing public fork does not mean the current build still needs it.
 
 ```bash
-mkdir -p ~/evo17
-cd ~/evo17
+mkdir -p ~/evo
+cd ~/evo
 repo init -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
 # Review the effective project map and required overrides before syncing.
-repo manifest -o /tmp/evo17-manifest.xml
+repo manifest -o /tmp/evo-manifest.xml
 # Run repo sync only when authorized; choose jobs for available resources.
 ```
 
 Reconcile each necessary override by its existing manifest project name/path using a local manifest; do not add a second project at the same path. Consult the source map for A16/A17 refs, then compare upstream for already merged fixes. Keep `hardware/xiaomi` standalone. Both camera repositories are mandatory device integration. Fetch LFS content for camera/vendor projects and verify real blobs rather than pointer files. Do not clone over a nonempty checkout or use force-sync/reset to hide divergence.
 
-Android 16 normally uses `~/evo`, Android 17 `~/evo17`. Do not infer the Android 16 upstream manifest branch from the A17 `cnb` name: restore its saved manifest or verify the current upstream branch. User builds only; no full ROM build is started by this recovery procedure.
+The active Android 17 checkout moved from `~/evo17` to `~/evo`; determine any Android 16 checkout separately. Do not infer the Android 16 upstream manifest branch from the A17 `cnb` name: restore its saved manifest or verify the current upstream branch. User builds only; no full ROM build is started by this recovery procedure.
 
 ## Completion checkpoint
 

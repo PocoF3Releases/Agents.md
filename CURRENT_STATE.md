@@ -17,6 +17,7 @@ Evidence checkpoint: **2026-09-30**. Choose a task below; this is not a backlog.
 | Kernel / rootdir / A16 ports | [Platform](memory/kernel-frameworks.md) |
 | GPU / games / frame generation | [Graphics](memory/gaming-graphics.md) |
 | Changelog / builds | [Releases](state/releases.md) |
+| First chat / install skill | [Onboarding](operations/first-chat.md) |
 | Windows / WSL reinstall | [Recovery](operations/workstation-recovery.md) |
 | LLVM / Ghidra / ADB | [Tools](operations/android-tooling.md) |
 | repoindex | [Indexing](operations/repoindex.md) |

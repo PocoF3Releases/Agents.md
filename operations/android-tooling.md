@@ -1,11 +1,11 @@
 # Android tools and reverse-engineering recovery
 
-Inventory checked 2026-09-30. Use [workstation recovery](workstation-recovery.md) for backups and source setup. Commands below are templates: set paths explicitly and inspect existing destinations before replacing anything.
+Core host tools checked 2026-10-03; reverse-engineering versions below are the 2026-09-30 inventory and need local verification. Use [workstation recovery](workstation-recovery.md) for backups and source setup. Commands below are templates: set paths explicitly and inspect existing destinations before replacing anything.
 
 ## Build environment
 
 ```bash
-export ANDROID_ROOT="$HOME/evo17"
+export ANDROID_ROOT="$HOME/evo"
 cd "$ANDROID_ROOT"
 source build/envsetup.sh
 lunch
@@ -20,7 +20,7 @@ The working tree supplies build JDK/toolchains. Do not change global Java or com
 The inspected tree contains r547379, r563880c, r584948, r584948b and r596125. Latest haptics work used r596125 for the HAL and r563880c for kernel objects. Determine the compiler from the current build configuration or recorded compiler command; directory ordering is not evidence of the selected compiler.
 
 ```bash
-export ANDROID_ROOT="$HOME/evo17"
+export ANDROID_ROOT="$HOME/evo"
 export CLANG_REV=clang-r596125
 export LLVM_BIN="$ANDROID_ROOT/prebuilts/clang/host/linux-x86/$CLANG_REV/bin"
 test -x "$LLVM_BIN/llvm-readelf" || exit 1
@@ -64,7 +64,7 @@ apktool d /absolute/path/app.apk -o "$HOME/analysis/app-smali"
 
 Use a fresh output directory to preserve previous edits. JADX is for reading; patch actual smali/resources and rebuild with Apktool when authorized. Retrieve `aapt2`, `zipalign`, `apksigner` from Android SDK Build Tools or the checked-out build's declared host tools, not random binaries. Camera packaging previously used `zipalign -c -P 16 4`; follow its canonical delivery procedure and signature requirements. Camera remains finalized, so tool restoration is not permission to modify the APK.
 
-Host utilities commonly needed: `git`, `git-lfs`, `python3`, `python3-venv`, `python3-yaml`, `ripgrep`, `unzip`, `zip`, `file`, `binutils`, `patchelf`, `ffmpeg`, `jq`, plus the build's declared dependencies. Record package versions for reproducibility. GitHub CLI was not on WSL PATH at this inspection; install via [official CLI instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) if needed, then authenticate interactively. Never put credentials in scripts or docs.
+Host utilities commonly needed: `git`, `git-lfs`, `python3`, `python3-venv`, `python3-yaml`, `ripgrep`, `unzip`, `zip`, `file`, `binutils`, `patchelf`, `ffmpeg`, `jq`, plus the build's declared dependencies. Record package versions for reproducibility. GitHub CLI is available in WSL and Windows at the latest check; restore via [official CLI instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) if needed, then authenticate interactively. Never put credentials in scripts or docs.
 
 ## ADB, fastboot and root boundary
 
@@ -81,3 +81,38 @@ Use `adb shell getprop ro.build.fingerprint`, `uname`, hashes and service state 
 For source indexing, use the dedicated [repoindex guide](repoindex.md). repoindex is unrelated to Android Repo or Gerrit repopick.
 
 Common reference locations: `~/miui/out` (Alioth stock), `~/miui/decompiled/jadx-frameworks`, `~/references_code/miui_proprietary_cpp`, `~/munch/out`, `~/myron/out`, `~/oneplus9r/out`, `~/alioth-r-oss`, `~/kernel_devicetree_alioth-r-oss`. These are optional local conventions, not files hosted by this knowledge repo. Preserve firmware version/hashes with private dump backups. Public reference code is indexed in the source map. Reacquire only a needed artifact from its verified source if a backup is missing; do not silently substitute a newer OEM dump.
+
+## Host utility setup
+
+Install missing tools after inventorying the host; no blanket OS upgrade is
+required. The following set was exercised on Ubuntu 26.04.1 LTS:
+
+```bash
+sudo apt-get update
+sudo apt-get install --no-install-recommends \
+  build-essential git git-lfs ccache python3-venv python3-pip python3-yaml pipx \
+  ripgrep fd-find jq curl wget rsync file binutils patchelf \
+  clang-format shellcheck device-tree-compiler dwarves \
+  libssl-dev libelf-dev libncurses-dev bc bison flex \
+  unzip zip 7zip xz-utils lz4 zstd cpio libxml2-utils xmlstarlet \
+  sqlite3 strace lsof time bash-completion
+```
+
+Ubuntu names the file finder `fdfind`. Use venvs/pipx for Python tools rather than
+modifying system Python. Host clang-format does not select the Android compiler.
+Verify `dpkg --audit` and relevant tool versions after installation.
+
+Windows PowerShell, Git, Python and Platform Tools may already be installed.
+Add missing command-line helpers through WinGet:
+
+```powershell
+winget install --id GitHub.cli --exact --source winget
+winget install --id jqlang.jq --exact --source winget
+winget install --id sharkdp.fd --exact --source winget
+```
+
+Open a fresh shell to pick up PATH changes; verify `gh --version`, `jq --version`
+and `fd --version`. These were verified locally, not installed by cloning this
+repo. PyYAML 6.x is needed for the workhub/skill validators; use a dedicated venv
+when setting up a fresh Python environment. Do not publish authentication data.
+See [first-chat setup](first-chat.md) for the optional Codex skill.

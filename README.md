@@ -18,6 +18,9 @@ Use available access; distinguish recorded evidence from checks you run now.
 [Rules](AGENTS.md) → [Current state and topics](CURRENT_STATE.md) → one relevant record.
 A linked document is retrieved when needed; GitHub links do not preload its contents.
 
+Install the optional [AOSP skill and first-chat setup](operations/first-chat.md) when
+preparing a local Codex host; normal chats need not reread the setup guide.
+
 ## Where information lives
 
 | Location | Owns |

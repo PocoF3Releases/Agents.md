@@ -135,6 +135,15 @@ subsystems:
     - android17
     - publication
     - build date
+  onboarding:
+    title: First chat and optional AOSP skill
+    status: maintained
+    memory: operations/first-chat.md
+    keywords:
+    - first chat
+    - skill
+    - setup
+    - codex
   recovery:
     title: Restore Windows and WSL
     status: maintained
