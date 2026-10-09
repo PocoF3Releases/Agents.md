@@ -3,7 +3,7 @@
 Evidence checkpoint: **2026-10-09** (source audit; runtime dates stay scoped). Task router, not a backlog.
 
 - **Haptics:** stock-backed HAL/PCM with seven effects, three stock primitives and LOW_TICK fallback. Temporary tests are scoped; current installed identity unknown. No full RichTap/PWLE.
-- **Recovery:** October 7 PBRP published; newer source enforces infrastructure, with shared recovery permissive. Asset inclusion differs from branch HEAD.
+- **Recovery:** October 9 FBE/reboot fixes verified; shared recovery permissive. Fastbootd driver test pending. Published assets differ from HEAD.
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17/A16 builds; other routes retain their limits.
 - **Sources:** track only repositories maintained by us. Upstream dependencies and retired forks are excluded from the source map; retain relevant integration facts in topic memory.

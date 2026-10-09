@@ -21,7 +21,7 @@ ZIP CRC and packaging passed. Source patch contract: recovery 0001–0012. Curre
 [source](../state/repositories.yaml) includes the final accepted handoff commit.
 Existing recovery-core edits were preserved; only isolated patches exported.
 
-Accepted candidate (Boot metadata 17.0.0 / 2026-10):
+Initial accepted candidate (superseded below; Boot metadata 17.0.0 / 2026-10):
 
 | Artifact | Bytes | SHA256 |
 | --- | ---: | --- |
@@ -31,14 +31,62 @@ Accepted candidate (Boot metadata 17.0.0 / 2026-10):
 Location: ~/pbrp-alioth/out/release-candidate. Temporary boot did not change slots
 or flash recovery. Bundled Magisk installation was explicitly authorized and
 user-confirmed; it modifies active Boot. No Data formatting. Standalone recovery
-ZIP install and subsequent Android boot not retested. Published October 7 assets
+ZIP install and subsequent Android boot were pending in that initial cycle. Published October 7 assets
 were not replaced by these local candidates.
 
 Never access ~/evo/out. ~/pbrp-alioth/out is allowed. No permissions/policy were
 weakened for ADB logs; use only accessible sanitized diagnostics.
 
-## Historical acceptance
+## Follow-up: installer signing, real reboot and fastbootd
 
+The initial accepted recovery was followed by Android boot on slot B with
+Magisk 31.0 and October patch verified over ADB. Removed package-installer.py
+references to ROM output signing tools; JDK 17, SignApk/JNI and public test keys
+now come only from the recovery checkout. Recovery-local `m -j4 signapk` and
+optimized-Python packaging passed explicit CRC, image and payload hash checks.
+Corrected outdated policy descriptions in the installer and patch guide.
+
+Standalone ZIP `10e9903810feef40e045fbfa94e4693d706c9b42adbc139bab7d48fa869b3736`
+was sideloaded on slot B. User confirmed written-image verification and Magisk
+installation. Android boot then completed but su was absent; installer completion
+alone did not prove Android root. User manually reinstalled Magisk; subsequent
+ADB verified Magisk 31.0. The resulting working Boot was privately backed up and
+hash-verified before further changes. No root regression cause was established.
+
+Reboot Recovery/fastboot initially restarted the recovery process without
+rebooting. Init AVCs showed enforcing write denial on misc `/dev/block/sda11`,
+which had generic block_device context. The device-only recovery file_contexts
+now labels this verified node misc_block_device, using the existing platform
+init permission. No broad block-device allow or permissive change was added.
+
+User recovery build and packaging passed. A policy-only Boot deployment
+preserved kernel/header and Magisk contents; only file_contexts.bin,
+vendor_file_contexts and ramdisk checksum list changed. Temporary Android boot
+completed with Magisk 31.0. Flashed only active boot_b. Recovery showed the correct
+misc context, Enforcing and decrypted=true. `adb reboot recovery` performed a real
+kernel reboot: uptime reset from 34.40 to 22.93 seconds; recovery returned on slot
+B without the prior init denial. The GUI uses the same init power-control path;
+a separate physical GUI-button test was not performed.
+
+Fastbootd then enumerated as 18d1:d00d, but Windows reported missing driver Code
+28. Existing signed Google driver supports 18d1:4ee0, so source USB config now
+uses that standard generic fastboot identity. Its final device compatibility
+validation remains pending. No fastbootd partition flash was attempted. A stale
+Windows ADB server after temporary Boot re-enumeration was resolved by restarting
+that server; this was not a recovery policy failure.
+
+Final published recovery source: `77fb84dc755f13f1b8208371bb40812e65f986db`.
+Final follow-up user build and packaging checks passed. Candidate hashes (new
+fastboot USB ID not yet device-tested):
+
+- recovery_boot.img: `c3a28f66381226995a98bdd2186479750f62f8922e869a604753ad117b64a8fd`
+- recovery.zip: `eef82bb2c0b8fec2107875f11e81bbe2197d456494bdc4783296ca8a1ae7a1a2`
+
+The deployed policy-only Boot is distinct from these distributable candidates.
+The phone remains in fastbootd with no host driver; Reboot System on-device
+returns Android. No final fastbootd flashing or postinstall test is claimed.
+
+## Historical acceptance
 
 **Recorded October 5/7 source/build/host/device/user evidence; no new runtime test.**
 [Sources](../state/repositories.yaml), [release identities](../state/releases.md#pbrp-release), and
