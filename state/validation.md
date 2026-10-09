@@ -159,23 +159,9 @@ private backups are not. Request only needed artifacts. Archives authorize no wo
 
 ## V-PBRP
 
-**Recorded October 5/7 source/build/host/device/user evidence; no new runtime test.**
-[Sources](repositories.yaml), [release identities](releases.md#pbrp-release), and
-[recovery behavior](../memory/pbrp-recovery.md) separate current code from assets.
-October 5 validated current-recovery installation, UI/touch/vibration, decryption
-and USB. Earlier tests covered sideload, Magisk, Boot backup and 120 Hz selection;
-not all operations were rerun against every final artifact.
-
-October 7 source-owned handoff reports Format Data after FBE unmount/mapping
-cleanup, shared-runtime sload_f2fs startup, and packaged temporary-boot password
-decryption/touch/brightness/haptics with global Enforcing. Current infrastructure
-domains enforce; shared recovery remains permissive. Patch replay, user policy
-build, packaging, theme integrity and ZIP/image checks are recorded passes.
-
-Unverified: live standalone ZIP/image-picker install, Data restore, other
-credential types, physical Mi 11X/Redmi K40 acceptance and measured frame pacing.
-Fastbootd flashing/postinstall not revalidated after enforcement changes.
-External high-speed installer was reviewed only, not imported.
+Recorded October 5/7 build/device acceptance and its remaining limits are in
+[historical evidence](../evidence/recovery-system-overlay-20261009.md#historical-acceptance).
+Current repairs are V-PBRP-20261009; branch HEAD differs from October 7 assets.
 
 ## V-SOURCE-20261009
 
@@ -193,7 +179,13 @@ No new ROM/device test.
 
 ## V-HBM-RECOVERY
 
-**2026-10-09 — host-tested.** Common local `6982a76`: actual display utility
+**2026-10-09 — host-tested.** Common `6982a76`: actual display utility
 compiled with JDK 21/Android stubs; settings/sysfs failure, boot retry, normal
 disable and no-backup cases pass. Baseline `6574ae0` reproduces false success.
 No APK/device test or `~/evo/out` access. [Behavior](../memory/xiaomiparts-device-ux.md#hbm-brightness-recovery--october-9-maintenance).
+
+## V-PBRP-20261009
+
+User build and temporary slot-B test: password decryption and bundled Magisk
+installation succeed; ADB decrypted=true and shell intact afterward.
+[Exact fixes/artifacts/limits](../evidence/recovery-system-overlay-20261009.md).

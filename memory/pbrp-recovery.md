@@ -70,7 +70,7 @@ are the source-owned build contract. Patch baselines:
 
 | Sibling repository | Clean base | Application order |
 | --- | --- | --- |
-| `bootable/recovery` | `4ea56986534da92b29c73ea1907e10e3c0d5ef50` | recovery 0001–0005 TeamWin imports, then 0006–0009 Alioth/FBE/haptics/logd changes |
+| `bootable/recovery` | `4ea56986534da92b29c73ea1907e10e3c0d5ef50` | recovery 0001–0005 TeamWin imports, then 0006–0012 Alioth/FBE/haptics/logd/runtime changes |
 | `vendor/pb` | `2124e85c72c4d4ff9ef18a7303950d0480257e34` | vendor-pb 0001 adbd context, 0002 infrastructure enforcement |
 | `external/f2fs-tools` | `a7424d458d4b924be8205986c7b7829c934127d8` | 0001 shared C++ runtime for sload_f2fs |
 | `system/sepolicy` | `dd91f58a018a43d70c40abb86dddb85368015b96` | system-sepolicy 0001 historical allowlist, 0002 restrict to recovery |
@@ -150,5 +150,6 @@ published assets predate latest source; see [release ledger](../state/releases.m
 ## October 9 live diagnosis
 
 [System-overlay evidence](../evidence/recovery-system-overlay-20261009.md):
-UI works; command execution fails with the mounted System hiding recovery runtime.
-Slot identity and complete decryption/Magisk causes remain unconfirmed.
+System runtime mounts and stale Boot patch metadata fixed; temporary slot-B
+password decryption and bundled Magisk installation passed. Shell remains usable
+after installation. Candidate hashes and separate acceptance limits are in evidence.
