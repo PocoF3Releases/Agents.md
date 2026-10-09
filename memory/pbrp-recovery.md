@@ -144,12 +144,12 @@ lookup. Current policy removes six infrastructure permissive declarations;
 global Enforcing still leaves the shared recovery domain permissive. Commit
 messages report packaged temporary-boot password decryption, touch, brightness
 and haptics acceptance; not fresh tests in this audit. Fastbootd flashing,
-postinstall and standalone ZIP installation were not revalidated. October 7
+postinstall and standalone ZIP installation were not revalidated in that cycle. October 7
 published assets predate latest source; see [release ledger](../state/releases.md).
 
 ## October 9 live diagnosis
 
-[System-overlay evidence](../evidence/recovery-system-overlay-20261009.md):
-System runtime mounts and stale Boot patch metadata fixed; temporary slot-B
-password decryption and bundled Magisk installation passed. Shell remains usable
-after installation. Candidate hashes and separate acceptance limits are in evidence.
+[Recovery evidence](../evidence/recovery-system-overlay-20261009.md): FBE/runtime
+fixes, ZIP write verification, manual Magisk/Android boot and real recovery reboot
+passed on slot B. Packaging uses recovery-local signing tools. Fastbootd driver
+compatibility remains pending. Evidence owns hashes, tests and limits.

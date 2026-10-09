@@ -16,7 +16,7 @@ repositories:
   - external/f2fs-tools
   selected_ref: pbrp-a17
   refs:
-    pbrp-a17: 952ff9c91a6e579618ef80e3516e15412479f9d3
+    pbrp-a17: 77fb84dc755f13f1b8208371bb40812e65f986db
   local_a17: matches_selected_ref
   observation: 2026-10-09; patch-source owner; recovery user build and temporary slot-B decryption/Magisk
     acceptance at recorded candidate. Existing sibling edits preserved.
