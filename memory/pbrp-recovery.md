@@ -146,3 +146,9 @@ messages report packaged temporary-boot password decryption, touch, brightness
 and haptics acceptance; not fresh tests in this audit. Fastbootd flashing,
 postinstall and standalone ZIP installation were not revalidated. October 7
 published assets predate latest source; see [release ledger](../state/releases.md).
+
+## October 9 live diagnosis
+
+[System-overlay evidence](../evidence/recovery-system-overlay-20261009.md):
+UI works; command execution fails with the mounted System hiding recovery runtime.
+Slot identity and complete decryption/Magisk causes remain unconfirmed.

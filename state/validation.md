@@ -179,19 +179,21 @@ External high-speed installer was reviewed only, not imported.
 
 ## V-SOURCE-20261009
 
-**2026-10-09 — source-checked.** Initial audit requeried 24 saved identities; three historical
-forks unavailable, A16 refs unchanged. Inspected ROM tracked trees clean; custom
-A17 heads match remotes. Patch identity/selected diffs exclude equivalent rewrites.
-Recovery device tree clean; existing recovery-core edits preserved. Public release
-API metadata checked. No new build/device tests; commit-reported scope and pending
-acceptance are in the [draft](validation.md#v-source-20261009).
+**2026-10-09 — source-checked.** Maintained ROM heads/product integration and
+separate recovery source reviewed; prior recovery-core edits preserved. No new
+build/device test. [Scope](changelog-audit.md).
 
 ## V-CHANGELOG
 
 **2026-10-09 — source/host checked.** All 19 organization repositories and 16
-custom ROM source inputs were checked, including tinycompress and GitLab camera.
-Selected remote/local heads match, tracked trees clean. Product gates, library
-links and final code were inspected. Canonical camera APK hash matches accepted
-identity. [Audit](changelog-audit.md) records coverage, exclusions and build limits.
-Companion Settings and final everyday UI/speaker gates checked in the follow-up.
-Full/short Markdown posts fit Telegram length limits. No new ROM/device test.
+custom ROM inputs reviewed; selected heads matched, tracked trees clean at audit.
+Product/library gates, companion controls and canonical camera APK hash checked.
+Full/short posts fit Telegram limits. [Audit](changelog-audit.md) owns details.
+No new ROM/device test.
+
+## V-HBM-RECOVERY
+
+**2026-10-09 — host-tested.** Common local `6982a76`: actual display utility
+compiled with JDK 21/Android stubs; settings/sysfs failure, boot retry, normal
+disable and no-backup cases pass. Baseline `6574ae0` reproduces false success.
+No APK/device test or `~/evo/out` access. [Behavior](../memory/xiaomiparts-device-ux.md#hbm-brightness-recovery--october-9-maintenance).
