@@ -1,0 +1,295 @@
+schema_version: 1
+last_refreshed: '2026-10-09'
+entrypoints:
+  rules: AGENTS.md
+  current_state: CURRENT_STATE.md
+  overview: README.md
+  router: INDEX.yaml
+  source_heads: state/repositories.yaml
+  validation: state/validation.md
+  archive: archive/README.md
+  evidence: evidence/README.md
+  handoff: templates/record.md
+read_order:
+  normal:
+  - AGENTS.md
+  - CURRENT_STATE.md
+  optional_router: INDEX.yaml
+  offload_or_write:
+  - operations/maintenance.md
+subsystems:
+  haptics:
+    title: Alioth vibrator
+    status: maintained
+    memory: memory/haptics.md
+    keywords:
+    - aw8697
+    - vibrator
+    - richtap
+    - gesture
+    - strength
+    - firmware
+    - primitives
+    source_paths:
+    - hardware/xiaomi
+    - kernel/xiaomi/sm8250
+    - device/xiaomi/alioth
+    - device/xiaomi/sm8250-common
+    - vendor/xiaomi/alioth
+  audio:
+    title: Dolby and AC-4
+    status: maintained
+    memory: memory/dolby-audio.md
+    keywords:
+    - dolby
+    - ac4
+    - ac-4
+    - vndk
+    - audio
+    - sound
+    - codec
+    source_paths:
+    - hardware/xiaomi
+    - frameworks/av
+    - device/xiaomi/sm8250-common
+    - vendor/xiaomi/sm8250-common
+    - external/tinycompress
+  camera:
+    title: Finalized MiuiCamera
+    status: finalized
+    memory: memory/miuicamera.md
+    keywords:
+    - camera
+    - videosat
+    - ultrawide
+    - 4k60
+    - apk
+    source_paths:
+    - device/xiaomi/camera
+    - vendor/xiaomi/camera
+  parts:
+    title: XiaomiParts and sensors
+    status: maintained
+    memory: memory/xiaomiparts-device-ux.md
+    keywords:
+    - parts
+    - touch
+    - thermal
+    - misound
+    - translation
+    - proximity
+    - ultrasound
+    source_paths:
+    - device/xiaomi/sm8250-common
+    - device/xiaomi/alioth
+    - hardware/xiaomi
+  platform:
+    title: Kernel, rootdir and compatibility
+    status: maintained
+    memory: memory/kernel-frameworks.md
+    keywords:
+    - kernel
+    - rootdir
+    - nfc
+    - hbm
+    - bluetooth
+    - wfd
+    - overlay
+    - a16
+    - build
+    - screen recording
+    - font
+    source_paths:
+    - kernel/xiaomi/sm8250
+    - device/xiaomi/sm8250-common
+    - device/xiaomi/alioth
+    - frameworks/base
+  graphics:
+    title: Graphics experiments and limits
+    status: maintained
+    memory: memory/gaming-graphics.md
+    keywords:
+    - gpu
+    - vulkan
+    - opengl
+    - unity
+    - unreal
+    - endfield
+    - nte
+    - myron
+    - frame generation
+    - wifi
+    source_paths:
+    - kernel/xiaomi/sm8250
+    - vendor/xiaomi/sm8250-common
+    - hardware/qcom-caf/sm8250/display
+  release:
+    title: Release baselines and changelogs
+    status: maintained
+    memory: state/releases.md
+    keywords:
+    - release
+    - changelog
+    - android16
+    - android17
+    - publication
+    - build date
+  onboarding:
+    title: First chat and optional AOSP skill
+    status: maintained
+    memory: operations/first-chat.md
+    keywords:
+    - first chat
+    - skill
+    - setup
+    - codex
+  pbrp:
+    title: Alioth custom recovery
+    status: maintained
+    memory: memory/pbrp-recovery.md
+    keywords:
+    - pbrp
+    - pitchblack
+    - twrp
+    - recovery ramdisk
+    - sideload
+    - high-speed flash
+    - recovery_boot.img
+    source_paths:
+    - device/xiaomi/alioth
+  recovery:
+    title: Restore Windows and WSL
+    status: maintained
+    memory: operations/workstation-recovery.md
+    keywords:
+    - reinstall
+    - windows
+    - wsl
+    - ubuntu
+    - backup
+    - restore
+    - new pc
+  tools:
+    title: Android and analysis tools
+    status: maintained
+    memory: operations/android-tooling.md
+    keywords:
+    - tool
+    - ghidra
+    - clang
+    - llvm
+    - jadx
+    - apktool
+    - adb
+    - fastboot
+  indexing:
+    title: repoindex and database recovery
+    status: maintained
+    memory: operations/repoindex.md
+    keywords:
+    - repoindex
+    - sqlite
+    - index
+    - database
+    - source search
+  artwork:
+    title: Release banners
+    status: maintained
+    memory: operations/release-artwork.md
+    keywords:
+    - banner
+    - artwork
+    - image
+    - release assets
+  validation:
+    title: Acceptance and evidence
+    status: maintained
+    memory: state/validation.md
+    keywords:
+    - validation
+    - tested
+    - test scope
+    - evidence
+  maintenance:
+    title: Knowledge editing and handoff
+    status: maintained
+    memory: operations/maintenance.md
+    keywords:
+    - memory
+    - handoff
+    - workhub
+    - knowledge
+    - update docs
+    - privacy
+  guidance:
+    title: OpenAI prompting guidance
+    status: maintained
+    memory: references/openai-guidance.md
+    keywords:
+    - astra
+    - sol
+    - gpt
+    - openai
+    - prompt
+    - tokens
+    - new chat
+  history:
+    title: Project history and working memory
+    status: maintained
+    memory: memory/project-history.md
+    keywords:
+    - history
+    - memory
+    - rework
+    - decisions
+    - timeline
+    source_paths: []
+  investigations:
+    title: Final investigations and conclusions
+    status: maintained
+    memory: memory/final-investigations.md
+    keywords:
+    - investigations
+    - findings
+    - sat
+    - rejected
+    - research
+    source_paths: []
+cold_archives:
+- path: archive/records
+  policy: skip_by_default
+  archive_tree: d564d0bc3dd917926892c55e3706cc116d5b165e
+maintenance:
+  policy:
+    memory: operations/maintenance.md
+  validation:
+    memory: state/validation.md
+legacy_routes:
+  REMOTE_WORKFLOW.md: operations/maintenance.md
+  EVIDENCE_INDEX.md: state/validation.md
+  memory/project-overview.md: memory/kernel-frameworks.md
+  memory/device-tree-workspace.md: memory/kernel-frameworks.md
+  memory/nfc.md: memory/kernel-frameworks.md
+  memory/android-build-optimization.md: memory/kernel-frameworks.md
+  memory/localization.md: memory/xiaomiparts-device-ux.md
+  memory/git-history-conventions.md: operations/maintenance.md
+  memory/reference-indexes.md: operations/repoindex.md
+  memory/repositories/README.md: archive/README.md
+  memory/repositories/LATEST_COMMITS.json: state/repositories.yaml
+  memory/miuicamera-history.md: memory/miuicamera.md
+  continue-later/CAMERA.md: memory/miuicamera.md
+  templates/chat-offload-template.md: templates/record.md
+  templates/cross-model-handoff.md: templates/record.md
+  templates/model-compatibility-checks.md: references/openai-guidance.md
+  memory/agent-memory-workflow.md: operations/maintenance.md
+  memory/android-tooling.md: operations/android-tooling.md
+  memory/workstation-recovery.md: operations/workstation-recovery.md
+  memory/repoindex.md: operations/repoindex.md
+  memory/android16-android17-release-state.md: state/releases.md
+  memory/validation.md: state/validation.md
+  memory/repositories/TRACKED_HEADS.yaml: state/repositories.yaml
+  memory/release-assets.md: operations/release-artwork.md
+budgets:
+  startup_bytes: 3800
+  root_rules_bytes: 1750
+  topic_bytes: 10000
