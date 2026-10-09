@@ -1,0 +1,4 @@
+CREATED OMX.dolby.ac4.decoder
+OUTPUT {sample-rate=48000, pcm-encoding=2, mime=audio/raw, channel-count=2}
+RESULT input=800 outputBuffers=800 pcmBytes=6144000 nonzeroBytes=5970795 eos=true
+PASS
