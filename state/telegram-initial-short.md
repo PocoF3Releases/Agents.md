@@ -21,5 +21,3 @@ Android 17 • Initial build
 • Modem, call-proximity, NFC, USB and Bluetooth-controller fixes.
 • Battery/charging, sensor and fingerprint safeguards.
 • Linux 4.19.325, WireGuard and updated memory/startup handling.
-
-ℹ️ Ultrawide 60 FPS is unconfirmed; full RichTap is not included. Final-source notes; matching release-build acceptance remains pending.

@@ -53,6 +53,3 @@ Android 17 • Initial build
 • Kernel WireGuard support.
 • RAM-aware app-runtime defaults, updated compressed-memory setup and power-hint priorities that retain restrictive frequency caps.
 • Removed obsolete startup services and reduced unnecessary diagnostic logging.
-
-ℹ️ Scope
-Ultrawide video is validated at 1080p30; true ultrawide 60 FPS is not confirmed. Full RichTap is not included. These notes describe final source implementations; complete acceptance of every feature in the matching release build remains pending.
