@@ -28,7 +28,12 @@ repositories:
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
     aosp-17: 6574ae0d2c27cc73ee572bc8556bf77267bfff17
-  local_a17: matches_selected_ref
+  local_a17:
+    branch: aosp-17
+    head: 6982a76db1191f4fd9827ccfe273c9d1e235b2a0
+    tracked_changes: false
+    note: Local HBM brightness-recovery maintenance commit; selected remote ref remains 6574ae0, not yet
+      pushed.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:

@@ -42,3 +42,12 @@ New APK device acceptance is pending. `cd19c9c` stages and validates the selecte
 regional thermal map, atomically publishes it and then restarts mi_thermald;
 preparation failure retains the active map and daemon. Stock maps/limits unchanged.
 See [reported validation](../state/validation.md#v-source-20261009).
+
+## HBM brightness recovery — October 9 maintenance
+
+If restoring SCREEN_BRIGHTNESS failed when disabling HBM, DisplayUtils discarded
+the saved previous brightness and reported success. The fix keeps the backup,
+reports failure and saves HBM off, then retries brightness recovery during boot
+restoration. Failed sysfs disable retains the existing state. Successful recovery
+clears the backup; an off state without a backup does not alter brightness.
+[Host regression evidence](../state/validation.md#v-hbm-recovery).
