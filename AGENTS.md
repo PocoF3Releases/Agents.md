@@ -11,6 +11,8 @@ across Astra/Sol; recover missing context rather than replaying transcripts.
 - Finish authorized work, relevant checks and requested publication. Resolve
   routine choices; ask for material missing input. Preserve unrelated edits.
   Builds, flashing and history rewrites require scoped authorization; reuse it.
+- Never access `~/evo/out`: no reads, writes, searches, tools, builds or cleanup.
+  `~/pbrp-alioth/out` is allowed for recovery work.
 - Use `user` builds. Root is for research; final source fixes work without root.
   Keep `hardware/xiaomi` standalone and device fixes scoped. Camera is finalized;
   reopen only on request.
