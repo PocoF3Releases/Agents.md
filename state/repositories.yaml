@@ -16,10 +16,10 @@ repositories:
   - external/f2fs-tools
   selected_ref: pbrp-a17
   refs:
-    pbrp-a17: 6fee5a070ba1aeb4742f345486d12bbe2c36994c
+    pbrp-a17: 952ff9c91a6e579618ef80e3516e15412479f9d3
   local_a17: matches_selected_ref
-  observation: 2026-10-09; patch-source owner for listed recovery components; actual Git checkout ~/pbrp-alioth/device/xiaomi/alioth
-    is clean at selected ref
+  observation: 2026-10-09; patch-source owner; recovery user build and temporary slot-B decryption/Magisk
+    acceptance at recorded candidate. Existing sibling edits preserved.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common
   role: build_source
   source_tree_paths:
@@ -27,13 +27,8 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: 6574ae0d2c27cc73ee572bc8556bf77267bfff17
-  local_a17:
-    branch: aosp-17
-    head: 6982a76db1191f4fd9827ccfe273c9d1e235b2a0
-    tracked_changes: false
-    note: Local HBM brightness-recovery maintenance commit; selected remote ref remains 6574ae0, not yet
-      pushed.
+    aosp-17: 6982a76db1191f4fd9827ccfe273c9d1e235b2a0
+  local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
