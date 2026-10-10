@@ -1,7 +1,7 @@
 schema_version: 4
-observed: '2026-10-09'
+observed: '2026-10-10'
 scope: Maintained PocoF3Releases repositories and maintainer-owned GitLab camera/tool sources only. Upstream
-  dependencies are not tracked here. October 9 source observations are not a complete release manifest.
+  dependencies are not tracked here. Recorded source observations are not a complete release manifest.
 workhub:
   repository: https://github.com/PocoF3Releases/Agents.md
   branch: main
@@ -27,7 +27,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: 6982a76db1191f4fd9827ccfe273c9d1e235b2a0
+    aosp-17: c06d74941adc5b24762cc260a672ea0b86520cf3
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
@@ -54,7 +54,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 37ea70355f044e20e0921593e7a0c712ad9a8284
-    aosp-17: 62304de551fd9e5a63c8811123b9a5ddad8a40ea
+    aosp-17: 01d9a7ba8d620a5ac23d28c33c2881a190079709
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
   role: build_source

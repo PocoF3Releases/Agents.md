@@ -81,3 +81,9 @@ Alioth vendor.prop enables stock speaker tuning despite common's default-off
 gate. Android spatializer remains disabled. Profile/endpoint acoustic acceptance
 is still scoped. Exact source coverage belongs to the
 [initial-build audit](../state/changelog-audit.md).
+
+## October 10 device/vendor service cleanup
+
+The maintained common vendor tree packages only wfdservice64. Device [99ac0e0](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/99ac0e0) and vendor [b8f185a](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/b8f185a) remove the absent 32-bit init service/actions, preserving the 64-bit service and pinning its reproducible extraction output. Device [af10dae](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/af10dae) and vendor [01d9a7b](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/01d9a7b) remove the unavailable MIUI Widevine migration helper/start action. The DRM HAL, directory creation and existing task-profile fix remain intact. Neither cleanup migrates or deletes device data.
+
+A missing normal-Android recovery health executable is expected: its module is recovery-only. Do not treat every absent optional sysfs node, stopped oneshot service, permissive vendor JSON extension, or opaque calibration file as a bug. The inspected DDR parsing selects LPDDR5 correctly and the configured bus zones match; no retune was justified. See [device audit evidence](../state/validation.md#v-device-20261010).

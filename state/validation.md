@@ -189,3 +189,7 @@ No APK/device test or `~/evo/out` access. [Behavior](../memory/xiaomiparts-devic
 User build and temporary slot-B test: password decryption and bundled Magisk
 installation succeed; ADB decrypted=true and shell intact afterward.
 [Exact fixes/artifacts/limits](../evidence/recovery-system-overlay-20261009.md).
+
+## V-DEVICE-20261010
+
+[Audit and limits](../evidence/device-20261010.md).

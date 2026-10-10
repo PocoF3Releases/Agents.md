@@ -51,3 +51,13 @@ reports failure and saves HBM off, then retries brightness recovery during boot
 restoration. Failed sysfs disable retains the existing state. Successful recovery
 clears the backup; an off state without a backup does not alter brightness.
 [Host regression evidence](../state/validation.md#v-hbm-recovery).
+
+## October 10 touch controls
+
+Common [b1ff3a7](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b1ff3a7) routes zero response/sensitivity through the existing Alioth reset helper. FocalTech modes 2/3 accept 1–5, clamp raw zero to 1, and use firmware default 3. Explicit tuning and other-device dispatch are preserved.
+
+[c06d749](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/c06d749) replaces the expert slider with a tuning-mode selector, groups main/fine manual adjustments, and keeps edge protection independent. Off/preset/global-override states hide controls that do not apply. The page queries Alioth HAL ranges, reads the edge default, preserves old integer presets and manual values, and offers per-app reset without changing enable state. Help replaces the unrelated thermal information/search actions on this page. Firmware presets are alternatives to manual tuning, not quality rankings; maximum values are not universally better.
+
+The global responsiveness setting takes priority; saved per-app tuning is paused until it is disabled. Manual zero restores firmware defaults. Edge zero explicitly disables filtering; a new/reset Alioth profile uses the HAL default (2 in the inspected kernel). The global option does not change display refresh rate. New strings use Android resource fallback; retained locale files are untouched. Host state tests do not establish translated or rendered UI acceptance.
+
+[Validation and deployment limits](../state/validation.md#v-device-20261010).
