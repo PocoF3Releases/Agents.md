@@ -61,3 +61,11 @@ Common [b1ff3a7](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/c
 The global responsiveness setting takes priority; saved per-app tuning is paused until it is disabled. Manual zero restores firmware defaults. Edge zero explicitly disables filtering; a new/reset Alioth profile uses the HAL default (2 in the inspected kernel). The global option does not change display refresh rate. New strings use Android resource fallback; retained locale files are untouched. Host state tests do not establish translated or rendered UI acceptance.
 
 [Validation and deployment limits](../state/validation.md#v-device-20261010).
+
+## Kotlin and Compose migration — October 10
+
+Common `7c9eb73` finishes eight feature-scoped commits: shared Compose/utilities, display, global touch polling, speaker, MiSound, refresh modes, thermal/touch/reference, and entry-point/resource cleanup. All source folders are Kotlin; old layouts/preference XML/custom preference views and unused drawables are removed. Keep translated strings/arrays, launcher/tile/profile icons and the cleaning tone. Default DP preferences, package keys, boot/manifest entry points, sysfs/HAL protocols and regional policy tables remain compatible.
+
+Use checkout-provided AndroidX and Soong’s matching Compose compiler (inspected UI 1.12.0-alpha01, Material3 1.5.0-alpha16, Kotlin/Compose compiler 2.2.0); do not introduce Gradle or replace platform modules. Screens refresh hardware-owned state on resume. Row switches and sliders carry accessible semantics. Profile detail formatting uses the non-formatting resource overload when no arguments exist, preserving literal percent text.
+
+[Validation and integration limits](../evidence/device-20261010.md#compose-migration). Temporary app testing is not system-UID/HAL certification or installed production inclusion. [Build guard](../operations/android-tooling.md#build-environment) preserves incremental output; a module dry run is not proof of bounded execution.
