@@ -50,7 +50,7 @@ Use checkout-provided AndroidX and Soong’s matching Compose compiler (inspecte
 
 ## Production Compose adaptation — October 10
 
-Common `b7e4364` aligns Parts with the maintainer’s ROM Settings: platform surface tokens and variable fonts, compact font-aware toolbars, grouped outer/inner corners, 2 dp row gaps, pill primary switches and check/cross thumbs. Thermal rows separate profile selection from touch actions. Touch keeps presets, manual main/fine controls and independent edge protection. Reference lists use official Material Symbols Rounded on tonal circles; details use padded text and separate CPU panels. Choice radio groups scroll and dismiss on selection or Back. [Verification](../evidence/device-20261010.md#settings-aligned-compose-revision).
+Common `ecb7120` aligns Parts with the maintainer’s ROM Settings: platform surface tokens and variable fonts, compact font-aware toolbars, grouped outer/inner corners, 2 dp row gaps, pill primary switches and check/cross thumbs. Thermal rows separate profile selection from touch actions. Touch keeps presets, manual main/fine controls and independent edge protection. Reference lists use official Material Symbols Rounded on tonal circles and in profile selectors; details use padded text and separate CPU panels. Choice radio groups scroll and dismiss on selection or Back. [Verification](../evidence/device-20261010.md#settings-aligned-compose-revision).
 
 Keep checkout dependencies: Material3 1.5.0-alpha16, runtime/UI 1.12.0-alpha01. Runtime 1.13.0-alpha01 release notes were checked (mutation-policy and saved-state APIs, minification flag syntax); using those APIs would require a separately reviewed shared SDK update. No shared prebuilt, build config or resource IDs changed for this adaptation.
 
