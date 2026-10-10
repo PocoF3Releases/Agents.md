@@ -1,14 +1,14 @@
 # XiaomiParts, device UX and localization
 
-## Final dialog correction
+## UI history
 
-Common-tree `3c30e7d416cd91e51c1c95ce81d55b20e60c570c` fixes `parts/src/org/lineageos/settings/thermal/ThermalSettingsFragment.java` / `showProfileDialog`: measure overlap with actual topPanel/buttonPanel, clip rows between them and add only required padding while preserving original padding. Update padding only when needed to avoid layout loops. This supersedes `db27251`, whose fixed-inset removal let rows draw below the title and Cancel. System/per-app dialogs share source, but only the System Profile result has supplied visual acceptance. [V-PARTS](../state/validation.md#v-parts).
+The October 10 Compose screens supersede the old XML dialog-padding and MiSound toolbar work. Historical acceptance remains in [V-PARTS](../state/validation.md#v-parts) and [V-UI](../state/validation.md#v-ui); do not apply those retired view-specific fixes to Compose.
 
 ## Preserve functionality
 
 Thermal profiles retain the vendor-backed model and clearer names, icons and details. Per-app assignment must survive lifecycle changes without writing global preferences or resetting silently. Preserve Benchmark/Gaming touch enable, response, sensitivity and edge resistance. Historical routing used `appName`/`packageName`; storage used `gameMode,response,sensitivity,resistant` consumed by ThermalUtils. Guard missing nodes rather than assuming every stock control exists.
 
-Preserve per-app refresh, Smooth Display, charging control, KGSL/GPU information, ZRAM/power controls and lifecycle-safe Clear Speaker. Smooth Display remains Alioth Settings overlay-owned. Prefer collapsible System Profile, top-right search/info, stable item sizes, consistent sliders, compact tonal selectors and correct scrolling. Avoid duplicate Android 16+ system-bar insets already owned by CollapsingToolbarBaseActivity. Presentation changes must not trade away working behavior.
+Preserve per-app refresh, Smooth Display, charging control, KGSL/GPU information, ZRAM/power controls and lifecycle-safe Clear Speaker. Smooth Display remains Alioth Settings overlay-owned. Compose owns edge-to-edge insets through its scaffold; do not add legacy toolbar insets. Presentation changes must not trade away working behavior.
 
 MiSound headphone profiles do not establish a speaker mode. Historical `ro.vendor.audio.soundfx.type=mi` / `isSupportSpeaker` references were insufficient; explicit speaker switches were guarded for `thyme`, not Alioth. Do not port them blindly. [Detailed touch/MiSound lessons](dolby-audio.md).
 
@@ -16,17 +16,9 @@ MiSound headphone profiles do not establish a speaker mode. Historical `ro.vendo
 
 Read target-local `parts/AGENTS.md`, AGENTS.md or TRANSLATING.md; resolve the current branch before changing strings. Compare base values/strings.xml with the locale and translate every missing user-visible key within the requested scope. Preserve resource/package identifiers, `%1$s`/`%d` placeholders, escaping, apostrophes and markup. Validate XML, missing/duplicate keys and placeholder equivalence. Keep translation commits resource-only unless code/UI work is requested. Honor manual/local translation requests; do not silently substitute an API workflow. Older notes record completed locale sets, not proof no strings were added later.
 
-[Final UX record](xiaomiparts-device-ux.md) and [translation record](xiaomiparts-device-ux.md) preserve prior detail. No new UI build or per-app test is claimed by this consolidation.
+## Touch and lifecycle foundations
 
-## MiSound title correction
-
-September 24 source change [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9ba) hides both action-bar and collapsing titles in DiracActivity, sizes the toolbar to navigation content and disables expansion. The logo and back navigation remain. This prevents duplicate branding and blank expanded space. [V-UI](../state/validation.md#v-ui) records its untested-on-device status.
-
-## September 28 source additions
-
-Common 71b3157 extends the existing per-app touch page, not a duplicate game service. Alioth firmware-backed aim sensitivity, tap stability and three expert presets are added; response/sensitivity use range 1..5. Preserve old four-value profiles. Zero selects firmware defaults/individual tuning; apply expert presets last because individual writes disable expert mode. Global sampling owns its preset while enabled and refreshes the foreground profile when disabled. Other devices keep existing controls. Locale commits 5d1ff87 and 0290d37 extend translations; validate newly introduced strings separately. Stock/shipped/installed HAL identity and kernel modes were inspected; resource/host tests passed, but this is not full new-UI device acceptance.
-
-0d7df19 reports buffered sysfs write failures, including close failures, instead of saving false success. Clear Speaker requests transient focus, prefers the built-in speaker, rejects communication mode, stops on focus loss/non-speaker routes/errors and is scoped to the visible screen. Refresh-service destruction state is visible to Binder callbacks. Host write tests and stub-assisted Java compilation passed; recorded node checks were on Android 16, not new Android 17 runtime certification. 9af4ed6 removes unused sensor helpers.
+Keep the existing per-app service and four-value profile contract. Alioth aim/stability/expert settings use separate keys; expert presets apply last because individual writes disable expert mode. Global polling takes priority and replays the foreground profile when disabled. Other SM8250 devices retain legacy dispatch. Sysfs persistence follows successful writes including close. Clear Speaker is visible-screen scoped, requests transient focus, rejects communication mode and stops on focus/routing/error loss. Historical Java/stub tests do not certify Android 17.
 
 ## Alioth ultrasound proximity
 
@@ -34,23 +26,9 @@ Alioth 05f9b24 patches the exact stock MIUS zero-result poll timeout branch to r
 
 Recorded temporary mount stopped idle errors and delivered near/far events (0/5 cm); the maintainer reported proximity working in a call. This is scoped acceptance of that test, not proof for all call apps or other SM8250 devices. Keep the source extraction fix and packaged blob consistent; do not require a permanent root mount. Later AW8697 work is owned by [haptics](haptics.md).
 
-## October 9 source checkpoint
-
-Common `6916b8c` persists last successful per-app MIN/PEAK writes and retains
-independent Smooth Display changes before restore/reapply, including recreation.
-New APK device acceptance is pending. `cd19c9c` stages and validates the selected
-regional thermal map, atomically publishes it and then restarts mi_thermald;
-preparation failure retains the active map and daemon. Stock maps/limits unchanged.
-See [reported validation](../state/validation.md#v-source-20261009).
-
 ## HBM brightness recovery — October 9 maintenance
 
-If restoring SCREEN_BRIGHTNESS failed when disabling HBM, DisplayUtils discarded
-the saved previous brightness and reported success. The fix keeps the backup,
-reports failure and saves HBM off, then retries brightness recovery during boot
-restoration. Failed sysfs disable retains the existing state. Successful recovery
-clears the backup; an off state without a backup does not alter brightness.
-[Host regression evidence](../state/validation.md#v-hbm-recovery).
+Common `6916b8c` preserves successful MIN/PEAK writes and independent Smooth Display changes across refresh-service recreation. `cd19c9c` validates/stages regional thermal maps, atomically publishes then restarts mi_thermald; preparation failure retains the active map/daemon. Stock limits remain unchanged. HBM disable keeps a brightness backup on settings failure, reports failure and retries during boot; failed sysfs disable retains enabled state. An off state without a backup never changes brightness. [Source evidence](../state/validation.md#v-source-20261009), [HBM tests](../state/validation.md#v-hbm-recovery).
 
 ## October 10 touch controls
 
@@ -68,4 +46,18 @@ Common `7c9eb73` finishes eight feature-scoped commits: shared Compose/utilities
 
 Use checkout-provided AndroidX and Soong’s matching Compose compiler (inspected UI 1.12.0-alpha01, Material3 1.5.0-alpha16, Kotlin/Compose compiler 2.2.0); do not introduce Gradle or replace platform modules. Screens refresh hardware-owned state on resume. Row switches and sliders carry accessible semantics. Profile detail formatting uses the non-formatting resource overload when no arguments exist, preserving literal percent text.
 
-[Validation and integration limits](../evidence/device-20261010.md#compose-migration). Temporary app testing is not system-UID/HAL certification or installed production inclusion. [Build guard](../operations/android-tooling.md#build-environment) preserves incremental output; a module dry run is not proof of bounded execution.
+[Validation and integration limits](../evidence/device-20261010.md#compose-migration). The initial renamed test app did not establish system-UID/HAL behavior. The subsequent production-app rework is recorded separately below. [Build guard](../operations/android-tooling.md#build-environment) preserves incremental output; a module dry run is not proof of bounded execution.
+
+## Production Compose adaptation — October 10
+
+Shared Expressive large collapsing headers use icon navigation/actions, compact tonal cards, disabled-state contrast and single accessible row actions. Thermal and refresh app lists restore asynchronously loaded icons; the thermal row separates profile selection from its touch button. System-profile controls collapse independently. Touch keeps presets separate from manual response/sensitivity, puts optional aim/stability behind fine adjustments, and retains independent edge protection. Help/reset dialogs scroll. Refresh selections reload on resume. Audio and speaker/global touch have clear primary switches; MiSound branding is compact.
+
+Keep checkout dependencies: Material3 1.5.0-alpha16, runtime/UI 1.12.0-alpha01. Runtime 1.13.0-alpha01 release notes were checked (mutation-policy and saved-state APIs, minification flag syntax); using those APIs would require a separately reviewed shared SDK update. No shared prebuilt, build config or resource IDs changed for this adaptation.
+
+[Production verification](../evidence/device-20261010.md#production-compose-adaptation) distinguishes staged XiaomiParts-only installation, actual system-UID checks and hardware readback from host fixtures. Reuse isolated compiler/dex tools with temporary outputs; never infer bounded work from a module dry run.
+
+Final adaptation adds a pinned compact toolbar, centered wide-window content, consumed edge/keyboard insets and rotation-safe choice/help/reset dialogs. AGSL decoration and RenderEffect blur affect a static header layer only; text stays sharp and no idle shader animation runs. Touch sliders morph thumb/track/card shapes with bounded springs, discrete values and gesture-end persistence; fine/system controls also use springs. Explicitly resizable activities support window changes without fixed orientation.
+
+Feedback uses amplitude-capable Alioth touch waveforms, 14 ms non-repeating/40 ms throttled, respecting user/view settings with platform fallback. Alioth has no PWLE/envelope capability; VibrationEffect.Builder envelope/preset methods are API 37.2, absent this API-37 checkout. Do not fake capabilities or upgrade shared SDK modules for an app test. Speaker data source must be set before preferred-device/listener requests; native MediaPlayer returns NO_INIT before initialization.
+
+Production is tested through a staged single-app `/data/app` update with UID 1000/Enforcing. That update overrides later ROM base APKs: inspect `pm path` and remove the system-app update through package manager before ROM-base acceptance. Keep screenshots/recordings and raw preferences private; publish sanitized evidence. Original hardware/user settings are restored after tests.
