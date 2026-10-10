@@ -27,7 +27,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: c06d74941adc5b24762cc260a672ea0b86520cf3
+    aosp-17: 7c9eb73fdba8169d57cd9cc4c2959e86e655eaa1
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source

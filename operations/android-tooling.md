@@ -13,6 +13,8 @@ lunch
 
 Choose the product/release/**user** combination offered by that checkout. Do not start a build merely to restore tools.
 
+For this checkout preserve `lineage_alioth-cp2a-user`. The maintainer normally uses `. build/envsetup.sh && lunch lineage_alioth-cp2a-user && m installclean && m evolution`; this is their workflow, not permission for agent cleaning/full builds. Agent tests may use only demonstrably bounded module actions in `~/evo/out`. Never clean/delete output, switch output configuration or rebuild core dependencies. A dry run alone is insufficient: the XiaomiParts migration dry run predicted app-only work, but the real graph expanded into framework dependencies. Stop on such expansion; reuse existing dependencies for direct compiler verification rather than running the graph again.
+
 The working tree supplies build JDK/toolchains. Do not change global Java or compiler symlinks to make an analysis tool start. For haptics-only builds, after an appropriate user lunch, the production target is `android.hardware.vibrator-service.xiaomi_aw8697`. The old device-test target was removed; do not request it from the current tree. A target build still needs source/build prerequisites and authorization; it does not validate a complete image.
 
 ## Android Clang and LLVM
