@@ -4,7 +4,7 @@
   "result": "All local HEADs equal live selected fork branch heads and recorded revisions; all working trees clean.",
   "preserved_misound_commit": "38b93bc3b49c3a56302eac6bfcc7c3b12730ee30",
   "upstream_ancestry": "Synced Qualcomm, NFC, USB and tinycompress tracking refs are ancestors of maintained heads. Evolution X cnb tracking refs are ancestors of frameworks/base and frameworks/av.",
-  "manifest_caveat": "Effective manifest names lineage-24.0 for frameworks/base and frameworks/av although Evolution X advertises cnb. Correct local heads remain checked out; manifest entries have not been changed by this audit.",
+  "manifest_caveat": "Superseded: Evolution X remote revision cnb overrides the inherited default. Explicit PocoF3Releases/cnb local override is now installed and targeted sync passed without changing maintained heads; see operations/framework-manifest.md.",
   "limits": [
     "Source audit only; no new build or phone test.",
     "No full release manifest or upstream-wide compatibility certification."
