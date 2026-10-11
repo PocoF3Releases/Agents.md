@@ -1,6 +1,6 @@
 # OpenAI guidance applied to this workhub
 
-Online model/prompt guidance reviewed **2026-10-06**. Project guidance; no client changes or measured model savings.
+Online model/prompt guidance reviewed **2026-10-11**. Project guidance; no client changes or measured model savings.
 
 ## Shared contract for Astra and Sol
 
@@ -16,7 +16,8 @@ this structure. Retain source identities, evidence scope and missing facts; no p
 
 The [GPT-6 guide](https://developers.openai.com/api/docs/guides/latest-model)
 covers both requested models. Its API settings are not Codex client defaults:
-Sol's documented API default is medium; both models reject none/minimal effort.
+The [GPT-6.1 Sol model page](https://developers.openai.com/api/docs/models/gpt-6.1-sol)
+confirms medium as its API default and excludes none/minimal effort.
 Use the client's configured default unless the task/user warrants a change.
 
 ## Retrieve only missing context
@@ -57,3 +58,18 @@ compaction remain harness-managed.
 Compare matched tasks before/after one prompt change, retaining required facts.
 [Cold-start checks](cold-start-checks.md) establish retrieval behavior only; actual
 model/client evaluations are required for token/cost/quality claims.
+
+## Review and evidence discipline
+
+Apply the [GPT-6 prompting guidance](https://developers.openai.com/api/docs/guides/latest-model)
+to this shared workhub: state the result and completion checks, load the relevant
+owner records, carry authorized work through verification, and avoid repeating
+passed checks without a new concern. Model recommendations do not prove Android
+behavior or change the client's configured model.
+
+OpenAI's [repository review guidance](https://developers.openai.com/blog/custom-code-review-rules-for-codex)
+recommends concise, scoped invariants. For this project, verify both repository
+and full commit identity before linking an abbreviation; distinguish retained
+patch import bases from dropped feature candidates; preserve artifact/date
+evidence without assigning it to a different source revision. Keep mechanical
+checks in scripts and technical facts in their owners.

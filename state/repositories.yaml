@@ -245,8 +245,8 @@ repositories:
   local_a17: matches_selected_ref
   observation: October 11 cleaned branch pushed over SSH and remote head verified.
   commit_links:
-    aosp-16: https://gitlab.com/johnmart19/vendor_xiaomi_camera/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4
-    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4
+    aosp-16: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4
+    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4
 - repository: https://github.com/johnmart19/repoindex
   role: tool
   source_tree_paths: []

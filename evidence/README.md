@@ -14,6 +14,7 @@ observations without requiring the original workstation or a raw log archive.
 | [Translations](production-final-translations-20261011.json) | Historical resource audit, placeholders and canonical names |
 | [Compatible Gerrit changes](lineage-gerrit-applied-20261011.json) | IWLAN, fingerprint and flashlight component checks |
 | [Kernel WBT removal](wbt-removal-20261011.json) | Authorship-preserving import and separate defconfig regeneration |
+| [Workhub review](workhub-review-20261011.md) | Standards/spec corrections, official guidance and network limits |
 | [Post-sync sources](post-sync-source-audit-20261011.json) | Maintained fork head verification |
 | [Archive skeleton](../archive/README.md) | Empty reserved structure; no hidden evidence files |
 

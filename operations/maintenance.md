@@ -32,6 +32,9 @@ Labels: `source-checked`, `build-tested`, `host-tested`, `device-tested`,
 another. Distinguish temporary deployment from packaged/flashed inclusion.
 Rewritten-away commits are historical, not current targets; verify remote refs
 before publication.
+Resolve abbreviated commits within their owning repository, not across unrelated
+object stores. Retain linked upstream patch bases when they are required for
+replay; remove dropped feature IDs without relabeling historical tests as current.
 
 For readers without PC access, provide public sources and sanitized evidence.
 Local paths identify missing material, not access. Request only artifacts needed
