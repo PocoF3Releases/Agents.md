@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-10-10'
+observed: '2026-10-11'
 scope: Maintained PocoF3Releases repositories and maintainer-owned GitLab camera/tool sources only. Upstream
   dependencies are not tracked here. Recorded source observations are not a complete release manifest.
 workhub:
@@ -27,7 +27,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: cb12f25a6cae98ecd04757f3a4cce4d4ab2b40f7
+    aosp-17: 38b93bc3b49c3a56302eac6bfcc7c3b12730ee30
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
@@ -36,7 +36,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 8e4c4517a35fe652e5810724445a377381ed7b85
-    aosp-17: 6ac76e6fe906a5f6b313b5b588b3bf3b700b1283
+    aosp-17: c1debf6b85f71d640fa18beea6e9b3e13c79c8c2
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -45,7 +45,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: a3972583b004e3964766a48e681e007b9335ef67
-    aosp-17: d9c52cf131edbe5786c1092b52e10c04902cb994
+    aosp-17: 8df5835cf12b42262795de8a6bbc2e23b9ad3caf
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
   role: build_source
@@ -54,7 +54,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 37ea70355f044e20e0921593e7a0c712ad9a8284
-    aosp-17: 01d9a7ba8d620a5ac23d28c33c2881a190079709
+    aosp-17: 1e11ce1c76343da45338a9ee7c7b6601e6c31b49
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
   role: build_source
@@ -63,14 +63,14 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 10f8a106de65d4fb5cd9c2f2fe2714f11d97bcd5
-    aosp-17: bd43bde102a829c744620aa3df8ea7df4891485c
+    aosp-17: a67e83add1fa9398814db8451f91347c7c2d09ed
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: e9cfbbe3ae4c9e02285fc5f392798d39dc19e8d9
+    main: cb1815d9f2a9f592f268a531f564fb2f81a0bfab
 - repository: https://github.com/PocoF3Releases/references_code
   role: reference
   source_tree_paths: []
@@ -96,7 +96,7 @@ repositories:
   selected_ref: cnb
   refs:
     aosp-16: 59188cfbdba67b63ecf1882cf6bba94cf33cf35a
-    cnb: ec8831d20942ea2acdbda2fbedc08e4d09874fa0
+    cnb: 7c226c2791d24c00b53faf8b92d4e68a37bdbaf5
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
@@ -105,7 +105,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: f6b6335124e3ae6bee303a7a6285839004defda4
-    aosp-17: 6ecedef10389060750bb8c7ce13e81e8e734492d
+    aosp-17: a72242890b4a762bd44df586277c479210d7f118
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/frameworks_av
   role: build_source
@@ -115,7 +115,7 @@ repositories:
   refs:
     aosp-16: 1ffb8dc867f8745da1b9d0244f677e236b8bc0f9
     bka: cf5631a5d076d6c26b3c11746708c093d7910f4e
-    cnb: 5c3e93ebef3c20c5d8ab32453db00b7d91706458
+    cnb: 81b959f7c5197a52e5f3588e8c94f230fb9848a4
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
@@ -124,7 +124,7 @@ repositories:
   selected_ref: cnb
   refs:
     aosp-16: 51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: 3eaa985f38805138d417aa2f64fd67efd71c66ee
+    cnb: d88e1ba6da08dcd11127560a7eae81c5537ce0b5
     ozo-unimplemented: c62e85dbb8102a1c93a5af698ab85f668811b860
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
@@ -152,7 +152,7 @@ repositories:
   selected_ref: cnb
   refs:
     aosp-16: dc0f8fc6f4840f0f1e11b6b454016ef4ed94dd5b
-    cnb: 6b3d466f134ef3b3f8b1da5c7ffa8bb234249292
+    cnb: 4563de61446855e0b1dade548d9003e792cb143a
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/android_hardware_nxp_nfc
   role: build_source
@@ -161,7 +161,7 @@ repositories:
   selected_ref: lineage-24.0
   refs:
     aosp-16: 8d875030628a4f8f93f53f47dfa9511bf195a48d
-    lineage-24.0: 05b56f439e52a32198749f39b57b7dfb326b5071
+    lineage-24.0: 53a125ca706afd1c6c09b0b3222fd6aeb25f1195
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb
   role: build_source
@@ -170,7 +170,7 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 5e998d729706c908d020d909835fd3e6de492a56
-    aosp-17: f96fae951fbeb9d897b82a721583808022c5902b
+    aosp-17: 34a2c8bb9b07b52b81921e9f4f4068009fb84050
   local_a17: matches_selected_ref
 - repository: https://gitlab.com/johnmart19/vendor_xiaomi_camera
   role: required_camera_prebuilts
@@ -178,9 +178,10 @@ repositories:
   - vendor/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-16: f13797ef3d93508756e06a4a185c9208dbc3ee88
-    aosp-17: f13797ef3d93508756e06a4a185c9208dbc3ee88
+    aosp-16: 607c5b881ccfff475e0e56ec85ec55a9d3248ac4
+    aosp-17: 607c5b881ccfff475e0e56ec85ec55a9d3248ac4
   local_a17: matches_selected_ref
+  observation: October 11 cleaned branch pushed over SSH and remote head verified.
 - repository: https://github.com/johnmart19/repoindex
   role: tool
   source_tree_paths: []
@@ -193,7 +194,7 @@ repositories:
   - external/tinycompress
   selected_ref: lineage-24.0
   refs:
-    lineage-24.0: ff62357d346d31cea3e90fb11755bbdefdb41a23
+    lineage-24.0: eacefe332464fbb2f55f12d70b2e60fb244e05ca
   local_a17: matches_selected_ref
 workspace:
   android17_root: ~/evo
