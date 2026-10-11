@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-11",
+  "scope": "Android 17 legacy hardware research specification and linked Gemini discussion, current alioth/sm8250 sources",
+  "status": [
+    "source-checked",
+    "host-tested",
+    "build-tested",
+    "device-tested"
+  ],
+  "findings": [
+    "Existing clsact implementation in net/sched/sch_ingress.c; no scheduler backport required.",
+    "HIDL audio factories remain supported; no demonstrated need for universal AIDL shim.",
+    "lmkd statslog consumes total_swap; proposed anon_swap rename is unsupported.",
+    "Current vendor audit: 845 ELF files, 193 ELF32 and 652 ELF64, no DT_TEXTREL or DF_TEXTREL.",
+    "Generated linker configuration uses linkerconfig; API-numbered hardcoded ld.config replacement is inappropriate.",
+    "Dolby already uses IO transactions, StateFlow and bounded audio-server recovery."
+  ],
+  "improvement": "MiSound DSP setup, queries, writes, communication updates and recovery use one process-owned worker. Activity and new/legacy tiles consume immutable StateFlow snapshots; headset capabilities are cached per effect. Route registration/query and lifecycle cleanup use IO. Accepted writes survive UI navigation. Callback registration retries are bounded and DSP remains bypassed until observers are ready.",
+  "validation": [
+    "XiaomiParts complete Kotlin source compilation with checkout Kotlin/Compose compiler: exit 0.",
+    "git diff --check: exit 0.",
+    "Prior current-kernel VINTF check: COMPATIBLE; see vintf-compatibility-20261011.json.",
+    "Signed/dexed final APK installed identity matches recorded SHA; on-device toggles, selections, both tiles and audioserver recovery passed."
+  ],
+  "limits": [
+    "No full ROM build, CTS/VTS or measured frame-time claim.",
+    "Headset route-specific UI not exercised because no headset was connected; catalog fallback retained.",
+    "No live telephone/VoIP call or speaker-cleaning tone started.",
+    "ELF audit covers common and alioth proprietary trees only."
+  ],
+  "source_commit": "38b93bc3b49c3a56302eac6bfcc7c3b12730ee30",
+  "publication": {
+    "destination": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common",
+    "branch": "aosp-17",
+    "status": "pushed and remote head verified after exact user approval",
+    "published_base": "bbd50bf223ec3725b8b0713aa396cd1ad766b6ab",
+    "published_head": "38b93bc3b49c3a56302eac6bfcc7c3b12730ee30"
+  },
+  "device": {
+    "android_sdk": 37,
+    "build_type": "user",
+    "deployment": "signed staged XiaomiParts update",
+    "apk_sha256": "68e66a05bbdeeec82fbbb59b312c73f03cadeececaee6cdbafe991963d1ffa47",
+    "checks": [
+      "installed final APK identity",
+      "saved settings restored after staged update",
+      "Pause during calls off/on readback",
+      "Equalizer off/on readback",
+      "Enable off/on readback",
+      "Select scene Video",
+      "Select scene Smart",
+      "Preset Rock persists across navigation",
+      "Preset Default",
+      "final selections and toggles restored",
+      ".misound.MiSoundTileService off/on",
+      ".dirac.DiracTileService off/on",
+      "automatic audioserver restart recovery preserves enabled/EQ/pause/preset/scene",
+      "dedicated MiSound worker thread present"
+    ],
+    "dolby_after_restart": "Enabled for media; Dynamic; automatic factory tuning",
+    "restore": "original QS tile list restored; MiSound enable/pause/EQ on, Default preset, Smart scene"
+  },
+  "research_sources": [
+    "https://developer.android.com/about/versions/17/behavior-changes-all",
+    "https://developer.android.com/about/versions/17/changes/messagequeue",
+    "https://developer.android.com/about/versions/17/behavior-changes-17",
+    "https://developer.android.com/topic/performance/anrs/diagnose-and-fix-anrs",
+    "https://developer.android.com/topic/libraries/architecture/lifecycle",
+    "https://source.android.com/docs/core/architecture/aidl/aidl-hals",
+    "https://source.android.com/docs/core/architecture/vndk/linker-namespace"
+  ],
+  "additional_findings": [
+    "No private android.os.MessageQueue reflection or app-side System.load usage in reviewed Parts/Dolby sources. FMQ classes in sensors are unrelated to android.os.MessageQueue.",
+    "Phone memory limiter reports disabled; no unsupported memory.stat field substitution or forced enablement applied.",
+    "Speaker cleaning stays user-started and stops with activity lifecycle; no unnecessary foreground service added.",
+    "Dolby already has IO transactions, bounded retries and restart monitoring; source change unnecessary for reviewed paths."
+  ]
+}
