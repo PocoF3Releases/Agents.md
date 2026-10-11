@@ -26,7 +26,7 @@ October 9 behavior/acceptance remains historical; this inventory is not a releas
 | `hardware/qcom-caf/sm8250/media` | [4563de614468](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/4563de61446855e0b1dade548d9003e792cb143a) | C2D color/layout refresh and surface/GPU mapping lifetime |
 | `hardware/nxp/nfc` | [53a125ca706a](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/53a125ca706afd1c6c09b0b3222fd6aeb25f1195) | Snapshot client queue during teardown; superseded timer fix excluded |
 | `vendor/qcom/opensource/usb` | [34a2c8bb9b07](https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/34a2c8bb9b07b52b81921e9f4f4068009fb84050) | Platform configfs ownership/controller readiness |
-| `vendor/xiaomi/camera` | [607c5b881ccf](https://gitlab.com/johnmart19/vendor_xiaomi_camera/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4) | Final APK, ExtraPhoto/gson and matching native runtime |
+| `vendor/xiaomi/camera` | [607c5b881ccf](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4) | Final APK, ExtraPhoto/gson and matching native runtime |
 | `external/tinycompress` | [eacefe332464](https://github.com/PocoF3Releases/external_tinycompress/commit/eacefe332464fbb2f55f12d70b2e60fb244e05ca) | Full capture-read semantics, poll state and EOF termination |
 
 ## Inclusion and finality
