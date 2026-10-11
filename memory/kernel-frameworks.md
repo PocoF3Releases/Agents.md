@@ -20,7 +20,7 @@ Early Bionic loader `thread_local`/PT_TLS changes caused Android and recovery fa
 
 ## NFC
 
-Current SNxxx `05b56f4` snapshots the queue ID before its receive loop so teardown does not replace the handle used by that thread. Upstream `66ef2f3` reverted the earlier timer-teardown mitigation across HAL variants after reported hangs/logging/battery drain. The old instruction to preserve that mitigation is superseded; do not replay it blindly. September 22 device acceptance in [V-NFC](../state/validation.md#v-nfc) is historical, not a new test of this current combined tree.
+Current SNxxx the historical candidate snapshots the queue ID before its receive loop so teardown does not replace the handle used by that thread. Upstream [66ef2f3](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/66ef2f3dfcb7cee2e3a6cac16ff3272a150b59e2) reverted the earlier timer-teardown mitigation across HAL variants after reported hangs/logging/battery drain. The old instruction to preserve that mitigation is superseded; do not replay it blindly. September 22 device acceptance in [V-NFC](../state/validation.md#v-nfc) is historical, not a new test of this current combined tree.
 
 ## Build policy
 
@@ -40,7 +40,7 @@ The retired font override is not a build requirement. Verify packaged assets whe
 
 GPU donor-driver, Turnip and game-setting experiments were parked by the maintainer. No broadly validated Unity/Unreal optimization, F8 GPU-driver compatibility, frame-generation port or unlocked 120fps is established. Keep thermal protection intact. Experimental root modules are not production fixes or required recovery dependencies.
 
-Standalone hardware/xiaomi fixes: cbb57f1 rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; 30c28d4 initializes fingerprint pointers and cleans failed opens; a2cf3b4 replaces unsafe delayed-session references with weak references and idempotent close; 5e49959 initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
+Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; [5e49959](https://github.com/PocoF3Releases/frameworks_base/commit/5e4995957e7a07e02d49ff4dc411602a0b17a9bb) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
 
 ## Android 16 and connectivity boundaries
 
@@ -50,7 +50,7 @@ screen recording and recording-blur suppression are independent features/commits
 neither should require the other. Recheck WFD/ELF dependency rewrites and selected
 Clang against that branch instead of undoing or restoring them by age alone.
 
-Common `3621ad4` removed obsolete Bluetooth build configuration. Source policy
+Common the historical candidate removed obsolete Bluetooth build configuration. Source policy
 and library presence were reviewed, but no Bluetooth audio headset or WFD sink
 was available. Xbox controller input does not establish headset audio through its
 3.5 mm jack over Bluetooth. No complete Bluetooth-audio/WFD certification or
@@ -62,12 +62,12 @@ brightness, and enabled temperature-warning resources do not replace HAL events.
 
 ## October 9 source checkpoint
 
-Common `c75e23f` fingerprints actual modem MCFG files and optional metadata,
-copying only after valid input; `6574ae0` keeps radio-owned cache markers 0640,
+Common the historical candidate fingerprints actual modem MCFG files and optional metadata,
+copying only after valid input; the historical candidate keeps radio-owned cache markers 0640,
 restores directory write permission for replacement and rejects marker symlinks.
-No regional carrier selection or radio policy change. Kernel `65b3e61797f0`
-guards invalid fuel-gauge reads and empty SOC recovery; `21360d5ab98a` validates
-touch control parsing/registration; `779d3d6ac01f` fixes fast-charge cleanup.
+No regional carrier selection or radio policy change. Kernel the historical candidate
+guards invalid fuel-gauge reads and empty SOC recovery; the historical candidate validates
+touch control parsing/registration; the historical candidate fixes fast-charge cleanup.
 Device-selected defconfig fragments/DTBO packaging and compiler probes were
 modernized; these are build maintenance, not user-visible performance claims.
 [Validation limits](../state/validation.md#v-source-20261009).

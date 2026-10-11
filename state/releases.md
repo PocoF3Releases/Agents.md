@@ -72,7 +72,7 @@ is not acceptance of a complete rebuilt ROM. See the owning topics and
 **2026-10-05 — published recovery, separate from ROM release baselines.**
 [PBRP 4.0 release](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/releases/tag/pbrp-4.0-20261005)
 for alioth/aliothin. Tag `pbrp-4.0-20261005`, release target and branch `pbrp-a17`
-were verified at `c8a628c80f34105e2c165b28fbf5284cf3a2e05e` after the requested
+were verified at [c8a628c80f34](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/commit/c8a628c80f34105e2c165b28fbf5284cf3a2e05e) after the requested
 initial-history squash. Asset identities rechecked using GitHub API:
 
 | Asset | Bytes | SHA256 |

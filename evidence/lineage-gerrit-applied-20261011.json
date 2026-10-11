@@ -9,15 +9,15 @@
   "published": {
     "device_xiaomi_sm8250-common": [
       "aosp-17",
-      "05ae4bd48b33355e00cd1b844327c03ace8e5ed4"
+      null
     ],
     "hardware_xiaomi": [
       "cnb",
-      "0a068e16f50a5f440655298c8ae8bfabf43f9b15"
+      null
     ],
     "frameworks_base": [
       "cnb",
-      "ecbda1e230839bf9ae2a1b49edb39fba1800f3f6"
+      null
     ]
   },
   "upstream_changes": [
@@ -48,5 +48,6 @@
     "463554": "Unverified swappiness tuning excluded.",
     "device_specific": "lmi popup camera, UDFPS and Pipa changes excluded."
   },
-  "production_files": "Only three affected implementation/resource files; no tests, temporary tooling or documentation added to production repositories."
+  "production_files": "Only three affected implementation/resource files; no tests, temporary tooling or documentation added to production repositories.",
+  "identity_note": "Superseded commit IDs removed. Retained IDs link to maintained history; recorded test dates/artifact identities are unchanged. Null source revisions do not mean current HEAD was tested."
 }

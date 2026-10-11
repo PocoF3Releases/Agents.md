@@ -2,7 +2,7 @@
   "date": "2026-10-11",
   "heads": {
     "kernel/xiaomi/sm8250": "a67e83add1fa9398814db8451f91347c7c2d09ed",
-    "device/xiaomi/sm8250-common": "91ee705ec420c857f7c50c007bcb4dfe94951f8c"
+    "device/xiaomi/sm8250-common": null
   },
   "sources": [
     "https://review.lineageos.org/c/LineageOS/android_kernel_xiaomi_sm8250/+/469765",
@@ -10,7 +10,7 @@
   ],
   "commits": {
     "kernel_import": "dc92d852a5ca",
-    "device_adaptation": "91ee705ec420",
+    "device_adaptation": null,
     "kernel_regeneration": "a67e83add1fa"
   },
   "authorship": "Original kernel author stic-server-open and DT author ZhaoYueNan retained; adapted DT description and Change-Ids retained; regeneration separate.",
@@ -22,5 +22,11 @@
     "No remaining rootdir wbt_lat_usec writes",
     "Whitespace checks passed; both repos clean and remote heads verified"
   ],
-  "limits": "Kconfig generation/source validation only; no kernel image build, flash or storage performance benchmark performed."
+  "limits": "Kconfig generation/source validation only; no kernel image build, flash or storage performance benchmark performed.",
+  "commit_links": {
+    "a67e83add1fa9398814db8451f91347c7c2d09ed": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a67e83add1fa9398814db8451f91347c7c2d09ed",
+    "dc92d852a5ca": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/dc92d852a5ca1e1ee8d373bdbb3feebbdc37fb63",
+    "a67e83add1fa": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a67e83add1fa9398814db8451f91347c7c2d09ed"
+  },
+  "identity_note": "Superseded commit IDs removed. Retained IDs link to maintained history; recorded test dates/artifact identities are unchanged. Null source revisions do not mean current HEAD was tested."
 }

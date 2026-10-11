@@ -70,17 +70,17 @@ are the source-owned build contract. Patch baselines:
 
 | Sibling repository | Clean base | Application order |
 | --- | --- | --- |
-| `bootable/recovery` | `4ea56986534da92b29c73ea1907e10e3c0d5ef50` | recovery 0001–0005 TeamWin imports, then 0006–0012 Alioth/FBE/haptics/logd/runtime changes |
-| `vendor/pb` | `2124e85c72c4d4ff9ef18a7303950d0480257e34` | vendor-pb 0001 adbd context, 0002 infrastructure enforcement |
-| `external/f2fs-tools` | `a7424d458d4b924be8205986c7b7829c934127d8` | 0001 shared C++ runtime for sload_f2fs |
-| `system/sepolicy` | `dd91f58a018a43d70c40abb86dddb85368015b96` | system-sepolicy 0001 historical allowlist, 0002 restrict to recovery |
+| `bootable/recovery` | the historical candidate | recovery 0001–0005 TeamWin imports, then 0006–0012 Alioth/FBE/haptics/logd/runtime changes |
+| `vendor/pb` | the historical candidate | vendor-pb 0001 adbd context, 0002 infrastructure enforcement |
+| `external/f2fs-tools` | the historical candidate | 0001 shared C++ runtime for sload_f2fs |
+| `system/sepolicy` | the historical candidate | system-sepolicy 0001 historical allowlist, 0002 restrict to recovery |
 
 1. Verify clean status, relevant remotes and patch bases. Apply each series once
    with `git am` in filename order to clean bases, never the patched development
    checkout. Preserve upstream authorship. Original final recovery replay matched
    the built Git tree; repeat that comparison when replacing patches.
 2. Use the tracked Android 17 kernel artifacts in `prebuilt/`: `Image`,
-   `dtbs/alioth.dtb`, `dtbo.img`, with provenance/SHA256SUMS. Recorded tested kernel: `ac2a025a05e6f6d9cf12b020c739019fafb33987`,
+   `dtbs/alioth.dtb`, `dtbo.img`, with provenance/SHA256SUMS. Recorded tested kernel: the historical candidate,
    Linux 4.19.325-cip136-st20. Recheck kernel compatibility when updating it.
 3. Build only when requested, using user target and checkout tools:
 

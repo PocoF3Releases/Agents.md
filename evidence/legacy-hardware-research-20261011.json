@@ -74,5 +74,10 @@
     "Phone memory limiter reports disabled; no unsupported memory.stat field substitution or forced enablement applied.",
     "Speaker cleaning stays user-started and stops with activity lifecycle; no unnecessary foreground service added.",
     "Dolby already has IO transactions, bounded retries and restart monitoring; source change unnecessary for reviewed paths."
-  ]
+  ],
+  "commit_links": {
+    "38b93bc3b49c3a56302eac6bfcc7c3b12730ee30": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/38b93bc3b49c3a56302eac6bfcc7c3b12730ee30",
+    "bbd50bf223ec3725b8b0713aa396cd1ad766b6ab": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/bbd50bf223ec3725b8b0713aa396cd1ad766b6ab"
+  },
+  "identity_note": "Superseded commit IDs removed. Retained IDs link to maintained history; recorded test dates/artifact identities are unchanged. Null source revisions do not mean current HEAD was tested."
 }
