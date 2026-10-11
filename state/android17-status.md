@@ -111,3 +111,5 @@ platform spatializer/head tracking and full PWLE support remain unestablished.
 The repeated post-reboot ADB disappearance has an observed Windows host recovery
 procedure, not a proven universal USB/kernel fix. Recovery fastbootd acceptance
 and complete rebuilt-ROM integration remain separate from app verification.
+
+[Current implementation commits](implementation-commits.md) links each retained feature to its repository.

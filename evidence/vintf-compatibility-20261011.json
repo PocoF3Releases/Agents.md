@@ -37,5 +37,14 @@
     "The production build must repeat normal packaging and OTA VINTF checks.",
     "Standalone system check-one emits missing vendor context warnings; complete check-compat supplies all partitions and succeeds."
   ],
-  "kernel_config_sha256": "73d54a05c69d40489cadbe7f543195303e6e20f9d13c61932413a927187ba2d0"
+  "kernel_config_sha256": "73d54a05c69d40489cadbe7f543195303e6e20f9d13c61932413a927187ba2d0",
+  "commit_links": {
+    "bbd50bf223ec3725b8b0713aa396cd1ad766b6ab": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/bbd50bf223ec3725b8b0713aa396cd1ad766b6ab",
+    "c1debf6b85f71d640fa18beea6e9b3e13c79c8c2": "https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/c1debf6b85f71d640fa18beea6e9b3e13c79c8c2",
+    "1e11ce1c76343da45338a9ee7c7b6601e6c31b49": "https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/1e11ce1c76343da45338a9ee7c7b6601e6c31b49",
+    "8df5835cf12b42262795de8a6bbc2e23b9ad3caf": "https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/8df5835cf12b42262795de8a6bbc2e23b9ad3caf",
+    "a67e83add1fa9398814db8451f91347c7c2d09ed": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a67e83add1fa9398814db8451f91347c7c2d09ed",
+    "7c226c2791d24c00b53faf8b92d4e68a37bdbaf5": "https://github.com/PocoF3Releases/hardware_xiaomi/commit/7c226c2791d24c00b53faf8b92d4e68a37bdbaf5"
+  },
+  "identity_note": "Superseded commit IDs removed. Retained IDs link to maintained history; recorded test dates/artifact identities are unchanged. Null source revisions do not mean current HEAD was tested."
 }

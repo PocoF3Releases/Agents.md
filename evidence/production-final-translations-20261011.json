@@ -16,7 +16,7 @@
   "repositories": [
     {
       "repo": "device/xiaomi/sm8250-common",
-      "head": "c43f6b83e057978f0b0e08e6ab1e5391fea7ad9f",
+      "head": null,
       "status": "",
       "remote_matches": true
     },
@@ -46,7 +46,7 @@
     },
     {
       "repo": "hardware/xiaomi",
-      "head": "43c932f34b7675d33761c5791a736ac9a74385a8",
+      "head": null,
       "status": "",
       "remote_matches": true
     },
@@ -64,7 +64,7 @@
     },
     {
       "repo": "frameworks/base",
-      "head": "0d1eabb335551453efefd086c00a9a0eb54879ee",
+      "head": null,
       "status": "",
       "remote_matches": true
     },
@@ -113,5 +113,22 @@
   ],
   "scope": "16 maintained A17 production source repositories; upstream dependencies and recovery tree excluded",
   "validation": "Translation inheritance, placeholders, duplicate keys, canonical non-translatable names, Git whitespace/cleanliness, scratch file scan, remote head verification and AAPT2 compile for Parts/Dolby/custom recording resources. No full ROM build.",
-  "upstream_test_exception": "HighBrightnessModeControllerTest.java is part of upstream accepted 7dc7de2a3f6c zero-timing HBM regression coverage; retained as relevant upstream code."
+  "upstream_test_exception": "HighBrightnessModeControllerTest.java is part of upstream accepted 7dc7de2a3f6c zero-timing HBM regression coverage; retained as relevant upstream code.",
+  "commit_links": {
+    "c1debf6b85f71d640fa18beea6e9b3e13c79c8c2": "https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/c1debf6b85f71d640fa18beea6e9b3e13c79c8c2",
+    "8df5835cf12b42262795de8a6bbc2e23b9ad3caf": "https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/8df5835cf12b42262795de8a6bbc2e23b9ad3caf",
+    "1e11ce1c76343da45338a9ee7c7b6601e6c31b49": "https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/1e11ce1c76343da45338a9ee7c7b6601e6c31b49",
+    "3cc9b7c687f21cc91dac00433e91e08a71d144d8": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3cc9b7c687f21cc91dac00433e91e08a71d144d8",
+    "a72242890b4a762bd44df586277c479210d7f118": "https://github.com/PocoF3Releases/device_xiaomi_camera/commit/a72242890b4a762bd44df586277c479210d7f118",
+    "81b959f7c5197a52e5f3588e8c94f230fb9848a4": "https://github.com/PocoF3Releases/frameworks_av/commit/81b959f7c5197a52e5f3588e8c94f230fb9848a4",
+    "385a1c2fa09b9f1ab1d566afa14727e54b6f57dc": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/385a1c2fa09b9f1ab1d566afa14727e54b6f57dc",
+    "147f4aae7eb3148baae6c992594a278630b09909": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/147f4aae7eb3148baae6c992594a278630b09909",
+    "4563de61446855e0b1dade548d9003e792cb143a": "https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/4563de61446855e0b1dade548d9003e792cb143a",
+    "53a125ca706afd1c6c09b0b3222fd6aeb25f1195": "https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/53a125ca706afd1c6c09b0b3222fd6aeb25f1195",
+    "34a2c8bb9b07b52b81921e9f4f4068009fb84050": "https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/34a2c8bb9b07b52b81921e9f4f4068009fb84050",
+    "607c5b881ccfff475e0e56ec85ec55a9d3248ac4": "https://gitlab.com/johnmart19/vendor_xiaomi_camera/commit/607c5b881ccfff475e0e56ec85ec55a9d3248ac4",
+    "eacefe332464fbb2f55f12d70b2e60fb244e05ca": "https://github.com/PocoF3Releases/external_tinycompress/commit/eacefe332464fbb2f55f12d70b2e60fb244e05ca",
+    "7dc7de2a3f6c": "https://github.com/PocoF3Releases/frameworks_base/commit/7dc7de2a3f6c01dd0a835cf1f109b13f13095178"
+  },
+  "identity_note": "Superseded commit IDs removed. Retained IDs link to maintained history; recorded test dates/artifact identities are unchanged. Null source revisions do not mean current HEAD was tested."
 }

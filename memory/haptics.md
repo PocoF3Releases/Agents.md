@@ -131,7 +131,7 @@ Binder extension, loops and live parameter updates are absent. The production
 HAL plays its packaged PCM; AAC rendering still runs separately. Do not claim
 full SDK compatibility or expose an unsupported RichTap version. Upstream
 reference: [RichTapCoreForAndroidT](https://github.com/richtap-haptics/RichTapCoreForAndroidT)
-at abec840f74d62306564c6ffcd96cf71ca7dd34b6.
+at the historical candidate.
 
 ## Validation and continuation
 
@@ -148,7 +148,7 @@ October 4 candidate remain unestablished.
 
 ## October 8 LOW_TICK compatibility
 
-Hardware `ec8831d` maps LOW_TICK to stock LIGHT_TICK streaming or RAM selector 2,
+Hardware the historical candidate maps LOW_TICK to stock LIGHT_TICK streaming or RAM selector 2,
 preserving scale/delay, duration, callbacks and cancellation; exact files take
 priority. It is an approximation, not a verified low-frequency waveform.
 Commit-reported target build and temporary enforcing completion tests passed;

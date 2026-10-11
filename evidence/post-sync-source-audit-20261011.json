@@ -8,5 +8,9 @@
   "limits": [
     "Source audit only; no new build or phone test.",
     "No full release manifest or upstream-wide compatibility certification."
-  ]
+  ],
+  "commit_links": {
+    "38b93bc3b49c3a56302eac6bfcc7c3b12730ee30": "https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/38b93bc3b49c3a56302eac6bfcc7c3b12730ee30"
+  },
+  "identity_note": "Superseded commit IDs removed. Retained IDs link to maintained history; recorded test dates/artifact identities are unchanged. Null source revisions do not mean current HEAD was tested."
 }

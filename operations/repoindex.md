@@ -1,6 +1,6 @@
 # repoindex recovery and usage
 
-Canonical repository: [johnmart19/repoindex](https://github.com/johnmart19/repoindex), branch `main`. Inspected local revision: `c79c1508c3c7f2657ddaf0172e89b279f9ce4914`, version 1.1.0. It is a Python source/file/symbol indexer, **not** Repo (Android multi-repository manager) or repopick (Gerrit helper).
+Canonical repository: [johnmart19/repoindex](https://github.com/johnmart19/repoindex), branch `main`. Inspected local revision: [c79c1508c3c7](https://github.com/johnmart19/repoindex/commit/c79c1508c3c7f2657ddaf0172e89b279f9ce4914), version 1.1.0. It is a Python source/file/symbol indexer, **not** Repo (Android multi-repository manager) or repopick (Gerrit helper).
 
 ## Restore the canonical copy
 

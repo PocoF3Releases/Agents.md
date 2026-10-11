@@ -10,9 +10,9 @@ Android 16 sample playback was subsequently confirmed by the maintainer; see [V-
 
 ## Accepted AC-4 integration
 
-The opted-in OMX path uses `media.dolby_ac4_21_entry_tables`: stock table A is 256 bytes; B/C each have 21 entries / 84 bytes. Private request size is 452 bytes with tables at `0x1c`, `0x11c`, `0x170`; legacy size remains 444 bytes. The opted-in index is `0x6f400009`, not default `0x6f400008`. Keep the default shared enum and Codec2 behavior unchanged. Relevant framework revisions: `801d9c6ecd`, `6c0db963ed5111efb8d6e9820de7b19dc241ab05`, `ae242b56da334c3b1605bbbc526cc4e8a47cce45`.
+The opted-in OMX path uses `media.dolby_ac4_21_entry_tables`: stock table A is 256 bytes; B/C each have 21 entries / 84 bytes. Private request size is 452 bytes with tables at `0x1c`, `0x11c`, `0x170`; legacy size remains 444 bytes. The opted-in index is `0x6f400009`, not default `0x6f400008`. Keep the default shared enum and Codec2 behavior unchanged. Relevant framework revisions: the historical candidate, the historical candidate, the historical candidate.
 
-Common `428db4a` enables the option; `e019493` packages `libstagefright_omx.vendor` and restores `/vendor/lib/vndk/libstagefright_omx.so` -> `/vendor/lib/libstagefright_omx.so`. Wrong index caused UnsupportedIndex `0x8000101a` / configure -1010. After that correction, `Error 4 in dlb_ac4dec_input_stage_open` came from the obfuscated helper-library lookup / `function_a`, `function_b`, `function_c` resolution, not bad table contents. [V-AC4](../state/validation.md#v-ac4) owns decoding, audible acceptance and test limits.
+Common [428db4a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/428db4a8318ba1c109ced5526e2596d8d9e88279) enables the option; [e019493](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e019493ff423ad760403e54beb692f92d9089ad2) packages `libstagefright_omx.vendor` and restores `/vendor/lib/vndk/libstagefright_omx.so` -> `/vendor/lib/libstagefright_omx.so`. Wrong index caused UnsupportedIndex `0x8000101a` / configure -1010. After that correction, `Error 4 in dlb_ac4dec_input_stage_open` came from the obfuscated helper-library lookup / `function_a`, `function_b`, `function_c` resolution, not bad table contents. [V-AC4](../state/validation.md#v-ac4) owns decoding, audible acceptance and test limits.
 
 Do not import a complete legacy VNDK, redirect current OMX foundation to v33, or add an unproven foundation compatibility link. Shipped Dolby already uses `libstagefright_foundation-v33.so`; current OMX uses current foundation. Stock/Shipped Alioth decoder code/rodata matched after dependency rewriting. Marble's 64-bit Codec2 component is not this ABI; its B/C dimensions were not established. Audio and OMX services remain 32-bit; no 64-bit-only migration was delivered. [Full audit and failure progression](dolby-audio.md).
 
@@ -49,7 +49,7 @@ USB, calls, recording and hotword paths require their actual endpoints.
 
 `external/tinycompress:lineage-24.0` restores full-buffer blocking capture reads
 required by the legacy HAL, consumes POLLIN-ready data and accumulates short
-reads. Final `ff62357` terminates on backend EOF and clears poll state. Audio HAL
+reads. Final the historical candidate terminates on backend EOF and clears poll state. Audio HAL
 links libtinycompress. Recorded host sanitizer and ARM/ARM64 executable/compiler
 checks passed; the new library was not installed into the ROM. This is not proof
 all Telegram/WhatsApp voice-message failures are fixed. Source identity and
