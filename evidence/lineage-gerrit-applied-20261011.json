@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-11",
+  "labels": [
+    "source-checked",
+    "build-tested",
+    "host-tested",
+    "device-tested"
+  ],
+  "published": {
+    "device_xiaomi_sm8250-common": [
+      "aosp-17",
+      "05ae4bd48b33355e00cd1b844327c03ace8e5ed4"
+    ],
+    "hardware_xiaomi": [
+      "cnb",
+      "0a068e16f50a5f440655298c8ae8bfabf43f9b15"
+    ],
+    "frameworks_base": [
+      "cnb",
+      "ecbda1e230839bf9ae2a1b49edb39fba1800f3f6"
+    ]
+  },
+  "upstream_changes": [
+    505485,
+    499537,
+    494211
+  ],
+  "authorship": "Original authors and Change-Ids retained; adapted flashlight implementation records assistant attribution.",
+  "build": "Bounded recorded production compiler/linker/R8/overlay commands with existing dependencies; isolated temporary outputs. No full ROM or core rebuild.",
+  "artifacts_sha256": {
+    "fingerprint_service": "2e34abcb9358af94b7e28301e3b96dec8ba830775ad08b2be27f03879427b13f",
+    "systemui_test_apk": "8cacc004f6a8f877214a05676125973ab3129640a188e26e02778865e4dc9a09",
+    "original_systemui_apk": "67a088c215039c3820efd8a2b290e340e46d62509ff40552b96ee1c40c973bb0",
+    "iwlan_overlay_apk": "3cfac064856c2531e08449957edccf3ebc8e9a3773af9aaee42de9fb3b4ba29d",
+    "installed_iwlan_overlay_apk": "3cfac064856c2531e08449957edccf3ebc8e9a3773af9aaee42de9fb3b4ba29d"
+  },
+  "runtime": {
+    "device": "alioth Android 17 user, SELinux enforcing; root used only for isolated tests and temporary deployment",
+    "iwlan": "Rebuilt overlay exactly matches installed APK; effective config vendor.qti.iwlan and phone bound to IWlanDataService. No carrier Wi-Fi calling end-to-end test.",
+    "fingerprint": "Three real FPC driver authenticate/cancel cycles with updated Session object: one CANCELED callback each. Fake-driver fixture also passed delayed notification, synchronous notification and native failure propagation. Compiled service executable hash matched running /proc/PID/exe and ran in hal_fingerprint_default domain. No enrolled-fingerprint unlock acceptance.",
+    "flashlight": "Updated SystemUI APK temporarily mounted in global namespace. Repeated on/off checks and camera-provider restart/recovery passed; SystemUI PID stable during checks, crash buffer empty. Host fixture passed invalid-ID handling, absent strength metadata, one-retry bound, permanent failure notification, saved strength restoration and newer-off cancellation. Strength recovery fault cases not induced in the physical camera HAL.",
+    "restoration": "Original SystemUI APK hash verified, original fingerprint binary restored, camera/fingerprint services running, torch off, brightness setting null unchanged, temporary mounts and device test files removed."
+  },
+  "excluded": {
+    "499259": "No code consumers of aggregation resource in current Settings or Telephony; initial local commit removed before publication.",
+    "505011": "Automatic restriction provenance needs persistence/manual-policy review; not applied.",
+    "502987": "TP10 display flag requires broader HDR/camera/codec validation; not applied.",
+    "463554": "Unverified swappiness tuning excluded.",
+    "device_specific": "lmi popup camera, UDFPS and Pipa changes excluded."
+  },
+  "production_files": "Only three affected implementation/resource files; no tests, temporary tooling or documentation added to production repositories."
+}
