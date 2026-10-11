@@ -199,4 +199,4 @@ repositories:
 workspace:
   android17_root: ~/evo
   android16_root: not currently identified; ~/evo is now A17
-  local_manifests: '2026-10-09: empty directory'
+  local_manifests: '2026-10-11: poco-frameworks.xml explicitly selects PocoF3Releases/cnb for frameworks/base and frameworks/av'

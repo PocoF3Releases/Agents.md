@@ -94,10 +94,10 @@ The production build must perform its normal packaging and OTA/VINTF checks.
 No complete new ROM build, flash, CTS/VTS run, car projection test or measured
 performance improvement was established by these source/component audits.
 
-The effective manifest still names lineage-24.0 for frameworks/base and
-frameworks/av while their Evolution X remote advertises cnb. Correct maintained
-heads are present; correcting future-sync manifest selection remains an integration
-task, not a completed change.
+Framework sync selection is now explicit: the local override uses
+PocoF3Releases/cnb for both framework repositories. Targeted sync passed without
+changing their maintained heads. [Override and verification](../operations/framework-manifest.md)
+also correct the earlier inherited-default interpretation.
 
 Android Auto has a recorded framework registration fix, but wired/wireless
 projection on the rebuilt ROM remains unverified. MiSound headset-specific routes
