@@ -70,9 +70,9 @@ is not acceptance of a complete rebuilt ROM. See the owning topics and
 ## PBRP release
 
 **2026-10-05 — published recovery, separate from ROM release baselines.**
-[PBRP 4.0 release](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/releases/tag/pbrp-4.0-20261005)
+Historical PBRP 4.0 release (former repository deleted; original download link unavailable)
 for alioth/aliothin. Tag `pbrp-4.0-20261005`, release target and branch `pbrp-a17`
-were verified at [c8a628c80f34](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/commit/c8a628c80f34105e2c165b28fbf5284cf3a2e05e) after the requested
+were verified at [c8a628c80f34](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/commit/c8a628c80f34105e2c165b28fbf5284cf3a2e05e) after the requested
 initial-history squash. Asset identities rechecked using GitHub API:
 
 | Asset | Bytes | SHA256 |
@@ -93,7 +93,7 @@ Current presentation uses the cumulative initial-release posts above. The
 October 9 audit does not establish a new ROM publication.
 
 **2026-10-07 — newer published PBRP release, rechecked October 9.**
-[PBRP release](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/releases/tag/pbrp-4.0-20261007).
+Historical PBRP release (former repository deleted; original download link unavailable).
 GitHub API reports these publisher asset digests (not a new download/hash test):
 
 | Asset | Bytes | SHA256 |
@@ -112,3 +112,5 @@ source inputs, including required GitLab camera and newly tracked tinycompress.
 The full/short Telegram posts now include recording controls, final media/display
 compatibility and capture-read safeguards, grouping duplicate changes once.
 No new ROM publication or universal runtime acceptance is implied.
+
+The October 11 standalone [recovery source](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp) has no published release assets. Historical asset hashes above are retained as records, not current download links.
