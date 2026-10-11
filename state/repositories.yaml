@@ -1,27 +1,25 @@
 schema_version: 4
 observed: '2026-10-11'
-scope: Maintained PocoF3Releases repositories and maintainer-owned GitLab camera/tool sources only. Upstream
-  dependencies are not tracked here. Recorded source observations are not a complete release manifest.
+scope: Maintained PocoF3Releases and pbrp-alioth repositories and maintainer-owned GitLab camera/tool
+  sources only. Upstream dependencies are not tracked here. Recorded source observations are not a complete
+  release manifest.
 workhub:
   repository: https://github.com/PocoF3Releases/Agents.md
   branch: main
   revision: enclosing_git_commit
 repositories:
-- repository: https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp
+- repository: https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp
   role: build_source
   source_tree_paths:
-  - bootable/recovery
-  - vendor/pb
-  - system/sepolicy
-  - external/f2fs-tools
+  - pbrp-alioth/device/xiaomi/alioth
   selected_ref: pbrp-a17
   refs:
-    pbrp-a17: 77fb84dc755f13f1b8208371bb40812e65f986db
+    pbrp-a17: 1dcf2e2e1a2600ce86291bd6324f90c494a74087
   local_a17: matches_selected_ref
-  observation: 2026-10-09; patch-source owner; recovery user build and temporary slot-B decryption/Magisk
-    acceptance at recorded candidate. Existing sibling edits preserved.
+  observation: 2026-10-11; standalone recovery source; patch replay and source consistency checked. Prior
+    runtime acceptance remains historical; final fastboot driver check pending.
   commit_links:
-    pbrp-a17: https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/commit/77fb84dc755f13f1b8208371bb40812e65f986db
+    pbrp-a17: https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/commit/1dcf2e2e1a2600ce86291bd6324f90c494a74087
 - repository: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common
   role: build_source
   source_tree_paths:
@@ -265,6 +263,46 @@ repositories:
   local_a17: matches_selected_ref
   commit_links:
     lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/eacefe332464fbb2f55f12d70b2e60fb244e05ca
+- repository: https://github.com/pbrp-alioth/android_bootable_recovery
+  role: build_source
+  source_tree_paths:
+  - pbrp-alioth/bootable/recovery
+  selected_ref: pbrp-a17
+  refs:
+    pbrp-a17: ef490e810b0a1d3c12f330242546824327ef9c51
+  commit_links:
+    pbrp-a17: https://github.com/pbrp-alioth/android_bootable_recovery/commit/ef490e810b0a1d3c12f330242546824327ef9c51
+  observation: 2026-10-11; final tree matches device patch replay; Android 14 recovery checkout only.
+- repository: https://github.com/pbrp-alioth/vendor_pb
+  role: build_source
+  source_tree_paths:
+  - pbrp-alioth/vendor/pb
+  selected_ref: pbrp-a17
+  refs:
+    pbrp-a17: 4f5dc08aafdb70063da058b2bcc8e5e8c04cad05
+  commit_links:
+    pbrp-a17: https://github.com/pbrp-alioth/vendor_pb/commit/4f5dc08aafdb70063da058b2bcc8e5e8c04cad05
+  observation: 2026-10-11; final tree matches device patch replay; Android 14 recovery checkout only.
+- repository: https://github.com/pbrp-alioth/android_system_sepolicy
+  role: build_source
+  source_tree_paths:
+  - pbrp-alioth/system/sepolicy
+  selected_ref: pbrp-a17
+  refs:
+    pbrp-a17: edc77e62099aae9c136c1beff24baa34eb70ba14
+  commit_links:
+    pbrp-a17: https://github.com/pbrp-alioth/android_system_sepolicy/commit/edc77e62099aae9c136c1beff24baa34eb70ba14
+  observation: 2026-10-11; final tree matches device patch replay; Android 14 recovery checkout only.
+- repository: https://github.com/pbrp-alioth/android_external_f2fs-tools
+  role: build_source
+  source_tree_paths:
+  - pbrp-alioth/external/f2fs-tools
+  selected_ref: pbrp-a17
+  refs:
+    pbrp-a17: efd0dc9a3a58ad7f4a1d83e6a0fe0028df228238
+  commit_links:
+    pbrp-a17: https://github.com/pbrp-alioth/android_external_f2fs-tools/commit/efd0dc9a3a58ad7f4a1d83e6a0fe0028df228238
+  observation: 2026-10-11; final tree matches device patch replay; Android 14 recovery checkout only.
 workspace:
   android17_root: ~/evo
   android16_root: not currently identified; ~/evo is now A17

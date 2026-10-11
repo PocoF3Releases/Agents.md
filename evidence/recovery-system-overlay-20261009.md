@@ -75,7 +75,7 @@ validation remains pending. No fastbootd partition flash was attempted. A stale
 Windows ADB server after temporary Boot re-enumeration was resolved by restarting
 that server; this was not a recovery policy failure.
 
-Final published recovery source: [77fb84dc755f](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/commit/77fb84dc755f13f1b8208371bb40812e65f986db).
+Current source after October 11 history consolidation (runtime evidence above remains October 9): [1dcf2e2e1a26](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/commit/1dcf2e2e1a2600ce86291bd6324f90c494a74087).
 Final follow-up user build and packaging checks passed. Candidate hashes (new
 fastboot USB ID not yet device-tested):
 

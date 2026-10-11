@@ -81,7 +81,7 @@ custom ROM inputs. Their heads remained unchanged. Four remaining repositories:
 | `.github` | [cb1815d9f2a9](https://github.com/PocoF3Releases/.github/commit/cb1815d9f2a9f592f268a531f564fb2f81a0bfab) | Organization profile/artwork; excluded from ROM features |
 | `references_code` | [d301665e4c8d](https://github.com/PocoF3Releases/references_code/commit/d301665e4c8d442a98cdc636c9f12e260bd1de0b) | Reference code only; no production inclusion assumed |
 | `Agents.md` | `enclosing commit` | This knowledge workhub; revision is the enclosing commit |
-| `device_xiaomi_alioth-pbrp` | [77fb84dc755f](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/commit/77fb84dc755f13f1b8208371bb40812e65f986db) | Separate recovery build; unchanged source and excluded from ROM notes |
+| `device_xiaomi_alioth-pbrp` | [1dcf2e2e1a26](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/commit/1dcf2e2e1a2600ce86291bd6324f90c494a74087) | Separate recovery build; unchanged source and excluded from ROM notes |
 
 Companion Settings gesture/clipboard screens and controllers were inspected as
 build integration evidence. Settings is an upstream dependency, excluded from

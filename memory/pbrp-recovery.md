@@ -1,6 +1,6 @@
 # Alioth PitchBlack recovery
 
-Checkpoint: **2026-10-09** (source review; runtime evidence October 7). Separate PBRP Android 14 userspace checkout at
+Checkpoint: **2026-10-11** (source/patch replay; prior runtime evidence). Separate PBRP Android 14 userspace checkout at
 `~/pbrp-alioth`; ROM checkout is `~/evo`. Android 17 compatibility does not mean
 recovery userspace was rebased to Android 17. Read this topic only for recovery.
 Public source/ref identities belong in [Sources](../state/repositories.yaml),
@@ -63,9 +63,9 @@ policy is historical; do not restore its allowlist for a current build.
 
 ## Reproduce and update
 
-The device tree [README](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/blob/pbrp-a17/README.md),
-[handoff](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/blob/pbrp-a17/Agents.md)
-and [patch manifest](https://github.com/PocoF3Releases/device_xiaomi_alioth-pbrp/blob/pbrp-a17/patches/README.md)
+The device tree [README](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/blob/pbrp-a17/README.md),
+[handoff](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/blob/pbrp-a17/Agents.md)
+and [patch manifest](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/blob/pbrp-a17/patches/README.md)
 are the source-owned build contract. These are retained upstream import bases, not dropped maintained
 candidate commits. Patch baselines:
 
