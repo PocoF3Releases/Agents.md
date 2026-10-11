@@ -1,0 +1,117 @@
+{
+  "Parts": {
+    "locales": 86,
+    "translatable_keys": 191,
+    "errors": []
+  },
+  "Dolby": {
+    "locales": 78,
+    "translatable_keys": 140,
+    "errors": []
+  },
+  "SystemUI": {
+    "recording_locales": 93,
+    "errors": []
+  },
+  "repositories": [
+    {
+      "repo": "device/xiaomi/sm8250-common",
+      "head": "c43f6b83e057978f0b0e08e6ab1e5391fea7ad9f",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "device/xiaomi/alioth",
+      "head": "c1debf6b85f71d640fa18beea6e9b3e13c79c8c2",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "vendor/xiaomi/alioth",
+      "head": "8df5835cf12b42262795de8a6bbc2e23b9ad3caf",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "vendor/xiaomi/sm8250-common",
+      "head": "1e11ce1c76343da45338a9ee7c7b6601e6c31b49",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "kernel/xiaomi/sm8250",
+      "head": "3cc9b7c687f21cc91dac00433e91e08a71d144d8",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "hardware/xiaomi",
+      "head": "43c932f34b7675d33761c5791a736ac9a74385a8",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "device/xiaomi/camera",
+      "head": "a72242890b4a762bd44df586277c479210d7f118",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "frameworks/av",
+      "head": "81b959f7c5197a52e5f3588e8c94f230fb9848a4",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "frameworks/base",
+      "head": "0d1eabb335551453efefd086c00a9a0eb54879ee",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "hardware/qcom-caf/sm8250/display",
+      "head": "385a1c2fa09b9f1ab1d566afa14727e54b6f57dc",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "hardware/qcom-caf/sm8250/audio",
+      "head": "147f4aae7eb3148baae6c992594a278630b09909",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "hardware/qcom-caf/sm8250/media",
+      "head": "4563de61446855e0b1dade548d9003e792cb143a",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "hardware/nxp/nfc",
+      "head": "53a125ca706afd1c6c09b0b3222fd6aeb25f1195",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "vendor/qcom/opensource/usb",
+      "head": "34a2c8bb9b07b52b81921e9f4f4068009fb84050",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "vendor/xiaomi/camera",
+      "head": "607c5b881ccfff475e0e56ec85ec55a9d3248ac4",
+      "status": "",
+      "remote_matches": true
+    },
+    {
+      "repo": "external/tinycompress",
+      "head": "eacefe332464fbb2f55f12d70b2e60fb244e05ca",
+      "status": "",
+      "remote_matches": true
+    }
+  ],
+  "scope": "16 maintained A17 production source repositories; upstream dependencies and recovery tree excluded",
+  "validation": "Translation inheritance, placeholders, duplicate keys, canonical non-translatable names, Git whitespace/cleanliness, scratch file scan, remote head verification and AAPT2 compile for Parts/Dolby/custom recording resources. No full ROM build.",
+  "upstream_test_exception": "HighBrightnessModeControllerTest.java is part of upstream accepted 7dc7de2a3f6c zero-timing HBM regression coverage; retained as relevant upstream code."
+}

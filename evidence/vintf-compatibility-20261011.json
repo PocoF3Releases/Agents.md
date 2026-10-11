@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "scope": "alioth Android 17 VINTF host compatibility; no full ROM build or flash",
+  "label": "host-tested",
+  "source_revisions": {
+    "device/xiaomi/sm8250-common": "bbd50bf223ec3725b8b0713aa396cd1ad766b6ab",
+    "device/xiaomi/alioth": "c1debf6b85f71d640fa18beea6e9b3e13c79c8c2",
+    "vendor/xiaomi/sm8250-common": "1e11ce1c76343da45338a9ee7c7b6601e6c31b49",
+    "vendor/xiaomi/alioth": "8df5835cf12b42262795de8a6bbc2e23b9ad3caf",
+    "kernel/xiaomi/sm8250": "a67e83add1fa9398814db8451f91347c7c2d09ed",
+    "hardware/xiaomi": "7c226c2791d24c00b53faf8b92d4e68a37bdbaf5"
+  },
+  "metadata": {
+    "selected_files": 53,
+    "fresh_assemble_vintf_steps": 43,
+    "selected_apex_packages_inspected": 40,
+    "apex_vintf_fragments": 0,
+    "shipping_api": 30,
+    "device_fcm": 7,
+    "odm_sku": "nfc"
+  },
+  "results": {
+    "system_check_one_exit": 0,
+    "vendor_check_one_exit": 0,
+    "complete_check_compat_exit": 0,
+    "complete_result": "COMPATIBLE",
+    "kernel": "4.19.325",
+    "kernel_configuration": "alioth_defconfig generated in temporary output using selected clang-r563880c, LLVM=1, LLVM_IAS=1"
+  },
+  "corrections": [
+    "Initial host-GCC configuration lacked compiler identity flags; regenerated with the actual product Clang/LLVM toolchain. No source mismatch.",
+    "check-one accepts a single selected partition plus APEX mapping; attempting complete mappings with check-one returns usage error. Complete mappings use check-compat."
+  ],
+  "changes": "No production source changes needed; all six inspected repositories clean.",
+  "limits": [
+    "APEX packages reused from cached build outputs; no complete target-files archive or images produced.",
+    "The production build must repeat normal packaging and OTA VINTF checks.",
+    "Standalone system check-one emits missing vendor context warnings; complete check-compat supplies all partitions and succeeds."
+  ],
+  "kernel_config_sha256": "73d54a05c69d40489cadbe7f543195303e6e20f9d13c61932413a927187ba2d0"
+}

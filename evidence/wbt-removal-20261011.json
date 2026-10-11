@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-11",
+  "heads": {
+    "kernel/xiaomi/sm8250": "a67e83add1fa9398814db8451f91347c7c2d09ed",
+    "device/xiaomi/sm8250-common": "91ee705ec420c857f7c50c007bcb4dfe94951f8c"
+  },
+  "sources": [
+    "https://review.lineageos.org/c/LineageOS/android_kernel_xiaomi_sm8250/+/469765",
+    "https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sm8250-common/+/469766"
+  ],
+  "commits": {
+    "kernel_import": "dc92d852a5ca",
+    "device_adaptation": "91ee705ec420",
+    "kernel_regeneration": "a67e83add1fa"
+  },
+  "authorship": "Original kernel author stic-server-open and DT author ZhaoYueNan retained; adapted DT description and Change-Ids retained; regeneration separate.",
+  "changes": "Remove CONFIG_BLK_WBT and CONFIG_BLK_WBT_SQ from common fragment; remove manual 75000 UFS wbt_lat_usec write; regenerate all 12 device defconfigs, exactly two options removed per config.",
+  "verification": [
+    "scripts/update_defconfig --android-root ~/evo -j 4 succeeded for all 12 devices",
+    "scripts/update_defconfig --check --android-root ~/evo -j 4 matched all generated configs",
+    "Resolved alioth .config has CONFIG_BLK_WBT disabled and CONFIG_IOSCHED_CFQ=y",
+    "No remaining rootdir wbt_lat_usec writes",
+    "Whitespace checks passed; both repos clean and remote heads verified"
+  ],
+  "limits": "Kconfig generation/source validation only; no kernel image build, flash or storage performance benchmark performed."
+}

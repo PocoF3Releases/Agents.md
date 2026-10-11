@@ -1,6 +1,6 @@
 # Current state
 
-Evidence checkpoint: **2026-10-11**; runtime evidence stays scoped.
+Checkpoint: **2026-10-11**. [Android 17 status](state/android17-status.md).
 
 - **Haptics:** stock-backed HAL/PCM with seven effects, three stock primitives and LOW_TICK fallback. Temporary tests are scoped; current installed identity unknown. No full RichTap/PWLE.
 - **Recovery:** October 9 FBE/reboot fixes verified; shared recovery permissive. Fastbootd driver test pending. Published assets differ from HEAD.
