@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Native A17 recovery/full OTA](evox-native-recovery-20261014.md) | Resync, fresh user build, secure OTA, no-credential FBE and restoration |
 | [Haptics, 2026-10-04](haptics/2026-10-04.md) | Temporary final candidate, stock composition, PCM/AAC scope and restoration |
 | [Haptics, 2026-09-30](haptics/2026-09-30.md) | Installed baseline, corrected candidate, stock gains and user acceptance |
 | [AC-4 diagnostic](ac4/README.md) | Reusable decoder test and recorded PCM result |

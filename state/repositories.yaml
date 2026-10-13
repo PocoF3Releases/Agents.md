@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-10-11'
+observed: '2026-10-14'
 scope: Maintained PocoF3Releases and pbrp-alioth repositories and maintainer-owned GitLab camera/tool
   sources only. Upstream dependencies are not tracked here. Recorded source observations are not a complete
   release manifest.
@@ -27,11 +27,13 @@ repositories:
   selected_ref: aosp-17
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: 38b93bc3b49c3a56302eac6bfcc7c3b12730ee30
+    aosp-17: d31a5e73cc5e878cb6da13afb20a41a8e4ed1362
   local_a17: matches_selected_ref
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/1e3f3cf75b5563faf85c4b406021b622db59a5e9
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/38b93bc3b49c3a56302eac6bfcc7c3b12730ee30
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/d31a5e73cc5e878cb6da13afb20a41a8e4ed1362
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -165,13 +167,15 @@ repositories:
   selected_ref: cnb
   refs:
     aosp-16: 51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: d88e1ba6da08dcd11127560a7eae81c5537ce0b5
+    cnb: 66ba46c1135367797274455f2ec9104ebbfa6fa6
     ozo-unimplemented: c62e85dbb8102a1c93a5af698ab85f668811b860
   local_a17: matches_selected_ref
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/frameworks_base/commit/51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/d88e1ba6da08dcd11127560a7eae81c5537ce0b5
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/66ba46c1135367797274455f2ec9104ebbfa6fa6
     ozo-unimplemented: https://github.com/PocoF3Releases/frameworks_base/commit/c62e85dbb8102a1c93a5af698ab85f668811b860
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
@@ -303,6 +307,352 @@ repositories:
   commit_links:
     pbrp-a17: https://github.com/pbrp-alioth/android_external_f2fs-tools/commit/efd0dc9a3a58ad7f4a1d83e6a0fe0028df228238
   observation: 2026-10-11; final tree matches device patch replay; Android 14 recovery checkout only.
+- repository: https://github.com/PocoF3Releases/android_bootable_recovery
+  role: build_source
+  source_tree_paths:
+  - bootable/recovery
+  selected_ref: cnb
+  refs:
+    cnb: 0c83eff6dce707e2009287fb5ed64611aa92ec70
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_bootable_recovery/commit/0c83eff6dce707e2009287fb5ed64611aa92ec70
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_build
+  role: build_source
+  source_tree_paths:
+  - build/make
+  selected_ref: cnb
+  refs:
+    cnb: 92ef770ab1811cc9fa1616b3377a605252408d39
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_build/commit/92ef770ab1811cc9fa1616b3377a605252408d39
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_device_qcom_sepolicy_vndr_legacy-um
+  role: build_source
+  source_tree_paths:
+  - device/qcom/sepolicy_vndr/legacy-um
+  selected_ref: cnb
+  refs:
+    cnb: 6fcb7b6e91d35937e8ea20d06d5802148af32246
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_device_qcom_sepolicy_vndr_legacy-um/commit/6fcb7b6e91d35937e8ea20d06d5802148af32246
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_boringssl
+  role: build_source
+  source_tree_paths:
+  - external/boringssl
+  selected_ref: cnb
+  refs:
+    cnb: 454c1f6cd3ec0a9e24c0a5dd861e553bb04a2f0f
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_boringssl/commit/454c1f6cd3ec0a9e24c0a5dd861e553bb04a2f0f
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_bzip2
+  role: build_source
+  source_tree_paths:
+  - external/bzip2
+  selected_ref: cnb
+  refs:
+    cnb: 935eff0e8e0fcfc45c5d7f606752b0f8f5bba2a2
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_bzip2/commit/935eff0e8e0fcfc45c5d7f606752b0f8f5bba2a2
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_ntfs-3g
+  role: build_source
+  source_tree_paths:
+  - external/ntfs-3g
+  selected_ref: cnb
+  refs:
+    cnb: 833845e0c7511af92b74b24059e44fc1862ff2fc
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_ntfs-3g/commit/833845e0c7511af92b74b24059e44fc1862ff2fc
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_rust_android-crates-io
+  role: build_source
+  source_tree_paths:
+  - external/rust/android-crates-io
+  selected_ref: cnb
+  refs:
+    cnb: 3a1cdbc679036735a0b23350ab520a1fad783085
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_rust_android-crates-io/commit/3a1cdbc679036735a0b23350ab520a1fad783085
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_rust_cxx
+  role: build_source
+  source_tree_paths:
+  - external/rust/cxx
+  selected_ref: cnb
+  refs:
+    cnb: d74e4086c81b165e2b185a6cc4698673460b2f9d
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_rust_cxx/commit/d74e4086c81b165e2b185a6cc4698673460b2f9d
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_selinux
+  role: build_source
+  source_tree_paths:
+  - external/selinux
+  selected_ref: cnb
+  refs:
+    cnb: a14e22b88892aa74799425fe442621b01d2747dc
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_selinux/commit/a14e22b88892aa74799425fe442621b01d2747dc
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_external_sqlite
+  role: build_source
+  source_tree_paths:
+  - external/sqlite
+  selected_ref: cnb
+  refs:
+    cnb: 08a06f88fa585770324f9f855263e02e7cb14d47
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_external_sqlite/commit/08a06f88fa585770324f9f855263e02e7cb14d47
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_hardware_interfaces
+  role: build_source
+  source_tree_paths:
+  - hardware/interfaces
+  selected_ref: cnb
+  refs:
+    cnb: 9fc1928dfeae05d1cfe28b35b1457481974694da
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/9fc1928dfeae05d1cfe28b35b1457481974694da
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_hardware_libhardware_legacy
+  role: build_source
+  source_tree_paths:
+  - hardware/libhardware_legacy
+  selected_ref: cnb
+  refs:
+    cnb: b9f2a816a626ac0d7b6677bf4fd26b4eb285cd0b
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_hardware_libhardware_legacy/commit/b9f2a816a626ac0d7b6677bf4fd26b4eb285cd0b
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_apex
+  role: build_source
+  source_tree_paths:
+  - system/apex
+  selected_ref: cnb
+  refs:
+    cnb: 22980ea950fc0ec4d153e43638df54bf796c0352
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_apex/commit/22980ea950fc0ec4d153e43638df54bf796c0352
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_extras
+  role: build_source
+  source_tree_paths:
+  - system/extras
+  selected_ref: cnb
+  refs:
+    cnb: 798f94453720074dd2ed016cb19751f9ba0c7760
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_extras/commit/798f94453720074dd2ed016cb19751f9ba0c7760
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_hardware_interfaces
+  role: build_source
+  source_tree_paths:
+  - system/hardware/interfaces
+  selected_ref: cnb
+  refs:
+    cnb: 19e36e5f367fa29eb0da6706818d88dcd1b86ca9
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_hardware_interfaces/commit/19e36e5f367fa29eb0da6706818d88dcd1b86ca9
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_hwservicemanager
+  role: build_source
+  source_tree_paths:
+  - system/hwservicemanager
+  selected_ref: cnb
+  refs:
+    cnb: 8c1363ab53cac69a1a44aab92bda871c4b287c48
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_hwservicemanager/commit/8c1363ab53cac69a1a44aab92bda871c4b287c48
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_incremental_delivery
+  role: build_source
+  source_tree_paths:
+  - system/incremental_delivery
+  selected_ref: cnb
+  refs:
+    cnb: c5fcfdf32d87306dfa5074734046ef13540a52f8
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_incremental_delivery/commit/c5fcfdf32d87306dfa5074734046ef13540a52f8
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_keymaster
+  role: build_source
+  source_tree_paths:
+  - system/keymaster
+  selected_ref: cnb
+  refs:
+    cnb: 2e30ba6d356a2d31cfa3cfde1e4723ce17c4e355
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_keymaster/commit/2e30ba6d356a2d31cfa3cfde1e4723ce17c4e355
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_libcppbor
+  role: build_source
+  source_tree_paths:
+  - system/libcppbor
+  selected_ref: cnb
+  refs:
+    cnb: 54c03dfd7d24f82bdb3766c64fe0792d4977ac6e
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_libcppbor/commit/54c03dfd7d24f82bdb3766c64fe0792d4977ac6e
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_libhidl
+  role: build_source
+  source_tree_paths:
+  - system/libhidl
+  selected_ref: cnb
+  refs:
+    cnb: d81743602448ce7041d9e6a906ded824920d26cd
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_libhidl/commit/d81743602448ce7041d9e6a906ded824920d26cd
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_librustutils
+  role: build_source
+  source_tree_paths:
+  - system/librustutils
+  selected_ref: cnb
+  refs:
+    cnb: 5f8f3e11e8ce9e0948e7795c9f96aebec8f3d7fc
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_librustutils/commit/5f8f3e11e8ce9e0948e7795c9f96aebec8f3d7fc
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_libvintf
+  role: build_source
+  source_tree_paths:
+  - system/libvintf
+  selected_ref: cnb
+  refs:
+    cnb: f06c81ce7cf081fbba43d46cb16f3184b6e5200c
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_libvintf/commit/f06c81ce7cf081fbba43d46cb16f3184b6e5200c
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_logging
+  role: build_source
+  source_tree_paths:
+  - system/logging
+  selected_ref: cnb
+  refs:
+    cnb: 8af2cd3d340bf22ff3b148a11545cf907a232ab3
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_logging/commit/8af2cd3d340bf22ff3b148a11545cf907a232ab3
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_security
+  role: build_source
+  source_tree_paths:
+  - system/security
+  selected_ref: cnb
+  refs:
+    cnb: fa9b001dc7f2ae329b77920cab02960d618495a2
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_security/commit/fa9b001dc7f2ae329b77920cab02960d618495a2
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_sepolicy
+  role: build_source
+  source_tree_paths:
+  - system/sepolicy
+  selected_ref: cnb
+  refs:
+    cnb: cb9537adff3dcc671fe41a2144da6aa742bb7d4c
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_sepolicy/commit/cb9537adff3dcc671fe41a2144da6aa742bb7d4c
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_server_configurable_flags
+  role: build_source
+  source_tree_paths:
+  - system/server_configurable_flags
+  selected_ref: cnb
+  refs:
+    cnb: 5217f99f1551a22d4acbd9b1733492efc5639434
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_server_configurable_flags/commit/5217f99f1551a22d4acbd9b1733492efc5639434
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_tools_aidl
+  role: build_source
+  source_tree_paths:
+  - system/tools/aidl
+  selected_ref: cnb
+  refs:
+    cnb: de11b4ee3da39143346085bb7e0704595d67a823
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_tools_aidl/commit/de11b4ee3da39143346085bb7e0704595d67a823
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/android_system_vold
+  role: build_source
+  source_tree_paths:
+  - system/vold
+  selected_ref: cnb
+  refs:
+    cnb: e8addcdf1755f6b5dda17970c20670567c1e910b
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_system_vold/commit/e8addcdf1755f6b5dda17970c20670567c1e910b
+  local_a17: matches_selected_ref
+  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
+    production baseline. Later credential changes are a separate unpublished candidate.
+- repository: https://github.com/PocoF3Releases/local_manifests
+  role: build_source
+  source_tree_paths:
+  - .repo/local_manifests
+  selected_ref: cnb
+  refs:
+    cnb: 50ef2cbe4ca339d8591d3c00adfeb7a72e87f373
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/local_manifests/commit/50ef2cbe4ca339d8591d3c00adfeb7a72e87f373
+  observation: 2026-10-14; preserves original build/make linkfiles and upstream project groups.
 workspace:
   android17_root: ~/evo
   android16_root: not currently identified; ~/evo is now A17

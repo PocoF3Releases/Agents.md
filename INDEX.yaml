@@ -1,5 +1,5 @@
 schema_version: 1
-last_refreshed: '2026-10-09'
+last_refreshed: '2026-10-14'
 entrypoints:
   rules: AGENTS.md
   current_state: CURRENT_STATE.md
@@ -18,6 +18,12 @@ read_order:
   offload_or_write:
   - operations/maintenance.md
 subsystems:
+  evox_recovery:
+    title: Native Android 17 recovery
+    status: maintained
+    memory: memory/evox-recovery.md
+    keywords: [evox recovery, decryption, gatekeeper, password, sideload, raw image]
+    source_paths: [bootable/recovery, system/vold, system/security, system/sepolicy]
   haptics:
     title: Alioth vibrator
     status: maintained
