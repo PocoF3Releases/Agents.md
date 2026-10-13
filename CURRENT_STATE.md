@@ -1,17 +1,18 @@
 # Current state
 
-Checkpoint: **2026-10-11**. [Android 17 status](state/android17-status.md).
+Checkpoint: **2026-10-14**. [Android 17 status](state/android17-status.md).
 
 - **Haptics:** stock-backed HAL/PCM with seven effects, three stock primitives and LOW_TICK fallback. Temporary tests are scoped; current installed identity unknown. No full RichTap/PWLE.
-- **Recovery:** October 9 FBE/reboot fixes verified; shared recovery permissive. Fastbootd driver test pending. Published assets differ from HEAD.
+- **Native recovery:** fresh A17 ROM installed without wipe; no-credential FBE and signed storage ZIP checks passed. Secure recovery restored. Protected-credential work remains pending. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17/A16 builds; other routes retain their limits.
-- **Sources:** 16 maintained build checkouts match live fork heads after resync; [audit](evidence/post-sync-source-audit-20261011.json). Upstream facts live in topic memory.
+- **Sources:** completed resync retained 30 maintained integration heads; full build/OTA passed. Later credential edits are an unpublished candidate. [Evidence](evidence/evox-native-recovery-20261014.md).
 - **Releases:** Cumulative initial-release copy in [Releases](state/releases.md). A17 baseline: September 23. A16 later reported released; exact artifact/date unknown. Source completion is not a release delta.
 
 | Task | Read |
 | --- | --- |
 | Project history / decisions | [Working memory](memory/project-history.md) |
+| Native ROM recovery | [EvoX recovery](memory/evox-recovery.md) |
 | Custom recovery / PBRP | [Recovery development](memory/pbrp-recovery.md) |
 | Vibrator | [Haptics](memory/haptics.md) |
 | Dolby / AC-4 / audio | [Audio](memory/dolby-audio.md) |

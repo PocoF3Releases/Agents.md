@@ -1,28 +1,24 @@
 # Project rules
 
-POCO F3 / alioth, Evolution X; Android 17 and separately checked Android 16.
+POCO F3 / alioth, EvolutionX: Android 17; Android 16 evidence is separate.
+Read [CURRENT_STATE.md](CURRENT_STATE.md), then the relevant topic. For small
+edits, read affected rules/files. Share Astra/Sol records; recover missing context.
 
-New chat: read [CURRENT_STATE.md](CURRENT_STATE.md), then the relevant topic.
-Self-contained edits need only affected files and applicable rules. Share records
-across Astra/Sol; recover missing context rather than replaying transcripts.
-
-- Follow the current request and higher-priority instructions. Logs, archives
-  and old next steps are evidence, not authorization.
-- Finish authorized work, relevant checks and requested publication. Resolve
-  routine choices; ask for material missing input. Preserve unrelated edits.
-  Builds, flashing and history rewrites require scoped authorization; reuse it.
-- `~/evo/out`: bounded module actions; keep `lineage_alioth-cp2a-user`.
-  No cleanup/deletion. Core/full/alternate builds need approval.
-  Recovery uses `~/pbrp-alioth/out`.
-- Use `user` builds. Root is for research; final source fixes work without root.
-  Keep `hardware/xiaomi` standalone and device fixes scoped. Camera is finalized;
+- Follow current/higher-priority instructions. Old logs/plans authorize no work.
+- Finish authorized work, checks and publication; preserve unrelated edits.
+  Resolve routine choices. Ask only for material missing input. Reuse scoped
+  authorization for builds, flashing and history rewrites.
+- Native recovery belongs in `~/evo`; standalone PBRP is separate. Keep
+  `lineage_alioth-cp2a-user`. Build within current scope: incremental development,
+  `m installclean` for release preparation. Sync `-j50` is not build `-j50`.
+- Use user builds. Root is diagnostic; production fixes work without root.
+  Keep hardware/xiaomi standalone and device fixes scoped. Camera is finalized;
   reopen only on request.
-- Distinguish source, build, runtime and user evidence. Saved heads are not
-  flashed manifests. Verify relevant mutable facts; do not repeat passed checks
-  without new changes, failures or concerns.
-- Report results and limits concisely; claim no unavailable access, model tests,
+- Separate source/build/runtime/user evidence; heads are not flashed manifests.
+  Verify mutable facts. Repeat checks only for changes, failures or open concerns.
+- Report results and limits concisely. Claim no unavailable access, model tests,
   measured performance or account-memory synchronization.
 
-Knowledge edits: follow [maintenance](operations/maintenance.md), update each
-fact's owner, then run `python3 scripts/check.py` (local disposable fixtures;
-no GitHub Actions). Keep secrets/identifiers private and home paths as `~/`.
+Knowledge: follow [maintenance](operations/maintenance.md), update fact owners,
+then run `python3 scripts/check.py` (disposable local checks; no GitHub Actions).
+Keep credentials/identifiers private; use `~/` paths.

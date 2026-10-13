@@ -1,6 +1,6 @@
 # Android 17 implementation and verification status
 
-Observed October 11, 2026. This is a source and component acceptance record,
+Observed October 14, 2026. This is a source and component acceptance record,
 not a new ROM release declaration. [Current heads](repositories.yaml) and the
 [post-sync audit](../evidence/post-sync-source-audit-20261011.json) own source identity.
 Older evidence revisions below are historical tested candidates, not branch tips.
@@ -90,9 +90,12 @@ Earlier rewrite IDs are historical; use the source map for final heads.
 
 ## Remaining work and candidate opportunities
 
-The production build must perform its normal packaging and OTA/VINTF checks.
-No complete new ROM build, flash, CTS/VTS run, car projection test or measured
-performance improvement was established by these source/component audits.
+The October 14 native-recovery run completed a fresh full production build,
+packaging/VINTF/APEX-policy checks and no-wipe secure recovery OTA installation.
+Android booted the new incremental under enforcing SELinux, with saved settings
+and data integrity preserved. [Exact scope](../evidence/evox-native-recovery-20261014.md).
+CTS/VTS, car projection and measured performance remain unestablished. Protected
+credential support is a later, unpublished candidate awaiting build/device checks.
 
 Framework sync selection is now explicit: the local override uses
 PocoF3Releases/cnb for both framework repositories. Targeted sync passed without
@@ -110,6 +113,6 @@ platform spatializer/head tracking and full PWLE support remain unestablished.
 
 The repeated post-reboot ADB disappearance has an observed Windows host recovery
 procedure, not a proven universal USB/kernel fix. Recovery fastbootd acceptance
-and complete rebuilt-ROM integration remain separate from app verification.
+remains separate from the completed full-ROM OTA and scoped app verification.
 
 [Current implementation commits](implementation-commits.md) links each retained feature to its repository.
