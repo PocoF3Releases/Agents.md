@@ -13,7 +13,15 @@ lunch
 
 Choose the product/release/**user** combination offered by that checkout. Do not start a build merely to restore tools.
 
-For this checkout preserve `lineage_alioth-cp2a-user`. The maintainer normally uses `. build/envsetup.sh && lunch lineage_alioth-cp2a-user && m installclean && m evolution`; this is their workflow, not permission for agent cleaning/full builds. Agent tests may use only demonstrably bounded module actions in `~/evo/out`. Never clean/delete output, switch output configuration or rebuild core dependencies. A dry run alone is insufficient: the XiaomiParts migration dry run predicted app-only work, but the real graph expanded into framework dependencies. Stop on such expansion; reuse existing dependencies for direct compiler verification rather than running the graph again.
+For this checkout preserve `lineage_alioth-cp2a-user`. Full ROM builds require
+current authorization. The maintainer's release workflow is `. build/envsetup.sh
+&& lunch lineage_alioth-cp2a-user && m installclean && m evolution`; development
+and fix rebuilds omit `m installclean`. Do not clean output on every iteration.
+Use `repo sync --force-sync -j50` only for authorized sync. Keep build parallelism
+separate: the verified full build used `NINJA_ARGS="--local_jobs 8 -k 0"` and
+`NINJA_HIGHMEM_NUM_JOBS=2`. Inspect actual graph/resources; module requests can
+expand into core dependencies. Pause unauthorized expansion rather than assuming
+a dry-run count bounds the real work.
 
 The working tree supplies build JDK/toolchains. Do not change global Java or compiler symlinks to make an analysis tool start. For haptics-only builds, after an appropriate user lunch, the production target is `android.hardware.vibrator-service.xiaomi_aw8697`. The old device-test target was removed; do not request it from the current tree. A target build still needs source/build prerequisites and authorization; it does not validate a complete image.
 
@@ -69,6 +77,13 @@ Use a fresh output directory to preserve previous edits. JADX is for reading; pa
 Host utilities commonly needed: `git`, `git-lfs`, `python3`, `python3-venv`, `python3-yaml`, `ripgrep`, `unzip`, `zip`, `file`, `binutils`, `patchelf`, `ffmpeg`, `jq`, plus the build's declared dependencies. Record package versions for reproducibility. GitHub CLI is available in WSL and Windows at the latest check; restore via [official CLI instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) if needed, then authenticate interactively. Never put credentials in scripts or docs.
 
 ## ADB, fastboot and root boundary
+
+October 14 native-recovery work used Windows `D:/platform-tools/adb.exe` and
+`fastboot.exe`; WSL invokes the same Windows owner. A large transfer failure was
+recovered with a hash-verified local Windows image and `fastboot -S 32M`.
+Preserve the full image/AVB footer; do not truncate padded images. Verify the actual
+bootloader, product and slot first. This is not a universal USB-driver/kernel fix.
+
 
 October 9: Linux `/usr/bin/adb` and `/usr/bin/fastboot` exist; `~/bin/adb` is absent. A historical haptics session used that wrapper, so do not infer current server ownership from it. Inspect `command -v adb` and any wrapper before choosing a server. Windows Platform Tools can instead own the USB device. Choose one owner; competing servers or USB passthrough often explain an empty device list. Set an explicit private path to Windows `adb.exe` when calling it from WSL. After reinstall, accept the on-phone debugging authorization; do not publish its serial.
 

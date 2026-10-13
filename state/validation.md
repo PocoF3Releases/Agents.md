@@ -1,7 +1,7 @@
 # Validation register
 
-Dates and scopes persist; reading reruns no test. Source, build, host, device and
-user evidence are distinct. No entry certifies an entire ROM.
+Evidence stays dated and scoped; reading reruns no tests. Source/build/runtime
+results differ. No full-ROM certification.
 
 ## V-HAPTICS
 
@@ -141,16 +141,13 @@ no new scan or benchmark in this update. [Usage/limits](../operations/repoindex.
 
 ## V-KNOWLEDGE
 
-[Official guidance](../references/openai-guidance.md) was fetched and applied;
-[routing scenarios](../references/cold-start-checks.md) exercise fresh-context
-retrieval locally. Structural checks are not paired Astra/Sol model runs, API
-cost measurements or device validation.
+[Guidance](../references/openai-guidance.md) applied; [routing](../references/cold-start-checks.md)
+tested locally. These are not paired Astra/Sol runs, API-cost or device tests.
 
 ## V-RECOVERY
 
-**2026-09-30 — inventory/documentation.** Source refs and local tools were
-inspected. No Windows reinstall, WSL export/import, credential recovery or ROM
-build was performed. Private backup usability still requires an actual restore test.
+**2026-09-30 — inventory only:** refs/tools inspected. No Windows reinstall,
+WSL export/import, credential recovery or ROM build. Backups need restore testing.
 
 ## Availability
 
@@ -193,3 +190,9 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 ## V-DEVICE-20261010
 
 [Audit and limits](../evidence/device-20261010.md).
+
+## V-EVOX-NATIVE-RECOVERY-20261014
+
+**2026-10-14 — source/build/host/device-tested.** [Full ROM and no-credential
+recovery scope](../evidence/evox-native-recovery-20261014.md).
+PIN/password unverified.
