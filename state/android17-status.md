@@ -94,8 +94,9 @@ The October 14 native-recovery run completed a fresh full production build,
 packaging/VINTF/APEX-policy checks and no-wipe secure recovery OTA installation.
 Android booted the new incremental under enforcing SELinux, with saved settings
 and data integrity preserved. [Exact scope](../evidence/evox-native-recovery-20261014.md).
-CTS/VTS, car projection and measured performance remain unestablished. Protected
-credential support is a later, unpublished candidate awaiting build/device checks.
+PIN unlock and signed ZIP installation passed with init/recovery/crypto enforced.
+Scrolling measured about 55–60 FPS and was user-approved. The user confirmed
+secure PIN unlock; password/Weaver, CTS/VTS and car projection remain unestablished.
 
 Framework sync selection is now explicit: the local override uses
 PocoF3Releases/cnb for both framework repositories. Targeted sync passed without
