@@ -7,7 +7,7 @@ Checkpoint: **2026-10-14**. [Android 17 status](state/android17-status.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17/A16 builds; other routes retain their limits.
 - **Sources:** 30 integration heads published; final build and secure PIN unlock passed. Official fork parents retained; other dependencies standalone. [Evidence](evidence/evox-native-recovery-20261014.md).
-- **Releases:** Cumulative initial-release copy in [Releases](state/releases.md). A17 baseline: September 23. A16 later reported released; exact artifact/date unknown. Source completion is not a release delta.
+- **Releases:** October 14 update drafts exclude the confirmed latest initial post; see [Releases](state/releases.md). A16 artifact/date remain unknown. Drafts do not establish publication.
 
 | Task | Read |
 | --- | --- |

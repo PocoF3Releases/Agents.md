@@ -20,6 +20,17 @@ final localized sound-category ZIP is installed and boots with kernel #1;
 Settings, category navigation and validated Wi-Fi pass.
 No ROM release was published. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
 
+## October 14 update drafts
+
+The maintainer confirmed the initial post is still the latest published Telegram
+baseline. These [full](telegram-20261014-full.md) and
+[short](telegram-20261014-short.md) drafts cover the verified October 14 v12.3
+artifact: native recovery/storage/PIN/installers, specific Parts/Dolby UI
+refinements and Wi-Fi startup repair. They exclude previously announced camera,
+AC-4, haptics, WireGuard and other equivalent feature families. No Telegram
+message has been sent and this draft does not advance the published baseline.
+[Generated update banner](assets/evolutionx-alioth-20261014-banner.png).
+
 ## Android 16 release preparation
 
 Historical September 14 v11.11 notes and September 27 draft are preserved in the
