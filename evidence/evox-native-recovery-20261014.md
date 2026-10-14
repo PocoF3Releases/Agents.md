@@ -90,7 +90,21 @@ after verifying its exact path and contents. No user files or lock settings chan
 
 ### Final source heads
 
-- [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/6eddf2d113ca1902c508860e8aa167da39cecf08)
+- [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a)
 - [system/vold](https://github.com/PocoF3Releases/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
 - [system/sepolicy](https://github.com/PocoF3Releases/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
 - [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/7b3d66b9a426e35c4a1d039ba84f64d245c6e895)
+
+## Restored native recovery features
+
+- [Bundled Magisk](https://github.com/PocoF3Releases/android_bootable_recovery/commit/c318ad06d96b8b27bff102f1e32206f865a1de9e) restores the confirmed Advanced action, RAM staging and update/slot guards.
+- [Checked Enable ADB](https://github.com/PocoF3Releases/android_bootable_recovery/commit/490a10578996f406b6c03c1f4a230a03ea2057b1) restores init acknowledgement and retryable failure handling.
+- Thirteen host checks pass; shell syntax and official APK SHA-256 match pass.
+  Old committed tests and development documentation were not restored.
+- Existing secure PIN and scrolling evidence above predates this restoration;
+  it does not establish current-image Magisk rooting or post-boot persistence.
+
+- [APatch](https://github.com/PocoF3Releases/android_bootable_recovery/commit/8b257a5d0c679a335ffc542c89adc98de12a9e92) adds a checksum-verified ARM64 boot installer with stock-ramdisk checks and readback verification. Real tools patched a copied Alioth boot image offline; failure-path checks passed. No live root installation was performed.
+- [Slot cancellation](https://github.com/PocoF3Releases/android_bootable_recovery/commit/da73dbed6792f89ebfb78149350a5b6a5b5227d2) avoids indexing the cancellation sentinel or changing boot control. Phone cancellation and unchanged boot bytes were checked.
+- [Minor UI polish](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a) rounds cards and reduces horizontal padding without changing branding, fonts or row heights. Menus, empty PIN keypad, decrypted browser and cancelled root/image/wipe dialogs were captured in a temporary permissive recovery. Sideload and fastbootd captures remain outside this evidence. The final text-width clamp was added after captures.
+- Final incremental `evolution` build passed (41 steps). Secure vendor_boot SHA-256: `34ea0fddd6792a35b9cb23c2e8e1de4bec2ecf49bddd2f0d30770f45589f1a05`. Restored successfully to slot A and rebooted; subsequent Android shell checks were blocked by ADB authorization. Current-image secure cold ADB enablement and rooted Android persistence are not claimed.
