@@ -84,6 +84,10 @@ checked offline; type-4 password, Weaver, pattern, Unicode and multiple-user
 runtime acceptance are not claimed. This update does not certify exhaustive
 camera modes, Android Auto projection, CTS/VTS or every recovery feature.
 
+Android subsequently booted as SDK 37 / user with SELinux Enforcing. The owned
+fixture directory, its 40 empty scroll folders and two test files were removed
+after verifying its exact path and contents. No user files or lock settings changed.
+
 ### Final source heads
 
 - [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/6eddf2d113ca1902c508860e8aa167da39cecf08)
