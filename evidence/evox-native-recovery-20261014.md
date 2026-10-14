@@ -116,3 +116,16 @@ The phone's existing `cnss_user_server` socket carried the `unlabeled` type. The
 [Device-tree fix](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/5ea56a446521575ceb3067eb12a054b8b96c150f) force-relabels `/data/vendor/wifi` during post-fs-data after directory creation, before wireless services start. No saved networks are deleted and no allow rule for unlabeled files is added. The exact init command passed host_init_verifier. The full existing script's isolated verifier lacked generated vendor UID definitions; the release build provides those definitions.
 
 Settings cold-started successfully with no recorded crash or ANR, and the user confirmed it opens normally. The repair was verified on the installed ROM; the resynced release image remains a separate build-validation scope.
+
+After APatch Manager was installed over USB and configured by the user, `su` access remained available after reboot. Android reported validated Wi-Fi internet access. These observations follow the user-installed root setup; Magisk installation remains outside this runtime check.
+
+## Resynced installclean release build
+
+`repo sync -j50` completed successfully. Upstream patch-equivalence checks found only frameworks/base and build/make needed replay after upstream history rewrites. Nine framework patches and two build patches were preserved with authorship; the XML conflict retained both independent false-default settings. Other manifest-overridden ROM dependencies already contain their selected upstream bases.
+
+- [frameworks/base published head](https://github.com/PocoF3Releases/frameworks_base/commit/6c09871e9bbb78b68c642e032868d1fd8d455c6c)
+- [build/make published head](https://github.com/PocoF3Releases/android_build/commit/418139d6c1a8a8c76a1306c9080cdb0768de0a17)
+
+Removed the resolved Alioth KERNEL_OBJ directory before `. build/envsetup.sh`, `lunch lineage_alioth-cp2a-user`, `m installclean` and `m -j8 evolution`. The full build passed. Both the generated header and actual kernel image contain `#1 SMP PREEMPT`; `.version` remains 1. The staged vendor init script matches the published label fix byte-for-byte. Secure recovery properties remain ro.secure=1, ro.adb.secure=1 and ro.debuggable=0; bundled APK and adapter hashes match source.
+
+The signed OTA archive passes CRC verification, Alioth/aliothin AB metadata with SDK 37, and payload-header checks. ROM ZIP SHA-256: `91c9ec34b42c7a03123cd676db50c22025fc561e9bfe5dce37542c90789b3272`. Vendor boot SHA-256: `40fe29eb1a283f7d4bb832f030b95617ed52178e84f13a114f09076510c48aa2`. This release was built and checked offline; it was not flashed. Phone Settings/Wi-Fi evidence above belongs to the installed ROM. Published heads, checkout heads, manifest refs and upstream tracking were confirmed equal by read-only checks.

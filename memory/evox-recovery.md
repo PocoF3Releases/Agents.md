@@ -106,4 +106,6 @@ remains secure until the explicit menu action; failures remain retryable.
 Host adapter/ownership/action and ADB checks pass; current-image rooting and
 post-boot persistence are unverified. Older PBRP acceptance stays historical.
 
-APatch is a separate checked boot installer, second after Magisk in Advanced. Offline real-tool patch/repack and failure guards pass; installed-root persistence is unverified. Rounded cards and reduced horizontal padding preserve the native UI. See the dated evidence for diagnostic screenshot and final build scopes.
+APatch is a separate checked boot installer, second after Magisk in Advanced. Offline real-tool patch/repack and failure guards pass. After user installation and Manager setup, APatch 11224 root access and Wi-Fi internet were verified across an Android reboot; Magisk rooting remains unverified. Rounded cards and reduced horizontal padding preserve the native UI. See the dated evidence for diagnostic screenshot and final build scopes.
+
+Wi-Fi startup repairs stale labels by forcing restorecon of `/data/vendor/wifi` in common-device post-fs-data. An unlabeled cnss socket caused enforcing unlink/bind failures; relabelling restored Wi-Fi with APatch active. Existing vendor_init relabelfrom/relabelto permissions cover the repair; no broad allow rule or saved-network deletion is needed.

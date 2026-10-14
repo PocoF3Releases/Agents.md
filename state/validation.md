@@ -192,6 +192,4 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 
 ## V-EVOX-NATIVE-RECOVERY-20261014
 
-**2026-10-14 — source/build/host/device-tested.** [ROM, PIN and scrolling
-evidence](../evidence/evox-native-recovery-20261014.md). Init/recovery/crypto
-enforcing checks passed; user confirmed secure PIN unlock. Password/Weaver unverified.
+**2026-10-14.** [Evidence](../evidence/evox-native-recovery-20261014.md): secure PIN/scrolling and Settings/Wi-Fi verified. Resynced user release, kernel #1 and OTA checks pass; new ZIP not flashed. Password/Weaver unverified.
