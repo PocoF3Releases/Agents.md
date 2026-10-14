@@ -17,3 +17,16 @@ The inherited lineage-24.0 default was incorrectly treated as the effective
 framework revision. The override makes fork ownership explicit and keeps our
 patches in future syncs. Upstream changes still require review and integration
 into the maintained forks; selecting a fork does not automatically import them.
+
+## Maintained repository ownership
+
+Keep Evolution-X and LineageOS fork relationships. Required recovery dependencies
+from other mirror owners are standalone repositories at the same URLs and branches;
+their Git refs and authorship are preserved. Each maintained override contains
+custom changes used by the build; do not remove it merely because the delta is small.
+
+Use `android_bootable_recovery` for native ROM recovery. The unused `bootable_recovery`
+duplicate was consolidated; its history remains on
+[the legacy branch](https://github.com/PocoF3Releases/android_bootable_recovery/tree/legacy-native-recovery).
+Public development tags were removed at the maintainer's request; branch heads
+were retained. Signing and camera-development repositories are excluded.
