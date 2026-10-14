@@ -1,7 +1,6 @@
 # Validation register
 
-Evidence stays dated and scoped; reading reruns no tests. Source/build/runtime
-results differ. No full-ROM certification.
+Keep source, build and runtime evidence dated.
 
 ## V-HAPTICS
 
@@ -193,6 +192,6 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 
 ## V-EVOX-NATIVE-RECOVERY-20261014
 
-**2026-10-14 — source/build/host/device-tested.** [Full ROM and no-credential
-recovery scope](../evidence/evox-native-recovery-20261014.md).
-PIN/password unverified.
+**2026-10-14 — source/build/host/device-tested.** [ROM, PIN and scrolling
+evidence](../evidence/evox-native-recovery-20261014.md). Init/recovery/crypto
+enforcing checks passed; user confirmed secure PIN unlock. Password/Weaver unverified.
