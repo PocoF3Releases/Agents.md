@@ -11,6 +11,13 @@ Maintainer subsequently removed previous posts and requested cumulative initial-
 release notes. This changes public presentation, not historical implementation or
 acceptance. No new ROM publication identity has been established.
 
+## October 14 local release candidate
+
+Resynced Android 17 `lineage_alioth-cp2a-user` installclean build passed with
+kernel build #1 and verified OTA archive metadata/integrity. Wi-Fi labels and
+Settings were checked on the installed phone; this new ZIP was not flashed or
+published as a ROM release. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
+
 ## Android 16 release preparation
 
 Historical September 14 v11.11 notes and September 27 draft are preserved in the

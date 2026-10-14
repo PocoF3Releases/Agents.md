@@ -166,15 +166,15 @@ repositories:
   selected_ref: cnb
   refs:
     aosp-16: 51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: 66ba46c1135367797274455f2ec9104ebbfa6fa6
+    cnb: 6c09871e9bbb78b68c642e032868d1fd8d455c6c
     ozo-unimplemented: c62e85dbb8102a1c93a5af698ab85f668811b860
   local_a17: matches_selected_ref
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/frameworks_base/commit/51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/66ba46c1135367797274455f2ec9104ebbfa6fa6
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/6c09871e9bbb78b68c642e032868d1fd8d455c6c
     ozo-unimplemented: https://github.com/PocoF3Releases/frameworks_base/commit/c62e85dbb8102a1c93a5af698ab85f668811b860
-  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
-    production baseline. Later credential changes are a separate unpublished candidate.
+  observation: 2026-10-14; nine custom patches replayed on latest Evolution X cnb; patch-equivalence audit and clean user release build passed; checkout and manifest refs match published cnb.
+
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
@@ -323,12 +323,12 @@ repositories:
   - build/make
   selected_ref: cnb
   refs:
-    cnb: 92ef770ab1811cc9fa1616b3377a605252408d39
+    cnb: 418139d6c1a8a8c76a1306c9080cdb0768de0a17
   commit_links:
-    cnb: https://github.com/PocoF3Releases/android_build/commit/92ef770ab1811cc9fa1616b3377a605252408d39
+    cnb: https://github.com/PocoF3Releases/android_build/commit/418139d6c1a8a8c76a1306c9080cdb0768de0a17
   local_a17: matches_selected_ref
-  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
-    production baseline. Later credential changes are a separate unpublished candidate.
+  observation: 2026-10-14; two recovery build patches replayed on latest Evolution X cnb; unchanged patch IDs and clean user release build passed; checkout and manifest refs match published cnb.
+
 - repository: https://github.com/PocoF3Releases/android_device_qcom_sepolicy_vndr_legacy-um
   role: build_source
   source_tree_paths:
