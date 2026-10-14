@@ -61,3 +61,5 @@ The pinned toolbar, bounded wide-window content and consumed edge/keyboard inset
 Feedback uses amplitude-capable Alioth touch waveforms, 14 ms non-repeating/40 ms throttled, respecting user/view settings with platform fallback. Alioth has no PWLE/envelope capability; VibrationEffect.Builder envelope/preset methods are API 37.2, absent this API-37 checkout. Do not fake capabilities or upgrade shared SDK modules for an app test. Speaker data source must be set before preferred-device/listener requests; native MediaPlayer returns NO_INIT before initialization.
 
 Production is tested through a staged single-app `/data/app` update with UID 1000/Enforcing. That update overrides later ROM base APKs: inspect `pm path` and remove the system-app update through package manager before ROM-base acceptance. Keep screenshots/recordings and raw preferences private; publish sanitized evidence. Original hardware/user settings are restored after tests.
+
+[Sound group/translation evidence](../evidence/evox-native-recovery-20261014.md#device-sound-category).

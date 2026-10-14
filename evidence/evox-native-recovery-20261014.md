@@ -93,7 +93,7 @@ after verifying its exact path and contents. No user files or lock settings chan
 - [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a)
 - [system/vold](https://github.com/PocoF3Releases/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
 - [system/sepolicy](https://github.com/PocoF3Releases/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
-- [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/7b3d66b9a426e35c4a1d039ba84f64d245c6e895)
+- [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5)
 
 ## Restored native recovery features
 
@@ -128,4 +128,21 @@ After APatch Manager was installed over USB and configured by the user, `su` acc
 
 Removed the resolved Alioth KERNEL_OBJ directory before `. build/envsetup.sh`, `lunch lineage_alioth-cp2a-user`, `m installclean` and `m -j8 evolution`. The full build passed. Both the generated header and actual kernel image contain `#1 SMP PREEMPT`; `.version` remains 1. The staged vendor init script matches the published label fix byte-for-byte. Secure recovery properties remain ro.secure=1, ro.adb.secure=1 and ro.debuggable=0; bundled APK and adapter hashes match source.
 
-The signed OTA archive passes CRC verification, Alioth/aliothin AB metadata with SDK 37, and payload-header checks. ROM ZIP SHA-256: `91c9ec34b42c7a03123cd676db50c22025fc561e9bfe5dce37542c90789b3272`. Vendor boot SHA-256: `40fe29eb1a283f7d4bb832f030b95617ed52178e84f13a114f09076510c48aa2`. This release was built and checked offline; it was not flashed. Phone Settings/Wi-Fi evidence above belongs to the installed ROM. Published heads, checkout heads, manifest refs and upstream tracking were confirmed equal by read-only checks.
+The signed OTA archive passes CRC verification, Alioth/aliothin AB metadata with SDK 37, and payload-header checks. ROM ZIP SHA-256: `91c9ec34b42c7a03123cd676db50c22025fc561e9bfe5dce37542c90789b3272`. Vendor boot SHA-256: `40fe29eb1a283f7d4bb832f030b95617ed52178e84f13a114f09076510c48aa2`. This signed release was installed through secure recovery sideload after a completed factory reset. Android booted slot B as incremental 1791987349, SDK 37/user, SELinux Enforcing and actual kernel #1. Root and the previous installer files were absent; userdata usage was approximately 2.3 GiB. Settings cold-start and MiSound/Dolby UI checks passed. Wi-Fi reached validated internet access. One reboot produced a WPA handshake timeout; tapping the existing network reconnected without a password change. The next reboot auto-connected with validated Wi-Fi, with no observed CNSS socket-label failure. Published source/manifest refs were checked separately from device identity.
+
+
+## Factory reset ordering
+
+The first OTA apply returned kSuccess and UPDATED_NEED_REBOOT. Requesting factory reset before its first successful Android boot made recovery roll back the unverified target and wipe data, as designed. `SnapshotManager::HandleImminentDataWipe` marks that target unbootable and restores the old slot when no successful-slot/forward-merge indication exists. The phone returned to the older slot A build with factory-reset boot reason and fresh userdata. Reinstalling the same signed OTA by sideload and booting normally retained the new slot across subsequent reboots. Preserve snapshot safety; boot/verify the OTA and complete merging before any later reset. Production shell access could not independently query cleanupSuccessfulUpdate.
+
+
+## Device sound category
+
+[XiaomiParts provider](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b177bae4c8daed608cfa517bf25dae1be39219f4) supplies the Sound enhancements group through SettingsLibTile. MiSound and speaker cleaning use its key; [Dolby metadata](https://github.com/PocoF3Releases/hardware_xiaomi/commit/04b2f0ffa59d0b4adf7605abe068e7ac0fd148a1) joins the same group. Settings source is unchanged and the provider remains non-exported under the existing shared system UID.
+
+[Standalone translations](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5) add the heading in 97 locale configurations. XML and placeholder checks pass; the compiled APK contains Russian, Hindi and Serbian Latin headings. Google returned rate-limit errors, so these heading translations were supplied directly; native review of every language is not claimed. No temporary tests or documentation were added to either source repository.
+
+The incremental user release passed without another installclean; its actual boot kernel remains #1. Final ROM ZIP SHA-256: `d13faae212d6f55336faf26e8607b69d9386c7999a679cd3ac85e58618fd6c04`. Vendor boot SHA-256: `96803f6931824fcd78168aa334d019037f854d642b8f6d9189d24d86e7cc1c3d`. Incremental: 1791997947. The final ZIP was installed by secure recovery sideload. Android booted incremental 1791997947 on slot A, SDK 37/user/Enforcing and actual kernel #1. Wi-Fi auto-connected with validated internet. The Russian heading correctly groups all three entries; MiSound opens from that group. Both app paths are in /system_ext rather than /data/app. Checked logs contain no crash, ANR or CNSS socket-label failure. Temporary screen timeout changes were restored. The initial data wipe is verified separately above; no second wipe was performed after the successful OTA boot. Source commits were pushed as fast-forwards and remote heads match the tested checkout.
+
+
+![Verified sound category on the final release](assets/evox-sound-enhancements-20261014.png)
