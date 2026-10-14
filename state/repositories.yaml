@@ -32,8 +32,7 @@ repositories:
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/1e3f3cf75b5563faf85c4b406021b622db59a5e9
     aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/7b3d66b9a426e35c4a1d039ba84f64d245c6e895
-  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
-    production baseline. Later credential changes are a separate unpublished candidate.
+  observation: 2026-10-14; published on-demand recovery Gatekeeper integration verified with secure PIN unlock; normal Android boot remains enforcing.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -317,8 +316,7 @@ repositories:
   commit_links:
     cnb: https://github.com/PocoF3Releases/android_bootable_recovery/commit/6eddf2d113ca1902c508860e8aa167da39cecf08
   local_a17: matches_selected_ref
-  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
-    production baseline. Later credential changes are a separate unpublished candidate.
+  observation: 2026-10-14; final published touch/PIN/rendering implementation built; user confirmed PIN unlock in secure recovery. Legacy history preserved on the legacy-native-recovery archive branch.
 - repository: https://github.com/PocoF3Releases/android_build
   role: build_source
   source_tree_paths:
@@ -605,8 +603,7 @@ repositories:
   commit_links:
     cnb: https://github.com/PocoF3Releases/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64
   local_a17: matches_selected_ref
-  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
-    production baseline. Later credential changes are a separate unpublished candidate.
+  observation: 2026-10-14; recovery-only service transitions and crypto permissions built with neverallows intact; init, recovery and crypto service enforcement verified.
 - repository: https://github.com/PocoF3Releases/android_system_server_configurable_flags
   role: build_source
   source_tree_paths:
@@ -641,8 +638,7 @@ repositories:
   commit_links:
     cnb: https://github.com/PocoF3Releases/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc
   local_a17: matches_selected_ref
-  observation: 2026-10-14; published head retained after full resync and used by the verified no-LSKF
-    production baseline. Later credential changes are a separate unpublished candidate.
+  observation: 2026-10-14; existing Gatekeeper PIN unlock, read-only data, integrity and cleanup verified on Alioth. Password and Weaver runtime support remain unverified.
 - repository: https://github.com/PocoF3Releases/local_manifests
   role: build_source
   source_tree_paths:
