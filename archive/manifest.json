@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "status": "sanitized_public",
+  "archive_path": "archive/records",
+  "archive_tree": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+  "entries": [
+    {
+      "path": ".gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    }
+  ]
+}

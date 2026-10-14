@@ -1,0 +1,8 @@
+# Local Python tooling and private client state, not project memory.
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.codex/memories/
+.codex/auth.json

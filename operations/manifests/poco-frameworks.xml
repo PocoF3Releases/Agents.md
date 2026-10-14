@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="poco" fetch="https://github.com/PocoF3Releases" />
+  <extend-project name="frameworks_base" path="frameworks/base" remote="poco" revision="refs/heads/cnb" />
+  <extend-project name="frameworks_av" path="frameworks/av" remote="poco" revision="refs/heads/cnb" />
+</manifest>
