@@ -1,9 +1,10 @@
 # Release artwork
 
-Artwork summarizes the [initial-release changelogs](../state/releases.md). Use the
-final [large](../state/telegram-initial-full.md) and [small](../state/telegram-initial-short.md)
-posts as copy sources; compress them into readable highlights without inventing claims.
-Technical acceptance evidence remains in validation, separate from Telegram copy.
+Artwork follows the release-specific full/short drafts linked from the
+[release ledger](../state/releases.md). Initial posts may be cumulative; update
+banners must exclude already-announced equivalents. Use the same concise,
+verified highlights as the current copy. Technical acceptance evidence remains
+in validation, separate from Telegram copy.
 
 ## Android 17 style — mandatory
 
