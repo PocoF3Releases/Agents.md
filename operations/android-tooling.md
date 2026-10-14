@@ -83,6 +83,8 @@ October 14 native-recovery work used Windows `D:/platform-tools/adb.exe` and
 recovered with a hash-verified local Windows image and `fastboot -S 32M`.
 Preserve the full image/AVB footer; do not truncate padded images. Verify the actual
 bootloader, product and slot first. This is not a universal USB-driver/kernel fix.
+If Windows sees an ADB interface but no transport, restarting the same Windows
+ADB server recovered it. Secure shell authorization is separate.
 
 
 October 9: Linux `/usr/bin/adb` and `/usr/bin/fastboot` exist; `~/bin/adb` is absent. A historical haptics session used that wrapper, so do not infer current server ownership from it. Inspect `command -v adb` and any wrapper before choosing a server. Windows Platform Tools can instead own the USB device. Choose one owner; competing servers or USB passthrough often explain an empty device list. Set an explicit private path to Windows `adb.exe` when calling it from WSL. After reinstall, accept the on-phone debugging authorization; do not publish its serial.

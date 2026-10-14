@@ -52,7 +52,41 @@ with `fastboot -S 32M` restored secure recovery successfully. These are observed
 host procedures, not a universal USB/kernel fix. Enter actual bootloader mode
 from working Android; check product/slot/download capability before flashing.
 
-A new lock credential was added after this baseline. PIN/password candidate work
-is explicitly pending in [the topic owner](../memory/evox-recovery.md).
-This record does not certify protected-credential or Weaver decryption, exhaustive
+## Final PIN and rendering update
+
+Final incremental production build passed without installclean:
+`EvolutionX-17.0-20261014-alioth-12.3-Unofficial.zip`.
+SHA256: `7f36958c4f7d77a41fa2f704e27c34349ea3ed06cb49e343cf9d6eb27429d55c`.
+Secure vendor_boot SHA256:
+`c1c5869eb22a1fc090b46ef70d6cf7994158ff87ddef933cf403922882accc58`.
+Corrected secure recovery restored to slot A; secure properties and absence of
+diagnostic init/ADB permissiveness were checked in its packaged ramdisk. The
+upstream permissive `su` declaration is unchanged and is not an authenticated
+production recovery shell.
+
+Initial PIN checks enforced recovery/crypto domains with diagnostic init/adbd. Wrong PIN
+was rejected; correct PIN restored the original plaintext hash with read-only
+data. RAM credentials were removed and services stopped. The final UI reports
+“Internal storage unlocked.” without logging normal credential entry as a process
+error. A trusted no-op ZIP installed from unlocked storage with status 0.
+
+Physical vblank changed from 60 Hz to 120 Hz after the preferred/requested KMS
+handoff. Device-local scroll gestures measured approximately 55–60 FPS software
+rendering; the user confirmed it looked much better. Offline bounds, layout and
+presentation-failure checks passed. No experimental kernel tuning remains.
+
+The initial secure check exposed missing ramdisk service transitions, manifest
+directory reads and vendor crypto linker access. The corrected path passed with
+init, recovery and crypto domains enforcing; only diagnostic ADB/su access was
+permissive. Service cleanup and vendor dependency unmounts passed. The user
+confirmed PIN unlock and normal folders in the final secure image. ASCII password layout is
+checked offline; type-4 password, Weaver, pattern, Unicode and multiple-user
+runtime acceptance are not claimed. This update does not certify exhaustive
 camera modes, Android Auto projection, CTS/VTS or every recovery feature.
+
+### Final source heads
+
+- [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/6eddf2d113ca1902c508860e8aa167da39cecf08)
+- [system/vold](https://github.com/PocoF3Releases/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
+- [system/sepolicy](https://github.com/PocoF3Releases/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
+- [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/7b3d66b9a426e35c4a1d039ba84f64d245c6e895)
