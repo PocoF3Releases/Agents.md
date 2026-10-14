@@ -98,6 +98,12 @@ The bundled Android 17 D8 reports an SDK-37 warning; do not substitute a random
 compiler. The completed ROM boot/app smoke tests showed no crash/VerifyError,
 but that is not proof of every dex/API path.
 
-Older bundled-Magisk and PBRP observations belong to their historical source
-candidates. Do not infer current native-recovery Magisk, root, MTP or password
-acceptance from those records.
+Bundled Magisk v31.0 and checked Enable ADB were restored from preserved native
+recovery history as separate features. Magisk uses checksum-verified official
+tools in RAM with confirmation, isolated mounts and update/slot guards. It does
+not install the Android manager or create persistent stock-boot backups. ADB
+remains secure until the explicit menu action; failures remain retryable.
+Host adapter/ownership/action and ADB checks pass; current-image rooting and
+post-boot persistence are unverified. Older PBRP acceptance stays historical.
+
+APatch is a separate checked boot installer, second after Magisk in Advanced. Offline real-tool patch/repack and failure guards pass; installed-root persistence is unverified. Rounded cards and reduced horizontal padding preserve the native UI. See the dated evidence for diagnostic screenshot and final build scopes.

@@ -312,9 +312,9 @@ repositories:
   - bootable/recovery
   selected_ref: cnb
   refs:
-    cnb: 6eddf2d113ca1902c508860e8aa167da39cecf08
+    cnb: e9210d4975f8da7c6490f0fbc78805f0c063dc7a
   commit_links:
-    cnb: https://github.com/PocoF3Releases/android_bootable_recovery/commit/6eddf2d113ca1902c508860e8aa167da39cecf08
+    cnb: https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a
   local_a17: matches_selected_ref
   observation: 2026-10-14; final published touch/PIN/rendering implementation built; user confirmed PIN unlock in secure recovery. Legacy history preserved on the legacy-native-recovery archive branch.
 - repository: https://github.com/PocoF3Releases/android_build
