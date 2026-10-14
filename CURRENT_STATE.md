@@ -3,10 +3,10 @@
 Checkpoint: **2026-10-14**. [Android 17 status](state/android17-status.md).
 
 - **Haptics:** stock-backed HAL/PCM with seven effects, three stock primitives and LOW_TICK fallback. Temporary tests are scoped; current installed identity unknown. No full RichTap/PWLE.
-- **Native recovery:** fresh A17 ROM installed without wipe; no-credential FBE and signed storage ZIP checks passed. Secure recovery restored. Protected-credential work remains pending. [Scope](memory/evox-recovery.md).
+- **Native recovery:** A17 no-wipe OTA, PIN unlock and signed storage ZIP checks passed. Secure recovery restored; scrolling improved. Password/Weaver remain unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17/A16 builds; other routes retain their limits.
-- **Sources:** completed resync retained 30 maintained integration heads; full build/OTA passed. Later credential edits are an unpublished candidate. [Evidence](evidence/evox-native-recovery-20261014.md).
+- **Sources:** 30 integration heads published; final build and secure PIN unlock passed. Official fork parents retained; other dependencies standalone. [Evidence](evidence/evox-native-recovery-20261014.md).
 - **Releases:** Cumulative initial-release copy in [Releases](state/releases.md). A17 baseline: September 23. A16 later reported released; exact artifact/date unknown. Source completion is not a release delta.
 
 | Task | Read |
