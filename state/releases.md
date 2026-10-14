@@ -15,8 +15,10 @@ acceptance. No new ROM publication identity has been established.
 
 Resynced Android 17 `lineage_alioth-cp2a-user` installclean build passed with
 kernel build #1 and verified OTA archive metadata/integrity. Wi-Fi labels and
-Settings were checked on the installed phone; this new ZIP was not flashed or
-published as a ROM release. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
+Settings were checked after secure sideload and a completed data wipe. The
+final localized sound-category ZIP is installed and boots with kernel #1;
+Settings, category navigation and validated Wi-Fi pass.
+No ROM release was published. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
 
 ## Android 16 release preparation
 
