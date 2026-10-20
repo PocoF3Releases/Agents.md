@@ -8,7 +8,7 @@ acceptance target for these changes. [Sources](../state/repositories.yaml),
 
 ## Repository ownership
 
-Recovery-only sources and the local manifest live in [PocoF3Releases-Recovery](https://github.com/PocoF3Releases-Recovery). Its recovery-enabled framework and device branches preserve the approved implementation. PocoF3Releases carries ROM-only variants. The active ROM checkout selects the recovery variants through the [recovery manifest](https://github.com/PocoF3Releases-Recovery/local_manifests/tree/cnb). This source-only move does not establish a new build or device acceptance.
+Recovery-only sources and the local manifest live in [PocoF3Releases-Recovery](https://github.com/PocoF3Releases-Recovery). Shared framework/device sources use the normal PocoF3Releases repositories plus four authored [mail patches and apply command](https://github.com/PocoF3Releases-Recovery/local_manifests#readme). After repo sync, run `python3 .repo/local_manifests/apply-recovery-patches.py` before building. Preflight, repeated application and dirty-worktree rejection passed; resulting trees exactly reproduce the approved recovery implementation. No new build or device acceptance is implied.
 
 ## Existing-key storage and installation
 

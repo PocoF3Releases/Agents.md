@@ -38,14 +38,14 @@ stream, not all presentations, multichannel/offload, apps or Dolby processing.
 
 ## V-PARTS
 
-**2026-09-24 — source-checked and user-confirmed.** Common [3c30e7d](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c) System
-Profile dialog correction was approved visually; earlier [db27251](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b) was
+**2026-09-24 — source-checked and user-confirmed.** Common [3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c) System
+Profile dialog correction was approved visually; earlier [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b) was
 insufficient. Shared per-app implementation is not a separate visual test.
 [Exact record](../memory/dolby-audio.md).
 
 ## V-UI
 
-**2026-09-24 — source-checked and pushed.** Common [e0fd9ba](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/e0fd9bac1fa69915345f91a41257a4119e479b70) removes duplicate
+**2026-09-24 — source-checked and pushed.** Common [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9bac1fa69915345f91a41257a4119e479b70) removes duplicate
 MiSound titles; hardware [59188cf](https://github.com/PocoF3Releases/hardware_xiaomi/commit/59188cfbdba67b63ecf1882cf6bba94cf33cf35a) restores reset buttons and current-locale
 profile labels. Resource/API/diff checks passed; no build/device test in those
 turns. Dolby README [3b8b33e](https://github.com/PocoF3Releases/hardware_xiaomi/commit/3b8b33ec182663b992cc4234c72a72fadf193a43) was documentation-only.
