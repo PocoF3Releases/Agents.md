@@ -2,6 +2,8 @@
 
 ## Authority
 
+Current previous-build baseline: **14.10.2026**, confirmed by the maintainer on October 20. New update copy must exclude that build’s recovery, Parts/Dolby and Wi-Fi additions.
+
 Android 17 historical published baseline: **23.09.2026 / Evolution X v12.2**,
 from maintainer-supplied September 22/23 notes. Exact ZIP hashes/included-commit
 manifest unknown. October 9 local vendor source declares 12.3, which does not
@@ -9,7 +11,7 @@ establish a published build. [V-RELEASE](validation.md#v-release).
 
 Maintainer subsequently removed previous posts and requested cumulative initial-
 release notes. This changes public presentation, not historical implementation or
-acceptance. No new ROM publication identity has been established.
+acceptance. The later October 14 baseline confirmation supersedes the earlier posting status.
 
 ## October 14 local release candidate
 
@@ -18,7 +20,7 @@ kernel build #1 and verified OTA archive metadata/integrity. Wi-Fi labels and
 Settings were checked after secure sideload and a completed data wipe. The
 final localized sound-category ZIP is installed and boots with kernel #1;
 Settings, category navigation and validated Wi-Fi pass.
-No ROM release was published. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
+The maintainer later confirmed October 14 as the previous build. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
 
 ## October 14 update drafts
 
@@ -30,6 +32,12 @@ refinements and Wi-Fi startup repair. They exclude previously announced camera,
 AC-4, haptics, WireGuard and other equivalent feature families. No Telegram
 message has been sent and this draft does not advance the published baseline.
 [Generated update banner](assets/evolutionx-alioth-20261014-banner.png).
+
+## October 20 update drafts
+
+[Full post](telegram-20261020-full.md) and [caption post](telegram-20261020-short.md) compare current sources with the October 14 release manifest. The October 20 ZIP identifies Android 17 / SDK 37, v12.3, Alioth and the October 1 security patch. The copy focuses on upstream Settings/Evolver/SystemUI changes, flashlight behavior, pattern input, thumbnails and translations. Kernel content and recovery features are not re-announced. No new runtime acceptance or Telegram publication is claimed.
+
+[Generated update banner](assets/evolutionx-alioth-20261020-banner.png).
 
 ## Android 16 release preparation
 
