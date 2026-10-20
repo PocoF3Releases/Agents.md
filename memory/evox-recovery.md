@@ -1,10 +1,14 @@
 # Native Android 17 EvolutionX recovery
 
-Checkpoint: **2026-10-14**. Active work is `~/evo/bootable/recovery`, built
+Checkpoint: **2026-10-20**. Active work is `~/evo/bootable/recovery`, built
 with the ROM. Standalone PBRP is a separate project and is not the source or
 acceptance target for these changes. [Sources](../state/repositories.yaml),
 [verification](../state/validation.md#v-evox-native-recovery-20261014), and
 [sanitized evidence](../evidence/evox-native-recovery-20261014.md).
+
+## Repository ownership
+
+Recovery-only sources and the local manifest live in [PocoF3Releases-Recovery](https://github.com/PocoF3Releases-Recovery). Its recovery-enabled framework and device branches preserve the approved implementation. PocoF3Releases carries ROM-only variants. The active ROM checkout selects the recovery variants through the [recovery manifest](https://github.com/PocoF3Releases-Recovery/local_manifests/tree/cnb). This source-only move does not establish a new build or device acceptance.
 
 ## Existing-key storage and installation
 
