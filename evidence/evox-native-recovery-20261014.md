@@ -10,7 +10,7 @@ Full sync resolved 1,265 projects, with 15 upstream advances. All 30 maintained
 native-recovery integration heads were retained, clean and matched GitHub in the
 completed baseline audit. [Exact linked heads](../state/repositories.yaml).
 
-[Manifest repair](https://github.com/PocoF3Releases/local_manifests/commit/50ef2cbe4ca339d8591d3c00adfeb7a72e87f373)
+[Manifest repair](https://github.com/PocoF3Releases-Recovery/local_manifests/commit/50ef2cbe4ca339d8591d3c00adfeb7a72e87f373)
 preserves upstream project groups and build/make linkfiles. Eight clean standalone
 checkouts were preserved privately before Repo recreated managed checkouts; their
 approved heads were retained. Frameworks/base and frameworks/av remain on the
@@ -90,30 +90,30 @@ after verifying its exact path and contents. No user files or lock settings chan
 
 ### Final source heads
 
-- [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a)
-- [system/vold](https://github.com/PocoF3Releases/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
-- [system/sepolicy](https://github.com/PocoF3Releases/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
-- [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5)
+- [bootable/recovery](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a)
+- [system/vold](https://github.com/PocoF3Releases-Recovery/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
+- [system/sepolicy](https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
+- [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5)
 
 ## Restored native recovery features
 
-- [Bundled Magisk](https://github.com/PocoF3Releases/android_bootable_recovery/commit/c318ad06d96b8b27bff102f1e32206f865a1de9e) restores the confirmed Advanced action, RAM staging and update/slot guards.
-- [Checked Enable ADB](https://github.com/PocoF3Releases/android_bootable_recovery/commit/490a10578996f406b6c03c1f4a230a03ea2057b1) restores init acknowledgement and retryable failure handling.
+- [Bundled Magisk](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/c318ad06d96b8b27bff102f1e32206f865a1de9e) restores the confirmed Advanced action, RAM staging and update/slot guards.
+- [Checked Enable ADB](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/490a10578996f406b6c03c1f4a230a03ea2057b1) restores init acknowledgement and retryable failure handling.
 - Thirteen host checks pass; shell syntax and official APK SHA-256 match pass.
   Old committed tests and development documentation were not restored.
 - Existing secure PIN and scrolling evidence above predates this restoration;
   it does not establish current-image Magisk rooting or post-boot persistence.
 
-- [APatch](https://github.com/PocoF3Releases/android_bootable_recovery/commit/8b257a5d0c679a335ffc542c89adc98de12a9e92) adds a checksum-verified ARM64 boot installer with stock-ramdisk checks and readback verification. Real tools patched a copied Alioth boot image offline; failure-path checks passed. No live root installation was performed.
-- [Slot cancellation](https://github.com/PocoF3Releases/android_bootable_recovery/commit/da73dbed6792f89ebfb78149350a5b6a5b5227d2) avoids indexing the cancellation sentinel or changing boot control. Phone cancellation and unchanged boot bytes were checked.
-- [Minor UI polish](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a) rounds cards and reduces horizontal padding without changing branding, fonts or row heights. Menus, empty PIN keypad, decrypted browser and cancelled root/image/wipe dialogs were captured in a temporary permissive recovery. Sideload and fastbootd captures remain outside this evidence. The final text-width clamp was added after captures.
+- [APatch](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/8b257a5d0c679a335ffc542c89adc98de12a9e92) adds a checksum-verified ARM64 boot installer with stock-ramdisk checks and readback verification. Real tools patched a copied Alioth boot image offline; failure-path checks passed. No live root installation was performed.
+- [Slot cancellation](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/da73dbed6792f89ebfb78149350a5b6a5b5227d2) avoids indexing the cancellation sentinel or changing boot control. Phone cancellation and unchanged boot bytes were checked.
+- [Minor UI polish](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a) rounds cards and reduces horizontal padding without changing branding, fonts or row heights. Menus, empty PIN keypad, decrypted browser and cancelled root/image/wipe dialogs were captured in a temporary permissive recovery. Sideload and fastbootd captures remain outside this evidence. The final text-width clamp was added after captures.
 - Final incremental `evolution` build passed (41 steps). Secure vendor_boot SHA-256: `34ea0fddd6792a35b9cb23c2e8e1de4bec2ecf49bddd2f0d30770f45589f1a05`. Restored successfully to slot A and rebooted; subsequent Android shell checks were blocked by ADB authorization. Current-image secure cold ADB enablement and rooted Android persistence are not claimed.
 
 ## Wi-Fi label repair after root installation
 
 The phone's existing `cnss_user_server` socket carried the `unlabeled` type. The enforcing Qualcomm daemon could not unlink it, then failed to bind the same socket. Forced recursive restorecon changed it to `vendor_wifi_vendor_wpa_socket`; Wi-Fi connected immediately and again after reboot with APatch active and SELinux Enforcing. This establishes stale labels as the observed failure, not a requirement to remove APatch. It does not establish which earlier operation produced that label.
 
-[Device-tree fix](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/5ea56a446521575ceb3067eb12a054b8b96c150f) force-relabels `/data/vendor/wifi` during post-fs-data after directory creation, before wireless services start. No saved networks are deleted and no allow rule for unlabeled files is added. The exact init command passed host_init_verifier. The full existing script's isolated verifier lacked generated vendor UID definitions; the release build provides those definitions.
+[Device-tree fix](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/5ea56a446521575ceb3067eb12a054b8b96c150f) force-relabels `/data/vendor/wifi` during post-fs-data after directory creation, before wireless services start. No saved networks are deleted and no allow rule for unlabeled files is added. The exact init command passed host_init_verifier. The full existing script's isolated verifier lacked generated vendor UID definitions; the release build provides those definitions.
 
 Settings cold-started successfully with no recorded crash or ANR, and the user confirmed it opens normally. The repair was verified on the installed ROM; the resynced release image remains a separate build-validation scope.
 
@@ -123,8 +123,8 @@ After APatch Manager was installed over USB and configured by the user, `su` acc
 
 `repo sync -j50` completed successfully. Upstream patch-equivalence checks found only frameworks/base and build/make needed replay after upstream history rewrites. Nine framework patches and two build patches were preserved with authorship; the XML conflict retained both independent false-default settings. Other manifest-overridden ROM dependencies already contain their selected upstream bases.
 
-- [frameworks/base published head](https://github.com/PocoF3Releases/frameworks_base/commit/6c09871e9bbb78b68c642e032868d1fd8d455c6c)
-- [build/make published head](https://github.com/PocoF3Releases/android_build/commit/418139d6c1a8a8c76a1306c9080cdb0768de0a17)
+- [frameworks/base published head](https://github.com/PocoF3Releases-Recovery/frameworks_base/commit/6c09871e9bbb78b68c642e032868d1fd8d455c6c)
+- [build/make published head](https://github.com/PocoF3Releases-Recovery/android_build/commit/418139d6c1a8a8c76a1306c9080cdb0768de0a17)
 
 Removed the resolved Alioth KERNEL_OBJ directory before `. build/envsetup.sh`, `lunch lineage_alioth-cp2a-user`, `m installclean` and `m -j8 evolution`. The full build passed. Both the generated header and actual kernel image contain `#1 SMP PREEMPT`; `.version` remains 1. The staged vendor init script matches the published label fix byte-for-byte. Secure recovery properties remain ro.secure=1, ro.adb.secure=1 and ro.debuggable=0; bundled APK and adapter hashes match source.
 
@@ -138,9 +138,9 @@ The first OTA apply returned kSuccess and UPDATED_NEED_REBOOT. Requesting factor
 
 ## Device sound category
 
-[XiaomiParts provider](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b177bae4c8daed608cfa517bf25dae1be39219f4) supplies the Sound enhancements group through SettingsLibTile. MiSound and speaker cleaning use its key; [Dolby metadata](https://github.com/PocoF3Releases/hardware_xiaomi/commit/04b2f0ffa59d0b4adf7605abe068e7ac0fd148a1) joins the same group. Settings source is unchanged and the provider remains non-exported under the existing shared system UID.
+[XiaomiParts provider](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/b177bae4c8daed608cfa517bf25dae1be39219f4) supplies the Sound enhancements group through SettingsLibTile. MiSound and speaker cleaning use its key; [Dolby metadata](https://github.com/PocoF3Releases/hardware_xiaomi/commit/04b2f0ffa59d0b4adf7605abe068e7ac0fd148a1) joins the same group. Settings source is unchanged and the provider remains non-exported under the existing shared system UID.
 
-[Standalone translations](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5) add the heading in 97 locale configurations. XML and placeholder checks pass; the compiled APK contains Russian, Hindi and Serbian Latin headings. Google returned rate-limit errors, so these heading translations were supplied directly; native review of every language is not claimed. No temporary tests or documentation were added to either source repository.
+[Standalone translations](https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5) add the heading in 97 locale configurations. XML and placeholder checks pass; the compiled APK contains Russian, Hindi and Serbian Latin headings. Google returned rate-limit errors, so these heading translations were supplied directly; native review of every language is not claimed. No temporary tests or documentation were added to either source repository.
 
 The incremental user release passed without another installclean; its actual boot kernel remains #1. Final ROM ZIP SHA-256: `d13faae212d6f55336faf26e8607b69d9386c7999a679cd3ac85e58618fd6c04`. Vendor boot SHA-256: `96803f6931824fcd78168aa334d019037f854d642b8f6d9189d24d86e7cc1c3d`. Incremental: 1791997947. The final ZIP was installed by secure recovery sideload. Android booted incremental 1791997947 on slot A, SDK 37/user/Enforcing and actual kernel #1. Wi-Fi auto-connected with validated internet. The Russian heading correctly groups all three entries; MiSound opens from that group. Both app paths are in /system_ext rather than /data/app. Checked logs contain no crash, ANR or CNSS socket-label failure. Temporary screen timeout changes were restored. The initial data wipe is verified separately above; no second wipe was performed after the successful OTA boot. Source commits were pushed as fast-forwards and remote heads match the tested checkout.
 
