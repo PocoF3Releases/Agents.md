@@ -21,7 +21,8 @@ repositories:
     pbrp-a17: https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp/commit/1dcf2e2e1a2600ce86291bd6324f90c494a74087
 - repository: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common
   role: build_source
-  source_tree_paths: []
+  source_tree_paths:
+  - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
     aosp-16: 1e3f3cf75b5563faf85c4b406021b622db59a5e9
@@ -29,10 +30,14 @@ repositories:
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/1e3f3cf75b5563faf85c4b406021b622db59a5e9
     aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/8b53bd282faeaf79ed6c38ad84f19ca1e516fb80
-  observation: 2026-10-20; ROM-only branch; recovery integration lives in the dedicated recovery organization.
+  observation: 2026-10-20; normal ROM source with local recovery patch stack; no duplicate recovery fork.
+  local_a17:
+    head: ea0e77693655141722b34d1a8d6860a024802804
+    reason: ROM-only selected ref plus authored recovery patches from the recovery manifest repository
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
-  source_tree_paths: []
+  source_tree_paths:
+  - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
     aosp-16: 8e4c4517a35fe652e5810724445a377381ed7b85
@@ -40,7 +45,10 @@ repositories:
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/8e4c4517a35fe652e5810724445a377381ed7b85
     aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/0238815ec925be06ddc9405bb6d14b581784964c
-  observation: 2026-10-20; ROM-only branch; recovery integration lives in the dedicated recovery organization.
+  observation: 2026-10-20; normal ROM source with local recovery patch stack; no duplicate recovery fork.
+  local_a17:
+    head: 821729e34526ec4c72445079be5d53b24cfe5870
+    reason: ROM-only selected ref plus authored recovery patches from the recovery manifest repository
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -157,7 +165,8 @@ repositories:
     cnb: https://github.com/PocoF3Releases/frameworks_av/commit/237b20d27aecebbb7ac90a670747ae03f50fdfac
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
-  source_tree_paths: []
+  source_tree_paths:
+  - frameworks/base
   selected_ref: cnb
   refs:
     aosp-16: 51dbd44a23cdf6d8ee5240640e3e803dd96ca588
@@ -167,7 +176,10 @@ repositories:
     aosp-16: https://github.com/PocoF3Releases/frameworks_base/commit/51dbd44a23cdf6d8ee5240640e3e803dd96ca588
     cnb: https://github.com/PocoF3Releases/frameworks_base/commit/9a4cd721b620b06ac6fddeac0bf79b5d11b21fd7
     ozo-unimplemented: https://github.com/PocoF3Releases/frameworks_base/commit/c62e85dbb8102a1c93a5af698ab85f668811b860
-  observation: 2026-10-20; ROM-only branch; recovery integration lives in the dedicated recovery organization.
+  observation: 2026-10-20; normal ROM source with local recovery patch stack; no duplicate recovery fork.
+  local_a17:
+    head: 2102abdc6109204062d36c11e90aab775fa53f31
+    reason: ROM-only selected ref plus authored recovery patches from the recovery manifest repository
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
@@ -641,46 +653,10 @@ repositories:
   - .repo/local_manifests
   selected_ref: cnb
   refs:
-    cnb: 3280d8fa2d3b29f6483e5ac9ada5ae4322c3b2de
+    cnb: d8ee4d009824164efa561d2f7eda6aea099fc0d6
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/local_manifests/commit/3280d8fa2d3b29f6483e5ac9ada5ae4322c3b2de
+    cnb: https://github.com/PocoF3Releases-Recovery/local_manifests/commit/d8ee4d009824164efa561d2f7eda6aea099fc0d6
   observation: 2026-10-14; preserves original build/make linkfiles and upstream project groups.
-- repository: https://github.com/PocoF3Releases-Recovery/frameworks_base
-  role: build_source
-  source_tree_paths:
-  - frameworks/base
-  selected_ref: cnb
-  refs:
-    cnb: 5bb04254fb4c86379a9655645091308a324b16f0
-  local_a17: matches_selected_ref
-  commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/frameworks_base/commit/5bb04254fb4c86379a9655645091308a324b16f0
-  observation: 2026-10-20; recovery-enabled branch preserved unchanged during organization split; earlier runtime
-    evidence remains dated.
-- repository: https://github.com/PocoF3Releases-Recovery/device_xiaomi_alioth
-  role: build_source
-  source_tree_paths:
-  - device/xiaomi/alioth
-  selected_ref: aosp-17
-  refs:
-    aosp-17: b316314100d6d9e1357bbecbd6724d2b14814ceb
-  local_a17: matches_selected_ref
-  commit_links:
-    aosp-17: https://github.com/PocoF3Releases-Recovery/device_xiaomi_alioth/commit/b316314100d6d9e1357bbecbd6724d2b14814ceb
-  observation: 2026-10-20; recovery-enabled branch preserved unchanged during organization split; earlier runtime
-    evidence remains dated.
-- repository: https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common
-  role: build_source
-  source_tree_paths:
-  - device/xiaomi/sm8250-common
-  selected_ref: aosp-17
-  refs:
-    aosp-17: 66c963036bfeae6c0984b15ff886542bfca517c5
-  local_a17: matches_selected_ref
-  commit_links:
-    aosp-17: https://github.com/PocoF3Releases-Recovery/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5
-  observation: 2026-10-20; recovery-enabled branch preserved unchanged during organization split; earlier runtime
-    evidence remains dated.
 workspace:
   android17_root: ~/evo
   android16_root: not currently identified; ~/evo is now A17
