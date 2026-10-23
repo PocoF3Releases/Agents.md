@@ -1,6 +1,31 @@
 # Android tools and reverse-engineering recovery
 
-Core host tools rechecked 2026-10-09; Ghidra and JADX were absent at their documented paths. Reverse-engineering versions below are historical examples, not installed inventory. Use [workstation recovery](workstation-recovery.md) for backups and source setup. Commands below are templates: set paths explicitly and inspect existing destinations before replacing anything.
+Host additions verified 2026-10-23; see the current inventory below. Older examples remain historical unless explicitly rechecked. Use [workstation recovery](workstation-recovery.md) for backups and source setup. Commands below are templates: set paths explicitly and inspect existing destinations before replacing anything.
+
+[Source/tool verification record](../evidence/source-tools-20261023.json).
+
+## Current verified analysis tools
+
+| Tool | Installed version / location | Check |
+| --- | --- | --- |
+| JADX | 1.5.6, `~/tools/jadx-1.5.6` | `jadx --version` |
+| Ghidra | 12.2, `~/tools/ghidra_12.2_PUBLIC` | Headless usage starts |
+| Apktool | Ubuntu package 2.7.0 | Version command passes |
+| APK signer | Ubuntu package 35.0.2-1 | `apksigner version` passes |
+| aapt | Ubuntu package 14 beta | Version command passes |
+| TShark | 4.6.4 | Version command passes; no capture started |
+| Binwalk | 2.4.3 | Help command passes; no extraction started |
+| LLVM tools | Checkout `llvm-binutils-stable` | `llvm-objdump --version` passes |
+
+Official JADX/Ghidra release ZIP SHA-256 values matched the GitHub release asset digests. User links live in `~/.local/bin`; open a fresh shell if PATH needs refreshing. Ghidra 12.2 requires JDK 25; its own `support/launch.properties` selects `~/evo/prebuilts/jdk/jdk25/linux-x86`. Revisit that path if the checkout moves. No global Java/compiler replacement was made. Ubuntu-packaged Apktool may lag modern resource formats; use the checkout's aapt2/build tools for ROM resources, not the distro aapt as a replacement. A version/usage check is not a decompilation or device test.
+
+The [Leanrea skill](../.agents/skills/leanrea/SKILL.md) is available in Codex user skills and this workhub; [license/provenance](../.agents/skills/leanrea/PROVENANCE.md). Use the installed Android QA/performance skills for emulator/device evidence, the kernel skill only for kernel/driver work, and Review for requested reviews. These existing plugins need no duplicate install.
+
+## Context7 and tool selection
+
+Context7 is an on-demand documentation service, not a repository or skill catalogue. Native tools are `mcp__context7__resolve_library_id` and `mcp__context7__query_docs`; connector equivalents may also be present. Resolve once per library, then reuse the ID and a supported major-version scope. This check resolved JADX to `/skylot/jadx`; one query covered the 1.5 runtime/version command. The unversioned result is not a pinned 1.5 documentation snapshot; release metadata and local binary checks establish the installed version. Send no private code, credentials or device logs to documentation services.
+
+Select skills by task and explicitly reread their bodies after compaction. [Resume entrypoint](../.agents/skills/alioth-resume/SKILL.md) restores only the required topic. Tool availability does not establish installation or successful runtime acceptance.
 
 ## Build environment
 
@@ -43,38 +68,18 @@ sha256sum path/to/library.so
 
 For convenient relinking, keep these exports in a private, reviewable environment file and source it only in analysis shells. Change ANDROID_ROOT/CLANG_REV after reinstall. Prefer explicit tool paths; if creating aliases or symlinks, use a dedicated user-owned bin directory and replace only links you own. Never overwrite `/usr/bin/clang`, Android prebuilt contents or an existing real directory. Ghidra does not require replacing its bundled decompiler with Android LLVM.
 
-## Ghidra
+## Ghidra and APK analysis
 
-Historical installation example: `~/tools/ghidra_12.1.3_PUBLIC`, with `~/tools/ghidra` pointing to it. Its `Ghidra/application.properties` requires JDK 21 minimum; OpenJDK 21 was available. Future releases may require a different JDK: read the chosen release's Getting Started/application properties rather than applying the current development branch's requirement blindly.
-
-Download the compiled distribution ZIP from [official Ghidra releases](https://github.com/NationalSecurityAgency/ghidra/releases), verify the publisher's digest when available, and extract into a new versioned directory under `~/tools`. Do not download the source archive expecting a ready binary. Restore custom scripts/projects separately from private backup. Keep the old project backup before accepting an upgrade conversion. [Official setup guide](https://github.com/NationalSecurityAgency/ghidra/blob/master/GhidraDocs/GettingStarted.md).
+Use the current installed versions listed above. Historical Ghidra 12.1.3/JADX examples are superseded. Official distributions and setup references: [Ghidra releases](https://github.com/NationalSecurityAgency/ghidra/releases), [JADX releases](https://github.com/skylot/jadx/releases), [Ghidra setup](https://github.com/NationalSecurityAgency/ghidra/blob/master/GhidraDocs/GettingStarted.md).
 
 ```bash
-export GHIDRA_HOME="$HOME/tools/ghidra_12.1.3_PUBLIC"
-export GHIDRA_JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
-# Confirm both paths exist before using them.
-JAVA_HOME="$GHIDRA_JAVA_HOME" "$GHIDRA_HOME/ghidraRun"
-# Headless example; a new project avoids altering the original analysis:
-mkdir -p "$HOME/analysis/ghidra"
-JAVA_HOME="$GHIDRA_JAVA_HOME" "$GHIDRA_HOME/support/analyzeHeadless"   "$HOME/analysis/ghidra" StockAudit -import /absolute/path/library.so
-```
-
-WSLg normally supplies Linux GUI integration; headless analysis needs no display. Recreate the optional `~/tools/ghidra` link only after confirming that its destination is absent or an owned symlink. Use `-scriptPath` / `-postScript` only for scripts actually restored and reviewed. A decompiled C listing is a hypothesis: check AArch64 disassembly, relocations, callers and exact ELF identity before changing ABI or patch bytes.
-
-## JADX, Apktool and ELF tools
-
-Historical JADX example: `~/tools/jadx/bin/jadx`, version 1.5.6. Historical Apktool: `/usr/local/bin/apktool`, 3.0.3; verify separately before use. Restore from [JADX releases](https://github.com/skylot/jadx/releases) and [Apktool installation](https://apktool.org/docs/install); use versioned folders and their Java requirements. Install the Apktool wrapper and matching JAR together. Verify `--version` / `--help` before reusing old arguments.
-
-```bash
-"$HOME/tools/jadx/bin/jadx" --version
-"$HOME/tools/jadx/bin/jadx" -d "$HOME/analysis/app-jadx" /absolute/path/app.apk
+jadx --version
 apktool --version
-apktool d /absolute/path/app.apk -o "$HOME/analysis/app-smali"
+apksigner version
+ghidra-headless
 ```
 
-Use a fresh output directory to preserve previous edits. JADX is for reading; patch actual smali/resources and rebuild with Apktool when authorized. Retrieve `aapt2`, `zipalign`, `apksigner` from Android SDK Build Tools or the checked-out build's declared host tools, not random binaries. Camera packaging previously used `zipalign -c -P 16 4`; follow its canonical delivery procedure and signature requirements. Camera remains finalized, so tool restoration is not permission to modify the APK.
-
-Host utilities commonly needed: `git`, `git-lfs`, `python3`, `python3-venv`, `python3-yaml`, `ripgrep`, `unzip`, `zip`, `file`, `binutils`, `patchelf`, `ffmpeg`, `jq`, plus the build's declared dependencies. Record package versions for reproducibility. GitHub CLI is available in WSL and Windows at the latest check; restore via [official CLI instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) if needed, then authenticate interactively. Never put credentials in scripts or docs.
+Analyze only copies in a new private directory. Do not publish proprietary APKs, ELF files, credentials or extracted personal data. Copy SQLite WAL companions before opening a database read-only. Decompiler output is a hypothesis: verify ABI, relocations, callers and instruction bytes against the exact binary. Headless startup is not a completed decompilation test. Keep saved projects before version upgrades.
 
 ## ADB, fastboot and root boundary
 

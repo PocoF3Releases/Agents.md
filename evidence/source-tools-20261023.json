@@ -1,0 +1,54 @@
+{
+  "observed": "2026-10-23",
+  "scope": "source and host tool checks only; no ROM compile or device operation",
+  "framework": {
+    "repository": "https://github.com/PocoF3Releases/frameworks_base",
+    "branch": "cnb",
+    "head": "aa31c23a12c9a6610905105be645bc62350d103d",
+    "upstream": "7ce477290165bc3c0a6299464db471e11acd8c12",
+    "custom_series_patch_identical": true
+  },
+  "maintained_sources_verified": 44,
+  "recovery_patches_reapplied": 4,
+  "device_xml": {
+    "alioth": {
+      "xml_files": 27,
+      "worktree": "clean"
+    },
+    "camera": {
+      "xml_files": 13,
+      "worktree": "clean"
+    },
+    "sm8250-common": {
+      "xml_files": 405,
+      "worktree": "clean"
+    }
+  },
+  "lunch": "lineage_alioth-cp2a-user: passed",
+  "tools": {
+    "jadx": "1.5.6; publisher SHA-256 matched; version passed",
+    "ghidra": "12.2; publisher SHA-256 matched; headless usage passed with checkout JDK25",
+    "apktool": "2.7.0 Ubuntu package; version passed",
+    "apksigner": "35.0.2-1 Ubuntu package; version passed",
+    "aapt": "14 beta Ubuntu package; version passed",
+    "tshark": "4.6.4; version passed",
+    "binwalk": "2.4.3; help passed",
+    "llvm_objdump": "checkout llvm-binutils-stable; version passed"
+  },
+  "leanrea": {
+    "repository": "https://github.com/aicodeking/leanrea",
+    "revision": "09ba4aa0217f82cd880f855a60b877f59f39b22b",
+    "license": "MIT",
+    "installed": "Codex Windows user skills, WSL user skills, workhub project skills",
+    "benchmark_reproduced": false
+  },
+  "context7": {
+    "library_id": "/skylot/jadx",
+    "query_scope": "JADX 1.5 CLI runtime and version option; unversioned docs result",
+    "calls": {
+      "resolve": 1,
+      "query": 1
+    }
+  },
+  "dpkg_audit": "clean"
+}
