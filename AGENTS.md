@@ -22,3 +22,5 @@ edits, read affected rules/files. Share Astra/Sol records; recover missing conte
 Knowledge: follow [maintenance](operations/maintenance.md), update fact owners,
 then run `python3 scripts/check.py` (disposable local checks; no GitHub Actions).
 Keep credentials/identifiers private; use `~/` paths.
+
+Resume: [.agents/skills/alioth-resume/SKILL.md](.agents/skills/alioth-resume/SKILL.md).

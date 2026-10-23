@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-10-20'
+observed: '2026-10-23'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool sources.
   Source observations are not a flashed release manifest.
 workhub:
@@ -32,8 +32,8 @@ repositories:
     aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/8b53bd282faeaf79ed6c38ad84f19ca1e516fb80
   observation: 2026-10-20; normal ROM source with local recovery patch stack; no duplicate recovery fork.
   local_a17:
-    head: ea0e77693655141722b34d1a8d6860a024802804
-    reason: ROM-only selected ref plus authored recovery patches from the recovery manifest repository
+    head: 306168c1b0096a0859d0b09787cd5179b92ab174
+    reason: ROM base plus authored local recovery patches
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -47,8 +47,8 @@ repositories:
     aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/0238815ec925be06ddc9405bb6d14b581784964c
   observation: 2026-10-20; normal ROM source with local recovery patch stack; no duplicate recovery fork.
   local_a17:
-    head: 821729e34526ec4c72445079be5d53b24cfe5870
-    reason: ROM-only selected ref plus authored recovery patches from the recovery manifest repository
+    head: 4223e0f2c506770fa6b6b20f4d33bedd8f88f600
+    reason: ROM base plus authored local recovery patches
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -170,16 +170,16 @@ repositories:
   selected_ref: cnb
   refs:
     aosp-16: 51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: 9a4cd721b620b06ac6fddeac0bf79b5d11b21fd7
+    cnb: aa31c23a12c9a6610905105be645bc62350d103d
     ozo-unimplemented: c62e85dbb8102a1c93a5af698ab85f668811b860
   commit_links:
     aosp-16: https://github.com/PocoF3Releases/frameworks_base/commit/51dbd44a23cdf6d8ee5240640e3e803dd96ca588
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/9a4cd721b620b06ac6fddeac0bf79b5d11b21fd7
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/aa31c23a12c9a6610905105be645bc62350d103d
     ozo-unimplemented: https://github.com/PocoF3Releases/frameworks_base/commit/c62e85dbb8102a1c93a5af698ab85f668811b860
   observation: 2026-10-20; normal ROM source with local recovery patch stack; no duplicate recovery fork.
   local_a17:
-    head: 2102abdc6109204062d36c11e90aab775fa53f31
-    reason: ROM-only selected ref plus authored recovery patches from the recovery manifest repository
+    head: 770887d3e4fbe984ef9ed04bb1172e533b998721
+    reason: ROM base plus authored local recovery patches
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
