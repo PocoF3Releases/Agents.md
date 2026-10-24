@@ -15,18 +15,19 @@ on time. This metric is **not physical touch-to-photon latency**.
 Android's existing single-step Choreographer recovery delays only the first
 blocked frame within an animation. The inspected runtime compiled both
 `bufferStuffingMultiRecovery()` and `bufferStuffingRecoveryThreshold()` as false.
-The [Alioth fix](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/22436519a2ed598ffb7ce519ab72b4726e560c8f)
-enables those existing paths together through a product-scoped release value set.
+The original Alioth-scoped prototype enabled those paths together. Its exact
+values now live in the [shared SM8250 implementation](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0c2346d1bf9522de2aa4cc292c12185667ef968d).
 The upstream cumulative-delay threshold is 100 ms; its check can permit one
 additional frame interval before further recovery delays stop.
 
-The explicit Alioth map lives under `configs/release`, outside global map
-auto-discovery, and adds its value set to cp2a. Normal aliases and descendants
-of cp2a inherit it; independent releases and other products are unaffected.
-The [published 120 Hz profile](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/c54c45f196ffa37f26a26273a674ed61499fd768)
-and stock panel timing remain unchanged. No shared framework or kernel source
-change, diagnostic APK, test fixture or temporary module is in the device commit.
-A second-model source review found no blocking configuration or scoping issue.
+The common map lives under `configs/release`, outside global auto-discovery,
+and is included by Kona products for cp2a and normal aliases/descendants.
+Independent releases are unaffected. The [consolidated Alioth 120 Hz profile](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
+retains the prior final tree and stock panel timing. No framework or kernel
+source change, diagnostic APK or temporary module is added by these commits.
+The phone measurements below used the original Alioth-scoped configuration;
+commonization passed source/build/host equivalence checks, not new testing on
+other SM8250 devices or the newly synced ROM. [Refresh](source-refresh-20261025.md).
 
 ## Build and runtime identity
 

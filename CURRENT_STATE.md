@@ -7,7 +7,7 @@ Checkpoint: **2026-10-25**. [Android 17 status](state/android17-status.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Validated scope](memory/gaming-graphics.md).
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
-- **Sources:** 43 maintained build repositories refreshed; all four native-recovery patches reapplied. [Refresh scope](evidence/source-refresh-20261024.md). No new device acceptance.
+- **Sources:** 43 maintained build repositories refreshed; all four native-recovery patches reapplied. [Refresh scope](evidence/source-refresh-20261025.md). No new device acceptance.
 - **Releases:** October 20 update drafts use the confirmed October 14 build as baseline; see [Releases](state/releases.md). Drafts do not establish publication.
 
 | Task | Read |
