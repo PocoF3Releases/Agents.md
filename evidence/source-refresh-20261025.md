@@ -112,3 +112,14 @@ names remain where they identify actual implementation constraints. Historical
 measurement records retain their original test revisions; this metadata-only
 rewrite adds no new build/runtime acceptance and needs no rebuild. All four
 recovery overlays remain applied, with zero pending patches.
+
+## Evolution-X audio wrapper pull request
+
+The main [hardware-interface repository](https://github.com/PocoF3Releases/android_hardware_interfaces)
+is now a direct fork of Evolution-X/hardware_interfaces. Its cnb branch retains
+[the exact audio callback commit](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/810a827dcdfb8e7c7cdfda5b1d1e659bab5aa010).
+[Evolution-X PR #6](https://github.com/Evolution-X/hardware_interfaces/pull/6)
+targets cnb with one commit and only StreamOut.cpp changed; recovery crypto
+variants are excluded. Existing source/build/device scope above remains unchanged.
+The replaced standalone repository is temporarily retained under
+android_hardware_interfaces-standalone-backup-20261025 pending deletion approval.
