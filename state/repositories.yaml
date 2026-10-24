@@ -154,12 +154,12 @@ repositories:
   - frameworks/av
   selected_ref: cnb
   refs:
-    cnb: 237b20d27aecebbb7ac90a670747ae03f50fdfac
+    cnb: 1e7787289cecdb5b029edfb6829ccee3965b6038
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/237b20d27aecebbb7ac90a670747ae03f50fdfac
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/1e7787289cecdb5b029edfb6829ccee3965b6038
+  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
+    recovery inclusion rechecked. No new build/device acceptance.
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
   source_tree_paths:
@@ -180,36 +180,36 @@ repositories:
   - hardware/qcom-caf/sm8250/display
   selected_ref: cnb
   refs:
-    cnb: 2c96e6cc10835f2b48f61c483131c8ca003354db
+    cnb: 50389bd776702a3a94d46be3027ce4e5a7c3b572
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/2c96e6cc10835f2b48f61c483131c8ca003354db
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/50389bd776702a3a94d46be3027ce4e5a7c3b572
+  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
+    recovery inclusion rechecked. No new build/device acceptance.
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio
   role: build_source
   source_tree_paths:
   - hardware/qcom-caf/sm8250/audio
   selected_ref: cnb
   refs:
-    cnb: 147f4aae7eb3148baae6c992594a278630b09909
+    cnb: e5644bea36605d39bc1412f6b1d8f4c5ec029cc1
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/147f4aae7eb3148baae6c992594a278630b09909
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/e5644bea36605d39bc1412f6b1d8f4c5ec029cc1
+  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
+    recovery inclusion rechecked. No new build/device acceptance.
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media
   role: build_source
   source_tree_paths:
   - hardware/qcom-caf/sm8250/media
   selected_ref: cnb
   refs:
-    cnb: 4563de61446855e0b1dade548d9003e792cb143a
+    cnb: 60f362cedc690153ac5fb5824327fec66361d598
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/4563de61446855e0b1dade548d9003e792cb143a
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/60f362cedc690153ac5fb5824327fec66361d598
+  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
+    recovery inclusion rechecked. No new build/device acceptance.
 - repository: https://github.com/PocoF3Releases/android_hardware_nxp_nfc
   role: build_source
   source_tree_paths:
@@ -430,11 +430,11 @@ repositories:
   source_tree_paths: []
   selected_ref: cnb
   refs:
-    cnb: 4ec9178671c470cd57e8b1e5f91591b482c883cc
+    cnb: 810a827dcdfb8e7c7cdfda5b1d1e659bab5aa010
   commit_links:
-    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/4ec9178671c470cd57e8b1e5f91591b482c883cc
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/810a827dcdfb8e7c7cdfda5b1d1e659bab5aa010
+  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
+    recovery inclusion rechecked. No new build/device acceptance.
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces
   role: build_source
@@ -442,12 +442,12 @@ repositories:
   - hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: ed805fb928a6bdf63db7e2832cb958c4526a17a3
+    cnb: 0b8a8b3905ebc98f87004f23a18d245e516c8f8f
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/ed805fb928a6bdf63db7e2832cb958c4526a17a3
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0b8a8b3905ebc98f87004f23a18d245e516c8f8f
   local_a17: matches_selected_ref
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
+    recovery inclusion rechecked. No new build/device acceptance.
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy
   role: build_source
   source_tree_paths:

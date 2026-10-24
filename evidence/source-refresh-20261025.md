@@ -31,8 +31,8 @@ materialized, and 106 tracked APK/APEX assets have valid ZIP headers.
 - [Common UI recovery](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0c2346d1bf9522de2aa4cc292c12185667ef968d)
 - [Alioth compositor profile](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
 - [Framework replay](https://github.com/PocoF3Releases/frameworks_base/commit/bfe244147a01a5933f444f27a4403ae19f4d2582)
-- [Recovery interface replay](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/ed805fb928a6bdf63db7e2832cb958c4526a17a3)
-- [Main interface replay](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/4ec9178671c470cd57e8b1e5f91591b482c883cc)
+- [Recovery interface replay](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0b8a8b3905ebc98f87004f23a18d245e516c8f8f)
+- [Main interface replay](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/810a827dcdfb8e7c7cdfda5b1d1e659bab5aa010)
 
 New upstream HFR behavior remains behind unset opt-ins with preserving defaults.
 No unverified camera tuning is enabled. No kernel base movement occurred, so no
@@ -82,3 +82,33 @@ are identical before/after applying the recovery overlay.
 No source corrections or repeated builds were needed after this audit. The
 component passes above remain applicable to unchanged inputs; full production
 ROM packaging and testing of that resulting build remain outstanding.
+
+## Upstream-facing commit messages
+
+Reviewed custom messages in the shared ROM framework, NFC, compression, Qualcomm
+HAL and Xiaomi HAL forks. Most subjects already describe components rather than
+Alioth. Seven messages across six branches were revised: camera session identity,
+extended audio callbacks (main and recovery copies), composer compatibility, and
+three Qualcomm descriptions containing obsolete model-generation boilerplate.
+The camera description retains its default-off Xiaomi fallback requirement;
+composer describes legacy clients rather than one device's proprietary binary.
+Audio validation remains explicitly scoped to Alioth, without claiming other
+HALs were device-tested. Existing coauthor attribution and original authorship,
+author dates and unrelated imported messages were preserved.
+
+| Repository | Current branch tip |
+| --- | --- |
+| android_hardware_interfaces (recovery) | [0b8a8b3905eb](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0b8a8b3905ebc98f87004f23a18d245e516c8f8f) |
+| frameworks_av | [1e7787289cec](https://github.com/PocoF3Releases/frameworks_av/commit/1e7787289cecdb5b029edfb6829ccee3965b6038) |
+| hardware_qcom-caf_sm8250_audio | [e5644bea3660](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/e5644bea36605d39bc1412f6b1d8f4c5ec029cc1) |
+| hardware_qcom-caf_sm8250_display | [50389bd77670](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/50389bd776702a3a94d46be3027ce4e5a7c3b572) |
+| hardware_qcom-caf_sm8250_media | [60f362cedc69](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/60f362cedc690153ac5fb5824327fec66361d598) |
+| android_hardware_interfaces | [810a827dcdfb](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/810a827dcdfb8e7c7cdfda5b1d1e659bab5aa010) |
+
+Each rewritten commit retains its exact tree and parent-to-commit patch; each
+branch retains the full binary diff from its selected upstream. All six public
+tips were lease-protected and read back after pushing. Original device/backend
+names remain where they identify actual implementation constraints. Historical
+measurement records retain their original test revisions; this metadata-only
+rewrite adds no new build/runtime acceptance and needs no rebuild. All four
+recovery overlays remain applied, with zero pending patches.
