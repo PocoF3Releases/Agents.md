@@ -423,6 +423,15 @@ repositories:
   local_a17: matches_selected_ref
   observation: 2026-10-24; selected upstream checked and sources resynced; runtime acceptance remains scoped to
     its recorded build.
+- repository: https://github.com/PocoF3Releases/android_hardware_interfaces
+  role: build_source
+  source_tree_paths: []
+  selected_ref: cnb
+  refs:
+    cnb: 84e523e41580cad3657024ffd7122df14a6231dc
+  commit_links:
+    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/84e523e41580cad3657024ffd7122df14a6231dc
+  observation: 2026-10-24; separate ROM publication excludes recovery crypto variants; tested audio source matches recovery counterpart. Checkout remains on recovery overlay.
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces
   role: build_source
   source_tree_paths:
