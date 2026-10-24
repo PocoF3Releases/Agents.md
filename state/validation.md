@@ -192,3 +192,7 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 76 unsupported, one warning, no failures). Counter regressions pass; 64 process
 teardowns end at zero; four display wake cycles pass. Temporary enforcing kernel
 only; original boot restored, partition unchanged. Not full conformance or a release.
+
+## V-HARDWARE-20261024
+
+[Scoped hardware checks](../evidence/hardware-audit-20261024.md), 2026-10-24.
