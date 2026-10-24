@@ -39,16 +39,6 @@ message has been sent and this draft does not advance the published baseline.
 
 [Generated update banner](assets/evolutionx-alioth-20261020-banner.png).
 
-## Android 16 release preparation
-
-Historical September 14 v11.11 notes and September 27 draft are preserved in the
-[consolidated project history](releases.md).
-Maintainer later reported A16 released and clean-install AC-4 playback with
-Magisk; exact newer date/artifact/links remain unknown. Saved A16 refs were
-unchanged October 9, with no A16 checkout identified. Do not reuse September 14
-links or A17 runtime results. Maintainer's A17→A16 instruction was clean install.
-[V-A16](validation.md#v-a16).
-
 ## Android 17 post-September 23 delta
 
 Historical accepted additions: AC-4 stereo playback and Thermal Profiles dialog

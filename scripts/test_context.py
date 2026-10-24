@@ -13,7 +13,7 @@ class ContextTests(unittest.TestCase):
         for query, expected in [
             ('gesture vibration', 'haptics'), ('AC4 VNDK', 'audio'),
             ('camera ultrawide 4k60', 'camera'), ('Windows WSL restore', 'recovery'),
-            ('Android16 release changelog', 'release'), ('Vulkan Endfield', 'graphics'),
+            ('Android17 release changelog', 'release'), ('Vulkan Endfield', 'graphics'),
             ('proximity touch translation', 'parts'), ('Ghidra LLVM', 'tools'),
             ('repoindex database', 'indexing'), ('Astra prompt tokens', 'guidance')]:
             with self.subTest(query=query):

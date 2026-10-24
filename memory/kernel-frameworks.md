@@ -2,7 +2,7 @@
 
 ## Ownership and source
 
-Target: POCO F3 / alioth, SM8250/Kona / Snapdragon 870-class hardware; Android 17 focus with separately checked Android 16 backports. [The source map](../state/repositories.yaml) owns observed branches/heads; old uploaded-archive heads are not current checkout instructions.
+Target: POCO F3 / alioth, SM8250/Kona / Snapdragon 870-class hardware; Android 17. [The source map](../state/repositories.yaml) owns observed branches/heads; old uploaded-archive heads are not current checkout instructions.
 
 `device/xiaomi/alioth/BoardConfig.mk` includes common BoardConfigCommon.mk. Its device.mk inherits common kona.mk, includes camera/miuicamera.mk and inherits vendor/xiaomi/alioth. Common kona.mk packages XiaomiParts and inherits vendor/xiaomi/sm8250-common. Camera integration inherits vendor/xiaomi/camera. Both camera delivery trees remain mandatory. Alioth-specific configuration belongs in alioth; shared init/audio/media/SELinux and Parts belong in sm8250-common. Standalone hardware/xiaomi owns reusable Xiaomi/Dolby integration.
 
@@ -42,13 +42,12 @@ GPU donor-driver, Turnip and game-setting experiments were parked by the maintai
 
 Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; [current fingerprint lifetime/lockout implementation](https://github.com/PocoF3Releases/hardware_xiaomi/commit/807111f89c95838abf8432e1b09f62ae4165cde5) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
 
-## Android 16 and connectivity boundaries
+## Connectivity boundaries
 
-Port against the actual A16 API/resources and kernel, not by copying all A17
-flags. A16 HBM must not call the absent `hbmControllerEnabled()` helper. High-FPS
+High-FPS
 screen recording and recording-blur suppression are independent features/commits;
-neither should require the other. Recheck WFD/ELF dependency rewrites and selected
-Clang against that branch instead of undoing or restoring them by age alone.
+neither should require the other. Verify WFD/ELF dependency rewrites against the
+active manifest instead of restoring them by age alone.
 
 Common the historical candidate removed obsolete Bluetooth build configuration. Source policy
 and library presence were reviewed, but no Bluetooth audio headset or WFD sink
