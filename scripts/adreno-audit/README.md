@@ -57,6 +57,22 @@ checkout and mock external operations. They reproduce the pinned baseline's
 under ASan/UBSan. They do not prove live OOM handling or concurrent kernel behavior.
 Kernel-derived fixtures retain their source notices and [GPL terms](COPYING.kernel).
 
+The host runner also tests final global-buffer removal using the actual current
+map/unmap/IOMMU removal functions. The trace backport before the follow-up fix
+reproduces two missing-decrement assertions with
+`python3 host-regressions/global-lifetime.py 12d26a785cf3` (expected nonzero exit).
+No live GPU fault or driver unbind is needed to test this path.
+
+`build_native.py` also builds `kgsl-lifetime32` and `kgsl-lifetime64`. Run them as an
+ordinary shell under the audit's device namespace. Each launches four concurrent
+children across eight rounds: 16 normal exits and 16 SIGKILLs with live KGSL
+contexts, allocations, mappings, timelines and fences. At most 32 MiB of requested
+user buffers is live concurrently; driver/context overhead is additional. The
+parent kills only its own children and each kill-mode child has a ten-second
+fallback alarm. Pair the workload with GPU-memory tracing to check final counters;
+this tests process cleanup, not global-driver teardown or exhaustive races.
+
+
 Perfetto uses Android's ordinary tracing service, a six-second capture, and an
 offline trace processor. Its official binary is downloaded only on request and
 checked against the SHA-256 pinned in the checkout's v54.0 manifest. Raw traces,

@@ -8,3 +8,8 @@ for bits,target,triple,variant in [(64,'aarch64-linux-android37','aarch64-linux-
  begin=crt/'crtbegin_dynamic'/variant/'crtbegin_dynamic.o';end=crt/'crtend_android'/variant/'crtend_android.o'
  for name,args in [(f'gpu-probe{bits}',base[:1]+[str(begin)]+base[1:]+[str(end),'-pie']),(('libgpu_audit.so' if bits==64 else 'libgpu_audit32.so'),base+['-DAPP_PROBE','-fPIC','-shared'])]:
   r=subprocess.run(args+['-o',str(P/name)],capture_output=True,text=True);(P/(name+'.build.log')).write_text(r.stdout+r.stderr);print(name,r.returncode,r.stderr[:3500]);r.check_returncode()
+
+# Bounded process/fd teardown tests: 32 children, at most 32 MiB live at once.
+for bits,target,triple,variant in [(64,'aarch64-linux-android37','aarch64-linux-android','android_arm64_armv8-2a-dotprod_cortex-a76'),(32,'armv7a-linux-androideabi37','arm-linux-androideabi','android_arm_armv8-2a_cortex-a76')]:
+ cmd=[str(C),str(crt/'crtbegin_dynamic'/variant/'crtbegin_dynamic.o'),'--target='+target,'--sysroot='+str(S),'-isystem',str(S/'usr/include'/triple),'-O2','-Wall','-Wextra','-Werror','-fPIE','-nostdlib',str(P/'src/lifetime.c'),'-L'+str(S/'usr/lib'/triple/'37'),'-lc',str(crt/'crtend_android'/variant/'crtend_android.o'),'-pie','-o',str(P/f'kgsl-lifetime{bits}')]
+ subprocess.run(cmd,check=True)

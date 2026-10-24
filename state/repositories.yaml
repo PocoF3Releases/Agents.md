@@ -77,10 +77,10 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 12d26a785cf386e875c1fb049614f9089436070b
+    aosp-17: d2c6806767875f357a4037d1b65a1415c4a14c4f
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/12d26a785cf386e875c1fb049614f9089436070b
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d2c6806767875f357a4037d1b65a1415c4a14c4f
   observation: 2026-10-24; GPU accounting fixes published and tested with a temporary kernel; installed kernel
     restored. Scope is recorded in V-ADRENO-20261024.
 - repository: https://github.com/PocoF3Releases/.github

@@ -188,8 +188,7 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 ## V-ADRENO-20261024
 
 **2026-10-24 — source/build/host/device tested.** [Evidence](../evidence/adreno-audit-20261024.md):
-62 native + six window checks per app ABI, three repetitions each; selected Khronos
-633-case results match before/after (556 pass, 76 unsupported, one quality warning,
-zero failures). Temporary patched kernel emits real Perfetto GPU-memory counters;
-large-footprint and shared DMA-BUF host regressions pass. Installed kernel restored,
-boot partition unchanged. Not full conformance or a newly flashed production ROM.
+68 app checks per ABI × three runs; 633 Khronos cases unchanged (556 pass,
+76 unsupported, one warning, no failures). Counter regressions pass; 64 process
+teardowns end at zero; four display wake cycles pass. Temporary enforcing kernel
+only; original boot restored, partition unchanged. Not full conformance or a release.

@@ -9,6 +9,8 @@ serial_args=['-s',os.environ['ANDROID_SERIAL']] if os.environ.get('ANDROID_SERIA
 assert re.fullmatch(r'[A-Za-z0-9_-]{1,40}',label),'Use a simple trace label'
 remote='/data/local/tmp/codex-deqp-'+label+'.qpa'
 cmd='/data/local/tmp/codex-deqp64 --deqp-caselist-file=/data/local/tmp/codex-deqp-cases.txt --deqp-surface-type=pbuffer --deqp-surface-width=256 --deqp-surface-height=256 --deqp-gl-config-name=rgba8888d24s8ms0 --deqp-watchdog=enable --deqp-log-images=disable --deqp-log-shader-sources=disable --deqp-archive-dir=/data/local/tmp/codex-deqp-data --deqp-log-filename='+remote
+preflight=subprocess.run([A,*serial_args,'shell','test -r /data/local/tmp/codex-deqp-data/gles2/shaders/invalid_implicit_conversions.test'],capture_output=True)
+assert preflight.returncode==0,'Missing dEQP shader resource; deploy the contents of data, not a nested data directory'
 start=time.monotonic();r=subprocess.run([A,*serial_args,'shell',cmd],capture_output=True,text=True,timeout=600);(P/(label+'-deqp-console.txt')).write_text(r.stdout+r.stderr)
 q=subprocess.run([A,*serial_args,'exec-out','cat',remote],capture_output=True,timeout=30);q.check_returncode();(P/(label+'-deqp.qpa')).write_bytes(q.stdout)
 text=q.stdout.decode(errors='replace');results=re.findall(r'<TestCaseResult CasePath="([^"]+)".*?<Result StatusCode="([^"]+)"[^>]*>(.*?)</Result>',text,re.S)
