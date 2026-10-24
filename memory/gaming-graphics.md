@@ -72,3 +72,13 @@ accounting, large-footprint and final-global-removal regressions have targeted h
 Vulkan remains 1.1: kernel timeline ioctls do not create a userspace Vulkan extension.
 Sparse support remains disabled. Android thermal HAL telemetry is unavailable;
 Xiaomi/kernel protection and the normal governor remain enabled.
+
+## Display scheduling — October 24
+
+The [Alioth timing audit](../evidence/display-timing-20261024.md) separates native
+60/120 Hz panel support from SurfaceFlinger work budgets. Temporary enforcing
+runtime tests reduced measured scrolling presentation intervals while retaining
+original early/GPU headroom; launcher transitions remain baseline-like and can
+still miss app deadlines. No 240 Hz or speculative panel overclock was accepted.
+The restored `~/references_code/android-t-qcom` and Qualcomm vendor snapshot are
+reference material, not replacement Android 17 framework dependencies.
