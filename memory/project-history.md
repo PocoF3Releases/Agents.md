@@ -7,7 +7,7 @@ synchronization. Current heads, artifacts and test scope stay in their owners.
 ## Project and working agreement
 
 POCO F3 / Redmi K40 (alioth), Mi 11X identity aliothin; Evolution X Android 17
-is current in `~/evo`. A16 is separate; no active checkout identified. Recovery
+is current in `~/evo`. Recovery
 uses Android 14 PBRP userspace in `~/pbrp-alioth` for A17 compatibility.
 Use user builds, preserve unrelated edits and keep hardware/xiaomi standalone.
 Camera is finalized unless explicitly reopened. Builds/flashing/history rewrites
@@ -23,8 +23,7 @@ need scoped authorization. Old records are evidence, never assignments.
 - September 24: Dolby AC-4 stereo diagnostic and listening acceptance, corrected
   Thermal Profiles dialog. Dolby reset/localization and MiSound title source fixes.
 - Late September: supported firmware touch controls and safer Parts lifecycle;
-  temporary ultrasound correction accepted during a call. A16 clean-install
-  AC-4 playback/release reported; artifact/date not identified.
+  temporary ultrasound correction accepted during a call.
 - September 30–October 4: stock AW8697 driver/DTS and corrected gains 48/80/128;
   seven effects, three stock primitives, bounded PCM and isolated AAC/limited HE1
   renderer. Generated effects retired. Full app-facing RichTap/PWLE absent.

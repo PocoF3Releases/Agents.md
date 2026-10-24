@@ -6,7 +6,6 @@ Alioth uses legacy Audio HAL 6.0 / DAX3-era components including `libhwdap.so`, 
 
 Standalone `hardware/xiaomi/dolby` owns app/UI and shared DMS policy; frameworks/av owns native lifecycle, flags and effect transport; common/device configuration owns genuine platform opt-ins. [Source ownership and observed heads](../state/repositories.yaml).
 
-Android 16 sample playback was subsequently confirmed by the maintainer; see [V-A16](../state/validation.md#v-a16). Detailed measurements below retain their Android 17 provenance.
 
 ## Accepted AC-4 integration
 

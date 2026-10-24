@@ -10,7 +10,6 @@ Local routing/content checks, not live Astra/Sol evaluations or paid API calls.
 | AC-4 or VNDK helper failure | Audio | 21-entry private OMX ABI and opted-in helper path; no blanket VNDK links |
 | Camera 0.6x / 4K | Camera | Finalized, 4K ultrawide guarded; true ultrawide 60fps unproven |
 | Windows reinstall / restore tools | Recovery → tools | Knowledge is portable; private dumps/keys/local edits need backup |
-| Android 16 changelog | Releases | Later release reported, exact artifact unknown; do not reuse A17 tests or old links |
 | Vulkan / Myron frame generation | Graphics | Experiments parked; hardware backend not a device-tree toggle |
 | Proximity / touch / translations | Device UX | Actual supported controls and test scope, no general all-device claim |
 | Upstream ownership / branch status | Source map | Observed refs and local divergence, not flashed inclusion |
