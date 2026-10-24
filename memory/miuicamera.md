@@ -69,3 +69,10 @@ malformed-request rejection without provider restart. The negative request remai
 unsupported; do not advertise VTCam compatibility or new 4K/60fps acceptance.
 The test was a temporary enforcing HAL replacement, then the installed blob was
 restored. Public source heads belong to the repository ledger.
+
+
+[Final commit recheck](../evidence/camera-review-20261024.md) repeats the approved
+six-clip MiuiCamera matrix with the mapped guarded HAL identified by hash. All
+frames decode on-device; main 4K60 remains about 60fps, ultrawide UI 60 remains
+about 30fps, and switching ultrawide to 4K returns to 1×. Camera preferences and
+the original installed HAL were restored. No further production patch was needed.
