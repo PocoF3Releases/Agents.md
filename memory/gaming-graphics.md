@@ -86,8 +86,9 @@ reference material, not replacement Android 17 framework dependencies.
 ## Refresh-switch backlog — October 25
 
 A continuous 120→60 Hz test reproduced a persistent UI buffer queue that paused
-or restarted-app tests missed. Alioth now enables Android's existing multi-step
-recovery together with its cumulative-delay threshold. The normal 60 Hz budget
+or restarted-app tests missed. Kona products now enable Android's existing multi-step
+recovery together with its cumulative-delay threshold through the shared system
+release configuration. This is normal-ROM policy, separate from recovery UI refresh. The normal 60 Hz budget
 and published 120 Hz profile are retained. [Source, build, enforcing device tests
 and restoration](../evidence/display-recovery-20261025.md) record the scoped
 acceptance; the tested temporary framework was removed afterward. This addresses
