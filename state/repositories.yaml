@@ -128,10 +128,10 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 04b2f0ffa59d0b4adf7605abe068e7ac0fd148a1
+    cnb: c8efa74f359339c741e0ea6decf98b198c050532
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/04b2f0ffa59d0b4adf7605abe068e7ac0fd148a1
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/c8efa74f359339c741e0ea6decf98b198c050532
   observation: 2026-10-24; selected upstream checked and sources resynced; runtime acceptance remains scoped to
     its recorded build.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
@@ -429,9 +429,9 @@ repositories:
   - hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: 8fad7df1306131604159a38f84c8d60cb8598a23
+    cnb: 68c704a2ceed7973793fa0a015d6af472f821073
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/8fad7df1306131604159a38f84c8d60cb8598a23
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/68c704a2ceed7973793fa0a015d6af472f821073
   local_a17: matches_selected_ref
   observation: 2026-10-24; selected upstream checked and sources resynced; runtime acceptance remains scoped to
     its recorded build.
