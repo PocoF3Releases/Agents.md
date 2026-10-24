@@ -1,6 +1,6 @@
 # Validation register
 
-Keep source, build and runtime evidence dated.
+Date source/build/runtime evidence.
 
 ## V-HAPTICS
 
@@ -187,7 +187,7 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 
 ## V-ADRENO-20261024
 
-**2026-10-24 — source/build/host/device tested.** [Evidence](../evidence/adreno-audit-20261024.md):
+**2026-10-24 — source/build/host/device tested.** [GPU](../evidence/adreno-audit-20261024.md):
 68 app checks per ABI × three runs; 633 Khronos cases unchanged (556 pass,
 76 unsupported, one warning, no failures). Counter regressions pass; 64 process
 teardowns end at zero; four display wake cycles pass. Temporary enforcing kernel
@@ -195,4 +195,4 @@ only; original boot restored, partition unchanged. Not full conformance or a rel
 
 ## V-HARDWARE-20261024
 
-[Scoped hardware checks](../evidence/hardware-audit-20261024.md), 2026-10-24.
+[Device](../evidence/hardware-audit-20261024.md) · [HAL](../evidence/hal-regressions-20261024.md).

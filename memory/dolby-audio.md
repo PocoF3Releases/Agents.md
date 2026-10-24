@@ -53,3 +53,7 @@ links libtinycompress. Recorded host sanitizer and ARM/ARM64 executable/compiler
 checks passed; the new library was not installed into the ROM. This is not proof
 all Telegram/WhatsApp voice-message failures are fixed. Source identity and
 cross-repository grouping: [audit](../state/changelog-audit.md).
+
+## Legacy output callback ABI
+
+Stock primary C device API3.0 does not guarantee newer stream callback slots. Guard them before reading private state; HIDL version upgrades do not repair the backend ABI. [Targeted fixes and validation](../evidence/hal-regressions-20261024.md) retain HAL6.0 and stock processing.
