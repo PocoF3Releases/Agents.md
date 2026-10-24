@@ -1,6 +1,6 @@
 # Android 17 implementation and verification status
 
-Observed October 14, 2026. This is a source and component acceptance record,
+Source refresh: October 24, 2026. Earlier component acceptance remains dated below. This is a source and component acceptance record,
 not a new ROM release declaration. [Current heads](repositories.yaml) and the
 [post-sync audit](../evidence/post-sync-source-audit-20261011.json) own source identity.
 Older evidence revisions below are historical tested candidates, not branch tips.
@@ -73,8 +73,9 @@ Earlier rewrite IDs are historical; use the source map for final heads.
 
 ## What is verified
 
-- All 16 maintained A17 build checkouts are clean and match live fork heads after
-  resync. No approved source implementation was lost.
+- All 43 maintained build repositories were checked against their selected upstreams.
+  The four authored native-recovery patches remain local overlays on the normal
+  framework/device forks. [Current refresh and limits](../evidence/source-refresh-20261024.md).
 - Parts/Dolby recorded UI checks covered compact rows, selectors, icons, margins
   and expanded/collapsed thermal controls on the phone. These are scoped visual
   checks, not every possible screen/font-scale combination.
