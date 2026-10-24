@@ -55,3 +55,20 @@ comparison; do not infer a radio-driver fix from WAN download speed alone.
 Provenance: local `out/gpu-driver-comparison/REPORT.md` and
 `out/myron-frame-audit/REPORT.md`, imported 2026-09-30. This import adds no fresh
 device measurement. Source ownership is in the [map](../state/repositories.yaml).
+
+## Production Adreno accounting — October 24
+
+The stock V502.0 stack passed scoped app/native/Khronos checks on both ABIs.
+[Validation](../state/validation.md#v-adreno-20261024) and the
+[evidence record](../evidence/adreno-audit-20261024.md) separate the installed
+baseline from a temporary patched-kernel boot and record remaining limitations.
+No donor driver or general game/FPS fix was accepted.
+
+Published kernel changes preserve 64-bit mapping footprints and backport Google's
+`gpu_mem_total` emissions, retaining current DMA-BUF cleanup and upstream authorship.
+Perfetto now receives real per-process/global memory counters; duplicate-import
+accounting and large-footprint regressions have targeted host fixtures.
+[Source-only tools](../scripts/adreno-audit/README.md) stay outside ROM packages.
+Vulkan remains 1.1: kernel timeline ioctls do not create a userspace Vulkan extension.
+Sparse support remains disabled. Android thermal HAL telemetry is unavailable;
+Xiaomi/kernel protection and the normal governor remain enabled.

@@ -5,6 +5,7 @@ Checkpoint: **2026-10-24**. [Android 17 status](state/android17-status.md).
 - **Haptics:** stock-backed HAL/PCM with seven effects, three stock primitives and LOW_TICK fallback. Temporary tests are scoped; current installed identity unknown. No full RichTap/PWLE.
 - **Native recovery:** A17 no-wipe OTA, PIN unlock and signed storage ZIP checks passed. Secure recovery restored; scrolling improved. Password/Weaver remain unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
+- **GPU:** [Accounting tests](state/validation.md#v-adreno-20261024).
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
 - **Sources:** 43 maintained build repositories refreshed; all four native-recovery patches reapplied. [Refresh scope](evidence/source-refresh-20261024.md). No new device acceptance.
 - **Releases:** October 20 update drafts use the confirmed October 14 build as baseline; see [Releases](state/releases.md). Drafts do not establish publication.
