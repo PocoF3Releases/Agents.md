@@ -121,5 +121,5 @@ is now a direct fork of Evolution-X/hardware_interfaces. Its cnb branch retains
 [Evolution-X PR #6](https://github.com/Evolution-X/hardware_interfaces/pull/6)
 targets cnb with one commit and only StreamOut.cpp changed; recovery crypto
 variants are excluded. Existing source/build/device scope above remains unchanged.
-The replaced standalone repository is temporarily retained under
-android_hardware_interfaces-standalone-backup-20261025 pending deletion approval.
+The replaced standalone backup was deleted with explicit approval; the active
+fork and open pull request were verified intact afterward.
