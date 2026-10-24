@@ -70,3 +70,12 @@ touch control parsing/registration; the historical candidate fixes fast-charge c
 Device-selected defconfig fragments/DTBO packaging and compiler probes were
 modernized; these are build maintenance, not user-visible performance claims.
 [Validation limits](../state/validation.md#v-source-20261009).
+
+## Current kernel source checks
+
+The October 24 kernel head retains the Zstd/LZ4 updates, ZRAM fixes and driver
+hardening. Seven affected ARM64 targets passed unsuppressed sparse and W=1;
+regression/sanitizer tests and targeted MMIO code-generation comparisons passed.
+These are component checks, not a newly flashed kernel or full-ROM certification.
+Use the [current source ledger](../state/repositories.yaml) and
+[refresh record](../evidence/source-refresh-20261024.md) for identity and limits.
