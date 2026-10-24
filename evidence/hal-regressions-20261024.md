@@ -4,10 +4,10 @@
 
 ## Fixes
 
-- [Audio 68c704a](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/68c704a2ceed7973793fa0a015d6af472f821073): guard six modern output callback fields before inspecting a legacy C device layout. Actual stock primary API is `0x300` (3.0); the original dual-mono getter jumped through private state to address zero. Modern callback dispatch remains available for API3.2+. HIDL stays6.0.
+- [Audio 84e523e](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/84e523e41580cad3657024ffd7122df14a6231dc): guard six modern output callback fields before inspecting a legacy C device layout. Actual stock primary API is `0x300` (3.0); the original dual-mono getter jumped through private state to address zero. Modern callback dispatch remains available for API3.2+. HIDL stays6.0.
 - [Fingerprint c8efa74](https://github.com/PocoF3Releases/hardware_xiaomi/commit/c8efa74f359339c741e0ea6decf98b198c050532): complete an empty enrollment-removal list once without invoking a legacy remove-all operation. Nonempty dispatch remains unchanged in both backend variants.
 
-The audio source is in the currently manifest-tracked shared interfaces fork; its commit changes only audio, separately from recovery patches. Both commits are published on `cnb`.
+The ROM audio fix is published separately on `PocoF3Releases/android_hardware_interfaces:cnb`, based on ROM commit `d4f377ed8d027e31118669138e5b475f9366b202`; it excludes the recovery-only crypto-variant commit. Its audio source blob is identical to the tested recovery-fork counterpart `68c704a2ceed7973793fa0a015d6af472f821073`, retained in the manifest-tracked recovery fork. Both fixes are published on `cnb`.
 
 ## Validation
 
