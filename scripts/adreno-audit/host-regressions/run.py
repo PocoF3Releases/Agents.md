@@ -16,3 +16,5 @@ with tempfile.TemporaryDirectory(prefix='gpu-host-regressions-') as tmp:
   r=subprocess.run([str(exe)],capture_output=True,text=True);print(name+'\n'+r.stdout)
   assert r.returncode==(1 if name=='baseline' else 0),r.stderr
 print('Pinned baseline reproduced; current driver functions pass host regression fixtures')
+
+subprocess.run([os.sys.executable,str(P/"global-lifetime.py")],check=True)

@@ -67,7 +67,7 @@ No donor driver or general game/FPS fix was accepted.
 Published kernel changes preserve 64-bit mapping footprints and backport Google's
 `gpu_mem_total` emissions, retaining current DMA-BUF cleanup and upstream authorship.
 Perfetto now receives real per-process/global memory counters; duplicate-import
-accounting and large-footprint regressions have targeted host fixtures.
+accounting, large-footprint and final-global-removal regressions have targeted host fixtures.
 [Source-only tools](../scripts/adreno-audit/README.md) stay outside ROM packages.
 Vulkan remains 1.1: kernel timeline ioctls do not create a userspace Vulkan extension.
 Sparse support remains disabled. Android thermal HAL telemetry is unavailable;

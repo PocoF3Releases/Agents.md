@@ -119,8 +119,11 @@ both release orders, original-size pairing and accounting-node allocation failur
 These fixtures do not prove live kernel OOM or concurrent fault injection.
 
 Full test kernel Image linked with the device-pinned Clang r563880c. All twelve
-configs regenerated in check mode with no difference. Both commits pass strict
-checkpatch. KGSL W=1/sparse builds pass; an isolated baseline comparison found the
+configs regenerated in check mode with no difference. Both source diffs pass strict checkpatch. Full commit checks also report
+metadata findings: the project-required `Co-authored-by` trailer is unknown to this
+old checker, the local footprint fix has no human DCO sign-off, and the imported
+`Backport:` URL triggers formatting/link-tag warnings. No human sign-off was
+invented and these metadata findings were not suppressed. KGSL W=1/sparse builds pass; an isolated baseline comparison found the
 same **165 existing KGSL diagnostics**, with none added or removed. Existing
 warnings were not suppressed or relabeled as a clean warning-free build.
 
@@ -151,3 +154,61 @@ with existing authorized root while all tested app calls stayed in `untrusted_ap
 No general SELinux allow rule was added. At the user's request only
 `verifier_verify_adb_installs` was set to 0; normal Play Protect settings remained
 unchanged, and subsequent diagnostic APK updates did not show the scan prompt.
+
+
+## Follow-up review and global-buffer correction
+
+A second lifetime review found that the trace backport charged a global buffer
+on its first successful mapping and deliberately retained that charge during
+per-pagetable teardown, but never subtracted it on final global-list removal.
+[d2c680676787](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d2c6806767875f357a4037d1b65a1415c4a14c4f) fixes only that trace-counter imbalance in `kgsl_iommu_remove_global`.
+The width fix and current DMA-BUF ownership/unwind remain intact; authorship and
+published history were preserved by adding a separate follow-up commit.
+
+Actual map/unmap/removal host functions under ASan/UBSan reproduce two failed
+balance assertions at `12d26a785cf3`. The correction passes eight checks covering
+shared pagetables, final removal, repeated removal, failed mapping, never-mapped
+buffers and unknown descriptors. Final global removal is **host-tested**, not a
+claim of forcing hardware faults or unbinding the display GPU on the phone.
+
+The complete temporary kernel linked successfully. Final IOMMU W=1/sparse checks
+succeeded with the same four existing file diagnostics as the isolated baseline;
+no diagnostic was suppressed. The new source diff passes strict checkpatch.
+The existing footprint/DMA-BUF regressions still pass.
+
+Temporary image SHA-256:
+`78fe38014239ffeeb7be5e2fdc1f4a8a1122c9e62a34fdff9a74f915d0f7602f`.
+It used build 4, `adreno-review`, with the original ramdisk and a test-only installed
+release-string override. `/proc/version`, rather than just `uname -r`, identified
+the booted diagnostic build. Runtime testing remained SELinux enforcing:
+
+- Both untrusted-app ABIs again passed 62 native + six window checks across three
+  cold processes each.
+- The same 633 Khronos cases returned exactly the same per-case status/detail:
+  556 pass, 76 unsupported, one quality warning, zero failures.
+- Each ABI passed 32 process-teardown cases: 16 exits and 16 SIGKILLs with live
+  contexts, mappings, allocations, timelines and fences. Ordinary Android Perfetto
+  captured all 64 child-process memory tracks ending at zero; 5,120 process and
+  1,152 global samples contained no negative values.
+- Four display sleep/wake cycles passed 62 native checks per ABI afterward. These
+  are display cycles, not certification of deep system suspend or measured FPS.
+- No new GPU fault, hang, IOMMU-fault or kernel-oops signature appeared in the
+  captured test log interval.
+
+One Khronos attempt was invalid because resource deployment nested the `data`
+directory. Logs identified a missing shader fixture, not a GPU failure. Correcting
+the deployment produced the complete result above; the runner now checks that
+fixture before executing. A log filter initially misclassified `debugfs` SELinux
+format-file denials as `BUG:` text; explicit fault-signature matching corrected
+that analysis. GPU-memory events were captured with their existing permitted
+tracefs label; no broad policy allowance was added.
+
+The line-interpolation quality warning remains in the unchanged closed userspace
+stack. Android thermal HAL telemetry still reports unavailable, while GPU
+`msm-adreno-tz`, temperature reporting and Xiaomi protection remain active. Neither
+finding justifies fabricated kernel capabilities, a donor driver or thermal tuning.
+
+After checks, the diagnostic app/files were removed and the original installed
+kernel (build 2) restored. Its boot-partition hash still matches the preserved
+pre-test backup; no partition was flashed. A production ROM rebuild is still needed
+to package the three published source commits.

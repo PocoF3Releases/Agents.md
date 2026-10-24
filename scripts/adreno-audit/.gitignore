@@ -9,6 +9,7 @@ gpu-probe64
 *.csv
 *.pftrace
 *.qpa
+*-deqp-results.json
 *.build.log
 *-maps.txt
 *-domain.txt
@@ -19,3 +20,6 @@ host-regressions/proposed-u64
 host-regressions/actual-map-accounting
 host-regressions/actual-dmabuf-accounting
 tools/trace_processor_shell
+
+kgsl-lifetime32
+kgsl-lifetime64
