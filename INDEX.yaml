@@ -110,7 +110,7 @@ subsystems:
     - device/xiaomi/alioth
     - frameworks/base
   graphics:
-    title: Graphics experiments and limits
+    title: Adreno graphics, validation and limits
     status: maintained
     memory: memory/gaming-graphics.md
     keywords:
