@@ -82,3 +82,13 @@ Rendering and video checks are scoped, not a zero-jank or all-games guarantee.
 No 240 Hz or speculative panel overclock was accepted.
 The restored `~/references_code/android-t-qcom` and Qualcomm vendor snapshot are
 reference material, not replacement Android 17 framework dependencies.
+
+## Refresh-switch backlog — October 25
+
+A continuous 120→60 Hz test reproduced a persistent UI buffer queue that paused
+or restarted-app tests missed. Alioth now enables Android's existing multi-step
+recovery together with its cumulative-delay threshold. The normal 60 Hz budget
+and published 120 Hz profile are retained. [Source, build, enforcing device tests
+and restoration](../evidence/display-recovery-20261025.md) record the scoped
+acceptance; the tested temporary framework was removed afterward. This addresses
+transition backlog, not a new steady-state 60 Hz latency budget or every game.
