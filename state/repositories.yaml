@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-10-24'
+observed: '2026-10-25'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool sources.
   Source observations are not a flashed release manifest.
 workhub:
@@ -39,14 +39,14 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: c54c45f196ffa37f26a26273a674ed61499fd768
+    aosp-17: 22436519a2ed598ffb7ce519ab72b4726e560c8f
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/c54c45f196ffa37f26a26273a674ed61499fd768
-  observation: 2026-10-24; 120 Hz-only display tuning published after GPU/playback review;
-    vendor properties built; full ROM rebuild remains pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/22436519a2ed598ffb7ce519ab72b4726e560c8f
+  observation: 2026-10-25; bounded UI recovery built and enforcing-device-tested with GPU/video checks;
+    original framework restored after temporary deployment; full ROM rebuild remains pending.
   local_a17:
-    head: 29246bae83f0131cd479d8d6c901f12453905b85
-    reason: ROM base plus recovery overlay and patch-equivalent display tuning
+    head: bc290938fa4d8ce5527c7671e039b0a79dca7d1b
+    reason: ROM base plus recovery overlay and patch-equivalent display fixes
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:

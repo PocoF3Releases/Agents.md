@@ -188,11 +188,15 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 ## V-ADRENO-20261024
 
 **2026-10-24 — source/build/host/device tested.** [GPU](../evidence/adreno-audit-20261024.md):
-68 app checks per ABI × three runs; 633 Khronos cases unchanged (556 pass,
-76 unsupported, one warning, no failures). Counter regressions pass; 64 process
-teardowns end at zero; four display wake cycles pass. Temporary enforcing kernel
-only; original boot restored, partition unchanged. Not full conformance or a release.
+68 app checks/ABI×3; 633 Khronos: 556 pass/76 unsupported/1 warning/0 failures.
+Counter regressions pass; 64 teardowns end at zero; 4 display wakes pass.
+Temporary enforcing kernel; boot restored; partition unchanged.
+Not full conformance/release.
 
 ## V-HARDWARE-20261024
 
 [Device](../evidence/hardware-audit-20261024.md) · [HAL](../evidence/hal-regressions-20261024.md).
+
+## V-DISPLAY-20261025
+
+[Evidence](../evidence/display-recovery-20261025.md).
