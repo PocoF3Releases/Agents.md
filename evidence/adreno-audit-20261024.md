@@ -212,3 +212,40 @@ After checks, the diagnostic app/files were removed and the original installed
 kernel (build 2) restored. Its boot-partition hash still matches the preserved
 pre-test backup; no partition was flashed. A production ROM rebuild is still needed
 to package the three published source commits.
+
+## Installed-stack targeted follow-up
+
+Later on October 24, the currently installed kernel was explicitly identified as
+`b8fc2fc50a5c`, build 2; it was not the source head `d2c680676787`. No kernel boot,
+flash, driver replacement, clock change or thermal bypass was performed. The six
+32/64-bit GLES2/Vulkan/GSL hashes still matched the recorded stock stack. Runtime
+remained Adreno650v3, GLES3.2/V502.0 and Vulkan1.1.128, with SELinux enforcing and
+`msm-adreno-tz` governor.
+
+- Both real app ABIs passed three cold-process runs each: 62 native plus 6 window
+  checks per run. Four additional sleep/wake cycles each passed the same 68 checks
+  in the 32-bit app. This validates successful presentation, not measured display FPS.
+- Concurrent 32/64-bit lifetime probes passed all 64 child teardowns: 32 normal exits
+  and 32 SIGKILLs with live contexts/buffers/fences. Their KGSL per-process sysfs
+  entries were absent afterward. No live global-driver teardown was attempted.
+- Two non-overlapping supplementary Khronos samples executed 708 cases beyond the
+  earlier 633-case set: 590 Pass, 118 NotSupported, zero failures or warnings. The
+  first 384-case sample covers compute, SSBO/images, atomics, synchronization, FBO,
+  geometry/tessellation and Vulkan. An additional 324 Vulkan cases emphasize core
+  compute, shader descriptors, binary synchronization, render passes and layouts.
+  These use checkout case lists/resources; the renderer runs as ordinary shell,
+  separately from app-domain acceptance above.
+
+Unsupported cases remained explicit: timeline/ray-tracing extensions, optional
+integer/storage capabilities, queue-family counts, formats/sample counts and
+memory-type requirements. They were not patched into passes or treated as evidence
+of missing kernel features. No newly captured GPU-related kernel line or changed
+tombstone listing appeared during the workload.
+
+Current source accounting fixtures also passed ASan/UBSan, with their original
+negative-control failures reproduced. This is host evidence for that source, not
+new on-device acceptance of the uninstalled kernel head. The verified diagnostic
+APK and this run's own device files were removed; no production source fix was
+justified by these results. Protected/DRM paths, sustained thermal performance,
+all games and full conformance remain outside this pass. Private case lists,
+reports and traces are retained locally; no proprietary binaries are published.
