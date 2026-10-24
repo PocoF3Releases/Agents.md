@@ -118,7 +118,7 @@ For Virtual A/B clean installs, boot the installed OTA target successfully and c
 
 ## Current source replay
 
-The October 24 source refresh preserves the enhanced native recovery and reapplies
+The October 25 source refresh preserves the enhanced native recovery and reapplies
 its four authored framework/device patches after sync. The apply runner and patch
 series are installed together in the local-manifest directory. Rechecking reports
 zero pending patches. [Source identity and verification](../evidence/source-refresh-20261025.md).
