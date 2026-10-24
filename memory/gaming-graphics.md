@@ -76,9 +76,9 @@ Xiaomi/kernel protection and the normal governor remain enabled.
 ## Display scheduling — October 24
 
 The [Alioth timing audit](../evidence/display-timing-20261024.md) separates native
-60/120 Hz panel support from SurfaceFlinger work budgets. Temporary enforcing
-runtime tests reduced measured scrolling presentation intervals while retaining
-original early/GPU headroom; launcher transitions remain baseline-like and can
-still miss app deadlines. No 240 Hz or speculative panel overclock was accepted.
+60/120 Hz panel support from SurfaceFlinger work budgets. The follow-up retains the original 60 Hz scheduling after GPU stress exposed
+small repeatable differences; only the 120 Hz latency reduction remains.
+Rendering and video checks are scoped, not a zero-jank or all-games guarantee.
+No 240 Hz or speculative panel overclock was accepted.
 The restored `~/references_code/android-t-qcom` and Qualcomm vendor snapshot are
 reference material, not replacement Android 17 framework dependencies.

@@ -39,13 +39,13 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 42d2f3cedcc0acab152dc5f43604711aa058d89c
+    aosp-17: c54c45f196ffa37f26a26273a674ed61499fd768
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/42d2f3cedcc0acab152dc5f43604711aa058d89c
-  observation: 2026-10-24; display scheduling published after enforcing temporary-property tests;
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/c54c45f196ffa37f26a26273a674ed61499fd768
+  observation: 2026-10-24; 120 Hz-only display tuning published after GPU/playback review;
     vendor properties built; full ROM rebuild remains pending.
   local_a17:
-    head: 66d214c0773b47290580a78c655dc78f2ad26ad7
+    head: 29246bae83f0131cd479d8d6c901f12453905b85
     reason: ROM base plus recovery overlay and patch-equivalent display tuning
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
