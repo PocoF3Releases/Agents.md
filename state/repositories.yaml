@@ -39,26 +39,24 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: d30057f2647f26ed455b3a75c006b2e6c0a6180d
+    aosp-17: 8c41b46ac69847a68cbb3717851f3546e8acca39
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/d30057f2647f26ed455b3a75c006b2e6c0a6180d
-  observation: 2026-10-24; selected upstream checked and sources resynced; runtime acceptance remains scoped to
-    its recorded build.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/8c41b46ac69847a68cbb3717851f3546e8acca39
+  observation: 2026-10-24; CamX guard published and temporarily device-tested; production rebuild pending.
   local_a17:
-    head: f40877b71eaad0b046aa21c60366d4e6d7c01699
-    reason: ROM base plus authored recovery patch overlay
+    head: 4896e99ed7f494887fb4aedb93fa13d24226d619
+    reason: ROM base plus authored recovery overlay and patch-equivalent published CamX guard
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 84e02f71aa0eaaccb14c0cd7a987ae3e835525b5
+    aosp-17: a9e382360adc8124f71f96590ff823b1fc688413
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/84e02f71aa0eaaccb14c0cd7a987ae3e835525b5
-  observation: 2026-10-24; selected upstream checked and sources resynced; runtime acceptance remains scoped to
-    its recorded build.
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a9e382360adc8124f71f96590ff823b1fc688413
+  observation: 2026-10-24; matching CamX guard blob published and temporarily device-tested; installed blob restored.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
   role: build_source
   source_tree_paths:
