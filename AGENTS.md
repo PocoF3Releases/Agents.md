@@ -1,6 +1,6 @@
 # Project rules
 
-POCO F3 / alioth, EvolutionX: Android 17; Android 16 evidence is separate.
+POCO F3 / alioth, EvolutionX: Android 17.
 Read [CURRENT_STATE.md](CURRENT_STATE.md), then the relevant topic. For small
 edits, read affected rules/files. Share Astra/Sol records; recover missing context.
 

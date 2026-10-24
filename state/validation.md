@@ -16,15 +16,6 @@ completion tests; current installed identity is unknown. September 30 user
 acceptance remains historical.
 [Exact scope and restoration](../evidence/haptics/2026-10-04.md).
 
-## V-A16
-
-**Reported during September 27 work; no new device test in this documentation update.**
-Maintainer reported clean Android 16 install with Magisk, then audible/clear AC-4
-sample playback. Later explicitly stated A16 had been released; exact newer ZIP,
-date and links remain unknown. Prior boot/rootdir/Bluetooth dependency checks
-were reported, not reproduced here. No Bluetooth audio headset or WFD receiver
-was available; do not certify those paths or transfer A17 camera tests to A16.
-
 ## V-AC4
 
 **2026-09-24 — device-tested and user-confirmed.** Non-root A17 user build;

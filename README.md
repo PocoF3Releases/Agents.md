@@ -1,6 +1,6 @@
 # Alioth development workhub
 
-Portable context for **POCO F3 · Evolution X · Android 17 / Android 16**, shared
+Portable context for **POCO F3 · Evolution X · Android 17**, shared
 by GPT-6 Astra, GPT-6.1 Sol and GPT-5.6 Sol through GitHub or a local checkout.
 
 ## Start a new chat

@@ -101,7 +101,6 @@ subsystems:
     - bluetooth
     - wfd
     - overlay
-    - a16
     - build
     - screen recording
     - font
@@ -136,7 +135,6 @@ subsystems:
     keywords:
     - release
     - changelog
-    - android16
     - android17
     - publication
     - build date
@@ -291,7 +289,6 @@ legacy_routes:
   memory/android-tooling.md: operations/android-tooling.md
   memory/workstation-recovery.md: operations/workstation-recovery.md
   memory/repoindex.md: operations/repoindex.md
-  memory/android16-android17-release-state.md: state/releases.md
   memory/validation.md: state/validation.md
   memory/repositories/TRACKED_HEADS.yaml: state/repositories.yaml
   memory/release-assets.md: operations/release-artwork.md

@@ -24,7 +24,6 @@ Use Android 17 and POCO F3 (alioth); include Redmi K40 / Mi 11X when space allow
 Add version, build date, installation instructions, download/support links only
 from current supplied release details. Do not reuse September 22, v12.2, PayPal
 or clean-install wording merely because it appears in the reference image.
-The former blue/navy Android 16 mountain direction is not this series default.
 
 ## POCO F3 camera geometry — mandatory
 

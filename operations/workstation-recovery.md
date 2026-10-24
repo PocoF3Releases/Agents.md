@@ -76,9 +76,9 @@ repo manifest -o /tmp/evo-manifest.xml
 # Run repo sync only when authorized; choose jobs for available resources.
 ```
 
-Reconcile each necessary override by its existing manifest project name/path using a local manifest; do not add a second project at the same path. Consult the source map for A16/A17 refs, then compare upstream for already merged fixes. Keep `hardware/xiaomi` standalone. Both camera repositories are mandatory device integration. Fetch LFS content for camera/vendor projects and verify real blobs rather than pointer files. Do not clone over a nonempty checkout or use force-sync/reset to hide divergence.
+Reconcile each necessary override by its existing manifest project name/path using a local manifest; do not add a second project at the same path. Consult the source map for Android 17 refs, then compare upstream for already merged fixes. Keep `hardware/xiaomi` standalone. Both camera repositories are mandatory device integration. Fetch LFS content for camera/vendor projects and verify real blobs rather than pointer files. Do not clone over a nonempty checkout or use force-sync/reset to hide divergence.
 
-The active Android 17 checkout moved from `~/evo17` to `~/evo`; determine any Android 16 checkout separately. Do not infer the Android 16 upstream manifest branch from the A17 `cnb` name: restore its saved manifest or verify the current upstream branch. User builds only; no full ROM build is started by this recovery procedure.
+The active Android 17 checkout is `~/evo`; verify its current upstream manifest and local overrides. User builds only; no full ROM build is started by this recovery procedure.
 
 ## Completion checkpoint
 
