@@ -8,9 +8,8 @@ Date source/build/runtime evidence.
 passed 21/21 predefined effect/strength gain checks (48/80/128), three supported
 stock primitives, timed amplitude and cancellation under enforcing SELinux.
 AAC native/limited-HE1 rendering and bounded PCM refills passed isolated tests.
-The candidate was temporarily mounted; original binary/files were restored.
-This is not evidence of a permanently installed latest build or full RichTap.
-App-facing RichTap remains unverified.
+Temporary mount; original files restored.
+No permanent deployment or full RichTap acceptance; app-facing RichTap unverified.
 No PWLE or unsupported primitives advertised. October 8 adds a LOW_TICK light-tick fallback with commit-reported temporary
 completion tests; current installed identity is unknown. September 30 user
 acceptance remains historical.
@@ -153,8 +152,7 @@ Current repairs are V-PBRP-20261009; branch HEAD differs from October 7 assets.
 ## V-SOURCE-20261009
 
 **2026-10-09 — source-checked.** Maintained ROM heads/product integration and
-separate recovery source reviewed; prior recovery-core edits preserved. No new
-build/device test. [Scope](changelog-audit.md).
+separate recovery source reviewed; prior recovery-core edits preserved. No new build/device test. [Scope](changelog-audit.md).
 
 ## V-CHANGELOG
 
@@ -162,7 +160,7 @@ build/device test. [Scope](changelog-audit.md).
 custom ROM inputs reviewed; selected heads matched, tracked trees clean at audit.
 Product/library gates, companion controls and canonical camera APK hash checked.
 Full/short posts fit Telegram limits. [Audit](changelog-audit.md) owns details.
-No new ROM/device test.
+No new device test.
 
 ## V-HBM-RECOVERY
 
@@ -199,4 +197,4 @@ Not full conformance/release.
 
 ## V-DISPLAY-20261025
 
-[Evidence](../evidence/display-recovery-20261025.md).
+[Device evidence](../evidence/display-recovery-20261025.md); [resync/build](../evidence/source-refresh-20261025.md).

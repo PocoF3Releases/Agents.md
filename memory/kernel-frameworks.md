@@ -78,4 +78,4 @@ hardening. Seven affected ARM64 targets passed unsuppressed sparse and W=1;
 regression/sanitizer tests and targeted MMIO code-generation comparisons passed.
 These are component checks, not a newly flashed kernel or full-ROM certification.
 Use the [current source ledger](../state/repositories.yaml) and
-[refresh record](../evidence/source-refresh-20261024.md) for identity and limits.
+[refresh record](../evidence/source-refresh-20261025.md) for identity and limits.

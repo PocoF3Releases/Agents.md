@@ -73,7 +73,7 @@ rebuild is separate from the temporary runtime-property acceptance.
 
 - [Common property selection](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/802d6e421bec85f51727c8b1f6d0a1543f65601e)
   preserves all four original phase values by default.
-- [Alioth work-duration scheduling](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/42d2f3cedcc0acab152dc5f43604711aa058d89c)
+- [Alioth work-duration scheduling](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
   selects the tested budgets. Both are on `aosp-17`; no recovery-only commits
   were pushed to the ROM branches.
 
@@ -154,7 +154,7 @@ as a verified improvement.
 
 ## Final published fix and restoration
 
-[Limit work-duration tuning to 120 Hz](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/c54c45f196ffa37f26a26273a674ed61499fd768)
+[Limit work-duration tuning to 120 Hz](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
 is published on `aosp-17`. The main branch contains only the display fix, without
 local recovery-only commits. The common property-selection commit remains unchanged.
 Both source worktrees are clean and the recovery patch preflight passes.
@@ -178,3 +178,6 @@ AVC 24/30/60 fps and HEVC 60 fps at both 60/120 Hz. Qualcomm hardware decoders
 rendered **2,088 of 2,088 submitted frames**, with EOS, ordered timestamps and no
 decoder error. Original properties/preferences were rechecked after this replay,
 Android was booted/enforcing, and the reinstalled owned APK and traces were removed.
+
+Current link targets consolidate the two original timing commits without changing
+the final tree. Measurements retain their original October 24 scope.
