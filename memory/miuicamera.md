@@ -1,6 +1,8 @@
-# MiuiCamera — finalized
+# MiuiCamera — retained integration
 
-Camera is completed with accepted limits, not paused. No optimization experiment or test campaign is planned; only a new explicit request reopens it.
+The accepted integration and mode limits are retained. The explicit October 24
+hardware recheck added the bounded CamX guard below; it does not reopen speculative
+mode tuning or establish new camera-mode acceptance.
 
 ## Canonical delivery
 
@@ -50,3 +52,20 @@ Universal camera reads cached deviceCodename from
 Download/XiaomiCamera/general_config.json before Build.DEVICE. Stale alioth_global
 can select Common instead of Alioth. Use alioth/aliothin; Aliothin inherits Alioth
 and does not need duplicate shared SAT overrides.
+
+
+## CamX descriptor validation — October 24
+
+A requested hardware audit reproduced a camera-provider crash from generic YUV
+configuration on the private VTCam IDs 6/7. The missing input stream descriptor
+reaches `Session::Initialize`; its partial-init destructor is also unsafe. Reject
+that descriptor before `CHISession::Create` allocates an object. The Alioth extractor
+and paired vendor HAL carry an exact-hash/idempotent guard; valid processing and
+camera IDs are unchanged. Do not replace it with a late initializer return.
+
+[Hardware evidence](../evidence/hardware-audit-20261024.md) records five positive
+YUV/JPEG IDs, 1080p AVC output, MiuiCamera's vendor-session preview and repeated
+malformed-request rejection without provider restart. The negative request remains
+unsupported; do not advertise VTCam compatibility or new 4K/60fps acceptance.
+The test was a temporary enforcing HAL replacement, then the installed blob was
+restored. Public source heads belong to the repository ledger.

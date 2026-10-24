@@ -1,0 +1,9 @@
+*.apk
+*.idsig
+*.o
+*.elf
+*.bin
+*.log
+__pycache__/
+storage-canary
+guard-regression
