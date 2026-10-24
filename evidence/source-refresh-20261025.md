@@ -60,3 +60,25 @@ Explicit expected-head leases protected rewritten branches; backup refs remain.
 No installclean, full-ROM build, flash or new device test was performed.
 [Source ledger](../state/repositories.yaml) separates public tips and local
 recovery overlays. Earlier phone tests retain their original artifact scope.
+
+## Final replay audit
+
+A second source audit compared all 43 checkout forks with saved pre-sync public
+heads and re-read all 44 GitHub branch tips. Unchanged commits remain identical;
+the ten replayed framework/recovery-interface commits retain stable patch IDs,
+authorship, author dates and messages. The separate main ROM audio callback patch
+also retains its original patch ID. The consolidated Alioth final timing tree
+is identical; the common addition contains only the intended five flag-wiring files.
+All four local recovery commits match the SHA-256-checked authored mail patches,
+and idempotent preflight again reports zero pending. Source trees remain clean.
+
+Display changes apply to **normal Android**: the common value set uses the
+`system` container, and generated `android.view.flags.Flags` accessors return true
+for both recovery flags. Alioth's normal generated vendor properties contain the
+120 Hz SurfaceFlinger work durations. Recovery's distinct 120 Hz UI preference
+does not change either system configuration. Common flag files and product wiring
+are identical before/after applying the recovery overlay.
+
+No source corrections or repeated builds were needed after this audit. The
+component passes above remain applicable to unchanged inputs; full production
+ROM packaging and testing of that resulting build remain outstanding.
