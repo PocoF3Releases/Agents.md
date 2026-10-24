@@ -114,6 +114,11 @@ subsystems:
     status: maintained
     memory: memory/gaming-graphics.md
     keywords:
+    - display
+    - refresh
+    - 60hz
+    - 120hz
+    - buffer stuffing
     - gpu
     - vulkan
     - opengl
