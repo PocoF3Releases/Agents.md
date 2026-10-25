@@ -59,6 +59,12 @@ dumps or unrelated client-memory exports. Use `~/` paths. Retain public URLs and
 proprietary-source references; keep raw dumps/videos/logs private and publish only
 necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/PRIVACY.md).
 
+## Internal agents
+
+Use `gpt-6.1-sol` with low reasoning for internal agents, the user's requested
+"GPT 6.1-Sol Light" preference. The available tool exposes no separate Light
+model ID. Retain this setting unless the user explicitly changes it.
+
 ## Local checks
 
 ```bash
