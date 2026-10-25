@@ -21,10 +21,14 @@ permits mounting/relabeling that label but omits unmount. The local common-tree
 fix adds only `allow init vendor_spunvm_file:filesystem unmount;` in
 `sepolicy/vendor/init.te`. The full `selinux_policy` target passed for
 `lineage_alioth-cp2a-user`, including neverallow/context checks; generated vendor
-CIL contains the mapped-init unmount rule. The change is committed locally,
-not deployed or published. It repairs the proven permission gap, not the
-separately observed kernel stall. Keep its eventual publication separate from
-local recovery patches in the common checkout.
+CIL contains the mapped-init unmount rule. Published separately from recovery
+patches as [975316a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/975316a110b9edebee66816fec6a38048846ace7).
+An enforcing A/B/A device probe used the actual init domain and a private mount
+namespace: unmount returned EACCES before the exact live rule, succeeded with it,
+and returned EACCES after rollback. The parent SPU mount remained unchanged.
+A subsequent real restart with that one temporary rule unmounted SPU successfully.
+The installed policy still predates the source fix; the live rule disappeared at
+reboot. This repairs the proven permission gap, not the separate kernel stall.
 
 ## Controlled tests
 
@@ -46,7 +50,7 @@ no driver power-off logic and no thermal/security settings. No kernel image was
 flashed. Loading an external module marks the kernel with the ordinary O taint;
 that diagnostic context must be retained when interpreting future logs.
 
-At this checkpoint `shutdown_diag` is loaded for the current boot only.
+The latest diagnostic restart unloaded `shutdown_diag`; it is not currently loaded.
 `initcall_debug=N`, SELinux remains enforcing, and there is no autoload script or
 persistent Magisk module. The staged file is `/data/local/tmp/shutdown_diag.ko`.
 A reboot/power-off unloads it. Once the hang is captured or this investigation is
@@ -61,3 +65,37 @@ causal test; it must preserve clean filesystem shutdown.
 Private logs, diagnostic module and build receipts are under
 `~/evo/.repo/shutdown-hang-20261025/`. No raw device identifiers or proprietary
 logs are included here. The main failure remains open.
+
+## Rootdir and policy audit
+
+The built five-partition configuration passes host_init_verifier. All 29 common
+rootdir service executables resolve in the product, including Android partition
+symlink aliases. All eight rootdir shell scripts pass device shell syntax checks
+and match installed hashes. Runtime AVCs include optional diagnostics/property
+probes and diagnostic-harness entrypoint/fd failures; those are not grounds for
+blanket permissions. No additional functional SELinux repair is established.
+
+## Perf timer investigation — candidate only
+
+A healthy restart captured firmware, CNSS, NFC, NPU and ESOC notifiers, followed
+by perf_reboot and the final observer. All returned before device_shutdown.
+The failed historical trace has no final marker or task stack, so its precise
+blocking callback remains unproved.
+
+Source review found perf_event_exit_cpu_context calling hrtimer_cancel while
+holding hrtimer_lock, also required by perf_mux_hrtimer_handler. perf_reboot
+tears down remote online CPUs, making a running remote callback relevant. A
+bounded device probe observed an entered callback and try_to_cancel returning
+-1 while that lock was held; cancellation outside the lock completed. It did not
+intentionally deadlock the phone. The first probe used an invalid IRQ-disabled
+IPI context and generated a warning; the corrected probe starts the remote timer
+before taking the lock and completed without that warning. Both were unloaded
+and removed. Keep this harness warning distinct from a production failure.
+
+A local candidate gates timer restart during teardown, cancels outside the lock,
+and clears the gate when the CPU returns online. Normal ARM64 object compilation
+and strict checkpatch pass. W=1 finds three missing-prototype errors also present
+on the unchanged baseline. Sparse reports existing address-space/context issues;
+exit zero is not a clean sparse result. Full image/device acceptance and causal
+attribution to the intermittent shutdown hang remain pending. No kernel fix is
+published or claimed installed.

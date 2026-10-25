@@ -25,13 +25,15 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 0de236a93b3dc7dbb59e16219d234e7141c6bd87
+    aosp-17: 975316a110b9edebee66816fec6a38048846ace7
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/975316a110b9edebee66816fec6a38048846ace7
   observation: 2026-10-25; MiSound EQ encoding fixed and native isolated-session readback
-    verified in evidence/alioth-audio-integration-20261025.md; full installed ROM predates fix.
+    verified in evidence/alioth-audio-integration-20261025.md; SPU unmount fix published
+    and enforcing-tested in evidence/shutdown-investigation-20261025.md; installed ROM
+    predates these source fixes.
   local_a17:
-    head: ad6a2f1c9a3631523edde3509d73457bf268dd96
+    head: f59ca6bca5f838cb0030cd5a4dd96d7ee1625083
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
