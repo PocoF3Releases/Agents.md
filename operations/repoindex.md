@@ -60,7 +60,7 @@ restored database is 2,092,015,616 bytes; compression does not imply missing bod
 The prior deep audit covered every implementation's raw/normalized hash, chunk/DB
 hashes, SQLite/FTS and logical coverage. Other live files use metadata checks.
 
-The standalone repoindex 2.1 suite passes 68 tests, including migrated consumer
+The standalone repoindex 2.1.1 suite passes 81 tests, including migrated consumer
 contracts, bounded output and protected guide updates. The configured 11-case warm
 benchmark passes its 100 ms median budget (observed about 2–13 ms). A source-free
 package check verifies real bundle restoration, body queries and line retrieval.
@@ -69,6 +69,14 @@ See [V-REF-INDEX](../state/validation.md#v-ref-index), the consumer
 [validation](https://github.com/PocoF3Releases/references_code/blob/main/docs/VALIDATION.md)
 and its [evidence directory](https://github.com/PocoF3Releases/references_code/tree/main/evidence).
 Exact current revisions belong in [repositories](../state/repositories.yaml).
+The final review fixed empty API selections, EOF ranges, ignored maintenance
+filters and failed-write/restore cleanup; ready data was not rebuilt.
+An empty lookup is a reason to check spelling, case, scope and language coverage,
+not to run ingestion. The consumer
+[agent guide](https://github.com/PocoF3Releases/references_code/blob/main/AGENTS.md)
+owns the short find → body hit → indexed range workflow. Its explicit
+`python3 scripts/check.py` checks docs/config/chunk sizes without restoration or
+source scans; `--tests` adds disposable tool fixtures. Neither is a startup step.
 
 ## Refresh only after relevant changes
 
