@@ -89,3 +89,9 @@ restart/duplex acceptance. Nonblocking behavior and translation commits are sepa
 The [MiSound recovery audit](../evidence/misound-recovery-20261025.md) records the
 controlled-handover failure and repair, rapid communication start/stop and actual
 earpiece/speaker tests for On, Off and disabled pause. Dolby needed no new fix.
+
+The [control-loss/server-restart follow-up](../evidence/misound-control-restart-20261025.md)
+fixes recovery after prolonged MiSound ownership contention, including initially
+contested startup. Retain the control listener through bounded retries and restore
+saved tuning on regain. Final APK tests cover server restarts and requested Off;
+Dolby needed no additional source change.
