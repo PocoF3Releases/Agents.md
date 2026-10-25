@@ -112,7 +112,8 @@ of temporary deployment remain historical; this is a short installed-build check
 
 The [expanded audit](../evidence/audio-subsystem-followup-20261025.md) records
 473 newly decompiled framework functions, revalidated prebuilt identities and a
-host/build-tested dump-format correction. Final candidate runtime acceptance and
-publication remain pending. Installed tinycompress now matches the accepted
+host/build/device-tested dump-format correction, now published. Enforcing phone
+checks cover recording/encoding, PCM and communication recovery; the original
+audioserver and exact preferences were restored. Installed tinycompress now matches the accepted
 short-read fix; earlier temporary-only notes are historical. Optional DSP hooks
 still require a demonstrated caller and compatible ABI.
