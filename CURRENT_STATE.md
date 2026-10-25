@@ -1,6 +1,6 @@
 # Current state
 
-Checkpoint: **2026-10-25**. [Android 17 status](state/android17-status.md).
+Checkpoint: **2026-10-26**. [Android 17 status](state/android17-status.md).
 
 - **Haptics:** stock-backed HAL/PCM: seven effects, three primitives, LOW_TICK fallback. Installed identity unknown; no full RichTap/PWLE.
 - **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
