@@ -93,7 +93,8 @@ IPI context and generated a warning; the corrected harness starts the remote
 timer before taking the lock and completed without that warning. Both probes
 were unloaded and removed. Keep that harness warning distinct from production.
 
-Published separately on the kernel aosp-17 branch:
+The first published stack (subsequently replaced by the upstream imports linked
+below) contained:
 
 - [Timer teardown](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d9a0bc96e102aab71f01e277d856f72a871ea966):
   gate timer rearming before cancelling outside the callback lock. Reset the
@@ -140,5 +141,6 @@ capture; do not close this report from successful shutdowns alone.
 ## Upstream substitution audit
 
 [Human-authored counterparts, tested replacement scope and remaining local
-provenance](shutdown-upstream-review-20261025.md). The prepared replacement series
-is local only; the published source and prior phone acceptance remain unchanged.
+provenance](shutdown-upstream-review-20261025.md). The replacement series is now
+applied, independently retested on the phone and published. That record owns the
+current source links and new acceptance; the earlier checks above are historical.
