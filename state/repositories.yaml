@@ -259,10 +259,10 @@ repositories:
   - external/tinycompress
   selected_ref: lineage-24.0
   refs:
-    lineage-24.0: eacefe332464fbb2f55f12d70b2e60fb244e05ca
+    lineage-24.0: 6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9
   local_a17: matches_selected_ref
   commit_links:
-    lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/eacefe332464fbb2f55f12d70b2e60fb244e05ca
+    lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
 - repository: https://github.com/pbrp-alioth/android_bootable_recovery
