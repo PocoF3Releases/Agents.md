@@ -1,0 +1,59 @@
+Create a substantially improved new release poster, landscape 16:9, high resolution 2560x1440, with a NEW spectacular environment and six feature cards. This is NOT a minor edit of the background.
+
+REFERENCE ROLES:
+Image 1 (latest October 25 three-strip banner): use ONLY the two black POCO F3 phones as the hardware identity reference. Keep those devices, same realistic black material, exact rear camera/microphone geometry, same front punch-hole and the same front/rear orientations. You may scale/move the pair as a unit into left 31% of composition. Do not reuse its environment, three-strip layout, refresh-rate card or old text.
+Image 2 (initial-release six-card sample): use ONLY the 2-column x 3-row information-card layout and its visual hierarchy. Do not use its phones, environment, initial-build text, or any old feature content.
+
+NEW ENVIRONMENT:
+Original cinematic brutalist sci-fi industrial megacity, inspired by the architectural scale and layered infrastructure of Arknights/Endfield environment art. Dramatically different from the old gothic castle skyline: gigantic angular concrete-and-steel arcologies, suspended transit viaducts spanning a vast urban canyon, a distant industrial harbor, high gantries, monumental geometric architecture. Strong diagonal leading lines, deep perspective, multiple layers of atmospheric fog, pale storm light breaking behind the architecture, precise crimson warning lights and red illuminated infrastructure, wet black foreground reflecting sparse red lights. Beautiful believable architectural detail and atmospheric depth, premium cinematic lighting. Strict black / charcoal / crimson / silver-white palette. No orange, blue, purple neon, no characters, no visual clutter. Put the preserved phone pair on the foreground platform on the left; their front screen wallpaper shows this NEW environment, not the old castle. Rear camera island stays exact to image1: THREE optical cameras (large top, small middle-left, bottom), plus the middle-right rimmed microphone with a dark non-glass center, separate elongated flash on outer right strip. Never turn microphone into fourth glossy lens.
+
+DESIGN:
+Phones take roughly 31% width. Strong polished Evolution X wordmark in white with red X above the cards, on upper right. Elegant device/date metadata below. Six equal-size cards arranged two columns x three rows, covering the right 65% lower area. Generous internal spacing; crisp chamfered corners; dark nearly opaque interiors for text contrast; thin controlled crimson edges, subtle red corner accents, NO thick neon glow. Each card has one consistent red line icon in a small hexagonal frame, bold white title and three concise white bullet lines. Sharp readable typography, orderly alignment, excellent readability when viewed as a Telegram image. No tiny paragraphs. This should feel like a premium finished release poster, not an infographic template pasted over noisy scenery.
+
+EXACT HEADER:
+EVOLUTION X
+POCO F3
+Android 17 · v12.3 · 25 OCT 2026
+
+EXACT CARD TEXT, row-by-row:
+Top left:
+DOLBY & MiSound
+• Native Qualcomm game audio
+• Automatic effect recovery
+• Saved settings retained
+
+Top right:
+RECORDING
+• Interrupted-read recovery
+• Restored audio-zoom data
+• Legacy audio compatibility
+
+Middle left:
+PERSONALIZATION
+• Triple-tap freeform gesture
+• New lockscreen options
+• Now Playing saved songs
+
+Middle right:
+INTERFACE
+• Updated App Lock controls
+• Font & emoji fallback fixes
+• Lockscreen media fixes
+
+Bottom left:
+DEVICE CONTROLS
+• Thermal status & retry
+• NFC settings page fix
+• Fingerprint removal fix
+
+Bottom right:
+KERNEL & STABILITY
+• Zstd 1.5.7 & zRAM fixes
+• Bluetooth & USB hardening
+• Storage & camera safeguards
+
+FOOTER:
+alioth · Redmi K40 · Mi 11X
+
+Icons respectively: waveform/speaker, microphone, floating app window, interface sliders, gear/check, microchip. Maintain consistent icon size and stroke weight.
+ABSOLUTE EXCLUSIONS: no Hz or refresh-rate text anywhere; no 60/120/240 labels; no Initial build; no 20 OCT date; no new camera-mode, AC-4, haptics, WireGuard, native-recovery or Wi-Fi startup highlights from older releases. No payment guarantee, FPS/battery claims, added logos, watermarks or other text. Keep spelling exact, especially MiSound, Qualcomm, Zstd and zRAM.

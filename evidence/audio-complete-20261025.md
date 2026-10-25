@@ -44,7 +44,9 @@ targeted primary-HAL voice/recording/audiozoom routines were newly decompiled.
 
 ARM Thumb context was corrected from ELF function metadata before analysis.
 This recovered previously truncated MiSound scene and audio-cloud mutation bodies.
-The initial pass identified 21,387 functions and produced 21,380 bodies. Targeted\nretries recovered two more; five remain unresolved/timed out.\nGhidra completion is not semantic proof: timeouts, bad-instruction bodies,
+The initial pass identified 21,387 functions and produced 21,380 bodies. Targeted
+retries recovered two more; five remain unresolved/timed out.
+Ghidra completion is not semantic proof: timeouts, bad-instruction bodies,
 unresolved indirect calls and private ABI uncertainty remain explicitly recorded.
 Calibration and firmware data are inventoried rather than falsely disassembled
 as ARM code. The sanitized [coverage index](audio-prebuilt-coverage-20261025.json)
@@ -78,7 +80,9 @@ vendor inputs. On the phone, isolated 32-bit initialization returned 116 without
 the file and zero with it. The file is unchanged, SHA-256:
 5493b05bf10d5f768a1511e521a9d69820d4c592953562d7901b948cb3cbad5a.
 
-[Vendor payload](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/3b312ac9d0a32daaff6785ee45d9f3a3715475f7) and\n[extraction entry](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/d6c19893590c1004e0a579c0ca9182b2ef2594c3)\nadd only this stock payload, its extraction entry and the generated
+[Vendor payload](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/3b312ac9d0a32daaff6785ee45d9f3a3715475f7) and
+[extraction entry](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/d6c19893590c1004e0a579c0ca9182b2ef2594c3)
+add only this stock payload, its extraction entry and the generated
 copy rule. No flags, gains, calibration values, UI or new consumer are enabled.
 An independent sweep of 845 shipped vendor ELFs found only the 32-bit primary HAL
 referencing FCSAM; no 64-bit caller was identified. A synthetic direct 64-bit probe
