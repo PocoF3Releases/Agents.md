@@ -83,8 +83,8 @@ Use the [current source ledger](../state/repositories.yaml) and
 ## Intermittent shutdown investigation
 
 The [October 25 record](../evidence/shutdown-investigation-20261025.md) preserves
-a kernel-stage restart stall, three successful Power off tests and a separate
-published, enforcing-tested SPU unmount-policy fix. The hang is unresolved. A
-perf timer locking candidate is under investigation; the temporary observer is
-currently unloaded. Scope and capture steps are in the record. No installed
-production-policy or kernel-hang repair is claimed.
+a kernel-stage restart stall and published SPU unmount/perf timer repairs.
+The intermittent report remains open. Perf W=1/sparse and targeted enforcing
+phone checks pass; kernel/source identities, review limits and temporary boot
+restoration are in the record. The original-kernel observer and narrow SPU live
+rule are armed only for the current boot, with no persistent autoload.

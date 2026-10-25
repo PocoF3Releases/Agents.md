@@ -1,7 +1,5 @@
 # Validation register
 
-Date source/build/runtime evidence.
-
 ## V-HAPTICS
 
 **2026-10-04 — source/build/host/device-tested, scoped.** That HAL candidate
@@ -206,3 +204,7 @@ Not full conformance/release.
 ## V-TURNIP-20261025
 
 [Bounded build/device tests; cancelled, stock restored; no production acceptance](../evidence/turnip-evaluation-20261025.md).
+
+## V-SHUTDOWN-20261025
+
+[Evidence](../evidence/shutdown-investigation-20261025.md).
