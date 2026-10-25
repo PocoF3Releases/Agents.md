@@ -57,3 +57,10 @@ cross-repository grouping: [audit](../state/changelog-audit.md).
 ## Legacy output callback ABI
 
 Stock primary C device API3.0 does not guarantee newer stream callback slots. Guard them before reading private state; HIDL version upgrades do not repair the backend ABI. [Targeted fixes and validation](../evidence/hal-regressions-20261024.md) retain HAL6.0 and stock processing.
+
+## Alioth native game-audio backend audit
+
+The [October 25 audit](../evidence/dolby-backend-20261025.md) separates the shipped
+Qualcomm switch/package protocol from the unrelated FPSOP controls, records
+existing mixer/calibration coverage and tracks app-domain validation/restoration.
+A native control ACK is not audible processing or complete gameplay acceptance.
