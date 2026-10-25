@@ -18,6 +18,12 @@ read_order:
   offload_or_write:
   - operations/maintenance.md
 subsystems:
+  inventory:
+    title: Alioth and SM8250 subsystem inventory
+    status: maintained
+    memory: memory/alioth-subsystems.md
+    keywords: [inventory, subsystem, hardware, hal, component, sensor, sku]
+    source_paths: [device/xiaomi/alioth, device/xiaomi/sm8250-common]
   evox_recovery:
     title: Native Android 17 recovery
     status: maintained

@@ -2,12 +2,12 @@
 
 Checkpoint: **2026-10-25**. [Android 17 status](state/android17-status.md).
 
-- **Haptics:** stock-backed HAL/PCM with seven effects, three stock primitives and LOW_TICK fallback. Temporary tests are scoped; current installed identity unknown. No full RichTap/PWLE.
-- **Native recovery:** A17 no-wipe OTA, PIN unlock and signed storage ZIP checks passed. Secure recovery restored; scrolling improved. Password/Weaver remain unverified. [Scope](memory/evox-recovery.md).
+- **Haptics:** stock-backed HAL/PCM: seven effects, three primitives, LOW_TICK fallback. Installed identity unknown; no full RichTap/PWLE.
+- **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Validated scope](memory/gaming-graphics.md).
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
-- **Sources:** 43 maintained build repositories refreshed; all four native-recovery patches reapplied. [Refresh scope](evidence/source-refresh-20261025.md). No new device acceptance.
+- **Sources:** 43 repos refreshed; four recovery patches reapplied. [Scope](evidence/source-refresh-20261025.md); no new device acceptance.
 - **Releases:** October 20 publication confirmed; next-update history is prepared without generating copy. [Releases](state/releases.md).
 
 | Task | Read |
@@ -20,6 +20,7 @@ Checkpoint: **2026-10-25**. [Android 17 status](state/android17-status.md).
 | Camera | [Camera](memory/miuicamera.md) |
 | Parts / touch / proximity | [Device UX](memory/xiaomiparts-device-ux.md) |
 | Kernel / rootdir | [Platform](memory/kernel-frameworks.md) |
+| Hardware inventory | [Subsystem map](memory/alioth-subsystems.md) |
 | GPU / games / frame generation | [Graphics](memory/gaming-graphics.md) |
 | Changelog / builds | [Releases](state/releases.md) |
 | First chat / install skill | [Onboarding](operations/first-chat.md) |

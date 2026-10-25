@@ -16,6 +16,7 @@ recover missing context.
   reopen only on request.
 - Separate source/build/runtime/user evidence; heads are not flashed manifests.
   Verify mutable facts. Repeat checks only for changes, failures or open concerns.
+- Capture/pull a fresh uniquely named device screenshot before inspecting it.
 - Report concise results/limits; claim no unverified access, tests, performance
   or account-memory synchronization.
 - Source/RE: [ready indexes](operations/repoindex.md), both by default;
