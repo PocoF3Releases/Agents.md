@@ -40,7 +40,8 @@ existing idempotent start guards prevent duplicate observer registration.
 
 Changed Kotlin/Compose compilation, the complete XiaomiDolby APK build, native
 protocol/capability host regressions and property_info_checker against the
-production policy passed. The candidate and installed APK signing certificates
+production policy passed. The vendor/build.prop target also built successfully
+and contains exactly one alioth-qdsp backend selector. The candidate and installed APK signing certificates
 match. Existing system_app vendor-audio property read access covers state checks;
 no permissive policy or broad new allow rule is added.
 
