@@ -101,3 +101,8 @@ MiSound recovery with an identical final tree and fresh phone acceptance. It
 indexes audio plugin/codec/DSP coverage and restores the exact stock FCSAM
 parameter file after isolated 32-bit initialization reproduced the missing-file
 failure. Private ABI and firmware/tuning limitations remain explicit.
+
+The [installed-rebuild smoke test](../evidence/release-smoke-20261025.md) confirms
+the accepted Parts/Dolby APK hashes and FCSAM payload on the newly installed ROM,
+with preserved saved Off state and communication/route checks. Earlier records
+of temporary deployment remain historical; this is a short installed-build check.
