@@ -52,7 +52,10 @@ reads. Final the historical candidate terminates on backend EOF and clears poll 
 links libtinycompress. Recorded host sanitizer and ARM/ARM64 executable/compiler
 checks passed; that earlier check did not establish installed inclusion. The
 [October 25 recording audit](../evidence/recording-voice-20261025.md) now confirms
-installed/build library hash equality. This is not proof
+the original installed/build library match. A later
+[short-read recovery fix](../evidence/voice-message-recovery-20261025.md) was
+temporarily tested and the original phone libraries restored; the new build
+artifact requires a ROM rebuild. This is not proof
 all Telegram/WhatsApp voice-message failures are fixed. Source identity and
 cross-repository grouping: [audit](../state/changelog-audit.md).
 
@@ -77,3 +80,8 @@ hooks and VQE presence do not authorize global activation.
 The [recording/voice audit](../evidence/recording-voice-20261025.md) confirms
 native AEC/NS and PCM VoIP integration, targeted recording/duplex phone results
 and the separate translation-resource history. No further DSP opt-in was justified.
+
+The [voice-message/VoIP recovery audit](../evidence/voice-message-recovery-20261025.md)
+records a reproduced compressed-capture short-read errno/stale-tail defect, its
+standalone tinycompress fix, host/native shared-library regressions and codec/
+restart/duplex acceptance. Nonblocking behavior and translation commits are separate.
