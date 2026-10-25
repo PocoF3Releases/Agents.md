@@ -79,3 +79,11 @@ regression/sanitizer tests and targeted MMIO code-generation comparisons passed.
 These are component checks, not a newly flashed kernel or full-ROM certification.
 Use the [current source ledger](../state/repositories.yaml) and
 [refresh record](../evidence/source-refresh-20261025.md) for identity and limits.
+
+## Intermittent shutdown investigation
+
+The [October 25 record](../evidence/shutdown-investigation-20261025.md) preserves
+a kernel-stage restart stall, three successful Power off tests and a separate
+local SPU unmount-policy fix. The hang is unresolved. A current-boot-only
+`shutdown_diag` module is loaded; its scope, cleanup and capture steps are in
+the record. No permanent kernel fix or installed-policy acceptance is claimed.
