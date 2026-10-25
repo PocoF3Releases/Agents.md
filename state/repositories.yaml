@@ -79,13 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: ee8cd976d579ef5ee8c01899c155a96cf5fee9b0
+    aosp-17: b544d9ee5fe23943f5e54ceeed33153627261968
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ee8cd976d579ef5ee8c01899c155a96cf5fee9b0
-  observation: 2026-10-26; human upstream replacements published; enabled perf objects
-    pass W=1/sparse, Image build and targeted temporary-boot checks pass in
-    evidence/shutdown-investigation-20261025.md; installed boot restored, hang report open.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b544d9ee5fe23943f5e54ceeed33153627261968
+  observation: 2026-10-26; five configured-kernel audit repairs published; normal Image
+    and targeted phone checks pass in evidence/kernel-subsystem-audit-20261026.md.
+    Full W=1/C=2 tree still fails on other diagnostics; installed boot restored,
+    intermittent shutdown report open.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
