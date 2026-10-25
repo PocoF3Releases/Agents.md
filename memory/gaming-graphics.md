@@ -93,3 +93,17 @@ and published 120 Hz profile are retained. [Source, build, enforcing device test
 and restoration](../evidence/display-recovery-20261025.md) record the scoped
 acceptance; the tested temporary framework was removed afterward. This addresses
 transition backlog, not a new steady-state 60 Hz latency budget or every game.
+
+## Cancelled Turnip evaluation — October 25
+
+The newly authorized stable Mesa KGSL experiment did load Turnip in Endfield,
+unlike the older package-opt-in attempt. Targeted ABI/LRZ checks passed, but game
+frame delivery was substantially slower in the observed captures. Stock scene
+loading reproduced 163 page faults; the available Turnip captures do not prove
+a general fault cure. [Exact tests, limits and restoration](../evidence/turnip-evaluation-20261025.md).
+
+The maintainer cancelled Turnip. Both stock Vulkan hashes and the empty temporary
+autotune property were verified restored; final SELinux was enforcing. No ROM
+driver/policy change or production fix was pushed. Do not restart Turnip or repeat
+the declined OnePlus donor test without a new request. Adreno 650 is Mesa gen3,
+not pre-gen3; do not force another GPU's LRZ profile.

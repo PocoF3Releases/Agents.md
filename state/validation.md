@@ -8,11 +8,9 @@ Date source/build/runtime evidence.
 passed 21/21 predefined effect/strength gain checks (48/80/128), three supported
 stock primitives, timed amplitude and cancellation under enforcing SELinux.
 AAC native/limited-HE1 rendering and bounded PCM refills passed isolated tests.
-Temporary mount; original files restored.
-No permanent deployment or full RichTap acceptance; app-facing RichTap unverified.
-No PWLE or unsupported primitives advertised. October 8 adds a LOW_TICK light-tick fallback with commit-reported temporary
-completion tests; current installed identity is unknown. September 30 user
-acceptance remains historical.
+Temporary mount restored; no permanent/full RichTap acceptance; app-facing RichTap unverified.
+No PWLE/unsupported primitives. October 8 LOW_TICK fallback has commit-reported
+temporary tests; installed identity is unknown. September 30 user acceptance is historical.
 [Exact scope and restoration](../evidence/haptics/2026-10-04.md).
 
 ## V-AC4
@@ -42,10 +40,9 @@ turns. Dolby README [3b8b33e](https://github.com/PocoF3Releases/hardware_xiaomi/
 
 ## V-TOUCH
 
-**September 28 recorded source/host checks.** Common the recorded candidate, the recorded candidate,
-the recorded candidate, the recorded candidate, the recorded candidate add supported touch controls/translations and
-harden Parts hardware writes/lifecycle. Blob/kernel support inspected and
-host/resource checks passed; not full new-UI A17 acceptance. [Scope](../memory/xiaomiparts-device-ux.md).
+**September 28 — recorded source/host checks.** Supported touch controls,
+translations, hardware-write/lifecycle guards and blob/kernel inspection passed
+scoped checks; not full A17 UI acceptance. [Scope](../memory/xiaomiparts-device-ux.md).
 
 ## V-PROXIMITY
 
@@ -74,7 +71,7 @@ no ROM build/flash, settings restored, installed CHI hash unchanged.
 Clips are `VID_20260923_*`; decode passed. Final transitions restored 1x;
 inspected frames lacked stripes, with no new Java/native or DSX10/MNDS failure.
 Earlier CHIEISV3 logging remained. Short clips do not prove long-run thermals
-or all features. [Full results](../memory/miuicamera.md).
+or all features.
 
 ## V-NFC
 
@@ -202,3 +199,11 @@ Not full conformance/release.
 ## V-DISPLAY-20261025
 
 [Device evidence](../evidence/display-recovery-20261025.md); [resync/build](../evidence/source-refresh-20261025.md).
+
+## V-SUBSYSTEM-INVENTORY-20261025
+
+[Source/build inventory; scoped device observations](../evidence/subsystem-inventory-20261025.md).
+
+## V-TURNIP-20261025
+
+[Bounded build/device tests; cancelled, stock restored; no production acceptance](../evidence/turnip-evaluation-20261025.md).
