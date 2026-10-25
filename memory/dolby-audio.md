@@ -66,3 +66,8 @@ existing mixer/calibration coverage and records final qcom-qdsp APK phone
 acceptance: three on/off cycles, active/inactive process restart, silent game/media
 PCM playback and complete temporary-overlay restoration with SELinux enforcing.
 A native control ACK is not audible processing or complete gameplay acceptance.
+
+The [expanded audio/Parts audit](../evidence/alioth-audio-integration-20261025.md)
+records the native MiSound EQ C-string contract, immediate game communication
+bypass, native readback tests and consolidated commits. Existing karaoke/voice
+hooks and VQE presence do not authorize global activation.
