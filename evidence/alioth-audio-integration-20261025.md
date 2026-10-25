@@ -86,3 +86,24 @@ backend/lifecycle changes and the Parts transport fix, with no actionable findin
 This was static review, not an additional build or device test. Recovery patch
 preflight reports zero pending patches for frameworks/base and both Xiaomi device
 trees after consolidation.
+
+## Consolidation preservation recheck
+
+Two further independent GPT-6.1-Sol agents using low reasoning reviewed Dolby
+and MiSound separately. Neither reported an actionable finding. Mechanical
+comparison against saved pre-consolidation heads confirms:
+
+- hardware/xiaomi differs only by the 16 added communication/route safety lines
+  in GameEffectController; profiles, presets, reset actions, EQ, speaker tuning,
+  tile, UI/icons and saved settings are preserved.
+- The public MiSound fix changes only EQ string termination; preference migration,
+  seven saved bands mapped to ten native writes, scenes, headset selection,
+  enable/pause handling, Hi-Fi gating and approved UI remain unchanged.
+- The consolidated Alioth selector has an identical tree to its previous public
+  head. Recovery changes remain outside the public audio commits.
+- All three public heads match their recorded identities and local source trees
+  are clean. Recovery preflight again reports zero pending patches.
+
+No source correction or additional history rewrite was required. These were
+source-preservation checks and independent static reviews; no new build or phone
+operation was performed, and the earlier runtime/endpoint limits still apply.
