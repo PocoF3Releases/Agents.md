@@ -65,9 +65,9 @@ full ROM predates these fixes; a new incremental ROM build is required.
 
 ## Published source
 
-- [Native Alioth transport](https://github.com/PocoF3Releases/hardware_xiaomi/commit/8195f7379646fa554fb2059897663db2583a0f99).
-- [Persistent owner initialization](https://github.com/PocoF3Releases/hardware_xiaomi/commit/ba2cd983e2af1f524aa62e926d40fdef4b9b65e6).
-- [Alioth backend selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/6e6eb8c97475aea4d94912b5640456a2192823b3).
+- [Native Alioth transport](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6ea372a7ac473bcf96aede8b1fe8fd22446423c1).
+- [Persistent owner initialization](https://github.com/PocoF3Releases/hardware_xiaomi/commit/628f5eff494edad989bfebc73ce8c6ba8d3ddf2a).
+- [Alioth backend selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025).
 
 Runtime acceptance used the built APK from these source trees through a temporary
 Magisk overlay, not a full OTA. Recovery overlays remain separate from ROM public
@@ -96,12 +96,12 @@ The final XiaomiDolby APK and vendor/build.prop incremental build passes; the
 generated selector is exactly `qcom-qdsp`. No full ROM or new phone deployment
 was performed for this cleanup. Final public heads:
 
-- [Qualcomm cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/25a1e35be9ce87196f26d11db93b9222cc0b69cc).
-- [Matching product selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/488009ad6e8108ecee8cb6c103ceba6e8f08931a).
+- [Qualcomm cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/628f5eff494edad989bfebc73ce8c6ba8d3ddf2a).
+- [Matching product selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025).
 
 ## Final Qualcomm APK phone acceptance
 
-The final APK built from hardware_xiaomi 25a1e35be9ce87196f26d11db93b9222cc0b69cc
+The pre-consolidation Qualcomm APK snapshot
 was tested through a temporary Magisk overlay with the qcom-qdsp selector.
 APK SHA-256: `3861022c49d4e4ec1f4f3f49768e1893471d1b1330415bbc034ff6779c78199c`.
 Package inspection confirmed DolbyApplication, UID 1000 and system_app; SELinux
@@ -134,3 +134,8 @@ remained Enforcing. No production source correction was needed.
 This establishes playback/control/lifecycle smoke acceptance of the final APK,
 not subjective listening quality, physical Bluetooth/wired/USB endpoint coverage,
 all games or a full OTA. Permanent inclusion still needs the next ROM build.
+
+The [expanded audio audit](alioth-audio-integration-20261025.md) owns the final
+consolidated source identities, additional communication bypass and Parts EQ fixes,
+and their subsequent phone acceptance. Earlier APK hashes above identify earlier
+tested artifacts, not the new build.

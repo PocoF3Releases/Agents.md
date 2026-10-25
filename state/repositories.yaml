@@ -25,13 +25,13 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 0c2346d1bf9522de2aa4cc292c12185667ef968d
+    aosp-17: 58cf1a749473496bc4130d0bdc68016dfe5f1d5f
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0c2346d1bf9522de2aa4cc292c12185667ef968d
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/58cf1a749473496bc4130d0bdc68016dfe5f1d5f
+  observation: 2026-10-25; MiSound EQ encoding fixed and native isolated-session readback
+    verified in evidence/alioth-audio-integration-20261025.md; full installed ROM predates fix.
   local_a17:
-    head: 76a4759e0f4daf10cf260117f17d18c102d35f54
+    head: d9d2f26c38e86f988b3afcf7a1791cf8a28885a8
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
@@ -39,13 +39,13 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 488009ad6e8108ecee8cb6c103ceba6e8f08931a
+    aosp-17: 44c50c27882a1324a9bf06910d038d5fbca91025
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/488009ad6e8108ecee8cb6c103ceba6e8f08931a
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025
   observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
     in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
   local_a17:
-    head: 5e36abda7dc0e0a28b5a7292a9a95a95631936ba
+    head: 4a63871bd98b286ff6eb5b58715875813d567112
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -130,10 +130,10 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 25a1e35be9ce87196f26d11db93b9222cc0b69cc
+    cnb: 628f5eff494edad989bfebc73ce8c6ba8d3ddf2a
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/25a1e35be9ce87196f26d11db93b9222cc0b69cc
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/628f5eff494edad989bfebc73ce8c6ba8d3ddf2a
   observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
     in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
