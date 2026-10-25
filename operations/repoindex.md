@@ -9,8 +9,9 @@ a deep audit at chat startup. This snapshot is separate from active `~/evo`.
 ## Use the ready checkout
 
 ```bash
-git clone --single-branch --branch main https://github.com/PocoF3Releases/references_code.git ~/references_code
+git clone --filter=blob:none --sparse --single-branch --branch main https://github.com/PocoF3Releases/references_code.git ~/references_code
 cd ~/references_code
+git sparse-checkout set tools/repoindex index docs evidence scripts
 python3 tools/repoindex workspace status
 python3 tools/repoindex workspace scopes
 python3 tools/repoindex workspace files '*AudioFlinger*' --limit 10
@@ -20,9 +21,9 @@ python3 tools/repoindex workspace source LA.UM.8.12.r1-11900-sm8250.0/camx/src/h
 ```
 
 Skip cloning when the checkout exists; preserve local modifications. Source trees,
-tool and chunks are ordinary Git files: no submodules or LFS. Index-only sparse
-checkouts are supported; see the search guide rather than downloading sources
-solely to query them. First indexed use verifies/restores local SQLite caches
+tool and chunks are ordinary Git files: no submodules or LFS. The default recipe
+is index-only: do not download source folders solely to query them. No pip install, virtual environment or setup script is required. Root configuration
+is already tracked and included by cone-mode sparse checkout. First indexed use verifies/restores local SQLite caches
 without parsing sources or calling a service. Warm queries reuse these caches.
 A cold cache is normal. `status` shows saved provenance and cache readiness,
 not a live freshness check.
@@ -68,6 +69,10 @@ These are host observations, not future speed/freshness or build/device guarante
 See [V-REF-INDEX](../state/validation.md#v-ref-index), the consumer
 [validation](https://github.com/PocoF3Releases/references_code/blob/main/docs/VALIDATION.md)
 and its [evidence directory](https://github.com/PocoF3Releases/references_code/tree/main/evidence).
+A real GitHub index-only clone passed 29 acceptance checks and all 81 synthetic
+tests in an empty no-pip environment. Its first ordinary search restored both
+caches, and guarded API queries required no network, subprocess or ingestion.
+[Fresh-clone evidence](https://github.com/PocoF3Releases/references_code/blob/main/evidence/fresh-clone.json).
 Exact current revisions belong in [repositories](../state/repositories.yaml).
 The final review fixed empty API selections, EOF ranges, ignored maintenance
 filters and failed-write/restore cleanup; ready data was not rebuilt.
