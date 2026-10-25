@@ -72,3 +72,29 @@ full ROM predates these fixes; a new incremental ROM build is required.
 Runtime acceptance used the built APK from these source trees through a temporary
 Magisk overlay, not a full OTA. Recovery overlays remain separate from ROM public
 commits. Private native dumps and test fixtures are not published.
+
+## Final Qualcomm naming and cleanup review
+
+The shared backend is named `qcom-qdsp` / `QcomGameEffect`; the exact property
+enum and device selector change together. Only the verified product opts in;
+Qualcomm naming is not a claim that every Qualcomm HAL implements this ABI.
+The native wire commands, route allowlist, OEM calibration, saved preferences,
+Dolby profiles, equalizer controls and persistent-process initialization remain.
+
+A communication-state callback failure now schedules immediate reconciliation;
+the existing fail-closed live query clears game processing if querying still
+fails. Reconciliation also reuses package validation. The unused old
+Alioth/FPSOP summary is removed from 79 default/localized resource entries;
+the visible compact summary and approved icons are unchanged.
+
+Production helper/capability host regressions, resource XML parsing and the exact
+property-context policy check pass. Earlier enforcing phone acceptance above
+covers the unchanged native commands; this review does not claim a fresh phone
+installation or fault-injection test of callback query failure.
+
+The final XiaomiDolby APK and vendor/build.prop incremental build passes; the
+generated selector is exactly `qcom-qdsp`. No full ROM or new phone deployment
+was performed for this cleanup. Final public heads:
+
+- [Qualcomm cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/25a1e35be9ce87196f26d11db93b9222cc0b69cc).
+- [Matching product selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/488009ad6e8108ecee8cb6c103ceba6e8f08931a).
