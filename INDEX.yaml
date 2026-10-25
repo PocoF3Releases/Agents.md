@@ -205,6 +205,9 @@ subsystems:
     - LA.UM.8.12.r1-11900-sm8250.0
     - trigram
     - no rebuild
+    - function body
+    - function bodies
+    - implementation
   artwork:
     title: Release banners
     status: maintained

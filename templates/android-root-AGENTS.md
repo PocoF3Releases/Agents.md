@@ -13,6 +13,7 @@ For historical Android/Qualcomm reference searches, use the ready bundles in
 `~/references_code` and its `scripts/refsearch.py`: both trees by default, or
 `--tree`/`--scope` with bounded output. Restore the cache automatically; do not
 reindex at chat startup. See the workhub's `operations/repoindex.md`.
-Use rg for a known live component or implementation text. The full generated census is optional reference,
+`impl` searches stored .cpp/.cc bodies; `source` reads bounded indexed ranges.
+Use rg for live edits, regex or other languages. The full generated census is optional reference,
 not startup instructions; regenerate to INDEX_GUIDE.md or STRUCTURE.md, never over
 curated AGENTS.md. Follow target-repository instructions when editing its files.
