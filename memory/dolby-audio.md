@@ -62,5 +62,7 @@ Stock primary C device API3.0 does not guarantee newer stream callback slots. Gu
 
 The [October 25 audit](../evidence/dolby-backend-20261025.md) separates the shipped
 Qualcomm switch/package protocol from the unrelated FPSOP controls, records
-existing mixer/calibration coverage and tracks app-domain validation/restoration.
+existing mixer/calibration coverage and records final qcom-qdsp APK phone
+acceptance: three on/off cycles, active/inactive process restart, silent game/media
+PCM playback and complete temporary-overlay restoration with SELinux enforcing.
 A native control ACK is not audible processing or complete gameplay acceptance.

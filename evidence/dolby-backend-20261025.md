@@ -98,3 +98,39 @@ was performed for this cleanup. Final public heads:
 
 - [Qualcomm cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/25a1e35be9ce87196f26d11db93b9222cc0b69cc).
 - [Matching product selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/488009ad6e8108ecee8cb6c103ceba6e8f08931a).
+
+## Final Qualcomm APK phone acceptance
+
+The final APK built from hardware_xiaomi 25a1e35be9ce87196f26d11db93b9222cc0b69cc
+was tested through a temporary Magisk overlay with the qcom-qdsp selector.
+APK SHA-256: `3861022c49d4e4ec1f4f3f49768e1893471d1b1330415bbc034ff6779c78199c`.
+Package inspection confirmed DolbyApplication, UID 1000 and system_app; SELinux
+remained Enforcing. No permissive policy or production preference change was used.
+
+- Three selected-foreground/Home cycles acknowledged true/on then false/off.
+- A forced persistent-process restart while active recreated Dolby and restored
+  true/on without opening Dolby settings or sending a boot broadcast.
+- A second restart on Home recreated Dolby and retained false/off.
+- Four silent 48 kHz stereo PCM game-usage runs passed before, during and after
+  switching/restart, each rendering 180480 frames with zero underruns.
+- A separate normal media-usage PCM run passed with the same frame/underrun result
+  after game processing was off. AudioService requested/actual mode was MODE_NORMAL.
+- The captured crash buffer was empty; captured logs contained no matching native
+  command acknowledgment failures or Dolby/game property SELinux denials.
+
+The first diagnostic process did not exit after successful playback because of
+Android runtime threads; its host timeout stopped the sequence. Explicit probe
+exit after releasing AudioTrack corrected the harness. The complete corrected
+sequence passed; this was not a production audio fix.
+
+The test-only game preference was verified unchanged against its fixture before
+removal. The original package-cache entry was restored, the temporary module and
+all device diagnostic files were removed, and Android rebooted successfully.
+The original installed APK SHA-256 was restored exactly:
+`20e2e5175630eb83d6f6c7a0e5c69e14bc89b894145f408c44b9ab4cda6d50b0`.
+Backend/game properties returned to their original absent state and SELinux
+remained Enforcing. No production source correction was needed.
+
+This establishes playback/control/lifecycle smoke acceptance of the final APK,
+not subjective listening quality, physical Bluetooth/wired/USB endpoint coverage,
+all games or a full OTA. Permanent inclusion still needs the next ROM build.
