@@ -10,8 +10,8 @@ require applicable authorization. Root is for research; final fixes are source-b
 Keep hardware/xiaomi standalone. Camera is finalized unless explicitly reopened.
 
 For historical Android/Qualcomm reference searches, use the ready bundles in
-`~/references_code` and its `scripts/refsearch.py`: both trees by default, or
-`--tree`/`--scope` with bounded output. Restore the cache automatically; do not
+`~/references_code` and `python3 tools/repoindex workspace`: both trees by default, or
+`--tree`/`--scope` with compact bounded text (`--json` if needed). Restore the cache automatically; do not
 reindex at chat startup. See the workhub's `operations/repoindex.md`.
 `impl` searches stored .cpp/.cc bodies; `source` reads bounded indexed ranges.
 Use rg for live edits, regex or other languages. The full generated census is optional reference,
