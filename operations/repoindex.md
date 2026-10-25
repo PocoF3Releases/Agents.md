@@ -60,9 +60,9 @@ restored database is 2,092,015,616 bytes; compression does not imply missing bod
 The prior deep audit covered every implementation's raw/normalized hash, chunk/DB
 hashes, SQLite/FTS and logical coverage. Other live files use metadata checks.
 
-The standalone repoindex 2.0 suite passes 61 tests, including migrated consumer
+The standalone repoindex 2.1 suite passes 68 tests, including migrated consumer
 contracts, bounded output and protected guide updates. The configured 11-case warm
-benchmark passes its 100 ms median budget (observed about 1–11 ms). A source-free
+benchmark passes its 100 ms median budget (observed about 2–13 ms). A source-free
 package check verifies real bundle restoration, body queries and line retrieval.
 These are host observations, not future speed/freshness or build/device guarantees.
 See [V-REF-INDEX](../state/validation.md#v-ref-index), the consumer
@@ -71,6 +71,16 @@ and its [evidence directory](https://github.com/PocoF3Releases/references_code/t
 Exact current revisions belong in [repositories](../state/repositories.yaml).
 
 ## Refresh only after relevant changes
+
+Develop the canonical tool in independent `~/tools/repoindex`; the consumer keeps
+a pinned complete copy, including `src/repoindex/`, and works without that checkout.
+The package separates database/scanner/bundle/workspace services from CLI/reporting;
+old file/import routes remain compatibility shims. Optional isolated installation
+provides `repoindex` and `python -m repoindex`; default consumer commands above
+still use its tested copy. See the canonical
+[development map](https://github.com/johnmart19/repoindex/blob/main/docs/DEVELOPMENT.md).
+The 2.1 installed-package check builds an sdist/wheel and tests every legacy
+command plus console/module/API source-free queries offline.
 
 Generic CLI, format, tests, guide generation and maintenance belong to
 [johnmart19/repoindex](https://github.com/johnmart19/repoindex). Workspace roots,

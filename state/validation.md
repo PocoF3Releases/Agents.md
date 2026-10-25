@@ -127,7 +127,7 @@ No new A17 indexing or benchmark here.
 
 ## V-REF-INDEX
 
-**2026-10-25, host/source-checked.** Both bundles passed deep checks; standalone suite: 61 tests.
+**2026-10-25, host/source-checked.** Both bundles passed deep checks; standalone suite: 68 tests.
 [Audit and scope](../operations/repoindex.md#checked-coverage-and-speed).
 Implementation hashes passed; other files use metadata. No ROM/device test or
 future freshness guarantee.
