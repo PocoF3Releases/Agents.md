@@ -65,8 +65,8 @@ full ROM predates these fixes; a new incremental ROM build is required.
 
 ## Published source
 
-- [Native Alioth transport](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6ea372a7ac473bcf96aede8b1fe8fd22446423c1).
-- [Persistent owner initialization](https://github.com/PocoF3Releases/hardware_xiaomi/commit/628f5eff494edad989bfebc73ce8c6ba8d3ddf2a).
+- [Native Alioth transport](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6d8191fc778289e315d011171d64ce4dc27b5c73).
+- [Persistent owner initialization](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6429de66995b8083ff348bc2a2957ead3b833d4d).
 - [Alioth backend selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025).
 
 Runtime acceptance used the built APK from these source trees through a temporary
@@ -96,7 +96,7 @@ The final XiaomiDolby APK and vendor/build.prop incremental build passes; the
 generated selector is exactly `qcom-qdsp`. No full ROM or new phone deployment
 was performed for this cleanup. Final public heads:
 
-- [Qualcomm cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/628f5eff494edad989bfebc73ce8c6ba8d3ddf2a).
+- [Qualcomm cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6429de66995b8083ff348bc2a2957ead3b833d4d).
 - [Matching product selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025).
 
 ## Final Qualcomm APK phone acceptance
