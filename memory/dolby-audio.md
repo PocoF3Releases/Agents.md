@@ -50,7 +50,9 @@ USB, calls, recording and hotword paths require their actual endpoints.
 required by the legacy HAL, consumes POLLIN-ready data and accumulates short
 reads. Final the historical candidate terminates on backend EOF and clears poll state. Audio HAL
 links libtinycompress. Recorded host sanitizer and ARM/ARM64 executable/compiler
-checks passed; the new library was not installed into the ROM. This is not proof
+checks passed; that earlier check did not establish installed inclusion. The
+[October 25 recording audit](../evidence/recording-voice-20261025.md) now confirms
+installed/build library hash equality. This is not proof
 all Telegram/WhatsApp voice-message failures are fixed. Source identity and
 cross-repository grouping: [audit](../state/changelog-audit.md).
 
@@ -71,3 +73,7 @@ The [expanded audio/Parts audit](../evidence/alioth-audio-integration-20261025.m
 records the native MiSound EQ C-string contract, immediate game communication
 bypass, native readback tests and consolidated commits. Existing karaoke/voice
 hooks and VQE presence do not authorize global activation.
+
+The [recording/voice audit](../evidence/recording-voice-20261025.md) confirms
+native AEC/NS and PCM VoIP integration, targeted recording/duplex phone results
+and the separate translation-resource history. No further DSP opt-in was justified.
