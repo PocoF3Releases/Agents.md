@@ -137,3 +137,30 @@ translation history are unchanged. The phone retains its original executable;
 the pushed change needs inclusion in the next ROM build. Physical Bluetooth,
 USB/headset, remote-call acoustics and optional DSP tuning retain prior limits.
 No claim of exhaustive hardware/firmware correctness follows from this audit.
+
+## Final rebuild-readiness review
+
+A second source review of the same final heads found no actionable regression
+or proven unused code to remove. Independent MiSound and Dolby reviews checked
+saved Off intent, profile/custom variant isolation, EQ/reset persistence, native
+readback, bounded control recovery, server-monitor ownership, communication and
+Qualcomm game routing. Keep the legacy activity/tile aliases: existing shortcuts
+and pinned Quick Settings tiles still use them. No implementation or translation
+resource was changed during this review.
+
+The incremental combined target check passed for `XiaomiParts XiaomiDolby
+libtinycompress audioserver` with `lineage_alioth-cp2a-user` and six build jobs.
+Ninja found the targets current (zero compile steps); this confirms graph and
+artifact freshness, not a new full ROM build. Parts and Dolby APK hashes still
+match the accepted installed-build identities; both tinycompress ABIs and the
+corrected audioserver artifact are present. All 637 scoped Parts/Dolby XML files
+parsed successfully. Reviewed translation commits remain resource-only and
+separate from implementation history. Source worktrees are clean and maintained
+Dolby/AudioFlinger/tinycompress remote heads match.
+
+No phone was visible to Windows ADB during this final review, including after
+reconnect/server restart, so there is no new runtime claim. The preceding
+enforcing candidate acceptance and exact saved-preference restoration remain
+the applicable device evidence. Sources are ready for the requested ROM rebuild;
+the rebuilt release itself still needs its normal install/smoke acceptance.
+Private review/build/artifact receipts: `~/evo/.repo/audio-final-recheck-20261025/`.
