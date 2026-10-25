@@ -11,7 +11,7 @@ On the phone, a twelve-second higher-priority takeover left music disabled and
 the low-priority observer owning the effect after the rival released it.
 Reopening MiSound repaired the state; a normal callback alone did not.
 
-[4c1419a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/4c1419aa2ffa6eed69a51a5154ecb6caccfb31ca)
+[consolidated MiSound fix](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87)
 retains the effect/control listener while contested. Control regain resets retries
 and recreates the effect, restoring saved tuning before enable. Replaced-handle
 callbacks are identity-guarded; audio-server down/up still discards dead handles.
@@ -53,3 +53,8 @@ an identical final tree; all three recovery preflights report zero pending patch
 Original phone APK hashes, exact saved preference hashes and backed-up audio
 properties were restored after removing the temporary module and rebooting.
 Android boot completed with SELinux enforcing; temporary phone test files were removed.
+
+History: the readback and control-listener fixes were consolidated into one
+implementation with an identical final source tree. Original APK hashes above
+remain the identities of the corresponding tests. The final consolidation and
+fresh phone checks are recorded in [the complete audit](audio-complete-20261025.md).

@@ -25,13 +25,13 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 4c1419aa2ffa6eed69a51a5154ecb6caccfb31ca
+    aosp-17: 0de236a93b3dc7dbb59e16219d234e7141c6bd87
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/4c1419aa2ffa6eed69a51a5154ecb6caccfb31ca
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87
   observation: 2026-10-25; MiSound EQ encoding fixed and native isolated-session readback
     verified in evidence/alioth-audio-integration-20261025.md; full installed ROM predates fix.
   local_a17:
-    head: 2ef2d499e7323f616951131d77afe88849054953
+    head: ad6a2f1c9a3631523edde3509d73457bf268dd96
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
@@ -39,13 +39,13 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 44c50c27882a1324a9bf06910d038d5fbca91025
+    aosp-17: d6c19893590c1004e0a579c0ca9182b2ef2594c3
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/d6c19893590c1004e0a579c0ca9182b2ef2594c3
   observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
     in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
   local_a17:
-    head: 4a63871bd98b286ff6eb5b58715875813d567112
+    head: 5602a1592c666b7f753d46a1ac19ccfec478cea0
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -53,10 +53,10 @@ repositories:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: a9e382360adc8124f71f96590ff823b1fc688413
+    aosp-17: 3b312ac9d0a32daaff6785ee45d9f3a3715475f7
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a9e382360adc8124f71f96590ff823b1fc688413
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/3b312ac9d0a32daaff6785ee45d9f3a3715475f7
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
