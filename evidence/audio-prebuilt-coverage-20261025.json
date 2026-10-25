@@ -1,0 +1,1194 @@
+{
+  "date": "2026-10-25",
+  "scope": "Current proprietary Alioth/common audio inputs, explicit extraction groups, dynamic audio plugins and dependencies; source-built modules separate. Not all historical MIUI binaries. Pseudocode is private and not semantic/runtime proof.",
+  "elf_count": 87,
+  "new_program_passes": 83,
+  "initial_identified_functions": 21387,
+  "initial_bodies_produced": 21380,
+  "initial_failures": 7,
+  "successful_targeted_retries": 2,
+  "data_firmware_files": 38,
+  "limits": "Bad-instruction bodies, unresolved indirect calls and private ABI remain incomplete; DSP tuning/firmware data are not claimed decoded.",
+  "elf": [
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/hw/audio.primary.kona.so",
+      "name": "audio.primary.kona.so",
+      "sha256": "e4bf45f971ce8296785462bc576d61af21c2f294bd9f4b9adc7e2f93daf11123",
+      "machine": 40,
+      "processing": "prior_partial_decompilation",
+      "additional_pass": "Focused VoIP, recording, karaoke, FCSAM and scene integration review"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/libaudio_log_utils.so",
+      "name": "libaudio_log_utils.so",
+      "sha256": "963f6808a53c2abcf0c0b18c0364c500612c6fa8b5cf286ed6810647e3d8f186",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 60,
+      "initial_bodies_produced": 60,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/libaudiocloudctrl.so",
+      "name": "libaudiocloudctrl.so",
+      "sha256": "5e6bea9a15b0c0b856f3e18f69c75b2cf1f645ba912e1587331c88f958c497d8",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 73,
+      "initial_bodies_produced": 73,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/libaudioroute_ext.so",
+      "name": "libaudioroute_ext.so",
+      "sha256": "360a5e53db477b85c62b55758c22719258a69441359db861ccfbc216a2c10558",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 27,
+      "initial_bodies_produced": 27,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 1
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/libresampler.so",
+      "name": "libresampler.so",
+      "sha256": "0227b6e46e8197842ce8f1bb944ac22dde5fca441f64a0f14f4d1de142acfea0",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 55,
+      "initial_bodies_produced": 55,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/capi_v2_cirrus_sp.so",
+      "name": "capi_v2_cirrus_sp.so",
+      "sha256": "677fdb94585a7e61ba9cd8f33c857623297fec7f868c56f1590bd1aa37092705",
+      "machine": 164,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 318,
+      "initial_bodies_produced": 318,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so",
+      "name": "capi_v2_dap_cpdp.so",
+      "sha256": "621fe2c073e7b73ad2e0c61677cf3ea9559691191a5cb3913b37264dc06f33f3",
+      "machine": 164,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 989,
+      "initial_bodies_produced": 989,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/vendor.qti.hardware.audiohalext@1.0.so",
+      "name": "vendor.qti.hardware.audiohalext@1.0.so",
+      "sha256": "0505c9d721fec765207db26b266f3e4acf6461c6f1b4af94b06a5de721689d05",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 149,
+      "initial_bodies_produced": 149,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 2
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib64/libnotifyaudiohal.so",
+      "name": "libnotifyaudiohal.so",
+      "sha256": "4d35a53636f455237b2e84e0dcc33d3b46909898e74d2f11f62ed4b87220f0ad",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 6,
+      "initial_bodies_produced": 6,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib64/libultrasound.so",
+      "name": "libultrasound.so",
+      "sha256": "bb6d93f28c79a94b5b8de2e572c99e6ad608d284cb121c14329f966e57fa9404",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 5,
+      "initial_bodies_produced": 5,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service",
+      "name": "vendor.dolby.hardware.dms@2.0-service",
+      "sha256": "deff7fcefd0f8e8ac8891ffddca16f69c09e6d22eba9153f18e8b74569a89f3c",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 4,
+      "initial_bodies_produced": 4,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/btaudio_offload_if.so",
+      "name": "btaudio_offload_if.so",
+      "sha256": "89692cf8ed10a39f8da7411a004793ccdc4efd67dfcb1b4d70e0e54a6148b925",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 55,
+      "initial_bodies_produced": 55,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/hw/sound_trigger.primary.kona.so",
+      "name": "sound_trigger.primary.kona.so",
+      "sha256": "ce0984a70be4ea8f08c1cd9376a06e6db6fa0110c0b7cbaa25fc6dc6c0e63538",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 284,
+      "initial_bodies_produced": 283,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 0,
+      "retry": "body_produced"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so",
+      "name": "vendor.qti.hardware.bluetooth_audio@2.0-impl.so",
+      "sha256": "ee5307d5953776c8495d04d9a9a31810e80808c72d8eb7d38ba24c7e51788b31",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 86,
+      "initial_bodies_produced": 86,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxAacDec.so",
+      "name": "libOmxAacDec.so",
+      "sha256": "7f96065784f48ca399e244338a2741e76b31572f53ca8b2853d63c246d759aa1",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 140,
+      "initial_bodies_produced": 140,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxAacEnc.so",
+      "name": "libOmxAacEnc.so",
+      "sha256": "8a4d9c1fc6ceb479a646944d61fe10553ac33e21af558c3b986b54d67a96bed7",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 124,
+      "initial_bodies_produced": 124,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxAlacDec.so",
+      "name": "libOmxAlacDec.so",
+      "sha256": "c6e9842680c896fd1ff258d97b8061d0e7577d0da7c44d60bc07ecc99dfa61b9",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 136,
+      "initial_bodies_produced": 136,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxAmrDec.so",
+      "name": "libOmxAmrDec.so",
+      "sha256": "d884d66ee05e4ea0defd1e2439206fc517fe03019626df809a82828f3e73f613",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 131,
+      "initial_bodies_produced": 131,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxAmrEnc.so",
+      "name": "libOmxAmrEnc.so",
+      "sha256": "f66141a3cf2f800ef684efd3d806564e3b9bce706b6b6bb26a5e547500f3b4f4",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 120,
+      "initial_bodies_produced": 120,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxAmrwbplusDec.so",
+      "name": "libOmxAmrwbplusDec.so",
+      "sha256": "c098db740f73ee08faaca7c123d5044d4d05be3d3b5651c6d691f19914389a37",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 131,
+      "initial_bodies_produced": 131,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxApeDec.so",
+      "name": "libOmxApeDec.so",
+      "sha256": "d9f2612a0a7a9d889de27418d7b9685f1af80c5a8ca3d6d2c162c24101edbb87",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 138,
+      "initial_bodies_produced": 138,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 2
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxEvrcDec.so",
+      "name": "libOmxEvrcDec.so",
+      "sha256": "d3baa2ae4c88d51f5a9d8e4c0d786025a1c36d8b0fe9980fd85e0d3afb2007e0",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 232,
+      "initial_bodies_produced": 232,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxEvrcEnc.so",
+      "name": "libOmxEvrcEnc.so",
+      "sha256": "8261764996f16d4c8f915f46615968a70ba55e72d093746eddda28cbd2f763dc",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 122,
+      "initial_bodies_produced": 122,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 1
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxQcelp13Dec.so",
+      "name": "libOmxQcelp13Dec.so",
+      "sha256": "671cc31701de048495a01f9e29290fdf0e79146435702a3c1ee9d465c66fa166",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 250,
+      "initial_bodies_produced": 250,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxQcelp13Enc.so",
+      "name": "libOmxQcelp13Enc.so",
+      "sha256": "cc658099ff84e27364a9b255db859445bf8bbf1ab34e85d495690c42424f557d",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 120,
+      "initial_bodies_produced": 120,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libOmxWmaDec.so",
+      "name": "libOmxWmaDec.so",
+      "sha256": "322674195599636b064b505cd633a7caa07a1dc7b58e83a37c351be1ae9c510f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 138,
+      "initial_bodies_produced": 138,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libacdb-fts.so",
+      "name": "libacdb-fts.so",
+      "sha256": "dbbade94033fa65442534f4a0b19a1e28147707af5618bb29887600ea7177f52",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 51,
+      "initial_bodies_produced": 51,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libacdbloader.so",
+      "name": "libacdbloader.so",
+      "sha256": "a59c29d288137e10254e36a819b7cc7d143b0e4278a7eb3bf000169fdceed76f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 161,
+      "initial_bodies_produced": 161,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libacdbrtac.so",
+      "name": "libacdbrtac.so",
+      "sha256": "7dcf7e93f8a286f956d15b18e959c8936876e8db32c66c276747cfbe202727d3",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 86,
+      "initial_bodies_produced": 86,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libadiertac.so",
+      "name": "libadiertac.so",
+      "sha256": "4ebc42c1a9f6602f6e490aff4590399214c035a1519cdb7a194aa68e903e065c",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 58,
+      "initial_bodies_produced": 58,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libaudcal.so",
+      "name": "libaudcal.so",
+      "sha256": "6cc3ab2bd048867870330f9dbfbad2f11c6e913394fdabd1767af8fd5bf67056",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 355,
+      "initial_bodies_produced": 355,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libaudioparsers.so",
+      "name": "libaudioparsers.so",
+      "sha256": "0d4d056f6dfc29a08ee1fec83c8e82068d793930e3d60a92a4516648b057b50c",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 74,
+      "initial_bodies_produced": 74,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libbluetooth_audio_session_qti.so",
+      "name": "libbluetooth_audio_session_qti.so",
+      "sha256": "91aba856bbfb76adafbd05d195d79cf01dfa6658a9ee6e8620084aeddd341d7f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 246,
+      "initial_bodies_produced": 246,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 1
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libbluetooth_audio_session_qti_2_1.so",
+      "name": "libbluetooth_audio_session_qti_2_1.so",
+      "sha256": "ba8dbac19249b8510dbf5f38761fe62bb3cc0196e382f0f5d0fe22677335895f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 269,
+      "initial_bodies_produced": 268,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 3,
+      "retry": "function_not_resolved"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libcapiv2svacnn.so",
+      "name": "libcapiv2svacnn.so",
+      "sha256": "0a3a39d4e97bc1ad955bafccae5b8736de6e4359444972fbe7f2a9df9dbce1be",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 801,
+      "initial_bodies_produced": 801,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libcapiv2svarnn.so",
+      "name": "libcapiv2svarnn.so",
+      "sha256": "527550b648c8b434fc5b02f2264ee87c3d4de0eb019c93853ebf3ab86cd257cf",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 445,
+      "initial_bodies_produced": 445,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libcapiv2vop.so",
+      "name": "libcapiv2vop.so",
+      "sha256": "2aa1d085db98e221d902338659795424a5de26e458ffbd2f534ce0be82cfc82f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 341,
+      "initial_bodies_produced": 341,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libdapparamstorage.so",
+      "name": "libdapparamstorage.so",
+      "sha256": "679ae20f412ca4970b7b54732ea9fc48c1fc36c1f5a382d36ef6ddaa69648657",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 49,
+      "initial_bodies_produced": 49,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libdeccfg.so",
+      "name": "libdeccfg.so",
+      "sha256": "2e059a81ad820c16248ad8bb33db4e985d6732b5455ce0a949ad14a7dac81863",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 129,
+      "initial_bodies_produced": 129,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libdiag.so",
+      "name": "libdiag.so",
+      "sha256": "2fc2bd21b3b09983c562a78f6693cc32d7fcb59482cc23d3bc5c95d312339bc8",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 268,
+      "initial_bodies_produced": 268,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/liblistensoundmodel2.so",
+      "name": "liblistensoundmodel2.so",
+      "sha256": "e975d76aa1fb3c7f33c83cd2dd9ea9834548d6cbe280fb18f16411a9a2e130b7",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 1511,
+      "initial_bodies_produced": 1511,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libspkrprot.so",
+      "name": "libspkrprot.so",
+      "sha256": "2b4acaf54cdc5d96ac71a32edc2219d73eb757805fff10f995c548ced5fd3317",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 80,
+      "initial_bodies_produced": 80,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libstagefright_soft_ac4dec.so",
+      "name": "libstagefright_soft_ac4dec.so",
+      "sha256": "537358a15ff46295b006a6a19f8abc878a33b02abbc3c517af9248d75237e1cf",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 2174,
+      "initial_bodies_produced": 2173,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 0,
+      "retry": "still_timed_out"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libstagefright_soft_ddpdec.so",
+      "name": "libstagefright_soft_ddpdec.so",
+      "sha256": "199d8d3c03ff6ba7de217916df2656ffc6b043aa32d39315c3e59c52149b6a89",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 2449,
+      "initial_bodies_produced": 2448,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 0,
+      "retry": "still_timed_out"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libstagefrightdolby.so",
+      "name": "libstagefrightdolby.so",
+      "sha256": "7af3fa027ff0ef2f0d2bd7d3ef552db443917f4f002e522672b0e9509b781f51",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 10,
+      "initial_bodies_produced": 10,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 1
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so",
+      "name": "capi_v2_aptX_CLHDADV_Encoder.so",
+      "sha256": "ceb681f3a13201227241c9642dd6c5d9d1f9cf88b60e99a94fabf5b854ce442b",
+      "machine": 164,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 396,
+      "initial_bodies_produced": 396,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so",
+      "name": "capi_v2_aptX_CLHDAD_Speech_Decoder.so",
+      "sha256": "c2a1aaa03d50c281e3ff0a4422a8c38b4479e451177eb2e57095c392b2779fc6",
+      "machine": 164,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 315,
+      "initial_bodies_produced": 315,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libasphere.so",
+      "name": "libasphere.so",
+      "sha256": "30f10d36801bf8110daa25bf45f9b853f90b19bb62a705cd37274bccd5c7be55",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 11,
+      "initial_bodies_produced": 11,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libhwdap.so",
+      "name": "libhwdap.so",
+      "sha256": "38095fbf5629dc4578463104891dbfeda1dbcf808eb4e1b3d86f78d74a029d92",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 202,
+      "initial_bodies_produced": 202,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libmisoundfx.so",
+      "name": "libmisoundfx.so",
+      "sha256": "8a8cb2b953d296697db7ff3024661126e0c4932920b0e13778fbd016aa9c00d6",
+      "machine": 40,
+      "processing": "prior_partial_decompilation",
+      "additional_pass": "109 identified functions reprocessed with Thumb correction"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libqcbassboost.so",
+      "name": "libqcbassboost.so",
+      "sha256": "f4df57de226531a06bfeb0a4bd41a73e67222c1be489b7636489fff939586ad4",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 277,
+      "initial_bodies_produced": 277,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libqcreverb.so",
+      "name": "libqcreverb.so",
+      "sha256": "8bd083ced24ba5f890a3b0be727b4b406a4bccb35225fe7afb98f4659a5ce108",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 266,
+      "initial_bodies_produced": 266,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libqcvirt.so",
+      "name": "libqcvirt.so",
+      "sha256": "e93dcba4f51e2a266e223eb461f9e05ba771764e9b61e624e5db73bb089fac81",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 257,
+      "initial_bodies_produced": 257,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libshoebox.so",
+      "name": "libshoebox.so",
+      "sha256": "13e8040e0eb79ee28672437f637da391b51a0d40c41e7045ad527742f5d28bad",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 13,
+      "initial_bodies_produced": 13,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libswdap.so",
+      "name": "libswdap.so",
+      "sha256": "d343ac7d12fb5e20f7df30380438829cebeda953bfb2c20cacdad52692d6cdd3",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 1822,
+      "initial_bodies_produced": 1821,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 0,
+      "retry": "still_timed_out"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libswgamedap.so",
+      "name": "libswgamedap.so",
+      "sha256": "e59690b1faacffbd5288cdc18714e627090a933c86867cf582f1e5e118eca19f",
+      "machine": 40,
+      "processing": "prior_partial_decompilation"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/soundfx/libswvqe.so",
+      "name": "libswvqe.so",
+      "sha256": "a43d633e891891b4bf4d192ea1728f1af3263efe35a238a97ce5c349b01ddf86",
+      "machine": 40,
+      "processing": "prior_partial_decompilation"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/vendor.dolby.hardware.dms@2.0.so",
+      "name": "vendor.dolby.hardware.dms@2.0.so",
+      "sha256": "35c4b6f097ecb5cd8ba5fbaff387c2722c0a2abf0ca9cb65b5f3fd5af2a98eb5",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 520,
+      "initial_bodies_produced": 520,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 5
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/libadsp_default_listener.so",
+      "name": "libadsp_default_listener.so",
+      "sha256": "b4948189273391cd03a245212150782ab778a459552f2cc24e31b6f0606f307b",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 6,
+      "initial_bodies_produced": 6,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/libadsprpc.so",
+      "name": "libadsprpc.so",
+      "sha256": "5c20ea5a59315e8c9157367e440e256e3bb3be6e0b74659aa845e0ec35507019",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 169,
+      "initial_bodies_produced": 169,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/libdapparamstorage.so",
+      "name": "libdapparamstorage.so",
+      "sha256": "f5976788f554a8708199b09952617e49a6b6c14ad84305435b39a4a351b7f81e",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 50,
+      "initial_bodies_produced": 50,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/libdlbdsservice.so",
+      "name": "libdlbdsservice.so",
+      "sha256": "7c95cc234f8b2f6f245437e792b5173b974ae3329196b3659890c0770020c975",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 767,
+      "initial_bodies_produced": 766,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 0,
+      "retry": "still_timed_out"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so",
+      "name": "vendor.dolby.hardware.dms@2.0-impl.so",
+      "sha256": "2e3343219a962f7bfae7a707323f1e33cea5338cad59285361e50ed852d7f7e0",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 67,
+      "initial_bodies_produced": 67,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0.so",
+      "name": "vendor.dolby.hardware.dms@2.0.so",
+      "sha256": "30157adc271e1a277ecc8ca0a0b95ce9ada347987a2b23dca7570ee983ebe6b4",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 521,
+      "initial_bodies_produced": 521,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib64/vendor.qti.hardware.dsp@1.0.so",
+      "name": "vendor.qti.hardware.dsp@1.0.so",
+      "sha256": "c8d75e26449dfb3fc28680f622251547d9cb15c840235f2a2008c1e1e218dd91",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 224,
+      "initial_bodies_produced": 224,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/vndk/libxlog.so",
+      "name": "libxlog.so",
+      "sha256": "7b31a56e8864050c4434059d1d77d3237d5c3dd56dc16c802fa2c5ed1be8ad71",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 16,
+      "initial_bodies_produced": 16,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/liba2dpoffload.so",
+      "name": "liba2dpoffload.so",
+      "sha256": "e6046fc4957fba0b068f1ec7a5dad311a078715fffa1401afec27df565bd9ecc",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 122,
+      "initial_bodies_produced": 122,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/libfcsam.so",
+      "name": "libfcsam.so",
+      "sha256": "6cfcb01aafa4dadae43ee1eb1118e33aa69805f951e21f1c8568d8a94d1b56d8",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 399,
+      "initial_bodies_produced": 398,
+      "initial_failed": 1,
+      "bad_instruction_bodies": 0,
+      "retry": "body_produced"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/libmmhardware.so",
+      "name": "libmmhardware.so",
+      "sha256": "21a6cd9954cc8f294b19efe82ea70290aa6ff2d050e913739f771cf51820139c",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 55,
+      "initial_bodies_produced": 55,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libadm.so",
+      "name": "libadm.so",
+      "sha256": "f3df132e5998c8a5ea8e63f0c1d0dfa0323ee66b652a0bfefb58ab2e37f68a76",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 28,
+      "initial_bodies_produced": 28,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libcomprcapture.so",
+      "name": "libcomprcapture.so",
+      "sha256": "92c4648cc361e7c8e1f1dd31b6eb9b1d9042ef27e30b703e21c11d93942ea33f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 2,
+      "initial_bodies_produced": 2,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libexthwplugin.so",
+      "name": "libexthwplugin.so",
+      "sha256": "73b0a0df39ff2b6ab7fc06291d05a8e82af58c2388bb5e4a0516cf3a25fedd49",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 60,
+      "initial_bodies_produced": 60,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 2
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libhdmiedid.so",
+      "name": "libhdmiedid.so",
+      "sha256": "60e6e3696a4cc5119a8dea5c6c21561b2f98897eb2df236ae4bf3a9ad0438652",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 8,
+      "initial_bodies_produced": 8,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libhdmipassthru.so",
+      "name": "libhdmipassthru.so",
+      "sha256": "58410a5330f72713c0ccce678c72656a7936db9a478f6b9384f69676a3519be7",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 104,
+      "initial_bodies_produced": 104,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libhfp.so",
+      "name": "libhfp.so",
+      "sha256": "7591d49f57a14c21dc9406c9a05a38a049d1db7d4a1fd20cd00a3688d8e92784",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 87,
+      "initial_bodies_produced": 87,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libqtigef.so",
+      "name": "libqtigef.so",
+      "sha256": "994a2e00e1e6b74e4418f8b295522b7968da888c4f2d7931ade3a64eb150f537",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 70,
+      "initial_bodies_produced": 70,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libsndmonitor.so",
+      "name": "libsndmonitor.so",
+      "sha256": "ff4c67f996fbfb1b26d08865c05ef12a44a6cd31ea30894a8cc92550f2ec274e",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 66,
+      "initial_bodies_produced": 66,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libssrec.so",
+      "name": "libssrec.so",
+      "sha256": "dbc0b789374942f5e2683789dc0ba9b3c45bef6e1bb3d6760250ac2cc542853b",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 88,
+      "initial_bodies_produced": 88,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libadpcmdec.so",
+      "name": "libadpcmdec.so",
+      "sha256": "8aa7b5eb88ea87c1463c756b37c43595b588376018de8f41bb3d86b54c38450f",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 144,
+      "initial_bodies_produced": 144,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libsmwrapper.so",
+      "name": "libsmwrapper.so",
+      "sha256": "e98fe89df824dfb69d2e9f1ec44407d2d2b3236b9d5f15f025609b9fff704c33",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 56,
+      "initial_bodies_produced": 56,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libdsd2pcm.so",
+      "name": "libdsd2pcm.so",
+      "sha256": "0ea5e85d286064359d2d536c7cb0e24ea008629834fc7a848afd1d5206839642",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 32,
+      "initial_bodies_produced": 32,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib64/libfcsam.so",
+      "name": "libfcsam.so",
+      "sha256": "323958dc71dd451f7d67dad43f4804a141c46c8c4ba09990cba456aa5eded2a5",
+      "machine": 183,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 467,
+      "initial_bodies_produced": 467,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libgcs.so",
+      "name": "libgcs.so",
+      "sha256": "4a5454b18e63d5cf777e2a9f1a44c4434de16a3fe53e8b864ff93d74387635c2",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 83,
+      "initial_bodies_produced": 83,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libmulawdec.so",
+      "name": "libmulawdec.so",
+      "sha256": "c51b5b140ba40d24aa6c2cbc462d7893a47826f5d3f4560396ef264ec9e06082",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 3,
+      "initial_bodies_produced": 3,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libgcs-ipc.so",
+      "name": "libgcs-ipc.so",
+      "sha256": "98f3cd44599d282a0a576bb200f7349da181cb228fd3d33c52159a25d9ebeb8d",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 75,
+      "initial_bodies_produced": 75,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libgcs-osal.so",
+      "name": "libgcs-osal.so",
+      "sha256": "38de0223203aa0a6d55b91499bc8e2eebb9dbfbd4e9d1f7812f481b645f5a7b7",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 71,
+      "initial_bodies_produced": 71,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/lib/libgcs-calwrapper.so",
+      "name": "libgcs-calwrapper.so",
+      "sha256": "8fb08067fa85126a46eb528f9ba08e661a0da720ae9c2dd41f4b4854173ca7ca",
+      "machine": 40,
+      "processing": "new_decompiler_pass",
+      "functions_identified": 18,
+      "initial_bodies_produced": 18,
+      "initial_failed": 0,
+      "bad_instruction_bodies": 0
+    }
+  ],
+  "data_firmware": [
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb",
+      "sha256": "67ef011650a59d6e60e984cd2931fa44e63e7c0db96ab95679d6906ddf40ec5c",
+      "size": 88863,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_General_cal.acdb",
+      "sha256": "33aa4cec9295648aaf05fa4345238f0007356f7007e80cb1bda1fd59794e2088",
+      "size": 20737,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb",
+      "sha256": "8d34855edf66cb8085f13050ff6b25e7dee22a386ec6dc68c46770108cfef6c6",
+      "size": 42059,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb",
+      "sha256": "18bc8f23b5afc6a19a17f080ca59fb5e48406862d7df41815063fce1ca3d62c9",
+      "size": 1273683,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb",
+      "sha256": "f89f424eb37259de51a5b7a3973511d6b92aa06bec20f48bcfee67d8c8adf397",
+      "size": 6557,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb",
+      "sha256": "65a12b497340eafbad885bc80ea0782c2f0d257543fba996a14fbadc0c973ab5",
+      "size": 635241,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb",
+      "sha256": "7d1444423dbe6b87c33538b42a695108687db346b33bff916a070f0265d10776",
+      "size": 752857,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp",
+      "sha256": "f0f213bdb073e1449c6f3125301d69122cb0b254c70f9e8d7d4bd62a546a6921",
+      "size": 425456,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb",
+      "sha256": "527d1188937738519c0375981fbe37016b35daecafc04cc669e1c1029c364ece",
+      "size": 1264,
+      "classification": "calibration_workspace_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag-revb2.wmfw",
+      "sha256": "f9aa1a88497cf965c181cbc73f7abd622e1474dd69175a89ea274c9754eaaa9a",
+      "size": 30992,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag-z-RCV-revb2.bin",
+      "sha256": "f6e9b3dc6254626c726041c1f52d630a5bf1fe4e395310c90c1199809624217d",
+      "size": 1472,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag-z-revb2.bin",
+      "sha256": "4440156040425fd39d97d0fe3e9ea445aea8ab36a4b5447e52dec4f1a2e23d8c",
+      "size": 1468,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag-z-revb2.wmfw",
+      "sha256": "8a1fe187132681d95efdb3c397f80f252783a9662c9ff50b9874563956c083a7",
+      "size": 33220,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag-z.bin",
+      "sha256": "7365ec5f1647b4d862cb3b8de5a9a863aefb8f8bfbff85f4fe3c00a1c63591fe",
+      "size": 996,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag-z.wmfw",
+      "sha256": "61615efa2abcc525e9510dca00420c81d7f148a5ed862e85907c829db42c5d3a",
+      "size": 30820,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-diag.wmfw",
+      "sha256": "de09a5c4c74268848e1578e1e1628c5bc17ebc3972752f5394990239b7ec2fdc",
+      "size": 31752,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot-RCV-revb2.bin",
+      "sha256": "83fc7353ca95a271d68bcabb204da9816638038272c236d53c99cdaaf2de882f",
+      "size": 4280,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot-RCV.bin",
+      "sha256": "fdf639acbb2a28eb8cbb36ff26f0066ccafa5f24485069b0d34c8012936b8159",
+      "size": 3988,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot-revb2.bin",
+      "sha256": "a81b6182442598cbb2269ec48f3be04159d68440ab2e9cab84ba8f2ab3b1b7b8",
+      "size": 4276,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw",
+      "sha256": "8a1fe187132681d95efdb3c397f80f252783a9662c9ff50b9874563956c083a7",
+      "size": 33220,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin",
+      "sha256": "e093fbac9f85eceea7aef46806cd39e0c292f5d1142dfcfec052063ef9a4a5e5",
+      "size": 3988,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw",
+      "sha256": "51038251d8663786ed4f49ec5a57fb757304f2458a4015fa30746b9cd20dbd86",
+      "size": 32880,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/rcv_voice_delta.txt",
+      "sha256": "57d08262c5109d0cc513ab62fc26e5e5a167c6233b14cc4ea9351251c6038301",
+      "size": 364,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/spk1_playback_delta.txt",
+      "sha256": "afc072f47f48bd11d41f0b40bf0b0cc5a481ce916f4d4c45184d298565a1986f",
+      "size": 80,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/spk1_voice_delta.txt",
+      "sha256": "0e02b05f16a3a0dbbc9197d50abc3e206d9aa5b42b28fa326835483d670345e6",
+      "size": 87,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/spk2_playback_delta.txt",
+      "sha256": "85f75f37325361feafcb3e030da03f9314a10f0c935d1cb9f93a5483aa5e5fdf",
+      "size": 358,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/firmware/spk2_voice_delta.txt",
+      "sha256": "65952b8e41546d5b05fd818980c42315134d1adc7afea24ca4b9340db1ce06c9",
+      "size": 363,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/misound_res_spk.bin",
+      "sha256": "e47c8dec289b56938b5695d133b251463509f380eaf1e98054bebdd8c766f772",
+      "size": 11104,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/misound_karaoke_res.bin",
+      "sha256": "cb79e6622d0b7b8ad95b091c03abe5e353e04910956a665dee976dca6e02bac1",
+      "size": 12220,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/misound_res_headphone.bin",
+      "sha256": "2ee87f68d7b729de83e417c86b6d73528c44981d237ddbef0a40ade424dc1586",
+      "size": 5908,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/misound_res.bin",
+      "sha256": "311e27ab1f52b6b4224a18a4a07dcd08c485adfcd8e776a22edb7a74c9271eef",
+      "size": 86564,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/hrtf5c.bin",
+      "sha256": "50930205493925d5efdbbf14f7761970767e41654b82c7180196d745d2b94316",
+      "size": 164480,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/lib/rfsa/adsp/misound_karaokemix_res.bin",
+      "sha256": "cb79e6622d0b7b8ad95b091c03abe5e353e04910956a665dee976dca6e02bac1",
+      "size": 12220,
+      "classification": "dsp_firmware_or_tuning_data"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/etc/dolby/dax-default.xml",
+      "sha256": "5bce816dabc66b9ab3dbe3cee9454dee1aabeb49fefbd2aacc4e1b973a764042",
+      "size": 85026,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc",
+      "sha256": "4e51845631d8f9765761892a5a01a883ebc3c21a9227c251969356c9b60f9d52",
+      "size": 186,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml",
+      "sha256": "1168fc7a98712222b9e3b9a705c3c06acfe7b287f38fdd3e0cf7793fa8aa4dfd",
+      "size": 315,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/sm8250-common/proprietary/vendor/etc/media_codecs_dolby_audio.xml",
+      "sha256": "a9f06021f402c68080e5b83e9af30ee38629f776d59f4d6ba417e28b75f71a65",
+      "size": 2495,
+      "classification": "configuration_text"
+    },
+    {
+      "path": "vendor/xiaomi/alioth/proprietary/vendor/etc/FM_CAM.bin",
+      "sha256": "5493b05bf10d5f768a1511e521a9d69820d4c592953562d7901b948cb3cbad5a",
+      "size": 3164,
+      "classification": "exact_stock_FCSAM_parameter_payload"
+    }
+  ]
+}
