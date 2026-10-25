@@ -36,6 +36,13 @@ or bodies into chat. Budget notices go to stderr. The compatibility
 `scripts/refsearch.py` retains JSON and its old 40-result default; prefer the
 canonical command for new usage. Compatibility scripts contain no search logic.
 
+## Alioth reverse engineering
+
+Follow the [source and binary correlation workflow](alioth-reverse-engineering.md)
+for shipped prebuilts: locate historical contracts from binary names/logs/IDs,
+then validate ABI, callers and hardware against current Alioth inputs. Empty
+scoped queries do not prove a feature is absent.
+
 ## Choose a mode
 
 | Need | Mode |

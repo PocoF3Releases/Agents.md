@@ -18,7 +18,7 @@ recover missing context.
   Verify mutable facts. Repeat checks only for changes, failures or open concerns.
 - Report concise results/limits; claim no unverified access, tests, performance
   or account-memory synchronization.
-- Source search: [ready indexes](operations/repoindex.md), both by default;
+- Source/RE: [ready indexes](operations/repoindex.md), both by default;
   no startup rebuild.
 
 Knowledge: follow [maintenance](operations/maintenance.md), update fact owners and
