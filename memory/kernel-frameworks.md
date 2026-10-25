@@ -84,6 +84,7 @@ Use the [current source ledger](../state/repositories.yaml) and
 
 The [October 25 record](../evidence/shutdown-investigation-20261025.md) preserves
 a kernel-stage restart stall, three successful Power off tests and a separate
-local SPU unmount-policy fix. The hang is unresolved. A current-boot-only
-`shutdown_diag` module is loaded; its scope, cleanup and capture steps are in
-the record. No permanent kernel fix or installed-policy acceptance is claimed.
+published, enforcing-tested SPU unmount-policy fix. The hang is unresolved. A
+perf timer locking candidate is under investigation; the temporary observer is
+currently unloaded. Scope and capture steps are in the record. No installed
+production-policy or kernel-hang repair is claimed.
