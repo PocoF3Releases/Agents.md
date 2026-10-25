@@ -122,11 +122,15 @@ completion, a draft banner or a rebased commit date.
 
 ## V-INDEX
 
-**2026-09-24 host tests; September 30 read-only metadata refresh.** repoindex
-1.1.0 / [c79c150](https://github.com/johnmart19/repoindex/commit/c79c1508c3c7f2657ddaf0172e89b279f9ce4914) passed 20 recorded regressions. Current stored A17 scan is
-September 28: 1756352 files, 10180486 symbols, schema 2, coverage known,
-zero recorded errors, excludes `out` and VCS metadata. `live_tree_verified=false`;
-no new scan or benchmark in this update. [Usage/limits](../operations/repoindex.md).
+**Historical A17, September 2026.** [Recorded checks, snapshot and limits](../operations/repoindex.md#active-build-tree-and-historical-indexes).
+No new A17 indexing or benchmark here.
+
+## V-REF-INDEX
+
+**2026-10-25, source/host-checked.** Both reference bundles passed deep checks and
+38 tests. [Audit, speed and scope](../operations/repoindex.md#checked-coverage-and-speed).
+Live checks cover path/size/mtime, not content hashes; no ROM/device test or
+future freshness guarantee.
 
 ## V-KNOWLEDGE
 
