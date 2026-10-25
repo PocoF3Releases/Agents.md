@@ -79,11 +79,11 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 6d6310d6bc2f8a69724011e29d848c358bc32c0f
+    aosp-17: ee8cd976d579ef5ee8c01899c155a96cf5fee9b0
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6d6310d6bc2f8a69724011e29d848c358bc32c0f
-  observation: 2026-10-25; perf timer and ownership fixes published; enabled perf objects
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ee8cd976d579ef5ee8c01899c155a96cf5fee9b0
+  observation: 2026-10-26; human upstream replacements published; enabled perf objects
     pass W=1/sparse, Image build and targeted temporary-boot checks pass in
     evidence/shutdown-investigation-20261025.md; installed boot restored, hang report open.
 - repository: https://github.com/PocoF3Releases/.github
