@@ -139,3 +139,23 @@ The October 11 standalone [recovery source](https://github.com/pbrp-alioth/devic
 baseline, immutable source checkpoints and patch-equivalence filtering. The
 current rebuild is in progress; no next-release copy or artwork is generated.
 A source checkpoint is not a finished build manifest or proof of artifact inclusion.
+
+## October 25 release copy — draft
+
+The previous published baseline remains October 20. The maintainer requested new
+[full](telegram-20261025-full.md) and [short](telegram-20261025-short.md) Telegram
+copy for the rebuilt October 25 v12.3 release. No Telegram message was sent and
+publication has not been confirmed.
+
+[Banner](assets/evolutionx-alioth-20261025-banner-v2.png) ·
+[exact imagegen prompt](assets/evolutionx-alioth-20261025-banner-v2-prompt.txt).
+The built-in image generation tool kept the approved phone hardware, used the
+supplied example only for its six-card layout, and created a fresh industrial
+environment after web inspiration research. Date, text and camera geometry were
+visually checked. Refresh-rate work is excluded at the maintainer request.
+The rejected three-strip draft is not published here.
+
+The [eligibility review](../evidence/changelog-20261025.md) separates actual new
+behavior from earlier announcements, rebased equivalents and unused components.
+[Installed-build smoke checks](../evidence/release-smoke-20261025.md) retain their
+short-test scope; release copy does not certify all endpoints.
