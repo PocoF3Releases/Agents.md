@@ -69,9 +69,15 @@ These are host observations, not future speed/freshness or build/device guarante
 See [V-REF-INDEX](../state/validation.md#v-ref-index), the consumer
 [validation](https://github.com/PocoF3Releases/references_code/blob/main/docs/VALIDATION.md)
 and its [evidence directory](https://github.com/PocoF3Releases/references_code/tree/main/evidence).
-A real GitHub index-only clone passed 29 acceptance checks and all 81 synthetic
-tests in an empty no-pip environment. Its first ordinary search restored both
-caches, and guarded API queries required no network, subprocess or ingestion.
+The reusable `python3 scripts/check_fresh_clone.py` passed 29 fresh GitHub
+index-only acceptance checks with no site packages/pip or source checkout. It
+restores and queries both indexes, guards the in-process probe against network,
+subprocesses and ingestion, checks normal launchers and removes its temporary
+clone. It requires only Git/Python/SQLite, about 401 MiB of network download and
+3 GiB temporary disk; no source rebuild or runtime installation. Use it only for
+explicit acceptance, never startup. `--report .cache/fresh-clone-report.json`
+saves evidence. The 81 tool and 3 consumer-harness fixtures are separate explicit
+`python3 scripts/check.py --tests`; only those build tiny synthetic indexes.
 [Fresh-clone evidence](https://github.com/PocoF3Releases/references_code/blob/main/evidence/fresh-clone.json).
 Exact current revisions belong in [repositories](../state/repositories.yaml).
 The final review fixed empty API selections, EOF ranges, ignored maintenance
