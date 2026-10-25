@@ -39,13 +39,13 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 7c7229bdb805456900b817ebf023aab69bcb94a8
+    aosp-17: 6e6eb8c97475aea4d94912b5640456a2192823b3
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/6e6eb8c97475aea4d94912b5640456a2192823b3
+  observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
+    in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
   local_a17:
-    head: 04ecc21b992e80d70b79ffac8effe1f176a4199a
+    head: 6b4e65bd05c075b648d07d998fecb574b0c2cc59
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -130,12 +130,12 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: c8efa74f359339c741e0ea6decf98b198c050532
+    cnb: ba2cd983e2af1f524aa62e926d40fdef4b9b65e6
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/c8efa74f359339c741e0ea6decf98b198c050532
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/ba2cd983e2af1f524aa62e926d40fdef4b9b65e6
+  observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
+    in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:
