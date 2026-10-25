@@ -276,6 +276,8 @@ cold_archives:
   policy: skip_by_default
   archive_tree: d564d0bc3dd917926892c55e3706cc116d5b165e
 maintenance:
+  reverse_engineering:
+    memory: operations/alioth-reverse-engineering.md
   policy:
     memory: operations/maintenance.md
   validation:
