@@ -73,12 +73,11 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-October 24's seven ARM64 W=1/sparse target checks and sanitizer/code-generation
-comparisons retain their recorded limits. The [October 26 configured audit](../evidence/kernel-subsystem-audit-20261026.md)
-adds verified touch/SPSS input-copy repairs, upstream ACPI/iterator fixes and
-Wi-Fi include cleanup. Normal Image and targeted phone checks pass; the full
-W=1/C=2 tree still fails. Review remaining diagnostics by subsystem rather than
-adding blanket casts or suppressions. No system-side changes were made.
+October 24's targeted checks retain their recorded limits. The [October 26 configured audit](../evidence/kernel-subsystem-audit-20261026.md)
+failed full-tree W=1/C=2. The [active-driver follow-up](../evidence/kernel-active-driver-checks-20261026.md)
+clears seven selected UFS/USB/charging/Bluetooth objects, with normal Image and
+bounded phone checks passing. Wider diagnostics still need scoped review;
+no warning suppressions or system-side changes were introduced.
 
 ## Intermittent shutdown investigation
 
