@@ -136,3 +136,9 @@ initcall_debug=N. Owned test-image staging and test executables were removed.
 Only the original-kernel observer remains loaded, with its staged module owned
 by root at mode 0600. A real recurrence still needs the retained stack/phase
 capture; do not close this report from successful shutdowns alone.
+
+## Upstream substitution audit
+
+[Human-authored counterparts, tested replacement scope and remaining local
+provenance](shutdown-upstream-review-20261025.md). The prepared replacement series
+is local only; the published source and prior phone acceptance remain unchanged.
