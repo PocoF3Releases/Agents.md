@@ -68,3 +68,36 @@ phone overlay is diagnostic only. After the overlay was removed, Android booted,
 both original library hashes were restored exactly, requested/actual audio mode
 was MODE_NORMAL and SELinux remained Enforcing. All diagnostic files were removed;
 no package or saved preference was changed.
+
+## Final capture, VoIP and playback recheck
+
+Two new independent GPT-6.1-Sol agents using low reasoning found no actionable
+API or downstream-caller regression. Only compress_read changes; compressed
+playback write/start/drain/offload handling remains unchanged. They identified
+one coverage gap rather than a source defect: successful poll with POLLERR
+following a captured prefix. This added case passes with -1/EIO, preserved
+captured bytes, a cleared unread tail and intact guards.
+
+The expanded fourteen-case suite passes on the host, under ASan/UBSan and through
+each actual rebuilt ARM32/ARM64 shared library on the enforcing phone. The shared
+library loaded by the audio HAL was verified by mapped/installed inode equality.
+No new source edit or library rebuild was needed for this recheck.
+
+Before and with the temporary updated-library overlay, two normal 48 kHz stereo
+PCM runs with pause/flush/resume pass, each reporting 88320 frames after the flush
+and zero underruns. Hardware-offloaded MP3 playback also passes on both libraries:
+48384 synthetic-silence bytes drain through an explicitly offloaded AudioTrack,
+with presentation-ended acknowledgment and zero underruns. No global volume
+setting was changed. This validates playback operation, not subjective sound.
+
+Updated-library AAC/Opus capture-to-encode/EOS, eight same-object recording restart
+cycles and 48 kHz AEC/NS duplex capture/playback pass again. Duplex playback
+reports 139200 frames and zero underruns; requested/actual mode returns to normal
+and the crash buffer remains empty. After this recheck the temporary module was
+removed and both original library hashes were verified again. Android booted,
+audio mode was MODE_NORMAL and SELinux was Enforcing. All device diagnostic
+files, including the generated silent MP3, were removed.
+
+The [capture commit](https://github.com/PocoF3Releases/external_tinycompress/commit/6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9) is unchanged; translation/resource changes remain solely
+in their existing separate hardware/xiaomi commit. No additional production
+correction was needed after this review.
