@@ -18,14 +18,16 @@ python3 scripts/refsearch.py status
 python3 scripts/refsearch.py scopes
 python3 scripts/refsearch.py files '*AudioFlinger*' --limit 20
 python3 scripts/refsearch.py symbol BPSNode --scope camera --limit 10
+python3 scripts/refsearch.py impl 'BPSNode::ExecuteProcessRequest' --scope camera --limit 5
+python3 scripts/refsearch.py source LA.UM.8.12.r1-11900-sm8250.0/camx/src/hwl/bps/camxbpsnode.cpp --line 1351 --limit 20
 python3 scripts/refsearch.py text AudioFlinger --scope frameworks --limit 20
 ```
 
-File and symbol searches select **both** `android-t-qcom` and
+File, symbol and implementation searches select **both** `android-t-qcom` and
 `LA.UM.8.12.r1-11900-sm8250.0` by default. Add `--tree NAME` (repeatable) for one;
 `--scope TOPIC` intersects the selection with a component. Output is JSON Lines
 with source-qualified paths and a global default limit of 40. Narrow tree/scope
-before increasing limits. First locate a file/symbol, then read a small live source
+before increasing limits. First locate a file/symbol/body hit, then read a small indexed or live source
 range; never load complete symbol inventories into the chat.
 
 The committed bundles are `index/<tree>/manifest.json` plus compressed chunks.
@@ -46,7 +48,9 @@ embedding service or persistent daemon are needed. Related Python lookups may re
 | --- | --- |
 | Filename/path fragment | `files QUERY --scope TOPIC --limit 20` |
 | Exact C/C++ header type/macro/global name | `symbol NAME --tree NAME --limit 20` |
-| Function body, Java/Kotlin, build rule or exact log text | `text QUERY --scope TOPIC` or `rg -n -F -- QUERY known/component` |
+| Complete .cpp/.cc body text, method name or code fragment | `impl QUERY --scope TOPIC --limit 10` |
+| Indexed body range after a hit (works without source folders) | `source PATH --line N --limit 20` |
+| Live edits, regex, Java/Kotlin or other suffixes | `text QUERY --scope TOPIC` or scoped `rg` |
 | Source details after a hit | Read only the relevant line range in that file |
 | Shared Android 17 behavior/acceptance | Relevant workhub topic, active source and validation; historical reference is not device evidence |
 
@@ -58,21 +62,33 @@ Source/prebuilt contents are preserved, including one original generated header.
 
 ## Checked coverage and speed
 
-**2026-10-25, host-tested/source-checked:** repoindex 1.3.0
-([e2f0ff6](https://github.com/johnmart19/repoindex/commit/e2f0ff6a88c7e13416fb37115a403f792a187c56)):
+**2026-10-25, host-tested/source-checked:** repoindex 1.4.0
+([5fff5e6](https://github.com/johnmart19/repoindex/commit/5fff5e6867db265a8329db986a9a58338263939a)):
 
-| Tree | Files | Header symbols | Include edges |
+| Tree | All files | Full .cpp/.cc bodies | Header symbols |
 | --- | ---: | ---: | ---: |
-| `android-t-qcom` | 212,048 | 2,977,498 | 458,588 |
-| `LA.UM.8.12.r1-11900-sm8250.0` | 44,561 | 225,021 | 20,546 |
+| `android-t-qcom` | 212,048 | 72,079 | 2,977,498 |
+| `LA.UM.8.12.r1-11900-sm8250.0` | 44,561 | 2,490 | 225,021 |
 
-Both have zero recorded scan errors. Chunk/database hashes, SQLite/FTS consistency,
-logical references and every live path/size/integer-second mtime passed; source
-contents were not rehashed. 34 tool fixtures plus 4 workspace tests passed. Five-sample
-warm-engine medians were 1.3–9.0 ms; full CLI calls were about 67–70 ms including
-Python startup on that host. These are recorded measurements, not future guarantees.
+Both have zero scan errors and complete implementation text, including all
+function bodies; storage is not sampled or truncated. Every implementation's raw
+and normalized-text SHA-256 passed, together with chunk/DB hashes, SQLite/FTS and
+file/reference coverage. Non-implementation live checks compare path/size/mtime.
+43 tool fixtures plus 6 workspace tests passed. Sampled warm body-query medians
+were about 3–10 ms; results/ranges matched independent live-source checks. The
+11-case filename/header/body benchmark passed its explicit 100 ms warm-median
+budget. These are host measurements, not future guarantees.
+
+`impl` is case-sensitive literal search, supports multiline fragments and returns
+line/end-line/column with bounded excerpts (400 characters plus clipping markers).
+Use `--context 1` only when useful; context is capped at 1600 characters per hit.
+`source` reads indexed line ranges (up to 200 lines), including on a source-free
+checkout. Original code is untouched; UTF-8 replacement/NUL and LF normalization
+are recorded and raw hashes retained. This is full-text search, not compiler AST
+or overload resolution. Cold restoration is larger now (about 15.5 seconds for the source-free
+package check), but does not read or parse the source tree.
 See [V-REF-INDEX](../state/validation.md#v-ref-index),
-[performance/reproduction](https://github.com/PocoF3Releases/references_code/blob/main/docs/PERFORMANCE.md)
+[implementation coverage/reproduction](https://github.com/PocoF3Releases/references_code/blob/main/docs/IMPLEMENTATIONS.md)
 and [audit](https://github.com/PocoF3Releases/references_code/blob/main/docs/index-verification.json).
 Do not benchmark again without a relevant change or an unresolved performance issue.
 
@@ -86,9 +102,12 @@ python3 scripts/reindex.py --tree android-t-qcom
 # Both only when both changed:
 python3 scripts/reindex.py
 # Explicit deep audit if warranted; never a startup prerequisite:
-python3 tools/repoindex/repoindex.py workspace verify --live
+python3 tools/repoindex/repoindex.py workspace verify --live --hash-implementations
 ```
 
+Normal index refreshes include complete .cpp/.cc text automatically. `workspace
+implement` ingests implementation contents once into an unchanged older snapshot;
+it reads those sources and must never be run just to start a chat.
 `workspace optimize` adds newer acceleration to unchanged saved snapshots without
 rescanning source; it does not refresh source changes. New bundles publish atomically
 per tree, not as one cross-tree transaction. There is no incremental parser scan.
