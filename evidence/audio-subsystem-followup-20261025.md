@@ -164,3 +164,11 @@ enforcing candidate acceptance and exact saved-preference restoration remain
 the applicable device evidence. Sources are ready for the requested ROM rebuild;
 the rebuilt release itself still needs its normal install/smoke acceptance.
 Private review/build/artifact receipts: `~/evo/.repo/audio-final-recheck-20261025/`.
+
+## Subsequent gap closure
+
+The [Java/native closure](audio-framework-closure-20261025.md) supersedes the
+incomplete-JADX limit and expands native coverage. It also corrects the broad
+no-missing-feature inference: configured headphone 3D and calibrated SoundID
+are absent from current Parts. They remain unported/unverified without headphones
+and real calibration. Approved implemented behavior remains unchanged.
