@@ -2,7 +2,7 @@ component,current_owner,evidence,decision
 Dolby DAP control,hardware/xiaomi/dolby + frameworks/av,"Alioth hwdap/DMS RE, accepted APK hashes, native/framework On readback",present; retain QDSP scalar ABI and current lifecycle owner
 Dolby DMS and parameter persistence,vendor DMS service + libdlbdsservice/libdapparamstorage,87-path prior inventory hashes revalidated; DMS decomp reused,present; do not add a competing service
 DAP attachment/pregain/offload,DolbyDapController,current controller + Xiaomi reference + actual private parameter dispatch,present; reference two-word pregain and private metadata do not match Alioth QDSP ABI
-DAP diagnostics,frameworks/av DolbyDapController::dump,actual phone support byte plus production-expression host regression,numeric-formatting correction host/build-tested; final phone acceptance pending
+DAP diagnostics,frameworks/av DolbyDapController::dump,actual phone support byte plus production-expression host regression,numeric-format correction host/build/device-tested under enforcing; pushed to frameworks_av:cnb
 Dolby endpoint/orientation/volume tuning,hardware/xiaomi DolbyEngine/EndpointPolicy,stock miui-services Java controllers compared with current policy,present for supported non-spatial endpoints; no duplicate framework controller
 Dolby Game QDSP backend,hardware/xiaomi GameEffectController,existing native switch/package ABI and accepted route/communication policy,present; preserve approved game/profiles/settings
 FPSOP/MediaTek protocol,unselected backend,user cancelled MTK scope; native Qualcomm contract differs,not part of Alioth implementation

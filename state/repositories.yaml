@@ -158,10 +158,10 @@ repositories:
   - frameworks/av
   selected_ref: cnb
   refs:
-    cnb: 1e7787289cecdb5b029edfb6829ccee3965b6038
+    cnb: eecb939f5835ad998f04f34e3b760c9511b920f0
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/1e7787289cecdb5b029edfb6829ccee3965b6038
+    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/eecb939f5835ad998f04f34e3b760c9511b920f0
   observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
     recovery inclusion rechecked. No new build/device acceptance.
 - repository: https://github.com/PocoF3Releases/frameworks_base

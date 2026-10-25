@@ -98,11 +98,10 @@ was added. The correction is provided by an upstream dependency; it is not a mai
 
 ## V-DOLBY
 
-**Historical control-transport checks.** Captured effect ownership/attachment,
-pregain ACK 23698 and route/profile/reset acknowledgments do not prove acoustic
-DSP/VQE/game behavior. Earlier property/SELinux failures explain capture failures.
-Some MiSound probes changed settings and were not fully restorative.
-[Reconciled evidence](../memory/dolby-audio.md).
+Historical transport ACKs do not prove acoustic DSP/VQE/game processing. Older
+MiSound probes were not fully restorative. [Scope](../memory/dolby-audio.md).
+[Follow-up](../evidence/audio-subsystem-followup-20261025.md): enforcing candidate
+recording/lifecycle checks and artifact restoration; physical endpoint limits remain.
 
 ## V-PLATFORM
 
