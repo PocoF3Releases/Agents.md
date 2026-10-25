@@ -2,7 +2,7 @@
 
 ## Authority
 
-Current previous-build baseline: **14.10.2026**, confirmed by the maintainer on October 20. New update copy must exclude that build’s recovery, Parts/Dolby and Wi-Fi additions.
+Current published baseline: **20.10.2026**, confirmed by the maintainer on October 25. Exclude its features and all earlier announced equivalents from the next update.
 
 Android 17 historical published baseline: **23.09.2026 / Evolution X v12.2**,
 from maintainer-supplied September 22/23 notes. Exact ZIP hashes/included-commit
@@ -33,9 +33,9 @@ AC-4, haptics, WireGuard and other equivalent feature families. No Telegram
 message has been sent and this draft does not advance the published baseline.
 [Generated update banner](assets/evolutionx-alioth-20261014-banner.png).
 
-## October 20 update drafts
+## October 20 published update
 
-[Full post](telegram-20261020-full.md) and [caption post](telegram-20261020-short.md) compare current sources with the October 14 release manifest. The October 20 ZIP identifies Android 17 / SDK 37, v12.3, Alioth and the October 1 security patch. The copy focuses on upstream Settings/Evolver/SystemUI changes, flashlight behavior, pattern input, thumbnails and translations. Kernel content and recovery features are not re-announced. No new runtime acceptance or Telegram publication is claimed.
+[Full post](telegram-20261020-full.md) and [caption post](telegram-20261020-short.md) compare current sources with the October 14 release manifest. The October 20 ZIP identifies Android 17 / SDK 37, v12.3, Alioth and the October 1 security patch. The copy focuses on upstream Settings/Evolver/SystemUI changes, flashlight behavior, pattern input, thumbnails and translations. Kernel content and recovery features are not re-announced. On October 25 the maintainer confirmed publication of the October 20 build; that confirmation adds no new runtime acceptance.
 
 [Generated update banner](assets/evolutionx-alioth-20261020-banner.png).
 
@@ -132,3 +132,10 @@ compatibility and capture-read safeguards, grouping duplicate changes once.
 No new ROM publication or universal runtime acceptance is implied.
 
 The October 11 standalone [recovery source](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp) has no published release assets. Historical asset hashes above are retained as records, not current download links.
+
+## Next-update history preparation
+
+[Collection workflow](../operations/changelog-history.md) records the October 20
+baseline, immutable source checkpoints and patch-equivalence filtering. The
+current rebuild is in progress; no next-release copy or artwork is generated.
+A source checkpoint is not a finished build manifest or proof of artifact inclusion.
