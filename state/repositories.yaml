@@ -134,10 +134,10 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 6429de66995b8083ff348bc2a2957ead3b833d4d
+    cnb: f70f79506831bf55b064974ca5a69a4c3bea3d8f
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/6429de66995b8083ff348bc2a2957ead3b833d4d
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/f70f79506831bf55b064974ca5a69a4c3bea3d8f
   observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
     in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera

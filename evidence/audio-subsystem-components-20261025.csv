@@ -16,7 +16,7 @@ MiSound scenes/Hi-Fi/music gates,Parts + vendor properties + native effect,prope
 MiSound stream-volume hint 25,Xiaomi extension/native command,descriptor high-bit advertisement but native body is no-op after input-size validation,not a useful missing hook
 MiSound app blacklist hint 24,Xiaomi framework/native effect,parameter 6 must configure starred names first; command 24 only tracks matches,optional configured policy; no blanket app whitelist/import
 MiSound standby hint 23,Xiaomi framework/native effect,native clears stream/blacklist counters and mode 1; Parts owns current requested state,not a safe generic recovery patch without a demonstrated ownership need
-MiSound hearing/SoundID/ear compensation,stock wrapper and application,fresh APK/JAR discovery; native methods alone are not calibrated input or acoustic proof,no default calibration or new UI enabled
+MiSound hearing/SoundID/ear compensation,stock wrapper and application,"Exact stock call/profile/native protocol closure; configured SoundID property, no personal profile in dump",SoundID is an optional stock capability absent Parts; no invented calibration or unverified feature enablement
 MiSound movie surround/vocal API,native parameters and stock wrappers,"native API exists, stock wrapper caches methods without call sites in this APK",do not expose guessed ranges/defaults merely from methods
 Standard AudioEffect lifecycle,frameworks/base + frameworks/av,current modern ownership API + fresh stock wrapper comparisons,present; retain AOSP lifecycle/permission model
 Audio HAL 6 and DSP routing,QCOM source HAL + shipped primary backend,configuration/ELF closure and installed audio service maps,present; no unverified HAL version migration
@@ -34,6 +34,6 @@ Stock AudioClient extension,historical MIUI libaudioclientimpl,new ARM64 decomp:
 Stock policy extensions,historical MIUI manager/service implementations,new ARM32 decomp: 63/63 + 23/23 functions,reference only; route/cast/volume/cloud features require current owners
 Stock media extension,historical MIUI libmediaimpl,new ARM32 decomp: 118/118 functions,reference only; OZO/media hooks not automatically Dolby/MiSound requirements
 Dolby OTT control filename,stock libdolbyottcontrol,ELF imports/exports identify Dolby Vision/OpenGL/video implementation,excluded from audio dependency list; filename is not evidence of Atmos
-OZO/spatial/3D optional extensions,historical Xiaomi AV source and stock binaries,170-file subtree plus native/API gate comparisons,not enabled from source presence or broad shared support flags
+OZO/spatial/3D optional extensions,historical Xiaomi AV source and stock binaries,Expanded framework closure; MiSound3D actual caller + stock feature bit/native20; optional OZO libraries decompiled,MiSound headphone3D is absent Parts and unverified without endpoint; other optional source presence does not authorize activation
 SELinux/init/property/package ownership,device and hardware/xiaomi policy/config,current manifests/properties + enforcing runtime owner baseline,present; root diagnostics do not substitute for production owner access
 Translations and approved UI,standalone hardware/xiaomi translation change + Parts resources,unchanged source hashes and prior accepted UI/resource audits,preserved; no new user-facing strings from the diagnostic fix

@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Audio Java/native closure](audio-framework-closure-20261025.md) | Exact bytecode recovery, native coverage, phone checks and optional headphone gaps |
 | [Subsystem inventory](subsystem-inventory-20261025.md) | 105-entry map, source/build counts, SKU and hardware distinctions |
 | [Cancelled Turnip evaluation](turnip-evaluation-20261025.md) | Actual driver selection, tests, slowdown, uncertainty and stock restoration |
 | [Native A17 recovery/full OTA](evox-native-recovery-20261014.md) | Resync, fresh user build, secure OTA, no-credential FBE and restoration |
