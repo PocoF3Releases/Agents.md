@@ -97,7 +97,7 @@ repositories:
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: 8d06b9963ac5b7b67d6e1d241d0d6dca85fc505d
+    main: 58b778ce02766b25c748f1b0a3e6be6093e658f0
     LA.UM.8.12.r1-11900-sm8250.0: ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: 953194cfd08d028c2ccd718f5d0374531d9716d2
@@ -112,7 +112,7 @@ repositories:
     vendor_xiaomi_frameworks: 56aa2e9ed68fb484f18401ffdbae2698bc453c06
     vendor_xiaomi_proprietary: d22a991cdb0fbb1c85d361a642e5f93a1fdd9f43
   commit_links:
-    main: https://github.com/PocoF3Releases/references_code/commit/8d06b9963ac5b7b67d6e1d241d0d6dca85fc505d
+    main: https://github.com/PocoF3Releases/references_code/commit/58b778ce02766b25c748f1b0a3e6be6093e658f0
     LA.UM.8.12.r1-11900-sm8250.0: https://github.com/PocoF3Releases/references_code/commit/ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: https://github.com/PocoF3Releases/references_code/commit/d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: https://github.com/PocoF3Releases/references_code/commit/953194cfd08d028c2ccd718f5d0374531d9716d2
@@ -126,7 +126,7 @@ repositories:
     frameworks_native: https://github.com/PocoF3Releases/references_code/commit/062ccb03638e2d194d8878299c33bfd88c947de7
     vendor_xiaomi_frameworks: https://github.com/PocoF3Releases/references_code/commit/56aa2e9ed68fb484f18401ffdbae2698bc453c06
     vendor_xiaomi_proprietary: https://github.com/PocoF3Releases/references_code/commit/d22a991cdb0fbb1c85d361a642e5f93a1fdd9f43
-  observation: 2026-10-25; main ships complete implementation-content bundles and bounded offline queries; legacy branch entries retained as historical refs.
+  observation: 2026-10-25; main consolidated with recovery backup; ready data unchanged; canonical CLI/docs and consumer evidence organized; legacy refs preserved.
 
 - repository: https://github.com/PocoF3Releases/hardware_xiaomi
   role: build_source
@@ -254,10 +254,10 @@ repositories:
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: 5fff5e6867db265a8329db986a9a58338263939a
+    main: 5da2c5433a545252bf4eabff9a8093823bc1784b
   commit_links:
-    main: https://github.com/johnmart19/repoindex/commit/5fff5e6867db265a8329db986a9a58338263939a
-  observation: 2026-10-25; repoindex 1.4.0 with full implementation text, bounded offline retrieval and source/body hash verification.
+    main: https://github.com/johnmart19/repoindex/commit/5da2c5433a545252bf4eabff9a8093823bc1784b
+  observation: 2026-10-25; repoindex 2.0.0; standalone bounded CLI, docs, benchmarks and 61 fixtures; clean main snapshot.
 
 - repository: https://github.com/PocoF3Releases/external_tinycompress
   role: build_source
