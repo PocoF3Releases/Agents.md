@@ -117,3 +117,8 @@ checks cover recording/encoding, PCM and communication recovery; the original
 audioserver and exact preferences were restored. Installed tinycompress now matches the accepted
 short-read fix; earlier temporary-only notes are historical. Optional DSP hooks
 still require a demonstrated caller and compatible ABI.
+
+The [subsequent closure](../evidence/audio-framework-closure-20261025.md) resolves
+Java gaps and covers 50 native inputs. Stock headphone 3D/SoundID are concrete
+optional gaps in Parts, not verified feature ports. The firmware dump contains no
+personal calibration; do not invent gains or enable them without endpoint tests.
