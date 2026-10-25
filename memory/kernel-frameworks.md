@@ -73,12 +73,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-The October 24 kernel head retains the Zstd/LZ4 updates, ZRAM fixes and driver
-hardening. Seven affected ARM64 targets passed unsuppressed sparse and W=1;
-regression/sanitizer tests and targeted MMIO code-generation comparisons passed.
-These are component checks, not a newly flashed kernel or full-ROM certification.
-Use the [current source ledger](../state/repositories.yaml) and
-[refresh record](../evidence/source-refresh-20261025.md) for identity and limits.
+October 24's seven ARM64 W=1/sparse target checks and sanitizer/code-generation
+comparisons retain their recorded limits. The [October 26 configured audit](../evidence/kernel-subsystem-audit-20261026.md)
+adds verified touch/SPSS input-copy repairs, upstream ACPI/iterator fixes and
+Wi-Fi include cleanup. Normal Image and targeted phone checks pass; the full
+W=1/C=2 tree still fails. Review remaining diagnostics by subsystem rather than
+adding blanket casts or suppressions. No system-side changes were made.
 
 ## Intermittent shutdown investigation
 
