@@ -25,7 +25,7 @@ Checkpoint: **2026-10-25**. [Android 17 status](state/android17-status.md).
 | First chat / install skill | [Onboarding](operations/first-chat.md) |
 | Windows / WSL reinstall | [Recovery](operations/workstation-recovery.md) |
 | Host / Android tools | [Tools](operations/host-tooling.md) |
-| repoindex | [Indexing](operations/repoindex.md) |
+| Source search | [Ready indexes](operations/repoindex.md) |
 | Exact source / test scope | [Sources](state/repositories.yaml) · [Validation](state/validation.md) |
 
 Optional search: [INDEX.yaml](INDEX.yaml). Read [archive](archive/README.md) only for provenance.

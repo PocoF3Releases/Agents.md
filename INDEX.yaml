@@ -1,5 +1,5 @@
 schema_version: 1
-last_refreshed: '2026-10-14'
+last_refreshed: '2026-10-25'
 entrypoints:
   rules: AGENTS.md
   current_state: CURRENT_STATE.md
@@ -192,7 +192,7 @@ subsystems:
     - adb
     - fastboot
   indexing:
-    title: repoindex and database recovery
+    title: Ready reference indexes and fast source search
     status: maintained
     memory: operations/repoindex.md
     keywords:
@@ -201,6 +201,10 @@ subsystems:
     - index
     - database
     - source search
+    - android-t-qcom
+    - LA.UM.8.12.r1-11900-sm8250.0
+    - trigram
+    - no rebuild
   artwork:
     title: Release banners
     status: maintained
