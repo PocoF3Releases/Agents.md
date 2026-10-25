@@ -63,7 +63,10 @@ Exact chronology and old heads remain in the original ledger linked above.
 
 Use [current sources](repositories.yaml) and [scoped validation](validation.md).
 Group user-visible behavior; omit reverted experiments, docs/build tooling and
-rebased equivalents. For an initial post, summarize cumulative supported features;
+rebased equivalents.
+Use bold Telegram headings and explicit Markdown hard breaks for Unicode bullet
+lines and blank spacing, so rendered GitHub copy does not collapse paragraphs.
+Copy rendered text into Telegram; raw Markdown contains formatting escapes. For an initial post, summarize cumulative supported features;
 for an update, compare with its actual published semantic baseline.
 
 [Full Telegram post](telegram-initial-full.md) and
