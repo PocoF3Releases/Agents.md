@@ -1,6 +1,6 @@
 # Intermittent shutdown stall — October 25, 2026
 
-**Unresolved kernel hang; independently corrected source policy denial.** The
+**Reported hang unresolved; verified SPU permission and perf deadlock repairs published.** The
 maintainer reports frequent black-screen Power off stalls and rare Restart
 stalls. Do not label this fixed from successful short-uptime tests.
 
@@ -50,7 +50,9 @@ no driver power-off logic and no thermal/security settings. No kernel image was
 flashed. Loading an external module marks the kernel with the ordinary O taint;
 that diagnostic context must be retained when interpreting future logs.
 
-The latest diagnostic restart unloaded `shutdown_diag`; it is not currently loaded.
+After temporary-image testing, the original installed kernel was restored and
+its matching `shutdown_diag` observer was rearmed for this boot only. The exact
+SPU live rule is also active for this boot; neither has persistent autoload.
 `initcall_debug=N`, SELinux remains enforcing, and there is no autoload script or
 persistent Magisk module. The staged file is `/data/local/tmp/shutdown_diag.ko`.
 A reboot/power-off unloads it. Once the hang is captured or this investigation is
@@ -75,27 +77,62 @@ and match installed hashes. Runtime AVCs include optional diagnostics/property
 probes and diagnostic-harness entrypoint/fd failures; those are not grounds for
 blanket permissions. No additional functional SELinux repair is established.
 
-## Perf timer investigation — candidate only
+## Published perf repairs and acceptance
 
-A healthy restart captured firmware, CNSS, NFC, NPU and ESOC notifiers, followed
-by perf_reboot and the final observer. All returned before device_shutdown.
-The failed historical trace has no final marker or task stack, so its precise
-blocking callback remains unproved.
+The healthy traced restart captured firmware, CNSS, NFC, NPU and ESOC notifiers,
+followed by perf_reboot and the final observer. The failed historical trace has
+no final marker or task stack, so its exact blocking callback remains unproved.
 
 Source review found perf_event_exit_cpu_context calling hrtimer_cancel while
 holding hrtimer_lock, also required by perf_mux_hrtimer_handler. perf_reboot
 tears down remote online CPUs, making a running remote callback relevant. A
 bounded device probe observed an entered callback and try_to_cancel returning
 -1 while that lock was held; cancellation outside the lock completed. It did not
-intentionally deadlock the phone. The first probe used an invalid IRQ-disabled
-IPI context and generated a warning; the corrected probe starts the remote timer
-before taking the lock and completed without that warning. Both were unloaded
-and removed. Keep this harness warning distinct from a production failure.
+intentionally deadlock the phone. The first harness used an invalid IRQ-disabled
+IPI context and generated a warning; the corrected harness starts the remote
+timer before taking the lock and completed without that warning. Both probes
+were unloaded and removed. Keep that harness warning distinct from production.
 
-A local candidate gates timer restart during teardown, cancels outside the lock,
-and clears the gate when the CPU returns online. Normal ARM64 object compilation
-and strict checkpatch pass. W=1 finds three missing-prototype errors also present
-on the unchanged baseline. Sparse reports existing address-space/context issues;
-exit zero is not a clean sparse result. Full image/device acceptance and causal
-attribution to the intermittent shutdown hang remain pending. No kernel fix is
-published or claimed installed.
+Published separately on the kernel aosp-17 branch:
+
+- [Timer teardown](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d9a0bc96e102aab71f01e277d856f72a871ea966):
+  gate timer rearming before cancelling outside the callback lock. Reset the
+  gate in AP restart before deferred events are installed. Independent review
+  caught and corrected the initially missing failed-CPU-down rollback case.
+- [Resolved per-CPU pointer types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4bd82288909db6b24fcc5e7a70ad1cd35427a3d0):
+  derive generic fallback locals from raw_cpu_ptr, preserving ordinary-address
+  typing after resolving the per-CPU pointer.
+- [Perf ownership contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6d6310d6bc2f8a69724011e29d848c358bc32c0f):
+  correct RCU/per-CPU declarations and protected accesses, missing hook
+  prototypes, private linkage, poll/user-copy boundaries, conditional lock and
+  output-handle ownership annotations, and stale kernel-doc descriptions.
+
+All enabled kernel/events objects pass ARM64 W=1 and sparse without source
+warnings/errors. No warning options were disabled. Separate pre-existing host
+Genksyms grammar conflict notices remain outside this perf-source cleanup.
+Strict patch checks have no errors/warnings; the per-CPU typeof expressions
+produce five known unary-address-of spacing CHECK false positives. Source review
+found no remaining blockers after the rollback correction. No config changes,
+permanent diagnostics, test binaries or documentation were added to the kernel.
+
+The final kernel Image built successfully. A temporary boot preserved the rooted
+ramdisk byte-for-byte and kept SELinux enforcing. Baseline and candidate each
+opened, multiplexed and read all 96 raw PMU events successfully. Sampling,
+callchain/user-stack copying and fork/exit records passed with no malformed
+records; the candidate repeated both checks after CPU7 offline/online recovery.
+No new kernel warning appeared in that test interval. Forced CPU-down failure
+was not injected; rollback coverage is source-reviewed, not runtime-certified.
+
+The candidate's traced Restart completed all normal-priority callbacks, then
+perf teardown in about 11 ms, followed by hardware restart. A separate candidate
+Power off reached charging mode, confirmed by the maintainer. Charger startup
+then overwrote the candidate Power off console; do not present the charger
+console as its driver teardown trace. These are bounded regression checks, not
+proof that the intermittent long-uptime report is fully resolved.
+
+The installed boot partition SHA-256 is unchanged from its pre-test backup; the
+phone returned to the original installed kernel, enforcing mode and
+initcall_debug=N. Owned test-image staging and test executables were removed.
+Only the original-kernel observer remains loaded, with its staged module owned
+by root at mode 0600. A real recurrence still needs the retained stack/phase
+capture; do not close this report from successful shutdowns alone.
