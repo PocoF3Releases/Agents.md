@@ -6,7 +6,7 @@ A higher-priority MiSound client set native music state to zero and released con
 The persistent owner regained control, but normal playback callbacks and reopening
 MiSound failed to restore requested processing. Cached state was stale.
 
-[2147d20](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2147d20b731be3400255925b14cd5de40ecc3176)
+[consolidated MiSound fix](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87)
 reconciles framework enable, native enable and music state on refresh and callbacks.
 Requested Off and Pause during calls remain authoritative. No tuning or UI changed.
 [Translations remain separate](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b653ae1cbb59c26410eae3b1b22e0029781d254a).
@@ -32,3 +32,7 @@ outside this test scope. The next ROM build must include the fix.
 
 Local recovery overlays were preserved with an identical final tree. Recovery
 preflight reports zero pending patches in all three projects.
+
+This is the historical readback-only APK test. The source is now one consolidated
+recovery commit; [fresh final checks](audio-complete-20261025.md) cover listener
+recovery without changing these recorded artifact identities.
