@@ -85,3 +85,7 @@ The [voice-message/VoIP recovery audit](../evidence/voice-message-recovery-20261
 records a reproduced compressed-capture short-read errno/stale-tail defect, its
 standalone tinycompress fix, host/native shared-library regressions and codec/
 restart/duplex acceptance. Nonblocking behavior and translation commits are separate.
+
+The [MiSound recovery audit](../evidence/misound-recovery-20261025.md) records the
+controlled-handover failure and repair, rapid communication start/stop and actual
+earpiece/speaker tests for On, Off and disabled pause. Dolby needed no new fix.
