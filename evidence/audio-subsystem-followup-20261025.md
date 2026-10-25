@@ -1,8 +1,7 @@
 # Full Dolby and MiSound follow-up — October 25, 2026
 
-**Source-checked, host-tested and build-tested; final candidate phone acceptance
-remains unverified.** This checkpoint does not claim a pushed source fix or
-completed candidate runtime acceptance.
+**Source-checked, host-tested, build-tested and device-tested within the scope
+below.** The diagnostic fix is pushed; temporary device artifacts were restored.
 [Existing accepted audio work](../memory/dolby-audio.md) remains the baseline.
 
 ## Requested scope
@@ -88,7 +87,7 @@ private logs or original binaries are included in this knowledge record.
 
 ## Diagnostic correction and outstanding acceptance
 
-The current uncommitted frameworks/av change casts the libcutils int8_t support
+The [published frameworks/av correction](https://github.com/PocoF3Releases/frameworks_av/commit/eecb939f5835ad998f04f34e3b760c9511b920f0) casts the libcutils int8_t support
 property to bool before ostream output. Previously the dump emitted a control
 byte instead of numeric 0/1. This changes diagnostic formatting only. A host
 regression compiled the actual production expression: baseline failed, corrected
@@ -102,9 +101,39 @@ DT_NEEDED sets match (70 libraries). No production test files were added.
 The installed baseline passed saved MiSound Off / Dolby On readback, rapid
 voice-message and communication transitions, and acknowledged earpiece/speaker
 routing. These are baseline results, not candidate acceptance or acoustic proof.
-At this documentation checkpoint the candidate dump capture is empty and no
-completed candidate test JSON is present. Do not claim the candidate phone test,
-rollback confirmation, publication, or release readiness from this record.
-Temporary deployment and exact preference/artifact restoration must be verified
-before promoting the source change. No new build, flash or device operation was
-performed merely to update this documentation.
+The final candidate ran under enforcing SELinux and printed numeric `support=1`
+with `control=qdsp`. Accepted checks:
+
+- Saved Dolby On / MiSound Off readback after the server restart.
+- Rapid record/playback start-stop, capture-only/playback-only communication
+  bypass, duplex mode and actual earpiece/speaker route acknowledgments recovered
+  processing state; final audio mode was normal.
+- Six MIC/voice-recognition/voice-communication recording cases at 16/48 kHz
+  passed with advancing timestamps; AEC/NS were enabled for communication.
+- AAC and Opus in-memory voice-message encoding reached EOS; eight capture
+  restarts passed. Samples were discarded without writing recordings.
+- Silent 48 kHz PCM playback rendered 180480 frames with zero underruns. This
+  does not prove audible speaker quality.
+
+The first deployment failed because a bind from the nosuid data filesystem
+blocked init's SELinux transition (`nosuid_transition` / `execute_no_trans`). This
+was a diagnostic deployment problem, not an audio-policy defect. A RAM-backed
+executable mount allowed the ordinary audioserver transition with enforcing
+policy unchanged. An early state read also preceded app recovery; the final run
+waited for recovery and passed. No permissive setting or production policy
+exception was introduced.
+
+The rollback guard restored the original executable SHA-256 and removed both
+temporary mounts. Both preference-file hashes remained identical, normal saved
+Off/On readback returned, Android remained booted and SELinux enforcing. Initial
+property reads from shell were incomplete: vendor-property access is restricted,
+and root reads reveal values hidden from shell. Therefore blank shell values
+were not treated as valid originals, overwritten, or claimed as an exact property
+restoration check. No test explicitly wrote those properties.
+
+All nine tracked source worktrees remained clean; only frameworks/av advanced by
+the one-line diagnostic fix. Approved Parts/Dolby implementation and separate
+translation history are unchanged. The phone retains its original executable;
+the pushed change needs inclusion in the next ROM build. Physical Bluetooth,
+USB/headset, remote-call acoustics and optional DSP tuning retain prior limits.
+No claim of exhaustive hardware/firmware correctness follows from this audit.
