@@ -1,0 +1,39 @@
+component,current_owner,evidence,decision
+Dolby DAP control,hardware/xiaomi/dolby + frameworks/av,"Alioth hwdap/DMS RE, accepted APK hashes, native/framework On readback",present; retain QDSP scalar ABI and current lifecycle owner
+Dolby DMS and parameter persistence,vendor DMS service + libdlbdsservice/libdapparamstorage,87-path prior inventory hashes revalidated; DMS decomp reused,present; do not add a competing service
+DAP attachment/pregain/offload,DolbyDapController,current controller + Xiaomi reference + actual private parameter dispatch,present; reference two-word pregain and private metadata do not match Alioth QDSP ABI
+DAP diagnostics,frameworks/av DolbyDapController::dump,actual phone support byte plus production-expression host regression,numeric-formatting correction host/build-tested; final phone acceptance pending
+Dolby endpoint/orientation/volume tuning,hardware/xiaomi DolbyEngine/EndpointPolicy,stock miui-services Java controllers compared with current policy,present for supported non-spatial endpoints; no duplicate framework controller
+Dolby Game QDSP backend,hardware/xiaomi GameEffectController,existing native switch/package ABI and accepted route/communication policy,present; preserve approved game/profiles/settings
+FPSOP/MediaTek protocol,unselected backend,user cancelled MTK scope; native Qualcomm contract differs,not part of Alioth implementation
+Dolby VQE library,registered native libswvqe,"ELF exports, HIDL callbacks and prior format/config review",registered; do not force an unsupported automatic/global insert
+VQE track-change notification reference,reference AudioFlinger + DMS IVqeCallbacks,DMS forwards only to registered callback; full stock ELF/executable and 693 DEX-entry scan found no concrete owner,no demonstrated active Alioth consumer; do not add a dead framework bridge
+Dolby AC-4 decoder,frameworks/av OMX + vendor decoder/helper tables,"accepted decode integration, matching product/table flags and shipped inputs","present; preserve accepted legacy ABI, not a Codec2 transplant"
+MiSound Java/native transport,Parts MiSoundEffect,"fresh stock framework wrapper, shipped descriptor/command RE, accepted APK identity",present; keep NUL-terminated EQ values and ten native bands
+MiSound saved-state/control recovery,Parts MiSoundUtils,current source + prior ownership/restart acceptance + current saved Off readback,"present; preserve preferences, control listener, retries and server callback"
+MiSound headset capabilities,Parts resources and native GET_PARAM 19,stock wrapper vs current bounded capability parser and supported selector,present; do not infer support from unused stock enum names
+MiSound scenes/Hi-Fi/music gates,Parts + vendor properties + native effect,property gates checked in both device trees; native setters/restoration already reviewed,present; avoid adding redundant property flags
+MiSound stream-volume hint 25,Xiaomi extension/native command,descriptor high-bit advertisement but native body is no-op after input-size validation,not a useful missing hook
+MiSound app blacklist hint 24,Xiaomi framework/native effect,parameter 6 must configure starred names first; command 24 only tracks matches,optional configured policy; no blanket app whitelist/import
+MiSound standby hint 23,Xiaomi framework/native effect,native clears stream/blacklist counters and mode 1; Parts owns current requested state,not a safe generic recovery patch without a demonstrated ownership need
+MiSound hearing/SoundID/ear compensation,stock wrapper and application,fresh APK/JAR discovery; native methods alone are not calibrated input or acoustic proof,no default calibration or new UI enabled
+MiSound movie surround/vocal API,native parameters and stock wrappers,"native API exists, stock wrapper caches methods without call sites in this APK",do not expose guessed ranges/defaults merely from methods
+Standard AudioEffect lifecycle,frameworks/base + frameworks/av,current modern ownership API + fresh stock wrapper comparisons,present; retain AOSP lifecycle/permission model
+Audio HAL 6 and DSP routing,QCOM source HAL + shipped primary backend,configuration/ELF closure and installed audio service maps,present; no unverified HAL version migration
+ALSA/calibration/amplifier transport,tinyalsa/tinycompress/ACDB/CS35L41/GEF,125 prior native/data inputs match prior hashes,present; calibration/resources are not guessed replacements
+Compressed capture,external/tinycompress,installed hash matches accepted corrected library,present in installed build; prior temporary-only record is historical
+AEC/NS and PCM VoIP,effect registration + QCOM native voice paths,prior native review and current recording/communication route churn,present; acoustic remote-call quality remains endpoint dependent
+Voice-message lifecycle and routing,Parts/Dolby callbacks + Android audio policy,current baseline rapid capture/playback/duplex/earpiece/speaker checks passed,retain processing pause/recovery without changing saved On/Off preference
+FCSAM/audio zoom plugin payload,vendor/xiaomi/alioth,stock FM_CAM.bin accepted packaging and native initialization audit,present; not proof of acoustic zoom quality
+Audio cloud and dynamic logs,native HAL/framework optional paths,existing native hooks and supplementary stock framework decomp,no MIUI cloud policy or debug-log activation imported
+Sound trigger/listen/hotword,sound-trigger HAL + ADSP models,prior 87-path coverage and current configuration inventory,present; endpoints/recognition quality not exhaustively exercised
+Bluetooth audio,AIDL/QTI providers + offload/DSP modules,prior codec/session contracts and installed configuration,present; physical Bluetooth endpoints not available for new acceptance
+USB/headset audio,"HAL routes, policy and preprocessing",existing configuration and prior route review,present; no new physical USB/headset acceptance
+Stock AudioFlinger extension,historical MIUI libaudioflingerimpl,new ARM32 decomp: 80/80 functions; mapped source callers and feature gates,reference only; do not ship old private-framework ABI into Android 17
+Stock AudioClient extension,historical MIUI libaudioclientimpl,new ARM64 decomp: 189/189; input/stream remapping and disabled shoot-detect bodies,reference only; no stock package/rate whitelist graft
+Stock policy extensions,historical MIUI manager/service implementations,new ARM32 decomp: 63/63 + 23/23 functions,reference only; route/cast/volume/cloud features require current owners
+Stock media extension,historical MIUI libmediaimpl,new ARM32 decomp: 118/118 functions,reference only; OZO/media hooks not automatically Dolby/MiSound requirements
+Dolby OTT control filename,stock libdolbyottcontrol,ELF imports/exports identify Dolby Vision/OpenGL/video implementation,excluded from audio dependency list; filename is not evidence of Atmos
+OZO/spatial/3D optional extensions,historical Xiaomi AV source and stock binaries,170-file subtree plus native/API gate comparisons,not enabled from source presence or broad shared support flags
+SELinux/init/property/package ownership,device and hardware/xiaomi policy/config,current manifests/properties + enforcing runtime owner baseline,present; root diagnostics do not substitute for production owner access
+Translations and approved UI,standalone hardware/xiaomi translation change + Parts resources,unchanged source hashes and prior accepted UI/resource audits,preserved; no new user-facing strings from the diagnostic fix
