@@ -214,4 +214,4 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-ACTIVE
 
-[Scope](../evidence/kernel-active-driver-fixes-20261027.md).
+[Scope](../evidence/kernel-main-install-20261027.md).
