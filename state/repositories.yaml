@@ -79,14 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 214c6de5d610070ddd93c10de46fd4e350feda2f
+    aosp-17: 90971a36383ff107cff55c7b37001eb6283d036b
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/214c6de5d610070ddd93c10de46fd4e350feda2f
-  observation: 2026-10-26; hub locking reviewed without altering the upstream fix;
-    separate MTP user/kernel buffer and compat lock repairs plus USB helper fixes.
-    See evidence/kernel-hub-mtp-audit-20261026.md for checks and remaining diagnostics.
-    Strict warning policy remains; no new phone deployment or system-side changes.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/90971a36383ff107cff55c7b37001eb6283d036b
+  observation: 2026-10-26; separate MTP wire/pointer/length fixes and corrected
+    DWC3 documentation pass scoped W=1/sparse, sanitizer, ABI/wire and kernel build
+    checks. See evidence/kernel-mtp-dwc3-contracts-20261026.md. Strict flags remain;
+    whole-kernel diagnostics are incomplete and no new phone deployment is claimed.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
