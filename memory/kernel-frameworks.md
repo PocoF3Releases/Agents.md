@@ -73,11 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-October 24's targeted checks retain their recorded limits. The [October 26 configured audit](../evidence/kernel-subsystem-audit-20261026.md)
-failed full-tree W=1/C=2. The [active-driver follow-up](../evidence/kernel-active-driver-checks-20261026.md)
-clears seven UFS/USB/charging/Bluetooth objects. The [GPU/display/thermal follow-up](../evidence/kernel-gpu-display-thermal-20261026.md)
-clears ten more selected objects with Image and enforcing phone checks. Wider diagnostics need review;
-no warning suppressions or system-side changes were introduced.
+The [configured audit](../evidence/kernel-subsystem-audit-20261026.md) remains
+failing. [Active drivers](../evidence/kernel-active-driver-checks-20261026.md) and
+[GPU/display/thermal](../evidence/kernel-gpu-display-thermal-20261026.md) have scoped
+accepted fixes. The [full-kernel continuation](../evidence/kernel-full-warning-continuation-20261026.md)
+records further fixes, Image/modules/DTB and Wi-Fi/FUSE/BPF/physical-mode checks,
+plus remaining compiler/header-export failures. No system sources or thermal
+policy changed; unfinished kernel gates precede prebuilt/device-tree work.
 
 ## Intermittent shutdown investigation
 
