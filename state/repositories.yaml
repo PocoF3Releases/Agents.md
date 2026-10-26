@@ -79,13 +79,13 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: c356b4b212bc9f5cddb9432a8364d22c7c4fbefc
+    aosp-17: ba20abb9cf2d7ef4cf60fa4f25bfb925298dae80
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c356b4b212bc9f5cddb9432a8364d22c7c4fbefc
-  observation: 2026-10-26; LSM short replies, SHS VMA lifetime and video DMA/range
-    fixes pass configured techpack W=1/C=2, Image, host and enforcing phone checks.
-    Original boot restored; scope and limits in evidence/kernel-techpack-followup-20261026.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ba20abb9cf2d7ef4cf60fa4f25bfb925298dae80
+  observation: 2026-10-26; DSP status, display import and EOS ownership fixes
+    pass configured techpack W=1/C=2, Image, host and enforcing phone checks.
+    Original boot restored; scope and open PM limit in evidence/kernel-techpack-eos-gem-20261026.md.
     System sources unchanged.
 
 - repository: https://github.com/PocoF3Releases/.github
