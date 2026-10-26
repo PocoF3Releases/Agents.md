@@ -73,11 +73,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Crypto/library recheck](../evidence/kernel-crypto-lib-recheck-20261026.md) retains
-all 27 fixes and adds verified QRNG exact-request handling. W=1/Image, host and
-enforcing phone checks pass; original boot restored. Nine reviewed sparse reports
-stay visible; actual lock tests pass. Prior GPU/techpack, SRCU, display-PM and
-hardware limits remain linked there. System sources and thermal policy unchanged.
+[Whole-kernel audit](../evidence/kernel-whole-warning-audit-20261026.md) adds
+24 verified ARM64/init, scheduler, FastRPC, clocks, SPS/IPA/RPMh, charging,
+fingerprint, NCM and wireless repairs. Normal Image, affected W=1, host and
+enforcing phone checks pass; original boot restored. Full strict gate still
+fails elsewhere; sparse/docs debt remains visible. No system/config/policy
+changes. Prior crypto, GPU, display and shutdown limits remain linked there.
 
 ## Intermittent shutdown investigation
 
