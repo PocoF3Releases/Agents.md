@@ -79,14 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 7b0c889d08add642d9022ac87288356030e65d29
+    aosp-17: 7c791f0b0e10b26a524adeddd482778a1edfffad
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7b0c889d08add642d9022ac87288356030e65d29
-  observation: 2026-10-26; GPU/import/GMU and SMMU/DRM/ION fixes pass selected
-    W=1, Image, host and enforcing phone checks. Two conditional-SRCU sparse
-    reports remain visible; original boot restored. Scope in evidence/kernel-gpu-audit-20261026.md.
-    System sources and thermal policy unchanged.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7c791f0b0e10b26a524adeddd482778a1edfffad
+  observation: 2026-10-26; crypto/library/QCE/QSEE/RNG fixes pass configured
+    W=1, Image, host and enforcing phone checks. Nine conditional-lock sparse
+    reports remain visible; original boot restored. Scope in evidence/kernel-crypto-lib-audit-20261026.md.
+    Prior GPU/SRCU limits linked there; system sources and thermal policy unchanged.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
