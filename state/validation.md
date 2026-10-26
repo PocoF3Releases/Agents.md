@@ -103,10 +103,10 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-**Scoped checks.** [Techpack follow-up](../evidence/kernel-techpack-followup-20261026.md)
-records zero W=1/C=2 diagnostics, Image and enforcing phone tests for LSM,
-SHS lifetime and video DMA/ranges. Prior broad coverage and hardware/DSP limits
-are linked there; [platform scope](../memory/kernel-frameworks.md) remains.
+**Scoped checks.** [Techpack EOS/GEM](../evidence/kernel-techpack-eos-gem-20261026.md)
+records zero W=1/C=2 diagnostics, Image, host failure cases and enforcing
+phone audio/video/display checks. Atomic runtime-PM failure propagation remains
+open; prior coverage and hardware/DSP limits are linked there.
 
 ## V-RELEASE
 

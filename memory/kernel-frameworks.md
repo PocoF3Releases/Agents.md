@@ -73,13 +73,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Techpack lifetime/DMA follow-up](../evidence/kernel-techpack-followup-20261026.md)
-records the human LSM short-reply fix, SHS VMA references and video DMA/range
-checks. Full configured W=1/C=2, Image, host regressions and enforcing phone
-checks pass; original boot restored. Prior broad coverage is linked there.
-Warning policy, system sources and thermal limits unchanged. Optional hardware,
-late LSM reply generations and wider auditing retain their limits; no universal
-bug-free certification.
+[Techpack EOS/GEM follow-up](../evidence/kernel-techpack-eos-gem-20261026.md)
+records DSP status bounds, transactional display imports and video EOS ownership.
+Configured W=1/C=2, Image, host tests and enforcing phone regressions pass;
+original boot restored. Prior broad coverage is linked there. System sources,
+warning policy and thermal protection unchanged. Atomic runtime-PM failure
+propagation remains open; optional hardware and late LSM reply limits remain.
 
 ## Intermittent shutdown investigation
 
