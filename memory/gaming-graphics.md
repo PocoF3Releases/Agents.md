@@ -107,3 +107,17 @@ autotune property were verified restored; final SELinux was enforcing. No ROM
 driver/policy change or production fix was pushed. Do not restart Turnip or repeat
 the declined OnePlus donor test without a new request. Adreno 650 is Mesa gen3,
 not pre-gen3; do not force another GPU's LRZ profile.
+## Kernel GPU audit — October 26
+
+[GPU/dependency evidence](../evidence/kernel-gpu-audit-20261026.md) owns the
+current feature links and bounded acceptance. Legacy imports charge actual mapped
+size; DMA-BUF user-address classification rejects VMA holes. GMU acquisition
+failures unwind and boot initialization remains retryable. SMMU diagnostic timeout
+and power cleanup retain lock/register ownership. Typed DRM/ION interfaces preserve
+layouts, active heap operations and governor/thermal policy.
+
+Selected W=1 compilation and Image pass; two conditional-SRCU sparse reports remain
+visible with balanced source/host paths, not suppressed. Stock graphics remain;
+816 app-domain GPU/window checks, sleep/wake and audio/video regressions passed
+under a temporary enforcing kernel. Original boot and settings restored. This is
+not a new FPS tuning, driver experiment or general historical page-fault cure.

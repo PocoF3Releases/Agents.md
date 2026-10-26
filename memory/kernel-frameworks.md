@@ -73,12 +73,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Techpack EOS/GEM follow-up](../evidence/kernel-techpack-eos-gem-20261026.md)
-records DSP status bounds, transactional display imports and video EOS ownership.
-Configured W=1/C=2, Image, host tests and enforcing phone regressions pass;
-original boot restored. Prior broad coverage is linked there. System sources,
-warning policy and thermal protection unchanged. Atomic runtime-PM failure
-propagation remains open; optional hardware and late LSM reply limits remain.
+[GPU/dependency audit](../evidence/kernel-gpu-audit-20261026.md) records import,
+GMU and SMMU failure fixes plus typed DRM/ION contracts. Configured W=1 and
+Image pass; two conditional-SRCU sparse reports remain visible. Host tests and
+enforcing phone regressions pass; original boot restored. Prior techpack scope
+is linked there. System sources, warning policy and thermal protection unchanged.
+Atomic display-PM failure propagation and prior hardware/DSP limits remain open.
 
 ## Intermittent shutdown investigation
 
