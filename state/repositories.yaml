@@ -79,14 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: a7a655ccadb22fe516b7f0c84063b8f93a29ee95
+    aosp-17: 3700906827419979ef7d0812827443680972e29e
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a7a655ccadb22fe516b7f0c84063b8f93a29ee95
-  observation: 2026-10-26; full configured-techpack W=1/sparse recheck remains
-    incomplete; separate audio/camera/video/display/RMNET repairs pass scoped host
-    checks and the normal strict Image build. See evidence/kernel-techpack-audit-20261026.md.
-    No warning-policy/system-side change or new phone deployment.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3700906827419979ef7d0812827443680972e29e
+  observation: 2026-10-26; configured W=1/C=2 and strict Image pass; enforcing
+    temporary phone acceptance and remaining sparse limits recorded in
+    evidence/kernel-techpack-errors-20261026.md. Original boot restored;
+    no system-side or warning-policy changes.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile

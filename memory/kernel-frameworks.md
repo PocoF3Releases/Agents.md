@@ -73,13 +73,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-The [strict audit](../evidence/kernel-subsystem-audit-20261026.md) remains incomplete.
-The maintainer rejected warning-policy relaxation: the three policy-only commits
-were dropped during [feature consolidation](../evidence/kernel-history-cleanup-20261026.md).
-Original fatal-warning settings and runtime assertions are restored.
-[Techpack audit](../evidence/kernel-techpack-audit-20261026.md) records partial checks. Protected upstream patches and authorship are unchanged. Normal
-build acceptance is distinct from W=1/sparse completeness. No system sources,
-thermal protection or hardware tuning changed; no universal bug-free claim.
+[Techpack acceptance](../evidence/kernel-techpack-errors-20261026.md) records
+23 separate repairs, passing configured W=1/C=2 and normal Image builds, bounded
+host fixtures and enforcing temporary phone boots. Nonfatal sparse warnings and
+the wider kernel audit remain open. Original fatal-warning settings are retained;
+no system sources, thermal limits or MIUI policies changed. Human upstream
+history is preserved. This is not universal bug-free certification.
 
 ## Intermittent shutdown investigation
 
