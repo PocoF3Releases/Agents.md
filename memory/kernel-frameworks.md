@@ -77,7 +77,7 @@ The [strict audit](../evidence/kernel-subsystem-audit-20261026.md) remains incom
 The maintainer rejected warning-policy relaxation: the three policy-only commits
 were dropped during [feature consolidation](../evidence/kernel-history-cleanup-20261026.md).
 Original fatal-warning settings and runtime assertions are restored.
-[Next power/USB repairs](../evidence/kernel-warning-repairs-20261026.md) retain diagnostics. Protected upstream patches and authorship are unchanged. Normal
+[Hub/MTP follow-up](../evidence/kernel-hub-mtp-audit-20261026.md) retains diagnostics. Protected upstream patches and authorship are unchanged. Normal
 build acceptance is distinct from W=1/sparse completeness. No system sources,
 thermal protection or hardware tuning changed; no universal bug-free claim.
 
