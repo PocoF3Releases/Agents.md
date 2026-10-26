@@ -1,5 +1,9 @@
 # Kernel crypto and library audit — October 26, 2026
 
+**Follow-up:** [The 27-commit recheck](kernel-crypto-lib-recheck-20261026.md)
+reproduced incomplete QRNG requests and records a subsequent separate fix. The
+single successful QRNG request below did not establish arbitrary-length support.
+
 **Source/build/host/device checked.** Kernel-only series on `aosp-17`, from
 [the preceding GPU audit head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7b0c889d08add642d9022ac87288356030e65d29) to
 [the verified final head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7c791f0b0e10b26a524adeddd482778a1edfffad). All 27 feature commits were pushed;
