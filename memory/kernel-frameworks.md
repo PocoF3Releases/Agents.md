@@ -73,13 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Full configured techpack acceptance](../evidence/kernel-techpack-completion-20261026.md)
-records 444 units passing W=1/C=2 with zero diagnostics, strict Image, bounded
-host fixtures and enforcing temporary phone tests. Original boot restored;
-warning policy, system sources, thermal limits and MIUI policies unchanged.
-Upstream history preserved. Unselected hardware configurations, legacy LSM
-same-client reply generations and wider kernel auditing retain their limits;
-this is not universal bug-free certification.
+[Techpack lifetime/DMA follow-up](../evidence/kernel-techpack-followup-20261026.md)
+records the human LSM short-reply fix, SHS VMA references and video DMA/range
+checks. Full configured W=1/C=2, Image, host regressions and enforcing phone
+checks pass; original boot restored. Prior broad coverage is linked there.
+Warning policy, system sources and thermal limits unchanged. Optional hardware,
+late LSM reply generations and wider auditing retain their limits; no universal
+bug-free certification.
 
 ## Intermittent shutdown investigation
 

@@ -103,9 +103,10 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-**Scoped checks.** [Techpack acceptance](../evidence/kernel-techpack-completion-20261026.md)
-records 444 units with zero W=1/C=2 diagnostics, Image and enforcing phone tests.
-Optional hardware/DSP limits and [historical platform scope](../memory/kernel-frameworks.md) remain.
+**Scoped checks.** [Techpack follow-up](../evidence/kernel-techpack-followup-20261026.md)
+records zero W=1/C=2 diagnostics, Image and enforcing phone tests for LSM,
+SHS lifetime and video DMA/ranges. Prior broad coverage and hardware/DSP limits
+are linked there; [platform scope](../memory/kernel-frameworks.md) remains.
 
 ## V-RELEASE
 
