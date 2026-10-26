@@ -79,14 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 3700906827419979ef7d0812827443680972e29e
+    aosp-17: 4662499db59d9c7b743021a2ce90e27e18531a72
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3700906827419979ef7d0812827443680972e29e
-  observation: 2026-10-26; configured W=1/C=2 and strict Image pass; enforcing
-    temporary phone acceptance and remaining sparse limits recorded in
-    evidence/kernel-techpack-errors-20261026.md. Original boot restored;
-    no system-side or warning-policy changes.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4662499db59d9c7b743021a2ce90e27e18531a72
+  observation: 2026-10-26; full configured techpack W=1/C=2 passes with zero
+    diagnostics across 444 units; strict Image and scoped enforcing phone tests
+    pass. Original boot restored; optional-variant and legacy DSP limits in
+    evidence/kernel-techpack-completion-20261026.md. System sources unchanged.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile

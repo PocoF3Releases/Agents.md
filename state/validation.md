@@ -103,10 +103,9 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-**Scoped build/host/device checks.** [Techpack acceptance](../evidence/kernel-techpack-errors-20261026.md)
-records strict builds and temporary enforcing boots; nonfatal sparse warnings
-remain. [Historical platform/rootdir limits](../memory/kernel-frameworks.md)
-still apply; publication does not certify every service.
+**Scoped checks.** [Techpack acceptance](../evidence/kernel-techpack-completion-20261026.md)
+records 444 units with zero W=1/C=2 diagnostics, Image and enforcing phone tests.
+Optional hardware/DSP limits and [historical platform scope](../memory/kernel-frameworks.md) remain.
 
 ## V-RELEASE
 
