@@ -79,13 +79,13 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 6ab769d4a56190d00526feaf6cb3d4b50762f4f6
+    aosp-17: eb8826a50995e8ada3c2ac42ae9c9ae1e60f0d6c
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6ab769d4a56190d00526feaf6cb3d4b50762f4f6
-  observation: 2026-10-26; six active-driver follow-ups published; seven selected objects
-    pass W=1/C=2 and normal Image/phone checks pass in
-    evidence/kernel-active-driver-checks-20261026.md. Full-tree diagnostics and
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/eb8826a50995e8ada3c2ac42ae9c9ae1e60f0d6c
+  observation: 2026-10-26; four GPU/display/thermal follow-ups published; ten selected
+    objects clear W=1/C=2, normal Image and enforcing phone checks pass in
+    evidence/kernel-gpu-display-thermal-20261026.md. Wider diagnostics and
     intermittent shutdown remain open; installed boot restored.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
