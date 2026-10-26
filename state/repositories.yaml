@@ -79,15 +79,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: edb46ba397834c339d4341bb8664935c1fdcbf4b
+    aosp-17: 1ee79a4383f5bab1feca922a986f5f02eeea858f
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/edb46ba397834c339d4341bb8664935c1fdcbf4b
-  observation: 2026-10-26; feature-consolidated history restores original strict
-    compiler policy and preserves all substantive implementation changes and
-    protected upstream patches/authorship. See evidence/kernel-history-cleanup-20261026.md
-    for build checks and the old-to-new source map. Earlier phone acceptance remains
-    scoped to its recorded artifact; original installed boot is unchanged.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1ee79a4383f5bab1feca922a986f5f02eeea858f
+  observation: 2026-10-26; power-reset MMIO ownership and USB endian/private-helper
+    repairs follow the feature-consolidated history. Strict warning flags remain.
+    See evidence/kernel-warning-repairs-20261026.md for targeted checks and limits;
+    evidence/kernel-history-cleanup-20261026.md retains the consolidation mapping.
+    No new phone deployment; installed boot is unchanged.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile

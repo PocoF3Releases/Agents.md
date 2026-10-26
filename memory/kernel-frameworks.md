@@ -76,8 +76,8 @@ modernized; these are build maintenance, not user-visible performance claims.
 The [strict audit](../evidence/kernel-subsystem-audit-20261026.md) remains incomplete.
 The maintainer rejected warning-policy relaxation: the three policy-only commits
 were dropped during [feature consolidation](../evidence/kernel-history-cleanup-20261026.md).
-Original fatal-warning settings and runtime assertions are restored; real code
-fixes remain. Protected upstream patches and authorship are unchanged. Normal
+Original fatal-warning settings and runtime assertions are restored.
+[Next power/USB repairs](../evidence/kernel-warning-repairs-20261026.md) retain diagnostics. Protected upstream patches and authorship are unchanged. Normal
 build acceptance is distinct from W=1/sparse completeness. No system sources,
 thermal protection or hardware tuning changed; no universal bug-free claim.
 
