@@ -79,14 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: eb8826a50995e8ada3c2ac42ae9c9ae1e60f0d6c
+    aosp-17: a2be591af2b48b5b7f94bcce1db57a0400399c7c
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/eb8826a50995e8ada3c2ac42ae9c9ae1e60f0d6c
-  observation: 2026-10-26; four GPU/display/thermal follow-ups published; ten selected
-    objects clear W=1/C=2, normal Image and enforcing phone checks pass in
-    evidence/kernel-gpu-display-thermal-20261026.md. Wider diagnostics and
-    intermittent shutdown remain open; installed boot restored.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a2be591af2b48b5b7f94bcce1db57a0400399c7c
+  observation: 2026-10-26; eight further FUSE/network/QDF/display fixes published;
+    Image/modules/DTBs and scoped enforcing phone checks pass in
+    evidence/kernel-full-warning-continuation-20261026.md. Full W=1/C=2 and header
+    export checks still fail; installed boot restored.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
