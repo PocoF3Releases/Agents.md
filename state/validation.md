@@ -103,10 +103,10 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-**Source checks and separately scoped historical results.** Rootdir's 17-change
-record identifies packaged binaries, kernel nodes and init ownership. Publication
-is not testing of every service. Bionic/DS4/HEIF/Turnip/DeviceAsWebcam findings
-retain their original limits. [Rootdir evidence](../memory/kernel-frameworks.md).
+**Scoped build/host/device checks.** [Techpack acceptance](../evidence/kernel-techpack-errors-20261026.md)
+records strict builds and temporary enforcing boots; nonfatal sparse warnings
+remain. [Historical platform/rootdir limits](../memory/kernel-frameworks.md)
+still apply; publication does not certify every service.
 
 ## V-RELEASE
 
