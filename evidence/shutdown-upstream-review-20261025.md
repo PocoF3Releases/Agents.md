@@ -3,7 +3,7 @@
 This is an upstream-replacement audit, separate from the earlier
 [phone acceptance](shutdown-investigation-20261025.md). The published kernel
 branch now contains the applied, build-tested and temporarily device-tested
-replacement series through [ee8cd976d579](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ee8cd976d579ef5ee8c01899c155a96cf5fee9b0).
+replacement series through [ee8cd976d579](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ca1a538b314b791b28bbe4e318be4f338cc21005).
 The maintainer authorized the history rewrite; an explicit expected-head lease
 protected the push and a local backup preserves the former published stack.
 
@@ -72,12 +72,12 @@ prepared-series mapping are under `~/evo/.repo/upstream-shutdown-review-20261025
 
 The public replacement commits preserve original authorship:
 
-- [a1925f97b4b5](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a1925f97b4b5a1362d5e3f7fdc776b5d05a42bf5): Luc Van Oostenryck's generic per-CPU fix.
-- [14f8da1a63ff](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/14f8da1a63ffe5d94b92f3fdb3f7cde313870331): Mukesh Ojha's PMU declaration fix.
-- [d6914617fbe8](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d6914617fbe886274fc40263be431b5249c75b38): Ben Dooks's static-inline fix.
-- [ee8cd976d579](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ee8cd976d579ef5ee8c01899c155a96cf5fee9b0): remaining local ownership contracts.
+- [a1925f97b4b5](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2c2ac210b4d1476e58b542a7b7437767418f6a8c): Luc Van Oostenryck's generic per-CPU fix.
+- [14f8da1a63ff](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d02e7a86b2443567af8b54eb1f473f2d44b4dfd2): Mukesh Ojha's PMU declaration fix.
+- [d6914617fbe8](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/daf3b2adf2e6206df25c7314ffd85f25f1c3b19f): Ben Dooks's static-inline fix.
+- [ee8cd976d579](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ca1a538b314b791b28bbe4e318be4f338cc21005): remaining local ownership contracts.
 
-The independent [timer repair](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d9a0bc96e102aab71f01e277d856f72a871ea966)
+The independent [timer repair](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1a8f7faa9d86c864ad81f598c71af7466eb62fcf)
 is preserved unchanged. No approved feature, configuration or production policy
 was dropped. No test modules, fixtures or Markdown were added to the kernel.
 
@@ -126,3 +126,5 @@ is inherited from its human vendor change; SYS_RESTART skips that locking branch
 so its last log line alone cannot identify it as the restart blocker. No speculative
 timeout, NPU semantic change or thermal bypass was added. Obtain the observer's
 stack on an actual recurrence before selecting the next production repair.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).

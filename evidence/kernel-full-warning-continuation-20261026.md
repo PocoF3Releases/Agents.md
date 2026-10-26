@@ -8,14 +8,14 @@ configuration, thermal policy, firmware or userspace drivers changed.
 
 ## Separate fixes
 
-- [fuse: Correct BPF reply argument contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc7aeea2d77850e0e075ff57a1c95709fce56427).
-- [net/sysctl: remove leftover __user annotations on neigh_proc_dointvec*](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/18e47b5fb99c9d6adaeef30479e200d14f894088).
-- [net: Declare the shared zerocopy iterator helper](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ae197621f85953b1e32ed9a78faa84eab8c7d137).
-- [bpf: Declare global calling-convention test targets](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e230908b5e8bdbce19c29e8ced9c2c6325b310c7).
-- [qcacmn: Properly abstract the Linux bottom half interfaces](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/623ea94c10a217019d58d0efb23c5e2f0621ac85).
-- [wifi: cnss2: Correct event and QMI diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/43406601f74d3e220954f393f892f350eacd1ca9).
-- [drm: msm: rotator: Match private callback contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/87fb64b9fa58d1ba5863b28c5236c5929d21dcd8).
-- [drm: msm: pll: Validate retained DFPS tables before use](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a2be591af2b48b5b7f94bcce1db57a0400399c7c).
+- [fuse: Correct BPF reply argument contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/265cd8a21635b229a4e1968e48bd55dadae94d2b).
+- [net/sysctl: remove leftover __user annotations on neigh_proc_dointvec*](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6914d230b94b0bf48a21615a8213a59581e68bc6).
+- [net: Declare the shared zerocopy iterator helper](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/dd1dd07e0460e35fe48d8c047004f42d38738484).
+- [bpf: Declare global calling-convention test targets](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/80e487c1a6a438bf090aaa90321dd4a364dd497c).
+- [qcacmn: Properly abstract the Linux bottom half interfaces](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2d2981a5b93d3d929e693e1336f736ea87a9dd91).
+- [wifi: cnss2: Correct event and QMI diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/75d9915589cbe980ad21de3bdc399c93afb71756).
+- [drm: msm: rotator: Match private callback contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/320ff8c31ed53381fc362da1be117657f55cea2c).
+- [drm: msm: pll: Validate retained DFPS tables before use](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c3935abdcb21ca7831626ea2984d0ae0a52930ef).
 
 The neighbour declaration patch is Christoph Hellwig's exact
 [c7388c1f8fb6](https://github.com/torvalds/linux/commit/c7388c1f8fb6d8687403e9554c873f9df4512797),
@@ -149,3 +149,5 @@ Raw commands, full logs, diagnostic inventories, fixtures and receipts remain in
 `~/evo/.repo/kernel-full-audit-round2-20261026/`. No device identifiers, private
 network addresses, raw logs, boot images or permanent diagnostic tests are
 published with the kernel changes.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).

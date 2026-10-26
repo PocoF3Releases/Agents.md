@@ -1,5 +1,8 @@
 # Kernel build finalization
 
+Superseded policy: the maintainer subsequently rejected warning relaxation.
+See [strict restoration and consolidation](kernel-history-cleanup-20261026.md).
+
 Observed **2026-10-26**. `source-checked`, `build-tested`, `host-tested`,
 `device-tested` within the exact scope below. Continues the
 [previous accepted batch](kernel-headers-pd-gpu-thermal-20261026.md).
@@ -12,35 +15,35 @@ open-ended warning-only audit was stopped. This supersedes the earlier instructi
 to make every strict warning gate green before preparing this build; it does not
 mean every reported warning or every possible kernel bug was fixed.
 
-Published `aosp-17`: [final branch head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/428dc4e97f724e388347ecd400630bbb87fdb046).
-The normal Image and phone tests use [this production implementation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/727bd1c2def4b20a0f0eb896fd3ce7da93b9d473). The only subsequent source delta is removal of fatal-warning flags
+Published `aosp-17`: [final branch head](kernel-history-map-20261026.json).
+The normal Image and phone tests use [this production implementation](kernel-history-map-20261026.json). The only subsequent source delta is removal of fatal-warning flags
 from six standalone test recipes; no kernel executable source, production build
 rule or hardware configuration changed after the accepted build. The push is
 fast-forward and the published ref was checked. System-side sources are unchanged.
 
-- [thermal: Keep internal sensor and ADC state file-local](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/14ce8bd660d91368bb422d52e1e3ef281fe2cdf4)
-- [thermal: tsens: Remove unused threshold intermediates](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a55ffe2b4546086234f11e30b69aab66c1cbafbf)
-- [drm: dsi: Include existing catalog operation declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4c93edc6177a6eb28a9be242d94029d874d3593f)
-- [drm: dsi: Initialize remove status with an integer zero](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/31613894087f4c9b6ce27b4b7672b4ee32b6fe6c)
-- [gpu: kgsl: Describe the context queue wait lock contract](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2cd7bc2523cfa22a69121a49c3ef9ce7e91a1244)
-- [sched_domain: Annotate RCU pointers properly](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/32f3373da14b2d9e3ea51deff4aea1d3e2c48c60)
-- [rcuwait: Annotate task_struct with __rcu](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/462744695205809d5d87f7666e43ef3a72690157)
-- [tasks, sched/core: With a grace period after finish_task_switch(), remove unnecessary code](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4f54cba4039317c7300d35683eec203b6ba73a28)
-- [sched/core: Annotate curr pointer in rq with __rcu](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2a696b8142037ee48532fda986fe999d1822bb86)
-- [gpu: kgsl: Correct dispatcher parameter documentation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a2b6d10f89367377f5d7f2bc7f5a86772b4a3a11)
-- [gpu: adreno: Keep the A3xx protection table private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5730fe0fb2a822eabf60e8c4eb7970df283c2635)
-- [tasks, sched/core: RCUify the assignment of rq->curr](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/411794600b95575fa94c34cab00cccc7cae3f892)
-- [sched: trace: Match formats to native trace field types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/95cbdc1c9cab42b23fc9ff2036a4db00e1a8f623)
-- [sched: walt: Keep trace window formatting private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6c6994a7237fcc0cb26c011b0ab3c2c3c616b4f4)
-- [sched: Traverse domain links through the existing RCU accessor](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/043957b913c8540e2e5d1c99450c0ad0d52b9763)
-- [drm: dsi: Bound Xiaomi panel receive buffers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/24c347785234e6e474afff2ac5764a8b34eea1f8)
-- [drm: dsi: Validate and commit panel calibration updates atomically](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/33cfbb6530b8c9f420f1b5359f0c352f1daee78b)
-- [sched: Use address-only accessors for current-task comparisons](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0c0c69e84c91b1a0d5fbd4b2651b80776c382422)
-- [sched: walt: Protect remote rotation task snapshots with RCU](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4a64432f0e2b62dd8912abb673dd8666600ba84e)
-- [drm: dsi: Document the command stream region parameter](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c81aeb13b82e9d02cec3e60ac5c3c26d28e5c109)
-- [kbuild: Keep production compiler warnings nonfatal](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/26e5ace53c8a03298bcb7f1a972268791f452441)
-- [arm64: configs: Regenerate Xiaomi warning policy](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/727bd1c2def4b20a0f0eb896fd3ce7da93b9d473)
-- [tools: Keep standalone test compiler warnings nonfatal](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/428dc4e97f724e388347ecd400630bbb87fdb046)
+- [thermal: Keep internal sensor and ADC state file-local](kernel-history-map-20261026.json)
+- [thermal: tsens: Remove unused threshold intermediates](kernel-history-map-20261026.json)
+- [drm: dsi: Include existing catalog operation declarations](kernel-history-map-20261026.json)
+- [drm: dsi: Initialize remove status with an integer zero](kernel-history-map-20261026.json)
+- [gpu: kgsl: Describe the context queue wait lock contract](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0)
+- [sched_domain: Annotate RCU pointers properly](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4ee3ce35e91db864e722e4daeed0be0561376079)
+- [rcuwait: Annotate task_struct with __rcu](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/306ee36b6823fa537346e14d9a68d63f81b93277)
+- [tasks, sched/core: With a grace period after finish_task_switch(), remove unnecessary code](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c56cce401cfe01ce1e8d4cb413941ae6cf91c70f)
+- [sched/core: Annotate curr pointer in rq with __rcu](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/259064bb349449d7783025e4ea830ed1917068f6)
+- [gpu: kgsl: Correct dispatcher parameter documentation](kernel-history-map-20261026.json)
+- [gpu: adreno: Keep the A3xx protection table private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/48b61193671bcc485af6d608c9c60a771cff7cd6)
+- [tasks, sched/core: RCUify the assignment of rq->curr](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/36ac625d89c65f1f30990c53f03d15cffee52548)
+- [sched: trace: Match formats to native trace field types](kernel-history-map-20261026.json)
+- [sched: walt: Keep trace window formatting private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c20164351ec724734136068bf53233b3cd8c5caa)
+- [sched: Traverse domain links through the existing RCU accessor](kernel-history-map-20261026.json)
+- [drm: dsi: Bound Xiaomi panel receive buffers](kernel-history-map-20261026.json)
+- [drm: dsi: Validate and commit panel calibration updates atomically](kernel-history-map-20261026.json)
+- [sched: Use address-only accessors for current-task comparisons](kernel-history-map-20261026.json)
+- [sched: walt: Protect remote rotation task snapshots with RCU](kernel-history-map-20261026.json)
+- [drm: dsi: Document the command stream region parameter](kernel-history-map-20261026.json)
+- [kbuild: Keep production compiler warnings nonfatal](kernel-history-map-20261026.json)
+- [arm64: configs: Regenerate Xiaomi warning policy](kernel-history-map-20261026.json)
+- [tools: Keep standalone test compiler warnings nonfatal](kernel-history-map-20261026.json)
 
 ## Warning policy and configuration
 
@@ -132,3 +135,5 @@ was not built or installed by this finalization. The intermittent shutdown repor
 and remaining broad static-analysis findings are not declared universally resolved.
 Private receipts remain under `~/evo/.repo/kernel-next-audit-20261026` and
 `~/evo/.repo/kernel-finalization-20261026`; raw device logs/identifiers are not published.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).

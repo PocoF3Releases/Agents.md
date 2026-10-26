@@ -27,11 +27,11 @@ format mismatches. They are not all evidence of broken hardware.
 
 ## Separate repairs
 
-- [ACPI: Declare architecture post-init hook without CONFIG_ACPI](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8eb8c146372006497be35ddb31637fb0201924d5).
-- [seq_file: fix NULL pointer arithmetic warning](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0a5ffeaf80faf87e33791268fd71717daa769aa5).
-- [Input: xiaomi: Validate touch ioctl and debug inputs](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/77c551af9f89864efa337b082296c856a09cfba5).
-- [wifi: qcacld-3.0: Correct shared header search paths](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68a511f10ec985f93ac7d109fd182b2f54f1b0b6).
-- [soc: qcom: spss: Report failed event result copies](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b544d9ee5fe23943f5e54ceeed33153627261968).
+- [ACPI: Declare architecture post-init hook without CONFIG_ACPI](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1b4fcaae69685c035018b9396ac84afb09fffc49).
+- [seq_file: fix NULL pointer arithmetic warning](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68b5c164b6dc42734f2063a9f4f245296255bcf7).
+- [Input: xiaomi: Validate touch ioctl and debug inputs](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7dbe1011d557c0059eb8678bdc56d69db720cde7).
+- [wifi: qcacld-3.0: Correct shared header search paths](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d7dbf5c7babed2e2f7f19144c4bf9caba75d0f4c).
+- [soc: qcom: spss: Report failed event result copies](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/52868ae0fd8cf11612a47f1f505d375486d0e80c).
 
 The ACPI repair selects only the two applicable header hunks from Arnd Bergmann's
 [upstream consolidation](https://github.com/torvalds/linux/commit/ad1a48301f659a02df5bff0a121d4a5c0411d36b).
@@ -109,3 +109,5 @@ phone and Windows temporary folder. Private evidence remains on the host.
 The original-kernel observer and narrow SPU unmount live rule are rearmed only
 for the current boot, with no persistent module or permissive policy. The
 intermittent historical shutdown investigation remains open.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).

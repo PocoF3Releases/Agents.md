@@ -96,7 +96,7 @@ were unloaded and removed. Keep that harness warning distinct from production.
 The first published stack (subsequently replaced by the upstream imports linked
 below) contained:
 
-- [Timer teardown](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d9a0bc96e102aab71f01e277d856f72a871ea966):
+- [Timer teardown](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1a8f7faa9d86c864ad81f598c71af7466eb62fcf):
   gate timer rearming before cancelling outside the callback lock. Reset the
   gate in AP restart before deferred events are installed. Independent review
   caught and corrected the initially missing failed-CPU-down rollback case.
@@ -144,3 +144,5 @@ capture; do not close this report from successful shutdowns alone.
 provenance](shutdown-upstream-review-20261025.md). The replacement series is now
 applied, independently retested on the phone and published. That record owns the
 current source links and new acceptance; the earlier checks above are historical.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).
