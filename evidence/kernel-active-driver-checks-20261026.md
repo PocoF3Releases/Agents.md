@@ -9,12 +9,12 @@ modules remain private, outside production sources.
 
 ## Separate source changes
 
-- [scsi: ufs-qcom: Make request-end lock ownership explicit](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/67c5f143ddab65a2c718f0e2d761364ec18a4281).
-- [scsi: ufs-qcom: Read diagnostic registers with explicit access size](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b6f3b76d2a3742fba28e259acad79e3c619c4a35).
-- [usb: dwc3: debug: Check non-standard control requests](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bf6afc41a5b9878bdc7942a52afb333fe04323da).
-- [power: supply: qcom: Define private and shared battery state](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ec2ceca6344856e795955308b43ea8ac824988e1).
-- [Bluetooth: qcom: Keep private power and SLIMbus helpers local](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3a8b7f794930e0108295c5be651117b29e8551b2).
-- [Bluetooth: qcom: Propagate exhausted SLIMbus read errors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6ab769d4a56190d00526feaf6cb3d4b50762f4f6).
+- [scsi: ufs-qcom: Make request-end lock ownership explicit](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/dfac40ccb015620d09e0e0f6407a8696dc031912).
+- [scsi: ufs-qcom: Read diagnostic registers with explicit access size](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7444bf7653b900f2f1dfbc8eabb869c66569c8f1).
+- [usb: dwc3: debug: Check non-standard control requests](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/10bd8f40681ff128f9e7f0507b6eb229cd11d3e0).
+- [power: supply: qcom: Define private and shared battery state](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fa1f502b41d4eed3272e3d10b48f498923737515).
+- [Bluetooth: qcom: Keep private power and SLIMbus helpers local](kernel-history-map-20261026.json).
+- [Bluetooth: qcom: Propagate exhausted SLIMbus read errors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/58fb3e3bbe152920f2176afde036c638ea0d80d9).
 
 The UFS register strategy comes from Marc Gonzalez's
 [d67247566450](https://github.com/torvalds/linux/commit/d67247566450cf89a693307c9bc9f05a32d96cea).
@@ -110,3 +110,5 @@ are rearmed only for the current boot; initcall_debug=N. No persistent diagnosti
 module or permissive policy was installed.
 Private raw logs, fixtures, IR and receipts are under
 `~/evo/.repo/kernel-subsystem-followup-20261026/`.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).

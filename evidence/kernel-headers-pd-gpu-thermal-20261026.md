@@ -6,33 +6,33 @@ change. This continues the [previous full audit](kernel-full-warning-continuatio
 
 ## Published source
 
-Kernel `aosp-17`: [current implementation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b0a271b170990a60db03a69c47c3572eacfa92e4).
+Kernel `aosp-17`: [current implementation](kernel-history-map-20261026.json).
 Twenty-two separate topic commits include the previously unpublished header/WALT/PD
 repairs and seven GPU/display/thermal follow-ups. The push was fast-forward,
 verified against the remote; no published history was rewritten.
 
-- [sched: walt: Match status dump formats to native types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ab3b526ab3f76197ea14117e2cb11e27ce0e3a51)
-- [kbuild: Restrict Techpack header exports to selected UAPI trees](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/de72a9d3c1114d88ff9206565499cf0f6e5e09b8)
-- [ASoC: cs35l41: Keep platform headers in the private include tree](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/69ff97283cfde713079c6737184714c2d910137f)
-- [ASoC: msm: Make calibration UAPI dependencies self-contained](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e2450c4f33ee2f3eb404b08b295db86765870a56)
-- [fuse: Include Linux types for userspace BPF declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/319105e371566bfc6e6750d67e8959db0011f333)
-- [devfreq: arm-memlat: Pass bitmap arguments to CPU-list diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2f71551364d5b6ad7816205bd192930650ed0fd9)
-- [bus: mhi: Preserve diagnostic arguments and register-read status](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7ef2ba46a7ef47faeaf086466426a139a49540c9)
-- [soc: qcom: spcom: Supply the invalid-channel diagnostic context](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4f1c465892e6c4f2f8656a7290a9d78b949b1209)
-- [media: msm: Match diagnostic instance arguments](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/711e2586f0a721c264cd2f84e4e04a9c41f52a96)
-- [regulator: qcom-pm8008: Correct bulk and retry diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fa58055e6f83e93cad54fe35b12804635c06f252)
-- [power: supply: ti: Correct PD manager diagnostics and local state](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3b9a3e827ecc9b83ad7943ba9d5e8339785153c0)
-- [usb: pd: Share selector and alternate-mode declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8b979468d5c35c4b56f6ad1ff6be29c2fbfae9c4)
-- [usb: pd: Make denied selections and retries deterministic](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bf1586d5f0475840378b6640ce64c89d90939721)
-- [usb: pd: Validate Xiaomi vendor reply payloads](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d4fca9425e2530827b4db16580db5ebe13925b78)
-- [usb: pd: Parse vendor request data with checked bounds](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1ec5deb316827e2e62e216b83aad5e991cabf645)
-- [thermal: qcom: Preserve LMH MMIO address-space types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3ba0ccc0a016e1d52ab175e140ab31a6a7f802d5)
-- [drm: mi: Include the notifier interface declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5cb493355ba7cef9a938c7777ccafe45a72555ea)
-- [gpu: kgsl: Keep encoded userspace addresses as integers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5f1873affc21f5fd5267a47e5ca9c1001974d2ab)
-- [gpu: kgsl: Match kernel-doc to current function parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b53ce3ca20d67137ab8dd1865a78e33da11a10d5)
-- [drm: dsi: Reject unsupported HBM display commands](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5111e1b8c035a06023e6d16d9b7bc42f06151e1f)
-- [drm: dsi: Match error interrupt diagnostics to their arguments](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/82deaad58859d402eb7d85958e1c4679d14a0e99)
-- [drm: dsi: Store panel readback words in explicit byte order](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b0a271b170990a60db03a69c47c3572eacfa92e4)
+- [sched: walt: Match status dump formats to native types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e3eae31a51ec513530281e2b53200752fe4fc177)
+- [kbuild: Restrict Techpack header exports to selected UAPI trees](kernel-history-map-20261026.json)
+- [ASoC: cs35l41: Keep platform headers in the private include tree](kernel-history-map-20261026.json)
+- [ASoC: msm: Make calibration UAPI dependencies self-contained](kernel-history-map-20261026.json)
+- [fuse: Include Linux types for userspace BPF declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/460e9ac40bc38cdeb4eafcde6d75e50137149a02)
+- [devfreq: arm-memlat: Pass bitmap arguments to CPU-list diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/61114d61323d693ed0f04f4764ef0ad2ee9f5b21)
+- [bus: mhi: Preserve diagnostic arguments and register-read status](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1ef5b6f40367ecb0565ee4c45552ae30645ba17a)
+- [soc: qcom: spcom: Supply the invalid-channel diagnostic context](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5c5049ea194ac9ca6c2dac8757c22869c22eb047)
+- [media: msm: Match diagnostic instance arguments](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2233e3a1b5b4a42b33cf2e13f9b7f3fc15323903)
+- [regulator: qcom-pm8008: Correct bulk and retry diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/89d352821310935b3d7c41ca6538bb188ab51d76)
+- [power: supply: ti: Correct PD manager diagnostics and local state](kernel-history-map-20261026.json)
+- [usb: pd: Share selector and alternate-mode declarations](kernel-history-map-20261026.json)
+- [usb: pd: Make denied selections and retries deterministic](kernel-history-map-20261026.json)
+- [usb: pd: Validate Xiaomi vendor reply payloads](kernel-history-map-20261026.json)
+- [usb: pd: Parse vendor request data with checked bounds](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5c430366113fa8b6accd9c1d9f5c26037f2948ad)
+- [thermal: qcom: Preserve LMH MMIO address-space types](kernel-history-map-20261026.json)
+- [drm: mi: Include the notifier interface declarations](kernel-history-map-20261026.json)
+- [gpu: kgsl: Keep encoded userspace addresses as integers](kernel-history-map-20261026.json)
+- [gpu: kgsl: Match kernel-doc to current function parameters](kernel-history-map-20261026.json)
+- [drm: dsi: Reject unsupported HBM display commands](kernel-history-map-20261026.json)
+- [drm: dsi: Match error interrupt diagnostics to their arguments](kernel-history-map-20261026.json)
+- [drm: dsi: Store panel readback words in explicit byte order](kernel-history-map-20261026.json)
 
 ## Contracts and regressions
 
@@ -142,3 +142,5 @@ Private raw receipts/fixtures remain under `~/evo/.repo/kernel-header-walt-20261
 `kernel-gpu-display-thermal-followup-20261026`, `kernel-gpu-display-thermal-final-20261026`
 and `kernel-gdt-verified-20261026`. They are local evidence, not broken public links;
 this record publishes the sanitized source identities, outcomes and limitations.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).

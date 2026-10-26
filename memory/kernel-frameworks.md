@@ -73,13 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-The [strict audit](../evidence/kernel-subsystem-audit-20261026.md) is not fully
-resolved. The maintainer requested [build finalization](../evidence/kernel-build-finalization-20261026.md)
-with nonfatal warning policy, generated configs and normal Image/modules/DTBs/header
-plus enforcing phone checks. This supersedes strict-warning cleanup as a build
-prerequisite; no further warning-only audit is authorized by old records. No system
-sources, thermal protection or hardware tuning changed. Earlier acceptance remains
-in the linked evidence chain; no universal bug-free certification is established.
+The [strict audit](../evidence/kernel-subsystem-audit-20261026.md) remains incomplete.
+The maintainer rejected warning-policy relaxation: the three policy-only commits
+were dropped during [feature consolidation](../evidence/kernel-history-cleanup-20261026.md).
+Original fatal-warning settings and runtime assertions are restored; real code
+fixes remain. Protected upstream patches and authorship are unchanged. Normal
+build acceptance is distinct from W=1/sparse completeness. No system sources,
+thermal protection or hardware tuning changed; no universal bug-free claim.
 
 ## Intermittent shutdown investigation
 
