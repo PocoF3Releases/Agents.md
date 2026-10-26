@@ -103,10 +103,9 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-**Scoped checks.** [Techpack EOS/GEM](../evidence/kernel-techpack-eos-gem-20261026.md)
-records zero W=1/C=2 diagnostics, Image, host failure cases and enforcing
-phone audio/video/display checks. Atomic runtime-PM failure propagation remains
-open; prior coverage and hardware/DSP limits are linked there.
+[GPU acceptance](../evidence/kernel-gpu-audit-20261026.md): W=1/Image, host and
+enforcing phone checks pass; original boot restored. Two SRCU sparse reports
+remain visible. Prior scope and open display-PM/hardware limits are linked there.
 
 ## V-RELEASE
 
