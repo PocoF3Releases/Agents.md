@@ -73,13 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-The [configured audit](../evidence/kernel-subsystem-audit-20261026.md) remains
-failing. [GPU/display/thermal](../evidence/kernel-gpu-display-thermal-20261026.md)
-and [full-kernel continuation](../evidence/kernel-full-warning-continuation-20261026.md)
-record earlier fixes. The [latest header/PD/graphics acceptance](../evidence/kernel-headers-pd-gpu-thermal-20261026.md)
-records fresh header success, Image and enforcing 60/120 Hz phone checks, plus
-remaining strict-audit failures. No system sources or thermal policy changed;
-unfinished kernel gates precede prebuilt/device-tree work.
+The [strict audit](../evidence/kernel-subsystem-audit-20261026.md) is not fully
+resolved. The maintainer requested [build finalization](../evidence/kernel-build-finalization-20261026.md)
+with nonfatal warning policy, generated configs and normal Image/modules/DTBs/header
+plus enforcing phone checks. This supersedes strict-warning cleanup as a build
+prerequisite; no further warning-only audit is authorized by old records. No system
+sources, thermal protection or hardware tuning changed. Earlier acceptance remains
+in the linked evidence chain; no universal bug-free certification is established.
 
 ## Intermittent shutdown investigation
 
