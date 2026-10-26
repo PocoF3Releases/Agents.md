@@ -2,14 +2,13 @@
 
 ## V-HAPTICS
 
-**2026-10-04 — source/build/host/device-tested, scoped.** That HAL candidate
-passed 21/21 predefined effect/strength gain checks (48/80/128), three supported
-stock primitives, timed amplitude and cancellation under enforcing SELinux.
-AAC native/limited-HE1 rendering and bounded PCM refills passed isolated tests.
-Temporary mount restored; no permanent/full RichTap acceptance; app-facing RichTap unverified.
-No PWLE/unsupported primitives. October 8 LOW_TICK fallback has commit-reported
-temporary tests; installed identity is unknown. September 30 user acceptance is historical.
-[Exact scope and restoration](../evidence/haptics/2026-10-04.md).
+**2026-10-04 — scoped source/build/host/device tests.** Enforcing HAL candidate:
+21/21 effect/strength gains (48/80/128), three stock primitives, timed amplitude
+and cancellation. Isolated AAC native/limited-HE1 and bounded PCM refills pass.
+Temporary mount restored; no full RichTap/PWLE or unsupported-primitive acceptance.
+App-facing RichTap unverified. October 8 LOW_TICK has commit-reported temporary
+tests; installed identity unknown. September 30 user acceptance is historical.
+[Scope and restoration](../evidence/haptics/2026-10-04.md).
 
 ## V-AC4
 
@@ -208,3 +207,7 @@ Not full conformance/release.
 ## V-SHUTDOWN-20261025
 
 [Evidence](../evidence/shutdown-investigation-20261025.md).
+
+## V-KERNEL-WHOLE-20261026
+
+[Tests and remaining failures](../evidence/kernel-whole-warning-audit-20261026.md).
