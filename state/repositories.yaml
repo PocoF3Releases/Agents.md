@@ -79,14 +79,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: b0a271b170990a60db03a69c47c3572eacfa92e4
+    aosp-17: 428dc4e97f724e388347ecd400630bbb87fdb046
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b0a271b170990a60db03a69c47c3572eacfa92e4
-  observation: 2026-10-26; header/PD and GPU/display/thermal repairs published;
-    final Image, fresh header checks and enforcing temporary-boot tests pass in
-    evidence/kernel-headers-pd-gpu-thermal-20261026.md. Broader W=1/C=2 gates still
-    fail; original installed boot and settings restored.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/428dc4e97f724e388347ecd400630bbb87fdb046
+  observation: 2026-10-26; reviewed kernel repairs and requested nonfatal warning
+    policy published; generated configs, normal Image/modules/DTBs/headers and
+    scoped enforcing phone tests pass in evidence/kernel-build-finalization-20261026.md.
+    Production tested at 727bd1c2def4b20a0f0eb896fd3ce7da93b9d473; later delta is
+    standalone test flags only. Original installed boot restored.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
