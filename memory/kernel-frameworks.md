@@ -73,12 +73,11 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[GPU/dependency audit](../evidence/kernel-gpu-audit-20261026.md) records import,
-GMU and SMMU failure fixes plus typed DRM/ION contracts. Configured W=1 and
-Image pass; two conditional-SRCU sparse reports remain visible. Host tests and
-enforcing phone regressions pass; original boot restored. Prior techpack scope
-is linked there. System sources, warning policy and thermal protection unchanged.
-Atomic display-PM failure propagation and prior hardware/DSP limits remain open.
+[Crypto/library audit](../evidence/kernel-crypto-lib-audit-20261026.md): configured
+W=1/Image, host failure-path tests and enforcing phone checks pass; original boot
+restored. QCE/QSEE/RNG and shared-library fixes retain thermal and entropy policy.
+Nine conditional-lock sparse reports stay visible. Prior GPU/techpack evidence,
+SRCU reports and open display-PM limits remain linked there. System sources unchanged.
 
 ## Intermittent shutdown investigation
 

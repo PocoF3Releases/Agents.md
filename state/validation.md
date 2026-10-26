@@ -103,9 +103,10 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-[GPU acceptance](../evidence/kernel-gpu-audit-20261026.md): W=1/Image, host and
-enforcing phone checks pass; original boot restored. Two SRCU sparse reports
-remain visible. Prior scope and open display-PM/hardware limits are linked there.
+[Crypto/library acceptance](../evidence/kernel-crypto-lib-audit-20261026.md):
+W=1/Image, host and enforcing phone checks pass; original boot restored. Nine
+conditional-lock sparse reports remain visible. Prior GPU/SRCU/display-PM and
+hardware limits are linked there; no system-source or thermal-policy change.
 
 ## V-RELEASE
 
