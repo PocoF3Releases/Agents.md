@@ -73,12 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Active-driver continuation](../evidence/kernel-active-driver-fixes-20261027.md)
-adds 13 bus, CNSS, SPS and SCM repairs, including bandwidth-report bounds and
-client-list lifetime fixes. Normal Image, affected W=1/C=2, host and enforcing
-phone checks pass; original boot restored. Two SPS mixed-memory warnings remain;
-[prior whole-audit limits](../evidence/kernel-whole-warning-audit-20261026.md)
-remain open. System/config/thermal/warning policy is unchanged.
+[Current active-driver fixes and main install](../evidence/kernel-main-install-20261027.md)
+cover GPI, service-notifier and USB after the prior bus/CNSS/SPS repairs.
+Affected W=1/C=2, normal Image, host and enforcing phone checks pass; the latest
+normal-build kernel remains installed as the development baseline, without an
+automatic rollback. Full Image W=1 fails with the unchanged Werror policy;
+SPS mixed-memory and broader audit limits remain open. System/config/thermal
+policy is unchanged; this is not full release sign-off.
 
 ## Intermittent shutdown investigation
 

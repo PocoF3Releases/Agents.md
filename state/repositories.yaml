@@ -79,14 +79,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 39febeb4e33723fa575192290f69084b72986a14
+    aosp-17: a028da5feaa05034c7cf8d3956cf36c94f25a961
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/39febeb4e33723fa575192290f69084b72986a14
-  observation: 2026-10-27; 13 active bus/CNSS/SPS/SCM commits retain prior fixes.
-    Normal Image, affected W=1/C=2, host and enforcing phone checks pass; original
-    boot restored. Two SPS FIFO warnings and broader audit limits remain open.
-    Scope in evidence/kernel-active-driver-fixes-20261027.md; system/config/policy unchanged.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a028da5feaa05034c7cf8d3956cf36c94f25a961
+  observation: 2026-10-27; five GPI/service-notifier/USB repairs retain prior fixes.
+    Affected W=1/C=2, normal Image and host/phone checks pass; latest normal kernel
+    installed persistently. Full Image W=1 fails; scope and open limits in
+    evidence/kernel-main-install-20261027.md. System/config/thermal policy unchanged.
+
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
