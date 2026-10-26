@@ -74,12 +74,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 ## Current kernel source checks
 
 The [configured audit](../evidence/kernel-subsystem-audit-20261026.md) remains
-failing. [Active drivers](../evidence/kernel-active-driver-checks-20261026.md) and
-[GPU/display/thermal](../evidence/kernel-gpu-display-thermal-20261026.md) have scoped
-accepted fixes. The [full-kernel continuation](../evidence/kernel-full-warning-continuation-20261026.md)
-records further fixes, Image/modules/DTB and Wi-Fi/FUSE/BPF/physical-mode checks,
-plus remaining compiler/header-export failures. No system sources or thermal
-policy changed; unfinished kernel gates precede prebuilt/device-tree work.
+failing. [GPU/display/thermal](../evidence/kernel-gpu-display-thermal-20261026.md)
+and [full-kernel continuation](../evidence/kernel-full-warning-continuation-20261026.md)
+record earlier fixes. The [latest header/PD/graphics acceptance](../evidence/kernel-headers-pd-gpu-thermal-20261026.md)
+records fresh header success, Image and enforcing 60/120 Hz phone checks, plus
+remaining strict-audit failures. No system sources or thermal policy changed;
+unfinished kernel gates precede prebuilt/device-tree work.
 
 ## Intermittent shutdown investigation
 
