@@ -1,0 +1,2215 @@
+{
+  "base": "360466aec8e4ed01c64a62d0d768108aa39737be",
+  "old_head": "428dc4e97f724e388347ecd400630bbb87fdb046",
+  "new_head": "edb46ba397834c339d4341bb8664935c1fdcbf4b",
+  "tree": "7c7b5da89267d3f962a20768b9d3b8c73ff94509",
+  "old_count": 244,
+  "new_count": 193,
+  "old_eligible": 137,
+  "new_eligible": 86,
+  "protected_commits": 107,
+  "protected_patch_and_metadata_verified": true,
+  "real_implementation_tree_preserved": true,
+  "expected_tree_head": "c81aeb13b82e9d02cec3e60ac5c3c26d28e5c109",
+  "dropped_warning_policy": [
+    "26e5ace53c8a03298bcb7f1a972268791f452441",
+    "727bd1c2def4b20a0f0eb896fd3ce7da93b9d473",
+    "428dc4e97f724e388347ecd400630bbb87fdb046"
+  ],
+  "rows": [
+    {
+      "old": "f7187edd792d752ad58f1070924466dcb4a517fc",
+      "subject": "input: Import Alioth stock AW8697 driver",
+      "eligible": true,
+      "new": [
+        "f7187edd792d752ad58f1070924466dcb4a517fc"
+      ],
+      "equivalent_tree_commit": "f7187edd792d752ad58f1070924466dcb4a517fc"
+    },
+    {
+      "old": "96bc9fec0209a36de54bfc6b51f49a6474b30b86",
+      "subject": "BACKPORT: msm: kgsl: Add support to get gpu model from device tree",
+      "eligible": false,
+      "new": [
+        "96bc9fec0209a36de54bfc6b51f49a6474b30b86"
+      ],
+      "equivalent_tree_commit": "96bc9fec0209a36de54bfc6b51f49a6474b30b86"
+    },
+    {
+      "old": "b04ce9f13019f174b51b06d981172dc80428b8a6",
+      "subject": "BACKPORT: msm: kgsl: Add a property to query gpu model name",
+      "eligible": false,
+      "new": [
+        "b04ce9f13019f174b51b06d981172dc80428b8a6"
+      ],
+      "equivalent_tree_commit": "b04ce9f13019f174b51b06d981172dc80428b8a6"
+    },
+    {
+      "old": "db63f5d1c041dbc5ee25c0ac912686ddaa24b493",
+      "subject": "BACKPORT: msm: kgsl: Add support for KGSL_PROP_VK_DEVICE_ID",
+      "eligible": false,
+      "new": [
+        "db63f5d1c041dbc5ee25c0ac912686ddaa24b493"
+      ],
+      "equivalent_tree_commit": "db63f5d1c041dbc5ee25c0ac912686ddaa24b493"
+    },
+    {
+      "old": "d423b599ca4b5ef2563dc322b3a5fc7b949bb042",
+      "subject": "gpu/msm/adreno: Increase data processing limit",
+      "eligible": false,
+      "new": [
+        "d423b599ca4b5ef2563dc322b3a5fc7b949bb042"
+      ],
+      "equivalent_tree_commit": "d423b599ca4b5ef2563dc322b3a5fc7b949bb042"
+    },
+    {
+      "old": "8c77ee9d71cbdb0d91a2367141eeecf85a086a01",
+      "subject": "Revert \"bdi: Do not use freezable workqueue\"",
+      "eligible": false,
+      "new": [
+        "8c77ee9d71cbdb0d91a2367141eeecf85a086a01"
+      ],
+      "equivalent_tree_commit": "8c77ee9d71cbdb0d91a2367141eeecf85a086a01"
+    },
+    {
+      "old": "9d2c3b35965194013895952191a35cb91fb3c20d",
+      "subject": "drm/msm: fix brightness level mapping",
+      "eligible": false,
+      "new": [
+        "9d2c3b35965194013895952191a35cb91fb3c20d"
+      ],
+      "equivalent_tree_commit": "9d2c3b35965194013895952191a35cb91fb3c20d"
+    },
+    {
+      "old": "d280278c0d026c160899b297994475c3e4e715f7",
+      "subject": "drm: msm: handle more scenarios when getting fod dim alpha",
+      "eligible": false,
+      "new": [
+        "d280278c0d026c160899b297994475c3e4e715f7"
+      ],
+      "equivalent_tree_commit": "d280278c0d026c160899b297994475c3e4e715f7"
+    },
+    {
+      "old": "25b62734fad2bab2b8ec64093e0c942e32ec22f4",
+      "subject": "techpack: display: track real backlight value",
+      "eligible": false,
+      "new": [
+        "25b62734fad2bab2b8ec64093e0c942e32ec22f4"
+      ],
+      "equivalent_tree_commit": "25b62734fad2bab2b8ec64093e0c942e32ec22f4"
+    },
+    {
+      "old": "b6e686d303657b22d5ceb71fcd6066a13a0163db",
+      "subject": "techpack: display: sde: encoder: remove intf_frame_count reading",
+      "eligible": false,
+      "new": [
+        "b6e686d303657b22d5ceb71fcd6066a13a0163db"
+      ],
+      "equivalent_tree_commit": "b6e686d303657b22d5ceb71fcd6066a13a0163db"
+    },
+    {
+      "old": "67ca09172444f99d32b4d6cdb43358f1162d81ce",
+      "subject": "Scripts: Add script to generate defconfigs",
+      "eligible": false,
+      "new": [
+        "67ca09172444f99d32b4d6cdb43358f1162d81ce"
+      ],
+      "equivalent_tree_commit": "67ca09172444f99d32b4d6cdb43358f1162d81ce"
+    },
+    {
+      "old": "684a7761ed1c82c8693f4d44962e41724c09d0e4",
+      "subject": "arch: arm64: boot: dts: vendor: Use appropriate battery data for devices",
+      "eligible": false,
+      "new": [
+        "684a7761ed1c82c8693f4d44962e41724c09d0e4"
+      ],
+      "equivalent_tree_commit": "684a7761ed1c82c8693f4d44962e41724c09d0e4"
+    },
+    {
+      "old": "a1f2dadef787834d69db2b53a51472d16449ac0f",
+      "subject": "ARM64: dts: k11a: Disable 90hz support on alioth panel",
+      "eligible": false,
+      "new": [
+        "a1f2dadef787834d69db2b53a51472d16449ac0f"
+      ],
+      "equivalent_tree_commit": "a1f2dadef787834d69db2b53a51472d16449ac0f"
+    },
+    {
+      "old": "08dd6ae6ec2362bf21eea38c297d0fc5ad2a10ae",
+      "subject": "binder: Set binder_(alloc_)debug_mask=0 to suppress logging.",
+      "eligible": false,
+      "new": [
+        "08dd6ae6ec2362bf21eea38c297d0fc5ad2a10ae"
+      ],
+      "equivalent_tree_commit": "08dd6ae6ec2362bf21eea38c297d0fc5ad2a10ae"
+    },
+    {
+      "old": "1b34f3dd351814edfa5c3a106e6990d080b42a3e",
+      "subject": "driver/input: fts_spi: Fix possible stack overflow in size parsing",
+      "eligible": false,
+      "new": [
+        "1b34f3dd351814edfa5c3a106e6990d080b42a3e"
+      ],
+      "equivalent_tree_commit": "1b34f3dd351814edfa5c3a106e6990d080b42a3e"
+    },
+    {
+      "old": "d03e1de363bed203fec46cf76aa8aa391fda1166",
+      "subject": "cpufreq: Ensure the minimal frequency is lower than the maximal frequency",
+      "eligible": false,
+      "new": [
+        "d03e1de363bed203fec46cf76aa8aa391fda1166"
+      ],
+      "equivalent_tree_commit": "d03e1de363bed203fec46cf76aa8aa391fda1166"
+    },
+    {
+      "old": "e4b62348964fbd6a1b7e933a0e4f3bff0a0ac1bd",
+      "subject": "[TMP] drivers: xiaomi_touch: add a sysfs node to bump touch sample rate",
+      "eligible": false,
+      "new": [
+        "e4b62348964fbd6a1b7e933a0e4f3bff0a0ac1bd"
+      ],
+      "equivalent_tree_commit": "e4b62348964fbd6a1b7e933a0e4f3bff0a0ac1bd"
+    },
+    {
+      "old": "6ebd5b4dee6a7d5f96570bdd810e1fbc1f6987ba",
+      "subject": "kernel: initial xiaomi sm8250 build configs",
+      "eligible": false,
+      "new": [
+        "6ebd5b4dee6a7d5f96570bdd810e1fbc1f6987ba"
+      ],
+      "equivalent_tree_commit": "6ebd5b4dee6a7d5f96570bdd810e1fbc1f6987ba"
+    },
+    {
+      "old": "03fda8b2cacae5bb8adbdadaa3ae68437af1ca31",
+      "subject": "kernel: initial gcc build config",
+      "eligible": false,
+      "new": [
+        "03fda8b2cacae5bb8adbdadaa3ae68437af1ca31"
+      ],
+      "equivalent_tree_commit": "03fda8b2cacae5bb8adbdadaa3ae68437af1ca31"
+    },
+    {
+      "old": "418b89a825670d9a07301d2f8f17d38bc1fbd370",
+      "subject": "build.config: rely on DTC_EXT",
+      "eligible": false,
+      "new": [
+        "418b89a825670d9a07301d2f8f17d38bc1fbd370"
+      ],
+      "equivalent_tree_commit": "418b89a825670d9a07301d2f8f17d38bc1fbd370"
+    },
+    {
+      "old": "e95f9084c97bc2135d316b35ff894707c7764a9e",
+      "subject": "build.config: rely on MKDTBO_EXT",
+      "eligible": false,
+      "new": [
+        "e95f9084c97bc2135d316b35ff894707c7764a9e"
+      ],
+      "equivalent_tree_commit": "e95f9084c97bc2135d316b35ff894707c7764a9e"
+    },
+    {
+      "old": "22c4e39d514383c42f5d97de182daf88fea5faee",
+      "subject": "build.config: ship all dtb",
+      "eligible": false,
+      "new": [
+        "22c4e39d514383c42f5d97de182daf88fea5faee"
+      ],
+      "equivalent_tree_commit": "22c4e39d514383c42f5d97de182daf88fea5faee"
+    },
+    {
+      "old": "9bdfa0be365aad9e5a1d36256f79ca598a438fbc",
+      "subject": "include: power: match fastcharge enum property value",
+      "eligible": false,
+      "new": [
+        "9bdfa0be365aad9e5a1d36256f79ca598a438fbc"
+      ],
+      "equivalent_tree_commit": "9bdfa0be365aad9e5a1d36256f79ca598a438fbc"
+    },
+    {
+      "old": "f909015b8af85fea4edde8c7488948ba2899c75d",
+      "subject": "sm8250: Inline all available kernel modules",
+      "eligible": false,
+      "new": [
+        "f909015b8af85fea4edde8c7488948ba2899c75d"
+      ],
+      "equivalent_tree_commit": "f909015b8af85fea4edde8c7488948ba2899c75d"
+    },
+    {
+      "old": "26fea0dd38a6f71be184760b3250a20f19d8b6aa",
+      "subject": "dtbo.img: build device tree overlay partition image",
+      "eligible": false,
+      "new": [
+        "26fea0dd38a6f71be184760b3250a20f19d8b6aa"
+      ],
+      "equivalent_tree_commit": "26fea0dd38a6f71be184760b3250a20f19d8b6aa"
+    },
+    {
+      "old": "3bfbe1090dfd65126d69574f6b2fe27adc65ae1d",
+      "subject": "scripts/dtc: Add yamltree.c to dtc sources",
+      "eligible": false,
+      "new": [
+        "3bfbe1090dfd65126d69574f6b2fe27adc65ae1d"
+      ],
+      "equivalent_tree_commit": "3bfbe1090dfd65126d69574f6b2fe27adc65ae1d"
+    },
+    {
+      "old": "993c0989f25c09ffdd7be64b3c0a511b925f854d",
+      "subject": "scripts/dtc: Update to upstream version v1.6.1-64-g2cd89f8",
+      "eligible": false,
+      "new": [
+        "993c0989f25c09ffdd7be64b3c0a511b925f854d"
+      ],
+      "equivalent_tree_commit": "993c0989f25c09ffdd7be64b3c0a511b925f854d"
+    },
+    {
+      "old": "a104446da28fc52f7c423e396c7017cfe485658d",
+      "subject": "scripts/dtc: Disable YAML through kernel build flags",
+      "eligible": false,
+      "new": [
+        "a104446da28fc52f7c423e396c7017cfe485658d"
+      ],
+      "equivalent_tree_commit": "a104446da28fc52f7c423e396c7017cfe485658d"
+    },
+    {
+      "old": "27007adbe047863e13ed224c3b8edeb3ed3e1d0c",
+      "subject": "dsi_display: Add support for high brightness mode (HBM)",
+      "eligible": false,
+      "new": [
+        "27007adbe047863e13ed224c3b8edeb3ed3e1d0c"
+      ],
+      "equivalent_tree_commit": "27007adbe047863e13ed224c3b8edeb3ed3e1d0c"
+    },
+    {
+      "old": "b41dd3bc49a8a3e625e9f889f3714bc7dcc8a063",
+      "subject": "techpack:display: msm:dsi: Actually restore brightness val when turning off HBM via sysfs",
+      "eligible": false,
+      "new": [
+        "b41dd3bc49a8a3e625e9f889f3714bc7dcc8a063"
+      ],
+      "equivalent_tree_commit": "b41dd3bc49a8a3e625e9f889f3714bc7dcc8a063"
+    },
+    {
+      "old": "d3027856f144cbe23281a9caf464680b2f1421e9",
+      "subject": "techpack:display:msm: Introduce exposure adjustment driver",
+      "eligible": false,
+      "new": [
+        "d3027856f144cbe23281a9caf464680b2f1421e9"
+      ],
+      "equivalent_tree_commit": "d3027856f144cbe23281a9caf464680b2f1421e9"
+    },
+    {
+      "old": "8d86266a1730ce2ef946936657f48b5f97388d19",
+      "subject": "techpack: dsi_display: Use type_map array index 0 for invalid hbm values",
+      "eligible": false,
+      "new": [
+        "8d86266a1730ce2ef946936657f48b5f97388d19"
+      ],
+      "equivalent_tree_commit": "8d86266a1730ce2ef946936657f48b5f97388d19"
+    },
+    {
+      "old": "b38e4455bc8faccff7963f0d3e3adb0618145852",
+      "subject": "techpack: display:msm: Let exposure adjustment switchable via sysfs",
+      "eligible": false,
+      "new": [
+        "b38e4455bc8faccff7963f0d3e3adb0618145852"
+      ],
+      "equivalent_tree_commit": "b38e4455bc8faccff7963f0d3e3adb0618145852"
+    },
+    {
+      "old": "9f5ef73cafbe06ac97f2385c3b8e0b9c0bfcaeb1",
+      "subject": "techpack: display: msm: Adapt exposure adjustment methods for sm8250",
+      "eligible": false,
+      "new": [
+        "9f5ef73cafbe06ac97f2385c3b8e0b9c0bfcaeb1"
+      ],
+      "equivalent_tree_commit": "9f5ef73cafbe06ac97f2385c3b8e0b9c0bfcaeb1"
+    },
+    {
+      "old": "5d4a1fcf7180cb5dc4bffbb1fda99883c5eb504f",
+      "subject": "techpack: display: msm: Adapt exposure adjustment values for sm8250",
+      "eligible": false,
+      "new": [
+        "5d4a1fcf7180cb5dc4bffbb1fda99883c5eb504f"
+      ],
+      "equivalent_tree_commit": "5d4a1fcf7180cb5dc4bffbb1fda99883c5eb504f"
+    },
+    {
+      "old": "715819a0e839a78c8b7a1a7a49963ce68feaf396",
+      "subject": "gpu/msm/adreno-gpulist: Shmem becomes bigger and bigger when launch apps",
+      "eligible": false,
+      "new": [
+        "715819a0e839a78c8b7a1a7a49963ce68feaf396"
+      ],
+      "equivalent_tree_commit": "715819a0e839a78c8b7a1a7a49963ce68feaf396"
+    },
+    {
+      "old": "9b8cecc78bb2f30dccc6abac6ad62202f466a6fb",
+      "subject": "gpu/msm: Remove unneeded time profiling from ringbuffer submission",
+      "eligible": false,
+      "new": [
+        "9b8cecc78bb2f30dccc6abac6ad62202f466a6fb"
+      ],
+      "equivalent_tree_commit": "9b8cecc78bb2f30dccc6abac6ad62202f466a6fb"
+    },
+    {
+      "old": "a9a670a9b3b9dce9018597c0d2745ffdf8988bb1",
+      "subject": "block: zram: Use lz4 as default zram compression",
+      "eligible": false,
+      "new": [
+        "a9a670a9b3b9dce9018597c0d2745ffdf8988bb1"
+      ],
+      "equivalent_tree_commit": "a9a670a9b3b9dce9018597c0d2745ffdf8988bb1"
+    },
+    {
+      "old": "6bbc3a0e180efb3f1254b50b1234d2fd21e99221",
+      "subject": "Revert \"msm: kgsl: Add gpu_frequency tracepoint to power trace system\"",
+      "eligible": false,
+      "new": [
+        "6bbc3a0e180efb3f1254b50b1234d2fd21e99221"
+      ],
+      "equivalent_tree_commit": "6bbc3a0e180efb3f1254b50b1234d2fd21e99221"
+    },
+    {
+      "old": "bc6df7e3bb1a852c31349d0f90f66530b42e96f1",
+      "subject": "Revert \"msm: kgsl: Add gpu_frequency trace during SLUMBER entry and exit\"",
+      "eligible": false,
+      "new": [
+        "bc6df7e3bb1a852c31349d0f90f66530b42e96f1"
+      ],
+      "equivalent_tree_commit": "bc6df7e3bb1a852c31349d0f90f66530b42e96f1"
+    },
+    {
+      "old": "f854a8b149b316d4a4c331d6d6b8c490abb9bc94",
+      "subject": "sm8250: Enable WireGuard Kernel-Side Support",
+      "eligible": false,
+      "new": [
+        "f854a8b149b316d4a4c331d6d6b8c490abb9bc94"
+      ],
+      "equivalent_tree_commit": "f854a8b149b316d4a4c331d6d6b8c490abb9bc94"
+    },
+    {
+      "old": "eea2df3b2f29fdc953d123d24d6d31664a1fc084",
+      "subject": "ARM64: dts: K11A: Reduce dimming speed setting to 16 frames",
+      "eligible": false,
+      "new": [
+        "eea2df3b2f29fdc953d123d24d6d31664a1fc084"
+      ],
+      "equivalent_tree_commit": "eea2df3b2f29fdc953d123d24d6d31664a1fc084"
+    },
+    {
+      "old": "60f349d81c0d6048e97b7101d48fb040a4fbd959",
+      "subject": "ARM64: dts: K11A: Update reset sequence of alioth display panel",
+      "eligible": false,
+      "new": [
+        "60f349d81c0d6048e97b7101d48fb040a4fbd959"
+      ],
+      "equivalent_tree_commit": "60f349d81c0d6048e97b7101d48fb040a4fbd959"
+    },
+    {
+      "old": "004e3a2cc70cd8c5e8fc0137d3eba79d2501a3c1",
+      "subject": "ARM: dts: qcom: Fix K11A timings switch settings",
+      "eligible": false,
+      "new": [
+        "004e3a2cc70cd8c5e8fc0137d3eba79d2501a3c1"
+      ],
+      "equivalent_tree_commit": "004e3a2cc70cd8c5e8fc0137d3eba79d2501a3c1"
+    },
+    {
+      "old": "91d4cfe6574be6ae078c934a679d2c4a4a97299c",
+      "subject": "ARM: dts: msm: kona: Force warm reboot in order to preserve mem",
+      "eligible": false,
+      "new": [
+        "91d4cfe6574be6ae078c934a679d2c4a4a97299c"
+      ],
+      "equivalent_tree_commit": "91d4cfe6574be6ae078c934a679d2c4a4a97299c"
+    },
+    {
+      "old": "177c0c69575729fb8660e5b4846d0625935565b1",
+      "subject": "power: qpnp-smb5: Disable VBUS regulator on shutdown",
+      "eligible": false,
+      "new": [
+        "177c0c69575729fb8660e5b4846d0625935565b1"
+      ],
+      "equivalent_tree_commit": "177c0c69575729fb8660e5b4846d0625935565b1"
+    },
+    {
+      "old": "858abd4e2e74cdae66f38b78755ba08fa1174fb7",
+      "subject": "power: reset: msm-poweroff: Reboot to recovery when kernel panics",
+      "eligible": false,
+      "new": [
+        "858abd4e2e74cdae66f38b78755ba08fa1174fb7"
+      ],
+      "equivalent_tree_commit": "858abd4e2e74cdae66f38b78755ba08fa1174fb7"
+    },
+    {
+      "old": "4d96f255410d73925c0ed8c72839a14dd26bfe02",
+      "subject": "power: reset: msm-poweroff: Don't reboot to EDL when kernel panics",
+      "eligible": false,
+      "new": [
+        "4d96f255410d73925c0ed8c72839a14dd26bfe02"
+      ],
+      "equivalent_tree_commit": "4d96f255410d73925c0ed8c72839a14dd26bfe02"
+    },
+    {
+      "old": "ee216945bd8b0e4e74fe704652055d0747d68242",
+      "subject": "drivers: ufs: Enable UFS write booster for xiaomi sm8250 platform",
+      "eligible": false,
+      "new": [
+        "ee216945bd8b0e4e74fe704652055d0747d68242"
+      ],
+      "equivalent_tree_commit": "ee216945bd8b0e4e74fe704652055d0747d68242"
+    },
+    {
+      "old": "ebfb50b863fad3199a3c1adffa776716cecaf9ab",
+      "subject": "Alioth: Include Apollo Battery Data",
+      "eligible": false,
+      "new": [
+        "ebfb50b863fad3199a3c1adffa776716cecaf9ab"
+      ],
+      "equivalent_tree_commit": "ebfb50b863fad3199a3c1adffa776716cecaf9ab"
+    },
+    {
+      "old": "168a05212f984a6a1e072b6f4fdcc81e627bc0bd",
+      "subject": "power: qpnp-fg-gen4: Reorder k11a/j3s fallback battery",
+      "eligible": false,
+      "new": [
+        "168a05212f984a6a1e072b6f4fdcc81e627bc0bd"
+      ],
+      "equivalent_tree_commit": "168a05212f984a6a1e072b6f4fdcc81e627bc0bd"
+    },
+    {
+      "old": "a48f10a9b5cff7ef1058e25ae3e3e5f25deeefef",
+      "subject": "drivers: misc: implement usb fast charge mode",
+      "eligible": false,
+      "new": [
+        "a48f10a9b5cff7ef1058e25ae3e3e5f25deeefef"
+      ],
+      "equivalent_tree_commit": "a48f10a9b5cff7ef1058e25ae3e3e5f25deeefef"
+    },
+    {
+      "old": "4bb4bb74648f3b4940141fa21ce61f634cecedb1",
+      "subject": "drivers: video: backlight: Import updated ktz8866 driver",
+      "eligible": false,
+      "new": [
+        "4bb4bb74648f3b4940141fa21ce61f634cecedb1"
+      ],
+      "equivalent_tree_commit": "4bb4bb74648f3b4940141fa21ce61f634cecedb1"
+    },
+    {
+      "old": "0dfc00a6aa38c531e65a78576a330ff1e46006c8",
+      "subject": "drivers: backlight: ktz8866: Disable exponential brightness debug",
+      "eligible": false,
+      "new": [
+        "0dfc00a6aa38c531e65a78576a330ff1e46006c8"
+      ],
+      "equivalent_tree_commit": "0dfc00a6aa38c531e65a78576a330ff1e46006c8"
+    },
+    {
+      "old": "53cf772e049a36258f851986be4a9e7bbf7548d9",
+      "subject": "drivers: power: supply: ti: Force PD charging if compatible",
+      "eligible": false,
+      "new": [
+        "53cf772e049a36258f851986be4a9e7bbf7548d9"
+      ],
+      "equivalent_tree_commit": "53cf772e049a36258f851986be4a9e7bbf7548d9"
+    },
+    {
+      "old": "482ff2db577c68d1a9546e0999c89a865b7b7d39",
+      "subject": "display: Fix exposure dimming gain and brightness transitions",
+      "eligible": false,
+      "new": [
+        "482ff2db577c68d1a9546e0999c89a865b7b7d39"
+      ],
+      "equivalent_tree_commit": "482ff2db577c68d1a9546e0999c89a865b7b7d39"
+    },
+    {
+      "old": "75da0668d7e967d1cc2aa2486fa19abe514e7c72",
+      "subject": "power: supply: ds28e16: Stop changing caller CPU affinity",
+      "eligible": false,
+      "new": [
+        "75da0668d7e967d1cc2aa2486fa19abe514e7c72"
+      ],
+      "equivalent_tree_commit": "75da0668d7e967d1cc2aa2486fa19abe514e7c72"
+    },
+    {
+      "old": "9d98a35441def9c2b77c40ecda46aff9e5cd08c6",
+      "subject": "power: supply: Finalize alioth replacement-battery support",
+      "eligible": false,
+      "new": [
+        "9d98a35441def9c2b77c40ecda46aff9e5cd08c6"
+      ],
+      "equivalent_tree_commit": "9d98a35441def9c2b77c40ecda46aff9e5cd08c6"
+    },
+    {
+      "old": "941faea3d74de9352d67231bba2cc18aeeb18c7d",
+      "subject": "power: supply: Expose valid Android battery properties",
+      "eligible": false,
+      "new": [
+        "941faea3d74de9352d67231bba2cc18aeeb18c7d"
+      ],
+      "equivalent_tree_commit": "941faea3d74de9352d67231bba2cc18aeeb18c7d"
+    },
+    {
+      "old": "2ad7cd5ab21e8f39b080b55cbdb49bfba83386c5",
+      "subject": "gpu: msm: Harden compatibility sysfs and expose aggregate memory",
+      "eligible": false,
+      "new": [
+        "2ad7cd5ab21e8f39b080b55cbdb49bfba83386c5"
+      ],
+      "equivalent_tree_commit": "2ad7cd5ab21e8f39b080b55cbdb49bfba83386c5"
+    },
+    {
+      "old": "262790ebb2119cff8da60830b4121288ba44ac5d",
+      "subject": "mm: userfaultfd: Commit memcg ownership before page publication",
+      "eligible": false,
+      "new": [
+        "262790ebb2119cff8da60830b4121288ba44ac5d"
+      ],
+      "equivalent_tree_commit": "262790ebb2119cff8da60830b4121288ba44ac5d"
+    },
+    {
+      "old": "302b952f1133da492bebaffa69fb3b3a144d0cb0",
+      "subject": "msm: kgsl: Make pool reclaim accounting and scan bounds consistent",
+      "eligible": false,
+      "new": [
+        "302b952f1133da492bebaffa69fb3b3a144d0cb0"
+      ],
+      "equivalent_tree_commit": "302b952f1133da492bebaffa69fb3b3a144d0cb0"
+    },
+    {
+      "old": "1ff72598fa23d827ab99415fc087eb06bb606f03",
+      "subject": "thermal: Treat Xiaomi thermal-message text as bounded data",
+      "eligible": false,
+      "new": [
+        "1ff72598fa23d827ab99415fc087eb06bb606f03"
+      ],
+      "equivalent_tree_commit": "1ff72598fa23d827ab99415fc087eb06bb606f03"
+    },
+    {
+      "old": "dba040c5c7ec1c7f29600ea49a7f1342d1409b8a",
+      "subject": "usb: dwc3: Pace controller run-stop status polling",
+      "eligible": true,
+      "new": [
+        "dba040c5c7ec1c7f29600ea49a7f1342d1409b8a"
+      ],
+      "equivalent_tree_commit": "dba040c5c7ec1c7f29600ea49a7f1342d1409b8a"
+    },
+    {
+      "old": "b8b6c1d93ed9a70c4847c0991b80656d00c9b013",
+      "subject": "power: supply: Reject failed battery ID reads during JEITA setup",
+      "eligible": true,
+      "new": [
+        "b8b6c1d93ed9a70c4847c0991b80656d00c9b013"
+      ],
+      "equivalent_tree_commit": "b8b6c1d93ed9a70c4847c0991b80656d00c9b013"
+    },
+    {
+      "old": "fad7d4512a8abfc8630854f95929785d210d9b6b",
+      "subject": "arm64: dts: alioth: Restore unverified battery current limit",
+      "eligible": true,
+      "new": [
+        "fad7d4512a8abfc8630854f95929785d210d9b6b"
+      ],
+      "equivalent_tree_commit": "fad7d4512a8abfc8630854f95929785d210d9b6b"
+    },
+    {
+      "old": "489c364c4d006116adae7c09ce9f8ae81969626c",
+      "subject": "sched/tune: Allow the Android NNAPI boost group",
+      "eligible": true,
+      "new": [
+        "489c364c4d006116adae7c09ce9f8ae81969626c"
+      ],
+      "equivalent_tree_commit": "489c364c4d006116adae7c09ce9f8ae81969626c"
+    },
+    {
+      "old": "018f32b9ab24c6c15799b0d040861f3a0c12b39a",
+      "subject": "power: supply: Move routine battery and thermal telemetry to debug",
+      "eligible": true,
+      "new": [
+        "018f32b9ab24c6c15799b0d040861f3a0c12b39a"
+      ],
+      "equivalent_tree_commit": "018f32b9ab24c6c15799b0d040861f3a0c12b39a"
+    },
+    {
+      "old": "13a5b37d398b04abc2cb2e01c43a2d5f0cd0c2ac",
+      "subject": "input: focaltech: Disable verbose tracing by default",
+      "eligible": true,
+      "new": [
+        "13a5b37d398b04abc2cb2e01c43a2d5f0cd0c2ac"
+      ],
+      "equivalent_tree_commit": "13a5b37d398b04abc2cb2e01c43a2d5f0cd0c2ac"
+    },
+    {
+      "old": "2953c20ae820aadac8ba6f4d79ea1d1e31cff788",
+      "subject": "media: cvp: Make continuous firmware logging opt-in",
+      "eligible": true,
+      "new": [
+        "2953c20ae820aadac8ba6f4d79ea1d1e31cff788"
+      ],
+      "equivalent_tree_commit": "2953c20ae820aadac8ba6f4d79ea1d1e31cff788"
+    },
+    {
+      "old": "b72873ddfb6b239782b2fa9151478eca0bf0069f",
+      "subject": "arm64: configs: alioth: Disable unused WiGig drivers",
+      "eligible": true,
+      "new": [
+        "b72873ddfb6b239782b2fa9151478eca0bf0069f"
+      ],
+      "equivalent_tree_commit": "b72873ddfb6b239782b2fa9151478eca0bf0069f"
+    },
+    {
+      "old": "aba668afbd8f13e9076f2845e140a09f2ee432cf",
+      "subject": "ASoC: msm: Fix Xiaomi routing controls and Alioth speaker links",
+      "eligible": true,
+      "new": [
+        "aba668afbd8f13e9076f2845e140a09f2ee432cf"
+      ],
+      "equivalent_tree_commit": "aba668afbd8f13e9076f2845e140a09f2ee432cf"
+    },
+    {
+      "old": "9d9626cc92e997661e7534db21a3f5fd5413a1b6",
+      "subject": "ASoC: cs35l41: Stop forcing verbose runtime diagnostics",
+      "eligible": true,
+      "new": [
+        "9d9626cc92e997661e7534db21a3f5fd5413a1b6"
+      ],
+      "equivalent_tree_commit": "9d9626cc92e997661e7534db21a3f5fd5413a1b6"
+    },
+    {
+      "old": "1c5499fbbb9041a9d225aaad8a63bad1eae0ed04",
+      "subject": "drm: mi: Honor white LHBM calibration opt-in",
+      "eligible": true,
+      "new": [
+        "1c5499fbbb9041a9d225aaad8a63bad1eae0ed04"
+      ],
+      "equivalent_tree_commit": "1c5499fbbb9041a9d225aaad8a63bad1eae0ed04"
+    },
+    {
+      "old": "ef30facf9885e3140c420c85c2a52e204a64e88d",
+      "subject": "input: aw8697: Complete stock Alioth driver integration",
+      "eligible": true,
+      "new": [
+        "ef30facf9885e3140c420c85c2a52e204a64e88d"
+      ],
+      "equivalent_tree_commit": "ef30facf9885e3140c420c85c2a52e204a64e88d"
+    },
+    {
+      "old": "4a59b0577d072c29ba893bd1a2a73eb5297b4fbb",
+      "subject": "drm: dsi: Integrate HBM and exposure controls with Xiaomi lifecycle",
+      "eligible": true,
+      "new": [
+        "4a59b0577d072c29ba893bd1a2a73eb5297b4fbb"
+      ],
+      "equivalent_tree_commit": "4a59b0577d072c29ba893bd1a2a73eb5297b4fbb"
+    },
+    {
+      "old": "71a5f72101e3b0e121b8999dafd882a1509b5d71",
+      "subject": "arm64: Use the host DTBO packager",
+      "eligible": true,
+      "new": [
+        "71a5f72101e3b0e121b8999dafd882a1509b5d71"
+      ],
+      "equivalent_tree_commit": "71a5f72101e3b0e121b8999dafd882a1509b5d71"
+    },
+    {
+      "old": "b3c456990760752b8a01acde2812cdbcac28ddd2",
+      "subject": "lz4: do not export static symbol",
+      "eligible": false,
+      "new": [
+        "b3c456990760752b8a01acde2812cdbcac28ddd2"
+      ],
+      "equivalent_tree_commit": "b3c456990760752b8a01acde2812cdbcac28ddd2"
+    },
+    {
+      "old": "5147cdd397cbf90e8cfca973dad458f578857a5c",
+      "subject": "lib/lz4/lz4_decompress.c: document deliberate use of `&'",
+      "eligible": false,
+      "new": [
+        "5147cdd397cbf90e8cfca973dad458f578857a5c"
+      ],
+      "equivalent_tree_commit": "5147cdd397cbf90e8cfca973dad458f578857a5c"
+    },
+    {
+      "old": "5d30430266a32de2cb0798d334548981d4302cea",
+      "subject": "lz4_decompress: declare LZ4_decompress_safe_withPrefix64k static",
+      "eligible": false,
+      "new": [
+        "5d30430266a32de2cb0798d334548981d4302cea"
+      ],
+      "equivalent_tree_commit": "5d30430266a32de2cb0798d334548981d4302cea"
+    },
+    {
+      "old": "c3cac32d0c604338211a0f53d976c98b1847e1c5",
+      "subject": "lib/lz4: Include bitops explicitly",
+      "eligible": false,
+      "new": [
+        "c3cac32d0c604338211a0f53d976c98b1847e1c5"
+      ],
+      "equivalent_tree_commit": "c3cac32d0c604338211a0f53d976c98b1847e1c5"
+    },
+    {
+      "old": "1f5c36c46e3e3a8f20fae3c49209072f144dbbe3",
+      "subject": "lib: make LZ4_decompress_safe_forceExtDict() static",
+      "eligible": false,
+      "new": [
+        "1f5c36c46e3e3a8f20fae3c49209072f144dbbe3"
+      ],
+      "equivalent_tree_commit": "1f5c36c46e3e3a8f20fae3c49209072f144dbbe3"
+    },
+    {
+      "old": "b8416a994843741af8378c738c82e450772df4e9",
+      "subject": "lib: lz4hc: export LZ4_resetStreamHC symbol",
+      "eligible": false,
+      "new": [
+        "b8416a994843741af8378c738c82e450772df4e9"
+      ],
+      "equivalent_tree_commit": "b8416a994843741af8378c738c82e450772df4e9"
+    },
+    {
+      "old": "bfdf1d8687af54adea3df2889509452ebb70ac5c",
+      "subject": "include/linux/lz4.h: fix spelling and copy-paste errors in documentation",
+      "eligible": false,
+      "new": [
+        "bfdf1d8687af54adea3df2889509452ebb70ac5c"
+      ],
+      "equivalent_tree_commit": "bfdf1d8687af54adea3df2889509452ebb70ac5c"
+    },
+    {
+      "old": "bf7d6f5efad9b34735ddd074b098a6e4b994e8b9",
+      "subject": "include/linux/lz4.h: add some missing macros",
+      "eligible": false,
+      "new": [
+        "bf7d6f5efad9b34735ddd074b098a6e4b994e8b9"
+      ],
+      "equivalent_tree_commit": "bf7d6f5efad9b34735ddd074b098a6e4b994e8b9"
+    },
+    {
+      "old": "a3d3e524e21fcc9ede72cdb7b8a4f7d66586dc8d",
+      "subject": "binder: Backport extended transaction error reporting",
+      "eligible": false,
+      "new": [
+        "a3d3e524e21fcc9ede72cdb7b8a4f7d66586dc8d"
+      ],
+      "equivalent_tree_commit": "a3d3e524e21fcc9ede72cdb7b8a4f7d66586dc8d"
+    },
+    {
+      "old": "85feda2c7e3bd758be84867eb8a3fdbf23428778",
+      "subject": "binderfs: Expose supported Binder features to Android",
+      "eligible": false,
+      "new": [
+        "85feda2c7e3bd758be84867eb8a3fdbf23428778"
+      ],
+      "equivalent_tree_commit": "85feda2c7e3bd758be84867eb8a3fdbf23428778"
+    },
+    {
+      "old": "a7815cfb36ad3b7679d96e5622f2f29ee4c0950a",
+      "subject": "binder: use current_euid() for transaction sender identity",
+      "eligible": false,
+      "new": [
+        "a7815cfb36ad3b7679d96e5622f2f29ee4c0950a"
+      ],
+      "equivalent_tree_commit": "a7815cfb36ad3b7679d96e5622f2f29ee4c0950a"
+    },
+    {
+      "old": "97e5962189ca76f632663bd2ec2377bc318af16c",
+      "subject": "f2fs: fix to avoid potential deadloop in f2fs_fsync_node_pages()",
+      "eligible": false,
+      "new": [
+        "97e5962189ca76f632663bd2ec2377bc318af16c"
+      ],
+      "equivalent_tree_commit": "97e5962189ca76f632663bd2ec2377bc318af16c"
+    },
+    {
+      "old": "a237bcf374de245eb0532c6725c7a690d1d385f9",
+      "subject": "f2fs: return symlink writeback errors",
+      "eligible": false,
+      "new": [
+        "a237bcf374de245eb0532c6725c7a690d1d385f9"
+      ],
+      "equivalent_tree_commit": "a237bcf374de245eb0532c6725c7a690d1d385f9"
+    },
+    {
+      "old": "95f7a27e2f79d581f7d16434aca157c2928a14c8",
+      "subject": "ext4: stop retrying saturated xattr cache entries",
+      "eligible": false,
+      "new": [
+        "95f7a27e2f79d581f7d16434aca157c2928a14c8"
+      ],
+      "equivalent_tree_commit": "95f7a27e2f79d581f7d16434aca157c2928a14c8"
+    },
+    {
+      "old": "93b49080cae977f5ad7dd85ad3612bd7fe23cc74",
+      "subject": "f2fs: Bound pinned-file GC thresholds to the on-disk counter",
+      "eligible": false,
+      "new": [
+        "93b49080cae977f5ad7dd85ad3612bd7fe23cc74"
+      ],
+      "equivalent_tree_commit": "93b49080cae977f5ad7dd85ad3612bd7fe23cc74"
+    },
+    {
+      "old": "9d60b5a95138f4068b82937404c98a9fca8fb2da",
+      "subject": "arm64: Fix strrchr matching of the NUL terminator",
+      "eligible": false,
+      "new": [
+        "9d60b5a95138f4068b82937404c98a9fca8fb2da"
+      ],
+      "equivalent_tree_commit": "9d60b5a95138f4068b82937404c98a9fca8fb2da"
+    },
+    {
+      "old": "6f0d80b03274f9ac3af1d9e5253ff6c17a286ca4",
+      "subject": "arm64: cmpxchg_double*: hazard against entire exchange variable",
+      "eligible": false,
+      "new": [
+        "6f0d80b03274f9ac3af1d9e5253ff6c17a286ca4"
+      ],
+      "equivalent_tree_commit": "6f0d80b03274f9ac3af1d9e5253ff6c17a286ca4"
+    },
+    {
+      "old": "c821570d3c41426e65c5a4f43558cc823c7a27e8",
+      "subject": "input: aw8697: Report queued and active RTP playback",
+      "eligible": true,
+      "new": [
+        "c821570d3c41426e65c5a4f43558cc823c7a27e8"
+      ],
+      "equivalent_tree_commit": "c821570d3c41426e65c5a4f43558cc823c7a27e8"
+    },
+    {
+      "old": "f4321f3d9806980ea69fcb5bb02cb3c7da26fc89",
+      "subject": "power: supply: Guard FG startup readings and empty SOC recovery",
+      "eligible": true,
+      "new": [
+        "f4321f3d9806980ea69fcb5bb02cb3c7da26fc89"
+      ],
+      "equivalent_tree_commit": "f4321f3d9806980ea69fcb5bb02cb3c7da26fc89"
+    },
+    {
+      "old": "c5f004f70f9702f1a640bf061b5a7f96656b9217",
+      "subject": "input: xiaomi: Validate control writes and registration",
+      "eligible": true,
+      "new": [
+        "c5f004f70f9702f1a640bf061b5a7f96656b9217"
+      ],
+      "equivalent_tree_commit": "c5f004f70f9702f1a640bf061b5a7f96656b9217"
+    },
+    {
+      "old": "e10c6dfb8674fcd9b81d8cce7420512190acfee7",
+      "subject": "misc: fastchg: Fix failed initialization cleanup",
+      "eligible": true,
+      "new": [
+        "e10c6dfb8674fcd9b81d8cce7420512190acfee7"
+      ],
+      "equivalent_tree_commit": "e10c6dfb8674fcd9b81d8cce7420512190acfee7"
+    },
+    {
+      "old": "fa0942be4cd24cf8bdbe43fbe107c805744c9a8b",
+      "subject": "arm64: configs: Generate Xiaomi device defconfigs from base fragments",
+      "eligible": true,
+      "new": [
+        "36d8909a703d9575b221d89f4aff0a508b6a40b2"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "489cea4aedaf2e1bd827df0305b443bbb43f41aa",
+      "subject": "scripts: Make Xiaomi defconfig generation portable and reproducible",
+      "eligible": true,
+      "new": [
+        "36d8909a703d9575b221d89f4aff0a508b6a40b2"
+      ],
+      "equivalent_tree_commit": "36d8909a703d9575b221d89f4aff0a508b6a40b2"
+    },
+    {
+      "old": "10704a8bcf36b9d4bc8b3b803dfaf43d7d9750f6",
+      "subject": "scripts: Remove unused exception-table write helpers",
+      "eligible": true,
+      "new": [
+        "79a90a8fdd9496f47d4bab61ee87beaedd42ea7a"
+      ],
+      "equivalent_tree_commit": "79a90a8fdd9496f47d4bab61ee87beaedd42ea7a"
+    },
+    {
+      "old": "65ed669c206aa692e0f98773633e8de25d250bd5",
+      "subject": "kbuild: Remove obsolete Clang probes and modernize CFI flag",
+      "eligible": true,
+      "new": [
+        "2aa5703b633c621c996216a2af3a5a40f8ce1c86"
+      ],
+      "equivalent_tree_commit": "2aa5703b633c621c996216a2af3a5a40f8ce1c86"
+    },
+    {
+      "old": "31c3b0a165b7c71ee6c3a766617ab5e44d9d05a6",
+      "subject": "arm64: Select and package Xiaomi SM8250 overlays per device",
+      "eligible": true,
+      "new": [
+        "ac95d7f8b80005093c098f965345b904f6652a5d"
+      ],
+      "equivalent_tree_commit": "ac95d7f8b80005093c098f965345b904f6652a5d"
+    },
+    {
+      "old": "883796a0c4d73c0a5f9bcab2d5b9cd9fa869c7da",
+      "subject": "kbuild: Reject ignored Clang optimization arguments",
+      "eligible": false,
+      "new": [
+        "534c94f133a575a47eaed7a622dfbff808745930"
+      ],
+      "equivalent_tree_commit": "534c94f133a575a47eaed7a622dfbff808745930"
+    },
+    {
+      "old": "fc2f42a6932dde285865529a22c45a462dbdf001",
+      "subject": "arm64: vdso32: Reject unsupported compiler options",
+      "eligible": true,
+      "new": [
+        "e596f4c66d44484d4bb5b9d7f72f42a087dc0bfb"
+      ],
+      "equivalent_tree_commit": "e596f4c66d44484d4bb5b9d7f72f42a087dc0bfb"
+    },
+    {
+      "old": "d144a29889a52af1b698f8545d43f01b33629749",
+      "subject": "arch: arm64: configs: xiaomi: Remove CONFIG_BLK_WBT config",
+      "eligible": false,
+      "new": [
+        "c772f407cdca87057cc2c27fb910a7893b52d62f"
+      ],
+      "equivalent_tree_commit": "c772f407cdca87057cc2c27fb910a7893b52d62f"
+    },
+    {
+      "old": "913fa307ac8f0d436a375bd838f0e26d0ae2bc4d",
+      "subject": "arm64: configs: xiaomi: Regenerate device defconfigs without WBT",
+      "eligible": true,
+      "new": [
+        "f3a7841a6c2bf0cf6248ffa82eafc6aae3eaedf7"
+      ],
+      "equivalent_tree_commit": "f3a7841a6c2bf0cf6248ffa82eafc6aae3eaedf7"
+    },
+    {
+      "old": "cab86694f6b5c07dd4698f2a399764aad915c30a",
+      "subject": "arm64: vdso: declare the exported time entry points",
+      "eligible": false,
+      "new": [
+        "8f62b10b6b778c88f9bd78e2efcd969d16a4a741"
+      ],
+      "equivalent_tree_commit": "8f62b10b6b778c88f9bd78e2efcd969d16a4a741"
+    },
+    {
+      "old": "c7ba1008687cac59c96b16d5cc484d345ebb5438",
+      "subject": "power: supply: qcom: fg-gen4: validate the fast ESR timer value",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "fccb61801cb23a365964d7bb1f3fa833eb53e0ae",
+      "subject": "power: supply: qcom: fg-gen4: keep KI coefficients in idle states",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "f9ca838dec5ce2ab0031f6623c06836869c6c3cb",
+      "subject": "power: supply: qcom: fg-gen4: check battery authentication reads",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "07717effc550383efd5ac6a3e935d87ec7174789",
+      "subject": "power: supply: qcom: fg-gen4: honor warm and overheat full-charge guard",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "0b17e1a14fe295b5d268c3870f8ca607637bc248",
+      "subject": "power: supply: qcom: fg-gen4: saturate ESR before narrowing",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "797150988b2e5ce73cac685b68f9976c15c3f14e",
+      "subject": "input: keyboard: nanosic: remove UTF-8 BOM from macro header",
+      "eligible": true,
+      "new": [
+        "a2a7cd916fc93104343198c30dd754a0b2250b84"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "31739a4983a43fee6e26072f1557a5819ab5c162",
+      "subject": "input: keyboard: nanosic: make wakeup IRQ handler private",
+      "eligible": true,
+      "new": [
+        "a2a7cd916fc93104343198c30dd754a0b2250b84"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "20797a597e1296560761d25632ad46cbb9625f5f",
+      "subject": "power: supply: qcom: fg-gen4: align corrected condition checks",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "0369b3ccf4186be4389a0ebb8e2d6b1111df2199",
+      "subject": "power: supply: qcom: smb5: repair charging error paths",
+      "eligible": true,
+      "new": [
+        "bad45bca1168a3962e54c94640eb138d34b3a928"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "5e57b74650b419868fa313fbc0273186cae83c3c",
+      "subject": "power: supply: qcom: fix charging diagnostic types",
+      "eligible": true,
+      "new": [
+        "bad45bca1168a3962e54c94640eb138d34b3a928"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "5be24f4666507c4b094c3baf7f1b2ab2161923f6",
+      "subject": "power: supply: qcom: smb5: scope private helpers and remove dead locals",
+      "eligible": true,
+      "new": [
+        "bad45bca1168a3962e54c94640eb138d34b3a928"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "ab2fdf3ca0886b54ee24dafa0c7ac2362ecff542",
+      "subject": "input: keyboard: nanosic: remove remaining source BOMs",
+      "eligible": true,
+      "new": [
+        "a2a7cd916fc93104343198c30dd754a0b2250b84"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "db1c2072a42ddf521138376af43b38b00a37ec25",
+      "subject": "power: supply: qcom: align charging diagnostics",
+      "eligible": true,
+      "new": [
+        "bad45bca1168a3962e54c94640eb138d34b3a928"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "0ad33423fb04696fc9eeb4667101d8b7960fb7f1",
+      "subject": "msm: kgsl: avoid NULL dereference on memory-entry allocation failure",
+      "eligible": true,
+      "new": [
+        "c66854be11ca4620ae046fd6c8cbb9e93e31f992"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "bdc40ab8fb7286ca1d96862a93a877b544c43105",
+      "subject": "msm: kgsl: unwind failed DMA-BUF imports completely",
+      "eligible": true,
+      "new": [
+        "c66854be11ca4620ae046fd6c8cbb9e93e31f992"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "c63422cf8dca0259f22c71ccbc5ad9c4c996a38c",
+      "subject": "msm: kgsl: fix repeated sparse page mapping indices",
+      "eligible": true,
+      "new": [
+        "c66854be11ca4620ae046fd6c8cbb9e93e31f992"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "bf9b790b63b69cabadb64678fdc8d53208d7c64e",
+      "subject": "msm: kgsl: fix helper scope and dead locals for W=1",
+      "eligible": true,
+      "new": [
+        "c66854be11ca4620ae046fd6c8cbb9e93e31f992"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "ebec4a041fae85aaf11cd10a09d296c8ac5e7224",
+      "subject": "scsi: ufs: make disabled debug-state stubs static inline",
+      "eligible": true,
+      "new": [
+        "0f84415a8863ab4b682aa13da3f8fb68351f73ca"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "70a2aa5174c1530cb9226669c821b7b459c48d87",
+      "subject": "scsi: ufs: scope private helpers and remove unused locals",
+      "eligible": true,
+      "new": [
+        "0f84415a8863ab4b682aa13da3f8fb68351f73ca"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "e467799a670f514f6da52c606be8000984eafd58",
+      "subject": "usb: dwc3: print DMA addresses with the correct types",
+      "eligible": true,
+      "new": [
+        "cd4780f1f7ac490ca642557517ef09db18b67e23"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "60a490f93a21b534f577034a3f3a4463d7062f30",
+      "subject": "usb: dwc3: declare exported reset and scope state formatter",
+      "eligible": true,
+      "new": [
+        "cd4780f1f7ac490ca642557517ef09db18b67e23"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "fbbe976132905ea3f228d4eb1f80d45348ad992a",
+      "subject": "thermal: qcom: fix thermal sensor QMI sentinel initializers",
+      "eligible": true,
+      "new": [
+        "258b33a0db8507bc7834acb91a94d99b063a7413"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "1a1385d36e40bbeb11c78532eab5366869fe8e54",
+      "subject": "thermal: qcom: scope ADC notification callbacks",
+      "eligible": true,
+      "new": [
+        "900669c16a90faed3690c27a42f7b78bc2f1b07d"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "935f99e6f5cc174de1c38db429d7b2e260983f33",
+      "subject": "usb: dwc3: respect reset deferral and failed runtime resumes",
+      "eligible": true,
+      "new": [
+        "cd4780f1f7ac490ca642557517ef09db18b67e23"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "be56524b2b828987ec104280cd185207bbeb09e5",
+      "subject": "power: supply: qcom: retry battery hints and select the K11A GY profile",
+      "eligible": true,
+      "new": [
+        "29bb97c99f6dcd4771f8c726c78f8ce34fe431fc"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "8bf5fff8ae9fa1ec356deaa9b793109913d41ee9",
+      "subject": "thermal: qcom: handle sub-degree QMI temperature encoding",
+      "eligible": true,
+      "new": [
+        "258b33a0db8507bc7834acb91a94d99b063a7413"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "1cf38eaf395530618663f6d8add1faae691f6f29",
+      "subject": "thermal: qcom: bound CDSP data and balance sysfs ownership",
+      "eligible": true,
+      "new": [
+        "f11f3f31d6e17b8a55ed97d296376c2aa98bcef1"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "2762e818dadf77ec169e780aa265a22163dfdba8",
+      "subject": "wlan: fix ESE beacon report bounds and scan-result progress",
+      "eligible": true,
+      "new": [
+        "7a0a3aea4e1f3757bf4d6a384637f4cec3e9b9be"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "546ad42d707e86837472368a3056ad563125d8d9",
+      "subject": "drm: msm: dsi: correct panel backlight and LUT error paths",
+      "eligible": true,
+      "new": [
+        "2ebf1a67906eb0d11b060caaf270d1c4115fb56a"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "ad3169d29a21d7c0381f6a3efc2253363e99d55a",
+      "subject": "drm: msm: keep USB-PD and PLL helpers private",
+      "eligible": true,
+      "new": [
+        "7b6b6c0803f281e4ca2a541bf5441ad78fdf4ff7",
+        "d4518e09b70cf281410208692650ddd454fda4c1"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "8ffb685fe9b279e1bd9a7633597bd96ca7dc8221",
+      "subject": "gpu: msm: clean up private helpers and diagnostics",
+      "eligible": true,
+      "new": [
+        "c66854be11ca4620ae046fd6c8cbb9e93e31f992"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "30d5a68af4ad23dd094121d94c4a1de11c640150",
+      "subject": "drivers: tidy thermal prototypes and UFS stub layout",
+      "eligible": true,
+      "new": [
+        "0f84415a8863ab4b682aa13da3f8fb68351f73ca",
+        "900669c16a90faed3690c27a42f7b78bc2f1b07d"
+      ],
+      "equivalent_tree_commit": "d4518e09b70cf281410208692650ddd454fda4c1"
+    },
+    {
+      "old": "f2af458737e1e73178ff9b4e5182c9c74e5d12c6",
+      "subject": "lib: lz4: import upstream v1.10.0 with kernel workspace adapters",
+      "eligible": true,
+      "new": [
+        "9e8f88a88d897a1cf3d5b9799be6229e3c15843c"
+      ],
+      "equivalent_tree_commit": "9e8f88a88d897a1cf3d5b9799be6229e3c15843c"
+    },
+    {
+      "old": "50c1e36fd1ed56087b7c17f716c29b934ba55f43",
+      "subject": "msm: camera: jpeg: Validate Xiaomi change-base buffer bounds",
+      "eligible": false,
+      "new": [
+        "86fd5349348b15a53c9bbac8b72420fa30849573"
+      ],
+      "equivalent_tree_commit": "86fd5349348b15a53c9bbac8b72420fa30849573"
+    },
+    {
+      "old": "524a4031efef1c13c374480f470a07e24aee820b",
+      "subject": "msm: camera: jpeg: Preserve output fence resource mappings",
+      "eligible": true,
+      "new": [
+        "9a0c2d5536764cb94e98a8444eba65695607aeec"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "fb7b82e7e597f09781901c28b5c2c9251f6a6a0f",
+      "subject": "msm: camera: jpeg: Bound input and output fence maps",
+      "eligible": true,
+      "new": [
+        "9a0c2d5536764cb94e98a8444eba65695607aeec"
+      ],
+      "equivalent_tree_commit": "9a0c2d5536764cb94e98a8444eba65695607aeec"
+    },
+    {
+      "old": "d5d2ee08b201a80ad355e98e4ac1205cfcdc76ec",
+      "subject": "arm64: configs: xiaomi: Regenerate defconfigs after Qualcomm rebase",
+      "eligible": true,
+      "new": [
+        "c868966aa8fb7e909b7905442e8f82df2d464411"
+      ],
+      "equivalent_tree_commit": "c868966aa8fb7e909b7905442e8f82df2d464411"
+    },
+    {
+      "old": "36f302db567852fac187e27f73b1952e6ec974f5",
+      "subject": "thermal: Validate Xiaomi profile selector input",
+      "eligible": true,
+      "new": [
+        "dff2645cd07ad60e3af9e854ea45c676830ab23c"
+      ],
+      "equivalent_tree_commit": "dff2645cd07ad60e3af9e854ea45c676830ab23c"
+    },
+    {
+      "old": "7b82730d1fe80c786840cfe604d0d35d9b768902",
+      "subject": "drm/msm: Restore the Xiaomi thermal HBM inhibit interface",
+      "eligible": true,
+      "new": [
+        "a947dde071324f96c71b7120e3bf0aa89be1ad23"
+      ],
+      "equivalent_tree_commit": "a947dde071324f96c71b7120e3bf0aa89be1ad23"
+    },
+    {
+      "old": "93d2ae19be8751fe01bf964676567d0b76b0ae06",
+      "subject": "incfs: Reset the cached Zstd stream before each block",
+      "eligible": true,
+      "new": [
+        "228bf66e598c79ee5d8a47a3636bb40a85b439f9"
+      ],
+      "equivalent_tree_commit": "228bf66e598c79ee5d8a47a3636bb40a85b439f9"
+    },
+    {
+      "old": "8fbdfda9da78591bf1e87527659208fdce1426ab",
+      "subject": "lib: zstd: Backport the upstream 1.5.7 kernel implementation",
+      "eligible": false,
+      "new": [
+        "fc014d6c7bf9730009ca45a0cf416aa977409262"
+      ],
+      "equivalent_tree_commit": "fc014d6c7bf9730009ca45a0cf416aa977409262"
+    },
+    {
+      "old": "30102bbacdf20cb31a7f0a54ba8ac3cd08152709",
+      "subject": "zram: Fix the reset and initialization race",
+      "eligible": false,
+      "new": [
+        "7a25e593be5613b64b8d3c5c23a4d85a3e477882"
+      ],
+      "equivalent_tree_commit": "7a25e593be5613b64b8d3c5c23a4d85a3e477882"
+    },
+    {
+      "old": "57c3dfc2ff8fbb98e767579723941b9c4768322d",
+      "subject": "zram: Clear the compressor pointer after reset",
+      "eligible": false,
+      "new": [
+        "891eda0db03e6b4635a95ee20dc4991a439a8dab"
+      ],
+      "equivalent_tree_commit": "891eda0db03e6b4635a95ee20dc4991a439a8dab"
+    },
+    {
+      "old": "65dfee684a9ff41039f5945c433d57320457d769",
+      "subject": "zram: Avoid recompressing incompressible pages after reclaim",
+      "eligible": false,
+      "new": [
+        "3bb922c332f98d71bc21cccbb8e960afdff0f2bd"
+      ],
+      "equivalent_tree_commit": "3bb922c332f98d71bc21cccbb8e960afdff0f2bd"
+    },
+    {
+      "old": "37fc528e70189e101465ddcfd8a263f4a138420b",
+      "subject": "Bluetooth: L2CAP: Validate control and FCS lengths before access",
+      "eligible": false,
+      "new": [
+        "a7a2f392a246f5c8d76d633a80c4adbe0b1c5910"
+      ],
+      "equivalent_tree_commit": "a7a2f392a246f5c8d76d633a80c4adbe0b1c5910"
+    },
+    {
+      "old": "12db94a42185a91da9e19c558aae4200fbb938d6",
+      "subject": "Bluetooth: L2CAP: Reject connectionless frames without a PSM",
+      "eligible": false,
+      "new": [
+        "40563a41633c4b32b161bb9b722afa104c986a7e"
+      ],
+      "equivalent_tree_commit": "40563a41633c4b32b161bb9b722afa104c986a7e"
+    },
+    {
+      "old": "94c01d12daa707138e0fb559984a40342e4214a6",
+      "subject": "usb: gadget: f_fs: Copy only received bytes on short ep0 reads",
+      "eligible": false,
+      "new": [
+        "0477e6b6ae88a86844bf1737599686d19fa0966e"
+      ],
+      "equivalent_tree_commit": "0477e6b6ae88a86844bf1737599686d19fa0966e"
+    },
+    {
+      "old": "6b2bc34d2d16a8fe2ec25a8d9aa46a052f2cb719",
+      "subject": "scsi: ufs: Clear attribute output after a failed UIC command",
+      "eligible": false,
+      "new": [
+        "9958585d8e5afe632e3c30ef6a613309db3b4432"
+      ],
+      "equivalent_tree_commit": "9958585d8e5afe632e3c30ef6a613309db3b4432"
+    },
+    {
+      "old": "4d32767e70a569d7fd0813e41174bf1da4a01902",
+      "subject": "wifi: cnss2: Match PCI diagnostic formats to integer types",
+      "eligible": true,
+      "new": [
+        "7eea19203d8f6de1120fd42a1239dd4147ed29e3"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "b395bab7dae0aa21d317ce3d9229ac6e51f5facd",
+      "subject": "kbuild: Make sparse checks compatible with Clang driver headers",
+      "eligible": true,
+      "new": [
+        "101f9a6c39d7f0c0c69d72d38aeeb1db5c3c3582"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "f69b9fffdd2dfcaab5b2a345e1c4d99941cb465c",
+      "subject": "init: Build LTO initcall section names with string concatenation",
+      "eligible": true,
+      "new": [
+        "f3b863c36659e4ef4994fc0affc78a8dd7a6e50a"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "80a059d5e2febb95def0437443f22f64a1f1463b",
+      "subject": "net: Use the correct negative-advice callback type without casts",
+      "eligible": true,
+      "new": [
+        "a30704cce7c709a9ca42e203909b533477b763cf"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "d5261f40cc81969d08c52e867fd015994fba2786",
+      "subject": "xfrm: Use the RCU accessor when comparing afinfo identity",
+      "eligible": true,
+      "new": [
+        "a30704cce7c709a9ca42e203909b533477b763cf"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "cedd2f33336fed8bf42d13e54c1a9b96d90d9917",
+      "subject": "drivers: Correct FunctionFS and UFS kernel-doc parameters",
+      "eligible": true,
+      "new": [
+        "23923bf4ab1be1565ba17724d5496049a01ae5f1",
+        "a2f59090ee186a46de5fc912b038cc0aff655faf"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "46b1d367c0b6a8bdfb140c48be5686bb54a08658",
+      "subject": "kernel: Align the checked callback and initcall declarations",
+      "eligible": true,
+      "new": [
+        "f3b863c36659e4ef4994fc0affc78a8dd7a6e50a",
+        "a30704cce7c709a9ca42e203909b533477b763cf"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "93b29226f640113f95f186bfef0b5ae4d66d21c4",
+      "subject": "arm64: io: Preserve MMIO address types through RTB logging",
+      "eligible": true,
+      "new": [
+        "59e8b951755e4ef16a0bfb24677d18670a40ad1a"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "417ec4d50abc9981999a3c5d56dc655b4b05c8b9",
+      "subject": "wifi: cnss2: Declare register-window lock ownership",
+      "eligible": true,
+      "new": [
+        "7eea19203d8f6de1120fd42a1239dd4147ed29e3"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "695b922f1b7e79452f5a951e16efccfacb06de0b",
+      "subject": "scsi: ufs: Read host register dumps through MMIO accessors",
+      "eligible": true,
+      "new": [
+        "23923bf4ab1be1565ba17724d5496049a01ae5f1"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "bfee2d1900b86298da3a73b782b81f87a5f7b274",
+      "subject": "ipv6: Mark the raw flow-label representation in multipath keys",
+      "eligible": true,
+      "new": [
+        "a30704cce7c709a9ca42e203909b533477b763cf"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "b8fc2fc50a5cca0e3fa9bfb9381c2f2efd2bf2da",
+      "subject": "xfrm: Make afinfo RCU scopes and table accesses explicit",
+      "eligible": true,
+      "new": [
+        "a30704cce7c709a9ca42e203909b533477b763cf"
+      ],
+      "equivalent_tree_commit": "59e8b951755e4ef16a0bfb24677d18670a40ad1a"
+    },
+    {
+      "old": "7aeac751973bebfd9fa1e546fc5b58c4a4751fdd",
+      "subject": "msm: kgsl: Keep mapped footprints in 64 bits",
+      "eligible": true,
+      "new": [
+        "a342a8583ce27e0a7f67ee4436b3768e78a8b70d"
+      ],
+      "equivalent_tree_commit": "a342a8583ce27e0a7f67ee4436b3768e78a8b70d"
+    },
+    {
+      "old": "12d26a785cf386e875c1fb049614f9089436070b",
+      "subject": "msm: kgsl: Add per-process GPU memory usage tracing",
+      "eligible": false,
+      "new": [
+        "53606fade3c32708df416161827a1d5dd87d9d5b"
+      ],
+      "equivalent_tree_commit": "53606fade3c32708df416161827a1d5dd87d9d5b"
+    },
+    {
+      "old": "d2c6806767875f357a4037d1b65a1415c4a14c4f",
+      "subject": "msm: kgsl: Balance global memory tracing on removal",
+      "eligible": true,
+      "new": [
+        "97dc957c03c4cdec55d2045381b6d80dadc8c7d9"
+      ],
+      "equivalent_tree_commit": "97dc957c03c4cdec55d2045381b6d80dadc8c7d9"
+    },
+    {
+      "old": "d9a0bc96e102aab71f01e277d856f72a871ea966",
+      "subject": "perf: Avoid mux timer cancellation under its callback lock",
+      "eligible": true,
+      "new": [
+        "1a8f7faa9d86c864ad81f598c71af7466eb62fcf"
+      ],
+      "equivalent_tree_commit": "1a8f7faa9d86c864ad81f598c71af7466eb62fcf"
+    },
+    {
+      "old": "a1925f97b4b5a1362d5e3f7fdc776b5d05a42bf5",
+      "subject": "percpu: fix __percpu annotation in asm-generic",
+      "eligible": false,
+      "new": [
+        "2c2ac210b4d1476e58b542a7b7437767418f6a8c"
+      ],
+      "equivalent_tree_commit": "2c2ac210b4d1476e58b542a7b7437767418f6a8c"
+    },
+    {
+      "old": "14f8da1a63ffe5d94b92f3fdb3f7cde313870331",
+      "subject": "perf/core: Declare the __percpu attribute on non-deref types",
+      "eligible": false,
+      "new": [
+        "d02e7a86b2443567af8b54eb1f473f2d44b4dfd2"
+      ],
+      "equivalent_tree_commit": "d02e7a86b2443567af8b54eb1f473f2d44b4dfd2"
+    },
+    {
+      "old": "d6914617fbe886274fc40263be431b5249c75b38",
+      "subject": "perf/core: Fix missing static inline on perf_cgroup_switch()",
+      "eligible": false,
+      "new": [
+        "daf3b2adf2e6206df25c7314ffd85f25f1c3b19f"
+      ],
+      "equivalent_tree_commit": "daf3b2adf2e6206df25c7314ffd85f25f1c3b19f"
+    },
+    {
+      "old": "ee8cd976d579ef5ee8c01899c155a96cf5fee9b0",
+      "subject": "perf: Clarify remaining RCU and lock ownership contracts",
+      "eligible": true,
+      "new": [
+        "ca1a538b314b791b28bbe4e318be4f338cc21005"
+      ],
+      "equivalent_tree_commit": "ca1a538b314b791b28bbe4e318be4f338cc21005"
+    },
+    {
+      "old": "8eb8c146372006497be35ddb31637fb0201924d5",
+      "subject": "ACPI: Declare architecture post-init hook without CONFIG_ACPI",
+      "eligible": false,
+      "new": [
+        "1b4fcaae69685c035018b9396ac84afb09fffc49"
+      ],
+      "equivalent_tree_commit": "1b4fcaae69685c035018b9396ac84afb09fffc49"
+    },
+    {
+      "old": "0a5ffeaf80faf87e33791268fd71717daa769aa5",
+      "subject": "seq_file: fix NULL pointer arithmetic warning",
+      "eligible": false,
+      "new": [
+        "68b5c164b6dc42734f2063a9f4f245296255bcf7"
+      ],
+      "equivalent_tree_commit": "68b5c164b6dc42734f2063a9f4f245296255bcf7"
+    },
+    {
+      "old": "77c551af9f89864efa337b082296c856a09cfba5",
+      "subject": "Input: xiaomi: Validate touch ioctl and debug inputs",
+      "eligible": true,
+      "new": [
+        "7dbe1011d557c0059eb8678bdc56d69db720cde7"
+      ],
+      "equivalent_tree_commit": "7dbe1011d557c0059eb8678bdc56d69db720cde7"
+    },
+    {
+      "old": "68a511f10ec985f93ac7d109fd182b2f54f1b0b6",
+      "subject": "wifi: qcacld-3.0: Correct shared header search paths",
+      "eligible": true,
+      "new": [
+        "d7dbf5c7babed2e2f7f19144c4bf9caba75d0f4c"
+      ],
+      "equivalent_tree_commit": "d7dbf5c7babed2e2f7f19144c4bf9caba75d0f4c"
+    },
+    {
+      "old": "b544d9ee5fe23943f5e54ceeed33153627261968",
+      "subject": "soc: qcom: spss: Report failed event result copies",
+      "eligible": true,
+      "new": [
+        "52868ae0fd8cf11612a47f1f505d375486d0e80c"
+      ],
+      "equivalent_tree_commit": "52868ae0fd8cf11612a47f1f505d375486d0e80c"
+    },
+    {
+      "old": "67c5f143ddab65a2c718f0e2d761364ec18a4281",
+      "subject": "scsi: ufs-qcom: Make request-end lock ownership explicit",
+      "eligible": true,
+      "new": [
+        "dfac40ccb015620d09e0e0f6407a8696dc031912"
+      ],
+      "equivalent_tree_commit": "dfac40ccb015620d09e0e0f6407a8696dc031912"
+    },
+    {
+      "old": "b6f3b76d2a3742fba28e259acad79e3c619c4a35",
+      "subject": "scsi: ufs-qcom: Read diagnostic registers with explicit access size",
+      "eligible": false,
+      "new": [
+        "7444bf7653b900f2f1dfbc8eabb869c66569c8f1"
+      ],
+      "equivalent_tree_commit": "7444bf7653b900f2f1dfbc8eabb869c66569c8f1"
+    },
+    {
+      "old": "bf6afc41a5b9878bdc7942a52afb333fe04323da",
+      "subject": "usb: dwc3: debug: Check non-standard control requests",
+      "eligible": false,
+      "new": [
+        "10bd8f40681ff128f9e7f0507b6eb229cd11d3e0"
+      ],
+      "equivalent_tree_commit": "10bd8f40681ff128f9e7f0507b6eb229cd11d3e0"
+    },
+    {
+      "old": "ec2ceca6344856e795955308b43ea8ac824988e1",
+      "subject": "power: supply: qcom: Define private and shared battery state",
+      "eligible": true,
+      "new": [
+        "fa1f502b41d4eed3272e3d10b48f498923737515"
+      ],
+      "equivalent_tree_commit": "fa1f502b41d4eed3272e3d10b48f498923737515"
+    },
+    {
+      "old": "3a8b7f794930e0108295c5be651117b29e8551b2",
+      "subject": "Bluetooth: qcom: Keep private power and SLIMbus helpers local",
+      "eligible": true,
+      "new": [
+        "58fb3e3bbe152920f2176afde036c638ea0d80d9"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "6ab769d4a56190d00526feaf6cb3d4b50762f4f6",
+      "subject": "Bluetooth: qcom: Propagate exhausted SLIMbus read errors",
+      "eligible": true,
+      "new": [
+        "58fb3e3bbe152920f2176afde036c638ea0d80d9"
+      ],
+      "equivalent_tree_commit": "58fb3e3bbe152920f2176afde036c638ea0d80d9"
+    },
+    {
+      "old": "32254851b50b8001c264faa2ef6ce3287ccd172f",
+      "subject": "thermal: cpu_cooling: Remove unused cur_freq variable",
+      "eligible": false,
+      "new": [
+        "7b4eddb93f51f0b22e09f5878c2d30277207abd5"
+      ],
+      "equivalent_tree_commit": "7b4eddb93f51f0b22e09f5878c2d30277207abd5"
+    },
+    {
+      "old": "15f7d9ed7244709bd988ecc5aa58b6199bb224af",
+      "subject": "thermal: qcom: Correct TSENS symbol visibility",
+      "eligible": true,
+      "new": [
+        "840bb9c615e343f78916429fd25718641d48efa7"
+      ],
+      "equivalent_tree_commit": "840bb9c615e343f78916429fd25718641d48efa7"
+    },
+    {
+      "old": "5356f6871a07d568206fcbd066cd724ee7507f27",
+      "subject": "gpu: msm: Preserve fault and allocation flag types",
+      "eligible": true,
+      "new": [
+        "1d1d390f0c3ccd5385cba96fa33f1b46029731cb"
+      ],
+      "equivalent_tree_commit": "1d1d390f0c3ccd5385cba96fa33f1b46029731cb"
+    },
+    {
+      "old": "eb8826a50995e8ada3c2ac42ae9c9ae1e60f0d6c",
+      "subject": "drm: msm: sde: Correct CRTC helper input contracts",
+      "eligible": true,
+      "new": [
+        "9e005e51d8b036e3b22e5ee80768f76bff471a86"
+      ],
+      "equivalent_tree_commit": "9e005e51d8b036e3b22e5ee80768f76bff471a86"
+    },
+    {
+      "old": "bc7aeea2d77850e0e075ff57a1c95709fce56427",
+      "subject": "fuse: Correct BPF reply argument contracts",
+      "eligible": true,
+      "new": [
+        "265cd8a21635b229a4e1968e48bd55dadae94d2b"
+      ],
+      "equivalent_tree_commit": "265cd8a21635b229a4e1968e48bd55dadae94d2b"
+    },
+    {
+      "old": "18e47b5fb99c9d6adaeef30479e200d14f894088",
+      "subject": "net/sysctl: remove leftover __user annotations on neigh_proc_dointvec*",
+      "eligible": false,
+      "new": [
+        "6914d230b94b0bf48a21615a8213a59581e68bc6"
+      ],
+      "equivalent_tree_commit": "6914d230b94b0bf48a21615a8213a59581e68bc6"
+    },
+    {
+      "old": "ae197621f85953b1e32ed9a78faa84eab8c7d137",
+      "subject": "net: Declare the shared zerocopy iterator helper",
+      "eligible": true,
+      "new": [
+        "dd1dd07e0460e35fe48d8c047004f42d38738484"
+      ],
+      "equivalent_tree_commit": "dd1dd07e0460e35fe48d8c047004f42d38738484"
+    },
+    {
+      "old": "e230908b5e8bdbce19c29e8ced9c2c6325b310c7",
+      "subject": "bpf: Declare global calling-convention test targets",
+      "eligible": true,
+      "new": [
+        "80e487c1a6a438bf090aaa90321dd4a364dd497c"
+      ],
+      "equivalent_tree_commit": "80e487c1a6a438bf090aaa90321dd4a364dd497c"
+    },
+    {
+      "old": "623ea94c10a217019d58d0efb23c5e2f0621ac85",
+      "subject": "qcacmn: Properly abstract the Linux bottom half interfaces",
+      "eligible": false,
+      "new": [
+        "2d2981a5b93d3d929e693e1336f736ea87a9dd91"
+      ],
+      "equivalent_tree_commit": "2d2981a5b93d3d929e693e1336f736ea87a9dd91"
+    },
+    {
+      "old": "43406601f74d3e220954f393f892f350eacd1ca9",
+      "subject": "wifi: cnss2: Correct event and QMI diagnostics",
+      "eligible": true,
+      "new": [
+        "75d9915589cbe980ad21de3bdc399c93afb71756"
+      ],
+      "equivalent_tree_commit": "75d9915589cbe980ad21de3bdc399c93afb71756"
+    },
+    {
+      "old": "87fb64b9fa58d1ba5863b28c5236c5929d21dcd8",
+      "subject": "drm: msm: rotator: Match private callback contracts",
+      "eligible": true,
+      "new": [
+        "320ff8c31ed53381fc362da1be117657f55cea2c"
+      ],
+      "equivalent_tree_commit": "320ff8c31ed53381fc362da1be117657f55cea2c"
+    },
+    {
+      "old": "a2be591af2b48b5b7f94bcce1db57a0400399c7c",
+      "subject": "drm: msm: pll: Validate retained DFPS tables before use",
+      "eligible": true,
+      "new": [
+        "c3935abdcb21ca7831626ea2984d0ae0a52930ef"
+      ],
+      "equivalent_tree_commit": "c3935abdcb21ca7831626ea2984d0ae0a52930ef"
+    },
+    {
+      "old": "ab3b526ab3f76197ea14117e2cb11e27ce0e3a51",
+      "subject": "sched: walt: Match status dump formats to native types",
+      "eligible": true,
+      "new": [
+        "e3eae31a51ec513530281e2b53200752fe4fc177"
+      ],
+      "equivalent_tree_commit": "e3eae31a51ec513530281e2b53200752fe4fc177"
+    },
+    {
+      "old": "de72a9d3c1114d88ff9206565499cf0f6e5e09b8",
+      "subject": "kbuild: Restrict Techpack header exports to selected UAPI trees",
+      "eligible": true,
+      "new": [
+        "460e9ac40bc38cdeb4eafcde6d75e50137149a02"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "69ff97283cfde713079c6737184714c2d910137f",
+      "subject": "ASoC: cs35l41: Keep platform headers in the private include tree",
+      "eligible": true,
+      "new": [
+        "460e9ac40bc38cdeb4eafcde6d75e50137149a02"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "e2450c4f33ee2f3eb404b08b295db86765870a56",
+      "subject": "ASoC: msm: Make calibration UAPI dependencies self-contained",
+      "eligible": true,
+      "new": [
+        "460e9ac40bc38cdeb4eafcde6d75e50137149a02"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "319105e371566bfc6e6750d67e8959db0011f333",
+      "subject": "fuse: Include Linux types for userspace BPF declarations",
+      "eligible": true,
+      "new": [
+        "460e9ac40bc38cdeb4eafcde6d75e50137149a02"
+      ],
+      "equivalent_tree_commit": "460e9ac40bc38cdeb4eafcde6d75e50137149a02"
+    },
+    {
+      "old": "2f71551364d5b6ad7816205bd192930650ed0fd9",
+      "subject": "devfreq: arm-memlat: Pass bitmap arguments to CPU-list diagnostics",
+      "eligible": true,
+      "new": [
+        "61114d61323d693ed0f04f4764ef0ad2ee9f5b21"
+      ],
+      "equivalent_tree_commit": "61114d61323d693ed0f04f4764ef0ad2ee9f5b21"
+    },
+    {
+      "old": "7ef2ba46a7ef47faeaf086466426a139a49540c9",
+      "subject": "bus: mhi: Preserve diagnostic arguments and register-read status",
+      "eligible": true,
+      "new": [
+        "1ef5b6f40367ecb0565ee4c45552ae30645ba17a"
+      ],
+      "equivalent_tree_commit": "1ef5b6f40367ecb0565ee4c45552ae30645ba17a"
+    },
+    {
+      "old": "4f1c465892e6c4f2f8656a7290a9d78b949b1209",
+      "subject": "soc: qcom: spcom: Supply the invalid-channel diagnostic context",
+      "eligible": true,
+      "new": [
+        "5c5049ea194ac9ca6c2dac8757c22869c22eb047"
+      ],
+      "equivalent_tree_commit": "5c5049ea194ac9ca6c2dac8757c22869c22eb047"
+    },
+    {
+      "old": "711e2586f0a721c264cd2f84e4e04a9c41f52a96",
+      "subject": "media: msm: Match diagnostic instance arguments",
+      "eligible": true,
+      "new": [
+        "2233e3a1b5b4a42b33cf2e13f9b7f3fc15323903"
+      ],
+      "equivalent_tree_commit": "2233e3a1b5b4a42b33cf2e13f9b7f3fc15323903"
+    },
+    {
+      "old": "fa58055e6f83e93cad54fe35b12804635c06f252",
+      "subject": "regulator: qcom-pm8008: Correct bulk and retry diagnostics",
+      "eligible": true,
+      "new": [
+        "89d352821310935b3d7c41ca6538bb188ab51d76"
+      ],
+      "equivalent_tree_commit": "89d352821310935b3d7c41ca6538bb188ab51d76"
+    },
+    {
+      "old": "3b9a3e827ecc9b83ad7943ba9d5e8339785153c0",
+      "subject": "power: supply: ti: Correct PD manager diagnostics and local state",
+      "eligible": true,
+      "new": [
+        "5c430366113fa8b6accd9c1d9f5c26037f2948ad"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "8b979468d5c35c4b56f6ad1ff6be29c2fbfae9c4",
+      "subject": "usb: pd: Share selector and alternate-mode declarations",
+      "eligible": true,
+      "new": [
+        "5c430366113fa8b6accd9c1d9f5c26037f2948ad"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "bf1586d5f0475840378b6640ce64c89d90939721",
+      "subject": "usb: pd: Make denied selections and retries deterministic",
+      "eligible": true,
+      "new": [
+        "5c430366113fa8b6accd9c1d9f5c26037f2948ad"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "d4fca9425e2530827b4db16580db5ebe13925b78",
+      "subject": "usb: pd: Validate Xiaomi vendor reply payloads",
+      "eligible": true,
+      "new": [
+        "5c430366113fa8b6accd9c1d9f5c26037f2948ad"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "1ec5deb316827e2e62e216b83aad5e991cabf645",
+      "subject": "usb: pd: Parse vendor request data with checked bounds",
+      "eligible": true,
+      "new": [
+        "5c430366113fa8b6accd9c1d9f5c26037f2948ad"
+      ],
+      "equivalent_tree_commit": "5c430366113fa8b6accd9c1d9f5c26037f2948ad"
+    },
+    {
+      "old": "3ba0ccc0a016e1d52ab175e140ab31a6a7f802d5",
+      "subject": "thermal: qcom: Preserve LMH MMIO address-space types",
+      "eligible": true,
+      "new": [
+        "c7164e4124b3b0c824e1cd6d2e7e88b39e2bd0f6"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "5cb493355ba7cef9a938c7777ccafe45a72555ea",
+      "subject": "drm: mi: Include the notifier interface declarations",
+      "eligible": true,
+      "new": [
+        "a2576064ecd98a09b52dd4fe7c5b986616e0279f"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "5f1873affc21f5fd5267a47e5ca9c1001974d2ab",
+      "subject": "gpu: kgsl: Keep encoded userspace addresses as integers",
+      "eligible": true,
+      "new": [
+        "8bbbb870591a87fad82fcae959ff38f02c3924ca"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "b53ce3ca20d67137ab8dd1865a78e33da11a10d5",
+      "subject": "gpu: kgsl: Match kernel-doc to current function parameters",
+      "eligible": true,
+      "new": [
+        "8bbbb870591a87fad82fcae959ff38f02c3924ca"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "5111e1b8c035a06023e6d16d9b7bc42f06151e1f",
+      "subject": "drm: dsi: Reject unsupported HBM display commands",
+      "eligible": true,
+      "new": [
+        "0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "82deaad58859d402eb7d85958e1c4679d14a0e99",
+      "subject": "drm: dsi: Match error interrupt diagnostics to their arguments",
+      "eligible": true,
+      "new": [
+        "0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "b0a271b170990a60db03a69c47c3572eacfa92e4",
+      "subject": "drm: dsi: Store panel readback words in explicit byte order",
+      "eligible": true,
+      "new": [
+        "0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "14ce8bd660d91368bb422d52e1e3ef281fe2cdf4",
+      "subject": "thermal: Keep internal sensor and ADC state file-local",
+      "eligible": true,
+      "new": [
+        "c7164e4124b3b0c824e1cd6d2e7e88b39e2bd0f6"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "a55ffe2b4546086234f11e30b69aab66c1cbafbf",
+      "subject": "thermal: tsens: Remove unused threshold intermediates",
+      "eligible": true,
+      "new": [
+        "c7164e4124b3b0c824e1cd6d2e7e88b39e2bd0f6"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "4c93edc6177a6eb28a9be242d94029d874d3593f",
+      "subject": "drm: dsi: Include existing catalog operation declarations",
+      "eligible": true,
+      "new": [
+        "0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "31613894087f4c9b6ce27b4b7672b4ee32b6fe6c",
+      "subject": "drm: dsi: Initialize remove status with an integer zero",
+      "eligible": true,
+      "new": [
+        "0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "2cd7bc2523cfa22a69121a49c3ef9ce7e91a1244",
+      "subject": "gpu: kgsl: Describe the context queue wait lock contract",
+      "eligible": true,
+      "new": [
+        "8bbbb870591a87fad82fcae959ff38f02c3924ca"
+      ],
+      "equivalent_tree_commit": "0700ad4ad92aee2e70d9c7d35b2f2917a51f49c0"
+    },
+    {
+      "old": "32f3373da14b2d9e3ea51deff4aea1d3e2c48c60",
+      "subject": "sched_domain: Annotate RCU pointers properly",
+      "eligible": false,
+      "new": [
+        "4ee3ce35e91db864e722e4daeed0be0561376079"
+      ],
+      "equivalent_tree_commit": "4ee3ce35e91db864e722e4daeed0be0561376079"
+    },
+    {
+      "old": "462744695205809d5d87f7666e43ef3a72690157",
+      "subject": "rcuwait: Annotate task_struct with __rcu",
+      "eligible": false,
+      "new": [
+        "306ee36b6823fa537346e14d9a68d63f81b93277"
+      ],
+      "equivalent_tree_commit": "306ee36b6823fa537346e14d9a68d63f81b93277"
+    },
+    {
+      "old": "4f54cba4039317c7300d35683eec203b6ba73a28",
+      "subject": "tasks, sched/core: With a grace period after finish_task_switch(), remove unnecessary code",
+      "eligible": false,
+      "new": [
+        "c56cce401cfe01ce1e8d4cb413941ae6cf91c70f"
+      ],
+      "equivalent_tree_commit": "c56cce401cfe01ce1e8d4cb413941ae6cf91c70f"
+    },
+    {
+      "old": "2a696b8142037ee48532fda986fe999d1822bb86",
+      "subject": "sched/core: Annotate curr pointer in rq with __rcu",
+      "eligible": false,
+      "new": [
+        "259064bb349449d7783025e4ea830ed1917068f6"
+      ],
+      "equivalent_tree_commit": "259064bb349449d7783025e4ea830ed1917068f6"
+    },
+    {
+      "old": "a2b6d10f89367377f5d7f2bc7f5a86772b4a3a11",
+      "subject": "gpu: kgsl: Correct dispatcher parameter documentation",
+      "eligible": true,
+      "new": [
+        "48b61193671bcc485af6d608c9c60a771cff7cd6"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "5730fe0fb2a822eabf60e8c4eb7970df283c2635",
+      "subject": "gpu: adreno: Keep the A3xx protection table private",
+      "eligible": true,
+      "new": [
+        "48b61193671bcc485af6d608c9c60a771cff7cd6"
+      ],
+      "equivalent_tree_commit": "48b61193671bcc485af6d608c9c60a771cff7cd6"
+    },
+    {
+      "old": "411794600b95575fa94c34cab00cccc7cae3f892",
+      "subject": "tasks, sched/core: RCUify the assignment of rq->curr",
+      "eligible": false,
+      "new": [
+        "36ac625d89c65f1f30990c53f03d15cffee52548"
+      ],
+      "equivalent_tree_commit": "36ac625d89c65f1f30990c53f03d15cffee52548"
+    },
+    {
+      "old": "95cbdc1c9cab42b23fc9ff2036a4db00e1a8f623",
+      "subject": "sched: trace: Match formats to native trace field types",
+      "eligible": true,
+      "new": [
+        "c20164351ec724734136068bf53233b3cd8c5caa"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "6c6994a7237fcc0cb26c011b0ab3c2c3c616b4f4",
+      "subject": "sched: walt: Keep trace window formatting private",
+      "eligible": true,
+      "new": [
+        "c20164351ec724734136068bf53233b3cd8c5caa"
+      ],
+      "equivalent_tree_commit": "c20164351ec724734136068bf53233b3cd8c5caa"
+    },
+    {
+      "old": "043957b913c8540e2e5d1c99450c0ad0d52b9763",
+      "subject": "sched: Traverse domain links through the existing RCU accessor",
+      "eligible": true,
+      "new": [
+        "52d2924759377d8df6c9340cb8ee8fd41488c759"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "24c347785234e6e474afff2ac5764a8b34eea1f8",
+      "subject": "drm: dsi: Bound Xiaomi panel receive buffers",
+      "eligible": true,
+      "new": [
+        "edb46ba397834c339d4341bb8664935c1fdcbf4b"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "33cfbb6530b8c9f420f1b5359f0c352f1daee78b",
+      "subject": "drm: dsi: Validate and commit panel calibration updates atomically",
+      "eligible": true,
+      "new": [
+        "edb46ba397834c339d4341bb8664935c1fdcbf4b"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "0c0c69e84c91b1a0d5fbd4b2651b80776c382422",
+      "subject": "sched: Use address-only accessors for current-task comparisons",
+      "eligible": true,
+      "new": [
+        "52d2924759377d8df6c9340cb8ee8fd41488c759"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "4a64432f0e2b62dd8912abb673dd8666600ba84e",
+      "subject": "sched: walt: Protect remote rotation task snapshots with RCU",
+      "eligible": true,
+      "new": [
+        "52d2924759377d8df6c9340cb8ee8fd41488c759"
+      ],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "c81aeb13b82e9d02cec3e60ac5c3c26d28e5c109",
+      "subject": "drm: dsi: Document the command stream region parameter",
+      "eligible": true,
+      "new": [
+        "edb46ba397834c339d4341bb8664935c1fdcbf4b"
+      ],
+      "equivalent_tree_commit": "edb46ba397834c339d4341bb8664935c1fdcbf4b"
+    },
+    {
+      "old": "26e5ace53c8a03298bcb7f1a972268791f452441",
+      "subject": "kbuild: Keep production compiler warnings nonfatal",
+      "eligible": true,
+      "new": [],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "727bd1c2def4b20a0f0eb896fd3ce7da93b9d473",
+      "subject": "arm64: configs: Regenerate Xiaomi warning policy",
+      "eligible": true,
+      "new": [],
+      "equivalent_tree_commit": null
+    },
+    {
+      "old": "428dc4e97f724e388347ecd400630bbb87fdb046",
+      "subject": "tools: Keep standalone test compiler warnings nonfatal",
+      "eligible": true,
+      "new": [],
+      "equivalent_tree_commit": null
+    }
+  ]
+}

@@ -43,7 +43,7 @@ boot ART/OAT/VDEX files. All ten other system boot-classpath JARs matched the ph
 Only `classes5.dex` differed inside the framework JAR; its other entries matched.
 Runtime readback confirmed both flags true, and Perfetto recorded the multi-step
 recovery path executing in Settings. Installed kernel remained
-[the recorded baseline](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b8fc2fc50a5cca0e3fa9bfb9381c2f2efd2bf2da)
+[the recorded baseline](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/59e8b951755e4ef16a0bfb24677d18670a40ad1a)
 (build 2); no kernel, DTBO or ROM partition was flashed for this framework test.
 
 | Artifact | SHA-256 |
@@ -98,3 +98,5 @@ only slice names: single-step recovery uses the **Buffer stuffing recovery track
 with thread/offset slice names. Inspect track names before concluding recovery is
 absent. Shipped flag classes are relocated under
 `com.android.internal.hidden_from_bootclasspath.android.view.flags`.
+
+Historical test IDs retained; [kernel history mapping](kernel-history-map-20261026.json).
