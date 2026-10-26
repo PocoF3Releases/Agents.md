@@ -73,11 +73,11 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Crypto/library audit](../evidence/kernel-crypto-lib-audit-20261026.md): configured
-W=1/Image, host failure-path tests and enforcing phone checks pass; original boot
-restored. QCE/QSEE/RNG and shared-library fixes retain thermal and entropy policy.
-Nine conditional-lock sparse reports stay visible. Prior GPU/techpack evidence,
-SRCU reports and open display-PM limits remain linked there. System sources unchanged.
+[Crypto/library recheck](../evidence/kernel-crypto-lib-recheck-20261026.md) retains
+all 27 fixes and adds verified QRNG exact-request handling. W=1/Image, host and
+enforcing phone checks pass; original boot restored. Nine reviewed sparse reports
+stay visible; actual lock tests pass. Prior GPU/techpack, SRCU, display-PM and
+hardware limits remain linked there. System sources and thermal policy unchanged.
 
 ## Intermittent shutdown investigation
 
