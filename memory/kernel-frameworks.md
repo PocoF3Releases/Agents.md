@@ -75,8 +75,8 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 October 24's targeted checks retain their recorded limits. The [October 26 configured audit](../evidence/kernel-subsystem-audit-20261026.md)
 failed full-tree W=1/C=2. The [active-driver follow-up](../evidence/kernel-active-driver-checks-20261026.md)
-clears seven selected UFS/USB/charging/Bluetooth objects, with normal Image and
-bounded phone checks passing. Wider diagnostics still need scoped review;
+clears seven UFS/USB/charging/Bluetooth objects. The [GPU/display/thermal follow-up](../evidence/kernel-gpu-display-thermal-20261026.md)
+clears ten more selected objects with Image and enforcing phone checks. Wider diagnostics need review;
 no warning suppressions or system-side changes were introduced.
 
 ## Intermittent shutdown investigation
