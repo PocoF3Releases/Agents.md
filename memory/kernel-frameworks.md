@@ -73,12 +73,12 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Whole-kernel audit](../evidence/kernel-whole-warning-audit-20261026.md) adds
-24 verified ARM64/init, scheduler, FastRPC, clocks, SPS/IPA/RPMh, charging,
-fingerprint, NCM and wireless repairs. Normal Image, affected W=1, host and
-enforcing phone checks pass; original boot restored. Full strict gate still
-fails elsewhere; sparse/docs debt remains visible. No system/config/policy
-changes. Prior crypto, GPU, display and shutdown limits remain linked there.
+[Active-driver continuation](../evidence/kernel-active-driver-fixes-20261027.md)
+adds 13 bus, CNSS, SPS and SCM repairs, including bandwidth-report bounds and
+client-list lifetime fixes. Normal Image, affected W=1/C=2, host and enforcing
+phone checks pass; original boot restored. Two SPS mixed-memory warnings remain;
+[prior whole-audit limits](../evidence/kernel-whole-warning-audit-20261026.md)
+remain open. System/config/thermal/warning policy is unchanged.
 
 ## Intermittent shutdown investigation
 

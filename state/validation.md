@@ -23,10 +23,11 @@ stream, not all presentations, multichannel/offload, apps or Dolby processing.
 
 ## V-PARTS
 
-**2026-09-24 — source-checked and user-confirmed.** Common [3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c) System
-Profile dialog correction was approved visually; earlier [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b) was
-insufficient. Shared per-app implementation is not a separate visual test.
-[Exact record](../memory/dolby-audio.md).
+**2026-09-24 — source-checked and user-confirmed.** System Profile:
+[3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c)
+approved visually; [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b)
+insufficient. Shared per-app implementation has no separate visual acceptance.
+[Scope](../memory/dolby-audio.md).
 
 ## V-UI
 
@@ -182,11 +183,10 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 
 ## V-ADRENO-20261024
 
-**2026-10-24 — source/build/host/device tested.** [GPU](../evidence/adreno-audit-20261024.md):
-68 app checks/ABI×3; 633 Khronos: 556 pass/76 unsupported/1 warning/0 failures.
-Counter regressions pass; 64 teardowns end at zero; 4 display wakes pass.
-Temporary enforcing kernel; boot restored; partition unchanged.
-Not full conformance/release.
+**2026-10-24 — scoped source/build/host/device tests.** [GPU](../evidence/adreno-audit-20261024.md):
+68 app checks/ABI×3; Khronos 633: 556 pass/76 unsupported/1 warning/0 failures.
+Counters, 64 teardowns (to zero) and 4 display wakes pass. Temporary enforcing
+boot restored; partition unchanged. No full conformance/release.
 
 ## V-HARDWARE-20261024
 
@@ -210,4 +210,8 @@ Not full conformance/release.
 
 ## V-KERNEL-WHOLE-20261026
 
-[Tests and remaining failures](../evidence/kernel-whole-warning-audit-20261026.md).
+[Scope](../evidence/kernel-whole-warning-audit-20261026.md).
+
+## V-KERNEL-ACTIVE
+
+[Scope](../evidence/kernel-active-driver-fixes-20261027.md).
