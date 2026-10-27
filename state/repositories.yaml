@@ -79,13 +79,13 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 62b69d00cb35709bcd3caff5c929175eeb8dc17e
+    aosp-17: 48b6b395671aa63a715e48a466e7c9e8c6d39b0f
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/62b69d00cb35709bcd3caff5c929175eeb8dc17e
-  observation: 2026-10-27; production Image at 5d8e1320085e passes W=1 and
-    enforcing phone tests and remains installed; selected head adds comment-only
-    kernel-doc corrections. Private debug boot remains unresolved. Scope in
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/48b6b395671aa63a715e48a466e7c9e8c6d39b0f
+  observation: 2026-10-27; release-active fixes pass full production W=1 and
+    enforcing phone checks; latest main image and original ramdisk verified
+    after reboot. Diagnostic-only follow-ups excluded; scope in
     evidence/kernel-debug-readiness-20261027.md; system sources unchanged.
 
 
