@@ -1,5 +1,9 @@
 # CPU feature and baseline sparse audit — October 27, 2026
 
+Historical acceptance. The [October 28 follow-up](kernel-sparse-followup-20261028.md)
+now owns the current kernel and diagnostic counts; this record preserves the
+original CPU investigation and test scope.
+
 ## Published source and installed kernel
 
 [Current kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06) on `aosp-17` is a fast-forward of the
