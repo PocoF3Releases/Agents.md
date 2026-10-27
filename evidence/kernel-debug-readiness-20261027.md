@@ -1,5 +1,7 @@
 # Final production kernel — October 27, 2026
 
+Historical checkpoint. [The later CPU/baseline audit](kernel-baseline-audit-20261027.md) owns current source and installed-kernel acceptance.
+
 ## Published and installed source
 
 [Final kernel `e9b1eaf8af93`](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e9b1eaf8af938cf9a7413f17e6f61d94fc2ffbcf) on `aosp-17` is installed as main and verified after a normal Android reboot. The original ramdisk is preserved byte-for-byte; the full boot-partition hash matches the packaged image. SELinux is enforcing. This task changes kernel sources and this workhub; system-side sources and thermal protection are unchanged.

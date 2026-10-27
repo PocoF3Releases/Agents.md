@@ -73,14 +73,14 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Final production acceptance](../evidence/kernel-debug-readiness-20261027.md)
-records the completed source-history audit, consolidated feature commits and
-original upstream authorship. The exact published Image passes production
-W=1/Werror and enforcing-phone probes, and is installed as main with the
-original ramdisk/hash verified after reboot. Inherited sparse diagnostics and
-CPU-feature variation remain explicit limits; no clean-static or global
-bug-free claim is made. Security, KFENCE, thermal protection and system-side
-sources are unchanged. Broader UBSan-only boot work remains parked.
+[Current CPU/baseline audit](../evidence/kernel-baseline-audit-20261027.md)
+records upstream CPU-field repairs and verified permissions/status, CFI, TCP
+and WLAN fixes. The main kernel passes strict W=1/Werror and enforcing-phone
+checks; normal boot is taint0. Sparse removes 42 reports with no additions,
+but 3,098 reports/119 errors and kernel-doc debt remain. System sources,
+thermal protection and production config are unchanged. Broader UBSan work
+is parked. [Prior acceptance](../evidence/kernel-debug-readiness-20261027.md)
+retains historical authorship/test scope.
 
 ## Intermittent shutdown investigation
 
