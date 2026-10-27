@@ -75,7 +75,8 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 [Production acceptance](../evidence/kernel-debug-readiness-20261027.md) records
 release-active alignment, initialization, RCU and WLAN fixes with original
-upstream authorship. The unchanged production config passes full W=1; the latest
+upstream authorship. The release config removes compiler/optional driver diagnostics while retaining
+KFENCE and security; full W=1 passes. The latest
 main kernel and original ramdisk are verified after reboot with enforcing phone
 checks. Diagnostic-only follow-ups remain local. Whole-kernel UBSAN boot failure
 is unresolved and parked; whole-tree sparse/kernel-doc limits remain. System
