@@ -73,14 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Production and diagnostic scope](../evidence/kernel-debug-readiness-20261027.md)
-records the full W=1 production Image, unchanged production config, enforcing
-phone acceptance and installed main kernel. Scoped sparse/kernel-doc and
-Tasks Trace backend repairs preserve upstream attribution. Private debug builds
-compile, but the lock/memory profile returns to Recovery and its boot failure
-is unresolved; no runtime UBSAN acceptance or full-ROM sign-off is claimed.
-Whole-tree sparse/kernel-doc and external-device limits remain. System sources
-and thermal protection are unchanged.
+[Production acceptance](../evidence/kernel-debug-readiness-20261027.md) records
+release-active alignment, initialization, RCU and WLAN fixes with original
+upstream authorship. The unchanged production config passes full W=1; the latest
+main kernel and original ramdisk are verified after reboot with enforcing phone
+checks. Diagnostic-only follow-ups remain local. Whole-kernel UBSAN boot failure
+is unresolved and parked; whole-tree sparse/kernel-doc limits remain. System
+sources and thermal protection are unchanged.
 
 ## Intermittent shutdown investigation
 
