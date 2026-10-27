@@ -79,17 +79,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 68fe321774661c4150b80edd93f7ddc75f32ac06
+    aosp-17: 4517f4c402cdeb1f234e23ee61a6646393def8a6
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06
-  observation: 2026-10-27; CPU architectural variation repaired; strict W=1/Werror
-    Image installed as main with active ramdisk/hash verified after normal reboot.
-    Targeted enforcing phone checks pass; 42 sparse reports removed, 119 baseline
-    errors remain. See evidence/kernel-baseline-audit-20261027.md; system sources
-    and production configuration unchanged.
-
-
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4517f4c402cdeb1f234e23ee61a6646393def8a6
+  observation: 2026-10-28; strict W=1/Werror Image installed as main with original
+    ramdisk and both-slot hashes checked after normal reboot. Targeted enforcing
+    phone checks pass; 86 sparse reports removed with no additions, 38 errors
+    remain. See evidence/kernel-sparse-followup-20261028.md; system sources and
+    production configuration unchanged.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []

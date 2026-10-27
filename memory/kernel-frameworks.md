@@ -73,14 +73,14 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Current CPU/baseline audit](../evidence/kernel-baseline-audit-20261027.md)
-records upstream CPU-field repairs and verified permissions/status, CFI, TCP
-and WLAN fixes. The main kernel passes strict W=1/Werror and enforcing-phone
-checks; normal boot is taint0. Sparse removes 42 reports with no additions,
-but 3,098 reports/119 errors and kernel-doc debt remain. System sources,
-thermal protection and production config are unchanged. Broader UBSan work
-is parked. [Prior acceptance](../evidence/kernel-debug-readiness-20261027.md)
-retains historical authorship/test scope.
+[Current sparse follow-up](../evidence/kernel-sparse-followup-20261028.md)
+records RCU lifetime/type, SMEM, BPF and kernel-doc repairs with upstream
+ownership preserved. Main passes strict W=1/Werror and enforcing phone checks;
+normal boot is taint0. Sparse removes 86 reports with no additions; 3,012
+reports/38 errors and 2,840 kernel-doc diagnostics remain. System sources,
+thermal protection and config are unchanged. Broader UBSan work is parked.
+[Prior CPU acceptance](../evidence/kernel-baseline-audit-20261027.md) retains
+historical scope; remaining findings are not certified safe.
 
 ## Intermittent shutdown investigation
 
