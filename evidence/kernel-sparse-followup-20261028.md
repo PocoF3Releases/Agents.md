@@ -1,5 +1,9 @@
 # Sparse and kernel-doc follow-up — October 28, 2026
 
+Historical acceptance. The [later RCU contract audit](kernel-rcu-contracts-20261028.md)
+now owns current source, installation and diagnostic counts; this record retains
+its earlier mincore/SMEM and 119-error follow-up scope.
+
 ## Source and installed kernel
 
 [Final kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4517f4c402cdeb1f234e23ee61a6646393def8a6), branch `aosp-17`, is a fast-forward of the

@@ -214,4 +214,4 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-ACTIVE
 
-[Scope](../evidence/kernel-sparse-followup-20261028.md).
+[Scope](../evidence/kernel-rcu-contracts-20261028.md).
