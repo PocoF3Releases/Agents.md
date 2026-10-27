@@ -79,13 +79,13 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: ec72c290a76b0edb5d52dae5ac6b60dbfc6c622f
+    aosp-17: e9b1eaf8af938cf9a7413f17e6f61d94fc2ffbcf
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ec72c290a76b0edb5d52dae5ac6b60dbfc6c622f
-  observation: 2026-10-27; current batch passes production W=1/Werror and
-    enforcing phone checks; latest main/original ramdisk verified after reboot.
-    Full sparse, kernel-doc and history cleanup remain open; scope in
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e9b1eaf8af938cf9a7413f17e6f61d94fc2ffbcf
+  observation: 2026-10-27; finalized history passes production W=1/Werror and
+    exact-head enforcing phone checks; main/original ramdisk verified after reboot.
+    Source audit complete; inherited sparse debt and runtime limits recorded in
     evidence/kernel-debug-readiness-20261027.md; system sources unchanged.
 
 

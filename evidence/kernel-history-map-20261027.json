@@ -1,0 +1,275 @@
+{
+  "baseline": "36d8909a703d9575b221d89f4aff0a508b6a40b2",
+  "final_head": "e9b1eaf8af938cf9a7413f17e6f61d94fc2ffbcf",
+  "note": "Old IDs identify historical records. URLs point to corresponding finalized commits; folded follow-ups can change intermediate trees. Do not infer that rewritten hashes were deployed in historical tests.",
+  "links": {
+    "0da10242c063c66193b3b4eacfb82a6a11bb798e": {
+      "commit": "9232b04b47c28fcd08c10d3babd3757928395654",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9232b04b47c28fcd08c10d3babd3757928395654"
+    },
+    "0e219a6b2597fdd61fda0868d961a56ffffdb8c2": {
+      "commit": "57f3f3213af693b2e559047af31b84af2a370e91",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/57f3f3213af693b2e559047af31b84af2a370e91"
+    },
+    "0fbfac51f1882ac44cec4b9658b67b656202b7e8": {
+      "commit": "b839386f442786dde99dafff7d4977506e579ed6",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b839386f442786dde99dafff7d4977506e579ed6"
+    },
+    "1b589dab8362178c490d68c2f8bba97b287b7c9a": {
+      "commit": "e4b0f813a2b0870ae3e9f04f188d4a6fdca0170c",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e4b0f813a2b0870ae3e9f04f188d4a6fdca0170c"
+    },
+    "2cd49bf9bbb85f440b2c285fd82fc1a190da39e5": {
+      "commit": "0746d59ede8a2fed6f3e4301644da34fbda03984",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0746d59ede8a2fed6f3e4301644da34fbda03984"
+    },
+    "2f16670012ef1a4017ceb43557293cc5ff40d04d": {
+      "commit": "61c5ec4cd226d6bc23c8062f788a3c5d3377f14f",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/61c5ec4cd226d6bc23c8062f788a3c5d3377f14f"
+    },
+    "3061532667e43107aada278bd69d4547a41a7127": {
+      "commit": "bdc509d486bebb09a0e566ebe2b8f538bf80b884",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bdc509d486bebb09a0e566ebe2b8f538bf80b884"
+    },
+    "347289d5a227b48290a5166a762e61898ae93d61": {
+      "commit": "cc2be2b85f6bfa4f6336bb60d341f74871781804",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cc2be2b85f6bfa4f6336bb60d341f74871781804"
+    },
+    "39b0f55bca781248e58aa15d4234bc6a7a2c1003": {
+      "commit": "7f23a5259ac1064b488a20875098a3f1189e2fe2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7f23a5259ac1064b488a20875098a3f1189e2fe2"
+    },
+    "39d91cd07829d0dfaec2df700dd09dc90c4d6765": {
+      "commit": "fcf509b9a2f04c4cabe5a41424b74fc90ab12882",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fcf509b9a2f04c4cabe5a41424b74fc90ab12882"
+    },
+    "39febeb4e33723fa575192290f69084b72986a14": {
+      "commit": "f462c99f563ccdd84c561137593579ea59b82951",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f462c99f563ccdd84c561137593579ea59b82951"
+    },
+    "40c7e956508d329580f457740b4ef5bd5efc7fac": {
+      "commit": "b4830136af3fb5267814a77bd1e68ae4a14a4efd",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b4830136af3fb5267814a77bd1e68ae4a14a4efd"
+    },
+    "44e69d94e221481e75733f802d37b79cebb2fd1b": {
+      "commit": "8ebf4845ebbb7fe6bc5f4492d037d76560373e67",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8ebf4845ebbb7fe6bc5f4492d037d76560373e67"
+    },
+    "45c179303f5698decfbf27e9fa4ec4b6d8873964": {
+      "commit": "5e5bc38864a4ea60cd9ac4cd53f27c7fe5be54f2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5e5bc38864a4ea60cd9ac4cd53f27c7fe5be54f2"
+    },
+    "4938d870e1ad0425559e8542d2ed753dc7dc005a": {
+      "commit": "fdcc2cee705c01a6b108c3a8568fb444f9f872bc",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fdcc2cee705c01a6b108c3a8568fb444f9f872bc"
+    },
+    "4ff949d3ae6a592e7bf962420d48e7cc2bfd8948": {
+      "commit": "ae9f08479fc5dcaa535f9dd4a6b35e028ce1f8e2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ae9f08479fc5dcaa535f9dd4a6b35e028ce1f8e2"
+    },
+    "52f64ac609e05245596f878aebafb0e02d7cf9bd": {
+      "commit": "25ddc9a7d3619f9ab76b962b009679eaea3851a0",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/25ddc9a7d3619f9ab76b962b009679eaea3851a0"
+    },
+    "5642ad0148060b194670c99ea6158303cda77e28": {
+      "commit": "b466404b5c883be8186a8dcc9ebed11630648df6",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b466404b5c883be8186a8dcc9ebed11630648df6"
+    },
+    "571a6e6a09094a0593bebe8854470088103638c8": {
+      "commit": "02a54e2cbd2791389b08d5ac734131b98dce0fa3",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/02a54e2cbd2791389b08d5ac734131b98dce0fa3"
+    },
+    "5a3a2fa048c62b4042d96c58f216d145a745d76f": {
+      "commit": "46d924ccef3f0bfbd213490a0fca5d6cf9576212",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/46d924ccef3f0bfbd213490a0fca5d6cf9576212"
+    },
+    "6095583140d774c32b15b617060fb3f46313d5d5": {
+      "commit": "0e5cec45659273dbe013d98642d3f801febd2910",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0e5cec45659273dbe013d98642d3f801febd2910"
+    },
+    "63cb67bb90e8af097813a5f5d6f85c2ad5650b83": {
+      "commit": "36e0ed30ab96287cf8cb3e3ba461ab60d7d565a5",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/36e0ed30ab96287cf8cb3e3ba461ab60d7d565a5"
+    },
+    "65b86cd87403201fe19b159c186823f4d8557090": {
+      "commit": "75628430b1e54d056d3d85e9c09b711b4eece5a2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/75628430b1e54d056d3d85e9c09b711b4eece5a2"
+    },
+    "6a5bbef9749e7be94ef3d0bd3635fd12f006e8d9": {
+      "commit": "085c27fe0fac27e615bffcc5891fdb4b4aa4f920",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/085c27fe0fac27e615bffcc5891fdb4b4aa4f920"
+    },
+    "6b8cbfb4c1a9e8f7fa75552d6cc93e36dde97028": {
+      "commit": "bc86d3127b7e64e3f3f9de0d9a260c9649e45b2a",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc86d3127b7e64e3f3f9de0d9a260c9649e45b2a"
+    },
+    "6c222358e9b830b121f32fc36b0874e446028c8d": {
+      "commit": "cfe43625f8fa0330bce78f21e8efd7b5791ef812",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cfe43625f8fa0330bce78f21e8efd7b5791ef812"
+    },
+    "6d8f0ff8c3debcb8c17761cd844b0c3a7bbbb3b0": {
+      "commit": "bcc7b58974bad98e2315c3cc9846609413814015",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bcc7b58974bad98e2315c3cc9846609413814015"
+    },
+    "6ed7786b49ec52fcd125190f3972697fca274979": {
+      "commit": "ea0c6c5ff6e23e0d83e9f9ce5aa5babb001f1864",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ea0c6c5ff6e23e0d83e9f9ce5aa5babb001f1864"
+    },
+    "7183c49bfa626c269ffac866136e00230b3090d3": {
+      "commit": "ec7575faa0e005cc5589bfd1593198462c1da0c9",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ec7575faa0e005cc5589bfd1593198462c1da0c9"
+    },
+    "741544fa1ce9a9b065851fe861176efa022d6b07": {
+      "commit": "9d78e459f6e15ce6c7dbe7c1b408c6ae27e4be72",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9d78e459f6e15ce6c7dbe7c1b408c6ae27e4be72"
+    },
+    "7c791f0b0e10b26a524adeddd482778a1edfffad": {
+      "commit": "8f8e268ff28d5ab26108a19d0615c4ab5c1a2244",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8f8e268ff28d5ab26108a19d0615c4ab5c1a2244"
+    },
+    "80da942d0b071b23d0c1f3f7e05b964bd75a441d": {
+      "commit": "5d59c8cda3e10d2a4c775edb8f1339133e6c7765",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5d59c8cda3e10d2a4c775edb8f1339133e6c7765"
+    },
+    "8566844c80d5960ee7e92dbad5778b4c4c3d2e8a": {
+      "commit": "bb606a6a396db0e8a489e829ac775b44f974f6b2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bb606a6a396db0e8a489e829ac775b44f974f6b2"
+    },
+    "8a2c0522e9d6c2107c8482b5b5009304b24ad06f": {
+      "commit": "ebfff32bd38c80a3f6beac69827978efedd90ed6",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ebfff32bd38c80a3f6beac69827978efedd90ed6"
+    },
+    "908e4c10d3af58c6243c6f1531ec84c99485632d": {
+      "commit": "d3c5a37cd77d52cb4925220abd20bd05dcfe2a19",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d3c5a37cd77d52cb4925220abd20bd05dcfe2a19"
+    },
+    "9b4c43f4a62fcc1e4839fcc6ec7f01c1a23a4b6d": {
+      "commit": "f2f22bf7f3ceb4369c8b0fb7b30f4d3668f14f93",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f2f22bf7f3ceb4369c8b0fb7b30f4d3668f14f93"
+    },
+    "9b5e87e9db66ae6485127ce31c0b3964cae88712": {
+      "commit": "52b36389bbdb372c3f0013e458e5fc8ba8cc92cc",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/52b36389bbdb372c3f0013e458e5fc8ba8cc92cc"
+    },
+    "9d7af2934bc7e255e759ea60ca25906685ffe1b1": {
+      "commit": "9232b04b47c28fcd08c10d3babd3757928395654",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9232b04b47c28fcd08c10d3babd3757928395654"
+    },
+    "9dd69fccf27ac7fe26e7bee2da672be6ffc80e58": {
+      "commit": "4b6d42c6382eb6eacd073bfd166698ad052f0136",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4b6d42c6382eb6eacd073bfd166698ad052f0136"
+    },
+    "9f159190cffbb01ef4454cd71177ae8652201840": {
+      "commit": "93ee18d5453ca8c99c122399cba6b39b8a7a8232",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/93ee18d5453ca8c99c122399cba6b39b8a7a8232"
+    },
+    "a028da5feaa05034c7cf8d3956cf36c94f25a961": {
+      "commit": "bc754b6127edd973434901d010fe5bd04e32bbd8",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc754b6127edd973434901d010fe5bd04e32bbd8"
+    },
+    "a54f32467d3e38590c6bcbfd0a90977244cb33c6": {
+      "commit": "f3bbfc16b6104c1f921838f2b802e70731a183e3",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f3bbfc16b6104c1f921838f2b802e70731a183e3"
+    },
+    "b6d2026b1babb02945da352c41fa3250f527f9ad": {
+      "commit": "ee854a518671d27427ceae42bcdf2c303f19e74f",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ee854a518671d27427ceae42bcdf2c303f19e74f"
+    },
+    "b8afce3c85674c1f7cefb771838351796c14cab5": {
+      "commit": "a4cbad68ca91be95ec2a8677aa26e0513bb4de84",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a4cbad68ca91be95ec2a8677aa26e0513bb4de84"
+    },
+    "babf6c57cddd6d64b2513425e1f8f84c893c51bc": {
+      "commit": "d084f2c9a5c95a09d20088732221fdd3e890ed7e",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d084f2c9a5c95a09d20088732221fdd3e890ed7e"
+    },
+    "bc227b18fbdd77486ae7109aff3b68580068862d": {
+      "commit": "2cb886e3f7279c07a3bae1c34b8932f150ef1fee",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2cb886e3f7279c07a3bae1c34b8932f150ef1fee"
+    },
+    "bd9508d660c4dfaa9ca4d1b285ea73e69fb13669": {
+      "commit": "87f62e240a823523e854e240a342669dcdf9832a",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/87f62e240a823523e854e240a342669dcdf9832a"
+    },
+    "bf7c3d4cc7129e42833d640050208c8348f57e95": {
+      "commit": "801757c80a8e111ce3300c4e1ab3d902462ea9d5",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/801757c80a8e111ce3300c4e1ab3d902462ea9d5"
+    },
+    "c69d60c5ceeb3ccbe113581eed1bd50481f90fae": {
+      "commit": "b780e75f5a5b48026b6c931cb283f2085330d6b6",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b780e75f5a5b48026b6c931cb283f2085330d6b6"
+    },
+    "c87e6cc092ee8e578648be95cda815f9a45fe95a": {
+      "commit": "a761472ac03d74b6328eda2c9b1fc4c160f1d9c3",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a761472ac03d74b6328eda2c9b1fc4c160f1d9c3"
+    },
+    "ca2aaf9f2398fdf435c530671cfe2f4eb061b173": {
+      "commit": "00f1fd6fe41956460b17f1df916864f63c3f20b6",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/00f1fd6fe41956460b17f1df916864f63c3f20b6"
+    },
+    "cb5c4bc3207178fedf4863deaa4441125e2175cc": {
+      "commit": "269f95115b9dae5233a3224a333f2fcb332c4e3f",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/269f95115b9dae5233a3224a333f2fcb332c4e3f"
+    },
+    "cc11fdce3fc272c4647e7db0f5c131f14aa6db1e": {
+      "commit": "d3e83b0c8b7c28b6df03ece80fe439a5766c8047",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d3e83b0c8b7c28b6df03ece80fe439a5766c8047"
+    },
+    "cd0591f150f47a872e9393759d7ba296392a2173": {
+      "commit": "265a29b3c593432467e8ab33a61c105bba35d8ae",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/265a29b3c593432467e8ab33a61c105bba35d8ae"
+    },
+    "d4e59814ef9aaed6f9740bd8db517e999cee4ca3": {
+      "commit": "1cbf50b997aa49222742b49002833cf6a7a00f6d",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cbf50b997aa49222742b49002833cf6a7a00f6d"
+    },
+    "dff9a1d99493bf354d6dc74b67e609253bebb273": {
+      "commit": "1d8b5cbef7024724d96d8489c05862c60e18cf03",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1d8b5cbef7024724d96d8489c05862c60e18cf03"
+    },
+    "e08be55a7d5f1cbcc3ea6b72ab2637f856573adb": {
+      "commit": "ea630164664cef56ad19feb86c177cb3d0952c6a",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ea630164664cef56ad19feb86c177cb3d0952c6a"
+    },
+    "e11783b7b94d46c90f46be616860dbaa93bb7b01": {
+      "commit": "749bcd3bf0d1e5ddcd758538d169ee84092f432e",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/749bcd3bf0d1e5ddcd758538d169ee84092f432e"
+    },
+    "e183f09527b90191c1242785afe19a1e0bcae15a": {
+      "commit": "03beddd08db2f5261527f80e178e7237d5c4c555",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/03beddd08db2f5261527f80e178e7237d5c4c555"
+    },
+    "e282f44cb3fa72285d35ac7a1f657391b241b494": {
+      "commit": "80f3e503d42bd0a57b140edc6b89f7bab1a4b39c",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/80f3e503d42bd0a57b140edc6b89f7bab1a4b39c"
+    },
+    "e5172a8cdc93020cb44891f26971c29de4457249": {
+      "commit": "34e0e064ec236d5a895a9dd0c3e764ea106ed281",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/34e0e064ec236d5a895a9dd0c3e764ea106ed281"
+    },
+    "ec72c290a76b0edb5d52dae5ac6b60dbfc6c622f": {
+      "commit": "56ac1e7efc95197e93bcdb592a615b6dcc5d5ec2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/56ac1e7efc95197e93bcdb592a615b6dcc5d5ec2"
+    },
+    "f7a1e0501ebc23b0a158e1926e9bb91f090475a9": {
+      "commit": "93553cfea0d4449cce5d55018f9665e509f090fa",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/93553cfea0d4449cce5d55018f9665e509f090fa"
+    },
+    "f7c9f11c87d707095afa992931e1255991ef203c": {
+      "commit": "67766f559528414f47187434e3a757812c2dcca5",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/67766f559528414f47187434e3a757812c2dcca5"
+    },
+    "f7ea37439948040592b90b510db94eea77bdd7c2": {
+      "commit": "ce4ab23d4a18951f2ea5f9f5602f278221b552a2",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ce4ab23d4a18951f2ea5f9f5602f278221b552a2"
+    },
+    "f83b93d5e462594a2492efc3ad5e36aa62e14f87": {
+      "commit": "e143ec5f43258a7322bb832db7a177d4909dffd3",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e143ec5f43258a7322bb832db7a177d4909dffd3"
+    },
+    "f9e5cbe21a8dfd2710a9152c292148e2928dce07": {
+      "commit": "8a014b146405449fa91746c93343b44031ff9b3c",
+      "url": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8a014b146405449fa91746c93343b44031ff9b3c"
+    }
+  }
+}
