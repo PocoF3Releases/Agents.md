@@ -73,13 +73,14 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Full W=1 Image completion and main install](../evidence/kernel-w1-completion-20261027.md)
-clears the earlier 1,138 compiler diagnostics with unchanged Werror/config/toolchain.
-Focused core, driver and Wi-Fi fixes pass the strict target, host regressions and
-enforcing phone checks; the verified kernel stays installed as main. Human
-backports retain authorship. Sparse/kernel-doc and external-device limits remain
-explicit; SPS mixed-memory and intermittent shutdown analysis remain open.
-System sources and thermal protection are unchanged; no full-ROM sign-off.
+[Production and diagnostic scope](../evidence/kernel-debug-readiness-20261027.md)
+records the full W=1 production Image, unchanged production config, enforcing
+phone acceptance and installed main kernel. Scoped sparse/kernel-doc and
+Tasks Trace backend repairs preserve upstream attribution. Private debug builds
+compile, but the lock/memory profile returns to Recovery and its boot failure
+is unresolved; no runtime UBSAN acceptance or full-ROM sign-off is claimed.
+Whole-tree sparse/kernel-doc and external-device limits remain. System sources
+and thermal protection are unchanged.
 
 ## Intermittent shutdown investigation
 
