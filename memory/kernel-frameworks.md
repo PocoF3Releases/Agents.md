@@ -73,12 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Current cleanup checkpoint](../evidence/kernel-debug-readiness-20261027.md)
-records release-active lifetime, alignment and MMIO fixes, original upstream
-authorship, and W=1/Werror plus enforcing-phone acceptance. The latest tested
-main kernel and original ramdisk are verified after reboot. Full history,
-sparse and kernel-doc closure remains open; do not treat a successful make
-exit as a clean analysis gate. KFENCE, security, thermal protection and system
+[Final production acceptance](../evidence/kernel-debug-readiness-20261027.md)
+records the completed source-history audit, consolidated feature commits and
+original upstream authorship. The exact published Image passes production
+W=1/Werror and enforcing-phone probes, and is installed as main with the
+original ramdisk/hash verified after reboot. Inherited sparse diagnostics and
+CPU-feature variation remain explicit limits; no clean-static or global
+bug-free claim is made. Security, KFENCE, thermal protection and system-side
 sources are unchanged. Broader UBSan-only boot work remains parked.
 
 ## Intermittent shutdown investigation
