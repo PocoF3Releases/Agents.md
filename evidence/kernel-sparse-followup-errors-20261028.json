@@ -1,0 +1,1548 @@
+{
+  "baseline_commit": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06",
+  "review_commit": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4517f4c402cdeb1f234e23ee61a6646393def8a6",
+  "scope": "Follow-up to the historical 127-site ledger. B IDs are zero-based indexes into the complete 3098-row follow-up baseline, not older D IDs. Remaining errors are open, not certified safe or suppressed.",
+  "baseline_diagnostics": 3098,
+  "final_diagnostics": 3012,
+  "removed_diagnostics": 86,
+  "added_diagnostics": 0,
+  "baseline_errors": 119,
+  "resolved_errors": 81,
+  "remaining_errors": 38,
+  "baseline_error_sites": [
+    {
+      "id": "B0073",
+      "path": "kernel/exit.c",
+      "line": 147,
+      "column": 19,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/exit.c#L147"
+    },
+    {
+      "id": "B0078",
+      "path": "kernel/exit.c",
+      "line": 403,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/exit.c#L403"
+    },
+    {
+      "id": "B0082",
+      "path": "kernel/exit.c",
+      "line": 676,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/exit.c#L676"
+    },
+    {
+      "id": "B0083",
+      "path": "kernel/exit.c",
+      "line": 1494,
+      "column": 59,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different base types):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/exit.c#L1494"
+    },
+    {
+      "id": "B0106",
+      "path": "kernel/ptrace.c",
+      "line": 50,
+      "column": 22,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/ptrace.c#L50"
+    },
+    {
+      "id": "B0110",
+      "path": "kernel/ptrace.c",
+      "line": 206,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/ptrace.c#L206"
+    },
+    {
+      "id": "B0111",
+      "path": "kernel/ptrace.c",
+      "line": 251,
+      "column": 44,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/ptrace.c#L251"
+    },
+    {
+      "id": "B0121",
+      "path": "kernel/signal.c",
+      "line": 1354,
+      "column": 27,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/signal.c#L1354"
+    },
+    {
+      "id": "B0146",
+      "path": "kernel/pid.c",
+      "line": 418,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/pid.c#L418"
+    },
+    {
+      "id": "B0147",
+      "path": "kernel/pid.c",
+      "line": 477,
+      "column": 32,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/pid.c#L477"
+    },
+    {
+      "id": "B0173",
+      "path": "kernel/cred.c",
+      "line": 147,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/cred.c#L147"
+    },
+    {
+      "id": "B0174",
+      "path": "kernel/cred.c",
+      "line": 148,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/cred.c#L148"
+    },
+    {
+      "id": "B0187",
+      "path": "kernel/cred.c",
+      "line": 436,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/cred.c#L436"
+    },
+    {
+      "id": "B0235",
+      "path": "kernel/bpf/core.c",
+      "line": 223,
+      "column": 49,
+      "level": "error",
+      "message": "arithmetics on pointers to functions",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/bpf/core.c#L223"
+    },
+    {
+      "id": "B0279",
+      "path": "fs/fcntl.c",
+      "line": 1007,
+      "column": 22,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/fcntl.c#L1007"
+    },
+    {
+      "id": "B0280",
+      "path": "fs/fcntl.c",
+      "line": 1018,
+      "column": 33,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/fcntl.c#L1018"
+    },
+    {
+      "id": "B0310",
+      "path": "include/linux/rculist_bl.h",
+      "line": 24,
+      "column": 33,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/include/linux/rculist_bl.h#L24"
+    },
+    {
+      "id": "B0338",
+      "path": "fs/seq_file.c",
+      "line": 1039,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/seq_file.c#L1039"
+    },
+    {
+      "id": "B0339",
+      "path": "fs/seq_file.c",
+      "line": 1041,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/seq_file.c#L1041"
+    },
+    {
+      "id": "B0427",
+      "path": "mm/swap_state.c",
+      "line": 87,
+      "column": 26,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/mm/swap_state.c#L87"
+    },
+    {
+      "id": "B0736",
+      "path": "kernel/module.c",
+      "line": 4053,
+      "column": 41,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/module.c#L4053"
+    },
+    {
+      "id": "B0737",
+      "path": "kernel/module.c",
+      "line": 4188,
+      "column": 28,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/module.c#L4188"
+    },
+    {
+      "id": "B0738",
+      "path": "kernel/module.c",
+      "line": 4207,
+      "column": 41,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/kernel/module.c#L4207"
+    },
+    {
+      "id": "B0748",
+      "path": "security/keys/process_keys.c",
+      "line": 603,
+      "column": 54,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/security/keys/process_keys.c#L603"
+    },
+    {
+      "id": "B0749",
+      "path": "security/keys/process_keys.c",
+      "line": 814,
+      "column": 28,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/security/keys/process_keys.c#L814"
+    },
+    {
+      "id": "B0783",
+      "path": "security/selinux/netnode.c",
+      "line": 167,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/security/selinux/netnode.c#L167"
+    },
+    {
+      "id": "B0784",
+      "path": "security/selinux/netport.c",
+      "line": 115,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/security/selinux/netport.c#L115"
+    },
+    {
+      "id": "B0792",
+      "path": "fs/notify/fsnotify.c",
+      "line": 247,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/notify/fsnotify.c#L247"
+    },
+    {
+      "id": "B0793",
+      "path": "fs/notify/fsnotify.c",
+      "line": 249,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/notify/fsnotify.c#L249"
+    },
+    {
+      "id": "B0794",
+      "path": "fs/notify/fsnotify.c",
+      "line": 259,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/notify/fsnotify.c#L259"
+    },
+    {
+      "id": "B0879",
+      "path": "fs/posix_acl.c",
+      "line": 44,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/posix_acl.c#L44"
+    },
+    {
+      "id": "B0880",
+      "path": "fs/posix_acl.c",
+      "line": 58,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/fs/posix_acl.c#L58"
+    },
+    {
+      "id": "B0922",
+      "path": "drivers/clocksource/timer-of.c",
+      "line": 39,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in conditional expression (different types):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/clocksource/timer-of.c#L39"
+    },
+    {
+      "id": "B1094",
+      "path": "net/core/sock.c",
+      "line": 1841,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/core/sock.c#L1841"
+    },
+    {
+      "id": "B1295",
+      "path": "net/ipv4/udp_offload.c",
+      "line": 173,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/udp_offload.c#L173"
+    },
+    {
+      "id": "B1309",
+      "path": "net/ipv4/nexthop.c",
+      "line": 1060,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/nexthop.c#L1060"
+    },
+    {
+      "id": "B1312",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 596,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L596"
+    },
+    {
+      "id": "B1313",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 597,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L597"
+    },
+    {
+      "id": "B1314",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 598,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L598"
+    },
+    {
+      "id": "B1315",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 599,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L599"
+    },
+    {
+      "id": "B1316",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 600,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L600"
+    },
+    {
+      "id": "B1317",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 601,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L601"
+    },
+    {
+      "id": "B1318",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 602,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L602"
+    },
+    {
+      "id": "B1319",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 603,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L603"
+    },
+    {
+      "id": "B1320",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 604,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L604"
+    },
+    {
+      "id": "B1321",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 613,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L613"
+    },
+    {
+      "id": "B1322",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 614,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L614"
+    },
+    {
+      "id": "B1323",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 615,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L615"
+    },
+    {
+      "id": "B1324",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 616,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L616"
+    },
+    {
+      "id": "B1325",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 617,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L617"
+    },
+    {
+      "id": "B1326",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 618,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L618"
+    },
+    {
+      "id": "B1327",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 619,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L619"
+    },
+    {
+      "id": "B1328",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 620,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L620"
+    },
+    {
+      "id": "B1329",
+      "path": "net/ipv4/netfilter/nf_nat_h323.c",
+      "line": 621,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_h323.c#L621"
+    },
+    {
+      "id": "B1330",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 302,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L302"
+    },
+    {
+      "id": "B1331",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 305,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L305"
+    },
+    {
+      "id": "B1332",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 308,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L308"
+    },
+    {
+      "id": "B1333",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 311,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L311"
+    },
+    {
+      "id": "B1334",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 317,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L317"
+    },
+    {
+      "id": "B1335",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 318,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L318"
+    },
+    {
+      "id": "B1336",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 319,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L319"
+    },
+    {
+      "id": "B1337",
+      "path": "net/ipv4/netfilter/nf_nat_pptp.c",
+      "line": 320,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/ipv4/netfilter/nf_nat_pptp.c#L320"
+    },
+    {
+      "id": "B1354",
+      "path": "net/llc/llc_input.c",
+      "line": 197,
+      "column": 15,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/llc/llc_input.c#L197"
+    },
+    {
+      "id": "B1365",
+      "path": "net/netfilter/core.c",
+      "line": 581,
+      "column": 26,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/core.c#L581"
+    },
+    {
+      "id": "B1371",
+      "path": "net/netfilter/nfnetlink.c",
+      "line": 614,
+      "column": 17,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nfnetlink.c#L614"
+    },
+    {
+      "id": "B1373",
+      "path": "net/netfilter/nf_conntrack_core.c",
+      "line": 2069,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_core.c#L2069"
+    },
+    {
+      "id": "B1374",
+      "path": "net/netfilter/nf_conntrack_core.c",
+      "line": 2390,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_core.c#L2390"
+    },
+    {
+      "id": "B1405",
+      "path": "net/netfilter/nf_conntrack_netlink.c",
+      "line": 1643,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_netlink.c#L1643"
+    },
+    {
+      "id": "B1409",
+      "path": "net/netfilter/nf_conntrack_amanda.c",
+      "line": 155,
+      "column": 33,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_amanda.c#L155"
+    },
+    {
+      "id": "B1410",
+      "path": "net/netfilter/nf_conntrack_ftp.c",
+      "line": 523,
+      "column": 22,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_ftp.c#L523"
+    },
+    {
+      "id": "B1411",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 302,
+      "column": 36,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L302"
+    },
+    {
+      "id": "B1412",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 361,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L361"
+    },
+    {
+      "id": "B1413",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 698,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L698"
+    },
+    {
+      "id": "B1414",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 826,
+      "column": 35,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L826"
+    },
+    {
+      "id": "B1415",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 868,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L868"
+    },
+    {
+      "id": "B1416",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1288,
+      "column": 20,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1288"
+    },
+    {
+      "id": "B1417",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1318,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1318"
+    },
+    {
+      "id": "B1418",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1387,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1387"
+    },
+    {
+      "id": "B1419",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1419,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1419"
+    },
+    {
+      "id": "B1420",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1469,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1469"
+    },
+    {
+      "id": "B1421",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1503,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1503"
+    },
+    {
+      "id": "B1422",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1554,
+      "column": 32,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1554"
+    },
+    {
+      "id": "B1423",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1591,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1591"
+    },
+    {
+      "id": "B1424",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1649,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1649"
+    },
+    {
+      "id": "B1425",
+      "path": "net/netfilter/nf_conntrack_h323_main.c",
+      "line": 1658,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_h323_main.c#L1658"
+    },
+    {
+      "id": "B1427",
+      "path": "net/netfilter/nf_conntrack_irc.c",
+      "line": 235,
+      "column": 38,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_irc.c#L235"
+    },
+    {
+      "id": "B1429",
+      "path": "net/netfilter/nf_conntrack_pptp.c",
+      "line": 124,
+      "column": 32,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_pptp.c#L124"
+    },
+    {
+      "id": "B1430",
+      "path": "net/netfilter/nf_conntrack_pptp.c",
+      "line": 241,
+      "column": 31,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_pptp.c#L241"
+    },
+    {
+      "id": "B1431",
+      "path": "net/netfilter/nf_conntrack_pptp.c",
+      "line": 385,
+      "column": 31,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_pptp.c#L385"
+    },
+    {
+      "id": "B1432",
+      "path": "net/netfilter/nf_conntrack_pptp.c",
+      "line": 481,
+      "column": 32,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_pptp.c#L481"
+    },
+    {
+      "id": "B1437",
+      "path": "net/netfilter/nf_conntrack_tftp.c",
+      "line": 78,
+      "column": 31,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conntrack_tftp.c#L78"
+    },
+    {
+      "id": "B1452",
+      "path": "net/netfilter/nf_nat_core.c",
+      "line": 707,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_core.c#L707"
+    },
+    {
+      "id": "B1494",
+      "path": "net/netfilter/nf_nat_amanda.c",
+      "line": 77,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_amanda.c#L77"
+    },
+    {
+      "id": "B1495",
+      "path": "net/netfilter/nf_nat_amanda.c",
+      "line": 84,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_amanda.c#L84"
+    },
+    {
+      "id": "B1503",
+      "path": "net/netfilter/nf_nat_ftp.c",
+      "line": 127,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_ftp.c#L127"
+    },
+    {
+      "id": "B1504",
+      "path": "net/netfilter/nf_nat_ftp.c",
+      "line": 134,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_ftp.c#L134"
+    },
+    {
+      "id": "B1506",
+      "path": "net/netfilter/nf_nat_irc.c",
+      "line": 99,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_irc.c#L99"
+    },
+    {
+      "id": "B1507",
+      "path": "net/netfilter/nf_nat_irc.c",
+      "line": 106,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_irc.c#L106"
+    },
+    {
+      "id": "B1508",
+      "path": "net/netfilter/nf_nat_tftp.c",
+      "line": 40,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_tftp.c#L40"
+    },
+    {
+      "id": "B1509",
+      "path": "net/netfilter/nf_nat_tftp.c",
+      "line": 47,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_nat_tftp.c#L47"
+    },
+    {
+      "id": "B1510",
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 500,
+      "column": 18,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conncount.c#L500"
+    },
+    {
+      "id": "B1511",
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 508,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conncount.c#L508"
+    },
+    {
+      "id": "B1512",
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 510,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/netfilter/nf_conncount.c#L510"
+    },
+    {
+      "id": "B1526",
+      "path": "drivers/net/ethernet/qualcomm/rmnet/rmnet_handlers.c",
+      "line": 89,
+      "column": 35,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/net/ethernet/qualcomm/rmnet/rmnet_handlers.c#L89"
+    },
+    {
+      "id": "B1599",
+      "path": "net/qrtr/qrtr.c",
+      "line": 352,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different base types):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/qrtr/qrtr.c#L352"
+    },
+    {
+      "id": "B1602",
+      "path": "net/qrtr/qrtr.c",
+      "line": 1313,
+      "column": 26,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different base types):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/qrtr/qrtr.c#L1313"
+    },
+    {
+      "id": "B1613",
+      "path": "net/sched/cls_api.c",
+      "line": 1076,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/sched/cls_api.c#L1076"
+    },
+    {
+      "id": "B1614",
+      "path": "net/sched/cls_api.c",
+      "line": 1092,
+      "column": 20,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/sched/cls_api.c#L1092"
+    },
+    {
+      "id": "B1623",
+      "path": "drivers/net/tun.c",
+      "line": 3344,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/net/tun.c#L3344"
+    },
+    {
+      "id": "B1897",
+      "path": "include/net/xfrm.h",
+      "line": 1835,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/include/net/xfrm.h#L1835"
+    },
+    {
+      "id": "B1898",
+      "path": "net/xfrm/xfrm_input.c",
+      "line": 74,
+      "column": 21,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/xfrm/xfrm_input.c#L74"
+    },
+    {
+      "id": "B1916",
+      "path": "net/xfrm/xfrm_user.c",
+      "line": 3462,
+      "column": 17,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/xfrm/xfrm_user.c#L3462"
+    },
+    {
+      "id": "B1917",
+      "path": "net/xfrm/xfrm_user.c",
+      "line": 1109,
+      "column": 29,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/net/xfrm/xfrm_user.c#L1109"
+    },
+    {
+      "id": "B1918",
+      "path": "include/net/xfrm.h",
+      "line": 1848,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/include/net/xfrm.h#L1848"
+    },
+    {
+      "id": "B2003",
+      "path": "drivers/slimbus/slim-msm.c",
+      "line": 173,
+      "column": 42,
+      "level": "error",
+      "message": "incompatible types in conditional expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/slimbus/slim-msm.c#L173"
+    },
+    {
+      "id": "B2019",
+      "path": "drivers/soc/qcom/smem.c",
+      "line": 793,
+      "column": 36,
+      "level": "error",
+      "message": "subtraction of different types can't work (different address spaces)",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/soc/qcom/smem.c#L793"
+    },
+    {
+      "id": "B2020",
+      "path": "drivers/soc/qcom/smem.c",
+      "line": 802,
+      "column": 28,
+      "level": "error",
+      "message": "subtraction of different types can't work (different address spaces)",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/soc/qcom/smem.c#L802"
+    },
+    {
+      "id": "B2021",
+      "path": "drivers/soc/qcom/smem.c",
+      "line": 811,
+      "column": 36,
+      "level": "error",
+      "message": "subtraction of different types can't work (different address spaces)",
+      "status": "resolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/soc/qcom/smem.c#L811"
+    },
+    {
+      "id": "B2232",
+      "path": "drivers/vservices/transport/axon.c",
+      "line": 544,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "status": "unresolved",
+      "baseline_source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/68fe321774661c4150b80edd93f7ddc75f32ac06/drivers/vservices/transport/axon.c#L544"
+    }
+  ],
+  "current_error_sites": [
+    {
+      "path": "kernel/exit.c",
+      "line": 147,
+      "column": 19,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/kernel/exit.c#L147",
+      "status": "unresolved"
+    },
+    {
+      "path": "kernel/signal.c",
+      "line": 1354,
+      "column": 27,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/kernel/signal.c#L1354",
+      "status": "unresolved"
+    },
+    {
+      "path": "kernel/pid.c",
+      "line": 418,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/kernel/pid.c#L418",
+      "status": "unresolved"
+    },
+    {
+      "path": "kernel/pid.c",
+      "line": 477,
+      "column": 32,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/kernel/pid.c#L477",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/fcntl.c",
+      "line": 1007,
+      "column": 22,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/fcntl.c#L1007",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/fcntl.c",
+      "line": 1018,
+      "column": 33,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/fcntl.c#L1018",
+      "status": "unresolved"
+    },
+    {
+      "path": "include/linux/rculist_bl.h",
+      "line": 24,
+      "column": 33,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/include/linux/rculist_bl.h#L24",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/seq_file.c",
+      "line": 1039,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/seq_file.c#L1039",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/seq_file.c",
+      "line": 1041,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/seq_file.c#L1041",
+      "status": "unresolved"
+    },
+    {
+      "path": "security/selinux/netnode.c",
+      "line": 167,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/security/selinux/netnode.c#L167",
+      "status": "unresolved"
+    },
+    {
+      "path": "security/selinux/netport.c",
+      "line": 115,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/security/selinux/netport.c#L115",
+      "status": "unresolved"
+    },
+    {
+      "path": "mm/swap_state.c",
+      "line": 87,
+      "column": 26,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/mm/swap_state.c#L87",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/notify/fsnotify.c",
+      "line": 247,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/notify/fsnotify.c#L247",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/notify/fsnotify.c",
+      "line": 249,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/notify/fsnotify.c#L249",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/notify/fsnotify.c",
+      "line": 259,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/notify/fsnotify.c#L259",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/posix_acl.c",
+      "line": 44,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/posix_acl.c#L44",
+      "status": "unresolved"
+    },
+    {
+      "path": "fs/posix_acl.c",
+      "line": 58,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/fs/posix_acl.c#L58",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/core/sock.c",
+      "line": 1841,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/core/sock.c#L1841",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/ipv4/nexthop.c",
+      "line": 1060,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/ipv4/nexthop.c#L1060",
+      "status": "unresolved"
+    },
+    {
+      "path": "drivers/net/ethernet/qualcomm/rmnet/rmnet_handlers.c",
+      "line": 89,
+      "column": 35,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/drivers/net/ethernet/qualcomm/rmnet/rmnet_handlers.c#L89",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/llc/llc_input.c",
+      "line": 197,
+      "column": 15,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/llc/llc_input.c#L197",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/qrtr/qrtr.c",
+      "line": 352,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different base types):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/qrtr/qrtr.c#L352",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/qrtr/qrtr.c",
+      "line": 1313,
+      "column": 26,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different base types):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/qrtr/qrtr.c#L1313",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/netfilter/nfnetlink.c",
+      "line": 614,
+      "column": 17,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/netfilter/nfnetlink.c#L614",
+      "status": "unresolved"
+    },
+    {
+      "path": "drivers/net/tun.c",
+      "line": 3344,
+      "column": 9,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/drivers/net/tun.c#L3344",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/sched/cls_api.c",
+      "line": 1076,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/sched/cls_api.c#L1076",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/sched/cls_api.c",
+      "line": 1092,
+      "column": 20,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/sched/cls_api.c#L1092",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/netfilter/nf_nat_core.c",
+      "line": 707,
+      "column": 25,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/netfilter/nf_nat_core.c#L707",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 500,
+      "column": 18,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/netfilter/nf_conncount.c#L500",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 508,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/netfilter/nf_conncount.c#L508",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 510,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/netfilter/nf_conncount.c#L510",
+      "status": "unresolved"
+    },
+    {
+      "path": "include/net/xfrm.h",
+      "line": 1835,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/include/net/xfrm.h#L1835",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/xfrm/xfrm_input.c",
+      "line": 74,
+      "column": 21,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/xfrm/xfrm_input.c#L74",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/xfrm/xfrm_user.c",
+      "line": 3462,
+      "column": 17,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/xfrm/xfrm_user.c#L3462",
+      "status": "unresolved"
+    },
+    {
+      "path": "net/xfrm/xfrm_user.c",
+      "line": 1109,
+      "column": 29,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/net/xfrm/xfrm_user.c#L1109",
+      "status": "unresolved"
+    },
+    {
+      "path": "include/net/xfrm.h",
+      "line": 1848,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/include/net/xfrm.h#L1848",
+      "status": "unresolved"
+    },
+    {
+      "path": "drivers/slimbus/slim-msm.c",
+      "line": 173,
+      "column": 42,
+      "level": "error",
+      "message": "incompatible types in conditional expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/drivers/slimbus/slim-msm.c#L173",
+      "status": "unresolved"
+    },
+    {
+      "path": "drivers/vservices/transport/axon.c",
+      "line": 544,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):",
+      "source": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/blob/4517f4c402cdeb1f234e23ee61a6646393def8a6/drivers/vservices/transport/axon.c#L544",
+      "status": "unresolved"
+    }
+  ]
+}
