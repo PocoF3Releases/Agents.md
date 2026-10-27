@@ -61,9 +61,9 @@ necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/
 
 ## Internal agents
 
-Use `gpt-6.1-sol` with low reasoning for internal agents, the user's requested
-"GPT 6.1-Sol Light" preference. The available tool exposes no separate Light
-model ID. Retain this setting unless the user explicitly changes it.
+Use `gpt-6.1-sol` with medium reasoning for new internal agents, following the
+user's current preference. Allow at most four concurrent threads including the
+parent. This supersedes the earlier low-reasoning/Light preference.
 
 ## Local checks
 

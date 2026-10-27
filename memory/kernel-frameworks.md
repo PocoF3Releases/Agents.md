@@ -73,14 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Production acceptance](../evidence/kernel-debug-readiness-20261027.md) records
-release-active alignment, initialization, RCU and WLAN fixes with original
-upstream authorship. The release config removes compiler/optional driver diagnostics while retaining
-KFENCE and security; full W=1 passes. The latest
-main kernel and original ramdisk are verified after reboot with enforcing phone
-checks. Diagnostic-only follow-ups remain local. Whole-kernel UBSAN boot failure
-is unresolved and parked; whole-tree sparse/kernel-doc limits remain. System
-sources and thermal protection are unchanged.
+[Current cleanup checkpoint](../evidence/kernel-debug-readiness-20261027.md)
+records release-active lifetime, alignment and MMIO fixes, original upstream
+authorship, and W=1/Werror plus enforcing-phone acceptance. The latest tested
+main kernel and original ramdisk are verified after reboot. Full history,
+sparse and kernel-doc closure remains open; do not treat a successful make
+exit as a clean analysis gate. KFENCE, security, thermal protection and system
+sources are unchanged. Broader UBSan-only boot work remains parked.
 
 ## Intermittent shutdown investigation
 
