@@ -73,13 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Current active-driver fixes and main install](../evidence/kernel-main-install-20261027.md)
-cover GPI, service-notifier and USB after the prior bus/CNSS/SPS repairs.
-Affected W=1/C=2, normal Image, host and enforcing phone checks pass; the latest
-normal-build kernel remains installed as the development baseline, without an
-automatic rollback. Full Image W=1 fails with the unchanged Werror policy;
-SPS mixed-memory and broader audit limits remain open. System/config/thermal
-policy is unchanged; this is not full release sign-off.
+[Full W=1 Image completion and main install](../evidence/kernel-w1-completion-20261027.md)
+clears the earlier 1,138 compiler diagnostics with unchanged Werror/config/toolchain.
+Focused core, driver and Wi-Fi fixes pass the strict target, host regressions and
+enforcing phone checks; the verified kernel stays installed as main. Human
+backports retain authorship. Sparse/kernel-doc and external-device limits remain
+explicit; SPS mixed-memory and intermittent shutdown analysis remain open.
+System sources and thermal protection are unchanged; no full-ROM sign-off.
 
 ## Intermittent shutdown investigation
 

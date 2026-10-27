@@ -79,14 +79,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: a028da5feaa05034c7cf8d3956cf36c94f25a961
+    aosp-17: 40c7e956508d329580f457740b4ef5bd5efc7fac
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a028da5feaa05034c7cf8d3956cf36c94f25a961
-  observation: 2026-10-27; five GPI/service-notifier/USB repairs retain prior fixes.
-    Affected W=1/C=2, normal Image and host/phone checks pass; latest normal kernel
-    installed persistently. Full Image W=1 fails; scope and open limits in
-    evidence/kernel-main-install-20261027.md. System/config/thermal policy unchanged.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/40c7e956508d329580f457740b4ef5bd5efc7fac
+  observation: 2026-10-27; full Image W=1 passes with unchanged Werror/config.
+    Host and enforcing phone regressions pass; exact tested kernel is installed
+    as main and survives reboot. Scope and sparse/external-device limits in
+    evidence/kernel-w1-completion-20261027.md. System and thermal policy unchanged.
 
 
 - repository: https://github.com/PocoF3Releases/.github
