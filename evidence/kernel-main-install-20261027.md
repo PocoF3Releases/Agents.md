@@ -1,5 +1,7 @@
 # Active-driver fixes and main-kernel installation — October 27, 2026
 
+> Kernel links were updated to the [finalized history](kernel-history-map-20261027.json). Recorded test identities and measurements remain historical; corresponding rewritten commits are not claims of testing those hashes.
+
 **Source/build/host/device checked; full W=1 gate failed.** This continues
 [the prior active-driver series](kernel-active-driver-fixes-20261027.md).
 Five separate local feature commits preserve all prior history and human
@@ -66,7 +68,7 @@ Image SHA-256:
 
 ## Phone acceptance and persistent deployment
 
-The tested source is [a028da5feaa0](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a028da5feaa05034c7cf8d3956cf36c94f25a961).
+The tested source is `a028da5feaa0` ([final history](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc754b6127edd973434901d010fe5bd04e32bbd8)).
 The existing Magisk ramdisk was preserved; the candidate kernel and unpacked
 ramdisk hashes were checked before boot. On-device acceptance passes:
 
@@ -105,8 +107,8 @@ this task, and this record is not a complete production-release sign-off.
 
 ## Feature commits
 
-- [soc: qcom: service_notifier: correct private QMI descriptors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/39d91cd07829d0dfaec2df700dd09dc90c4d6765)
-- [soc: qcom: service_notifier: reject error handles on unregister](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/45c179303f5698decfbf27e9fa4ec4b6d8873964)
-- [dma: qcom: gpi: preserve register address-space contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bd9508d660c4dfaa9ca4d1b285ea73e69fb13669)
-- [usb: gadget: ncm: decode MirrorLink version in CPU byte order](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8566844c80d5960ee7e92dbad5778b4c4c3d2e8a)
-- [usb: gadget: uac1: reject missing controls in configfs reads](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a028da5feaa05034c7cf8d3956cf36c94f25a961)
+- [soc: qcom: service_notifier: correct private QMI descriptors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fcf509b9a2f04c4cabe5a41424b74fc90ab12882)
+- [soc: qcom: service_notifier: reject error handles on unregister](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5e5bc38864a4ea60cd9ac4cd53f27c7fe5be54f2)
+- [dma: qcom: gpi: preserve register address-space contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/87f62e240a823523e854e240a342669dcdf9832a)
+- [usb: gadget: ncm: decode MirrorLink version in CPU byte order](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bb606a6a396db0e8a489e829ac775b44f974f6b2)
+- [usb: gadget: uac1: reject missing controls in configfs reads](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc754b6127edd973434901d010fe5bd04e32bbd8)

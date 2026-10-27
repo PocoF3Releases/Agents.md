@@ -1,10 +1,12 @@
 # Crypto/library recheck and RNG request completion — October 26, 2026
 
+> Kernel links were updated to the [finalized history](kernel-history-map-20261027.json). Recorded test identities and measurements remain historical; corresponding rewritten commits are not claims of testing those hashes.
+
 **Source/build/host/device checked.** Reviewed all 27 commits ending at
-[the previous audit head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7c791f0b0e10b26a524adeddd482778a1edfffad), including their cumulative diff and
+[the previous audit head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8f8e268ff28d5ab26108a19d0615c4ab5c1a2244), including their cumulative diff and
 callers. They remain unchanged ancestors with original authorship intact.
 One additional, separate fix is pushed on `aosp-17`:
-[Fill crypto RNG requests across partial hardware reads](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/52f64ac609e05245596f878aebafb0e02d7cf9bd).
+[Fill crypto RNG requests across partial hardware reads](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/25ddc9a7d3619f9ab76b962b009679eaea3851a0).
 No system-side source, defconfig, warning policy or thermal protection change.
 
 ## Real issue found during repeat phone testing
