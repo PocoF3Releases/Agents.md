@@ -121,3 +121,15 @@ visible with balanced source/host paths, not suppressed. Stock graphics remain;
 816 app-domain GPU/window checks, sleep/wake and audio/video regressions passed
 under a temporary enforcing kernel. Original boot and settings restored. This is
 not a new FPS tuning, driver experiment or general historical page-fault cure.
+
+## Refresh-dependent luminance — October 28
+
+[DisplayFeature evaluation](../evidence/displayfeature-evaluation-20261028.md)
+records stock framework/native contracts and corrected physical comparisons.
+Flat mode did not eliminate the 60/120 Hz luminance difference; no stock HAL or
+calibration port was accepted. The published Alioth overlay holds adaptive refresh
+at 120 Hz below Android brightness 55 using the existing blocking-zone policy.
+Explicit 60 Hz caps and verified Battery Saver behavior remain; thermal protection
+was retained. This avoids automatic pumping, not manual-mode optical mismatch.
+Runtime-equivalent policy and resource checks passed; the production RRO needs the
+next ROM build. Original device state and clean kernel sources/output were restored.
