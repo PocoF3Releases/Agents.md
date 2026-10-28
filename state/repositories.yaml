@@ -41,13 +41,13 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: d6c19893590c1004e0a579c0ca9182b2ef2594c3
+    aosp-17: 041a887023405ae7aa805fd323f1eb8fb1b692d3
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/d6c19893590c1004e0a579c0ca9182b2ef2594c3
-  observation: 2026-10-25; native game-audio backend and enforcing temporary APK checks
-    in evidence/dolby-backend-20261025.md; installed ROM predates these fixes.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/041a887023405ae7aa805fd323f1eb8fb1b692d3
+  observation: 2026-10-28; anti-flicker RRO resource checks and runtime-equivalent policy
+    checks in evidence/displayfeature-evaluation-20261028.md; production RRO not installed.
   local_a17:
-    head: 5602a1592c666b7f753d46a1ac19ccfec478cea0
+    head: 20c002b9e4fca6f097bd14dbbeaa747bab8e6fb4
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
