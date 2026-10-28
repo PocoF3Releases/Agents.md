@@ -54,7 +54,8 @@ zero errors**. All five requested lock-context warnings are resolved, together
 with related caller/MMIO reports: **35 rows removed, zero added** after line
 mapping. The [resolved-site ledger](kernel-sparse-errors-20261028.json) retains
 the exact baseline sites. The other **2,954 baseline warnings remain**; this is
-not an all-warning-clean claim. Kernel-doc cleanup was deliberately outside
+not an all-warning-clean claim. The complete [deferred review backlog](kernel-sparse-backlog-20261028.md)
+preserves every remaining site and available type context. Kernel-doc cleanup was deliberately outside
 this update and was not rerun as a separate documentation audit.
 
 Strict checkpatch retains legacy coauthor/DCO metadata findings, nine moved
