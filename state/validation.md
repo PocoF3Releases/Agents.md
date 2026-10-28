@@ -1,29 +1,14 @@
 # Validation register
 
-Keep source, build and runtime evidence dated.
-
 ## V-HAPTICS
 
-**2026-10-04 — source/build/host/device-tested, scoped.** That HAL candidate
-passed 21/21 predefined effect/strength gain checks (48/80/128), three supported
-stock primitives, timed amplitude and cancellation under enforcing SELinux.
-AAC native/limited-HE1 rendering and bounded PCM refills passed isolated tests.
-The candidate was temporarily mounted; original binary/files were restored.
-This is not evidence of a permanently installed latest build or full RichTap.
-App-facing RichTap remains unverified.
-No PWLE or unsupported primitives advertised. October 8 adds a LOW_TICK light-tick fallback with commit-reported temporary
-completion tests; current installed identity is unknown. September 30 user
-acceptance remains historical.
-[Exact scope and restoration](../evidence/haptics/2026-10-04.md).
-
-## V-A16
-
-**Reported during September 27 work; no new device test in this documentation update.**
-Maintainer reported clean Android 16 install with Magisk, then audible/clear AC-4
-sample playback. Later explicitly stated A16 had been released; exact newer ZIP,
-date and links remain unknown. Prior boot/rootdir/Bluetooth dependency checks
-were reported, not reproduced here. No Bluetooth audio headset or WFD receiver
-was available; do not certify those paths or transfer A17 camera tests to A16.
+**2026-10-04 — scoped source/build/host/device tests.** Enforcing HAL candidate:
+21/21 effect/strength gains (48/80/128), three stock primitives, timed amplitude
+and cancellation. Isolated AAC native/limited-HE1 and bounded PCM refills pass.
+Temporary mount restored; no full RichTap/PWLE or unsupported-primitive acceptance.
+App-facing RichTap unverified. October 8 LOW_TICK has commit-reported temporary
+tests; installed identity unknown. September 30 user acceptance is historical.
+[Scope and restoration](../evidence/haptics/2026-10-04.md).
 
 ## V-AC4
 
@@ -38,10 +23,11 @@ stream, not all presentations, multichannel/offload, apps or Dolby processing.
 
 ## V-PARTS
 
-**2026-09-24 — source-checked and user-confirmed.** Common [3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c) System
-Profile dialog correction was approved visually; earlier [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b) was
-insufficient. Shared per-app implementation is not a separate visual test.
-[Exact record](../memory/dolby-audio.md).
+**2026-09-24 — source-checked and user-confirmed.** System Profile:
+[3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c)
+approved visually; [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b)
+insufficient. Shared per-app implementation has no separate visual acceptance.
+[Scope](../memory/dolby-audio.md).
 
 ## V-UI
 
@@ -52,10 +38,9 @@ turns. Dolby README [3b8b33e](https://github.com/PocoF3Releases/hardware_xiaomi/
 
 ## V-TOUCH
 
-**September 28 recorded source/host checks.** Common the recorded candidate, the recorded candidate,
-the recorded candidate, the recorded candidate, the recorded candidate add supported touch controls/translations and
-harden Parts hardware writes/lifecycle. Blob/kernel support inspected and
-host/resource checks passed; not full new-UI A17 acceptance. [Scope](../memory/xiaomiparts-device-ux.md).
+**September 28 — recorded source/host checks.** Supported touch controls,
+translations, hardware-write/lifecycle guards and blob/kernel inspection passed
+scoped checks; not full A17 UI acceptance. [Scope](../memory/xiaomiparts-device-ux.md).
 
 ## V-PROXIMITY
 
@@ -84,7 +69,7 @@ no ROM build/flash, settings restored, installed CHI hash unchanged.
 Clips are `VID_20260923_*`; decode passed. Final transitions restored 1x;
 inspected frames lacked stripes, with no new Java/native or DSX10/MNDS failure.
 Earlier CHIEISV3 logging remained. Short clips do not prove long-run thermals
-or all features. [Full results](../memory/miuicamera.md).
+or all features.
 
 ## V-NFC
 
@@ -111,18 +96,17 @@ was added. The correction is provided by an upstream dependency; it is not a mai
 
 ## V-DOLBY
 
-**Historical control-transport checks.** Captured effect ownership/attachment,
-pregain ACK 23698 and route/profile/reset acknowledgments do not prove acoustic
-DSP/VQE/game behavior. Earlier property/SELinux failures explain capture failures.
-Some MiSound probes changed settings and were not fully restorative.
-[Reconciled evidence](../memory/dolby-audio.md).
+Historical transport ACKs do not prove acoustic DSP/VQE/game processing. Older
+MiSound probes were not fully restorative. [Scope](../memory/dolby-audio.md).
+[Follow-up](../evidence/audio-subsystem-followup-20261025.md): enforcing candidate
+recording/lifecycle checks and artifact restoration; physical endpoint limits remain.
 
 ## V-PLATFORM
 
-**Source checks and separately scoped historical results.** Rootdir's 17-change
-record identifies packaged binaries, kernel nodes and init ownership. Publication
-is not testing of every service. Bionic/DS4/HEIF/Turnip/DeviceAsWebcam findings
-retain their original limits. [Rootdir evidence](../memory/kernel-frameworks.md).
+[Crypto/library recheck](../evidence/kernel-crypto-lib-recheck-20261026.md):
+27 fixes preserved; QRNG exact-length repair passes W=1/Image, host and enforcing
+phone checks. Nine reviewed sparse reports stay visible; lock tests pass. Original
+boot restored; prior GPU/display/hardware limits linked there.
 
 ## V-RELEASE
 
@@ -132,11 +116,15 @@ completion, a draft banner or a rebased commit date.
 
 ## V-INDEX
 
-**2026-09-24 host tests; September 30 read-only metadata refresh.** repoindex
-1.1.0 / [c79c150](https://github.com/johnmart19/repoindex/commit/c79c1508c3c7f2657ddaf0172e89b279f9ce4914) passed 20 recorded regressions. Current stored A17 scan is
-September 28: 1756352 files, 10180486 symbols, schema 2, coverage known,
-zero recorded errors, excludes `out` and VCS metadata. `live_tree_verified=false`;
-no new scan or benchmark in this update. [Usage/limits](../operations/repoindex.md).
+**Historical A17, September 2026.** [Recorded checks, snapshot and limits](../operations/repoindex.md#active-build-tree-and-historical-indexes).
+No new A17 indexing or benchmark here.
+
+## V-REF-INDEX
+
+**2026-10-25, host/source-checked.** Both bundles passed deep checks; standalone suite: 81 tests.
+[Audit and scope](../operations/repoindex.md#checked-coverage-and-speed).
+Implementation hashes passed; other files use metadata. No ROM/device test or
+future freshness guarantee.
 
 ## V-KNOWLEDGE
 
@@ -162,8 +150,7 @@ Current repairs are V-PBRP-20261009; branch HEAD differs from October 7 assets.
 ## V-SOURCE-20261009
 
 **2026-10-09 — source-checked.** Maintained ROM heads/product integration and
-separate recovery source reviewed; prior recovery-core edits preserved. No new
-build/device test. [Scope](changelog-audit.md).
+separate recovery source reviewed; prior recovery-core edits preserved. No new build/device test. [Scope](changelog-audit.md).
 
 ## V-CHANGELOG
 
@@ -171,7 +158,7 @@ build/device test. [Scope](changelog-audit.md).
 custom ROM inputs reviewed; selected heads matched, tracked trees clean at audit.
 Product/library gates, companion controls and canonical camera APK hash checked.
 Full/short posts fit Telegram limits. [Audit](changelog-audit.md) owns details.
-No new ROM/device test.
+No new device test.
 
 ## V-HBM-RECOVERY
 
@@ -193,3 +180,38 @@ installation succeed; ADB decrypted=true and shell intact afterward.
 ## V-EVOX-NATIVE-RECOVERY-20261014
 
 **2026-10-14.** [Evidence](../evidence/evox-native-recovery-20261014.md): clean-installed user release/kernel #1; Settings/Wi-Fi pass. Heading verified; password/Weaver unverified.
+
+## V-ADRENO-20261024
+
+**2026-10-24 — scoped source/build/host/device tests.** [GPU](../evidence/adreno-audit-20261024.md):
+68 app checks/ABI×3; Khronos 633: 556 pass/76 unsupported/1 warning/0 failures.
+Counters, 64 teardowns (to zero) and 4 display wakes pass. Temporary enforcing
+boot restored; partition unchanged. No full conformance/release.
+
+## V-HARDWARE-20261024
+
+[Device](../evidence/hardware-audit-20261024.md) · [HAL](../evidence/hal-regressions-20261024.md).
+
+## V-DISPLAY-20261025
+
+[Device evidence](../evidence/display-recovery-20261025.md); [resync/build](../evidence/source-refresh-20261025.md).
+
+## V-SUBSYSTEM-INVENTORY-20261025
+
+[Source/build inventory; scoped device observations](../evidence/subsystem-inventory-20261025.md).
+
+## V-TURNIP-20261025
+
+[Bounded build/device tests; cancelled, stock restored; no production acceptance](../evidence/turnip-evaluation-20261025.md).
+
+## V-SHUTDOWN-20261025
+
+[Evidence](../evidence/shutdown-investigation-20261025.md).
+
+## V-KERNEL-WHOLE-20261026
+
+[Scope](../evidence/kernel-whole-warning-audit-20261026.md).
+
+## V-KERNEL-ACTIVE
+
+[Source/deployment scope](../evidence/kernel-redline-20261028.md).

@@ -1,10 +1,14 @@
 # Native Android 17 EvolutionX recovery
 
-Checkpoint: **2026-10-14**. Active work is `~/evo/bootable/recovery`, built
+Checkpoint: **2026-10-20**. Active work is `~/evo/bootable/recovery`, built
 with the ROM. Standalone PBRP is a separate project and is not the source or
 acceptance target for these changes. [Sources](../state/repositories.yaml),
 [verification](../state/validation.md#v-evox-native-recovery-20261014), and
 [sanitized evidence](../evidence/evox-native-recovery-20261014.md).
+
+## Repository ownership
+
+Recovery-only sources and the local manifest live in [PocoF3Releases-Recovery](https://github.com/PocoF3Releases-Recovery). Shared framework/device sources use the normal PocoF3Releases repositories plus four authored [mail patches and apply command](https://github.com/PocoF3Releases-Recovery/local_manifests#readme). After repo sync, run `python3 .repo/local_manifests/apply-recovery-patches.py` before building. Preflight, repeated application and dirty-worktree rejection passed; resulting trees exactly reproduce the approved recovery implementation. No new build or device acceptance is implied.
 
 ## Existing-key storage and installation
 
@@ -111,3 +115,10 @@ APatch is a separate checked boot installer, second after Magisk in Advanced. Of
 Wi-Fi startup repairs stale labels by forcing restorecon of `/data/vendor/wifi` in common-device post-fs-data. An unlabeled cnss socket caused enforcing unlink/bind failures; relabelling restored Wi-Fi with APatch active. Existing vendor_init relabelfrom/relabelto permissions cover the repair; no broad allow rule or saved-network deletion is needed.
 
 For Virtual A/B clean installs, boot the installed OTA target successfully and confirm snapshot merge completion before requesting a factory reset. Wiping an unverified target without a forward-merge indicator intentionally marks it unbootable and restores the old slot (`SnapshotManager::HandleImminentDataWipe`). Do not bypass this guard or erase metadata to force the update.
+
+## Current source replay
+
+The October 25 source refresh preserves the enhanced native recovery and reapplies
+its four authored framework/device patches after sync. The apply runner and patch
+series are installed together in the local-manifest directory. Rechecking reports
+zero pending patches. [Source identity and verification](../evidence/source-refresh-20261025.md).

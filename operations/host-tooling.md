@@ -13,7 +13,7 @@ Ruff 0.16.10, pytest 9.1.1, fd/fdfind 10.3.0; PyYAML 6.0.3. Added the missing
 fd user symlink and repaired shell discovery. Windows gh/rg/fd/jq/uv/Ruff/pytest
 were present. Windows Python resolved into an application venv; do not use it
 for global package changes. Windows ADB was not on PATH; Linux ADB was present.
-WSL gh is installed but unauthenticated; public API reads still work.
+Historical October 9 authentication note is superseded: authenticated WSL gh reads and scoped repository pushes worked on October 23; credentials are not recorded here.
 
 ## Host utility setup
 

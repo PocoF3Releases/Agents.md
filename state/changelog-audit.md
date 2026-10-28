@@ -53,7 +53,7 @@ modem/cache, Parts/thermal and stock haptics each combine multiple repositories.
 ## Exclusions and wording limits
 
 Reference-code/profile/workhub repositories are not ROM features. PBRP is a
-separate recovery product. A16 and experimental refs are excluded. AAC renderer
+separate recovery product. Experimental refs are excluded. AAC renderer
 is a development target, not full RichTap; no PWLE/Android spatializer claim.
 No generic game/FPS/battery-life improvement or donor GPU port is established.
 

@@ -55,3 +55,69 @@ comparison; do not infer a radio-driver fix from WAN download speed alone.
 Provenance: local `out/gpu-driver-comparison/REPORT.md` and
 `out/myron-frame-audit/REPORT.md`, imported 2026-09-30. This import adds no fresh
 device measurement. Source ownership is in the [map](../state/repositories.yaml).
+
+## Production Adreno accounting — October 24
+
+The stock V502.0 stack passed scoped app/native/Khronos checks on both ABIs.
+[Validation](../state/validation.md#v-adreno-20261024) and the
+[evidence record](../evidence/adreno-audit-20261024.md) separate the installed
+baseline from a temporary patched-kernel boot and record remaining limitations.
+No donor driver or general game/FPS fix was accepted.
+
+Published kernel changes preserve 64-bit mapping footprints and backport Google's
+`gpu_mem_total` emissions, retaining current DMA-BUF cleanup and upstream authorship.
+Perfetto now receives real per-process/global memory counters; duplicate-import
+accounting, large-footprint and final-global-removal regressions have targeted host fixtures.
+[Source-only tools](../scripts/adreno-audit/README.md) stay outside ROM packages.
+Vulkan remains 1.1: kernel timeline ioctls do not create a userspace Vulkan extension.
+Sparse support remains disabled. Android thermal HAL telemetry is unavailable;
+Xiaomi/kernel protection and the normal governor remain enabled.
+
+## Display scheduling — October 24
+
+The [Alioth timing audit](../evidence/display-timing-20261024.md) separates native
+60/120 Hz panel support from SurfaceFlinger work budgets. The follow-up retains the original 60 Hz scheduling after GPU stress exposed
+small repeatable differences; only the 120 Hz latency reduction remains.
+Rendering and video checks are scoped, not a zero-jank or all-games guarantee.
+No 240 Hz or speculative panel overclock was accepted.
+The restored `~/references_code/android-t-qcom` and Qualcomm vendor snapshot are
+reference material, not replacement Android 17 framework dependencies.
+
+## Refresh-switch backlog — October 25
+
+A continuous 120→60 Hz test reproduced a persistent UI buffer queue that paused
+or restarted-app tests missed. Kona products now enable Android's existing multi-step
+recovery together with its cumulative-delay threshold through the shared system
+release configuration. This is normal-ROM policy, separate from recovery UI refresh. The normal 60 Hz budget
+and published 120 Hz profile are retained. [Source, build, enforcing device tests
+and restoration](../evidence/display-recovery-20261025.md) record the scoped
+acceptance; the tested temporary framework was removed afterward. This addresses
+transition backlog, not a new steady-state 60 Hz latency budget or every game.
+
+## Cancelled Turnip evaluation — October 25
+
+The newly authorized stable Mesa KGSL experiment did load Turnip in Endfield,
+unlike the older package-opt-in attempt. Targeted ABI/LRZ checks passed, but game
+frame delivery was substantially slower in the observed captures. Stock scene
+loading reproduced 163 page faults; the available Turnip captures do not prove
+a general fault cure. [Exact tests, limits and restoration](../evidence/turnip-evaluation-20261025.md).
+
+The maintainer cancelled Turnip. Both stock Vulkan hashes and the empty temporary
+autotune property were verified restored; final SELinux was enforcing. No ROM
+driver/policy change or production fix was pushed. Do not restart Turnip or repeat
+the declined OnePlus donor test without a new request. Adreno 650 is Mesa gen3,
+not pre-gen3; do not force another GPU's LRZ profile.
+## Kernel GPU audit — October 26
+
+[GPU/dependency evidence](../evidence/kernel-gpu-audit-20261026.md) owns the
+current feature links and bounded acceptance. Legacy imports charge actual mapped
+size; DMA-BUF user-address classification rejects VMA holes. GMU acquisition
+failures unwind and boot initialization remains retryable. SMMU diagnostic timeout
+and power cleanup retain lock/register ownership. Typed DRM/ION interfaces preserve
+layouts, active heap operations and governor/thermal policy.
+
+Selected W=1 compilation and Image pass; two conditional-SRCU sparse reports remain
+visible with balanced source/host paths, not suppressed. Stock graphics remain;
+816 app-domain GPU/window checks, sleep/wake and audio/video regressions passed
+under a temporary enforcing kernel. Original boot and settings restored. This is
+not a new FPS tuning, driver experiment or general historical page-fault cure.

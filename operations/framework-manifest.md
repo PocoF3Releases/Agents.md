@@ -18,6 +18,10 @@ framework revision. The override makes fork ownership explicit and keeps our
 patches in future syncs. Upstream changes still require review and integration
 into the maintained forks; selecting a fork does not automatically import them.
 
+## Recovery overlay
+
+For enhanced native recovery, use [the recovery manifest and patch runner](https://github.com/PocoF3Releases-Recovery/local_manifests#readme). The manifest selects recovery-only dependencies; shared frameworks/base and both Xiaomi device trees remain on PocoF3Releases. Run `python3 .repo/local_manifests/apply-recovery-patches.py --check` and then the same command without `--check` after each sync. It checks all projects before applying the authored patches, rejects incompatible/dirty trees and skips an already-applied stack. Do not push these local recovery commits to the ROM-only branches.
+
 ## Maintained repository ownership
 
 Keep Evolution-X and LineageOS fork relationships. Required recovery dependencies
@@ -27,6 +31,6 @@ custom changes used by the build; do not remove it merely because the delta is s
 
 Use `android_bootable_recovery` for native ROM recovery. The unused `bootable_recovery`
 duplicate was consolidated; its history remains on
-[the legacy branch](https://github.com/PocoF3Releases/android_bootable_recovery/tree/legacy-native-recovery).
+[the legacy branch](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/tree/legacy-native-recovery).
 Public development tags were removed at the maintainer's request; branch heads
 were retained. Signing and camera-development repositories are excluded.

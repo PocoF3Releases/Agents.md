@@ -9,6 +9,11 @@ Preserve unrelated edits. Use user builds; full ROM builds/flashing/history rewr
 require applicable authorization. Root is for research; final fixes are source-based.
 Keep hardware/xiaomi standalone. Camera is finalized unless explicitly reopened.
 
-Use rg or a narrow repoindex query. The full generated census is optional reference,
+For historical Android/Qualcomm reference searches, use the ready bundles in
+`~/references_code` and `python3 tools/repoindex workspace`: both trees by default, or
+`--tree`/`--scope` with compact bounded text (`--json` if needed). Restore the cache automatically; do not
+reindex at chat startup. See the workhub's `operations/repoindex.md`.
+`impl` searches stored .cpp/.cc bodies; `source` reads bounded indexed ranges.
+Use rg for live edits, regex or other languages. The full generated census is optional reference,
 not startup instructions; regenerate to INDEX_GUIDE.md or STRUCTURE.md, never over
 curated AGENTS.md. Follow target-repository instructions when editing its files.

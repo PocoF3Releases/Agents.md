@@ -1,0 +1,12 @@
+{
+  "source_files": [
+    "gles2-main-2020-03-01.txt",
+    "gles3-main-2020-03-01.txt",
+    "gles31-main-2020-03-01.txt",
+    "vk-main-2020-03-01/api.txt",
+    "vk-main-2020-03-01/compute.txt",
+    "vk-main-2020-03-01/synchronization.txt"
+  ],
+  "case_count": 633,
+  "selection": "six evenly spaced cases per third-level category, bounded sample; excludes stress, performance, protected, huge, large, OOM and negative-API groups"
+}

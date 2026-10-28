@@ -16,7 +16,7 @@
 Update owners, not session diaries. Link historical records rather than duplicating
 technical explanations. Imported drafts/old next steps are not assignments.
 
-Track heads only for PocoF3Releases and maintainer-owned sources/tools. Do not add
+Track heads only for PocoF3Releases, PocoF3Releases-Recovery and maintainer-owned sources/tools. Do not add
 upstream dependencies or retired forks to the repository ledger. Keep necessary
 integration evidence in its topic owner without an ongoing upstream head inventory.
 
@@ -58,6 +58,12 @@ Publish no credentials, keys, contact/payment data, device serials, environment
 dumps or unrelated client-memory exports. Use `~/` paths. Retain public URLs and
 proprietary-source references; keep raw dumps/videos/logs private and publish only
 necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/PRIVACY.md).
+
+## Internal agents
+
+Use `gpt-6.1-sol` with medium reasoning for new internal agents, following the
+user's current preference. Allow at most four concurrent threads including the
+parent. This supersedes the earlier low-reasoning/Light preference.
 
 ## Local checks
 

@@ -10,7 +10,7 @@ Full sync resolved 1,265 projects, with 15 upstream advances. All 30 maintained
 native-recovery integration heads were retained, clean and matched GitHub in the
 completed baseline audit. [Exact linked heads](../state/repositories.yaml).
 
-[Manifest repair](https://github.com/PocoF3Releases/local_manifests/commit/50ef2cbe4ca339d8591d3c00adfeb7a72e87f373)
+[Manifest repair](https://github.com/PocoF3Releases-Recovery/local_manifests/commit/50ef2cbe4ca339d8591d3c00adfeb7a72e87f373)
 preserves upstream project groups and build/make linkfiles. Eight clean standalone
 checkouts were preserved privately before Repo recreated managed checkouts; their
 approved heads were retained. Frameworks/base and frameworks/av remain on the
@@ -90,23 +90,23 @@ after verifying its exact path and contents. No user files or lock settings chan
 
 ### Final source heads
 
-- [bootable/recovery](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a)
-- [system/vold](https://github.com/PocoF3Releases/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
-- [system/sepolicy](https://github.com/PocoF3Releases/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
+- [bootable/recovery](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a)
+- [system/vold](https://github.com/PocoF3Releases-Recovery/android_system_vold/commit/51ede7310adb133c13025533c1f20cff56cb3bcc)
+- [system/sepolicy](https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64)
 - [device/xiaomi/sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/66c963036bfeae6c0984b15ff886542bfca517c5)
 
 ## Restored native recovery features
 
-- [Bundled Magisk](https://github.com/PocoF3Releases/android_bootable_recovery/commit/c318ad06d96b8b27bff102f1e32206f865a1de9e) restores the confirmed Advanced action, RAM staging and update/slot guards.
-- [Checked Enable ADB](https://github.com/PocoF3Releases/android_bootable_recovery/commit/490a10578996f406b6c03c1f4a230a03ea2057b1) restores init acknowledgement and retryable failure handling.
+- [Bundled Magisk](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/c318ad06d96b8b27bff102f1e32206f865a1de9e) restores the confirmed Advanced action, RAM staging and update/slot guards.
+- [Checked Enable ADB](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/490a10578996f406b6c03c1f4a230a03ea2057b1) restores init acknowledgement and retryable failure handling.
 - Thirteen host checks pass; shell syntax and official APK SHA-256 match pass.
   Old committed tests and development documentation were not restored.
 - Existing secure PIN and scrolling evidence above predates this restoration;
   it does not establish current-image Magisk rooting or post-boot persistence.
 
-- [APatch](https://github.com/PocoF3Releases/android_bootable_recovery/commit/8b257a5d0c679a335ffc542c89adc98de12a9e92) adds a checksum-verified ARM64 boot installer with stock-ramdisk checks and readback verification. Real tools patched a copied Alioth boot image offline; failure-path checks passed. No live root installation was performed.
-- [Slot cancellation](https://github.com/PocoF3Releases/android_bootable_recovery/commit/da73dbed6792f89ebfb78149350a5b6a5b5227d2) avoids indexing the cancellation sentinel or changing boot control. Phone cancellation and unchanged boot bytes were checked.
-- [Minor UI polish](https://github.com/PocoF3Releases/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a) rounds cards and reduces horizontal padding without changing branding, fonts or row heights. Menus, empty PIN keypad, decrypted browser and cancelled root/image/wipe dialogs were captured in a temporary permissive recovery. Sideload and fastbootd captures remain outside this evidence. The final text-width clamp was added after captures.
+- [APatch](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/8b257a5d0c679a335ffc542c89adc98de12a9e92) adds a checksum-verified ARM64 boot installer with stock-ramdisk checks and readback verification. Real tools patched a copied Alioth boot image offline; failure-path checks passed. No live root installation was performed.
+- [Slot cancellation](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/da73dbed6792f89ebfb78149350a5b6a5b5227d2) avoids indexing the cancellation sentinel or changing boot control. Phone cancellation and unchanged boot bytes were checked.
+- [Minor UI polish](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a) rounds cards and reduces horizontal padding without changing branding, fonts or row heights. Menus, empty PIN keypad, decrypted browser and cancelled root/image/wipe dialogs were captured in a temporary permissive recovery. Sideload and fastbootd captures remain outside this evidence. The final text-width clamp was added after captures.
 - Final incremental `evolution` build passed (41 steps). Secure vendor_boot SHA-256: `34ea0fddd6792a35b9cb23c2e8e1de4bec2ecf49bddd2f0d30770f45589f1a05`. Restored successfully to slot A and rebooted; subsequent Android shell checks were blocked by ADB authorization. Current-image secure cold ADB enablement and rooted Android persistence are not claimed.
 
 ## Wi-Fi label repair after root installation
@@ -124,7 +124,7 @@ After APatch Manager was installed over USB and configured by the user, `su` acc
 `repo sync -j50` completed successfully. Upstream patch-equivalence checks found only frameworks/base and build/make needed replay after upstream history rewrites. Nine framework patches and two build patches were preserved with authorship; the XML conflict retained both independent false-default settings. Other manifest-overridden ROM dependencies already contain their selected upstream bases.
 
 - [frameworks/base published head](https://github.com/PocoF3Releases/frameworks_base/commit/6c09871e9bbb78b68c642e032868d1fd8d455c6c)
-- [build/make published head](https://github.com/PocoF3Releases/android_build/commit/418139d6c1a8a8c76a1306c9080cdb0768de0a17)
+- [build/make published head](https://github.com/PocoF3Releases-Recovery/android_build/commit/418139d6c1a8a8c76a1306c9080cdb0768de0a17)
 
 Removed the resolved Alioth KERNEL_OBJ directory before `. build/envsetup.sh`, `lunch lineage_alioth-cp2a-user`, `m installclean` and `m -j8 evolution`. The full build passed. Both the generated header and actual kernel image contain `#1 SMP PREEMPT`; `.version` remains 1. The staged vendor init script matches the published label fix byte-for-byte. Secure recovery properties remain ro.secure=1, ro.adb.secure=1 and ro.debuggable=0; bundled APK and adapter hashes match source.
 

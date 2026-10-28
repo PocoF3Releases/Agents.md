@@ -2,14 +2,16 @@
 
 ## Authority
 
+Current published baseline: **25.10.2026**, confirmed by the maintainer on October 28. Exclude its features and all earlier announced equivalents from the next update.
+
 Android 17 historical published baseline: **23.09.2026 / Evolution X v12.2**,
 from maintainer-supplied September 22/23 notes. Exact ZIP hashes/included-commit
 manifest unknown. October 9 local vendor source declares 12.3, which does not
 establish a published build. [V-RELEASE](validation.md#v-release).
 
-Maintainer subsequently removed previous posts and requested cumulative initial-
-release notes. This changes public presentation, not historical implementation or
-acceptance. No new ROM publication identity has been established.
+Removed posts led to cumulative initial-release copy. Later publication
+confirmations supersede that presentation, without changing implementation
+or acceptance history.
 
 ## October 14 local release candidate
 
@@ -18,7 +20,7 @@ kernel build #1 and verified OTA archive metadata/integrity. Wi-Fi labels and
 Settings were checked after secure sideload and a completed data wipe. The
 final localized sound-category ZIP is installed and boots with kernel #1;
 Settings, category navigation and validated Wi-Fi pass.
-No ROM release was published. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
+The maintainer later confirmed October 14 as the previous build. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
 
 ## October 14 update drafts
 
@@ -31,15 +33,11 @@ AC-4, haptics, WireGuard and other equivalent feature families. No Telegram
 message has been sent and this draft does not advance the published baseline.
 [Generated update banner](assets/evolutionx-alioth-20261014-banner.png).
 
-## Android 16 release preparation
+## October 20 published update
 
-Historical September 14 v11.11 notes and September 27 draft are preserved in the
-[consolidated project history](releases.md).
-Maintainer later reported A16 released and clean-install AC-4 playback with
-Magisk; exact newer date/artifact/links remain unknown. Saved A16 refs were
-unchanged October 9, with no A16 checkout identified. Do not reuse September 14
-links or A17 runtime results. Maintainer's A17→A16 instruction was clean install.
-[V-A16](validation.md#v-a16).
+[Full post](telegram-20261020-full.md) and [caption post](telegram-20261020-short.md) compare current sources with the October 14 release manifest. The October 20 ZIP identifies Android 17 / SDK 37, v12.3, Alioth and the October 1 security patch. The copy focuses on upstream Settings/Evolver/SystemUI changes, flashlight behavior, pattern input, thumbnails and translations. Kernel content and recovery features are not re-announced. On October 25 the maintainer confirmed publication of the October 20 build; that confirmation adds no new runtime acceptance.
+
+[Generated update banner](assets/evolutionx-alioth-20261020-banner.png).
 
 ## Android 17 post-September 23 delta
 
@@ -65,7 +63,10 @@ Exact chronology and old heads remain in the original ledger linked above.
 
 Use [current sources](repositories.yaml) and [scoped validation](validation.md).
 Group user-visible behavior; omit reverted experiments, docs/build tooling and
-rebased equivalents. For an initial post, summarize cumulative supported features;
+rebased equivalents.
+Use bold Telegram headings and explicit Markdown hard breaks for Unicode bullet
+lines and blank spacing, so rendered GitHub copy does not collapse paragraphs.
+Copy rendered text into Telegram; raw Markdown contains formatting escapes. For an initial post, summarize cumulative supported features;
 for an update, compare with its actual published semantic baseline.
 
 [Full Telegram post](telegram-initial-full.md) and
@@ -134,3 +135,35 @@ compatibility and capture-read safeguards, grouping duplicate changes once.
 No new ROM publication or universal runtime acceptance is implied.
 
 The October 11 standalone [recovery source](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp) has no published release assets. Historical asset hashes above are retained as records, not current download links.
+
+## Next-update history preparation
+
+[Workflow](../operations/changelog-history.md): immutable checkpoints and
+patch-equivalence filtering. A source checkpoint is not an artifact manifest.
+
+## October 25 published update
+
+The maintainer confirmed publication on October 28. The saved
+[full](telegram-20261025-full.md) and [short](telegram-20261025-short.md) Telegram
+copy cover the rebuilt October 25 v12.3 release relative to October 20.
+The assistant sent no Telegram message; publication was confirmed by the maintainer.
+
+[Banner](assets/evolutionx-alioth-20261025-banner-v2.png) ·
+[exact imagegen prompt](assets/evolutionx-alioth-20261025-banner-v2-prompt.txt).
+The approved phone geometry and six-card layout were visually checked.
+Refresh-rate highlights remain excluded per the maintainer.
+
+The [eligibility review](../evidence/changelog-20261025.md) separates actual new
+behavior from earlier announcements, rebased equivalents and unused components.
+[Installed-build smoke checks](../evidence/release-smoke-20261025.md) retain their
+short-test scope; release copy does not certify all endpoints.
+
+## October 28 next-build drafts
+
+[Long](telegram-20261028-full.md) · [short](telegram-20261028-short.md) ·
+[review/limits](../evidence/changelog-20261028.md) ·
+[banner](assets/evolutionx-alioth-20261028-banner-v1.png).
+October 25 cutoff; Redline, kernel repairs and SPU shutdown permission.
+The maintainer confirms shutdown hangs no longer occur. Repeated features and
+refresh-rate highlights are excluded. Artifact/date unspecified; latest-source
+inclusion is required. No new release or Telegram message.
