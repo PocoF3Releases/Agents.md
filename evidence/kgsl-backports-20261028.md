@@ -77,3 +77,38 @@ conformance result, resolution of historical game page faults, or a fix for
 manual 60/120 Hz optical differences. No deliberate GPU hang/snapshot was induced
 on the phone; malformed snapshot parsing and failed-reference paths have host
 regression/source coverage rather than live fault injection.
+
+## A6xx register-list follow-up — October 29
+
+Published [0659900](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0659900d8b784b18eaa08d5fc7bdb46ef0d5bef5)
+corrects the existing Qualcomm counter-list check: the 16-byte CPU/GPU lock header
+is excluded from usable data capacity, shared lengths are checked before traversal,
+and appending a complete final pair remains valid. Existing full-list counter
+updates and A612 trailing control-register ordering are retained. The original
+human-authored bounds commit remains intact; this is a separate follow-up.
+
+Actual before/after function fixtures reproduce the old heap overrun under ASan
+at a synthetic capacity boundary; 13 final cases pass, covering malformed/full
+lists, existing counter updates, exact-fit append, A612 ordering and lock cleanup.
+This does not establish that ordinary Alioth workloads fill the list to capacity.
+Full W=1/KCFLAGS=-Werror Image passes. Targeted sparse exits zero with no driver
+reports; rebuilding host genksyms emits existing grammar-conflict warnings. The
+Image build retains existing trace kernel-doc warnings. Checkpatch flags one
+continuation alignment check, an unwrapped commit paragraph, the required coauthor
+trailer and absent human DCO; no sign-off was invented or diagnostic suppressed.
+
+Image SHA-256: `23f571cc33c1eaee707c467972e69eb6cb46719388f8c32825bc4ec4f296c037`.
+Private follow-up artifacts: `~/evo/.repo/research/iq8275-20261028/kgsl-followup`.
+Temporary enforcing boot passed 408 app-domain graphics checks across both ABIs
+and three sleep/wake cycles, with no matched GPU fault or kernel crash in fresh
+logs. The kernel was installed to the active slot, verified by full readback, and
+normal reboot confirmed `4.19.325-Redline-0659900-cip136`, enforcing SELinux and
+boot completion. Existing ramdisk/Magisk preserved; source pushed fast-forward.
+The user-requested `verifier_verify_adb_installs=0` was verified after reboot;
+this affects USB app verification, not Play Integrity attestation.
+
+The broader review found existing equivalents for compound-page unwind,
+DMA-BUF metadata cleanup and the original counter-list guard. The newer FastRPC
+and Iris changes use different userspace/driver interfaces. Qualcomm's signed
+IOMMU-map error handling remains a candidate pending old SMMU call-invariant and
+secure-map analysis; no speculative driver/firmware replacement was applied.
