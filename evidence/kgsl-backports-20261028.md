@@ -112,3 +112,36 @@ DMA-BUF metadata cleanup and the original counter-list guard. The newer FastRPC
 and Iris changes use different userspace/driver interfaces. Qualcomm's signed
 IOMMU-map error handling remains a candidate pending old SMMU call-invariant and
 secure-map analysis; no speculative driver/firmware replacement was applied.
+
+## Scatterlist map-error follow-up — October 29
+
+Qualcomm [e8ed003](https://github.com/qualcomm-linux/kgsl/commit/e8ed003c27f1c9352437d51a5eff418ccaa86b09)
+is adapted as [a0ee226](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a0ee226f0f514744b07ca46d996c04c60a8e1650),
+preserving Lynus Vaz's authorship, author date and original sign-off. The legacy
+`_iommu_map_sg_sync_pc` now treats the returned size as signed, rejects negative
+results and retains its existing zero-result ENODEV behavior. Power synchronization
+is balanced before interpreting every result. No SMMU API or userspace ABI changes.
+
+Alioth's active ARM SMMU callback returns an encoded negative ENODEV when its
+page-table operations are absent. The older KGSL zero-only check incorrectly
+accepted that value as success. All three callers already propagate failure and
+release temporary tables. The secure callback was also inspected for its signed
+error return; no unrelated secure-path rewrite is included.
+
+A fixture using the actual helper reproduces baseline false success on a negative
+mapping result. Six final zero/error/positive results pass, checking both returned
+errors and power-sync balancing. This is source/host evidence of error handling,
+not an observed phone mapping failure or a historical GPU-fault root cause.
+Checkpatch reports no code error/check; its only warning is the existing coauthor
+trailer convention. Full production-config W=1/KCFLAGS=-Werror Image and targeted sparse pass;
+no diagnostics appear in the targeted sparse log. Full build retains existing
+kernel-doc findings outside the changed helper. The temporary enforcing kernel
+passed 408 app-domain graphics checks across both ABIs and three sleep/wake cycles,
+with no matched GPU fault or kernel crash in fresh logs. It was installed as the
+main active-slot kernel with unchanged ramdisk/Magisk and full readback verified.
+Normal reboot confirms `4.19.325-Redline-a0ee226-cip136` and enforcing SELinux.
+Source was pushed fast-forward. Failure-result handling is host-tested; no
+deliberate SMMU failure was induced on the phone.
+Private artifacts: `~/evo/.repo/research/iq8275-20261028/iommu-followup`.
+
+Follow-up Image SHA-256: `591d3617120852d3fea3088b877504f1b07c1abcd2ede88e54f55e6d20762d51`.
