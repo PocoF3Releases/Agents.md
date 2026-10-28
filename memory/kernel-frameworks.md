@@ -73,13 +73,13 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Current sparse closure](../evidence/kernel-sparse-errors-20261028.md) records
-all 16 errors and five requested contexts resolved without suppressions.
-Main passes strict W=1/Werror and enforcing 32/64-bit phone checks; normal
-boot is taint0. Sparse removes 35 rows, adds none: 2,954 baseline warnings
-remain, zero errors. Kernel-doc cleanup is outside this update. System sources,
-thermal protection and config are unchanged. [Prior CPU acceptance](../evidence/kernel-baseline-audit-20261027.md)
-retains historical scope. Broader UBSan is parked; open findings are not certified safe.
+[Redline identity](../evidence/kernel-redline-20261028.md) is host-checked;
+only LOCALVERSION changes in all twelve generated configs. No branded Image
+was built/flashed. Main retains [strict W=1/Werror and enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md),
+with taint0 after normal boot. All 16 errors/five requested contexts are closed;
+the [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) is unreviewed.
+System sources and thermal/security settings are unchanged. [Prior CPU scope](../evidence/kernel-baseline-audit-20261027.md)
+is historical. Broader UBSan is parked; open findings are not certified safe.
 
 ## Intermittent shutdown investigation
 
