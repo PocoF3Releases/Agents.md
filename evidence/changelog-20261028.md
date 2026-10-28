@@ -7,7 +7,8 @@ published**. New [long](../state/telegram-20261028-full.md) and
 [short](../state/telegram-20261028-short.md) drafts use October 25 as their cutoff.
 They are copy for the next rebuild containing current sources: no new build
 date, artifact identity, release version, download URL or publication is invented.
-No Telegram message was sent and no new artwork was requested/generated.
+No Telegram message was sent. The subsequently requested banner uses these
+latest highlights, without an invented date or release version.
 
 The saved October 25 source checkpoint and prior published-copy topics were
 compared with 44 maintained checkout paths. Seven have net tree changes.
@@ -64,3 +65,23 @@ Both posts fit Telegram's UTF-16 limits: fewer than 4,096 units for the long
 message and 1,024 for the short caption. Explicit Markdown hard breaks preserve
 Unicode bullet layout in rendered copy. Private comparison, prior-post hashes
 and plain-text copies are under `~/evo/.repo/changelog-20261028/`.
+
+## Latest-update banner
+
+[PNG](../state/assets/evolutionx-alioth-20261028-banner-v1.png) ·
+[exact prompt](../state/assets/evolutionx-alioth-20261028-banner-v1-prompt.txt).
+Generated with the built-in image_gen tool using the approved October 25 banner
+as the edit/identity reference. The black POCO F3 pair and six-card layout are
+retained; the new environment is an industrial citadel over a basalt canyon,
+with storm light, mist, crimson infrastructure and matching screen wallpaper.
+Redline is the prominent update headline, with CPU/cache and short-ID metadata.
+Six cards summarize graphics/display, audio/voice, camera/video, USB/networking,
+memory/encryption and shutdown fixes from the latest copy only.
+
+Visual inspection checked the three rear optical cameras, separate rimmed dark
+microphone, flash, front punch-hole, text, icon consistency, margins and contrast.
+No old feature cards, date, version, refresh/FPS claim or shutdown warning remains.
+The 1672 x 941 PNG SHA-256 is
+`bcd472b06211ab183dd727cc62b5cdefd665d44e563bc71b66756efe6b038f20`.
+The source reference and previous assets are preserved; the generated original
+also remains in the tool's default output directory.

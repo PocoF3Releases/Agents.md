@@ -161,9 +161,9 @@ short-test scope; release copy does not certify all endpoints.
 ## October 28 next-build drafts
 
 [Long](telegram-20261028-full.md) · [short](telegram-20261028-short.md) ·
-[eligibility/limits](../evidence/changelog-20261028.md).
-October 25 cutoff; Redline, distinct kernel fixes and SPU shutdown permission.
-The maintainer confirms shutdown hangs no longer occur. Prior announcements,
-refresh-rate tuning and repicks are excluded. New artifact/date unspecified:
-these drafts require latest-source inclusion, advance no publication baseline
-and send no message. No new artwork was requested.
+[review/limits](../evidence/changelog-20261028.md) ·
+[banner](assets/evolutionx-alioth-20261028-banner-v1.png).
+October 25 cutoff; Redline, kernel repairs and SPU shutdown permission.
+The maintainer confirms shutdown hangs no longer occur. Repeated features and
+refresh-rate highlights are excluded. Artifact/date unspecified; latest-source
+inclusion is required. No new release or Telegram message.

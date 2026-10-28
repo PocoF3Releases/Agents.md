@@ -1,0 +1,60 @@
+Use case: compositing.
+Create a finished premium Telegram release banner, landscape 16:9, preferably 2560x1440. Use the provided approved banner as the EDIT TARGET and identity/layout reference.
+
+PRESERVE:
+Composite the SAME two black POCO F3 phones from the reference, unchanged in their geometry, camera hardware, black materials, perspective and overlapping arrangement on the left. Do not invent a new phone or alter its silhouette. Preserve exactly THREE optical rear cameras: large top lens, smaller middle-left lens, bottom lens. The separate middle-right circular microphone retains its rim and dark NON-GLASS center; it is not a fourth camera. Preserve the separate elongated flash on the right strip, POCO/5G marking and centered front punch-hole. Keep the same two-column by three-row card grid to the right, six cards with the same consistent hexagonal icon area and chamfered dark-panel layout. You may refine typography/padding for readability, but preserve that approved composition.
+
+REPLACE THE ENVIRONMENT COMPLETELY:
+Generate a spectacular original Arknights-inspired industrial sci-fi landscape, visibly different from the reference's crowded tower-and-harbor city. An immense brutalist energy citadel sits across a vast basalt mountain canyon; monumental angular concrete-and-steel structures, a colossal segmented arch and long diagonal elevated transit lines lead into the distance. Layered rain clouds break into beautiful silver-white storm light; deep atmospheric perspective, low clouds winding through the canyon and restrained crimson infrastructure lights. Phones stand on a rain-darkened obsidian industrial platform with elegant red reflections. Sophisticated believable architecture, realistic fine materials, cinematic scale and depth, highly detailed but composed and uncluttered. Strict charcoal / black / silver-white / crimson palette. No blue, purple, orange or rainbow neon. No people, game characters or extra logos. Leave calm darker regions behind the text. Update ONLY the front-screen wallpaper to match the new environment, retaining all screen edges and punch-hole. This is a new environment, not merely recoloring the old towers.
+
+VISUAL HIERARCHY:
+Evolution X wordmark at the upper right, white Evolution and vivid crimson X. POCO F3 beneath. Make REDLINE KERNEL the prominent crimson update headline, clearly visible in a Telegram thumbnail. Add the CPU/cache and short-ID subline below it. Six equal refined feature panels occupy the lower right in the approved 2 x 3 arrangement. Nearly opaque matte-black interiors; thin sharp crimson edges and restrained angular corner accents, no excessive neon glow. Large white bold headings, clean white bullet text, red bullet dots, consistent red line icons, aligned baselines, generous margins. Highest possible text clarity. Two-bullet cards should have comfortable whitespace, not invented third bullets. Keep the device pair about the left third of the image. Everything must fit safely inside the canvas.
+
+EXACT HEADER TEXT:
+EVOLUTION X
+POCO F3 · Android 17
+REDLINE KERNEL
+CPU & cache fixes · Short build ID
+
+EXACT SIX CARD TEXT — row by row:
+Top left:
+GRAPHICS & DISPLAY
+• Safer GPU buffers
+• GPU startup safeguards
+• Display resource cleanup
+
+Top right:
+AUDIO & VOICE
+• DSP response safeguards
+• Voice sample-width fixes
+
+Middle left:
+CAMERA & VIDEO
+• Safer camera setup
+• Video stop & EOS cleanup
+
+Middle right:
+USB & NETWORKING
+• MTP transfer validation
+• Safer Wi-Fi packet handling
+• TCP resource-leak fix
+
+Bottom left:
+MEMORY & ENCRYPTION
+• Swap-cache lifetime fixes
+• Hardware RNG fixes
+• Crypto-engine cleanup
+
+Bottom right:
+SHUTDOWN RELIABILITY
+• Secure-storage unmount fix
+• CPU hotplug timer-lock fix
+
+EXACT FOOTER:
+alioth · Redmi K40 · Mi 11X
+
+Use icons respectively: GPU/microchip, waveform/microphone, camera/play, USB/network, memory/shield, power. Keep them all consistent in red stroke weight, size and padding.
+
+CONTENT LIMITS:
+Only the above latest changelog highlights are allowed. Remove every word of the reference's old date, version and feature cards. No date or build version was supplied for this new update, so do not invent one. No Hz/refresh-rate text, FPS or battery-life promises. No old Dolby/MiSound features, audio-zoom, new camera modes, personalization, App Lock, NFC, Zstd/zRAM, haptics or recovery installer highlights. No shutdown warning, investigation notice, benchmark counts, debugging claims, watermarks or added text.
+Make this look like polished release artwork, preserving the approved physical phones and card composition while greatly improving the background.
