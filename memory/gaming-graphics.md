@@ -133,3 +133,9 @@ Explicit 60 Hz caps and verified Battery Saver behavior remain; thermal protecti
 was retained. This avoids automatic pumping, not manual-mode optical mismatch.
 Runtime-equivalent policy and resource checks passed; the production RRO needs the
 next ROM build. Original device state and clean kernel sources/output were restored.
+
+The follow-up compensation audit confirmed the installed stock calibration XML
+and core Qualcomm color backend. Alioth's PCC-GABB threshold is zero; the inspected
+brightness/CCBB paths do not select 60/120 calibration tables. Stock/current LUT
+routines were compared before rejecting an unproven library swap. See the same
+evidence record for exact contracts, panel-command comparison and remaining limits.
