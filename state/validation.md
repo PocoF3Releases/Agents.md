@@ -214,4 +214,4 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-ACTIVE
 
-[Scope](../evidence/kernel-sparse-errors-20261028.md).
+[Source/deployment scope](../evidence/kernel-redline-20261028.md).
