@@ -5,7 +5,7 @@ Checkpoint: **2026-10-28**. [Android 17 status](state/android17-status.md).
 - **Haptics:** stock-backed HAL/PCM: seven effects, three primitives, LOW_TICK fallback. Installed identity unknown; no full RichTap/PWLE.
 - **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
-- **GPU/display:** [Validated scope](memory/gaming-graphics.md).
+- **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO needs build; manual mismatch remains.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
 - **Sources:** [43-repo refresh](evidence/source-refresh-20261025.md); [kernel checks](evidence/kernel-redline-20261028.md).
 - **Releases:** October 25 published; October 28 next-build drafts prepared. [Releases](state/releases.md).
