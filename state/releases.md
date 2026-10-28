@@ -146,15 +146,13 @@ patch-equivalence filtering. A source checkpoint is not an artifact manifest.
 The maintainer confirmed publication on October 28. The saved
 [full](telegram-20261025-full.md) and [short](telegram-20261025-short.md) Telegram
 copy cover the rebuilt October 25 v12.3 release relative to October 20.
-The assistant sent no Telegram message; publication was confirmed by the maintainer.
 
 [Banner](assets/evolutionx-alioth-20261025-banner-v2.png) ·
 [exact imagegen prompt](assets/evolutionx-alioth-20261025-banner-v2-prompt.txt).
-The approved phone geometry and six-card layout were visually checked.
-Refresh-rate highlights remain excluded per the maintainer.
+Approved phone geometry and six-card layout checked; refresh highlights excluded.
 
-The [eligibility review](../evidence/changelog-20261025.md) separates actual new
-behavior from earlier announcements, rebased equivalents and unused components.
+[Eligibility](../evidence/changelog-20261025.md) excludes earlier announcements,
+rebased equivalents and unused components.
 [Installed-build smoke checks](../evidence/release-smoke-20261025.md) retain their
 short-test scope; release copy does not certify all endpoints.
 
@@ -167,3 +165,6 @@ October 25 cutoff; Redline, kernel repairs and SPU shutdown permission.
 The maintainer confirms shutdown hangs no longer occur. Repeated features and
 refresh-rate highlights are excluded. Artifact/date unspecified; latest-source
 inclusion is required. No new release or Telegram message.
+
+[Later KGSL fixes](../evidence/kgsl-backports-20261028.md) need the next ROM build;
+phone kernel acceptance does not establish a published ROM or Telegram post.
