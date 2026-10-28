@@ -85,9 +85,9 @@ is historical. Broader UBSan is parked; open findings are not certified safe.
 
 The [October 25 record](../evidence/shutdown-investigation-20261025.md) preserves
 a kernel-stage restart stall and published SPU unmount/perf timer repairs.
-The intermittent report remains open. Perf W=1/sparse and targeted enforcing
+The maintainer reports on October 28 that shutdown hangs no longer occur.
+Earlier causal limits remain historical. Perf W=1/sparse and targeted enforcing
 phone checks pass. Exact human upstream replacements are now applied and retested;
 [replacement acceptance](../evidence/shutdown-upstream-review-20261025.md) owns
-the current source links and remaining investigation. Kernel/source identities, review limits and temporary boot
-restoration are in the record. The original-kernel observer and narrow SPU live
-rule are armed only for the current boot, with no persistent autoload.
+source links and test limits. Earlier observer/live-policy setups were temporary,
+with no persistent autoload; they are not current-boot acceptance.

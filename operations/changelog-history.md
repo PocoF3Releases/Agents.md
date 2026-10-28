@@ -7,7 +7,9 @@ Four lightweight snapshot workers avoid contending with the active ROM build.
 
 ## Current preparation
 
-October 20 is the last published build, confirmed by the maintainer October 25.
+The October 25 collection below used October 20 as its published baseline.
+The maintainer confirmed October 25 publication on October 28; later copy must
+use October 25 and its already announced topics as the cutoff.
 Private working files live under `~/evo/.repo/changelog-next-20261025/`:
 
 - baseline-20261020.json: 1,265 pinned projects from the contemporaneous saved
@@ -38,8 +40,10 @@ not automatic semantic classification: adapted patches, partial squashes, merges
 reversions and previously announced behavior require final-diff review. A
 candidate subject alone never establishes a new feature or runtime acceptance.
 
-Before writing copy, review every candidate against the net diff, October 20
-saved posts and the cumulative announced-topic ledger. The saved October 20
+Before writing copy, review every candidate against the net diff, the latest
+confirmed published posts and the cumulative announced-topic ledger. The original
+October 25 collection compared against October 20; do not reuse that cutoff for
+a later release. The saved October 20
 copy is a conservative topic reference; exact published Telegram text was not
 independently supplied. Omit docs/tests/tooling, dropped
 experiments, repeated recovery/Parts/Dolby features and message-only rewrites.
