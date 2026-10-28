@@ -2,16 +2,19 @@
 
 ## Published source
 
-[Redline branding](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7f0329fcd9335786321954b302a574ce5005a812)
-is a separate kernel build-identity commit. The repository URL and branch remain
-`PocoF3Releases/kernel_xiaomi_sm8250`, `aosp-17`. GitHub About and the existing
-root README now identify Redline. About names Xiaomi SM8250 and Linux 4.19 CIP;
+[Redline branding](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6b3cb6eb71683641de1fb4cdfd9c8e2dcca183ee)
+contains only the version script and shared Xiaomi identity fragment.
+[Generated configurations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c)
+are a separate commit produced by `scripts/update_defconfig -j 4`.
+The repository URL and branch remain
+`PocoF3Releases/kernel_xiaomi_sm8250`, `aosp-17`. GitHub About identifies
+Redline, Xiaomi SM8250 and Linux 4.19 CIP;
 the upstream homepage is retained.
 
 The real `kernelrelease` target produces:
 
 ```text
-4.19.325-Redline-7f0329f-cip136
+4.19.325-Redline-1e45b8c-cip136
 ```
 
 The seven hexadecimal characters identify the actual build source. They are not
@@ -26,7 +29,8 @@ The common Xiaomi fragment supplies `CONFIG_LOCALVERSION="-Redline"`. All twelve
 configurations were regenerated with `scripts/update_defconfig -j 4`; every
 other generated-config line is identical. Alioth's freshly resolved configuration
 differs from the installed production configuration only in LOCALVERSION.
-Makefile NAME is Redline. Local Git abbreviation is seven characters; actual
+Makefile `NAME = "People's Front"` and the root README remain byte-identical
+to the pre-branding base. Local Git abbreviation is seven characters; actual
 object IDs and immutable links retain their full identity.
 
 ## Verification and deployment boundary
@@ -35,6 +39,8 @@ Shell syntax, **14 private version regressions** and the actual kernelrelease
 target pass with the checkout toolchain. Cases cover clean/dirty Git, differing
 core.abbrev settings, tags, Android/KMI arguments, automatic-SCM opt-out, saved
 SCM exports, absent CIP metadata, build-path spaces and localversion extensions.
+The version script is byte-identical to that fourteen-case tested blob;
+regeneration, commit boundaries and kernelrelease were rechecked after the split.
 Source whitespace checks pass. Strict checkpatch has only the existing
 coauthor/missing-human-DCO metadata findings; no certification was invented.
 No tests or generated verification output enter kernel history.
@@ -55,4 +61,6 @@ waiver, sparse-clean claim or additional fix is implied. No new sparse count or
 kernel-doc audit is claimed for this identity-only commit.
 
 Private commands, fixtures, configuration diffs and GitHub metadata readback are
-retained under `~/evo/.repo/kernel-redline-20261028/`.
+retained under `~/evo/.repo/kernel-redline-20261028/`. Corrected history,
+regeneration and final identity receipts are in
+`~/evo/.repo/kernel-redline-correction-20261028/`.

@@ -79,12 +79,13 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 7f0329fcd9335786321954b302a574ce5005a812
+    aosp-17: 1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7f0329fcd9335786321954b302a574ce5005a812
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c
   observation: 2026-10-28; Redline identity host-checked with kernelrelease,
-    14 version cases and all twelve generated configs; only LOCALVERSION changes.
+    14 version cases and twelve script-generated configs in a separate commit;
+    only LOCALVERSION changes; upstream Makefile NAME and README are unchanged.
     No branded Image built/flashed. Prior main strict/enforcing phone acceptance
     and the frozen 2954-warning backlog remain separate from this source head.
     See evidence/kernel-redline-20261028.md; system and runtime policy unchanged.
