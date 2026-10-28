@@ -79,11 +79,11 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 9edfaf12151fa23329e567b3bad013910121801a
+    aosp-17: 0659900d8b784b18eaa08d5fc7bdb46ef0d5bef5
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9edfaf12151fa23329e567b3bad013910121801a
-  observation: 2026-10-28; six scoped Qualcomm KGSL and legacy-parser fixes;
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0659900d8b784b18eaa08d5fc7bdb46ef0d5bef5
+  observation: 2026-10-28; Qualcomm KGSL fixes and verified A6xx list-bounds follow-up;
     original authorship preserved; full strict Image, targeted sparse and host
     regressions pass. Enforcing phone passes 408 app checks and both-ABI mapping
     isolation; persistent active-slot installation and normal reboot verified.
