@@ -1,0 +1,291 @@
+{
+  "head": "1efb0bf8d7a52abc450285c470bb34c28ad57dfd",
+  "baseline_head": "d63fdec72e32a820dde97eaac28ae7e9dc1234c6",
+  "baseline_diagnostics": 2989,
+  "diagnostics": 2954,
+  "errors": 0,
+  "removed_count": 35,
+  "new_diagnostics": 0,
+  "resolved": [
+    {
+      "id": "B0073",
+      "path": "kernel/exit.c",
+      "line": 147,
+      "column": 19,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0148",
+      "path": "kernel/signal.c",
+      "line": 1354,
+      "column": 27,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0189",
+      "path": "kernel/pid.c",
+      "line": 418,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0190",
+      "path": "kernel/pid.c",
+      "line": 477,
+      "column": 32,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0213",
+      "path": "fs/fcntl.c",
+      "line": 1007,
+      "column": 22,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0214",
+      "path": "fs/fcntl.c",
+      "line": 1018,
+      "column": 33,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0280",
+      "path": "fs/dcache.c",
+      "line": 2582,
+      "column": 6,
+      "level": "warning",
+      "message": "context imbalance in 'd_add' - different lock contexts for basic block"
+    },
+    {
+      "id": "B0281",
+      "path": "fs/dcache.c",
+      "line": 2786,
+      "column": 20,
+      "level": "warning",
+      "message": "context imbalance in '__d_move' - unexpected unlock"
+    },
+    {
+      "id": "B0282",
+      "path": "fs/dcache.c",
+      "line": 2952,
+      "column": 16,
+      "level": "warning",
+      "message": "context imbalance in 'd_splice_alias' - different lock contexts for basic block"
+    },
+    {
+      "id": "B0408",
+      "path": "mm/swap_state.c",
+      "line": 87,
+      "column": 26,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0824",
+      "path": "fs/posix_acl.c",
+      "line": 44,
+      "column": 23,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B0825",
+      "path": "fs/posix_acl.c",
+      "line": 58,
+      "column": 16,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B1211",
+      "path": "net/ipv4/nexthop.c",
+      "line": 1060,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B1303",
+      "path": "net/netfilter/nfnetlink.c",
+      "line": 614,
+      "column": 17,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B1325",
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 500,
+      "column": 18,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B1326",
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 508,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B1327",
+      "path": "net/netfilter/nf_conncount.c",
+      "line": 510,
+      "column": 34,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    },
+    {
+      "id": "B1568",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 195,
+      "column": 23,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_register_type' - unexpected unlock"
+    },
+    {
+      "id": "B1569",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 216,
+      "column": 23,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_unregister_type' - unexpected unlock"
+    },
+    {
+      "id": "B1570",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 236,
+      "column": 13,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_get_type' - unexpected unlock"
+    },
+    {
+      "id": "B1571",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 272,
+      "column": 23,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_register_type_offload' - unexpected unlock"
+    },
+    {
+      "id": "B1572",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 294,
+      "column": 23,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_unregister_type_offload' - unexpected unlock"
+    },
+    {
+      "id": "B1573",
+      "path": "include/linux/rcupdate.h",
+      "line": 740,
+      "column": 9,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_get_type_offload' - unexpected unlock"
+    },
+    {
+      "id": "B1574",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 362,
+      "column": 23,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_register_mode' - unexpected unlock"
+    },
+    {
+      "id": "B1575",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 390,
+      "column": 23,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_unregister_mode' - unexpected unlock"
+    },
+    {
+      "id": "B1576",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 411,
+      "column": 13,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_get_mode' - unexpected unlock"
+    },
+    {
+      "id": "B1586",
+      "path": "net/xfrm/xfrm_state.c",
+      "line": 2325,
+      "column": 9,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_state_get_afinfo' - different lock contexts for basic block"
+    },
+    {
+      "id": "B1587",
+      "path": "include/linux/rcupdate.h",
+      "line": 740,
+      "column": 9,
+      "level": "warning",
+      "message": "context imbalance in '__xfrm_init_state' - unexpected unlock"
+    },
+    {
+      "id": "B1599",
+      "path": "net/xfrm/xfrm_output.c",
+      "line": 296,
+      "column": 17,
+      "level": "warning",
+      "message": "context imbalance in 'xfrm_local_error' - unexpected unlock"
+    },
+    {
+      "id": "B1838",
+      "path": "drivers/slimbus/slim-msm.c",
+      "line": 173,
+      "column": 42,
+      "level": "error",
+      "message": "incompatible types in conditional expression (different address spaces):"
+    },
+    {
+      "id": "B1839",
+      "path": "drivers/slimbus/slim-msm-ngd.c",
+      "line": 728,
+      "column": 25,
+      "level": "warning",
+      "message": "incorrect type in argument 1 (different address spaces)"
+    },
+    {
+      "id": "B1874",
+      "path": "drivers/platform/msm/sps/sps_bam.c",
+      "line": 993,
+      "column": 25,
+      "level": "warning",
+      "message": "incorrect type in argument 1 (different address spaces)"
+    },
+    {
+      "id": "B1890",
+      "path": "drivers/platform/msm/sps/sps_mem.c",
+      "line": 115,
+      "column": 28,
+      "level": "warning",
+      "message": "incorrect type in assignment (different address spaces)"
+    },
+    {
+      "id": "B1891",
+      "path": "drivers/platform/msm/sps/sps_mem.c",
+      "line": 155,
+      "column": 25,
+      "level": "warning",
+      "message": "incorrect type in argument 1 (different address spaces)"
+    },
+    {
+      "id": "B2394",
+      "path": "drivers/vservices/transport/axon.c",
+      "line": 544,
+      "column": 24,
+      "level": "error",
+      "message": "incompatible types in comparison expression (different address spaces):"
+    }
+  ]
+}

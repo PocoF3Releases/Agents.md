@@ -1,5 +1,9 @@
 # RCU and documentation contracts — October 28, 2026
 
+Historical acceptance. [Current sparse closure](kernel-sparse-errors-20261028.md)
+resolves the remaining sixteen errors and five contexts; the record below
+retains its original source and test scope.
+
 ## Published source and main installation
 
 [Final kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d63fdec72e32a820dde97eaac28ae7e9dc1234c6), `aosp-17`, is a normal fast-forward of the

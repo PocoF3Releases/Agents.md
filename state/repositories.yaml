@@ -79,15 +79,16 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: d63fdec72e32a820dde97eaac28ae7e9dc1234c6
+    aosp-17: 1efb0bf8d7a52abc450285c470bb34c28ad57dfd
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d63fdec72e32a820dde97eaac28ae7e9dc1234c6
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1efb0bf8d7a52abc450285c470bb34c28ad57dfd
   observation: 2026-10-28; strict W=1/Werror Image installed as main with original
-    ramdisk and both-slot hashes checked after normal reboot. Enforcing phone
-    regressions pass; 22 sparse errors resolved, 16 remain, and five unchanged-code
-    context reports are newly visible. See evidence/kernel-rcu-contracts-20261028.md;
-    system sources and production configuration unchanged.
+    ramdisk and both-slot hashes checked after normal reboot. Enforcing 32/64-bit
+    targeted phone regressions pass; all 16 sparse errors and five requested
+    contexts resolved, zero additions; 2954 baseline warnings remain. See
+    evidence/kernel-sparse-errors-20261028.md; system sources, thermal protection
+    and production configuration unchanged.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
