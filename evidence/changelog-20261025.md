@@ -1,5 +1,9 @@
 # October 25 release-copy review
 
+Publication was subsequently confirmed by the maintainer on October 28; October
+25 is now the baseline for later copy. The historical drafting review below
+retains the information available at that time.
+
 Draft copy/artwork only; no Telegram message was sent.
 The published baseline remains October 20, as confirmed by the maintainer.
 Saved posts, the semantic release ledger, pinned baseline/net diffs and later

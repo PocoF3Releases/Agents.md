@@ -1,5 +1,9 @@
 # Intermittent shutdown stall — October 25, 2026
 
+Maintainer status update, October 28: the intermittent shutdown hangs are no
+longer occurring. This is user-confirmed behavior, not a new captured failure
+trace; the historical investigation below retains its original test scope.
+
 **Reported hang unresolved; verified SPU permission and perf deadlock repairs published.** The
 maintainer reports frequent black-screen Power off stalls and rare Restart
 stalls. Do not label this fixed from successful short-uptime tests.

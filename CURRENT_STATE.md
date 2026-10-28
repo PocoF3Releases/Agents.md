@@ -8,7 +8,7 @@ Checkpoint: **2026-10-28**. [Android 17 status](state/android17-status.md).
 - **GPU/display:** [Validated scope](memory/gaming-graphics.md).
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
 - **Sources:** [43-repo refresh](evidence/source-refresh-20261025.md); [kernel checks](evidence/kernel-redline-20261028.md).
-- **Releases:** October 20 publication confirmed; next-update history is prepared without generating copy. [Releases](state/releases.md).
+- **Releases:** October 25 published; October 28 next-build drafts prepared. [Releases](state/releases.md).
 
 | Task | Read |
 | --- | --- |

@@ -2,16 +2,16 @@
 
 ## Authority
 
-Current published baseline: **20.10.2026**, confirmed by the maintainer on October 25. Exclude its features and all earlier announced equivalents from the next update.
+Current published baseline: **25.10.2026**, confirmed by the maintainer on October 28. Exclude its features and all earlier announced equivalents from the next update.
 
 Android 17 historical published baseline: **23.09.2026 / Evolution X v12.2**,
 from maintainer-supplied September 22/23 notes. Exact ZIP hashes/included-commit
 manifest unknown. October 9 local vendor source declares 12.3, which does not
 establish a published build. [V-RELEASE](validation.md#v-release).
 
-Maintainer subsequently removed previous posts and requested cumulative initial-
-release notes. This changes public presentation, not historical implementation or
-acceptance. The later October 14 baseline confirmation supersedes the earlier posting status.
+Removed posts led to cumulative initial-release copy. Later publication
+confirmations supersede that presentation, without changing implementation
+or acceptance history.
 
 ## October 14 local release candidate
 
@@ -138,27 +138,32 @@ The October 11 standalone [recovery source](https://github.com/pbrp-alioth/devic
 
 ## Next-update history preparation
 
-[Collection workflow](../operations/changelog-history.md) records the October 20
-baseline, immutable source checkpoints and patch-equivalence filtering. The
-current rebuild is in progress; no next-release copy or artwork is generated.
-A source checkpoint is not a finished build manifest or proof of artifact inclusion.
+[Workflow](../operations/changelog-history.md): immutable checkpoints and
+patch-equivalence filtering. A source checkpoint is not an artifact manifest.
 
-## October 25 release copy — draft
+## October 25 published update
 
-The previous published baseline remains October 20. The maintainer requested new
+The maintainer confirmed publication on October 28. The saved
 [full](telegram-20261025-full.md) and [short](telegram-20261025-short.md) Telegram
-copy for the rebuilt October 25 v12.3 release. No Telegram message was sent and
-publication has not been confirmed.
+copy cover the rebuilt October 25 v12.3 release relative to October 20.
+The assistant sent no Telegram message; publication was confirmed by the maintainer.
 
 [Banner](assets/evolutionx-alioth-20261025-banner-v2.png) ·
 [exact imagegen prompt](assets/evolutionx-alioth-20261025-banner-v2-prompt.txt).
-The built-in image generation tool kept the approved phone hardware, used the
-supplied example only for its six-card layout, and created a fresh industrial
-environment after web inspiration research. Date, text and camera geometry were
-visually checked. Refresh-rate work is excluded at the maintainer request.
-The rejected three-strip draft is not published here.
+The approved phone geometry and six-card layout were visually checked.
+Refresh-rate highlights remain excluded per the maintainer.
 
 The [eligibility review](../evidence/changelog-20261025.md) separates actual new
 behavior from earlier announcements, rebased equivalents and unused components.
 [Installed-build smoke checks](../evidence/release-smoke-20261025.md) retain their
 short-test scope; release copy does not certify all endpoints.
+
+## October 28 next-build drafts
+
+[Long](telegram-20261028-full.md) · [short](telegram-20261028-short.md) ·
+[eligibility/limits](../evidence/changelog-20261028.md).
+October 25 cutoff; Redline, distinct kernel fixes and SPU shutdown permission.
+The maintainer confirms shutdown hangs no longer occur. Prior announcements,
+refresh-rate tuning and repicks are excluded. New artifact/date unspecified:
+these drafts require latest-source inclusion, advance no publication baseline
+and send no message. No new artwork was requested.
