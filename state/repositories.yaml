@@ -79,16 +79,16 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c
+    aosp-17: 9edfaf12151fa23329e567b3bad013910121801a
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c
-  observation: 2026-10-28; Redline identity host-checked with kernelrelease,
-    14 version cases and twelve script-generated configs in a separate commit;
-    only LOCALVERSION changes; upstream Makefile NAME and README are unchanged.
-    No branded Image built/flashed. Prior main strict/enforcing phone acceptance
-    and the frozen 2954-warning backlog remain separate from this source head.
-    See evidence/kernel-redline-20261028.md; system and runtime policy unchanged.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9edfaf12151fa23329e567b3bad013910121801a
+  observation: 2026-10-28; six scoped Qualcomm KGSL and legacy-parser fixes;
+    original authorship preserved; full strict Image, targeted sparse and host
+    regressions pass. Enforcing phone passes 408 app checks and both-ABI mapping
+    isolation; persistent active-slot installation and normal reboot verified.
+    See evidence/kgsl-backports-20261028.md. Stock firmware/userspace unchanged;
+    frozen whole-kernel sparse backlog remains outside this scoped acceptance.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
