@@ -148,3 +148,61 @@ composer or DisplayFeature source changes remain from the experiment.
 Raw measurements, input hashes, build logs and proprietary reverse-engineering
 artifacts remain private under `~/evo/.repo/brightness-20261028`. Public evidence
 contains findings and source links only, not proprietary decompilation or identifiers.
+
+## Follow-up: compensation and color-backend audit
+
+Further targeted decompilation covered HandleBLFeatures (ELF VA 0x4591c),
+HandleBrightnessInteract (0x45aec), handleCCBB (0x42538), HandlePccGABB (0x43a10),
+setPCCConfigGABB (0x4f6c0), computeRGBCoeffbyBL (0x504f4), and the gamma-service
+caller setQColorService (0x5c680). These findings are static contracts, not proof
+that every exported feature executes on stock firmware.
+
+**Seen:** Alioth's stock panel XML sets PccGABBThreshold to zero. parseXml stores it
+at DisplayEffect+0xf60; HandleStandard and HandleBrightnessInteract compare native
+brightness against it. The normal positive-brightness PCC-GABB branch is therefore
+not enabled by this configuration; the zero/reset input creates an identity matrix.
+This does not establish that the separate panel-register HandleGABB path is active
+or inactive. CCBB is gated by the automatic-normal color state and uses brightness,
+white-point and panel coefficients. The inspected calculation has no refresh-rate
+argument or 60/120 table selection. Software brightness additionally depends on
+persist.vendor.light.bit.switch; its virtual/native thresholds are 400/200. Do not
+turn these gates on just because their symbols or XML coefficients exist.
+
+**Seen:** the exact stock Qualcomm calibration XML is already present in the source
+and installed device: SHA-256
+`26991e2e33d5ff5d8119a1540ed12b24e20d4f5ba9c158a754832888797aff9a`.
+It defines 46 color modes, not 46 refresh modes. Mode 4 is standard_p3; identifying
+it as an sRGB mode would be incorrect. AOSP composer builds mode mappings from
+these calibration attributes. The vendor display.color interfaces through 1.5 are
+registered on the phone. libsdm-colormgr-algo, libsdm-disp-vndapis and checked 1.0/1.5
+color-interface blobs match the dump and installed shared vendor sources.
+
+libsdm-color differs from the dump but matches the installed common vendor source.
+Embedded debug symbols and exported symbol sizes identify two routines with size
+changes: ApplyIgcLutFeature and Apply3DLutFeature. Both versions were decompiled.
+The stock IGC path adds a comparison against active-mode cache and can return
+without reapplying an equal enabled LUT; the installed version builds the LUT
+without this shortcut. The 3D-LUT paths also differ in cache/allocation flow; both
+contain 13x13x13 coarse-format handling and hardware-version checks. No missing
+60/120 compensation data was found in these inspected paths. This is not a complete
+semantic equivalence proof for every instruction or a reason to replace the binary.
+The built libdisplayconfig.qti is not assumed identical to the stock prebuilt.
+
+**Seen:** packet-level comparison decoded 13 stock panel command properties. None
+was absent in the current K11A DTS. On-command payload differences include B7 20 to
+B7 10 at offset 06, from the existing authored
+[dimming-speed change](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/eea2df3b2f29fdc953d123d24d6d31664a1fc084),
+which changes the frame-count speed rather than proving a persistent calibration
+error. Other differences include the existing D1 2E replay/settle handling during
+switching and doze exit. Neither was reverted. Stock DFPS-level handlers in the
+local original kernel set smart_fps_restore; those cases do not upload gamma data.
+The generic gamma-update machinery requires panel flags absent from this K11A file.
+
+**Conclusion/limit:** missing Xiaomi orchestration is real, but absence of its
+service is not evidence that the existing Qualcomm calibration backend is missing.
+The inspected compensation paths do not establish a safe per-refresh luminance fix.
+No new production patch, library replacement, kernel build or device write was made
+in this follow-up. A useful next experiment needs an identified stock command or
+measured per-mode calibration, not invented PCC gains. Thermal protection and
+SELinux remained unchanged. Private decompilation, packet comparisons and precise
+library hashes stay in the same local evidence directory.
