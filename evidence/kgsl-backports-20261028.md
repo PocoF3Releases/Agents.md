@@ -213,3 +213,35 @@ No additional production-code defect or missing dependency was found in this pas
 no new build/flash was needed. This does not establish that every proprietary app
 uses context constraints or that deliberately induced snapshot/SMMU failures have
 been exercised on the phone.
+
+## Startup unwind audit — October 30
+
+Further comparison found existing mapped-buffer retention on failed unmap for
+DMA-BUF, anonymous, page and coherent allocations; mapping accounting changes only
+after successful unmap. The newer GMU trace and VBO helpers are absent. Alioth's
+older secure-context startup propagates failure, detaches the user context and
+balances clocks instead of continuing with a partially initialized MMU.
+
+A separate local defect was found in `kgsl_iommu_start`: global-map failure returns
+without releasing the clock reference acquired at entry. The global-map helper
+already unmaps partial mappings; retained contexts are attach-idempotent on retry.
+[f503c8d](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f503c8d11b7774ad5e91142e7e142a6de003f3fd)
+adds the missing disable before returning the original error, preserving context
+attachment and successful startup. The original faulty branch is linked by its
+Fixes trailer; this is a new local fix, not a claimed upstream backport.
+
+Extracted original/fixed startup functions reproduce the old leaked reference and
+pass global-map failure/retry, user setup and secure setup failure cases with
+balanced clock accounting. Fixtures compile with Wall/Wextra/Werror. Checkpatch
+has no code style check; the required coauthor convention and absent human DCO
+remain visible rather than inventing a sign-off. Full production-config
+W=1/KCFLAGS=-Werror Image and targeted sparse pass with no targeted sparse
+diagnostics. Temporary enforcing boot passed 408 app graphics checks across both
+ABIs and three sleep/wake cycles; mi_thermald stayed active and fresh logs contained
+no matched GPU fault/panic/call trace. The image was installed with the existing
+ramdisk/Magisk, full boot-partition readback verified, and normal reboot confirmed
+`4.19.325-Redline-f503c8d-cip136`, completed Android boot and enforcing SELinux.
+Source pushed fast-forward. The failure branch is host-tested; no global-map
+failure was deliberately induced on the phone.
+Image SHA-256: `8408c60f310d7da6ed467a5a843b2046cafc32843864b0f2968767f8b61848fb`.
+Private artifacts: `~/evo/.repo/research/iq8275-20261028/start-unwind-20261030`.
