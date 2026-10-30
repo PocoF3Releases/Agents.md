@@ -179,3 +179,37 @@ OPP/ICC and kernel-7 fence changes do not match Alioth's retained driver paths.
 The firmware symlink-depth workaround targets the newer distro lookup sequence;
 no matching Alioth failure is established. They are not imported speculatively.
 Private artifacts: `~/evo/.repo/research/iq8275-20261028/constraint-followup`.
+
+## Backend dependency audit — October 30
+
+Current kernel: `b652bc8`, normal Android, SELinux enforcing, Adreno650v3 and
+mi_thermald active. Production configuration has QCOM_KGSL, QCOM_KGSL_IOMMU,
+ARM_SMMU and the IO-pgtable backend enabled. No new Kconfig/DT/HAL/firmware switch
+is required by these fixes.
+
+| Fix path | Existing backend/caller checked |
+| --- | --- |
+| Constraint state | `KGSL_PROP_PWR_CONSTRAINT` → `adreno_set_constraint` → per-context state → flagged `adreno_ringbuffer_set_constraint` → `kgsl_pwrctrl_set_constraint`; existing thermal clamping retained |
+| Mapping errors | Three `_iommu_map_sg_sync_pc` callers propagate errors; ARM SMMU map_sg and secure callback contracts inspected |
+| Counter-list bounds | A6xx gpudev `perfcounter_update` hook is called by active perfcounter management; header and register pairs remain the firmware's existing layout |
+| Snapshot parser | `adreno_snapshot.c` invokes `adreno_ib_create_object_list`; retained type0/type3 and type7 paths covered |
+| Snapshot address | A6xx GMU snapshot-memory callback is present; output layout preserved with kernel address zeroed |
+| mmap/reference lifetime | Device mmap callback uses captured process mm; VMA ops install the updated open handler; mm references balanced on failure/destruction |
+
+Fresh device test using the current UAPI header passed 16 independent
+context-create/MIN/MAX/clear/destroy cycles per ABI, 32 cycles total, through
+native and compat ioctls. It submits no constrained GPU commands and alters no
+global power limits: this verifies the API/state backend, while the stale-limit
+transition and thermal-boundary behavior retain host coverage. The earlier
+private host fixture used a synthetic MIN enum value; rerunning both baseline
+and fixed cases with the exact UAPI MIN=0/MAX=1 values preserves the baseline
+failure and final pass. No production enum or ABI was changed.
+
+A fresh test-app launch loaded the stock vendor Adreno EGL/GLES/Vulkan, GSL and
+compiler libraries. No newer userspace extension or firmware feature is assumed.
+Private runtime results/maps and host fixtures:
+`~/evo/.repo/research/iq8275-20261028/backend-audit-20261030`.
+No additional production-code defect or missing dependency was found in this pass;
+no new build/flash was needed. This does not establish that every proprietary app
+uses context constraints or that deliberately induced snapshot/SMMU failures have
+been exercised on the phone.
