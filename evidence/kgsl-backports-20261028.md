@@ -145,3 +145,37 @@ deliberate SMMU failure was induced on the phone.
 Private artifacts: `~/evo/.repo/research/iq8275-20261028/iommu-followup`.
 
 Follow-up Image SHA-256: `591d3617120852d3fea3088b877504f1b07c1abcd2ede88e54f55e6d20762d51`.
+
+## Constraint-state follow-up — October 30
+
+Qualcomm [03dbf72](https://github.com/qualcomm-linux/kgsl/commit/03dbf7267601586fd8b7c9b9f672231478a5313d)
+is adapted as [b652bc8](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b652bc8a7d75d02776f5933b92307a463b3629b4),
+preserving Kamal Agrawal's authorship/date and original sign-off. The older
+interface has no owner timestamp argument; its existing timeout already uses
+jiffies, so neither newer timestamp plumbing nor millisecond conversion is copied.
+The unused cached-level union is removed after checking all references.
+
+The old cached effective level can prevent a MIN-to-MAX constraint transition
+after sysfs limits change. The adapted helper selects by constraint subtype and
+refreshes matching ownership/expiry. The thermal-limited `_adjust_pwrlevel` remains
+unchanged. An extracted-function host fixture reproduces the old transition failure
+and passes priority, ownership, expiry, null-input and thermal-boundary cases after
+the fix. Host compilation uses `-Wall -Werror`; adding `-Wextra` diagnoses existing
+signed comparisons in the unchanged adjustment helper. No kernel diagnostic flag
+is weakened. Checkpatch has no code errors/checks; only the coauthor convention.
+Full W=1/KCFLAGS=-Werror Image and targeted sparse pass. Temporary enforcing
+boot passed 408 app graphics checks across both ABIs and three sleep/wake cycles;
+mi_thermald remained active and fresh logs contained no matched GPU fault/panic.
+The active-slot image was written and fully read back, preserving ramdisk/Magisk.
+ADB and fastboot disappeared after reboot; restarting Windows ADB recovered
+the connection. Normal boot then confirmed `4.19.325-Redline-b652bc8-cip136`,
+boot completion and enforcing SELinux. Source was pushed fast-forward.
+The specific stale-constraint sequence has host coverage; phone coverage is
+normal rendering/lifecycle regression, not direct sysfs-limit fault injection.
+
+Other screened changes: SVM overflow protection already exists; the rounddown-zero
+UBSAN fix targets another page-size implementation. New IRQ-index, VMA-array,
+OPP/ICC and kernel-7 fence changes do not match Alioth's retained driver paths.
+The firmware symlink-depth workaround targets the newer distro lookup sequence;
+no matching Alioth failure is established. They are not imported speculatively.
+Private artifacts: `~/evo/.repo/research/iq8275-20261028/constraint-followup`.
