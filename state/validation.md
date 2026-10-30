@@ -2,23 +2,21 @@
 
 ## V-HAPTICS
 
-**2026-10-04 — scoped source/build/host/device tests.** Enforcing HAL candidate:
-21/21 effect/strength gains (48/80/128), three stock primitives, timed amplitude
-and cancellation. Isolated AAC native/limited-HE1 and bounded PCM refills pass.
-Temporary mount restored; no full RichTap/PWLE or unsupported-primitive acceptance.
-App-facing RichTap unverified. October 8 LOW_TICK has commit-reported temporary
-tests; installed identity unknown. September 30 user acceptance is historical.
-[Scope and restoration](../evidence/haptics/2026-10-04.md).
+**2026-10-04 — scoped source/build/host/device tests.** Enforcing candidate:
+21 effect/strength checks, three primitives, timed amplitude/cancellation,
+AAC native/limited-HE1 and PCM refills pass. Temporary mount restored. No full
+RichTap/PWLE; app-facing RichTap unverified. LOW_TICK has October 8 commit-reported
+tests, installed identity unknown. September 30 acceptance is historical.
+[Scope](../evidence/haptics/2026-10-04.md).
 
 ## V-AC4
 
 **2026-09-24 — device-tested and user-confirmed.** Non-root A17 user build;
 explicit `OMX.dolby.ac4.decoder`, official 32-second stereo/48 kHz sample:
 800 inputs, 800 output buffers, **6144000 PCM bytes**, 5970795 nonzero,
-EOS/PASS, `audio/raw`, two channels, pcm-encoding=2. The diagnostic was silent;
-user separately confirmed audible playback in an unidentified player.
-Opt-in on/off and 32/64-bit syntax checks were recorded. This validates that
-stream, not all presentations, multichannel/offload, apps or Dolby processing.
+EOS/PASS, `audio/raw`, two channels, pcm-encoding=2. Diagnostic silent; user confirmed sound in an unidentified player.
+Opt-in and both-ABI syntax checks passed; other streams, multichannel/offload,
+apps and Dolby processing are outside scope.
 [Diagnostic](../evidence/ac4/README.md) · [full ABI/failure progression](../memory/dolby-audio.md).
 
 ## V-PARTS
@@ -214,4 +212,8 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-ACTIVE
 
-[Source/deployment scope](../evidence/kernel-redline-20261028.md).
+[Identity](../evidence/kernel-redline-20261028.md); [installed KGSL](../evidence/kgsl-backports-20261028.md).
+
+## V-KGSL-20261028
+
+[KGSL evidence](../evidence/kgsl-backports-20261028.md).

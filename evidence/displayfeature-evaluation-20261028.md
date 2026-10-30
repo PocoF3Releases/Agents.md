@@ -206,3 +206,36 @@ in this follow-up. A useful next experiment needs an identified stock command or
 measured per-mode calibration, not invented PCC gains. Thermal protection and
 SELinux remained unchanged. Private decompilation, packet comparisons and precise
 library hashes stay in the same local evidence directory.
+
+## Follow-up: color state across physical modes
+
+**Source-checked:** comparison of all properties in the stock K11A timing nodes
+found 55 on-command packets in each mode. The only on-command payload difference
+is the refresh selector `60 00` versus `60 10`; these nodes do not supply separate
+per-refresh gamma tables. DSC parameters match: 8-bit components, 8 bits/pixel,
+540-by-8 slices, two slices per packet, with the same 1.1 GHz DSI clock. Porch,
+refresh and MDP-transfer timings differ as expected. This describes the inspected
+DTS, not all possible calibration stored inside the panel.
+
+**Device-tested:** a temporary native helper opened DRM read-only and captured
+retained property blobs while SurfaceFlinger independently confirmed physical
+60/120 Hz. Brightness remained fixed (native backlight 402). Four Enhanced-profile
+samples alternating 60/120 retained the same IGC/GC/PCC-sized blob contents.
+Managed-profile positive controls changed a GC-sized blob; returning to Enhanced
+restored its original contents. Thus the diagnostic detects a real profile change,
+but found no corresponding refresh-only change in these retained LUT/matrix blobs.
+
+**Important measurement limit:** this vendor driver's color-property getter returns
+`prop_val`, while blob enabling retains `blob_ptr` separately without updating that
+value. Zero-valued property IDs therefore do not establish disabled color processing.
+Bounded read-only blob enumeration also includes cached/inactive objects; it does
+not identify every active hardware block or prove identical panel registers. No
+MMIO writes or speculative property-getter patch were made.
+
+Additional static inspection covered expert RGB/gamma controls, color-temperature
+PCC generation and qservice transaction 51 carrying a color matrix. These are
+separate controls, not established missing 60/120 compensation. The visible manual
+mismatch remains unresolved. Original color/brightness/refresh settings were restored,
+the diagnostic helper was removed, and production sources, thermal protection and
+SELinux policy were unchanged. Private artifacts: the existing task directory's
+`color-audit` subdirectory, including decoded snapshots, positive controls and source.

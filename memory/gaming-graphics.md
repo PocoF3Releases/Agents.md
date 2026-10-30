@@ -139,3 +139,26 @@ and core Qualcomm color backend. Alioth's PCC-GABB threshold is zero; the inspec
 brightness/CCBB paths do not select 60/120 calibration tables. Stock/current LUT
 routines were compared before rejecting an unproven library swap. See the same
 evidence record for exact contracts, panel-command comparison and remaining limits.
+
+The color-focused follow-up found no refresh-only change in retained IGC/GC/PCC
+blob contents, with a successful Managed/Enhanced gamma positive control. The
+vendor getter's zero IDs are not proof of disabled color processing, and retained
+blobs are not panel-register measurements. Stock timing-node on-command payloads
+differ only in the refresh selector; no per-refresh gamma table was found there.
+The manual optical mismatch remains unresolved; see the same evidence record.
+
+## IQ-8275 comparison material — October 28
+
+[Collection and compatibility evidence](../evidence/iq8275-research-20261028.md)
+records four verified/extracted QLI system images, release-pinned sources and
+firmware versions. Shared SQE filenames are useful for offline comparison, but
+A623 GMU/ZAP and glibc userspace are not Alioth Android replacements. No donor
+binary was deployed; no panel-calibration or GPU-fault fix is established.
+
+## Qualcomm KGSL maintenance — October 28
+
+[Fixes and evidence](../evidence/kgsl-backports-20261028.md): packet bounds/header
+races, cross-mm mmap, VMA references and snapshot pointer disclosure. Original
+authorship retained. Strict Image, sparse, host regressions, 408 app checks and
+both-ABI mapping tests pass; installed persistently, reboot-verified and pushed.
+Stock firmware/userspace and thermal protection remain; no FPS/color-fix claim.
