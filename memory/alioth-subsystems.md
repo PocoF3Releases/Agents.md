@@ -45,6 +45,9 @@ This is discovery guidance, not permission to build, flash or alter a device.
 - Charging control selects `input_suspend`; true battery/charger bypass is
   explicitly disabled. A `thermal-nolimits.conf` file is not a protection bypass
   authorization. Keep thermal protection enabled.
+- No Android Thermal HAL is shipped by design: stock Kona HAL has no SKIN entry,
+  so headroom/status reporting was absent on stock too; mi_thermald remains the
+  authority. [Decision and stock RE](../evidence/thermal-hal-decision-20261031.md).
 
 ## Evidence boundaries
 
