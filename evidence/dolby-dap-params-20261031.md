@@ -25,11 +25,21 @@ exactly; do not repeat it as range evidence.
 
 - Added per-profile switches for virtual bass (112, speaker route only) and
   reverb suppression (114); vendor-tuned amounts are untouched.
-- Kept stereo widening (113) retired: its tuning tag is
-  `headphone-virtualizer-steerer-source-distance` and no range is verified.
+- Parameter 113 is `headphone-virtualizer-steerer-source-distance`, now
+  exposed as virtual speaker distance with its verified range (below).
 - Kept volume-leveler amount (116) unset, as upstream decided from tuning.
-- Not added without verified ranges: IEQ amount (107), dialogue ducking (109),
-  reverb amount (115).
+- Ranges were later verified from the shipped `libswdap.so` public setters
+  (clamp immediates, lower bound `max(x, 0)`): `dap_cpdp_ieq_amount_set` and
+  `dap_cpdp_de_amount_set`/`de_ducking_set` 0..16,
+  `dap_cpdp_headphone_virtualizer_steerer_source_distance_set` 4..64,
+  `dap_cpdp_volume_leveler_amount_set` 0..10, `surround_boost_set` 0..96.
+  All tuned values lie inside. No public reverb-amount setter exists.
+- [6c1622b-series commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/540bd0e7cc2ac1e09bb7cc0e4bd9381451858d3b) adds
+  per-profile sliders: IEQ amount (107, shown with an IEQ preset), background
+  ducking (109, under dialogue enhancer) and virtual speaker distance (113,
+  headphone virtualizer). Dialogue strength keeps the upstream 1..12 subset.
+- Still unexposed: volume-leveler amount (upstream decision) and reverb
+  amount (115, no verified setter).
 - frameworks/av `DolbyDapController` already covers the reference controller's
   pregain, I/O handle, audio flag and skip-hard-bypass commands; sound-type
   bypass stays off, matching the reference default without
@@ -44,6 +54,8 @@ system path (system_file label, Enforcing). Grouped Tone / Voice and loudness /
 Surround sections rendered; reverb 0→1→0 and virtual bass 1→0→1 matched
 native readback for the active profile and survived process restart.
 The mount was removed, the original APK hash `a80121867b3d98de…` verified,
-and test-saved preference keys removed. Not covered: audible/acoustic
-effect measurement, headphone route, other locales beyond English/Russian.
+and test-saved preference keys removed. Slider test (same method): IEQ amount reached native 0 and 16, ducking 8 and
+16; native values, `profile_0.xml` hash and APK were restored afterwards.
+Not covered: audible/acoustic effect measurement, the headphone-only
+distance slider (no headset), other locales beyond English/Russian.
 The next ROM build is needed to ship the changes.

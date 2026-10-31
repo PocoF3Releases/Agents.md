@@ -124,4 +124,4 @@ optional gaps in Parts, not verified feature ports. The firmware dump contains n
 personal calibration; do not invent gains or enable them without endpoint tests.
 
 [DAP parameter audit](../evidence/dolby-dap-params-20261031.md): stock IDs 101-116, QDSP key map,
-new virtual-bass/reverb switches and why 107/109/113/115/116 stay unexposed.
+verified ranges, new switches/sliders and why 115/116 stay unexposed.
