@@ -65,3 +65,22 @@ Not covered: audible/acoustic effect measurement, the headphone-only
 distance slider (speaker-route probes read the speaker endpoint and stayed
 4), other locales beyond English/Russian.
 The next ROM build is needed to ship the changes.
+
+## Deeper recheck — speaker route
+
+[UI commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/ab7a012708621560b1fa480b98d5f025f1924423) adds an
+Equalizer-tab notice while the GEQ switch is off (with Turn on), one shared
+check/cross switch on every tab and a Games section heading.
+
+Same enforcing bind-mount method, speaker only (no BT/USB headset):
+- With the app paused (SIGSTOP), toggling IEQ preset, dialogue, reverb and
+  leveler never reset their amounts, so restore order cannot clobber them.
+  While the app runs, foreign probe writes are erased: on regaining control it
+  resets the profile and replays its saved keys. Earlier probe "restore" writes
+  therefore only matched because the tuning defaults equal the baseline.
+- Leveler amount 6 persisted across Movie/Dynamic switches (Movie keeps its
+  own 0) and process restart; Reset current profile returned it to 0 and
+  cleared the key. Reset and custom profiles cover all new keys.
+- GEQ notice appeared at native 0 and cleared after Turn on (native 1).
+Original APK, `profile_0.xml` (hash, owner, label) and all native values were
+restored. Not covered: headphone-only distance and game audio (need headset).
