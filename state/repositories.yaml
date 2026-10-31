@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-10-31'
+observed: '2026-11-01'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool
   sources. Source observations are not a flashed release manifest.
 workhub:
