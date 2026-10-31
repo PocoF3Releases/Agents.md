@@ -55,6 +55,17 @@ credentials or assume its MCP connectors are available in Claude.
   instructions; `/skills` confirms skill discovery. Static checks cannot certify
   client loading or model availability. External imports can require trust.
 
+## Claude auto memory and history
+
+Claude auto memory (`~/.claude/projects/-home-johnmart19-evo/memory/`) is local
+to one machine/account: pointers, preferences and attribution only. Facts,
+heads, tests and releases belong in workhub owners. `~/Agents.md` is the same
+repo: `git pull --ff-only` before reading; edit one copy per task.
+
+For earlier work search `INDEX.yaml`, V-* anchors and `evidence/`, then Git
+(`git log -S '<term>'`, `git show <rev>:<path>`). Removed dated logs exist only
+in Git history and stay historical.
+
 Recreate a relocated checkout using the [root template](../templates/android-root-CLAUDE.md)
 and [optional model settings](../templates/claude-settings.json), after confirming
 `.workhub` exists and preserving any existing files. No general home-directory
