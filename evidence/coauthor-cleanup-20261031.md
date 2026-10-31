@@ -12,7 +12,9 @@ objects including descendants whose parent IDs necessarily changed. Five
 kernel messages previously failed Git trailer parsing; corrected messages all
 parse successfully. A terminal newline alone is normally accepted by Git; this
 cleanup additionally implements the owner’s stricter exact-ending convention.
-GitHub’s live attribution rendering was not independently browser-verified.
+The subsequent [full recheck](coauthor-recheck-20261031.md) verifies GitHub API
+recognition and corrects four shared upstream identities. The exact-ending
+convention applies to fork-local commits; valid upstream formatting stays intact.
 
 For every rewritten object, checked identical tree, author/committer fields and
 dates, subject and non-Codex message content. Parent links are mapped without
@@ -65,8 +67,8 @@ normalized and retained separately from ROM public branches.
 | [github.com/PocoF3Releases/device_xiaomi_camera](https://github.com/PocoF3Releases/device_xiaomi_camera) | `a72242890b4a` | [4c953d2a5255](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/4c953d2a5255ec84742f935f8af0fa5a86c3cbf2) |
 | [github.com/PocoF3Releases/device_xiaomi_sm8250-common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common) | `381d2673a31a` | [b53a218daacd](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b53a218daacd4242a54fa5d5067a6a0299fe7f2e) |
 | [github.com/PocoF3Releases/external_tinycompress](https://github.com/PocoF3Releases/external_tinycompress) | `6e5f9422ece8` | [f55142aedd63](https://github.com/PocoF3Releases/external_tinycompress/commit/f55142aedd6392c667b5f9b48880641867100488) |
-| [github.com/PocoF3Releases/frameworks_av](https://github.com/PocoF3Releases/frameworks_av) | `eecb939f5835` | [39ae96f6f57e](https://github.com/PocoF3Releases/frameworks_av/commit/39ae96f6f57ef4aa3cd0644d0b2d997cb0f3d7a4) |
-| [github.com/PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base) | `faeec1083640` | [f5ca57d3798b](https://github.com/PocoF3Releases/frameworks_base/commit/f5ca57d3798b835ce16477d5634550fc1a5b76d2) |
+| [github.com/PocoF3Releases/frameworks_av](https://github.com/PocoF3Releases/frameworks_av) | `eecb939f5835` | [0c471ea794d9](https://github.com/PocoF3Releases/frameworks_av/commit/0c471ea794d999884744c0843c73a70320ed44d1) |
+| [github.com/PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base) | `faeec1083640` | [f154e5aa0c50](https://github.com/PocoF3Releases/frameworks_base/commit/f154e5aa0c5001385be9bf37e28246bac697a0ac) |
 | [github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media) | `60f362cedc69` | [009aea140157](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/009aea140157fc7a1bc419b14bae080bac6139d6) |
 | [github.com/PocoF3Releases/hardware_xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi) | `8119f09b8af1` | [4e25bc3a2a42](https://github.com/PocoF3Releases/hardware_xiaomi/commit/4e25bc3a2a4297f4b6b858c1d5f66d147be37457) |
 | [github.com/PocoF3Releases/kernel_xiaomi_sm8250](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250) | `7d559e98d4d9` | [830fb30974c8](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/830fb30974c82ef91080e9295b90169bb97661da) |
@@ -84,7 +86,6 @@ normalized and retained separately from ROM public branches.
 | [github.com/pbrp-alioth/android_external_f2fs-tools](https://github.com/pbrp-alioth/android_external_f2fs-tools) | `efd0dc9a3a58` | [ae3425c2b760](https://github.com/pbrp-alioth/android_external_f2fs-tools/commit/ae3425c2b7606f4bc1f95ee9bb32f0cf8b91d2a7) |
 | [github.com/PocoF3Releases-Recovery/local_manifests](https://github.com/PocoF3Releases-Recovery/local_manifests) | `1816695ed87b` | [a553a449d6a5](https://github.com/PocoF3Releases-Recovery/local_manifests/commit/a553a449d6a5881b6f3bda762320ba14121c3f2e) |
 | [github.com/PocoF3Releases-Recovery/.github](https://github.com/PocoF3Releases-Recovery/.github) | `917c225d6ce7` | [269ea619b7de](https://github.com/PocoF3Releases-Recovery/.github/commit/269ea619b7deffe5fbc20db1a7dfa3c3b6d11b48) |
-
 | [gitlab.com/johnmart19/vendor_xiaomi_camera](https://gitlab.com/johnmart19/vendor_xiaomi_camera) | `607c5b881ccf` | [b44ae434d825](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/b44ae434d8257ed282dca59b0fa72c6b97ea9662) |
 
 The workhub’s normalized historical tip is recorded in the enclosing commit’s

@@ -53,6 +53,9 @@ Keep this Codex trailer last: the commit message must end at `>` with no
 following whitespace or newline. [Cleanup evidence](../evidence/coauthor-cleanup-20261031.md).
 Verify raw `git cat-file commit` bytes; Git
 commit/am tools may append a newline automatically. Preserve other trailers.
+Apply this convention to fork-local commits only. Keep shared upstream commit
+identities intact, including valid upstream trailers with a terminal newline.
+Verify GitHub `Commit.authors` recognition and zero-behind ancestry after cleanup.
 
 Other clients must retain their actual attribution rather than claiming Codex.
 Use public project identity/noreply attribution; no invented model identity or
