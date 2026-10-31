@@ -17,6 +17,7 @@ Read-only source/device review, not a full functional certification or new ROM b
 ## Confirmed gap requiring separate integration validation
 
 Android thermalservice reports HAL Ready false and no connected HIDL Thermal HAL. This repeats the earlier Adreno audit finding; it is not evidence that Xiaomi/kernel thermal protection is disabled.
+Resolved October 31 as intentionally absent: [decision and stock RE](thermal-hal-decision-20261031.md).
 
 The stock dump actually contains android.hardware.thermal@2.0-service.qti, its RC and VINTF fragment; the common proprietary list omits them. The stock thermal-engine service is commented out while mi_thermald is separate. The Thermal HAL depends on thermal 1.0/2.0 HIDL libraries and reads thermal-zone/threshold/cooling sysfs paths. Strings alone do not establish read-only behavior, correct sensor mapping, or safe coexistence. Before importing it, inspect the implementation/configuration and policy, verify dependency resolution and sensor units/threshold semantics, then test with mi_thermald continuously active and SELinux enforcing. Do not invent severity/headroom values or enable competing thermal-engine control.
 
