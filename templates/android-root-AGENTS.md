@@ -1,7 +1,7 @@
 # Alioth Android source workspace
 
 Use the project workhub for shared instructions and current state:
-`~/project-knowledge/AGENTS.md`, then `~/project-knowledge/CURRENT_STATE.md`
+`.workhub/AGENTS.md`, then `.workhub/CURRENT_STATE.md`
 and only the topic relevant to the request. If unavailable, retrieve those files
 from https://github.com/PocoF3Releases/Agents.md; do not assume old chat context.
 

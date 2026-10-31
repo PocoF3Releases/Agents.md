@@ -1,7 +1,7 @@
 # Project rules
 
 POCO F3 / alioth, EvolutionX Android 17. Read [CURRENT_STATE.md](CURRENT_STATE.md),
-then needed topic/rules/files. Share Astra/Sol records;
+then needed topic/rules/files. Share maintained records;
 recover missing context.
 
 - Follow current/higher-priority instructions. Old logs/plans authorize no work.
