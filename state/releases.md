@@ -166,5 +166,5 @@ The maintainer confirms shutdown hangs no longer occur. Repeated features and
 refresh-rate highlights are excluded. Artifact/date unspecified; latest-source
 inclusion is required. No new release or Telegram message.
 
-[Later KGSL fixes](../evidence/kgsl-backports-20261028.md) need the next ROM build;
-phone kernel acceptance does not establish a published ROM or Telegram post.
+[KGSL](../evidence/kgsl-backports-20261028.md) and [battery-temperature](../evidence/battery-thermistor-20261031.md)
+kernel fixes need the next ROM build; phone acceptance is not a release.

@@ -1,9 +1,8 @@
 # Replacement-battery thermistor reading — 2026-10-31
 
-**Device-tested (read-only, root diagnostic), unresolved.** Installed October 28
+**Device-tested; kernel fix installed.** Measurements were read-only root diagnostics. Installed October 28
 user build, Redline f503c8d, Enforcing, charging near full at about 0.43 A. FG Gen4
-selected `K11A_custom` (battery ID about 98.8 kΩ, authentic=1). No source, image
-or setting change.
+selected `K11A_custom` (battery ID about 98.8 kΩ, authentic=1).
 
 ## Observation
 
@@ -35,8 +34,37 @@ the same raw domain.
 
 The FG coefficient encoding is proprietary (`BATT_THERM_COEFF_WORD`, generated
 offline), so do not hand-edit coefficients. Every unidentified pack selects
-`K11A_custom`; a global profile correction would mis-report correctly built
-packs. A correction must be opt-in per device, map both reported temperature and
-hardware thresholds, and work without root. Physical pack replacement remains
-the direct remedy. `smb1390_therm` reads about 405 °C but backs no thermal zone
+`K11A_custom`, so a fitted per-pack resistance correction would mis-report
+correctly built packs. A board-sensor floor only raises the reading, so it is
+safe for those packs and needs no per-device setting or root; FG hardware
+thresholds remain in the raw pack domain. Genuine replacement packs are no
+longer manufactured. `smb1390_therm` reads about 405 °C but backs no thermal zone
 on this charge-pump (BQ2597x) phone.
+
+## Implemented fix — kernel 7d559e9
+
+The maintainer confirmed a non-stock pack; genuine packs are no longer made, so
+pack thermistor data is not relied on. [7d559e9](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7d559e98d4d948a94c2cc68cefa0e2a4ba5afb6b)
+reports at least the hottest valid zone in `qcom,replacement-batt-temp-zones`
+(alioth: `quiet_therm`, `charger_therm0`) only while the replacement fallback is
+active. It feeds POWER_SUPPLY_PROP_TEMP (software JEITA, healthd), the `bms`
+thermal zone and the soc-monitor low-temperature cutoff, and notifies the battery
+supply on 1 °C moves. Identified profiles, FG internal algorithms, FG hardware
+thresholds and `fake_temp` keep the pack reading. Zones outside -40..120 °C or
+failing reads are skipped; `bms`/`battery` names are rejected.
+
+Trade-off: charger IC heat can lower fast-charge current earlier; a warm board
+can mask a colder pack only during use. Cold-ambient readings remain cold.
+
+Validation: ROM-identical config, clang r563880c, full `W=1 KCFLAGS=-Werror`
+Image and DTBs, checkpatch clean. The new DTBO differs from the ROM DTBO only by
+this property. Temporary fastboot boot (Enforcing, taint 0): bms/battery and
+healthd followed charger_therm0 (31–37 °C) instead of about 15 °C. Persistent
+install: `boot_a` repacked with the unchanged ramdisk/Magisk
+(ramdisk `9a64d35c…`), image `49b07284780c2e0b074af314a7db3c8ab6cee4a7b47aa86c626ee68aa9ba6c27`
+read back; `dtbo_a` written with `c9fd94c99ac822b9e3f7aaede869a0b819116434f8a6fa5b93672f5c6f7586c5`
+(first 462848 bytes) and read back. Normal reboot: `4.19.325-Redline-7d559e9-cip136`,
+Enforcing, taint 0, root intact, battery 31.3 °C beside 31.0/31.3 °C board zones.
+Originals kept privately on phone and host (`boot_a` `3481afa7…`, `dtbo_a` `3c53f2b4…`).
+Not covered: charger FCC/FV votes (no debugfs on user build), long charging/thermal
+sessions. The DTBO and kernel need the next ROM build to ship.

@@ -79,16 +79,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: f503c8d11b7774ad5e91142e7e142a6de003f3fd
+    aosp-17: 7d559e98d4d948a94c2cc68cefa0e2a4ba5afb6b
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f503c8d11b7774ad5e91142e7e142a6de003f3fd
-  observation: 2026-10-30; KGSL fixes including verified IOMMU startup clock-unwind follow-up;
-    original authorship preserved; full strict Image, targeted sparse and host
-    regressions pass. Enforcing phone passes 408 app checks and both-ABI mapping
-    isolation; persistent active-slot installation and normal reboot verified.
-    See evidence/kgsl-backports-20261028.md. Stock firmware/userspace unchanged;
-    frozen whole-kernel sparse backlog remains outside this scoped acceptance.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7d559e98d4d948a94c2cc68cefa0e2a4ba5afb6b
+  observation: 2026-10-31; replacement-pack battery temperature floored by quiet_therm and
+    charger_therm0 (alioth DTBO property); strict W=1 Image/DTBs and checkpatch pass;
+    enforcing temporary boot, persistent active-slot install and reboot verified.
+    See evidence/battery-thermistor-20261031.md. Prior KGSL scope remains in
+    evidence/kgsl-backports-20261028.md.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []

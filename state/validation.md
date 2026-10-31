@@ -212,7 +212,7 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-ACTIVE
 
-[Identity](../evidence/kernel-redline-20261028.md); [installed KGSL](../evidence/kgsl-backports-20261028.md).
+[Identity](../evidence/kernel-redline-20261028.md); [installed KGSL](../evidence/kgsl-backports-20261028.md); [battery floor](../evidence/battery-thermistor-20261031.md).
 
 ## V-KGSL-20261028
 
