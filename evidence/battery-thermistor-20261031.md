@@ -68,3 +68,14 @@ Enforcing, taint 0, root intact, battery 31.3 °C beside 31.0/31.3 °C board zon
 Originals kept privately on phone and host (`boot_a` `3481afa7…`, `dtbo_a` `3c53f2b4…`).
 Not covered: charger FCC/FV votes (no debugfs on user build), long charging/thermal
 sessions. The DTBO and kernel need the next ROM build to ship.
+
+## Device-tree consumer recheck
+
+Source/device read-only, after installation. Consumers of the floored value:
+default healthd path (`android.hardware.health-service.alioth` only rescales
+current), framework `config_shutdownBatteryTemperature` 680 (AOSP default),
+software JEITA, the `bms`/`battery` thermal zones and mi_thermald, whose strings
+show a `battery` zone lookup plus capacity/current/voltage reads. No device-tree
+init/script writes battery temperature or `fake_temp`. The next ROM build takes
+the DTBO from this kernel source (`BOARD_KERNEL_SEPARATED_DTBO`); inactive slot B
+keeps the previous kernel/DTBO until an OTA replaces it.
