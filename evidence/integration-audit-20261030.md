@@ -26,3 +26,13 @@ The stock dump actually contains android.hardware.thermal@2.0-service.qti, its R
 No new fixes, rebuild or device installation were justified by the checks above. Display color differences during manual 60/120 Hz changes remain unresolved; existing low-brightness RRO is not a proven correction for that optical mismatch. Broader recording, external audio routes, USB OTG/MTP, encryption credentials and stress/thermal behavior need targeted functional checks, not extrapolation from service presence.
 
 Private raw evidence: ~/evo/.repo/research/alioth-integration-20261030/. No device identifiers or complete raw logs are published.
+
+## Installed parity recheck — 2026-10-31
+
+All 311 hashed `/vendor` init, VINTF, audio, config, fstab, HAL binary, overlay
+and ODM files match the October 28 build output. XiaomiParts, XiaomiDolby and
+MiuiCamera run from their ROM paths; every `/data/app` update of a system
+package is a Google/Play package. Device-tree commits newer than that build: only the
+alioth anti-flicker RRO. Recovery overlay patches: 0 pending, and both local
+re-applied public commits are patch-identical to their public originals.
+Packaged thermal-engine has a fully commented init RC and does not run.
