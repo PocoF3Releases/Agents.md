@@ -36,3 +36,27 @@ package is a Google/Play package. Device-tree commits newer than that build: onl
 alioth anti-flicker RRO. Recovery overlay patches: 0 pending, and both local
 re-applied public commits are patch-identical to their public originals.
 Packaged thermal-engine has a fully commented init RC and does not run.
+
+## Runtime log audit — 2026-10-31
+
+Read-only, kernel 7d559e9 boot, Enforcing. No ANR, no fatal signal or
+system-service death; the only tombstone is the intentional KGSL
+cross-mapping test fault. Non-running init services are oneshots. Kernel log
+errors are known boot noise: absent pm8009 camera PMIC GPIO probe, an
+early `gpuss-max-step` virtual-zone read before tsens, debugfs/clock probes.
+All declared HALs register; lshal's `N` column marks unfrozen vendor
+interfaces, not missing services.
+
+Denials triaged as non-defects: `/dev/diag` opens by vendor daemons (user-build
+diag disabled), unlabeled unset `persist.sensor.sardisable` read by sensors,
+dex2oat probing `/data/user/0` while background compilation succeeds, app
+property probes, and an upstream Evolution X `init.rc` `rm` under `/data/adb`
+that SELinux blocks.
+
+Upstream gap, not changed: Pixel Private Compute Services
+(`com.google.android.as.oss`, `pccId=-1`) becomes association-restricted after
+a `BIND_RESTRICT_ASSOCIATIONS` bind; its live allowlist then admits only
+`nowplaying`, so System Intelligence and `odad` binds fail ("association not
+allowed"), including Live Caption model download. Owner: Evolution X
+`vendor/gms` sysconfig and A17 PCC integration. Do not widen privacy
+allowlists in maintained device trees.
