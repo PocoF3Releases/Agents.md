@@ -103,7 +103,7 @@ repositories:
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: 6d9a30b6201fe62ce000ff28aaeffaa2b6e771b8
+    main: f78ee3106b1de394d58442680d38c7d012876042
     LA.UM.8.12.r1-11900-sm8250.0: ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: 953194cfd08d028c2ccd718f5d0374531d9716d2
@@ -118,7 +118,7 @@ repositories:
     vendor_xiaomi_frameworks: 56aa2e9ed68fb484f18401ffdbae2698bc453c06
     vendor_xiaomi_proprietary: d22a991cdb0fbb1c85d361a642e5f93a1fdd9f43
   commit_links:
-    main: https://github.com/PocoF3Releases/references_code/commit/6d9a30b6201fe62ce000ff28aaeffaa2b6e771b8
+    main: https://github.com/PocoF3Releases/references_code/commit/f78ee3106b1de394d58442680d38c7d012876042
     LA.UM.8.12.r1-11900-sm8250.0: https://github.com/PocoF3Releases/references_code/commit/ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: https://github.com/PocoF3Releases/references_code/commit/d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: https://github.com/PocoF3Releases/references_code/commit/953194cfd08d028c2ccd718f5d0374531d9716d2

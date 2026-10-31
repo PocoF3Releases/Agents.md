@@ -18,6 +18,11 @@ read_order:
   offload_or_write:
   - operations/maintenance.md
 subsystems:
+  claude_code:
+    title: Claude Code WSL setup and workspace locations
+    status: maintained
+    memory: operations/claude-code.md
+    keywords: [claude, sonnet, opus, CLAUDE.md, wsl locations]
   inventory:
     title: Alioth and SM8250 subsystem inventory
     status: maintained
