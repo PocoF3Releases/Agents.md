@@ -27,7 +27,6 @@ exactly; do not repeat it as range evidence.
   reverb suppression (114); vendor-tuned amounts are untouched.
 - Parameter 113 is `headphone-virtualizer-steerer-source-distance`, now
   exposed as virtual speaker distance with its verified range (below).
-- Kept volume-leveler amount (116) unset, as upstream decided from tuning.
 - Ranges were later verified from the shipped `libswdap.so` public setters
   (clamp immediates, lower bound `max(x, 0)`): `dap_cpdp_ieq_amount_set` and
   `dap_cpdp_de_amount_set`/`de_ducking_set` 0..16,
@@ -38,8 +37,12 @@ exactly; do not repeat it as range evidence.
   per-profile sliders: IEQ amount (107, shown with an IEQ preset), background
   ducking (109, under dialogue enhancer) and virtual speaker distance (113,
   headphone virtualizer). Dialogue strength keeps the upstream 1..12 subset.
-- Still unexposed: volume-leveler amount (upstream decision) and reverb
-  amount (115, no verified setter).
+- [Final commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/78334404dfa794f7f1c7d139acc1d2d87d166891) completes
+  101-116: GEQ enable (106) switch, reverb amount (115) and leveler amount
+  (116) sliders. The QDSP `capi_v2_dap_cpdp.so` (Hexagon, decompiled with
+  Ghidra) clamps `rs_amount` 0..16 and leveler amount 0..10, but the DAX
+  service keeps reverb writes above 9 at 9, so that slider is 0..9. IDs 117+
+  log "param id not supported" in the DMS ParameterAdapter.
 - frameworks/av `DolbyDapController` already covers the reference controller's
   pregain, I/O handle, audio flag and skip-hard-bypass commands; sound-type
   bypass stays off, matching the reference default without
@@ -56,6 +59,9 @@ native readback for the active profile and survived process restart.
 The mount was removed, the original APK hash `a80121867b3d98de…` verified,
 and test-saved preference keys removed. Slider test (same method): IEQ amount reached native 0 and 16, ducking 8 and
 16; native values, `profile_0.xml` hash and APK were restored afterwards.
+Final test: GEQ 1->0->1, reverb amount 0/1/4/8/9 (10-14 read back 9),
+leveler 0 and 10; all 13 native values, preferences and APK restored.
 Not covered: audible/acoustic effect measurement, the headphone-only
-distance slider (no headset), other locales beyond English/Russian.
+distance slider (speaker-route probes read the speaker endpoint and stayed
+4), other locales beyond English/Russian.
 The next ROM build is needed to ship the changes.
