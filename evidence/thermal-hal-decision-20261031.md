@@ -41,11 +41,9 @@ source of Xiaomi skin limits and paired throttling tests.
 Unaffected: kernel/mi_thermald protection. Known consequence: JobScheduler
 thermal deferral, ART thermal cutoff and app headroom APIs see NONE.
 
-## Separate open observation
+## Separate battery finding
 
-While charging at 97% with nearby `quiet_therm`/`charger_therm0`/`conn_therm`
-near 27 °C, `bms`/`battery` reported 14.0 °C on profile `K11A_custom`
-(replacement pack, resistance ID about 98.8 kΩ). One reading; a warm second
-point is required before any calibration or JEITA conclusion. Unverified.
+The replacement-pack temperature lead is now measured in
+[battery thermistor evidence](battery-thermistor-20261031.md).
 
 Private scratch only: decompile and disassembly were not retained or published.
