@@ -123,5 +123,6 @@ Java gaps and covers 50 native inputs. Stock headphone 3D/SoundID are concrete
 optional gaps in Parts, not verified feature ports. The firmware dump contains no
 personal calibration; do not invent gains or enable them without endpoint tests.
 
-[DAP parameter audit](../evidence/dolby-dap-params-20261031.md): stock IDs 101-116, QDSP key map,
-verified ranges and the full 101-116 control set.
+[DAP parameters](../evidence/dolby-dap-params-20261031.md): stock IDs 101-116,
+QDSP keys and ranges. [GEQ/locale fixes](../evidence/dolby-review-20261031.md):
+enable-failure reporting and separate translations, host/APK verified.
