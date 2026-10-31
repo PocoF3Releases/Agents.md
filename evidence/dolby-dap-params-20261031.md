@@ -34,7 +34,7 @@ exactly; do not repeat it as range evidence.
   `dap_cpdp_headphone_virtualizer_steerer_source_distance_set` 4..64,
   `dap_cpdp_volume_leveler_amount_set` 0..10, `surround_boost_set` 0..96.
   All tuned values lie inside. No public reverb-amount setter exists.
-- [6c1622b-series commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/540bd0e7cc2ac1e09bb7cc0e4bd9381451858d3b) adds
+- [Slider commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/540bd0e7cc2ac1e09bb7cc0e4bd9381451858d3b) adds
   per-profile sliders: IEQ amount (107, shown with an IEQ preset), background
   ducking (109, under dialogue enhancer) and virtual speaker distance (113,
   headphone virtualizer). Dialogue strength keeps the upstream 1..12 subset.
