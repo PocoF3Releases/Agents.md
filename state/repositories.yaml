@@ -139,12 +139,12 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 204b268e855911a13159e15af8c654ed24abd9e9
+    cnb: 7b6fa28910798d7c67a79b6264ce396fbbc0d2c7
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/204b268e855911a13159e15af8c654ed24abd9e9
-  observation: 2026-10-31; all Xiaomi DAP parameters 101-116 exposed with verified
-    ranges; enforcing bind-mounted APK readback tests in
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/7b6fa28910798d7c67a79b6264ce396fbbc0d2c7
+  observation: 2026-10-31; all Xiaomi DAP parameters 101-116 with verified ranges,
+    equalizer bypass notice and unified switches; enforcing bind-mounted APK readback tests in
     evidence/dolby-dap-params-20261031.md; installed ROM predates these changes.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
