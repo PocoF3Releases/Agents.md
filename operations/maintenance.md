@@ -49,6 +49,11 @@ factual body and actual validation. Codex edits use this trailer:
 Co-authored-by: codex <noreply@openai.com>
 ```
 
+Keep this Codex trailer last: the commit message must end at `>` with no
+following whitespace or newline. [Cleanup evidence](../evidence/coauthor-cleanup-20261031.md).
+Verify raw `git cat-file commit` bytes; Git
+commit/am tools may append a newline automatically. Preserve other trailers.
+
 Other clients must retain their actual attribution rather than claiming Codex.
 Use public project identity/noreply attribution; no invented model identity or
 AI trailers on untouched upstream imports. Follow requested commit/push scope and
