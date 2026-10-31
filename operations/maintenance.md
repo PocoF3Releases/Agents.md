@@ -43,12 +43,13 @@ for the task; copied notes do not synchronize account memory.
 ## Git and privacy
 
 Preserve unrelated work and upstream authorship. Use a component-scoped subject,
-factual body and actual validation. Assistant edits use this trailer:
+factual body and actual validation. Codex edits use this trailer:
 
 ```text
 Co-authored-by: codex <noreply@openai.com>
 ```
 
+Other clients must retain their actual attribution rather than claiming Codex.
 Use public project identity/noreply attribution; no invented model identity or
 AI trailers on untouched upstream imports. Follow requested commit/push scope and
 verify the remote ref. Authorized history rewrites require a recovery copy and
@@ -61,9 +62,11 @@ necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/
 
 ## Internal agents
 
-Use `gpt-6.1-sol` with medium reasoning for new internal agents, following the
+In Codex, use `gpt-6.1-sol` with medium reasoning for new internal agents, following the
 user's current preference. Allow at most four concurrent threads including the
 parent. This supersedes the earlier low-reasoning/Light preference.
+Claude Code must select only models its runtime actually exposes; the Codex
+model override does not install GPT access there. Keep the same four-thread limit.
 
 ## Local checks
 

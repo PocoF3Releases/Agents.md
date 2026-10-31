@@ -1,7 +1,7 @@
 # Alioth development workhub
 
 Portable context for **POCO F3 · Evolution X · Android 17**, shared
-by GPT-6 Astra, GPT-6.1 Sol and GPT-5.6 Sol through GitHub or a local checkout.
+by coding assistants through GitHub or a local checkout.
 
 ## Start a new chat
 
@@ -15,6 +15,8 @@ Done when: <behavior/artifact/checks>. Distinguish saved evidence from new check
 [Rules](AGENTS.md) → [Current state and topics](CURRENT_STATE.md) → relevant record.
 Fetch linked content when needed; links do not preload documents or grant access.
 For a local host, use the optional [AOSP skill setup](operations/first-chat.md).
+Claude Code: [WSL setup and locations](operations/claude-code.md), with a shared
+[CLAUDE.md](CLAUDE.md) entrypoint for Sonnet and Opus.
 
 ## Where information lives
 
