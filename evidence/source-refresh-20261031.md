@@ -1,5 +1,7 @@
 # Source refresh — 2026-10-31
 
+Current identities and ancestry after metadata cleanup: [full recheck](coauthor-recheck-20261031.md).
+
 ## Scope and result
 
 `source-checked`, `host-tested`, `build-graph-tested`. Updated the existing
