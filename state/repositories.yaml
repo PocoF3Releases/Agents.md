@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-10-25'
+observed: '2026-10-31'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool
   sources. Source observations are not a flashed release manifest.
 workhub:
@@ -32,7 +32,7 @@ repositories:
     and separate translations; host/resource/isolated Kotlin checks in
     evidence/parts-review-20261031.md. APK build/device tests remain deferred.
   local_a17:
-    head: 66c059055fea58093f9166572ab9e64feef166e1
+    head: 36a1fc954f3a74767bdcea156dd87ccc10d568b8
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
@@ -46,7 +46,7 @@ repositories:
   observation: 2026-10-28; anti-flicker RRO resource checks and runtime-equivalent policy
     checks in evidence/displayfeature-evaluation-20261028.md; production RRO not installed.
   local_a17:
-    head: 20c002b9e4fca6f097bd14dbbeaa747bab8e6fb4
+    head: d5966c2e90954f28700fc1ee4df4e6d70a51eee6
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -176,13 +176,14 @@ repositories:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: bfe244147a01a5933f444f27a4403ae19f4d2582
+    cnb: faeec1083640f2b3982869c0de4d57c2f3ce4b1a
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/bfe244147a01a5933f444f27a4403ae19f4d2582
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/faeec1083640f2b3982869c0de4d57c2f3ce4b1a
+  observation: 2026-10-31; rebased custom changes onto current selected upstream;
+    authorship retained and public tip verified. Build-graph and host checks in
+    evidence/source-refresh-20261031.md; no new full-build or device acceptance.
   local_a17:
-    head: bbb06a7afbdf2581bdc4c31a5b9263bb786bb15b
+    head: 4fb9fff603cbe73f0a59515fa1bb78b9a7bd0996
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
@@ -323,12 +324,13 @@ repositories:
   - bootable/recovery
   selected_ref: cnb
   refs:
-    cnb: e9210d4975f8da7c6490f0fbc78805f0c063dc7a
+    cnb: 9f67850ac4a5d7787ca7543263bd47586a5bc80f
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e9210d4975f8da7c6490f0fbc78805f0c063dc7a
+    cnb: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/9f67850ac4a5d7787ca7543263bd47586a5bc80f
   local_a17: matches_selected_ref
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+  observation: 2026-10-31; rebased custom changes onto current selected upstream;
+    authorship retained and public tip verified. Build-graph and host checks in
+    evidence/source-refresh-20261031.md; no new full-build or device acceptance.
 - repository: https://github.com/PocoF3Releases-Recovery/android_build
   role: build_source
   source_tree_paths:
@@ -347,12 +349,13 @@ repositories:
   - device/qcom/sepolicy_vndr/legacy-um
   selected_ref: cnb
   refs:
-    cnb: 6fcb7b6e91d35937e8ea20d06d5802148af32246
+    cnb: 657627c7d1b1dcb42de2cc08e9ced9c5d1889b31
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/6fcb7b6e91d35937e8ea20d06d5802148af32246
+    cnb: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/657627c7d1b1dcb42de2cc08e9ced9c5d1889b31
   local_a17: matches_selected_ref
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+  observation: 2026-10-31; rebased custom changes onto current selected upstream;
+    authorship retained and public tip verified. Build-graph and host checks in
+    evidence/source-refresh-20261031.md; no new full-build or device acceptance.
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_boringssl
   role: build_source
   source_tree_paths:
@@ -622,12 +625,13 @@ repositories:
   - system/sepolicy
   selected_ref: cnb
   refs:
-    cnb: 054bec92b1d8ea9ea176220109926b1138421b64
+    cnb: abbbf28774b4e3dc03bdd3bfde06e4148f5fd482
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/054bec92b1d8ea9ea176220109926b1138421b64
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/abbbf28774b4e3dc03bdd3bfde06e4148f5fd482
   local_a17: matches_selected_ref
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+  observation: 2026-10-31; rebased custom changes onto current selected upstream;
+    authorship retained and public tip verified. Build-graph and host checks in
+    evidence/source-refresh-20261031.md; no new full-build or device acceptance.
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_server_configurable_flags
   role: build_source
   source_tree_paths:
