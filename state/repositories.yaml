@@ -140,10 +140,10 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 79d2de0dbb8b6fff399a14101a00c2270d6af0cc
+    cnb: bc164f54446d81b4a2ff29e567fcdd06e8ec54c5
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/79d2de0dbb8b6fff399a14101a00c2270d6af0cc
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/bc164f54446d81b4a2ff29e567fcdd06e8ec54c5
   observation: 2026-11-01; AW8697 measured tuning, synthesized primitives in
     evidence/haptics/2026-11-01.md (temp-mount check, feel pending); DSPVolume allowlist
     in permissions-audit-20261101.md; Dolby in evidence/dolby-review-20261031.md.
