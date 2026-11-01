@@ -41,14 +41,14 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: f8b5b6d8888e803c9d0cf463ce1cb67ed8298417
+    aosp-17: 1ae7fb38a4bedf301001fd737bdb52bf1581ae4f
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f8b5b6d8888e803c9d0cf463ce1cb67ed8298417
-  observation: 2026-11-01; stock LOW_TICK/DOUBLE_CLICK haptic extraction in
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/1ae7fb38a4bedf301001fd737bdb52bf1581ae4f
+  observation: 2026-11-01; HyperOS DOUBLE_CLICK haptic extraction in
     evidence/haptics/2026-11-01.md. Anti-flicker RRO checks in
     evidence/displayfeature-evaluation-20261028.md; production RRO not installed.
   local_a17:
-    head: c627452df84eeabcbe170d25e6bd372bec649793
+    head: e78d5ca4a5b9d1d107a0f0dca857595f6dd48aa5
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -56,11 +56,11 @@ repositories:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: a1d9cecde3de3569970eeb72788df2b124c09219
+    aosp-17: 2413d5d3fff25277f9a821ffbc6e92ab9b1dd0fe
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a1d9cecde3de3569970eeb72788df2b124c09219
-  observation: 2026-11-01; stock LOW_TICK/DOUBLE_CLICK haptics in evidence/haptics/2026-11-01.md;
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/2413d5d3fff25277f9a821ffbc6e92ab9b1dd0fe
+  observation: 2026-11-01; HyperOS DOUBLE_CLICK haptic in evidence/haptics/2026-11-01.md;
     HAL temp-mount tested, not in the installed ROM.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
   role: build_source
@@ -140,11 +140,11 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: e4e57aa83c6fd1012bcd3eeadcde46dcd1fa9609
+    cnb: 79d2de0dbb8b6fff399a14101a00c2270d6af0cc
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/e4e57aa83c6fd1012bcd3eeadcde46dcd1fa9609
-  observation: 2026-11-01; AW8697 modelled-output palette, primitives and damping in
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/79d2de0dbb8b6fff399a14101a00c2270d6af0cc
+  observation: 2026-11-01; AW8697 measured tuning, synthesized primitives in
     evidence/haptics/2026-11-01.md (temp-mount check, feel pending); DSPVolume allowlist
     in permissions-audit-20261101.md; Dolby in evidence/dolby-review-20261031.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera

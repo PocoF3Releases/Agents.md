@@ -2,9 +2,9 @@
 
 ## V-HAPTICS
 
-**2026-11-01 — build, host synth, temp-mount device.** HyperOS palette, 8
-primitives, stock LOW_TICK/DOUBLE_CLICK: all completed once, no HAL errors;
-strengths/cancel not re-exercised; no feel acceptance. [Record](../evidence/haptics/2026-11-01.md).
+**2026-11-01 — temp mount, accelerometer-measured.** Taps match prior HAL,
+prebaked stronger, 8 primitives click-level; damped stock primitives were
+rejected as dead. Cancel not rerun; feel pending. [Record](../evidence/haptics/2026-11-01.md).
 
 2026-10-04: 21 effect checks, cancel, AAC/HE1, PCM refills
 passed (temp mount); no full RichTap/PWLE.

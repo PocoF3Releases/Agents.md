@@ -28,17 +28,18 @@ sysfs base: `/sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/`.
 
 ## Effects and stock strength
 
-| Effect | Source | Base | Modelled output |
-| --- | --- | ---: | ---: |
-| CLICK | `effect_0.bin` HyperOS launcherIconSelection (RAM 0 fallback) | 1.0 | 0.83 |
-| DOUBLE_CLICK | `effect_1.bin` HyperOS feedbackNegativeLight | 1.0 | 0.93 |
-| TICK / THUD / POP | RAM 2 / 3 / 4 | 0.8 / 1 / 1 | 0.51 / 0.51 / 0.28 |
-| HEAVY_CLICK | RAM 0 | 1.0 | 1.0 |
-| TEXTURE_TICK | RAM 5 | 0.8 | 0.25 |
+| Effect | Source | Base at MEDIUM |
+| --- | --- | ---: |
+| CLICK / HEAVY_CLICK | RAM 0 | 0.8 / 1.0 |
+| DOUBLE_CLICK | `effect_1.bin` HyperOS feedbackNegativeLight | 1.0 |
+| TICK / THUD / POP | RAM 2 / 3 / 4 | 0.8 / 1 / 1 |
+| TEXTURE_TICK | RAM 5 | 1.0 |
 
-Output = peak of a resonator fitted to the stock compensation table (Q 18, cached
-f0), relative to full-gain RAM 0. Choose waveforms by this, never by sample
-energy: RAM 5 (~325 Hz) gives 0.31. Rejected Nov 1 palette (CLICK RAM 5) felt weak.
+**Real taps are compositions:** launcher/SystemUI send PRIMITIVE_CLICK 0.62-0.70
+and slider LOW_TICK chains, not prebaked CLICK. Never damp or shorten stock
+primitive slices: a damped click measured equal peak but was felt as dead.
+Pick waveforms by output, not energy (RAM 5 ~325 Hz gives ~0.3 of RAM 0).
+Measure with the accelerometer meter in the evidence, not dumpsys "finished".
 Zero-based RAM IDs. HyperOS `HapticFeedbackUtil` reads `sys.haptic.<event>=RAM,code`;
 code 0/1/2 → 0.375/0.625/1.0 per event; the user level is a separate global
 multiplier. Android intensity scales the base: LIGHT ×0.6, STRONG ×1.6 (cap 1),
@@ -57,12 +58,11 @@ cached resonance are available: on/perform callbacks, composition, amplitude
 control and resonant frequency. **No PWLE, frequency control, FOAM, external
 control, always-on or vendor effects.**
 
-Primitives: CLICK/THUD/LIGHT_TICK are stock RAM slices
-`primitive_effect_{1,2,7}.bin`; LOW_TICK `primitive_effect_8.bin` is stock
-vibratorfeature prebaked transient 4 (~125 Hz, one cycle). SPIN 59, QUICK_RISE 76,
-SLOW_RISE 306, QUICK_FALL 76 ms are synthesized at cached f0 (stock SineTrack
-model, levels 0.2-0.25 ≈ click output) unless files exist. All primitive PCM
-gets appended model-based active damping (stock samples unchanged). This satisfies MSDL's required set. Stock A13 HAL had
+Primitives: CLICK/THUD/LIGHT_TICK are undamped stock RAM slices
+`primitive_effect_{1,2,7}.bin`; LOW_TICK aliases LIGHT_TICK (stock prebaked
+transient 4 rang ~70 ms, rejected). SPIN 66, QUICK_RISE 76, SLOW_RISE 306,
+QUICK_FALL 76 ms are synthesized at cached f0 (stock SineTrack model, levels
+0.2-0.25, measured click-level) with model-based damping, unless files exist. This satisfies MSDL's required set. Stock A13 HAL had
 no composition at all. Exact lookup from `libqtivibratoreffect.xiaomi`.
 
 ## Kernel and firmware
