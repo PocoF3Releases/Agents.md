@@ -2,16 +2,12 @@
 
 ## V-HAPTICS
 
-**2026-11-01 — module build, host synth and temp-mount device checks.** HyperOS
-palette, 8 primitives, stock LOW_TICK/DOUBLE_CLICK files: all effects/primitives
-completed once, no HAL errors; touch-intensity strengths and cancellation not
-re-exercised; no human feel acceptance. [Record](../evidence/haptics/2026-11-01.md).
+**2026-11-01 — build, host synth, temp-mount device.** HyperOS palette, 8
+primitives, stock LOW_TICK/DOUBLE_CLICK: all completed once, no HAL errors;
+strengths/cancel not re-exercised; no feel acceptance. [Record](../evidence/haptics/2026-11-01.md).
 
-**2026-10-04 — scoped source/build/host/device tests.** Enforcing candidate:
-21 effect/strength checks, three primitives, timed amplitude/cancellation,
-AAC native/limited-HE1 and PCM refills pass. Temporary mount restored. No full
-RichTap/PWLE; app-facing RichTap unverified. LOW_TICK has October 8 commit-reported
-tests, installed identity unknown. September 30 acceptance is historical.
+2026-10-04: 21 effect checks, cancel, AAC/HE1, PCM refills
+passed (temp mount); no full RichTap/PWLE.
 [Scope](../evidence/haptics/2026-10-04.md).
 
 ## V-AC4
