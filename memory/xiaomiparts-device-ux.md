@@ -66,5 +66,5 @@ Production is tested through a staged single-app `/data/app` update with UID 100
 
 [Sound group/translation evidence](../evidence/evox-native-recovery-20261014.md#device-sound-category).
 
-[October 31 fixes](../evidence/parts-review-20261031.md): HBM rollback, refresh
-retries, rejected EQ drafts and translations; host checks pass, APK/phone deferred.
+Review fixes: [Oct 31](../evidence/parts-review-20261031.md) HBM rollback, refresh
+retries, EQ drafts, strings; [Nov 1](../evidence/parts-review-20261101.md) resume.
