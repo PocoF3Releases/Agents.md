@@ -37,7 +37,8 @@ sysfs base: `/sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/`.
 
 **Real taps are compositions:** launcher/SystemUI send PRIMITIVE_CLICK 0.62-0.70
 and slider LOW_TICK chains, not prebaked CLICK. Composition scale is ×1/0.7
-(cap 1), so taps play at full strength like HyperOS. Never damp or shorten stock
+(cap 1), so taps play at full strength like HyperOS. Plain app-icon taps send no
+vibration (Pixel Launcher design); maintainer chose 2026-11-01 to keep that. Never damp or shorten stock
 primitive slices: a damped click measured equal peak but was felt as dead.
 Pick waveforms by output, not energy (RAM 5 ~325 Hz gives ~0.3 of RAM 0).
 Measure with the accelerometer meter in the evidence, not dumpsys "finished".
