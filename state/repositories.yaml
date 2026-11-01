@@ -176,14 +176,14 @@ repositories:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: f154e5aa0c5001385be9bf37e28246bac697a0ac
+    cnb: c500f97ecbbe1b1ead9dd5877b7f42f6709de36a
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/f154e5aa0c5001385be9bf37e28246bac697a0ac
-  observation: 2026-10-31; rebased custom changes onto current selected upstream;
-    authorship retained and public tip verified. Build-graph and host checks in
-    evidence/source-refresh-20261031.md; no new full-build or device acceptance.
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/c500f97ecbbe1b1ead9dd5877b7f42f6709de36a
+  observation: 2026-11-01; imported the missing ColorOS header callback class;
+    SystemUI-core user build passed, recovery overlay unchanged.
+    See evidence/systemui-expandable-20261101.md for scope and artifact identity.
   local_a17:
-    head: 4b4d85489842277f1c009956ad13f8f0f83a4114
+    head: 293ec873efba6023f6cd562215eb826569877b7e
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source

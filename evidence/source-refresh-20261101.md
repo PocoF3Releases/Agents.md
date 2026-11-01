@@ -1,5 +1,7 @@
 # Source refresh — 2026-11-01
 
+Subsequent build correction: [SystemUI header callback import](systemui-expandable-20261101.md).
+
 `source-checked`, `manifest-checked`. Completed full network sync with
 `repo sync -n --current-branch --no-tags -j50`, then full local checkout with
 `repo sync -l -d -j50`. Both passed. All 1,265 source projects were clean before
