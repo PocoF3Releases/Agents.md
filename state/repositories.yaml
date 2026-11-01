@@ -41,14 +41,14 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: a1ce08373912f255b1ac1dfb98c1a560e303caa9
+    aosp-17: f8b5b6d8888e803c9d0cf463ce1cb67ed8298417
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/749a229f36b05bf08254b287b7f1b7c297df0bd3
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f8b5b6d8888e803c9d0cf463ce1cb67ed8298417
   observation: 2026-11-01; stock LOW_TICK/DOUBLE_CLICK haptic extraction in
     evidence/haptics/2026-11-01.md. Anti-flicker RRO checks in
     evidence/displayfeature-evaluation-20261028.md; production RRO not installed.
   local_a17:
-    head: fc26e5e24882ee470dd52a0f21842cf6018d0299
+    head: c627452df84eeabcbe170d25e6bd372bec649793
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -56,10 +56,10 @@ repositories:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: e280f0fae1e321dcca15591c1b4d6c38d7f13294
+    aosp-17: a1d9cecde3de3569970eeb72788df2b124c09219
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/e83c84d6cf306fc2cce649a088b9761ac0f28cef
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a1d9cecde3de3569970eeb72788df2b124c09219
   observation: 2026-11-01; stock LOW_TICK/DOUBLE_CLICK haptics in evidence/haptics/2026-11-01.md;
     HAL temp-mount tested, not in the installed ROM.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
@@ -140,13 +140,13 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 0512a2f794fa812dc6db1b4a3244148f319f0f95
+    cnb: e4e57aa83c6fd1012bcd3eeadcde46dcd1fa9609
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/0512a2f794fa812dc6db1b4a3244148f319f0f95
-  observation: 2026-11-01; AW8697 HyperOS palette/primitives in evidence/haptics/2026-11-01.md
-    (temp-mount device check); DSPVolume allowlist removal in permissions-audit-20261101.md. Dolby review in evidence/dolby-review-20261031.md; enforcing
-    DAP tests in evidence/dolby-dap-params-20261031.md.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/e4e57aa83c6fd1012bcd3eeadcde46dcd1fa9609
+  observation: 2026-11-01; AW8697 modelled-output palette, primitives and damping in
+    evidence/haptics/2026-11-01.md (temp-mount check, feel pending); DSPVolume allowlist
+    in permissions-audit-20261101.md; Dolby in evidence/dolby-review-20261031.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:
