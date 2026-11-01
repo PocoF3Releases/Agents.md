@@ -102,10 +102,9 @@ recording/lifecycle checks and artifact restoration; physical endpoint limits re
 
 ## V-PLATFORM
 
-[Crypto/library recheck](../evidence/kernel-crypto-lib-recheck-20261026.md):
-27 fixes preserved; QRNG exact-length repair passes W=1/Image, host and enforcing
-phone checks. Nine reviewed sparse reports stay visible; lock tests pass. Original
-boot restored; prior GPU/display/hardware limits linked there.
+[Crypto/library acceptance and limits](../evidence/kernel-crypto-lib-recheck-20261026.md):
+27 fixes preserved; QRNG repair passes Image/host/phone checks. Nine reviewed sparse
+reports remain visible. Original boot restored.
 
 ## V-RELEASE
 
@@ -218,3 +217,8 @@ boot restored; partition unchanged. No full conformance/release.
 ## V-KGSL-20261028
 
 [KGSL evidence](../evidence/kgsl-backports-20261028.md).
+
+## V-KERNEL-W123-20261102
+
+[Audit, 183 host checks and limits](../evidence/kernel-w123-20261102.md).
+No new installation.
