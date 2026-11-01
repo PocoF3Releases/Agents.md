@@ -126,3 +126,4 @@ personal calibration; do not invent gains or enable them without endpoint tests.
 [DAP parameters](../evidence/dolby-dap-params-20261031.md): stock IDs 101-116,
 QDSP keys and ranges. [GEQ/locale fixes](../evidence/dolby-review-20261031.md):
 enable-failure reporting and separate translations, host/APK verified.
+[MiSound map](../evidence/misound-params-20261101.md); Dolby/MiSound coexist.

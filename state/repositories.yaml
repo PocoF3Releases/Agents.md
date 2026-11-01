@@ -28,9 +28,9 @@ repositories:
     aosp-17: b53a218daacd4242a54fa5d5067a6a0299fe7f2e
   commit_links:
     aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b53a218daacd4242a54fa5d5067a6a0299fe7f2e
-  observation: 2026-10-31; Parts HBM rollback, refresh retries, EQ draft recovery
-    and separate translations; host/resource/isolated Kotlin checks in
-    evidence/parts-review-20261031.md. APK build/device tests remain deferred.
+  observation: 2026-11-01; MiSound custom EQ/Classical device-tested on the Nov 1 ROM
+    (evidence/misound-params-20261101.md); Parts HBM rollback and refresh retries
+    remain host-checked in evidence/parts-review-20261031.md.
   local_a17:
     head: d6cb0f7965c0052b03bbb5077cb740fe3dacc1b9
     reason: ROM public tip plus authored recovery overlay
