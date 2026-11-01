@@ -5,6 +5,8 @@ completed November 2. User explicitly authorized dropping documentation-only
 changes, topic ordering and force-pushing. No new kernel functionality or CIP
 upgrade was introduced.
 
+Further own-series consolidation: [current 751-commit series](kernel-series-20261102.md).
+
 ## Published result
 
 [e26284f54187](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e26284f541876a3f3f9611740db500f00c7f3aea)

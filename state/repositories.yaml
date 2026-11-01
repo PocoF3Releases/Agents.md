@@ -80,14 +80,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: e26284f541876a3f3f9611740db500f00c7f3aea
+    aosp-17: 89aca84b51ad0d68997d344cc159788edeace578
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e26284f541876a3f3f9611740db500f00c7f3aea
-  observation: 2026-11-02; removed 73 documentation-only/tooling commits and
-    organized 722 development commits by dependency/topic above the unchanged
-    158-commit vendor foundation. Code tokens/configs preserved; strict Image
-    build passed. See evidence/kernel-history-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/89aca84b51ad0d68997d344cc159788edeace578
+  observation: 2026-11-02; consolidated own feature-series and mechanical
+    cleanups, 880 to 751 custom commits. Complete tree/configs unchanged,
+    protected imported patches preserved and strict Image target passed.
+    See evidence/kernel-series-20261102.md.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []

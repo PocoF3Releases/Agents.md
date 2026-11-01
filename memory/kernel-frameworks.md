@@ -73,7 +73,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Topic-ordered history](../evidence/kernel-history-20261102.md): 73 documentation-only/tooling commits removed; retained C tokens and all twelve configs match. The final Image passes W=1/Werror with zero compiler diagnostics. Kernel-doc reports intentionally return; no flags suppress them. The previous [sparse/enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md) is historical, not a test of this new Image. The [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) remains unreviewed and was not recounted; source locations changed. Broader UBSan stays parked. No system-side source or thermal/security setting changed.
+[Consolidated history](../evidence/kernel-series-20261102.md): 751 custom commits; complete tree/configs match the prior documentation-cleaned source. The final Image passes W=1/Werror with zero compiler diagnostics. Kernel-doc reports intentionally return; no flags suppress them. The previous [sparse/enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md) is historical, not a test of this new Image. The [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) remains unreviewed and was not recounted; source locations changed. Broader UBSan stays parked. No system-side source or thermal/security setting changed.
 
 ## Intermittent shutdown investigation
 

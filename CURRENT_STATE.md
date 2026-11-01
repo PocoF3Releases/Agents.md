@@ -7,7 +7,7 @@ Checkpoint: **2026-11-02**. [Android 17 status](state/android17-status.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO needs build; manual mismatch remains.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
-- **Sources:** [Source refresh](evidence/source-refresh-20261101.md); [kernel checks](evidence/kernel-history-20261102.md).
+- **Sources:** [Source refresh](evidence/source-refresh-20261101.md); [kernel checks](evidence/kernel-series-20261102.md).
 - **Releases:** October 25 published; October 28 next-build drafts prepared. [Releases](state/releases.md).
 
 | Task | Read |
