@@ -1,10 +1,9 @@
 # Alioth AW8697 haptics
 
-**Stock-backed Android HAL, checkpoint 2026-10-09.** Generated primitives remain
-retired. Seven predefined effects and three byte-exact stock primitives are
-implemented, with a later LOW_TICK light-tick compatibility fallback. Earlier strength correction received subjective acceptance on
-2026-09-30; latest automated tests do not establish perceptual stock parity. [V-HAPTICS](../state/validation.md#v-haptics) distinguishes
-the installed baseline from the temporary accepted correction.
+**Stock-backed Android HAL, checkpoint 2026-11-01.** Seven effects use the
+HyperOS UI palette/strengths; eight primitives (stock RAM/prebaked slices plus
+SineTrack-model envelopes). [Nov 1 RE and tests](../evidence/haptics/2026-11-01.md);
+no human acceptance yet. [V-HAPTICS](../state/validation.md#v-haptics).
 
 ## Ownership and interfaces
 
@@ -29,25 +28,21 @@ sysfs base: `/sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/`.
 
 ## Effects and stock strength
 
-| Android effect | Zero-based RAM ID | Scheduled duration |
-| --- | ---: | --- |
-| CLICK | 0 | 20 ms |
-| DOUBLE_CLICK | 0 twice | 20 + 80 gap + 20 = 120 ms |
-| TICK | 2 | 20 ms |
-| THUD | 3 | 20 ms |
-| POP | 4 | 28 ms |
-| HEAVY_CLICK | 8 | 20 ms; MIUI mesh-heavy |
-| TEXTURE_TICK | 5 | 20 ms; MIUI mesh-light |
+| Android effect | Source | Base at MEDIUM |
+| --- | --- | ---: |
+| CLICK | RAM 5 (HyperOS key down `5,2`) | 1.0 |
+| DOUBLE_CLICK | `effect_1.bin` = HyperOS feedbackNegativeLight (~117 ms) | 1.0 |
+| TICK | RAM 2 | 0.625 |
+| THUD | RAM 3 (keyboard tap `3,2`) | 1.0 |
+| POP | RAM 4 | 0.625 |
+| HEAVY_CLICK | RAM 0 (long-press waveform) | 1.0 |
+| TEXTURE_TICK | RAM 5 (mesh.light `5,1`) | 0.625 |
 
-Hardware RAM slots are one based. Filename numbers are not Android enum IDs.
-In particular, stock mesh-heavy uses 8; the light mesh waveform uses 5.
-
-Stock `sys.haptic.infinitelevel=true` activates `VibrateUtils` →
-`VibratorExt::configStrengthForEffect` → `InputFFDevice::playEffect`.
-Light/medium/strong factors **0.375 / 0.625 / 1.0** yield gains **48 / 80 / 128**.
-The old native fallback 30/64/128 was not the active stock UI path. The final
-HAL uses the active values; `TEXTURE_TICK` has no extra half-gain multiplier.
-At medium it matches `sys.haptic.mesh.light=5,1`.
+Zero-based RAM IDs. HyperOS `HapticFeedbackUtil` reads `sys.haptic.<event>=RAM,code`;
+code 0/1/2 → 0.375/0.625/1.0 per event; the user level is a separate global
+multiplier. Android intensity scales the base: LIGHT ×0.6, STRONG ×1.6 (cap 1),
+so 0.625 bases keep gains 48/80/128. Stock AIDL perform maps Effect ID = RAM ID
+(`*_P_RTP.bin` zero-byte markers) and magnitude `16384*s+16383` → gain `128*s`.
 
 Android gesture-threshold-deactivate and toggle-off fall back to TEXTURE_TICK
 when the requested primitive is absent. The earlier RAM-2 half-gain choice compounded weak
@@ -61,12 +56,12 @@ cached resonance are available: on/perform callbacks, composition, amplitude
 control and resonant frequency. **No PWLE, frequency control, FOAM, external
 control, always-on or vendor effects.**
 
-Composition supports NOOP plus CLICK (enum 1, 16 ms), THUD (2, 11 ms) and
-LIGHT_TICK (7, Android TICK, 13 ms). Their files are
-`/vendor/etc/vibrator/primitive_effect_{1,2,7}.bin`: exact stock RAM slices of
-381/252/304 samples. LOW_TICK additionally reuses LIGHT_TICK as a compatibility fallback (see below).
-Other primitives remain unsupported; do not alias every primitive to CLICK. Discovery uses the exact lookup
-from `libqtivibratoreffect.xiaomi`.
+Primitives: CLICK/THUD/LIGHT_TICK are stock RAM slices
+`primitive_effect_{1,2,7}.bin`; LOW_TICK `primitive_effect_8.bin` is stock
+vibratorfeature prebaked transient 4 (~125 Hz, one cycle). SPIN 59, QUICK_RISE 76,
+SLOW_RISE 306, QUICK_FALL 66 ms are synthesized at cached f0 (stock SineTrack
+model) unless files exist. This satisfies MSDL's required set. Stock A13 HAL had
+no composition at all. Exact lookup from `libqtivibratoreffect.xiaomi`.
 
 ## Kernel and firmware
 
@@ -146,11 +141,4 @@ check; root is temporary research, normal playback remains enforcing/system UID.
 Measured acceleration, exact HyperOS parity and a new human acceptance of the
 October 4 candidate remain unestablished.
 
-## October 8 LOW_TICK compatibility
-
-Hardware the historical candidate maps LOW_TICK to stock LIGHT_TICK streaming or RAM selector 2,
-preserving scale/delay, duration, callbacks and cancellation; exact files take
-priority. It is an approximation, not a verified low-frequency waveform.
-Commit-reported target build and temporary enforcing completion tests passed;
-reported candidate active until reboot at that time, current device state unknown.
-See [latest audit limits](../state/validation.md#v-source-20261009).
+LOW_TICK still falls back to LIGHT_TICK if its file is missing.

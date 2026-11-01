@@ -2,6 +2,11 @@
 
 ## V-HAPTICS
 
+**2026-11-01 — module build, host synth and temp-mount device checks.** HyperOS
+palette, 8 primitives, stock LOW_TICK/DOUBLE_CLICK files: all effects/primitives
+completed once, no HAL errors; touch-intensity strengths and cancellation not
+re-exercised; no human feel acceptance. [Record](../evidence/haptics/2026-11-01.md).
+
 **2026-10-04 — scoped source/build/host/device tests.** Enforcing candidate:
 21 effect/strength checks, three primitives, timed amplitude/cancellation,
 AAC native/limited-HE1 and PCM refills pass. Temporary mount restored. No full

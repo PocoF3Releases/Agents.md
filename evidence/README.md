@@ -15,6 +15,7 @@ observations without requiring the original workstation or a raw log archive.
 | [Subsystem inventory](subsystem-inventory-20261025.md) | 105-entry map, source/build counts, SKU and hardware distinctions |
 | [Cancelled Turnip evaluation](turnip-evaluation-20261025.md) | Actual driver selection, tests, slowdown, uncertainty and stock restoration |
 | [Native A17 recovery/full OTA](evox-native-recovery-20261014.md) | Resync, fresh user build, secure OTA, no-credential FBE and restoration |
+| [Haptics, 2026-11-01](haptics/2026-11-01.md) | Stock service/framework RE, .bin library map, HyperOS palette, new primitives |
 | [Haptics, 2026-10-04](haptics/2026-10-04.md) | Temporary final candidate, stock composition, PCM/AAC scope and restoration |
 | [Haptics, 2026-09-30](haptics/2026-09-30.md) | Installed baseline, corrected candidate, stock gains and user acceptance |
 | [AC-4 diagnostic](ac4/README.md) | Reusable decoder test and recorded PCM result |
