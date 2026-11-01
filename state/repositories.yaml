@@ -41,14 +41,14 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 1ae7fb38a4bedf301001fd737bdb52bf1581ae4f
+    aosp-17: bda9033475545c464478bb4f9ff73e061444cb8a
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/1ae7fb38a4bedf301001fd737bdb52bf1581ae4f
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/bda9033475545c464478bb4f9ff73e061444cb8a
   observation: 2026-11-01; HyperOS DOUBLE_CLICK haptic extraction in
     evidence/haptics/2026-11-01.md. Anti-flicker RRO checks in
     evidence/displayfeature-evaluation-20261028.md; production RRO not installed.
   local_a17:
-    head: e78d5ca4a5b9d1d107a0f0dca857595f6dd48aa5
+    head: 306d9554abd9281e2e5908f982c8dc0ee6c4e4bf
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
@@ -56,10 +56,10 @@ repositories:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 2413d5d3fff25277f9a821ffbc6e92ab9b1dd0fe
+    aosp-17: d2d50eb0a0cac75024be0f415c92c19eaca9f6d2
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/2413d5d3fff25277f9a821ffbc6e92ab9b1dd0fe
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/d2d50eb0a0cac75024be0f415c92c19eaca9f6d2
   observation: 2026-11-01; HyperOS DOUBLE_CLICK haptic in evidence/haptics/2026-11-01.md;
     HAL temp-mount tested, not in the installed ROM.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
@@ -140,10 +140,10 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: bc164f54446d81b4a2ff29e567fcdd06e8ec54c5
+    cnb: 496c86ab11626768816ff5de5182867c62a436b8
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/bc164f54446d81b4a2ff29e567fcdd06e8ec54c5
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/496c86ab11626768816ff5de5182867c62a436b8
   observation: 2026-11-01; AW8697 measured tuning, synthesized primitives in
     evidence/haptics/2026-11-01.md (temp-mount check, feel pending); DSPVolume allowlist
     in permissions-audit-20261101.md; Dolby in evidence/dolby-review-20261031.md.
