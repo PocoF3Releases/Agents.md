@@ -73,7 +73,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Consolidated history](../evidence/kernel-series-20261102.md): 751 custom commits; complete tree/configs match the prior documentation-cleaned source. The final Image passes W=1/Werror with zero compiler diagnostics. Kernel-doc reports intentionally return; no flags suppress them. The previous [sparse/enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md) is historical, not a test of this new Image. The [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) remains unreviewed and was not recounted; source locations changed. Broader UBSan stays parked. No system-side source or thermal/security setting changed.
+[W=123 audit](../evidence/kernel-w123-20261102.md): release-config Image/modules/DTBs and strict W=1/Werror pass. One FastRPC heap error fix passes 183 host checks; no new install. Broad warning baseline remains. [History consolidation](../evidence/kernel-series-20261102.md) preserves the earlier source/configs. Kernel-doc stays visible. Previous [sparse/enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md) is historical; the [2,954-warning sparse backlog](../evidence/kernel-sparse-backlog-20261028.md) was not recounted. FastRPC sparse retains one context warning. Broader UBSan stays parked; system-side sources and thermal/security settings are unchanged.
 
 ## Intermittent shutdown investigation
 

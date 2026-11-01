@@ -3,6 +3,8 @@
 `history-verified`, `tree-equivalent`, `build-tested`. User requested fewer,
 higher-quality commits after the [documentation removal/topic pass](kernel-history-20261102.md).
 
+Follow-up source repair and broader checks: [W=123 audit](kernel-w123-20261102.md).
+
 ## Published result
 
 [89aca84b51ad](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/89aca84b51ad0d68997d344cc159788edeace578)

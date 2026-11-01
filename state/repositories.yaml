@@ -80,14 +80,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 89aca84b51ad0d68997d344cc159788edeace578
+    aosp-17: 1fbfa02096f2a7e344375c2c465b184d0141af68
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/89aca84b51ad0d68997d344cc159788edeace578
-  observation: 2026-11-02; consolidated own feature-series and mechanical
-    cleanups, 880 to 751 custom commits. Complete tree/configs unchanged,
-    protected imported patches preserved and strict Image target passed.
-    See evidence/kernel-series-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1fbfa02096f2a7e344375c2c465b184d0141af68
+  observation: 2026-11-02; W=123 audit and strict W=1/Werror Image/modules/DTBs
+    passed with the unchanged release config. One focused FastRPC heap failure
+    propagation fix; 183 host checks pass. Broad warning baseline remains;
+    no new device install. See evidence/kernel-w123-20261102.md.
+
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
