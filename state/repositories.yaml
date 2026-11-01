@@ -80,15 +80,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 830fb30974c82ef91080e9295b90169bb97661da
+    aosp-17: e26284f541876a3f3f9611740db500f00c7f3aea
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/830fb30974c82ef91080e9295b90169bb97661da
-  observation: 2026-10-31; replacement-pack battery temperature floored by quiet_therm and
-    charger_therm0 (alioth DTBO property); strict W=1 Image/DTBs and checkpatch pass;
-    enforcing temporary boot, persistent active-slot install and reboot verified.
-    See evidence/battery-thermistor-20261031.md. Prior KGSL scope remains in
-    evidence/kgsl-backports-20261028.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e26284f541876a3f3f9611740db500f00c7f3aea
+  observation: 2026-11-02; removed 73 documentation-only/tooling commits and
+    organized 722 development commits by dependency/topic above the unchanged
+    158-commit vendor foundation. Code tokens/configs preserved; strict Image
+    build passed. See evidence/kernel-history-20261102.md.
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
