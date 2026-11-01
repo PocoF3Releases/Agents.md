@@ -30,9 +30,9 @@ sysfs base: `/sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/`.
 
 | Effect | Source | Base at MEDIUM |
 | --- | --- | ---: |
-| CLICK / HEAVY_CLICK | RAM 0 | 0.8 / 1.0 |
+| CLICK / HEAVY_CLICK | RAM 0 | 1.0 / 1.0 |
 | DOUBLE_CLICK | `effect_1.bin` HyperOS feedbackNegativeLight | 1.0 |
-| TICK / THUD / POP | RAM 2 / 3 / 4 | 0.8 / 1 / 1 |
+| TICK / THUD / POP | RAM 2 / 1 / 4 | 0.8 / 1 / 1 |
 | TEXTURE_TICK | RAM 5 | 1.0 |
 
 **Real taps are compositions:** launcher/SystemUI send PRIMITIVE_CLICK 0.62-0.70
@@ -60,8 +60,9 @@ cached resonance are available: on/perform callbacks, composition, amplitude
 control and resonant frequency. **No PWLE, frequency control, FOAM, external
 control, always-on or vendor effects.**
 
-Primitives: CLICK/THUD/LIGHT_TICK are undamped stock RAM slices
-`primitive_effect_{1,2,7}.bin`; LOW_TICK aliases LIGHT_TICK (stock prebaked
+Primitives: CLICK/THUD/LIGHT_TICK are undamped stock RAM 0/1/2 slices
+`primitive_effect_{1,2,7}.bin`. Measured RAM medians (m/s², full gain): 0 1.44,
+1 1.30, 9 1.19, 3 1.09, 2 0.94, 6 0.91, 8 0.65, 5 0.63, 4 0.31, 7 0.22; LOW_TICK aliases LIGHT_TICK (stock prebaked
 transient 4 rang ~70 ms, rejected). SPIN 66, QUICK_RISE 76, SLOW_RISE 306,
 QUICK_FALL 76 ms are synthesized at cached f0 (stock SineTrack model, levels
 0.2-0.25, measured click-level) with model-based damping, unless files exist. This satisfies MSDL's required set. Stock A13 HAL had
