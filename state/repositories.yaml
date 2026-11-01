@@ -25,14 +25,14 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: b53a218daacd4242a54fa5d5067a6a0299fe7f2e
+    aosp-17: 84bd69b3e80eca03ce7d0b26efa99b4382232070
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b53a218daacd4242a54fa5d5067a6a0299fe7f2e
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/84bd69b3e80eca03ce7d0b26efa99b4382232070
   observation: 2026-11-01; MiSound custom EQ/Classical device-tested on the Nov 1 ROM
-    (evidence/misound-params-20261101.md); Parts HBM rollback and refresh retries
-    remain host-checked in evidence/parts-review-20261031.md.
+    (evidence/misound-params-20261101.md); full Parts Kotlin review and single resume
+    refresh fix in evidence/parts-review-20261101.md (APK bind-mount check only).
   local_a17:
-    head: d6cb0f7965c0052b03bbb5077cb740fe3dacc1b9
+    head: c3e71a0dea9d9ef8889714ac3bc33dbc1cfb8344
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source

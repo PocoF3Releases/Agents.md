@@ -6,6 +6,7 @@ observations without requiring the original workstation or a raw log archive.
 | Record | Scope |
 | --- | --- |
 | [Audio Java/native closure](audio-framework-closure-20261025.md) | Exact bytecode recovery, native coverage, phone checks and optional headphone gaps |
+| [Parts Kotlin review](parts-review-20261101.md) | Full Parts source review, single resume-refresh fix, APK bind-mount check |
 | [MiSound parameters](misound-params-20261101.md) | Native ID map, stock presets/EQ range, custom EQ device check, coexistence decision |
 | [Dolby DAP parameters](dolby-dap-params-20261031.md) | Stock ID map, QDSP keys, new switches and retained limits |
 | [Thermal HAL decision](thermal-hal-decision-20261031.md) | Stock Kona table RE, mi_thermald ownership, no-HAL rationale |
