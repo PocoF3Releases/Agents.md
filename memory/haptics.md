@@ -65,7 +65,9 @@ Primitives: CLICK/THUD/LIGHT_TICK are undamped stock RAM 0/1/2 slices
 1 1.30, 9 1.19, 3 1.09, 2 0.94, 6 0.91, 8 0.65, 5 0.63, 4 0.31, 7 0.22; LOW_TICK aliases LIGHT_TICK (stock prebaked
 transient 4 rang ~70 ms, rejected). SPIN 66, QUICK_RISE 76, SLOW_RISE 306,
 QUICK_FALL 76 ms are synthesized at cached f0 (stock SineTrack model, levels
-0.2-0.25, measured click-level) with model-based damping, unless files exist. This satisfies MSDL's required set. Stock A13 HAL had
+0.2-0.25, measured click-level) with model-based damping, unless files exist. Damping checks a full modeled
+cycle below the threshold; an instantaneous velocity zero is insufficient.
+[Review](../evidence/claude-review-20261101.md). This satisfies MSDL's required set. Stock A13 HAL had
 no composition at all. Exact lookup from `libqtivibratoreffect.xiaomi`.
 
 ## Kernel and firmware
