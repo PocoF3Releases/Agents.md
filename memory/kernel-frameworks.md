@@ -73,13 +73,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Redline identity](../evidence/kernel-redline-20261028.md) is host-checked;
-only LOCALVERSION changes in all twelve generated configs. No branded Image
-was built/flashed. Main retains [strict W=1/Werror and enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md),
-with taint0 after normal boot. All 16 errors/five requested contexts are closed;
-the [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) is unreviewed.
-System sources and thermal/security settings are unchanged. [Prior CPU scope](../evidence/kernel-baseline-audit-20261027.md)
-is historical. Broader UBSan is parked; open findings are not certified safe.
+[Topic-ordered history](../evidence/kernel-history-20261102.md): 73 documentation-only/tooling commits removed; retained C tokens and all twelve configs match. The final Image passes W=1/Werror with zero compiler diagnostics. Kernel-doc reports intentionally return; no flags suppress them. The previous [sparse/enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md) is historical, not a test of this new Image. The [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) remains unreviewed and was not recounted; source locations changed. Broader UBSan stays parked. No system-side source or thermal/security setting changed.
 
 ## Intermittent shutdown investigation
 
