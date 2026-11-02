@@ -80,14 +80,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 3d374cb35915256513a2dbccb921d9fbf1259c4b
+    aosp-17: 1cfe734008290c228abf15a8f8ae67a03d52fc1e
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3d374cb35915256513a2dbccb921d9fbf1259c4b
-  observation: 2026-11-02; two audio fixes preserve calibration failures and
-    bound in-band APR packets before allocation. Strict Image/modules/DTBs,
-    parent-context audio W=123/sparse and 856 host checks pass. No new install;
-    broad warning baseline remains. See evidence/kernel-audio-boundaries-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e
+  observation: 2026-11-02; five independent IOMMU/GPU/DMA correctness fixes pushed.
+    Strict W=1/Werror Image/modules/DTBs, 130 host cases and targeted static checks
+    pass. Phone runs the same C-file bytes from the pre-commit build on slot B,
+    Enforcing/taint 0; GPU/audio/storage/network/sleep/reboot checks pass.
+    See evidence/kernel-correctness-followup-20261102.md for limits.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
