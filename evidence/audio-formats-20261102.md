@@ -59,7 +59,7 @@ was relaxed to run either matrix. No changed production C/C++ object requires a
 new kernel build; the installed kernel's strict build remains attached to its
 [original verification](charging-controls-20261102.md).
 
-## Calibration observation, still open
+## Calibration observation and later lookup
 
 The root batch captured a gain-dependent volume-table lookup failure (-19) for
 device 10011. The same speaker ACDB mapping exists in the HyperOS platform XML;
@@ -68,10 +68,10 @@ with no extra/missing installed Forte bank. Thus a missing or changed bank was
 not demonstrated. These observations do not prove that every ACDB lookup or
 DSP parameter is valid, nor that the logged error is harmless in every mode.
 
-Do not replace 10011 with another device ID or invent calibration data to remove
-a log message. Further work needs the exact app-type/gain-table contract and
-active DSP path. Normal PCM transport passing does not close that calibration
-question. Existing sidetone/external-route and acoustic limits remain in the
+The [later core lookup](acdb-lookup-20261102.md) confirms successful common-table
+retrieval but absent selected gain-step records, including the device-15
+counterexample. Do not replace 10011 or invent calibration data to remove the
+message. Audible calibration and the active DSP path retain their limits. Existing sidetone/external-route and acoustic limits remain in the
 route audit. The blocked touch task remains skipped.
 
 Private receipts: `~/evo/.repo/audio-formats-20261102`; the separate `app/` reports
