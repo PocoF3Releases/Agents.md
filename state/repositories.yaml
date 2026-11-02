@@ -88,7 +88,8 @@ repositories:
     Strict W=1/Werror Image/modules/DTBs, 130 host cases and targeted static checks
     pass. Phone runs the same C-file bytes from the pre-commit build on slot B,
     Enforcing/taint 0; GPU/audio/storage/network/sleep/reboot checks pass.
-    See evidence/kernel-correctness-followup-20261102.md for limits.
+    ROM/recovery manifest, public-head replay and product/config checks pass;
+    no dependent source change required. See evidence/kernel-correctness-followup-20261102.md.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
