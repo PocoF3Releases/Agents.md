@@ -73,7 +73,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Audio follow-up](../evidence/kernel-audio-boundaries-20261102.md): calibration errors and in-band APR bounds fixed; strict Image, 856 host checks and 144 sparse invocations pass. Audio checks use `techpack/audio/` for Kona/Cirrus autoconfiguration. No new install. The [whole W=123 audit](../evidence/kernel-w123-20261102.md) retains its unclassified baseline. [Consolidation](../evidence/kernel-series-20261102.md), [older phone/sparse acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning sparse backlog](../evidence/kernel-sparse-backlog-20261028.md) retain their scope; no whole sparse recount. Broader UBSan stays parked. System-side sources and thermal/security settings are unchanged.
+[Correctness audit](../evidence/kernel-correctness-followup-20261102.md): five IOMMU/GPU/DMA fixes; 130 host cases, strict Image/modules/DTBs and 59-unit static checks pass. Phone GPU/PCM/network/storage/sleep/reboot pass on B, Enforcing/taint 0. Published; see limits. [Audio](../evidence/kernel-audio-boundaries-20261102.md) retains `techpack/audio/` build scope. [W=123](../evidence/kernel-w123-20261102.md), [consolidation](../evidence/kernel-series-20261102.md), [older acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) retain scope; no whole sparse recount. UBSan parked; system sources and thermal/security unchanged.
 
 ## Intermittent shutdown investigation
 
