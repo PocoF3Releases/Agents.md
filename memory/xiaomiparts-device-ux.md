@@ -22,9 +22,14 @@ Keep the existing per-app service and four-value profile contract. Alioth aim/st
 
 ## Alioth ultrasound proximity
 
-Alioth the historical candidate patches the exact stock MIUS zero-result poll timeout branch to retry after its existing flush check and mutex unlock. Stock maps the eight-second idle timeout to EIO, causing repeated sensor-service errors. Preserve genuine errors and event handling. Extraction is guarded by stock/patched SHA-256, is idempotent and rejects unknown binaries; inspect extract-files for the exact hashes before operating on a new dump.
+The guarded stock MIUS fix retries its eight-second idle timeout after the flush
+check and mutex unlock, preserving real errors/events. Extraction accepts only
+known stock/patched hashes and is idempotent; inspect extract-files before a new
+dump. Temporary mount tests delivered near/far events (0/5 cm), and the maintainer
+confirmed one call. This does not certify every app/device or require a root mount.
 
-Recorded temporary mount stopped idle errors and delivered near/far events (0/5 cm); the maintainer reported proximity working in a call. This is scoped acceptance of that test, not proof for all call apps or other SM8250 devices. Keep the source extraction fix and packaged blob consistent; do not require a permanent root mount. Later AW8697 work is owned by [haptics](haptics.md).
+[November 2 audit](../evidence/proximity-contract-20261102.md): kernel callback
+lifetime fixed and phone-tested; the separate stock MIUS flush delay remains.
 
 ## HBM brightness recovery — October 9 maintenance
 
