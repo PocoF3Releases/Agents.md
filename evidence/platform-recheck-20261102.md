@@ -77,6 +77,9 @@ The revised extracted-tail regression passes 40,965 host cases and independent
 review, but does not execute hardware voting, caller/EXIT scheduling or negotiation.
 QC3 separately reads FCC twice into unsigned values and still needs review.
 
-No charging source was changed or published, and bypass remains disabled. The
+No PD/QC policy source was changed or published, and bypass remains disabled. The
 connected PC USB attachment is 5 V/non-PPS with the charge pump off; it cannot
 validate active PPS charging. Private receipts: `~/evo/.repo/charging-audit-20261102`.
+
+The later [charging-input correction](charging-controls-20261102.md) is published
+and installed independently; it does not enable bypass or ship the PD/QC candidates.

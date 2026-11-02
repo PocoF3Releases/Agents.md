@@ -75,7 +75,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 [Full-series compatibility plan](../evidence/kernel-contract-plan-20261102.md): incomplete; boundary reproduction paused, ordinary consumer checks remain.
 
-[F2FS follow-up](../evidence/platform-recheck-20261102.md): statistic sizes corrected; strict build/Sparse and phone tests pass. Installed; config unchanged.
+[F2FS](../evidence/platform-recheck-20261102.md) / [charging inputs](../evidence/charging-controls-20261102.md): tested and installed; config unchanged.
 
 ## Intermittent shutdown investigation
 
