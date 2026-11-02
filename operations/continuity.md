@@ -44,6 +44,10 @@ and parked experiments. Missing/stale context is uncertainty, not completion.
 
 ## Keep separate private records
 
+For stalled tools, denials or uncertain results, follow
+[bounded recovery](tooling-recovery.md). Verify newer receipts before replaying
+a saved next step; keep the current owner and parked tasks intact.
+
 Use `.codex/tasks/<unique-task-key>.md` in the owning checkout. A task key may be
 portable across clients; record the current owner/session separately. Concurrent
 chats/forks need distinct writable records, with provenance links for a handoff.
