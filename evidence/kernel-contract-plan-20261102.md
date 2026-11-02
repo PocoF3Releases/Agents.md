@@ -127,3 +127,55 @@ compatibility is still incomplete, including optional generic-route reachability
 external endpoints and opaque thermal behavior. Device `checkvintf` is not
 installed, so no new device VINTF pass is claimed. The paused test stays paused.
 Private receipts: `~/evo/.repo/kernel-contract-audit-20261102/repo-alignment`.
+
+## Generic-route and declared-interface closure — 2026-11-02
+
+**Source/binary checked:** all 30 effective paths with absent direct controls
+were classified. Dependencies expand this to 34 paths. The complete 769-path
+post-overlay graph has no cycles or missing nested references; maximum depth is
+four. The checked speaker, handset, protected-speaker, media and built-in capture
+paths contain no missing provider controls.
+
+| Generic path group | Count | Activation / remaining limit |
+| --- | ---: | --- |
+| Different amplifier/channel topology | 13 | Other speaker-bank controls; Alioth binds two CS35L41 devices, at I2C 1-0040/1-0041, with its own overlay. |
+| VBAT | 6 | Feature availability does not enable the paths: `persist.vendor.audio.vbat.enabled` is unset. |
+| MMAP capture | 2 | Product `aaudio.mmap_policy=1` means NEVER in the framework API. |
+| Dynamic QoS resume | 1 | Explicit opt-in is unset; the absent control belongs to SDM660, not Kona. |
+| FM capture | 1 | Kernel RADIO_IRIS is disabled; no FM endpoint exercised. |
+| Qualcomm protected second speaker | 1 | Separate `persist.vendor.audio.speaker.prot.enable` opt-in is unset. Preserve Cirrus processing. |
+| DisplayPort voice routes | 4 | External endpoint not exercised. |
+| GSM / handset sidetone | 2 | Cellular-call behavior unverified; no calls placed. |
+
+Exact binary references confirm the VBAT property at primary HAL
+`audio_extn_can_use_vbat` VA 0x84e74 and the Qualcomm protection property at
+`libspkrprot.so` Thumb VA 0x603a. Its initialization clears the enable flag and
+requires explicit `true`; the feature flag alone is insufficient. Do not enable
+these optional paths to satisfy unused XML. Sidetone's direct caller/fallback
+was inspected, but PCM VoIP acceptance does not establish cellular sidetone.
+The six external/cellular paths retain runtime limitations rather than a
+claim that their configuration is proven correct.
+
+**Device-tested:** a bounded, silent, 48-kHz duplex fixture completed three
+speaker/earpiece pairs (six switches), maintaining capture after each change.
+Mixer snapshots confirm the actual product overlay: receiver-only versus dual
+DSP routing, S24_LE / 96-kHz backend, receiver gain and ultrasound selection.
+Normal mode was restored, audioserver/mi_thermald PIDs stayed unchanged, SELinux
+remained Enforcing and taint stayed 0. Samples were discarded; staged DEX and
+mixer utility were removed. These checks do not measure acoustic quality.
+
+**Build-tested:** `m -j4 check-vintf-all` passed, reporting COMPATIBLE. The check
+used kernel version/config and all mapped system/vendor/odm/product/system_ext
+and APEX declarations, with first API level 30. Generated kernel metadata is
+`4.19.325-Redline-1cfe734-cip136`; its configuration SHA-256 equals the captured
+running configuration (6a3c2dff85db6e80d35aed7efa82c9b5950687f975c975d5fcee6b49a8a39c48).
+The phone still runs the earlier precommit artifact described above. This is
+build-tree VINTF acceptance, not a new device checkvintf invocation or every HAL
+behavioral test. The target rebuilt its kernel prerequisite without source edits.
+
+No new actionable source mismatch was established. Kernel, device-tree and HAL
+worktrees remain clean; there is no new implementation patch in this closure.
+Public ABI, controls, audio, power/thermal and recovery-composition reviews retain
+their earlier limits; exhaustive internal behavior is not certified. The blocked
+boundary task remains skipped. Private receipts are under
+`~/evo/.repo/kernel-contract-audit-20261102/generic-route-audit`.
