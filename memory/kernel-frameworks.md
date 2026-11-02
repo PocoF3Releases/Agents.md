@@ -6,7 +6,7 @@ Target: POCO F3 / alioth, SM8250/Kona / Snapdragon 870-class hardware; Android 1
 
 `device/xiaomi/alioth/BoardConfig.mk` includes common BoardConfigCommon.mk. Its device.mk inherits common kona.mk, includes camera/miuicamera.mk and inherits vendor/xiaomi/alioth. Common kona.mk packages XiaomiParts and inherits vendor/xiaomi/sm8250-common. Camera integration inherits vendor/xiaomi/camera. Both camera delivery trees remain mandatory. Alioth-specific configuration belongs in alioth; shared init/audio/media/SELinux and Parts belong in sm8250-common. Standalone hardware/xiaomi owns reusable Xiaomi/Dolby integration.
 
-An uploaded full-Git ZIP is usable only when supplied in the current environment. Inspect status and remote divergence; restore ZIP-lost executable bits and symlinks without discarding edits. The known common `.clang-format` target is `../../../build/soong/scripts/system-clang-format`. Do not commit extraction damage or reset to an old snapshot automatically. [Original workspace evidence](kernel-frameworks.md).
+For supplied Git ZIPs, inspect divergence and restore extraction-damaged modes/symlinks without discarding edits. The known common `.clang-format` target is `../../../build/soong/scripts/system-clang-format`. Do not commit extraction damage or reset to an old snapshot automatically. [Original workspace evidence](kernel-frameworks.md).
 
 ## Rootdir and compatibility lessons
 
@@ -35,8 +35,6 @@ Historical boot outcomes and then-unresolved Cirrus/ultrasound behavior and the 
 ## Current source ownership
 
 Upstream dependencies already provide the absent-kernel-attribute ENOENT handling and optional BPF iterator log-spam correction. Preserve these integration facts without tracking upstream heads or restoring retired fork overrides. Our Android 17 frameworks/base contains independent high-FPS screen recording and blur suppression; compare current behavior before replaying old patches.
-
-The retired font override is not a build requirement. Verify packaged assets when font work is requested.
 
 GPU donor-driver, Turnip and game-setting experiments were parked by the maintainer. No broadly validated Unity/Unreal optimization, F8 GPU-driver compatibility, frame-generation port or unlocked 120fps is established. Keep thermal protection intact. Experimental root modules are not production fixes or required recovery dependencies.
 
@@ -73,7 +71,9 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Correctness audit](../evidence/kernel-correctness-followup-20261102.md): five IOMMU/GPU/DMA fixes; 130 host cases, strict Image/modules/DTBs and 59-unit static checks pass. Phone GPU/PCM/network/storage/sleep/reboot pass on B, Enforcing/taint 0. Published; integration checked. [Audio](../evidence/kernel-audio-boundaries-20261102.md) retains `techpack/audio/` build scope. [W=123](../evidence/kernel-w123-20261102.md), [consolidation](../evidence/kernel-series-20261102.md), [older acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) retain scope; no whole sparse recount. UBSan parked; system sources and thermal/security unchanged.
+[Correctness audit](../evidence/kernel-correctness-followup-20261102.md): five IOMMU/GPU/DMA fixes; 130 host cases, strict Image/modules/DTBs and 59-unit static checks pass. Phone GPU/PCM/network/storage/sleep/reboot pass on B, Enforcing/taint 0. Published; last-five-fix integration checked. [Audio](../evidence/kernel-audio-boundaries-20261102.md) retains `techpack/audio/` build scope. [W=123](../evidence/kernel-w123-20261102.md), [consolidation](../evidence/kernel-series-20261102.md), [older acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) retain scope; no whole sparse recount. UBSan parked; system sources and thermal/security unchanged.
+
+[Full-series compatibility plan](../evidence/kernel-contract-plan-20261102.md): incomplete; boundary reproduction paused, ordinary consumer checks remain.
 
 ## Intermittent shutdown investigation
 
