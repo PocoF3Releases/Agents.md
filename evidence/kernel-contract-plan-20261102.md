@@ -232,3 +232,10 @@ selected gain-step records. Replacing stock speaker ID 10011 with 15 would
 change some topologies and still lack those records. No tuning patch is
 justified. This classifies the observed lookup without claiming all DSP or
 acoustic behavior; endpoint/calibration limits and the paused task remain.
+
+## Proximity continuation
+
+[Acceptance](proximity-contract-20261102.md): published ultrasound callback lifetime
+fix, strict build, host race regression and installed-phone audio/sensor checks.
+The independently confirmed MIUS flush delay remains unresolved; its vendor-side
+wakeup/ordering contract needs a demonstrated fix. No touch-boundary work resumed.
