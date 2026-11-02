@@ -36,7 +36,7 @@ Historical boot outcomes and then-unresolved Cirrus/ultrasound behavior and the 
 
 Upstream dependencies already provide the absent-kernel-attribute ENOENT handling and optional BPF iterator log-spam correction. Preserve these integration facts without tracking upstream heads or restoring retired fork overrides. Our Android 17 frameworks/base contains independent high-FPS screen recording and blur suppression; compare current behavior before replaying old patches.
 
-GPU donor-driver, Turnip and game-setting experiments were parked by the maintainer. No broadly validated Unity/Unreal optimization, F8 GPU-driver compatibility, frame-generation port or unlocked 120fps is established. Keep thermal protection intact. Experimental root modules are not production fixes or required recovery dependencies.
+GPU donor/game experiments stay parked; see [graphics](gaming-graphics.md). Thermal protection stays enabled; diagnostic root modules are not production dependencies.
 
 Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; [current fingerprint lifetime/lockout implementation](https://github.com/PocoF3Releases/hardware_xiaomi/commit/807111f89c95838abf8432e1b09f62ae4165cde5) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
 
@@ -74,6 +74,8 @@ modernized; these are build maintenance, not user-visible performance claims.
 [Correctness audit](../evidence/kernel-correctness-followup-20261102.md): five IOMMU/GPU/DMA fixes; 130 host cases, strict Image/modules/DTBs and 59-unit static checks pass. Phone GPU/PCM/network/storage/sleep/reboot pass on B, Enforcing/taint 0. Published; last-five-fix integration checked. [Audio](../evidence/kernel-audio-boundaries-20261102.md) retains `techpack/audio/` build scope. [W=123](../evidence/kernel-w123-20261102.md), [consolidation](../evidence/kernel-series-20261102.md), [older acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) retain scope; no whole sparse recount. UBSan parked; system sources and thermal/security unchanged.
 
 [Full-series compatibility plan](../evidence/kernel-contract-plan-20261102.md): incomplete; boundary reproduction paused, ordinary consumer checks remain.
+
+[F2FS follow-up](../evidence/platform-recheck-20261102.md): statistic sizes corrected; strict build/Sparse and phone tests pass. Installed; config unchanged.
 
 ## Intermittent shutdown investigation
 
