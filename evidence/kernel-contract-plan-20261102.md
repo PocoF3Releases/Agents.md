@@ -223,3 +223,12 @@ The [power check](powerhint-contract-20261102.md) verifies bounded framework
 interaction/audio-launch requests reaching CPU/bus/PM-QoS providers and releasing,
 plus boot-time low-power restoration. These passes need no new source patch;
 all wider audit limits and the paused task remain unchanged.
+
+## ACDB lookup classification — 2026-11-02
+
+The [read-only core comparison](acdb-lookup-20261102.md) initializes the eight
+shipped files and verifies common tables/topologies while reproducing absent
+selected gain-step records. Replacing stock speaker ID 10011 with 15 would
+change some topologies and still lack those records. No tuning patch is
+justified. This classifies the observed lookup without claiming all DSP or
+acoustic behavior; endpoint/calibration limits and the paused task remain.
