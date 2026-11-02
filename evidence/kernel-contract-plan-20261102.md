@@ -194,3 +194,10 @@ residual GSM item with a published, phone-tested device-tree correction. It also
 establishes handset-sidetone/HiFi reachability and preserves their unresolved
 hardware limits. Source/build/runtime acceptance and recovery replay are separate;
 no blanket full-series certification or paused-task resumption is implied.
+
+## Charging control continuation
+
+The [charging audit](charging-controls-20261102.md) adds a verified, installed
+restricted-current range guard and separates it from unresolved PPS/QC zero-limit
+policy. Consumer/callback reachability is established; active fast-charge adapter
+acceptance remains open. No bypass opt-in or paused-task resumption occurred.

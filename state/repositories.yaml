@@ -81,16 +81,16 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 7285847f4a2af70e52e7b41a22485307d6a018c9
+    aosp-17: 1846f927ad7ca1e32d9b2c478b667de17d95791e
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7285847f4a2af70e52e7b41a22485307d6a018c9
-  observation: 2026-11-02; F2FS statistics size correction published and persistently
-    installed, upstream author retained. Strict W=1/Werror Image/modules/DTBs,
-    targeted Sparse, host regression and phone counter/storage/audio/reboot checks
-    pass. Config unchanged, SELinux Enforcing and taint 0.
-    See evidence/platform-recheck-20261102.md and the earlier five-fix record in
-    evidence/kernel-correctness-followup-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1846f927ad7ca1e32d9b2c478b667de17d95791e
+  observation: 2026-11-02; restricted-current range guard published and persistently
+    installed. Affected W=1/Werror/Sparse, full strict Image/modules/DTBs, host
+    regression and phone rejection/PCM/reboot checks pass; unchanged kernel-doc
+    findings remain. Config/security/thermal policy unchanged. See
+    evidence/charging-controls-20261102.md; prior F2FS acceptance in
+    evidence/platform-recheck-20261102.md.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
