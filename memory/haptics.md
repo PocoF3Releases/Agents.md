@@ -1,9 +1,13 @@
 # Alioth AW8697 haptics
 
-**Stock-backed Android HAL, checkpoint 2026-11-01.** Seven effects use the
+**Stock-backed Android HAL, checkpoint 2026-11-02.** Seven effects use the
 HyperOS UI palette/strengths; eight primitives (stock RAM/prebaked slices plus
 SineTrack-model envelopes). [Nov 1 RE and tests](../evidence/haptics/2026-11-01.md);
-no human acceptance yet. [V-HAPTICS](../state/validation.md#v-haptics).
+[Nov 2 contract checks](../evidence/haptics/2026-11-02.md) pass selected VTS and
+20 cancellation/replacement sequences on a temporary current HAL. Installed ROM
+remains older after restoration. Scale-zero composition is confirmed silent
+despite its minimum-feelable contract; no calibrated minimum or human acceptance
+yet. Preserve positive-scale tuning. [V-HAPTICS](../state/validation.md#v-haptics).
 
 ## Ownership and interfaces
 
