@@ -104,3 +104,35 @@ All 32 earlier IOMMU Smatch rows have an explicit private disposition:
 GPU timestamp reports were checked against context-ID allocation below `KGSL_MEMSTORE_MAX`, fixed aligned memstore fields and context references retained by event users; no valid-context failure was demonstrated. FastRPC map/output construction and fds/maps initialization likewise provide important caller invariants; no speculative NULL-guard patch was added. This review does not prove absence of every race or external misuse.
 
 **Still unverified:** forced real GPU-worker teardown/failure injection, live pool-init/OOM behavior, exhaustive DMA allocate/free/unwind and concurrency, whole-kernel/new-configuration correctness. Normal-path exact-image device acceptance above closes the earlier no-device-test gap; it does not turn finite host error-path models into hardware fault-injection proof. These limits are retained rather than masked by production debug/configuration changes. The five source fixes are now pushed to `aosp-17`; the remote head was verified. Original upstream authorship is preserved, and GitHub recognizes Codex on the four commits carrying its trailer. This publication does not certify the unchanged baseline findings or the fault-injection limitations above.
+
+## Cross-repository integration
+
+After the user's integration/push request, checked all **43 GitHub build inputs**
+selected from the two PocoF3Releases organizations, the **GitLab camera input**,
+and the canonical recovery local-manifest repository against their published
+selected heads. Forty GitHub inputs and the GitLab input match directly. For the
+other three, replaying the approved four recovery patches on current published
+bases reproduces the actual frameworks/base, Alioth and common-device trees
+exactly. Equivalent device commits have different IDs because of patch placement;
+no source implementation is missing, so no rebase or synthetic source fix was made.
+
+The deployed recovery XML, runner, series and four patches match the canonical
+published repository byte-for-byte. Actual runner preflight reports zero pending
+patches in all three projects. A single generated `.pyc` was preserved privately
+outside the Alioth Git checkout to clear its dirty-worktree rejection; tracked
+source files and user data were unchanged.
+
+The kernel diff has no UAPI, DT, config, ABI-documentation, Makefile or version-script
+changes. `scripts/update_defconfig --check -j4 alioth` passes. The existing ROM kernel
+`.config` and strict-tested config have the same recorded SHA-256. Real
+`lineage_alioth-cp2a-user` product resolution passes and selects this kernel source,
+`alioth_defconfig`, Clang r563880c, raw Image with DTB inclusion, separate DTBO,
+Virtual A/B, boot header v3 and the existing 120 Hz recovery request; there is no
+prebuilt-kernel or prebuilt-header override. No new HAL, fstab or SELinux adaptation
+is required by these five internal error-path fixes.
+
+This is source/manifest/configuration acceptance, **not a fresh complete ROM build
+or additional phone test**. The exact-image phone acceptance above remains its
+own evidence. Private integration receipts are at
+`~/evo/.repo/kernel-integration-20261102/`. Source repos were already published;
+only this verification record needed a new push.
