@@ -41,14 +41,15 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: bda9033475545c464478bb4f9ff73e061444cb8a
+    aosp-17: fc61c32444f435031bbd6f86ce84aec644e9a895
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/bda9033475545c464478bb4f9ff73e061444cb8a
-  observation: 2026-11-01; HyperOS DOUBLE_CLICK haptic extraction in
-    evidence/haptics/2026-11-01.md. Anti-flicker RRO checks in
-    evidence/displayfeature-evaluation-20261028.md; production RRO not installed.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/fc61c32444f435031bbd6f86ce84aec644e9a895
+  observation: 2026-11-02; GSM RX control correction and bounded phone PCM/duplex
+    checks in evidence/audio-route-compatibility-20261102.md. Installed anti-flicker
+    RRO identity verified in evidence/platform-recheck-20261102.md; manual optical
+    mismatch remains unresolved.
   local_a17:
-    head: 306d9554abd9281e2e5908f982c8dc0ee6c4e4bf
+    head: d3ce37193743309e4b5c0fae90316de728c26b90
     reason: ROM public tip plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source

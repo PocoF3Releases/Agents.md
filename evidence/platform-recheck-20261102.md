@@ -66,3 +66,17 @@ Overlay lookup returns low-zone 120 Hz; DisplayDeviceConfig reports the expected
 threshold 0.21259843 (legacy brightness 55) and ambient threshold -1. No
 DeviceConfig or screen preference was changed. This establishes installed policy,
 not a new optical comparison: manual 60/120 luminance mismatch remains unresolved.
+
+## Charging proposal analysis — pending
+
+Alioth uses a standalone BQ2597x charge pump; cmi measurements do not validate
+its PD/QC paths. A private PD candidate stops an otherwise successful tuning pass
+when effective FCC is nonpositive, after existing fault/taper dispositions.
+The earlier guard placement was rejected because it changed thermal-fault priority.
+The revised extracted-tail regression passes 40,965 host cases and independent
+review, but does not execute hardware voting, caller/EXIT scheduling or negotiation.
+QC3 separately reads FCC twice into unsigned values and still needs review.
+
+No charging source was changed or published, and bypass remains disabled. The
+connected PC USB attachment is 5 V/non-PPS with the charge pump off; it cannot
+validate active PPS charging. Private receipts: `~/evo/.repo/charging-audit-20261102`.

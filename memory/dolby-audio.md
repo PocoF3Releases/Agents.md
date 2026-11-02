@@ -4,7 +4,7 @@
 
 Alioth uses legacy Audio HAL 6.0 / DAX3-era components including `libhwdap.so`, `libswgamedap.so` and `libswvqe.so`. Blob presence, UUIDs and control acknowledgments do not establish audible processing. Do not assume modern spatializer support or transplant a Codec2 design.
 
-Standalone `hardware/xiaomi/dolby` owns app/UI and shared DMS policy; frameworks/av owns native lifecycle, flags and effect transport; common/device configuration owns genuine platform opt-ins. [Source ownership and observed heads](../state/repositories.yaml).
+Owners: `hardware/xiaomi/dolby` app/UI/DMS policy; frameworks/av native lifecycle, flags and transport; device configuration platform opt-ins. [Source heads](../state/repositories.yaml).
 
 
 ## Accepted AC-4 integration
@@ -38,12 +38,10 @@ current vendor OMX uses current foundation by basename. `libxlog.so` is already
 packaged at `vendor/lib/vndk/libxlog.so`, referenced by audio and sound-trigger
 HALs. No evidence justified additional foundation or 64-bit VNDK symlinks.
 
-A historical config audit parsed all audio XMLs, resolved policy includes/routes,
-checked microphone-array lengths and both 769-path mixer graphs, and found
-monotonic volume curves. Sixteen obsolete COMP1/COMP2 controls were removed.
-Twenty effect libraries being mapped is not audible activation proof; idle DSP
-control-read errors must not be mistaken for an active-route failure. Bluetooth,
-USB, calls, recording and hotword paths require their actual endpoints.
+Historical checks passed XML/includes/routes, microphone-array lengths, both
+769-path mixer graphs and volume-curve monotonicity; sixteen obsolete COMP1/COMP2
+controls were removed. Mapped effects do not prove activation; idle DSP read errors
+do not prove active-route failure. External/hotword paths need actual endpoints.
 
 ## Final capture-library correction
 
@@ -127,3 +125,6 @@ personal calibration; do not invent gains or enable them without endpoint tests.
 QDSP keys and ranges. [GEQ/locale fixes](../evidence/dolby-review-20261031.md):
 enable-failure reporting and separate translations, host/APK verified.
 [MiSound map](../evidence/misound-params-20261101.md); Dolby/MiSound coexist.
+
+[Kernel/mixer follow-up](../evidence/audio-route-compatibility-20261102.md):
+GSM control-name fix, PCM/duplex acceptance and remaining generic-route limits.
