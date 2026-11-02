@@ -80,16 +80,16 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 1cfe734008290c228abf15a8f8ae67a03d52fc1e
+    aosp-17: 7285847f4a2af70e52e7b41a22485307d6a018c9
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e
-  observation: 2026-11-02; five independent IOMMU/GPU/DMA correctness fixes pushed.
-    Strict W=1/Werror Image/modules/DTBs, 130 host cases and targeted static checks
-    pass. Phone runs the same C-file bytes from the pre-commit build on slot B,
-    Enforcing/taint 0; GPU/audio/storage/network/sleep/reboot checks pass.
-    ROM/recovery manifest, public-head replay and product/config checks pass;
-    no dependent source change required. See evidence/kernel-correctness-followup-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7285847f4a2af70e52e7b41a22485307d6a018c9
+  observation: 2026-11-02; F2FS statistics size correction published and persistently
+    installed, upstream author retained. Strict W=1/Werror Image/modules/DTBs,
+    targeted Sparse, host regression and phone counter/storage/audio/reboot checks
+    pass. Config unchanged, SELinux Enforcing and taint 0.
+    See evidence/platform-recheck-20261102.md and the earlier five-fix record in
+    evidence/kernel-correctness-followup-20261102.md.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile

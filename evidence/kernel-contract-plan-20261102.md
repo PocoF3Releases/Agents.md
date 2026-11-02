@@ -179,3 +179,10 @@ Public ABI, controls, audio, power/thermal and recovery-composition reviews reta
 their earlier limits; exhaustive internal behavior is not certified. The blocked
 boundary task remains skipped. Private receipts are under
 `~/evo/.repo/kernel-contract-audit-20261102/generic-route-audit`.
+
+## Later kernel checkpoint
+
+The [platform follow-up](platform-recheck-20261102.md) adds one verified F2FS
+statistics correction after this audit's pinned 759-commit scope. Its strict
+build and persistent phone acceptance are recorded separately; the broader
+remaining checks and paused-task boundary still apply.
