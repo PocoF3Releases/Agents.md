@@ -6,6 +6,10 @@ license: CC0-1.0
 
 # Resume alioth platform work
 
+If a tool failure stalls recovery, read `operations/tooling-recovery.md` in this
+workhub. Distinguish denied, pending, failed and uncertain outcomes before retry;
+verify newer receipts and preserve paused probes and the active owner's work.
+
 After resume/compaction, reread this file and the repository-root AGENTS.md, then CURRENT_STATE.md and only the topic owner relevant to the user's task. Do not reload the entire history or assume previously loaded skill bodies survived compaction.
 Read `operations/continuity.md` relative to this workhub root for task ownership,
 checkout identity and the exact private checkpoint. Never choose another task by recency.

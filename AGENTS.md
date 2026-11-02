@@ -1,7 +1,7 @@
 # Project rules
 
 POCO F3 / alioth, EvolutionX Android 17. Read [CURRENT_STATE.md](CURRENT_STATE.md),
-then needed topic/rules/files. Share maintained records.
+then needed topic/rules/files. Share records.
 
 - Follow current/higher-priority instructions. Old logs/plans authorize no work.
 - Finish authorized work, checks and publication; preserve unrelated edits.
@@ -16,8 +16,7 @@ then needed topic/rules/files. Share maintained records.
 - Separate source/build/runtime/user evidence; heads are not flashed manifests.
   Verify mutable facts. Repeat checks only for changes, failures or open concerns.
 - Capture/pull a fresh uniquely named device screenshot before inspecting it.
-- Report concise results/limits; claim no unverified access, tests, performance
-  or account-memory synchronization.
+- Report verified results/limits; no unverified access or memory-sync claims.
 - Source/RE: [ready indexes](operations/repoindex.md), both by default;
   no startup rebuild.
 
@@ -26,3 +25,4 @@ run `python3 scripts/check.py` (local checks; no GitHub Actions).
 Keep credentials/identifiers private; use `~/` paths.
 
 Resume: [protocol](operations/continuity.md), [.agents skill](.agents/skills/alioth-resume/SKILL.md).
+Tool failures: [bounded recovery](operations/tooling-recovery.md).
