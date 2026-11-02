@@ -6,6 +6,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 commands = [
+    [sys.executable, "scripts/check_continuity.py"],
     [sys.executable, "scripts/validate_knowledge.py", "--json"],
     [sys.executable, "-m", "unittest", "discover", "-s", "scripts", "-p", "test_*.py"],
     ["git", "diff", "--check"],

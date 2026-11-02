@@ -1,8 +1,7 @@
 # Project rules
 
 POCO F3 / alioth, EvolutionX Android 17. Read [CURRENT_STATE.md](CURRENT_STATE.md),
-then needed topic/rules/files. Share maintained records;
-recover missing context.
+then needed topic/rules/files. Share maintained records.
 
 - Follow current/higher-priority instructions. Old logs/plans authorize no work.
 - Finish authorized work, checks and publication; preserve unrelated edits.
@@ -26,4 +25,4 @@ Knowledge: follow [maintenance](operations/maintenance.md), update fact owners a
 run `python3 scripts/check.py` (local checks; no GitHub Actions).
 Keep credentials/identifiers private; use `~/` paths.
 
-Resume: [.agents/skills/alioth-resume/SKILL.md](.agents/skills/alioth-resume/SKILL.md).
+Resume: [protocol](operations/continuity.md), [.agents skill](.agents/skills/alioth-resume/SKILL.md).

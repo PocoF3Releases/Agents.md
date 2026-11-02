@@ -7,8 +7,10 @@ license: CC0-1.0
 # Resume alioth platform work
 
 After resume/compaction, reread this file and the repository-root AGENTS.md, then CURRENT_STATE.md and only the topic owner relevant to the user's task. Do not reload the entire history or assume previously loaded skill bodies survived compaction.
+Read `operations/continuity.md` relative to this workhub root for task ownership,
+checkout identity and the exact private checkpoint. Never choose another task by recency.
 
-This repository is the instruction/evidence workhub, not an Android source checkout. Resolve the actual Linux repo workspace from the current user's task and maintained source map; on this PC the existing workspace is ~/evo. Keep Git/repo/toolchain commands in the Linux filesystem and preserve existing output and unrelated changes. Read the existing `skills/aosp-wsl/SKILL.md` for Android platform mechanics rather than copying it.
+This repository is the instruction/evidence workhub, not an Android source checkout. Resolve the actual Linux repo workspace from the current user's task and maintained source map; the usual local workspace is ~/evo, but verify the actual checkout/worktree. Keep Git/repo/toolchain commands in the Linux filesystem and preserve existing output and unrelated changes. Read the existing `skills/aosp-wsl/SKILL.md` for Android platform mechanics rather than copying it.
 
 Before a requested code change, establish the relevant component root, branch/head, existing edits and specific acceptance scope. Keep source-checked, build-tested and device-tested evidence distinct. A historical artifact/head is not proof of what is running on a device. Use the checkout-provided toolchain and affected checks; do not weaken existing constraints or repeat passed checks without a relevant change or unresolved concern.
 

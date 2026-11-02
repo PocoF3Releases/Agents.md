@@ -1,6 +1,8 @@
 # <Finding or requested handoff>
 
 Use only needed fields; prefer updating the existing topic/validation entry over a new file.
+This is a sanitized finding/handoff template. Private task checkpoints stay in
+ignored `.codex/tasks/`, following [continuity](../operations/continuity.md).
 
 - Current user goal and authorized scope:
 - Owning topic and validation ID:
