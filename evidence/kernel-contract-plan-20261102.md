@@ -213,3 +213,13 @@ still needed before changing approved strength tuning. This remains unresolved,
 not a shipped fix or a claim of full hardware acceptance. Generic audio-route
 limits remain as listed in the [audio follow-up](audio-route-compatibility-20261102.md).
 The paused boundary task remains skipped.
+
+## Audio formats and power requests — 2026-11-02
+
+The [format check](audio-formats-20261102.md) adds 48 privileged-client and 48
+ordinary-app cases. It distinguishes packed-24 frontend transport/conversion
+from native direct output and records the still-open stock ACDB lookup question.
+The [power check](powerhint-contract-20261102.md) verifies bounded framework
+interaction/audio-launch requests reaching CPU/bus/PM-QoS providers and releasing,
+plus boot-time low-power restoration. These passes need no new source patch;
+all wider audit limits and the paused task remain unchanged.

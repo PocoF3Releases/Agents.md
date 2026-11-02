@@ -126,5 +126,5 @@ QDSP keys and ranges. [GEQ/locale fixes](../evidence/dolby-review-20261031.md):
 enable-failure reporting and separate translations, host/APK verified.
 [MiSound map](../evidence/misound-params-20261101.md); Dolby/MiSound coexist.
 
-[Kernel/mixer follow-up](../evidence/audio-route-compatibility-20261102.md):
-GSM control-name fix, PCM/duplex acceptance and remaining generic-route limits.
+[Routes](../evidence/audio-route-compatibility-20261102.md): GSM fix/limits.
+[Formats](../evidence/audio-formats-20261102.md): app/root PCM matrix and limits.
