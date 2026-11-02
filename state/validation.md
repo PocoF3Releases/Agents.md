@@ -2,13 +2,13 @@
 
 ## V-HAPTICS
 
-**2026-11-01 — temp mount, accelerometer-measured.** Taps match prior HAL,
-prebaked stronger, 8 primitives click-level; damped stock primitives were
-rejected as dead. Cancel not rerun; feel pending. [Record](../evidence/haptics/2026-11-01.md).
+**2026-11-02 — temporary HAL:** nine VTS cases and 20 cancellation/replacement
+sequences pass, enforcing. Older HAL restored. Scale-zero defect confirmed;
+calibration/feel and RichTap/PWLE remain unverified.
+[Record](../evidence/haptics/2026-11-02.md).
 
-2026-10-04: 21 effect checks, cancel, AAC/HE1, PCM refills
-passed (temp mount); no full RichTap/PWLE.
-[Scope](../evidence/haptics/2026-10-04.md).
+[Nov 1](../evidence/haptics/2026-11-01.md): tuning.
+[Oct 4](../evidence/haptics/2026-10-04.md): effects/cancel/AAC.
 
 ## V-AC4
 

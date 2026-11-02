@@ -201,3 +201,15 @@ The [charging audit](charging-controls-20261102.md) adds a verified, installed
 restricted-current range guard and separates it from unresolved PPS/QC zero-limit
 policy. Consumer/callback reachability is established; active fast-charge adapter
 acceptance remains open. No bypass opt-in or paused-task resumption occurred.
+
+## Haptic continuation — 2026-11-02
+
+The [haptic contract record](haptics/2026-11-02.md) adds direct current-HAL device
+checks: nine selected VTS cases and 20 cancellation/replacement sequences pass
+in the normal enforcing domain. All eight advertised primitives were exercised.
+The older installed ROM HAL/assets were restored after temporary testing.
+A paired test confirms silent scale-zero composition; a calibrated minimum is
+still needed before changing approved strength tuning. This remains unresolved,
+not a shipped fix or a claim of full hardware acceptance. Generic audio-route
+limits remain as listed in the [audio follow-up](audio-route-compatibility-20261102.md).
+The paused boundary task remains skipped.
