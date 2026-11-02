@@ -5,7 +5,7 @@ Updated: 2026-11-02. Status: incomplete; no blanket production-compatibility cla
 ## Scope and evidence
 
 Audit the entire maintained kernel series against device trees, hardware/xiaomi,
-HALs and packaged consumers. The current [kernel head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e)
+HALs and packaged consumers. The initial [kernel head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e)
 contains 759 downstream commits: 158 foundation commits and 601 later changes.
 The earlier [integration check](kernel-correctness-followup-20261102.md) covers
 repository/recovery alignment and the last five fixes, not all downstream behavior.
@@ -186,3 +186,11 @@ The [platform follow-up](platform-recheck-20261102.md) adds one verified F2FS
 statistics correction after this audit's pinned 759-commit scope. Its strict
 build and persistent phone acceptance are recorded separately; the broader
 remaining checks and paused-task boundary still apply.
+
+## Reachable audio-route correction
+
+The [audio follow-up](audio-route-compatibility-20261102.md) supersedes the
+residual GSM item with a published, phone-tested device-tree correction. It also
+establishes handset-sidetone/HiFi reachability and preserves their unresolved
+hardware limits. Source/build/runtime acceptance and recovery replay are separate;
+no blanket full-series certification or paused-task resumption is implied.
