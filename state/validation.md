@@ -220,5 +220,4 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-W123-20261102
 
-[Audit, 183 host checks and limits](../evidence/kernel-w123-20261102.md).
-No new installation.
+[Whole audit and audio follow-up](../evidence/kernel-audio-boundaries-20261102.md).

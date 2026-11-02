@@ -73,7 +73,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[W=123 audit](../evidence/kernel-w123-20261102.md): release-config Image/modules/DTBs and strict W=1/Werror pass. One FastRPC heap error fix passes 183 host checks; no new install. Broad warning baseline remains. [History consolidation](../evidence/kernel-series-20261102.md) preserves the earlier source/configs. Kernel-doc stays visible. Previous [sparse/enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md) is historical; the [2,954-warning sparse backlog](../evidence/kernel-sparse-backlog-20261028.md) was not recounted. FastRPC sparse retains one context warning. Broader UBSan stays parked; system-side sources and thermal/security settings are unchanged.
+[Audio follow-up](../evidence/kernel-audio-boundaries-20261102.md): calibration errors and in-band APR bounds fixed; strict Image, 856 host checks and 144 sparse invocations pass. Audio checks use `techpack/audio/` for Kona/Cirrus autoconfiguration. No new install. The [whole W=123 audit](../evidence/kernel-w123-20261102.md) retains its unclassified baseline. [Consolidation](../evidence/kernel-series-20261102.md), [older phone/sparse acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning sparse backlog](../evidence/kernel-sparse-backlog-20261028.md) retain their scope; no whole sparse recount. Broader UBSan stays parked. System-side sources and thermal/security settings are unchanged.
 
 ## Intermittent shutdown investigation
 

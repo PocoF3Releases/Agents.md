@@ -80,14 +80,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 1fbfa02096f2a7e344375c2c465b184d0141af68
+    aosp-17: 3d374cb35915256513a2dbccb921d9fbf1259c4b
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1fbfa02096f2a7e344375c2c465b184d0141af68
-  observation: 2026-11-02; W=123 audit and strict W=1/Werror Image/modules/DTBs
-    passed with the unchanged release config. One focused FastRPC heap failure
-    propagation fix; 183 host checks pass. Broad warning baseline remains;
-    no new device install. See evidence/kernel-w123-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3d374cb35915256513a2dbccb921d9fbf1259c4b
+  observation: 2026-11-02; two audio fixes preserve calibration failures and
+    bound in-band APR packets before allocation. Strict Image/modules/DTBs,
+    parent-context audio W=123/sparse and 856 host checks pass. No new install;
+    broad warning baseline remains. See evidence/kernel-audio-boundaries-20261102.md.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
