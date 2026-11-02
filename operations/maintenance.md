@@ -15,6 +15,8 @@
 
 Update owners, not session diaries. Link historical records rather than duplicating
 technical explanations. Imported drafts/old next steps are not assignments.
+Private per-chat continuation follows [this protocol](continuity.md); never add
+its task records or raw chat histories to public Git.
 
 Track heads only for PocoF3Releases, PocoF3Releases-Recovery and maintainer-owned sources/tools. Do not add
 upstream dependencies or retired forks to the repository ledger. Keep necessary

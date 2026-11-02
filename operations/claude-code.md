@@ -48,19 +48,20 @@ credentials or assume its MCP connectors are available in Claude.
   links point to installed Codex skill bodies; use kernel guidance only for
   kernel work. External Windows plugin links are machine-specific and may need
   repair after a plugin update. Do not publish third-party skill copies.
-- Start from `~/evo`, not a detached worktree of just one component: its parent
-  entrypoint supplies workspace context. For standalone component clones outside
-  it, explicitly read the workhub and that component's instructions first.
+- Component Git boundaries can hide the umbrella Codex router. Use a verified
+  [component router](../templates/component-AGENTS.md) plus CLAUDE.md importing AGENTS.md.
+  Detached/relocated worktrees need explicit source and workhub identities.
 - Run `/context` and `/memory` in an authenticated Claude session to confirm loaded
   instructions; `/skills` confirms skill discovery. Static checks cannot certify
   client loading or model availability. External imports can require trust.
 
 ## Claude auto memory and history
 
-Claude auto memory (`~/.claude/projects/-home-johnmart19-evo/memory/`) is local
+Claude auto memory (`~/.claude/projects/<project>/memory/`) is local
 to one machine/account: pointers, preferences and attribution only. Facts,
-heads, tests and releases belong in workhub owners. `~/Agents.md` is the same
-repo: `git pull --ff-only` before reading; edit one copy per task.
+heads, tests and releases belong in workhub owners. `~/Agents.md` and
+`~/evo/.workhub` are separate checkouts of the same remote. Use this task's owner;
+compare scoped revisions before crossing copies. Recovery never implies a pull.
 
 For earlier work search `INDEX.yaml`, V-* anchors and `evidence/`, then Git
 (`git log -S '<term>'`, `git show <rev>:<path>`). Removed dated logs exist only
@@ -68,8 +69,8 @@ in Git history and stay historical.
 
 Recreate a relocated checkout using the [root template](../templates/android-root-CLAUDE.md)
 and [optional model settings](../templates/claude-settings.json), after confirming
-`.workhub` exists and preserving any existing files. No general home-directory
-CLAUDE.md or hooks are installed. Shared skill links work in WSL; on native
+`.workhub` exists and preserving any existing files. Optional shared home defaults follow
+[continuity](continuity.md); this repository installs no home files or hooks. Shared skill links work in WSL; on native
 Windows, enable Git symlink support or read the original skill files explicitly.
 
 ## Locations and ownership
@@ -81,7 +82,7 @@ marked optional. They do not exist just because someone cloned this workhub.
 | --- | --- |
 | `~/evo` | Active Evolution X Android 17 Repo checkout; Linux source/build commands |
 | `~/evo/.workhub` | Primary shared knowledge checkout, PocoF3Releases/Agents.md |
-| `~/Agents.md` | Separate mirror of the same GitHub repo; fast-forward before reading; edit one owner at a time |
+| `~/Agents.md` | Separate checkout of the same remote; verify task ownership/revisions before crossing copies |
 | `~/evo/device/xiaomi/alioth` | Product, display overlays, audio tuning, health and device policy |
 | `~/evo/device/xiaomi/sm8250-common` | Common init/fstab/SELinux, power hints, XiaomiParts |
 | `~/evo/hardware/xiaomi` | Dolby/Xiaomi HAL implementations and common hardware helpers |
