@@ -16,9 +16,9 @@ calibration/feel and RichTap/PWLE remain unverified.
 explicit `OMX.dolby.ac4.decoder`, official 32-second stereo/48 kHz sample:
 800 inputs, 800 output buffers, **6144000 PCM bytes**, 5970795 nonzero,
 EOS/PASS, `audio/raw`, two channels, pcm-encoding=2. Diagnostic silent; user confirmed sound in an unidentified player.
-Opt-in and both-ABI syntax checks passed; other streams, multichannel/offload,
-apps and Dolby processing are outside scope.
-[Diagnostic](../evidence/ac4/README.md) · [full ABI/failure progression](../memory/dolby-audio.md).
+Opt-in/both-ABI syntax pass; other streams, multichannel/offload, apps and Dolby
+processing unverified.
+[Diagnostic](../evidence/ac4/README.md) · [ABI history](../memory/dolby-audio.md).
 
 ## V-PARTS
 
@@ -221,3 +221,7 @@ boot restored; partition unchanged. No full conformance/release.
 ## V-KERNEL-W123-20261102
 
 [Whole audit and audio follow-up](../evidence/kernel-audio-boundaries-20261102.md).
+
+## V-USB-20261103
+
+[Scope](../evidence/usb-recovery-20261103.md).

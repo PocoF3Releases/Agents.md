@@ -247,3 +247,11 @@ response checks repair demonstrated short reads and false memory completion.
 Host regressions, affected strict/Sparse builds and normal phone audio/route
 checks pass. The vendor MIUS flush delay and external/acoustic limits remain
 open. These fixes do not certify every downstream path or resume the paused task.
+
+## USB continuation — 2026-11-03
+
+[Acceptance](usb-recovery-20261103.md): published gadget reconnect, initial-state
+and framework Binder recovery fixes pass host, module builds and temporary
+enforcing phone tests. Original phone userspace was restored; permanent inclusion
+needs a ROM rebuild. Recovery patch trees match; wider endpoint limits and the
+paused boundary-task exclusion remain unchanged.
