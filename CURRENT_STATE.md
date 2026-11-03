@@ -1,13 +1,13 @@
 # Current state
 
-Checkpoint: **2026-11-02**. [Android 17 status](state/android17-status.md).
+Checkpoint: **2026-11-03**. [Android 17 status](state/android17-status.md).
 
 - **Haptics:** seven effects/eight primitives tested temporarily; older ROM restored. Scale-zero gap remains. [Scope](memory/haptics.md).
 - **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO active; manual mismatch remains.
 - **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
-- **Sources:** [Refresh](evidence/source-refresh-20261101.md); [kernel checks](evidence/kernel-audio-boundaries-20261102.md).
+- **Sources:** [Refresh](evidence/source-refresh-20261103.md); [kernel checks](evidence/kernel-audio-boundaries-20261102.md).
 - **Releases:** October 25 published; October 28 next-build drafts prepared. [Releases](state/releases.md).
 
 | Task | Read |

@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-11-01'
+observed: '2026-11-03'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool
   sources. Source observations are not a flashed release manifest.
 workhub:
@@ -142,11 +142,12 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: e08273f42a55ac1af328f09b7a9dcfd33f6e080b
+    cnb: fff3348c2d9837ad278e8e701b638022f35a6028
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/e08273f42a55ac1af328f09b7a9dcfd33f6e080b
-  observation: 2026-11-01; AW8697 measured tuning, synthesized primitives in
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/fff3348c2d9837ad278e8e701b638022f35a6028
+  observation: 2026-11-03 source refresh in evidence/source-refresh-20261103.md;
+    prior acceptance remains scoped as recorded. 2026-11-01; AW8697 measured tuning, synthesized primitives in
     evidence/haptics/2026-11-01.md (temp-mount check, feel pending); DSPVolume allowlist
     in permissions-audit-20261101.md; Dolby in evidence/dolby-review-20261031.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
@@ -179,15 +180,16 @@ repositories:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: 3e77a60e56eb1cc8bc0f7ac71dd6df4d11dd54ce
+    cnb: 91855f5c732fbf5318df9c778e696b2a2289e2fc
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/3e77a60e56eb1cc8bc0f7ac71dd6df4d11dd54ce
-  observation: 2026-11-03; USB Binder recovery built and temporarily phone-tested;
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/91855f5c732fbf5318df9c778e696b2a2289e2fc
+  observation: 2026-11-03 source refresh in evidence/source-refresh-20261103.md;
+    prior acceptance remains scoped as recorded. 2026-11-03; USB Binder recovery built and temporarily phone-tested;
     original userspace restored. Recovery tree equivalence and scope in
     evidence/usb-recovery-20261103.md.
   local_a17:
-    head: df7ae1b70068f50dafe8fc60afcb6660b4656a64
-    reason: Equivalent ROM USB fix on prior public base plus authored recovery overlay
+    head: 72e0d05618b8574ab6de134a2d8c5b37512f4c7c
+    reason: Updated ROM public base plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
@@ -230,11 +232,12 @@ repositories:
   - hardware/nxp/nfc
   selected_ref: lineage-24.0
   refs:
-    lineage-24.0: f1300e6f5e426c012656a18db98e0ab0fa972199
+    lineage-24.0: 2ef0542a86ac3b12c13b8281e3b01816202a15a4
   local_a17: matches_selected_ref
   commit_links:
-    lineage-24.0: https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/f1300e6f5e426c012656a18db98e0ab0fa972199
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
+    lineage-24.0: https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/2ef0542a86ac3b12c13b8281e3b01816202a15a4
+  observation: 2026-11-03 source refresh in evidence/source-refresh-20261103.md;
+    prior acceptance remains scoped as recorded. 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
 - repository: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb
   role: build_source

@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [ROM/fork refresh, November 3](source-refresh-20261103.md) | Updated bases, preserved recovery stack and held kernel intake |
 | [Audio Java/native closure](audio-framework-closure-20261025.md) | Exact bytecode recovery, native coverage, phone checks and optional headphone gaps |
 | [Permission audit](permissions-audit-20261101.md) | A17 privapp/default-grant cross-check, dead-entry removals, retained limits |
 | [Parts Kotlin review](parts-review-20261101.md) | Full Parts source review, single resume-refresh fix, APK bind-mount check |
