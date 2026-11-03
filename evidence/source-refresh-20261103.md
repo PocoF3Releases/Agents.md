@@ -1,6 +1,7 @@
 # ROM and maintained-fork refresh — 2026-11-03
 
-`source-checked`, `host-tested`, `build-tested` (component scope).
+`source-checked`, `host-tested`; earlier component build scope is pinned below.
+The final framework re-pick is **not build-tested**, as requested.
 
 ## Source integration
 
@@ -13,7 +14,7 @@ resources and other manifest-selected applications.
 Fetched all 43 maintained build forks and their 40 selected upstream mappings.
 Rebased three published branches while retaining imported authorship:
 
-- [frameworks/base](https://github.com/PocoF3Releases/frameworks_base/commit/91855f5c732fbf5318df9c778e696b2a2289e2fc):
+- [frameworks/base](https://github.com/PocoF3Releases/frameworks_base/commit/d3879b2b79fe8d6c0f49d10ba0b5af0b5057781b):
   replayed nine unique feature patches on the current Evolution X base. Dropped
   the now-upstream ColorOS callback import; retained recording/blur controls,
   thermal listener registration, NFC shell dispatch, vendor camera opt-in,
@@ -55,7 +56,9 @@ thermal policy or compression default change was shipped by this refresh.
 
 ## Verification and limits
 
-The user-product component build passed (exit 0):
+Before the later framework re-pick, the user-product component build passed
+(exit 0) on framework public head `91855f5c732fbf5318df9c778e696b2a2289e2fc`
+plus recovery child `72e0d05618b8574ab6de134a2d8c5b37512f4c7c`:
 
 ```sh
 . build/envsetup.sh
@@ -69,6 +72,15 @@ Existing toolchain/deprecation warnings remain; this is not a warning-free build
 Built APK/NFC artifact hashes are retained in the private refresh receipt.
 All 75 Workhub checks pass; they validate documentation structure and local
 fixtures, not hardware behavior.
+
+A second live check of all 43 forks and 40 upstream mappings found one newly
+advanced upstream head: [DynamicIsland call-answer launch handling](https://github.com/Evolution-X/frameworks_base/commit/f9be4b2aeb85270d37cd8eefa38a10f64b0cc330).
+Replayed all ten existing framework commits without conflicts; range comparison
+is patch-equivalent throughout. The final public delta exactly equals the new
+upstream patch, and recovery preflight again reports zero pending patches.
+No rebuild was run after this re-pick, following the maintainer's instruction;
+the earlier build result does not certify the new framework head. The kernel
+remains held, and the other 39 mapped upstream heads were unchanged.
 
 Range comparison preserves every retained feature patch. Recovery replay,
 clean source state, raw Codex trailers and source/remote identities were checked.
