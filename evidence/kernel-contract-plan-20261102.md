@@ -239,3 +239,11 @@ acoustic behavior; endpoint/calibration limits and the paused task remain.
 fix, strict build, host race regression and installed-phone audio/sensor checks.
 The independently confirmed MIUS flush delay remains unresolved; its vendor-side
 wakeup/ordering contract needs a demonstrated fix. No touch-boundary work resumed.
+
+## Audio response continuation — 2026-11-03
+
+[Acceptance](audio-receive-20261103.md): APR transport bounds and fixed AFE/ASM
+response checks repair demonstrated short reads and false memory completion.
+Host regressions, affected strict/Sparse builds and normal phone audio/route
+checks pass. The vendor MIUS flush delay and external/acoustic limits remain
+open. These fixes do not certify every downstream path or resume the paused task.

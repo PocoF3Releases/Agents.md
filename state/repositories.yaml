@@ -81,16 +81,15 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 1846f927ad7ca1e32d9b2c478b667de17d95791e
+    aosp-17: d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1846f927ad7ca1e32d9b2c478b667de17d95791e
-  observation: 2026-11-02; restricted-current range guard published and persistently
-    installed. Affected W=1/Werror/Sparse, full strict Image/modules/DTBs, host
-    regression and phone rejection/PCM/reboot checks pass; unchanged kernel-doc
-    findings remain. Config/security/thermal policy unchanged. See
-    evidence/charging-controls-20261102.md; prior F2FS acceptance in
-    evidence/platform-recheck-20261102.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c
+  observation: 2026-11-03; audio response guards pass host regressions, affected
+    W=1/Werror/Sparse, full strict Image/modules/DTBs and enforcing phone PCM/route
+    checks. Config/security/thermal policy unchanged; baseline documentation and
+    external-endpoint limits remain. See evidence/audio-receive-20261103.md;
+    earlier charging and F2FS acceptance retain their recorded scope.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
