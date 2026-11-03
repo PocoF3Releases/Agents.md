@@ -179,15 +179,15 @@ repositories:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: c500f97ecbbe1b1ead9dd5877b7f42f6709de36a
+    cnb: 3e77a60e56eb1cc8bc0f7ac71dd6df4d11dd54ce
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/c500f97ecbbe1b1ead9dd5877b7f42f6709de36a
-  observation: 2026-11-01; imported the missing ColorOS header callback class;
-    SystemUI-core user build passed, recovery overlay unchanged.
-    See evidence/systemui-expandable-20261101.md for scope and artifact identity.
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/3e77a60e56eb1cc8bc0f7ac71dd6df4d11dd54ce
+  observation: 2026-11-03; USB Binder recovery built and temporarily phone-tested;
+    original userspace restored. Recovery tree equivalence and scope in
+    evidence/usb-recovery-20261103.md.
   local_a17:
-    head: 293ec873efba6023f6cd562215eb826569877b7e
-    reason: ROM public tip plus authored recovery overlay
+    head: df7ae1b70068f50dafe8fc60afcb6660b4656a64
+    reason: Equivalent ROM USB fix on prior public base plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
@@ -242,12 +242,12 @@ repositories:
   - vendor/qcom/opensource/usb
   selected_ref: aosp-17
   refs:
-    aosp-17: 7dbc815ad052d113eaf63e2bb0f172b3bb232452
+    aosp-17: 724b2926d85c540652954a821e31a738fb6a0788
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/7dbc815ad052d113eaf63e2bb0f172b3bb232452
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    aosp-17: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/724b2926d85c540652954a821e31a738fb6a0788
+  observation: 2026-11-03; reset reconnect and initial bitmap fixes built and
+    temporarily phone-tested; original HAL restored. Scope in evidence/usb-recovery-20261103.md.
 - repository: https://gitlab.com/johnmart19/vendor_xiaomi_camera
   role: required_camera_prebuilts
   source_tree_paths:
