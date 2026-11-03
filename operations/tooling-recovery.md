@@ -21,6 +21,15 @@ guidance below does not authorize retrying a platform-restricted operation.
 Continue only clearly separable, independently authorized maintenance; when the
 blocked scope is unclear, report that uncertainty before further product work.
 
+## Failed compaction
+
+Retain the last confirmed checkpoint if compaction fails. Distinguish that
+failure from the preceding operation; check uncertain side effects before any
+replay and do not claim successful recovery. Record the exact error, UTC time
+and available client/model/request identifiers privately, without guessing
+missing values. This does not start another compaction attempt. A safety notice
+follows the stop rules above, not ordinary retry guidance.
+
 ## Bound diagnosis and retries
 
 - Record the exact operation, error and outcome: denied, pending, failed or

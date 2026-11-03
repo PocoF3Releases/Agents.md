@@ -42,6 +42,20 @@ Continue current authorized work and retain its boundaries. Old logs, task files
 and imported plans grant no new permission. Preserve unrelated edits, live work
 and parked experiments. Missing/stale context is uncertainty, not completion.
 
+## Bound the current milestone
+
+Keep the overall backlog separate from the current assignment. Record one
+current objective, exclusions, required acceptance checks and stopping condition
+in the private task record. A goal grants no extra authorization. Complete that
+milestone with a verified fix, no-defect finding or explicit blocker before
+selecting another; do not expand the search to manufacture progress.
+
+After a milestone or failure, record an exact UTC update, last confirmed turn,
+live goal status, unfinished edits, evidence links and one next action. Supersede
+competing next-action sections while preserving historical evidence separately.
+Reconcile with live state before replay: an idle chat or saved active goal does
+not override a blocked goal or safety notice. Keep dependent work paused.
+
 ## Keep separate private records
 
 For stalled tools, denials or uncertain results, follow
