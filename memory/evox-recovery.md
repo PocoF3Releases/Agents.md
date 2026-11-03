@@ -118,7 +118,8 @@ For Virtual A/B clean installs, boot the installed OTA target successfully and c
 
 ## Current source replay
 
-The November 1 source check preserves the enhanced native recovery and reapplies
-its four authored framework/device patches after sync. The apply runner and patch
-series are installed together in the local-manifest directory. Rechecking reports
-zero pending patches. [Source identity and verification](../evidence/source-refresh-20261101.md).
+The [November 3 source refresh](../evidence/source-refresh-20261103.md) preserves
+the enhanced native recovery and reapplies its four authored framework/device
+patches on the updated ROM bases. The runner and series remain installed together;
+postflight reports zero pending patches. This is source replay evidence, not a
+new recovery image or device acceptance. The kernel intake remains held as recorded.
