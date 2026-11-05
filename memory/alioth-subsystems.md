@@ -64,3 +64,10 @@ registration must not be relabelled as a passing functional test.
 Raw complete appendices remain local under
 `~/evo/.repo/alioth-subsystem-inventory-20261025/`. They were not uploaded as
 public logs. The portable CSV and evidence record are available in this repo.
+
+## Prebuilt dependency policy
+
+[November 5 cleanup](../evidence/prebuilt-cleanup-20261105.md) removes 20 proven-unused
+files/ABI copies, preserving active ARM32 services, constructed plugins and signed
+APKs. Check ABI, APEX/linker namespaces and dynamic loaders before removing or
+importing a stock library. Remote DSP dependencies are not ARM library gaps.
