@@ -118,7 +118,7 @@ For Virtual A/B clean installs, boot the installed OTA target successfully and c
 
 ## Current source replay
 
-The [November 3 source refresh](../evidence/source-refresh-20261103.md) preserves
+The [November 5 source refresh](../evidence/source-refresh-20261105.md) preserves
 the enhanced native recovery and reapplies its four authored framework/device
 patches on the updated ROM bases. The runner and series remain installed together;
 postflight reports zero pending patches. This is source replay evidence, not a

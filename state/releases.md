@@ -2,7 +2,7 @@
 
 ## Authority
 
-Current published baseline: **25.10.2026**, confirmed by the maintainer on October 28. Exclude its features and all earlier announced equivalents from the next update.
+Published baseline: **28.10.2026**, confirmed November 4. Exclude its features and all earlier announced equivalents from the next update.
 
 Android 17 historical published baseline: **23.09.2026 / Evolution X v12.2**,
 from maintainer-supplied September 22/23 notes. Exact ZIP hashes/included-commit
@@ -156,15 +156,17 @@ rebased equivalents and unused components.
 [Installed-build smoke checks](../evidence/release-smoke-20261025.md) retain their
 short-test scope; release copy does not certify all endpoints.
 
-## October 28 next-build drafts
+## October 28 published update
 
-[Long](telegram-20261028-full.md) · [short](telegram-20261028-short.md) ·
-[review/limits](../evidence/changelog-20261028.md) ·
-[banner](assets/evolutionx-alioth-20261028-banner-v1.png).
-October 25 cutoff; Redline, kernel repairs and SPU shutdown permission.
-The maintainer confirms shutdown hangs no longer occur. Repeated features and
-refresh-rate highlights are excluded. Artifact/date unspecified; latest-source
-inclusion is required. No new release or Telegram message.
+Confirmed by the maintainer November 4; saved [long](telegram-20261028-full.md),
+[short](telegram-20261028-short.md), [review](../evidence/changelog-20261028.md)
+and [banner](assets/evolutionx-alioth-20261028-banner-v1.png). October 25 cutoff:
+Redline, kernel repairs and SPU unmount permission. No exact final artifact
+manifest was captured. Refresh highlights remain excluded; shutdown hangs no
+longer occur per the maintainer.
 
-[KGSL](../evidence/kgsl-backports-20261028.md) and [battery-temperature](../evidence/battery-thermistor-20261031.md)
-kernel fixes need the next ROM build; phone acceptance is not a release.
+## November 4 build report
+
+Maintainer reports `EvolutionX-17.0-20261104-alioth-12.3-Unofficial.zip` built
+successfully (42,815 steps; 01:22:03). No independent artifact/phone acceptance
+or publication confirmation; the baseline for prepared notes remains October 28.

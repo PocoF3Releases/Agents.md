@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [ROM/fork refresh, November 5](source-refresh-20261105.md) | Latest upstream replay, NFC replacement and unchanged recovery patch bundle |
 | [ROM/fork refresh, November 3](source-refresh-20261103.md) | Updated bases, preserved recovery stack and held kernel intake |
 | [Audio Java/native closure](audio-framework-closure-20261025.md) | Exact bytecode recovery, native coverage, phone checks and optional headphone gaps |
 | [Permission audit](permissions-audit-20261101.md) | A17 privapp/default-grant cross-check, dead-entry removals, retained limits |
