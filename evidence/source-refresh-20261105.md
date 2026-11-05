@@ -106,6 +106,7 @@ publication receipts remain under `~/evo/.repo/source-refresh-20261105/`.
 
 The temporary LZ4 snapshot configuration and full-OTA codec opt-in were removed
 at the maintainer's request. Their addition/removal pairs were dropped from the
-published branch histories with exact-head leases. The final source trees are
-unchanged from the already verified rollback. Native recovery and retained
+published branch histories with exact-head leases. The final source trees in that history-only pass matched the verified rollback.
+A [later audio cleanup](dolby-history-cleanup-20261105.md) has its own source and
+validation boundaries. Native recovery and retained
 prebuilt changes are preserved. [Current configuration and checks](build-options-20261105.md).
