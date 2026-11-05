@@ -25,22 +25,28 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 644dd97614859fbc1c5e214165c8a508a8c9b2aa
+    aosp-17: 2d57d2c2b8de317d40d481167f2f49932c03b556
+  local_a17:
+    head: e1765547af28292d9491ef5dac1946f6deea6c4d
+    reason: ROM public tip plus authored recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/644dd97614859fbc1c5e214165c8a508a8c9b2aa
-  observation: 2026-11-05; prebuilt ABI pruning and dependency/phone registry checks
-    in evidence/prebuilt-cleanup-20261105.md; full pruned-image build/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2d57d2c2b8de317d40d481167f2f49932c03b556
+  observation: 2026-11-05; mini GMS / snapshot rollback scope in
+    evidence/build-options-20261105.md; product graph passes, ROM rebuild pending.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 7141e43eb9bf6364282474f4ee45344863cd2ea7
+    aosp-17: f77df7705c9091683bfcc976cb147cb6a2a01162
+  local_a17:
+    head: 4994cfc85d4d403aa3002b30f3000cd0acc8432e
+    reason: ROM public tip plus authored recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7141e43eb9bf6364282474f4ee45344863cd2ea7
-  observation: 2026-11-05; prebuilt ABI pruning and dependency/phone registry checks
-    in evidence/prebuilt-cleanup-20261105.md; full pruned-image build/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f77df7705c9091683bfcc976cb147cb6a2a01162
+  observation: 2026-11-05; mini GMS / snapshot rollback scope in
+    evidence/build-options-20261105.md; product graph passes, ROM rebuild pending.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -329,12 +335,12 @@ repositories:
   - build/make
   selected_ref: cnb
   refs:
-    cnb: 56af6c9b3d9c1b787337fb407e261a7c24008812
+    cnb: 862350971ca32fdcfbb6f032487d9531ab94e80f
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_build/commit/56af6c9b3d9c1b787337fb407e261a7c24008812
+    cnb: https://github.com/PocoF3Releases-Recovery/android_build/commit/862350971ca32fdcfbb6f032487d9531ab94e80f
   local_a17: matches_selected_ref
-  observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+  observation: 2026-11-05; mini GMS / snapshot rollback scope in
+    evidence/build-options-20261105.md; product graph passes, ROM rebuild pending.
 - repository: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um
   role: build_source
   source_tree_paths:
