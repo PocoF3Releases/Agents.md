@@ -28,11 +28,11 @@ Hexagon DSP binaries are not ARM32 pruning candidates.
 | Component | Current public commit |
 | --- | --- |
 | device/xiaomi/alioth | [7141e43eb9bf](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7141e43eb9bf6364282474f4ee45344863cd2ea7) |
-| device/xiaomi/camera | [1f9b82308aca](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/1f9b82308acaf600474ff1006a0feaeefbc27f28) |
-| device/xiaomi/sm8250-common | [3f87ba83ed02](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3f87ba83ed0226321d0da0ae0afef55ea178c597) |
-| vendor/xiaomi/alioth | [bd26e3148509](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/bd26e3148509485d134c8c2230b883950e41146d) |
-| vendor/xiaomi/camera | [21d47e9bcc1c](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/21d47e9bcc1ce00aaf852c0c7c16015b5aa5920c) |
-| vendor/xiaomi/sm8250-common | [a58a9278c38d](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a58a9278c38d26812d1ea8566c7c9070ff9d2a63) |
+| device/xiaomi/camera | [ac369e25f015](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/ac369e25f0159c3fcc65110dfb64bb680e05a837) |
+| device/xiaomi/sm8250-common | [6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125) |
+| vendor/xiaomi/alioth | [431c6019fe1f](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/431c6019fe1f9c5c9a8741cd980462b2da1f8576) |
+| vendor/xiaomi/camera | [01543bb0d5b0](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/01543bb0d5b0e693022128ea5905ffb661e83fde) |
+| vendor/xiaomi/sm8250-common | [a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144) |
 
 The two device checkouts retain their unchanged authored recovery overlays.
 Recovery patches and manifests require no content changes; new active identities

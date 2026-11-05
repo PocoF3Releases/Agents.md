@@ -33,8 +33,8 @@ effect UUID, active HAL, thermal, security or kernel behavior was retuned.
 
 ## Current sources
 
-- [device/xiaomi/sm8250-common — 3f87ba83ed02](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3f87ba83ed0226321d0da0ae0afef55ea178c597).
-- [vendor/xiaomi/sm8250-common — a58a9278c38d](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a58a9278c38d26812d1ea8566c7c9070ff9d2a63).
+- [device/xiaomi/sm8250-common — 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125).
+- [vendor/xiaomi/sm8250-common — a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144).
 
 The [old-to-new map](dolby-history-map-20261105.csv) records provenance, not new
 test identities. Dropped rows map to the preceding retained state. Private
@@ -71,3 +71,7 @@ release; do not infer exact OTA savings from removed package roots.
 Mini GMS, the withdrawn LZ4 snapshot feature, all 20 prior prebuilt removals,
 recovery overlays and paused investigations remain preserved. Private receipts,
 original patches and probe results are in `~/evo/.repo/dolby-history-audit-20261105/`.
+
+The [later final-implementation pass](final-implementations-20261105.md) preserves
+this final source content while consolidating other histories. The provenance
+map resolves to those current canonical commits; original test IDs stay historical.

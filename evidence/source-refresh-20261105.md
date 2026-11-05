@@ -23,7 +23,7 @@ allowed upstream heads were checked again immediately before publication.
 | [PocoF3Releases/android_hardware_nxp_nfc](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/0b8bf91ca3a41a207ccb7429a553dac771433ca2) | `lineage-24.0` | `0b8bf91ca3a4` |
 | [PocoF3Releases/frameworks_av](https://github.com/PocoF3Releases/frameworks_av/commit/406810da81b7a68d1f21e197d166dae67e6f0e69) | `cnb` | `406810da81b7` |
 | [PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base/commit/ef5eed4877fbab5038ca77291c5b917bc8112ce9) | `cnb` | `ef5eed4877fb` |
-| [PocoF3Releases/hardware_xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi/commit/2ce7b4064a5aa5f42e43a5303fe3279c4adc30d9) | `cnb` | `2ce7b4064a5a` |
+| [PocoF3Releases/hardware_xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336) | `cnb` | `6762a5238e69` |
 | [PocoF3Releases/android_hardware_interfaces](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/580860c5653153f13511b8ed46b7db9a02ca5490) | `cnb` | `580860c56531` |
 
 Five stacks retain all 101 feature commits with equivalent stable patch IDs and
