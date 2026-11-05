@@ -2,7 +2,7 @@
 
 Checkpoint: **2026-11-05**. [Android 17 status](state/android17-status.md).
 
-- **Haptics:** seven effects/eight primitives tested temporarily; older ROM restored. Scale-zero gap remains. [Scope](memory/haptics.md).
+- **Haptics:** installed HAL checks pass enforcing; tick fallback fix built. Scale-zero gap remains. [Scope](memory/haptics.md).
 - **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO active; manual mismatch remains.
