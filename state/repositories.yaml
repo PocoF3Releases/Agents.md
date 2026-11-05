@@ -25,14 +25,15 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 2d57d2c2b8de317d40d481167f2f49932c03b556
+    aosp-17: 3f87ba83ed0226321d0da0ae0afef55ea178c597
   local_a17:
-    head: e1765547af28292d9491ef5dac1946f6deea6c4d
+    head: 5b4d88db2af13a3dd80ff3e53f1f1db5ff3684c6
     reason: ROM public tip plus authored recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2d57d2c2b8de317d40d481167f2f49932c03b556
-  observation: 2026-11-05; mini GMS / snapshot rollback scope in
-    evidence/build-options-20261105.md; product graph passes, ROM rebuild pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3f87ba83ed0226321d0da0ae0afef55ea178c597
+  observation: 2026-11-05; original Dolby integration cleanup, exact vendor identity
+    and dependency/graph/installed-phone checks in evidence/dolby-history-cleanup-20261105.md;
+    reduced image rebuild/runtime pending.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -65,12 +66,13 @@ repositories:
   - vendor/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 31b622c1667b4d6f3d68c1a3243d17df91a15fa4
+    aosp-17: a58a9278c38d26812d1ea8566c7c9070ff9d2a63
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/31b622c1667b4d6f3d68c1a3243d17df91a15fa4
-  observation: 2026-11-05; prebuilt ABI pruning and dependency/phone registry checks
-    in evidence/prebuilt-cleanup-20261105.md; full pruned-image build/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a58a9278c38d26812d1ea8566c7c9070ff9d2a63
+  observation: 2026-11-05; original Dolby integration cleanup, exact vendor identity
+    and dependency/graph/installed-phone checks in evidence/dolby-history-cleanup-20261105.md;
+    reduced image rebuild/runtime pending.
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
   role: build_source
   source_tree_paths:

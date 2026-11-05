@@ -34,10 +34,9 @@ Measure the new ZIP after rebuilding.
 ## LZ4 feature withdrawn
 
 At the maintainer's request, removed the recent SM8250 LZ4 snapshot configuration
-and full-OTA target-codec opt-in. The addition/removal commit pairs were dropped from published history. Final
-source trees remain identical to the already checked rollback; the retained
-prebuilt cleanup preserves its original author and message. The five affected
-files match their pre-feature versions. Virtual A/B, vendor-ramdisk support and independent COW v2 remain.
+and full-OTA target-codec opt-in. The addition/removal commit pairs were dropped from published history. The rollback matched the pre-feature content at that verification point.
+The [later audio cleanup](dolby-history-cleanup-20261105.md) changes only separate
+packaging/fixup details; snapshot selection remains as described here. Virtual A/B, vendor-ramdisk support and independent COW v2 remain.
 Compression/method and PRODUCT_OTA_FULL_USE_TARGET_VABC resolve unset; only the
 existing ro.virtual_ab.enabled property remains from these snapshot selections.
 
@@ -49,7 +48,7 @@ this removal is a product choice, not a demonstrated bootloop fix.
 ## Current public commits
 
 - [device/xiaomi/alioth: f77df7705c90](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f77df7705c9091683bfcc976cb147cb6a2a01162).
-- [device/xiaomi/sm8250-common: 2d57d2c2b8de](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2d57d2c2b8de317d40d481167f2f49932c03b556).
+- [device/xiaomi/sm8250-common: 3f87ba83ed02](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3f87ba83ed0226321d0da0ae0afef55ea178c597).
 - [build/make: 862350971ca3](https://github.com/PocoF3Releases-Recovery/android_build/commit/862350971ca32fdcfbb6f032487d9531ab94e80f).
 
 ## Verification and limits
