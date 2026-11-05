@@ -123,3 +123,7 @@ the enhanced native recovery and reapplies its four authored framework/device
 patches on the updated ROM bases. The runner and series remain installed together;
 postflight reports zero pending patches. This is source replay evidence, not a
 new recovery image or device acceptance. The kernel intake remains held as recorded.
+
+LZ4 compressed snapshots are configured for the next SM8250 rebuild, with an
+explicit updated-recovery requirement and COW v2. Host checks pass; full OTA and
+device merge remain unverified. [Configuration evidence](../evidence/source-refresh-20261105.md#lz4-snapshot-configuration).
