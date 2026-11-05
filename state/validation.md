@@ -2,13 +2,11 @@
 
 ## V-HAPTICS
 
-**2026-11-02 — temporary HAL:** nine VTS cases and 20 cancellation/replacement
-sequences pass, enforcing. Older HAL restored. Scale-zero defect confirmed;
-calibration/feel and RichTap/PWLE remain unverified.
-[Record](../evidence/haptics/2026-11-02.md).
-
-[Nov 1](../evidence/haptics/2026-11-01.md): tuning.
-[Oct 4](../evidence/haptics/2026-10-04.md): effects/cancel/AAC.
+**2026-11-05 — installed HAL:** 15 VTS checks and 20 callback sequences pass,
+enforcing; eight artifacts match the build. Immediate tick fallback build-tested,
+not installed. Scale-zero/calibration/feel and RichTap/PWLE limits remain.
+[Record](../evidence/haptics/2026-11-05.md) ·
+[Nov 2 temporary tests](../evidence/haptics/2026-11-02.md).
 
 ## V-AC4
 

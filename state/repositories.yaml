@@ -25,15 +25,15 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 6fed13f4da772d3f38253e8a33fd63cf255d8125
+    aosp-17: c4326d3ad0494d11525aea0a12c0da490831062c
   local_a17:
-    head: 5b9a91414dfae7e23ac8f039fd84b8f25924f1e3
+    head: 6844756703c2e328b68432603701c533f0e34603
     reason: ROM public tip plus authored recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125
-  observation: 2026-11-05; final implementation history consolidated with exact
-    source/payload identity and preserved attribution; scope and limits in
-    evidence/final-implementations-20261105.md.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/c4326d3ad0494d11525aea0a12c0da490831062c
+  observation: 2026-11-05; remove only the initial tick fallback delay; targeted
+    build and installed HAL regressions pass, with scope and limits in
+    evidence/haptics/2026-11-05.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:

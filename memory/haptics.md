@@ -1,13 +1,15 @@
 # Alioth AW8697 haptics
 
-**Stock-backed Android HAL, checkpoint 2026-11-02.** Seven effects use the
-HyperOS UI palette/strengths; eight primitives (stock RAM/prebaked slices plus
-SineTrack-model envelopes). [Nov 1 RE and tests](../evidence/haptics/2026-11-01.md);
-[Nov 2 contract checks](../evidence/haptics/2026-11-02.md) pass selected VTS and
-20 cancellation/replacement sequences on a temporary current HAL. Installed ROM
-remains older after restoration. Scale-zero composition is confirmed silent
-despite its minimum-feelable contract; no calibrated minimum or human acceptance
-yet. Preserve positive-scale tuning. [V-HAPTICS](../state/validation.md#v-haptics).
+**Stock-backed Android HAL, checkpoint 2026-11-05.** Seven effects use the
+HyperOS palette/strengths; eight primitives use stock slices and SineTrack-model
+envelopes. [Nov 5 comparison/tests](../evidence/haptics/2026-11-05.md): eight installed
+haptic artifacts match the build; 15 selected VTS checks and 20 callback
+sequences pass enforcing. Removed only the clock fallback's 125 ms initial
+silence; its 30 ms pulse is retained, build-tested but not installed.
+[Nov 1 RE](../evidence/haptics/2026-11-01.md);
+[Nov 2 contract gap](../evidence/haptics/2026-11-02.md): scale-zero composition
+remains silent; no calibrated minimum or human acceptance. Preserve positive
+scales; Pixel drive values are not transferable. [V-HAPTICS](../state/validation.md#v-haptics).
 
 ## Ownership and interfaces
 
