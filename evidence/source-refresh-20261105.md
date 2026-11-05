@@ -101,3 +101,24 @@ configuration, thermal or security acceptance from the ROM source refresh.
 
 Private snapshots, backup refs, migration bundles, range comparisons and sync/
 publication receipts remain under `~/evo/.repo/source-refresh-20261105/`.
+
+## LZ4 snapshot configuration
+
+The common SM8250 product now enables compressed Virtual A/B snapshots with
+LZ4, retaining vendor-ramdisk snapuserd and COW v2. The resolved 4.19 kernel
+already has built-in dm-user; no kernel source/config change was required.
+Optional io_uring is disabled for this kernel.
+
+Full OTAs opt in through PRODUCT_OTA_FULL_USE_TARGET_VABC and therefore require
+an updated recovery/update_engine supporting the target codec. The maintainer
+approved this requirement. The packaging helper checks target platform support;
+other products retain the original launch-API/gzip fallback, and incremental
+codec selection is unchanged. The opt-in does not change the device launch API.
+
+[Packaging implementation](https://github.com/PocoF3Releases-Recovery/android_build/commit/56af6c9b3d9c1b787337fb407e261a7c24008812),
+[SM8250 configuration](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/d68c5b5ca9f189812c87af3e2fd36d2032e7f2cb).
+Seven targeted host regressions, product resolution, metadata generation and
+metadata-to-codec selection pass; recovery patch postflight has zero pending.
+No full OTA rebuild or on-device compressed-snapshot merge was performed.
+Snapshot storage savings do not establish a smaller downloadable ZIP or fix the
+unconfirmed November 4 bootloop/third-party recovery reports.
