@@ -25,54 +25,56 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 3f87ba83ed0226321d0da0ae0afef55ea178c597
+    aosp-17: 6fed13f4da772d3f38253e8a33fd63cf255d8125
   local_a17:
-    head: 5b4d88db2af13a3dd80ff3e53f1f1db5ff3684c6
+    head: 5b9a91414dfae7e23ac8f039fd84b8f25924f1e3
     reason: ROM public tip plus authored recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3f87ba83ed0226321d0da0ae0afef55ea178c597
-  observation: 2026-11-05; original Dolby integration cleanup, exact vendor identity
-    and dependency/graph/installed-phone checks in evidence/dolby-history-cleanup-20261105.md;
-    reduced image rebuild/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: f77df7705c9091683bfcc976cb147cb6a2a01162
+    aosp-17: f7a82eadfef6e78566ac550a167a26d11a4f1ff6
   local_a17:
-    head: 4994cfc85d4d403aa3002b30f3000cd0acc8432e
+    head: 0f7af4509f4bb48e6aa2963c7849eba01138bd69
     reason: ROM public tip plus authored recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f77df7705c9091683bfcc976cb147cb6a2a01162
-  observation: 2026-11-05; mini GMS / snapshot rollback scope in
-    evidence/build-options-20261105.md; product graph passes, ROM rebuild pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f7a82eadfef6e78566ac550a167a26d11a4f1ff6
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: bd26e3148509485d134c8c2230b883950e41146d
+    aosp-17: 431c6019fe1f9c5c9a8741cd980462b2da1f8576
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/bd26e3148509485d134c8c2230b883950e41146d
-  observation: 2026-11-05; prebuilt ABI pruning and dependency/phone registry checks
-    in evidence/prebuilt-cleanup-20261105.md; full pruned-image build/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/431c6019fe1f9c5c9a8741cd980462b2da1f8576
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
   role: build_source
   source_tree_paths:
   - vendor/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: a58a9278c38d26812d1ea8566c7c9070ff9d2a63
+    aosp-17: a9a3cc77e0334842d1ffdbbc7771e4751e105144
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a58a9278c38d26812d1ea8566c7c9070ff9d2a63
-  observation: 2026-11-05; original Dolby integration cleanup, exact vendor identity
-    and dependency/graph/installed-phone checks in evidence/dolby-history-cleanup-20261105.md;
-    reduced image rebuild/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
   role: build_source
   source_tree_paths:
@@ -140,24 +142,26 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 2ce7b4064a5aa5f42e43a5303fe3279c4adc30d9
+    cnb: 6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/2ce7b4064a5aa5f42e43a5303fe3279c4adc30d9
-  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
-    Earlier build/device acceptance retains its recorded source and artifact scope.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:
   - device/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-17: 1f9b82308acaf600474ff1006a0feaeefbc27f28
+    aosp-17: ac369e25f0159c3fcc65110dfb64bb680e05a837
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_camera/commit/1f9b82308acaf600474ff1006a0feaeefbc27f28
-  observation: 2026-11-05; prebuilt ABI pruning and dependency/phone registry checks
-    in evidence/prebuilt-cleanup-20261105.md; full pruned-image build/runtime pending.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_camera/commit/ac369e25f0159c3fcc65110dfb64bb680e05a837
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
 - repository: https://github.com/PocoF3Releases/frameworks_av
   role: build_source
   source_tree_paths:
@@ -250,12 +254,13 @@ repositories:
   - vendor/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-17: 21d47e9bcc1ce00aaf852c0c7c16015b5aa5920c
+    aosp-17: 01543bb0d5b0e693022128ea5905ffb661e83fde
   local_a17: matches_selected_ref
-  observation: 2026-11-05; prebuilt ABI pruning and dependency/phone registry checks
-    in evidence/prebuilt-cleanup-20261105.md; full pruned-image build/runtime pending.
+  observation: 2026-11-05; final implementation history consolidated with exact
+    source/payload identity and preserved attribution; scope and limits in
+    evidence/final-implementations-20261105.md.
   commit_links:
-    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/21d47e9bcc1ce00aaf852c0c7c16015b5aa5920c
+    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/01543bb0d5b0e693022128ea5905ffb661e83fde
 - repository: https://github.com/johnmart19/repoindex
   role: tool
   source_tree_paths: []
