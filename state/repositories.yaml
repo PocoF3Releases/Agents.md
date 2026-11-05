@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-11-03'
+observed: '2026-11-05'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool
   sources. Source observations are not a flashed release manifest.
 workhub:
@@ -142,14 +142,12 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: fff3348c2d9837ad278e8e701b638022f35a6028
+    cnb: 2ce7b4064a5aa5f42e43a5303fe3279c4adc30d9
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/fff3348c2d9837ad278e8e701b638022f35a6028
-  observation: 2026-11-03 source refresh in evidence/source-refresh-20261103.md;
-    prior acceptance remains scoped as recorded. 2026-11-01; AW8697 measured tuning, synthesized primitives in
-    evidence/haptics/2026-11-01.md (temp-mount check, feel pending); DSPVolume allowlist
-    in permissions-audit-20261101.md; Dolby in evidence/dolby-review-20261031.md.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/2ce7b4064a5aa5f42e43a5303fe3279c4adc30d9
+  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
+    Earlier build/device acceptance retains its recorded source and artifact scope.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:
@@ -168,27 +166,25 @@ repositories:
   - frameworks/av
   selected_ref: cnb
   refs:
-    cnb: 0c471ea794d999884744c0843c73a70320ed44d1
+    cnb: 406810da81b7a68d1f21e197d166dae67e6f0e69
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/0c471ea794d999884744c0843c73a70320ed44d1
-  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
-    recovery inclusion rechecked. No new build/device acceptance.
+    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/406810da81b7a68d1f21e197d166dae67e6f0e69
+  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
+    Earlier build/device acceptance retains its recorded source and artifact scope.
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
   source_tree_paths:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: d3879b2b79fe8d6c0f49d10ba0b5af0b5057781b
+    cnb: ae7995b1738e09f51b1f0edec2b0c9543a70b9a0
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/d3879b2b79fe8d6c0f49d10ba0b5af0b5057781b
-  observation: 2026-11-03 source refresh in evidence/source-refresh-20261103.md;
-    prior acceptance remains scoped as recorded. 2026-11-03; USB Binder recovery built and temporarily phone-tested;
-    original userspace restored. Recovery tree equivalence and scope in
-    evidence/usb-recovery-20261103.md.
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/ae7995b1738e09f51b1f0edec2b0c9543a70b9a0
+  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
+    Earlier build/device acceptance retains its recorded source and artifact scope.
   local_a17:
-    head: 7030ae95d35dfe0f808df697fb39a04b04f07824
+    head: f141ee9a669172fba0d9a954f51d2e6703d56025
     reason: Updated ROM public base plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
@@ -232,13 +228,12 @@ repositories:
   - hardware/nxp/nfc
   selected_ref: lineage-24.0
   refs:
-    lineage-24.0: 2ef0542a86ac3b12c13b8281e3b01816202a15a4
+    lineage-24.0: 0b8bf91ca3a41a207ccb7429a553dac771433ca2
   local_a17: matches_selected_ref
   commit_links:
-    lineage-24.0: https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/2ef0542a86ac3b12c13b8281e3b01816202a15a4
-  observation: 2026-11-03 source refresh in evidence/source-refresh-20261103.md;
-    prior acceptance remains scoped as recorded. 2026-10-25; selected upstream checked and custom payload retained; component-build scope
-    in evidence/source-refresh-20261025.md; no new device acceptance.
+    lineage-24.0: https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/0b8bf91ca3a41a207ccb7429a553dac771433ca2
+  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
+    Earlier build/device acceptance retains its recorded source and artifact scope.
 - repository: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb
   role: build_source
   source_tree_paths:
@@ -451,11 +446,11 @@ repositories:
   source_tree_paths: []
   selected_ref: cnb
   refs:
-    cnb: 379ef3334b3a2a0a0ea70647dc1d82df9810cb72
+    cnb: 580860c5653153f13511b8ed46b7db9a02ca5490
   commit_links:
-    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/379ef3334b3a2a0a0ea70647dc1d82df9810cb72
-  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
-    recovery inclusion rechecked. No new build/device acceptance.
+    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/580860c5653153f13511b8ed46b7db9a02ca5490
+  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
+    Earlier build/device acceptance retains its recorded source and artifact scope.
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces
   role: build_source
@@ -463,12 +458,12 @@ repositories:
   - hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: 0c71d78397e25642c6113fc88fdbe8ec3e9e49c1
+    cnb: 7f3788f397c18d7fd36b797112fc531b5229066e
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0c71d78397e25642c6113fc88fdbe8ec3e9e49c1
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/7f3788f397c18d7fd36b797112fc531b5229066e
   local_a17: matches_selected_ref
-  observation: 2026-10-25; PR message review published; per-commit trees, patches and authors unchanged;
-    recovery inclusion rechecked. No new build/device acceptance.
+  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
+    Earlier build/device acceptance retains its recorded source and artifact scope.
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy
   role: build_source
   source_tree_paths:
