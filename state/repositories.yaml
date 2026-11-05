@@ -178,13 +178,13 @@ repositories:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: ae7995b1738e09f51b1f0edec2b0c9543a70b9a0
+    cnb: ef5eed4877fbab5038ca77291c5b917bc8112ce9
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/ae7995b1738e09f51b1f0edec2b0c9543a70b9a0
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/ef5eed4877fbab5038ca77291c5b917bc8112ce9
   observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
     Earlier build/device acceptance retains its recorded source and artifact scope.
   local_a17:
-    head: f141ee9a669172fba0d9a954f51d2e6703d56025
+    head: 7740198bc2ca02abac684c5980ffe9b85c95ec38
     reason: Updated ROM public base plus authored recovery overlay
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source

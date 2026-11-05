@@ -22,7 +22,7 @@ allowed upstream heads were checked again immediately before publication.
 | [PocoF3Releases-Recovery/android_hardware_interfaces](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/7f3788f397c18d7fd36b797112fc531b5229066e) | `cnb` | `7f3788f397c1` |
 | [PocoF3Releases/android_hardware_nxp_nfc](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/0b8bf91ca3a41a207ccb7429a553dac771433ca2) | `lineage-24.0` | `0b8bf91ca3a4` |
 | [PocoF3Releases/frameworks_av](https://github.com/PocoF3Releases/frameworks_av/commit/406810da81b7a68d1f21e197d166dae67e6f0e69) | `cnb` | `406810da81b7` |
-| [PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base/commit/ae7995b1738e09f51b1f0edec2b0c9543a70b9a0) | `cnb` | `ae7995b1738e` |
+| [PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base/commit/ef5eed4877fbab5038ca77291c5b917bc8112ce9) | `cnb` | `ef5eed4877fb` |
 | [PocoF3Releases/hardware_xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi/commit/2ce7b4064a5aa5f42e43a5303fe3279c4adc30d9) | `cnb` | `2ce7b4064a5a` |
 | [PocoF3Releases/android_hardware_interfaces](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/580860c5653153f13511b8ed46b7db9a02ca5490) | `cnb` | `580860c56531` |
 
@@ -53,11 +53,29 @@ mail patches are unchanged. Their SHA-256 values match the series; apply and
 postflight both pass, with zero pending patches in all three projects. Recovery
 changes are local overlays and were not pushed to ROM-only framework/device refs.
 
-Current framework source plus recovery overlay: `f141ee9a669172fba0d9a954f51d2e6703d56025`.
+Current framework source plus recovery overlay: `7740198bc2ca02abac684c5980ffe9b85c95ec38`.
 The two unchanged device overlays were restored to their previous exact commit
 identities after tree-equality proof. Local agent guidance and six pre-existing
 Workhub edits remain unchanged. The parked WLAN candidate remains excluded from
 the active source tree; no paused charging/touch investigation was reopened.
+
+## Build-failure follow-up
+
+The reported frozen Duck RKP AIDL integrity failure was reproduced with the
+existing host tool (exit 1). The checked upstream snapshot carried a mismatched
+hash; both AOSP hash generators agreed on the canonical value for the unchanged
+API. No API or hash validation was modified locally.
+
+Five newer Evolution X framework commits, ending at
+[08e948ba4216](https://github.com/Evolution-X/frameworks_base/commit/08e948ba4216de96137c267ed86d070aa197de4b),
+remove the native interface and its module upstream. Replayed all nine custom
+patches unchanged onto that head; raw author/message bytes and stable patch IDs
+match. No references to the removed native interface remain. Both remaining
+frozen framework API hashes pass the actual host integrity verifier (exit 0).
+Recovery application and postflight pass unchanged. All 1,265 checkout heads
+match the expected source set and have no tracked edits. Rechecked all 39 allowed
+upstream mappings with annotated tags peeled; only frameworks/base had advanced.
+This is source/host verification; the failed Android build has not been rerun.
 
 ## Kernel boundary
 
