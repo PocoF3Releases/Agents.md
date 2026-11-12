@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Maximum-FPS recording](max-fps-recording-20261112.md) | Codec bounds, legacy/Compose plumbing and independent blur preferences; no new defect found |
 | [ROM refresh and recording blur, November 12](source-refresh-20261112.md) | Latest selected sources, preserved custom series, local recovery patches and focused blur regressions |
 | [Dolby VoIP re-entry](dolby-voip-reentry-20261112.md) | Matched native queue-delay reproduction, independent quiet-window guard and verified recovery |
 | [Audio features, November 12](alioth-audio-features-20261112.md) | Published MiSound/Dolby controls and native scene preservation, queued-write correction and bounded phone acceptance |

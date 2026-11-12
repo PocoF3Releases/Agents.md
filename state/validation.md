@@ -227,5 +227,5 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-SOURCE-20261112
 
-[Source/host checks and recording-blur limits](../evidence/source-refresh-20261112.md);
-no Android build or phone test.
+[Refresh/blur](../evidence/source-refresh-20261112.md) ·
+[max-FPS](../evidence/max-fps-recording-20261112.md). Source/host only.

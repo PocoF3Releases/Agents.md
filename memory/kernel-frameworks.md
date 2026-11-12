@@ -42,7 +42,8 @@ Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legac
 
 ## Connectivity boundaries
 
-High-FPS recording and blur suppression remain independent. Suppression is
+[High-FPS recording](../evidence/max-fps-recording-20261112.md) and blur
+suppression remain independent. Suppression is
 device-opt-in and honors Keep blur effects; [listener/cleanup behavior and
 limits](../evidence/source-refresh-20261112.md#recording-blur). Verify WFD/ELF
 rewrites against the active manifest, not patch age.
