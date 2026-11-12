@@ -143,14 +143,14 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: cb7ab6c33b4bf96fbc0493602d08ac9e102ca621
+    cnb: fd1e7be434943c1e13ba24578e6913e4c990c286
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/cb7ab6c33b4bf96fbc0493602d08ac9e102ca621
-  observation: 2026-11-12; four Dolby implementation topics and separate 78-locale
-    gain-format update published. Queued-readback host/build/temporary phone checks
-    passed with two explicit rapid-reentry enable rejections and final recovery;
-    see evidence/alioth-audio-features-20261112.md for scope and native-follow-up limits.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/fd1e7be434943c1e13ba24578e6913e4c990c286
+  observation: 2026-11-12; Dolby resume quiet-window and queued-enable confirmation
+    fixes published. Host229, module and temporary phone checks passed; matched
+    confirmation errors fell from fourteen to zero, with settings/restarts preserved.
+    Scope and timing limits in evidence/dolby-voip-reentry-20261112.md; translations separate.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:

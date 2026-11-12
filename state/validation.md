@@ -93,10 +93,10 @@ was added. The correction is provided by an upstream dependency; it is not a mai
 
 ## V-DOLBY
 
-[Nov 12 validation](../evidence/alioth-audio-features-20261112.md): Parts/Dolby host,
-builds, native A/B, ten media, Off/On, six voice cycles and restarts pass; originals
-restored. Two stress rejections; headphone/acoustic/DSP unverified. Translations
-separate; no ROM build. [Earlier](../evidence/audio-subsystem-followup-20261025.md).
+[Nov 12](../evidence/dolby-voip-reentry-20261112.md): ACK/quiet-window fixes;
+host229, module, 56VoIP/8MIC, media, Off/On/restarts pass; originals restored.
+[Parts/native](../evidence/alioth-audio-features-20261112.md). Settings and separate
+translations retained. Headphone/acoustic/DSP/installed-ROM acceptance unverified.
 
 ## V-PLATFORM
 
