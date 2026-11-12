@@ -143,14 +143,14 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: fd1e7be434943c1e13ba24578e6913e4c990c286
+    cnb: b533e52319d6a3ad59a85e61999fc4f6aa2a66a0
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/fd1e7be434943c1e13ba24578e6913e4c990c286
-  observation: 2026-11-12; Dolby resume quiet-window and queued-enable confirmation
-    fixes published. Host229, module and temporary phone checks passed; matched
-    confirmation errors fell from fourteen to zero, with settings/restarts preserved.
-    Scope and timing limits in evidence/dolby-voip-reentry-20261112.md; translations separate.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/b533e52319d6a3ad59a85e61999fc4f6aa2a66a0
+  observation: 2026-11-12; Dolby queued-enable, quiet-window and redundant mode-query
+    fixes published. Host/module/temporary phone checks passed, preserving settings;
+    exact scopes and the unproven general latency gain are recorded in
+    evidence/dolby-voip-reentry-20261112.md. Translation commits remain separate.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:
