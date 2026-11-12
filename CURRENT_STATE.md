@@ -7,7 +7,7 @@ Checkpoint: **2026-11-12**. [Android 17 status](state/android17-status.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO active; manual mismatch remains.
 - **Audio/Parts:** [Audio](evidence/alioth-audio-features-20261112.md) · [Parts](evidence/parts-full-review-20261112.md): scoped checks pass.
-- **Kernel:** [Rebase/review](evidence/kernel-final-review-20261112.md): Alioth checks pass; limits remain.
+- **Kernel:** [USB fixes](evidence/kernel-usb-lifetime-20261112.md): Alioth tested; Dagu hardware unverified.
 - **Releases:** October 28 published; November 4 build completion reported. [Releases](state/releases.md).
 
 | Task | Read |

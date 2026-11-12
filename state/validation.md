@@ -212,7 +212,7 @@ boot restored; partition unchanged. No full conformance/release.
 ## V-KERNEL-ACTIVE
 
 [Identity](../evidence/kernel-redline-20261028.md); [installed KGSL](../evidence/kgsl-backports-20261028.md); [battery floor](../evidence/battery-thermistor-20261031.md).
-[November 12](../evidence/kernel-final-review-20261112.md): strict Alioth build and temporary enforcing phone checks pass; static/bulk-import limits recorded.
+[November 12 rebase](../evidence/kernel-final-review-20261112.md) and [USB lifetime follow-up](../evidence/kernel-usb-lifetime-20261112.md): strict builds and scoped enforcing phone checks pass; Dagu hardware/bulk-import limits remain.
 
 ## V-KGSL-20261028
 

@@ -81,14 +81,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: 2f2467b329845f370639f3498433b4f70475ce97
+    aosp-17: cd1f8df56f66a012ad4a8b25f3d7a99cc6a5ddce
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2f2467b329845f370639f3498433b4f70475ce97
-  observation: 2026-11-12; latest Lineage rebase, history cleanup and 28 scoped
-    corrections; all-device configs regenerated separately. Strict Alioth build,
-    scoped Sparse and temporary enforcing phone checks pass. Restricted reviews,
-    baseline diagnostics and hardware limits in evidence/kernel-final-review-20261112.md.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cd1f8df56f66a012ad4a8b25f3d7a99cc6a5ddce
+  observation: 2026-11-12; two independent USBPD/PS5169 lifetime follow-ups
+    after the latest Lineage rebase. Strict Alioth build, affected Alioth/Dagu
+    Sparse and enforcing Alioth teardown checks pass. Dagu redriver hardware
+    remains unverified; evidence/kernel-usb-lifetime-20261112.md.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile

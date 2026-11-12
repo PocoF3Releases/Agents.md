@@ -71,7 +71,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[November 12 rebase/review](../evidence/kernel-final-review-20261112.md): latest Lineage Qualcomm base, owned history cleanup and 28 component corrections. Strict Alioth build, scoped Sparse and temporary enforcing phone checks pass; config adds only upstream CMA_SYSFS. Audio/GPS/thermal-clamp review restrictions, conditional teardown findings and bulk-import limits remain explicit. [Earlier correctness](../evidence/kernel-correctness-followup-20261102.md), [audio](../evidence/kernel-audio-boundaries-20261102.md) and the [2,954-warning historical backlog](../evidence/kernel-sparse-backlog-20261028.md) retain their original scope; this was not a full Sparse recount.
+[November 12 rebase](../evidence/kernel-final-review-20261112.md): latest Lineage base, owned cleanup and 28 corrections; config adds only CMA_SYSFS. [USB lifetime follow-up](../evidence/kernel-usb-lifetime-20261112.md): strict/Sparse and Alioth real teardown checks pass; PS5169 is Dagu-only with hardware unverified. Audio/GPS/thermal-clamp restrictions stay parked. [Earlier correctness](../evidence/kernel-correctness-followup-20261102.md), [audio](../evidence/kernel-audio-boundaries-20261102.md) and [Sparse backlog](../evidence/kernel-sparse-backlog-20261028.md) retain their scopes; no full recount or bulk-import certification.
 
 [Full-series compatibility plan](../evidence/kernel-contract-plan-20261102.md): incomplete; boundary reproduction paused, ordinary consumer checks remain.
 

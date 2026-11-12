@@ -55,7 +55,7 @@ The early e2fsck linker-configuration warning is userspace output, not a kernel 
 ## Limits and next boundary
 
 - The new audio-lane review, Airoha follow-up and thermal-clamp follow-up were parked after platform restrictions. Their new proposals were not integrated, retried, rephrased or handed to another reviewer. Preserve that boundary; old notes do not resume them.
-- Coordinated USBPD producer shutdown and PS5169 registration/removal lifetime need a separately validated implementation. Incomplete cancellation/publication proposals were excluded; the baseline remains unchanged.
+- At this baseline, USBPD/PS5169 lifetime proposals were excluded as incomplete. The [separate validated follow-up](kernel-usb-lifetime-20261112.md) now fixes those findings; its Dagu hardware limits remain explicit.
 - Bulk imports, inactive hardware, alternate camera modes, external USB/DP peripherals and adverse allocation/removal races retain their stated limits. Normal boot/preview does not certify every mode or every error path.
 - The prior USB outage/mode experiment and GPU donor experiments remain paused. No new audio fault injection, radio call/SMS, storage wipe, permanent flash or long endurance qualification was performed.
 
