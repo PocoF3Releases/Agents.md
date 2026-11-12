@@ -34,7 +34,7 @@ Historical boot outcomes and then-unresolved Cirrus/ultrasound behavior and the 
 
 ## Current source ownership
 
-Upstream dependencies already provide the absent-kernel-attribute ENOENT handling and optional BPF iterator log-spam correction. Preserve these integration facts without tracking upstream heads or restoring retired fork overrides. Our Android 17 frameworks/base contains independent high-FPS screen recording and blur suppression; compare current behavior before replaying old patches.
+Upstream dependencies already provide the absent-kernel-attribute ENOENT handling and optional BPF iterator log-spam correction. Preserve these integration facts without tracking upstream heads or restoring retired fork overrides. Framework recording controls remain independent; [current replay and blur policy](../evidence/source-refresh-20261112.md) replace historical patch assumptions.
 
 GPU donor/game experiments stay parked; see [graphics](gaming-graphics.md). Thermal protection stays enabled; diagnostic root modules are not production dependencies.
 
@@ -42,10 +42,10 @@ Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legac
 
 ## Connectivity boundaries
 
-High-FPS
-screen recording and recording-blur suppression are independent features/commits;
-neither should require the other. Verify WFD/ELF dependency rewrites against the
-active manifest instead of restoring them by age alone.
+High-FPS recording and blur suppression remain independent. Suppression is
+device-opt-in and honors Keep blur effects; [listener/cleanup behavior and
+limits](../evidence/source-refresh-20261112.md#recording-blur). Verify WFD/ELF
+rewrites against the active manifest, not patch age.
 
 Common the historical candidate removed obsolete Bluetooth build configuration. Source policy
 and library presence were reviewed, but no Bluetooth audio headset or WFD sink

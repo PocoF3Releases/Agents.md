@@ -146,8 +146,7 @@ Current repairs are V-PBRP-20261009; branch HEAD differs from October 7 assets.
 
 ## V-SOURCE-20261009
 
-**2026-10-09 — source-checked.** Maintained ROM heads/product integration and
-separate recovery source reviewed; prior recovery-core edits preserved. No new build/device test. [Scope](changelog-audit.md).
+**2026-10-09 — source-checked.** [Scope](changelog-audit.md); no build/device test.
 
 ## V-CHANGELOG
 
@@ -225,3 +224,8 @@ boot restored; partition unchanged. No full conformance/release.
 ## V-USB-20261103
 
 [Scope](../evidence/usb-recovery-20261103.md).
+
+## V-SOURCE-20261112
+
+[Source/host checks and recording-blur limits](../evidence/source-refresh-20261112.md);
+no Android build or phone test.

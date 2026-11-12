@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [ROM refresh and recording blur, November 12](source-refresh-20261112.md) | Latest selected sources, preserved custom series, local recovery patches and focused blur regressions |
 | [Dolby VoIP re-entry](dolby-voip-reentry-20261112.md) | Matched native queue-delay reproduction, independent quiet-window guard and verified recovery |
 | [Audio features, November 12](alioth-audio-features-20261112.md) | Published MiSound/Dolby controls and native scene preservation, queued-write correction and bounded phone acceptance |
 | [ROM/fork refresh, November 5](source-refresh-20261105.md) | Latest upstream replay, NFC replacement and unchanged recovery patch bundle |
