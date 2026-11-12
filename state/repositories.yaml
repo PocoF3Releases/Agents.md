@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-11-05'
+observed: '2026-11-12'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool
   sources. Source observations are not a flashed release manifest.
 workhub:
@@ -25,30 +25,31 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: c4326d3ad0494d11525aea0a12c0da490831062c
+    aosp-17: a1c89c7569931a157a262b416602fc8116263ac4
   local_a17:
-    head: 6844756703c2e328b68432603701c533f0e34603
-    reason: ROM public tip plus authored recovery overlay
+    head: 85701a7cbb729d86f33f5039b070204a1103cbb0
+    reason: ROM public tip plus two authored recovery overlays
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/c4326d3ad0494d11525aea0a12c0da490831062c
-  observation: 2026-11-05; remove only the initial tick fallback delay; targeted
-    build and installed HAL regressions pass, with scope and limits in
-    evidence/haptics/2026-11-05.md.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/a1c89c7569931a157a262b416602fc8116263ac4
+  observation: 2026-11-12; five Parts implementation topics and separate 792-string/88-locale
+    translations published. Two authored recovery overlays remain local. Build and bounded
+    temporary phone scope are in evidence/alioth-audio-features-20261112.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: f7a82eadfef6e78566ac550a167a26d11a4f1ff6
+    aosp-17: 3af817361852077b31944a37fe030608382eded3
   local_a17:
-    head: 0f7af4509f4bb48e6aa2963c7849eba01138bd69
-    reason: ROM public tip plus authored recovery overlay
+    head: c570491d670953a09de015fc33db57d010600676
+    reason: ROM public tip plus original authored 120-Hz recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f7a82eadfef6e78566ac550a167a26d11a4f1ff6
-  observation: 2026-11-05; final implementation history consolidated with exact
-    source/payload identity and preserved attribution; scope and limits in
-    evidence/final-implementations-20261105.md.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/3af817361852077b31944a37fe030608382eded3
+  observation: 2026-11-12; stock headphone opt-ins and native MiSound output-move
+    scene-preservation opt-in published. Original recovery overlay reparented locally
+    with exact metadata and patch bytes. Opt-out/opt-in and bounded phone acceptance
+    are in evidence/alioth-audio-features-20261112.md; no headphone/acoustic/DSP proof.
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
   role: build_source
   source_tree_paths:
@@ -142,13 +143,14 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336
+    cnb: cb7ab6c33b4bf96fbc0493602d08ac9e102ca621
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336
-  observation: 2026-11-05; final implementation history consolidated with exact
-    source/payload identity and preserved attribution; scope and limits in
-    evidence/final-implementations-20261105.md.
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/cb7ab6c33b4bf96fbc0493602d08ac9e102ca621
+  observation: 2026-11-12; four Dolby implementation topics and separate 78-locale
+    gain-format update published. Queued-readback host/build/temporary phone checks
+    passed with two explicit rapid-reentry enable rejections and final recovery;
+    see evidence/alioth-audio-features-20261112.md for scope and native-follow-up limits.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
   source_tree_paths:
@@ -168,12 +170,14 @@ repositories:
   - frameworks/av
   selected_ref: cnb
   refs:
-    cnb: 406810da81b7a68d1f21e197d166dae67e6f0e69
+    cnb: 6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/406810da81b7a68d1f21e197d166dae67e6f0e69
-  observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
-    Earlier build/device acceptance retains its recorded source and artifact scope.
+    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07
+  observation: 2026-11-12; opt-in MiSound scene preservation during output-mix
+    migration published. Seven final source files match the frozen module/runtime-tested
+    source; sanitizer, opt-out/opt-in, explicit Off and process/service-restart scope
+    are in evidence/alioth-audio-features-20261112.md. Original phone artifacts restored.
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
   source_tree_paths:

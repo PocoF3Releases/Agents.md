@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Audio features, November 12](alioth-audio-features-20261112.md) | Published MiSound/Dolby controls and native scene preservation, queued-write correction and bounded phone acceptance |
 | [ROM/fork refresh, November 5](source-refresh-20261105.md) | Latest upstream replay, NFC replacement and unchanged recovery patch bundle |
 | [ROM/fork refresh, November 3](source-refresh-20261103.md) | Updated bases, preserved recovery stack and held kernel intake |
 | [Audio Java/native closure](audio-framework-closure-20261025.md) | Exact bytecode recovery, native coverage, phone checks and optional headphone gaps |

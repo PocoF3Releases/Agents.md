@@ -128,3 +128,6 @@ enable-failure reporting and separate translations, host/APK verified.
 
 [Routes](../evidence/audio-route-compatibility-20261102.md): GSM fix/limits.
 [Formats](../evidence/audio-formats-20261102.md): app/root PCM matrix and limits.
+
+
+[Nov12](../evidence/alioth-audio-features-20261112.md)

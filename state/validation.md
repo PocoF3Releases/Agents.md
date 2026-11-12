@@ -93,10 +93,10 @@ was added. The correction is provided by an upstream dependency; it is not a mai
 
 ## V-DOLBY
 
-Historical transport ACKs do not prove acoustic DSP/VQE/game processing. Older
-MiSound probes were not fully restorative. [Scope](../memory/dolby-audio.md).
-[Follow-up](../evidence/audio-subsystem-followup-20261025.md): enforcing candidate
-recording/lifecycle checks and artifact restoration; physical endpoint limits remain.
+[Nov 12 validation](../evidence/alioth-audio-features-20261112.md): Parts/Dolby host,
+builds, native A/B, ten media, Off/On, six voice cycles and restarts pass; originals
+restored. Two stress rejections; headphone/acoustic/DSP unverified. Translations
+separate; no ROM build. [Earlier](../evidence/audio-subsystem-followup-20261025.md).
 
 ## V-PLATFORM
 

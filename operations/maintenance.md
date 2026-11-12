@@ -72,11 +72,12 @@ necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/
 
 ## Internal agents
 
-In Codex, use `gpt-6.1-sol` with medium reasoning for new internal agents, following the
-user's current preference. Allow at most four concurrent threads including the
-parent. This supersedes the earlier low-reasoning/Light preference.
+In Codex, use `gpt-6.1-sol` with max reasoning for new internal agents, following the
+user's current preference. Allow at most ten concurrent agents including the
+parent. This supersedes the earlier medium/four-agent preference.
 Claude Code must select only models its runtime actually exposes; the Codex
-model override does not install GPT access there. Keep the same four-thread limit.
+model override does not install GPT access there. Respect the active client's
+concurrency limit.
 
 ## Local checks
 

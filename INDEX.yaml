@@ -64,6 +64,8 @@ subsystems:
     memory: memory/dolby-audio.md
     keywords:
     - dolby
+    - misound
+    - soundid
     - ac4
     - ac-4
     - vndk
