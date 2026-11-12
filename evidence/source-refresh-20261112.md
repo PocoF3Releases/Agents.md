@@ -18,7 +18,7 @@ separate main-organization hardware/interfaces branch is also current. No
 empty rewrites were made to already-current repositories; private signing and
 camera-development repositories were excluded.
 
-[Published framework head](https://github.com/PocoF3Releases/frameworks_base/commit/2cb26cda17a41c8ad03aa9f1f14b40351268a1a6)
+[Published framework head](https://github.com/PocoF3Releases/frameworks_base/commit/53e0061d824e3c6c571aebe95fb7bfa83258b3e6)
 contains the latest selected
 [EvoX base](https://github.com/Evolution-X/frameworks_base/commit/c51e18250230cba3de5708e8034ae3d3c92e26f4)
 and eleven retained feature commits. Range-diff/patch IDs preserve ten unchanged
@@ -42,7 +42,7 @@ uses cross-window listeners. The old recording flag did not notify those
 consumers; the shared animation helper could retain its radius/early wakeup,
 and legacy shade cleanup was gated on unrelated feature flags.
 
-The [consolidated recording-blur implementation](https://github.com/PocoF3Releases/frameworks_base/commit/a3c7448a71a3ef716388adbb36f4cadaeabe0f89)
+The [consolidated recording-blur implementation](https://github.com/PocoF3Releases/frameworks_base/commit/c26c5983f985010b9a6dc9fd7979da4fe7ee33ad)
 adds process-local suppression to the existing hidden cross-window helper and
 connects it to the common recording state. Live/late dialog, toast and transition
 consumers receive the effective state. User settings and the current underlying
@@ -50,6 +50,20 @@ WindowManager state are preserved for restoration; other processes are unchanged
 Animation/shade cleanup writes zero for owned blur and balances early wakeups,
 including a cancelled prepare with no applied radius. Keep blur effects,
 device opt-in and failed-recording recovery remain independent of maximum FPS.
+
+### Final restoration recheck
+
+Two further defects were reproduced against the earlier implementation. Service
+disconnection skipped the stopped-controller update when its Binder was null;
+transport exceptions could also terminate the lifecycle observer. Dream/transition
+callers that kept requesting nonzero blur could leave a previous radius applied.
+
+The final implementation dispatches stopped state independently of a live Binder,
+uses the existing `safeBinderCall` for start/update/stop, and drops only failed
+connections. Successful stops retain their binding until asynchronous saving
+finishes. The shade helper caches effective support and normalizes forbidden
+nonzero requests to zero, including early-wakeup cleanup. Normal rendering,
+opacity/scale, persistent wakeup ownership and saved preferences are preserved.
 
 ## Verification and limits
 
@@ -59,8 +73,19 @@ device opt-in and failed-recording recovery remain independent of maximum FPS.
   **10/10 pass**, compared with six relevant before-code failures. Cases cover
   backend/settings changes, suppression/restoration, queued/direct listeners,
   re-entry, new surfaces, invalid targets, opacity and early-wakeup balance.
-- Source copies/hashes match the final folded implementation; independent
-  correctness/architecture review found no blockers. Diff/author/trailer and
+- Final actual repository/controller/state/core lifecycle harness: **20/20 pass**
+  with real coroutines on Unconfined and Default dispatchers. Covers disconnect,
+  start/update/stop transport failures, the next recording, retained save binding,
+  Keep blur, device opt-out, the latest preference and countdown cancellation.
+  The frozen old repository failed eight of twelve targeted cases.
+- Full actual shade helper: **10/10 pass**, compared with six old-code failures;
+  covers nonzero requests during suppression, backend changes and wakeup ownership.
+- Actual dialog/toast controller: **6/6 pass** for existing/late-created windows,
+  copied renderers, latest settings/radius/backend state and detach cleanup.
+- All **56 focused host cases** pass. Android transport/view/surface plumbing is
+  stubbed; this is not device rendering acceptance. Source copies/hashes match
+  the final folded implementation; independent correctness/architecture review
+  found no blockers. Diff/author/trailer and
   source-selection checks pass. The existing checkout-built `aidl_hash_tool`
   accepts the current frozen DuckRKP AIDL API/hash.
 
