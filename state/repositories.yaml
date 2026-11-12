@@ -81,15 +81,14 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c
+    aosp-17: 2f2467b329845f370639f3498433b4f70475ce97
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c
-  observation: 2026-11-03; audio response guards pass host regressions, affected
-    W=1/Werror/Sparse, full strict Image/modules/DTBs and enforcing phone PCM/route
-    checks. Config/security/thermal policy unchanged; baseline documentation and
-    external-endpoint limits remain. See evidence/audio-receive-20261103.md;
-    earlier charging and F2FS acceptance retain their recorded scope.
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2f2467b329845f370639f3498433b4f70475ce97
+  observation: 2026-11-12; latest Lineage rebase, history cleanup and 28 scoped
+    corrections; all-device configs regenerated separately. Strict Alioth build,
+    scoped Sparse and temporary enforcing phone checks pass. Restricted reviews,
+    baseline diagnostics and hardware limits in evidence/kernel-final-review-20261112.md.
 
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile

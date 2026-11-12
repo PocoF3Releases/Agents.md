@@ -71,7 +71,7 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Correctness audit](../evidence/kernel-correctness-followup-20261102.md): five IOMMU/GPU/DMA fixes; 130 host cases, strict Image/modules/DTBs and 59-unit static checks pass. Phone GPU/PCM/network/storage/sleep/reboot pass on B, Enforcing/taint 0. Published; last-five-fix integration checked. [Audio](../evidence/kernel-audio-boundaries-20261102.md) retains `techpack/audio/` build scope. [W=123](../evidence/kernel-w123-20261102.md), [consolidation](../evidence/kernel-series-20261102.md), [older acceptance](../evidence/kernel-sparse-errors-20261028.md) and [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) retain scope; no whole sparse recount. UBSan parked; system sources and thermal/security unchanged.
+[November 12 rebase/review](../evidence/kernel-final-review-20261112.md): latest Lineage Qualcomm base, owned history cleanup and 28 component corrections. Strict Alioth build, scoped Sparse and temporary enforcing phone checks pass; config adds only upstream CMA_SYSFS. Audio/GPS/thermal-clamp review restrictions, conditional teardown findings and bulk-import limits remain explicit. [Earlier correctness](../evidence/kernel-correctness-followup-20261102.md), [audio](../evidence/kernel-audio-boundaries-20261102.md) and the [2,954-warning historical backlog](../evidence/kernel-sparse-backlog-20261028.md) retain their original scope; this was not a full Sparse recount.
 
 [Full-series compatibility plan](../evidence/kernel-contract-plan-20261102.md): incomplete; boundary reproduction paused, ordinary consumer checks remain.
 
