@@ -1,12 +1,12 @@
 # Current state
 
-Checkpoint: **2026-11-05**. [Android 17 status](state/android17-status.md).
+Checkpoint: **2026-11-12**. [Android 17 status](state/android17-status.md).
 
 - **Haptics:** installed HAL checks pass enforcing; tick fallback fix built. Scale-zero gap remains. [Scope](memory/haptics.md).
 - **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
 - **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
 - **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO active; manual mismatch remains.
-- **Audio:** [November 12](evidence/alioth-audio-features-20261112.md): app/native fixes pushed; bounded phone checks passed.
+- **Audio/Parts:** [Audio](evidence/alioth-audio-features-20261112.md) · [Parts](evidence/parts-full-review-20261112.md): scoped checks pass.
 - **Sources:** [Build options](evidence/build-options-20261105.md) · [Review](evidence/repo-review-20261105.md).
 - **Releases:** October 28 published; November 4 build completion reported. [Releases](state/releases.md).
 

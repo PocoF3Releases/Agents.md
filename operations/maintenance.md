@@ -72,6 +72,12 @@ necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/
 
 ## Internal agents
 
+All assigned agents may use any relevant available skill within the current task.
+Include the [skill routing guide](agent-skills.md) in each delegation; read matching
+SKILL.md instructions and discover live tools. This grants no new subsystem work,
+credentials or override of runtime controls. Keep shared edits/build/device ownership
+explicit and completed lanes closed.
+
 In Codex, use `gpt-6.1-sol` with max reasoning for new internal agents, following the
 user's current preference. Allow at most ten concurrent agents including the
 parent. This supersedes the earlier medium/four-agent preference.

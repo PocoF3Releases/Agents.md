@@ -38,3 +38,5 @@ record is not a test performed in the reader's new session. Raw dumps, private
 logs and original media are not bundled; request only a necessary missing artifact.
 
 Historical identifiers and private diagnostic filenames are provenance, not bundled downloads. The archive is an empty skeleton; current records are linked above. [Framework override](../operations/framework-manifest.md) is available for future checkouts.
+
+- [Parts full-topic review — November 12](parts-full-review-20261112.md).

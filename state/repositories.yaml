@@ -25,15 +25,14 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: a1c89c7569931a157a262b416602fc8116263ac4
-  local_a17:
-    head: 85701a7cbb729d86f33f5039b070204a1103cbb0
-    reason: ROM public tip plus two authored recovery overlays
+    aosp-17: ff54c0c06f9219ad1cf44fed1d349cf9a7e2c69f
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/a1c89c7569931a157a262b416602fc8116263ac4
-  observation: 2026-11-12; five Parts implementation topics and separate 792-string/88-locale
-    translations published. Two authored recovery overlays remain local. Build and bounded
-    temporary phone scope are in evidence/alioth-audio-features-20261112.md.
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/ff54c0c06f9219ad1cf44fed1d349cf9a7e2c69f
+  observation: 2026-11-12; six Parts implementation topics and a separate 90-file
+    translation correction appended to the retained implementations. Tested Parts
+    files match this public tip. Two unchanged authored recovery overlays remain
+    local; private checkpoint owns their unpushed object IDs. Scope and restoration
+    are in evidence/parts-full-review-20261112.md.
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
   role: build_source
   source_tree_paths:

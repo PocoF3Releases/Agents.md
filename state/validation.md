@@ -20,18 +20,18 @@ processing unverified.
 
 ## V-PARTS
 
-**2026-09-24 — source-checked and user-confirmed.** System Profile:
-[3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c)
-approved visually; [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b)
-insufficient. Shared per-app implementation has no separate visual acceptance.
-[Scope](../memory/dolby-audio.md).
+**2026-11-12 — source/host/module and temporary device checked.** Six final
+implementation topics plus separate translations; native contracts, profile
+recovery, MiSound saved-state/tile and silent focus checks pass within the
+[recorded scope](../evidence/parts-full-review-20261112.md). Original phone state
+restored; no full ROM, physical-headset or acoustic acceptance implied.
 
 ## V-UI
 
-**2026-09-24 — source-checked and pushed.** Common [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9bac1fa69915345f91a41257a4119e479b70) removes duplicate
-MiSound titles; hardware [59188cf](https://github.com/PocoF3Releases/hardware_xiaomi/commit/59188cfbdba67b63ecf1882cf6bba94cf33cf35a) restores reset buttons and current-locale
-profile labels. Resource/API/diff checks passed; no build/device test in those
-turns. Dolby README [3b8b33e](https://github.com/PocoF3Releases/hardware_xiaomi/commit/3b8b33ec182663b992cc4234c72a72fadf193a43) was documentation-only.
+**2026-11-12 — temporarily device checked.** Seven Parts screens and representative
+dialogs, RTL, font1.3 and landscape reviewed against current Settings. Title/Info
+separation and downward RTL expansion verified. [Source/artifact and limits](../evidence/parts-full-review-20261112.md).
+Earlier view-only revisions are historical; [current Compose guidance](../memory/xiaomiparts-device-ux.md).
 
 ## V-TOUCH
 

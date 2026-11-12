@@ -73,3 +73,8 @@ Production is tested through a staged single-app `/data/app` update with UID 100
 
 Review fixes: [Oct 31](../evidence/parts-review-20261031.md) HBM rollback, refresh
 retries, EQ drafts, strings; [Nov 1](../evidence/parts-review-20261101.md) resume.
+
+## November 12 review
+
+[Final contracts/checks](../evidence/parts-full-review-20261112.md): six fixes plus
+separate translations; module/phone checked, originals restored. Physical limits remain.
