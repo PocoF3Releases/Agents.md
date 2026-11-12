@@ -2,7 +2,7 @@
 
 ## Authority
 
-Published baseline: **28.10.2026**, confirmed November 4. Exclude its features and all earlier announced equivalents from the next update.
+Published baseline: **04.11.2026**, explicitly confirmed by the maintainer November 12. Exclude its features and all earlier announced equivalents from the next update.
 
 Android 17 historical published baseline: **23.09.2026 / Evolution X v12.2**,
 from maintainer-supplied September 22/23 notes. Exact ZIP hashes/included-commit
@@ -13,25 +13,18 @@ Removed posts led to cumulative initial-release copy. Later publication
 confirmations supersede that presentation, without changing implementation
 or acceptance history.
 
-## October 14 local release candidate
+## October 14 installed update and drafts
 
-Resynced Android 17 `lineage_alioth-cp2a-user` installclean build passed with
-kernel build #1 and verified OTA archive metadata/integrity. Wi-Fi labels and
-Settings were checked after secure sideload and a completed data wipe. The
-final localized sound-category ZIP is installed and boots with kernel #1;
-Settings, category navigation and validated Wi-Fi pass.
-The maintainer later confirmed October 14 as the previous build. [Artifact hashes and source heads](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
+Android17 `lineage_alioth-cp2a-user` installclean/kernel#1 completed. Secure
+sideload and data wipe, final localized sound heading, Settings and Wi-Fi passed.
+The maintainer later identified October14 as the previous build.
+[Artifact/source evidence](../evidence/evox-native-recovery-20261014.md#resynced-installclean-release-build).
 
-## October 14 update drafts
-
-The maintainer confirmed the initial post is still the latest published Telegram
-baseline. These [full](telegram-20261014-full.md) and
-[short](telegram-20261014-short.md) drafts cover the verified October 14 v12.3
-artifact: native recovery/storage/PIN/installers, specific Parts/Dolby UI
-refinements and Wi-Fi startup repair. They exclude previously announced camera,
-AC-4, haptics, WireGuard and other equivalent feature families. No Telegram
-message has been sent and this draft does not advance the published baseline.
-[Generated update banner](assets/evolutionx-alioth-20261014-banner.png).
+[Full](telegram-20261014-full.md), [short](telegram-20261014-short.md) and
+[banner](assets/evolutionx-alioth-20261014-banner.png) cover native recovery/PIN/
+installers, Parts/Dolby refinements and Wi-Fi startup repair. Older camera, AC-4,
+haptics and WireGuard announcements are excluded. At drafting time the initial
+post remained the latest confirmed publication; no Telegram message was sent.
 
 ## October 20 published update
 
@@ -128,13 +121,11 @@ with the October 7 artifacts. October 5 asset identities remain historical.
 
 ## Final initial-build source review
 
-The [implementation audit](changelog-audit.md) covers all 19 organization repositories and 16 current custom ROM
-source inputs, including required GitLab camera and newly tracked tinycompress.
-The full/short Telegram posts now include recording controls, final media/display
-compatibility and capture-read safeguards, grouping duplicate changes once.
-No new ROM publication or universal runtime acceptance is implied.
-
-The October 11 standalone [recovery source](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp) has no published release assets. Historical asset hashes above are retained as records, not current download links.
+[Audit](changelog-audit.md):19 organization repositories/16 custom ROM inputs,
+including GitLab camera and tinycompress. Initial copy includes recording,
+media/display and capture-read changes once; source completion is not rebuilt-ROM
+acceptance. The October11 [standalone recovery source](https://github.com/pbrp-alioth/device_xiaomi_alioth-pbrp)
+had no published assets; retained older hashes identify historical releases.
 
 ## Next-update history preparation
 
@@ -165,8 +156,17 @@ Redline, kernel repairs and SPU unmount permission. No exact final artifact
 manifest was captured. Refresh highlights remain excluded; shutdown hangs no
 longer occur per the maintainer.
 
-## November 4 build report
+## November 4 published update
 
 Maintainer reports `EvolutionX-17.0-20261104-alioth-12.3-Unofficial.zip` built
-successfully (42,815 steps; 01:22:03). No independent artifact/phone acceptance
-or publication confirmation; the baseline for prepared notes remains October 28.
+successfully (42,815 steps; 01:22:03). Publication was explicitly confirmed on
+November 12. The exact published source manifest remains unavailable; this
+confirmation does not add historical phone acceptance.
+
+## November 12 installed release candidate
+
+v12.4 / Android17 / SDK37: [artifact identity and phone scope](../evidence/release-smoke-20261112.md)
+pass. New changes since November4: [long](telegram-20261112-full.md),
+[short](telegram-20261112-short.md), [banner](assets/evolutionx-alioth-20261112-banner.png)
+and [built-in imagegen prompt](assets/evolutionx-alioth-20261112-banner-prompt.txt).
+Drafts only; no download URL or publication. November4 remains the baseline.

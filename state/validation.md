@@ -20,11 +20,10 @@ processing unverified.
 
 ## V-PARTS
 
-**2026-11-12 — source/host/module and temporary device checked.** Six final
-implementation topics plus separate translations; native contracts, profile
-recovery, MiSound saved-state/tile and silent focus checks pass within the
-[recorded scope](../evidence/parts-full-review-20261112.md). Original phone state
-restored; no full ROM, physical-headset or acoustic acceptance implied.
+**2026-11-12:** [source/host/module and temporary phone review](../evidence/parts-full-review-20261112.md)
+passes within its native/profile/MiSound/focus scope; originals restored,
+translations separate. [Installed release smoke](../evidence/release-smoke-20261112.md)
+adds scoped acceptance, not physical-headset/acoustic certification.
 
 ## V-UI
 
@@ -107,9 +106,9 @@ reports remain visible. Original boot restored.
 
 ## V-RELEASE
 
-[Release ledger](releases.md) owns maintainer-supplied publication status.
-No next ZIP hash or exact included-commit manifest is established by source
-completion, a draft banner or a rebased commit date.
+[Ledger](releases.md): publication status.
+[November12](../evidence/release-smoke-20261112.md): ZIP hash and scoped installed
+checks pass; full source manifest and physical endpoints remain uncertified.
 
 ## V-INDEX
 
