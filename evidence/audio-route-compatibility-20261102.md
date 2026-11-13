@@ -2,7 +2,7 @@
 
 ## Published device-tree correction
 
-[fc61c32](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/fc61c32444f435031bbd6f86ce84aec644e9a895),
+`fc61c32444f435031bbd6f86ce84aec644e9a895`,
 `alioth: Route GSM mode requests to the RX codec control`, changes exactly two
 control names in `audio/mixer_paths.xml`: the default OFF value and `gsm-mode`
 ON value now address `RX_GSM mode Enable`.

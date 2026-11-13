@@ -14,8 +14,8 @@ metadata changes. Valid upstream trailers retain their original formatting.
 
 | Fork | Final public tip | GitHub comparison to EvolutionX cnb |
 | --- | --- | --- |
-| `frameworks/av` | [0c471ea794d9](https://github.com/PocoF3Releases/frameworks_av/commit/0c471ea794d999884744c0843c73a70320ed44d1) | 4 ahead, 0 behind |
-| `frameworks/base` | [f154e5aa0c50](https://github.com/PocoF3Releases/frameworks_base/commit/f154e5aa0c5001385be9bf37e28246bac697a0ac) | 8 ahead, 0 behind |
+| `frameworks/av` | `0c471ea794d999884744c0843c73a70320ed44d1` | 4 ahead, 0 behind |
+| `frameworks/base` | `f154e5aa0c5001385be9bf37e28246bac697a0ac` | 8 ahead, 0 behind |
 
 Freshly fetched the selected upstream branches for all 40 non-standalone
 maintained build forks. These two were the only ancestry mismatches; both are

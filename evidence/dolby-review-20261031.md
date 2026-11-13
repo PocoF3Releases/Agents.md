@@ -2,8 +2,8 @@
 
 ## Changes
 
-- [Equalizer enable error reporting](https://github.com/PocoF3Releases/hardware_xiaomi/commit/2d69c48f6f086ab838192fe3cb521782b28ee358): the new GEQ Turn on action previously discarded RuntimeException, assuming the controller always published an error. A native SET failure or readback mismatch could leave the prior activeState intact. Publish the existing equalizer error indicator locally, clear it on successful retry, and rethrow CancellationException.
-- [Separate localization commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/8119f09b8af17ea23ec3aebea6b40137eac27408): add all 17 new control/section/bypass strings to the remaining 77 locale folders. Existing Russian text is unchanged. Locale text was authored with AI assistance after the public Google translation endpoint rate-limited the initial batch, which was stopped; no native-speaker review is claimed.
+- Equalizer enable error reporting (historical `2d69c48f6f086ab838192fe3cb521782b28ee358`): the new GEQ Turn on action previously discarded RuntimeException, assuming the controller always published an error. A native SET failure or readback mismatch could leave the prior activeState intact. Publish the existing equalizer error indicator locally, clear it on successful retry, and rethrow CancellationException.
+- Separate localization commit (historical `8119f09b8af17ea23ec3aebea6b40137eac27408`): add all 17 new control/section/bypass strings to the remaining 77 locale folders. Existing Russian text is unchanged. Locale text was authored with AI assistance after the public Google translation endpoint rate-limited the initial batch, which was stopped; no native-speaker review is claimed.
 
 ## Verification
 

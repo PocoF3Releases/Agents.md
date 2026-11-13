@@ -7,7 +7,7 @@ Follow-up source repair and broader checks: [W=123 audit](kernel-w123-20261102.m
 
 ## Published result
 
-[89aca84b51ad](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/89aca84b51ad0d68997d344cc159788edeace578)
+`89aca84b51ad0d68997d344cc159788edeace578`
 on `aosp-17` reduces **880 → 751 custom commits** (129 fewer). The shared
 Qualcomm base and original 158-commit vendor foundation remain intact. No code,
 comment, configuration, file mode or artifact was added/removed from the source

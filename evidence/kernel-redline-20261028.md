@@ -2,9 +2,9 @@
 
 ## Published source
 
-[Redline branding](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6b3cb6eb71683641de1fb4cdfd9c8e2dcca183ee)
+Redline branding (historical `6b3cb6eb71683641de1fb4cdfd9c8e2dcca183ee`)
 contains only the version script and shared Xiaomi identity fragment.
-[Generated configurations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c)
+Generated configurations (historical `1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c`)
 are a separate commit produced by `scripts/update_defconfig -j 4`.
 The repository URL and branch remain
 `PocoF3Releases/kernel_xiaomi_sm8250`, `aosp-17`. GitHub About identifies
@@ -46,7 +46,7 @@ coauthor/missing-human-DCO metadata findings; no certification was invented.
 No tests or generated verification output enter kernel history.
 
 **No full branded Image was built or flashed in this update.** The phone keeps
-its [previously accepted main kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1efb0bf8d7a52abc450285c470bb34c28ad57dfd),
+its previously accepted main kernel (historical `1efb0bf8d7a52abc450285c470bb34c28ad57dfd`),
 whose strict W=1/Werror and enforcing phone coverage is recorded in the
 [sparse acceptance](kernel-sparse-errors-20261028.md). The new name appears on
 the next rebuild/install. System-side sources and runtime C/assembly behavior,

@@ -69,10 +69,10 @@ it was not installed over the phone's Parts package.
 
 ## Consolidated sources
 
-- [Qualcomm backend](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6d8191fc778289e315d011171d64ce4dc27b5c73).
-- [Persistent owners](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6429de66995b8083ff348bc2a2957ead3b833d4d).
-- [Product selector](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/44c50c27882a1324a9bf06910d038d5fbca91025).
-- [MiSound EQ transport](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/58cf1a749473496bc4130d0bdc68016dfe5f1d5f).
+- Qualcomm backend (historical `6d8191fc778289e315d011171d64ce4dc27b5c73`).
+- Persistent owners (historical `6429de66995b8083ff348bc2a2957ead3b833d4d`).
+- Product selector (historical `44c50c27882a1324a9bf06910d038d5fbca91025`).
+- MiSound EQ transport (historical `58cf1a749473496bc4130d0bdc68016dfe5f1d5f`).
 
 The recent backend refinements are consolidated into the implementation, with
 persistent-owner initialization and the Parts fix kept separate. Recovery

@@ -32,12 +32,12 @@ locking defect requiring a source fix.
 
 ## Separate kernel repairs
 
-- [usb: gadget: mtp: Include shared function declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9636c9ad918b1a30b04491ba0c302c30c457c2d1).
-- [usb: gadget: mtp: Use kernel-buffer file I/O in workers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3f7db875bbb6787a532f54be701b55b0d9298b2a).
-- [usb: gadget: mtp: Safely parse debug statistics writes](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1d7f78b6a0b2658c72e821bd2549679afbcf5223).
-- [usb: gadget: mtp: Release compat event lock after copy failures](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8aa39d2adb865c1e86208dd3873dfe40ab58d2bc).
-- [usb: pd: Keep QPNP IRQ gating helper private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8e2446567f2636b2afe17c66725d415e9f7949d6).
-- [usb: dwc3: Test reset lookup as a pointer](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/214c6de5d610070ddd93c10de46fd4e350feda2f).
+- usb: gadget: mtp: Include shared function declarations (historical `9636c9ad918b1a30b04491ba0c302c30c457c2d1`).
+- usb: gadget: mtp: Use kernel-buffer file I/O in workers (historical `3f7db875bbb6787a532f54be701b55b0d9298b2a`).
+- usb: gadget: mtp: Safely parse debug statistics writes (historical `1d7f78b6a0b2658c72e821bd2549679afbcf5223`).
+- usb: gadget: mtp: Release compat event lock after copy failures (historical `8aa39d2adb865c1e86208dd3873dfe40ab58d2bc`).
+- usb: pd: Keep QPNP IRQ gating helper private (historical `8e2446567f2636b2afe17c66725d415e9f7949d6`).
+- usb: dwc3: Test reset lookup as a pointer (historical `214c6de5d610070ddd93c10de46fd4e350feda2f`).
 
 MTP/PTP factories use their existing shared header; they remain callable from
 f_ptp.c. Only same-file parameters/debug state become private. File workers use

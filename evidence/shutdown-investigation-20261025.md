@@ -26,7 +26,7 @@ fix adds only `allow init vendor_spunvm_file:filesystem unmount;` in
 `sepolicy/vendor/init.te`. The full `selinux_policy` target passed for
 `lineage_alioth-cp2a-user`, including neverallow/context checks; generated vendor
 CIL contains the mapped-init unmount rule. Published separately from recovery
-patches as [975316a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/975316a110b9edebee66816fec6a38048846ace7).
+patches as `975316a110b9edebee66816fec6a38048846ace7`.
 An enforcing A/B/A device probe used the actual init domain and a private mount
 namespace: unmount returned EACCES before the exact live rule, succeeded with it,
 and returned EACCES after rollback. The parent SPU mount remained unchanged.
@@ -100,14 +100,14 @@ were unloaded and removed. Keep that harness warning distinct from production.
 The first published stack (subsequently replaced by the upstream imports linked
 below) contained:
 
-- [Timer teardown](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1a8f7faa9d86c864ad81f598c71af7466eb62fcf):
+- Timer teardown (historical `1a8f7faa9d86c864ad81f598c71af7466eb62fcf`):
   gate timer rearming before cancelling outside the callback lock. Reset the
   gate in AP restart before deferred events are installed. Independent review
   caught and corrected the initially missing failed-CPU-down rollback case.
-- [Resolved per-CPU pointer types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4bd82288909db6b24fcc5e7a70ad1cd35427a3d0):
+- Resolved per-CPU pointer types (historical `4bd82288909db6b24fcc5e7a70ad1cd35427a3d0`):
   derive generic fallback locals from raw_cpu_ptr, preserving ordinary-address
   typing after resolving the per-CPU pointer.
-- [Perf ownership contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6d6310d6bc2f8a69724011e29d848c358bc32c0f):
+- Perf ownership contracts (historical `6d6310d6bc2f8a69724011e29d848c358bc32c0f`):
   correct RCU/per-CPU declarations and protected accesses, missing hook
   prototypes, private linkage, poll/user-copy boundaries, conditional lock and
   output-handle ownership annotations, and stale kernel-doc descriptions.

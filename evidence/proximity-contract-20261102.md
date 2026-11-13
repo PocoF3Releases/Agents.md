@@ -2,7 +2,7 @@
 
 ## Published lifetime fix
 
-[14af593](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/14af5935f0fbc9a1e8e3a61a5c034cf032d00bbf)
+`14af5935f0fbc9a1e8e3a61a5c034cf032d00bbf`
 protects the ultrasound IIO device used by APR proximity callbacks. The previous
 code published its global pointer before setup completed and kept it after
 removal freed the object. Failed setup also retained stale driver data and leaked

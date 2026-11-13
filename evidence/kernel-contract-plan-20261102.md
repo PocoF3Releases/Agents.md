@@ -5,7 +5,7 @@ Updated: 2026-11-02. Status: incomplete; no blanket production-compatibility cla
 ## Scope and evidence
 
 Audit the entire maintained kernel series against device trees, hardware/xiaomi,
-HALs and packaged consumers. The initial [kernel head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e)
+HALs and packaged consumers. The initial kernel head (historical `1cfe734008290c228abf15a8f8ae67a03d52fc1e`)
 contains 759 downstream commits: 158 foundation commits and 601 later changes.
 The earlier [integration check](kernel-correctness-followup-20261102.md) covers
 repository/recovery alignment and the last five fixes, not all downstream behavior.

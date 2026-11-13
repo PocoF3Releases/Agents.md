@@ -6,17 +6,17 @@ source history; it did not justify replacing Android userspace or GPU firmware.
 
 ## Source changes
 
-Base: [previous Redline head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c).
-Final: [KGSL update](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9edfaf12151fa23329e567b3bad013910121801a), branch `aosp-17`.
+Base: previous Redline head (historical `1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c`).
+Final: KGSL update (historical `9edfaf12151fa23329e567b3bad013910121801a`), branch `aosp-17`.
 
 | Fix | Applied commit | Original Qualcomm change |
 | --- | --- | --- |
-| Reject incomplete type-7 draw-state groups | [79446e7](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/79446e7dabc92c50e260f9a9f3e9701d70a0495f) | [Bhaskar Reddy Valluru](https://github.com/qualcomm-linux/kgsl/commit/06f798a179ab38779b5e80e21a31d03504f03c41) |
-| Use one captured packet header throughout parsing | [699d4a6](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/699d4a660872968bd630c2189bf38f77b24c9993) | [Scott Bauer](https://github.com/qualcomm-linux/kgsl/commit/3f01c1a6b636b3764d005379592b54d3915eb180) |
-| Reject mmap through another address space's KGSL descriptor | [7992aed](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7992aed2f6ac9162eae15822801b5d4aa1aaa6cd) | [Scott Bauer](https://github.com/qualcomm-linux/kgsl/commit/0a145e7671e6fa8e02acc5a4a29f0e2ea9fead01) |
-| Stop VMA-open accounting after failed reference acquisition | [d0205f4](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d0205f4abe5237130bf3369240634f99e3f9b9ac) | [Scott Bauer](https://github.com/qualcomm-linux/kgsl/commit/7370c5040d89dba32ce48677c1feab0d53f0b6aa) |
-| Remove a kernel virtual address from GMU snapshots | [0774583](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/07745836e21615ea12b7c46e25927d68ef24363a) | [Anil Cheeli](https://github.com/qualcomm-linux/kgsl/commit/98218fb60d15112d6c2c8bc4c2246977144ff3fc) |
-| Bound retained legacy groups, indirect packets and load-state table indices | [9edfaf1](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9edfaf12151fa23329e567b3bad013910121801a) | Separate local follow-up |
+| Reject incomplete type-7 draw-state groups | `79446e7dabc92c50e260f9a9f3e9701d70a0495f` | [Bhaskar Reddy Valluru](https://github.com/qualcomm-linux/kgsl/commit/06f798a179ab38779b5e80e21a31d03504f03c41) |
+| Use one captured packet header throughout parsing | `699d4a660872968bd630c2189bf38f77b24c9993` | [Scott Bauer](https://github.com/qualcomm-linux/kgsl/commit/3f01c1a6b636b3764d005379592b54d3915eb180) |
+| Reject mmap through another address space's KGSL descriptor | `7992aed2f6ac9162eae15822801b5d4aa1aaa6cd` | [Scott Bauer](https://github.com/qualcomm-linux/kgsl/commit/0a145e7671e6fa8e02acc5a4a29f0e2ea9fead01) |
+| Stop VMA-open accounting after failed reference acquisition | `d0205f4abe5237130bf3369240634f99e3f9b9ac` | [Scott Bauer](https://github.com/qualcomm-linux/kgsl/commit/7370c5040d89dba32ce48677c1feab0d53f0b6aa) |
+| Remove a kernel virtual address from GMU snapshots | `07745836e21615ea12b7c46e25927d68ef24363a` | [Anil Cheeli](https://github.com/qualcomm-linux/kgsl/commit/98218fb60d15112d6c2c8bc4c2246977144ff3fc) |
+| Bound retained legacy groups, indirect packets and load-state table indices | `9edfaf12151fa23329e567b3bad013910121801a` | Separate local follow-up |
 
 Original authors, author dates and original sign-offs are preserved. Adaptations
 cover the retained type-0/type-3 parser as well as type-7, preserve snapshot layouts,
@@ -80,7 +80,7 @@ regression/source coverage rather than live fault injection.
 
 ## A6xx register-list follow-up — October 29
 
-Published [0659900](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0659900d8b784b18eaa08d5fc7bdb46ef0d5bef5)
+Published `0659900d8b784b18eaa08d5fc7bdb46ef0d5bef5`
 corrects the existing Qualcomm counter-list check: the 16-byte CPU/GPU lock header
 is excluded from usable data capacity, shared lengths are checked before traversal,
 and appending a complete final pair remains valid. Existing full-list counter
@@ -116,7 +116,7 @@ secure-map analysis; no speculative driver/firmware replacement was applied.
 ## Scatterlist map-error follow-up — October 29
 
 Qualcomm [e8ed003](https://github.com/qualcomm-linux/kgsl/commit/e8ed003c27f1c9352437d51a5eff418ccaa86b09)
-is adapted as [a0ee226](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a0ee226f0f514744b07ca46d996c04c60a8e1650),
+is adapted as `a0ee226f0f514744b07ca46d996c04c60a8e1650`,
 preserving Lynus Vaz's authorship, author date and original sign-off. The legacy
 `_iommu_map_sg_sync_pc` now treats the returned size as signed, rejects negative
 results and retains its existing zero-result ENODEV behavior. Power synchronization
@@ -149,7 +149,7 @@ Follow-up Image SHA-256: `591d3617120852d3fea3088b877504f1b07c1abcd2ede88e54f55e
 ## Constraint-state follow-up — October 30
 
 Qualcomm [03dbf72](https://github.com/qualcomm-linux/kgsl/commit/03dbf7267601586fd8b7c9b9f672231478a5313d)
-is adapted as [b652bc8](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b652bc8a7d75d02776f5933b92307a463b3629b4),
+is adapted as `b652bc8a7d75d02776f5933b92307a463b3629b4`,
 preserving Kamal Agrawal's authorship/date and original sign-off. The older
 interface has no owner timestamp argument; its existing timeout already uses
 jiffies, so neither newer timestamp plumbing nor millisecond conversion is copied.
@@ -225,7 +225,7 @@ balances clocks instead of continuing with a partially initialized MMU.
 A separate local defect was found in `kgsl_iommu_start`: global-map failure returns
 without releasing the clock reference acquired at entry. The global-map helper
 already unmaps partial mappings; retained contexts are attach-idempotent on retry.
-[f503c8d](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f503c8d11b7774ad5e91142e7e142a6de003f3fd)
+`f503c8d11b7774ad5e91142e7e142a6de003f3fd`
 adds the missing disable before returning the original error, preserving context
 attachment and successful startup. The original faulty branch is linked by its
 Fixes trailer; this is a new local fix, not a claimed upstream backport.

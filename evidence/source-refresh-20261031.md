@@ -22,10 +22,10 @@ font-overlay output.
 
 | Component | Published candidate | Latest selected upstream | Custom commits |
 | --- | --- | --- | --- |
-| `bootable/recovery` | [9f67850ac4a5](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/9f67850ac4a5d7787ca7543263bd47586a5bc80f) | [fbfd88cd3383](https://github.com/Evolution-X/bootable_recovery/commit/fbfd88cd338311e59a9c132485d63f9ec77fd9f3) | 13 |
-| `device/qcom/sepolicy_vndr/legacy-um` | [657627c7d1b1](https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/657627c7d1b1dcb42de2cc08e9ced9c5d1889b31) | [d8b5ffdf5107](https://github.com/LineageOS/android_device_qcom_sepolicy_vndr/commit/d8b5ffdf51074f0931096991d9e9a9294ad31c98) | 1 |
-| `system/sepolicy` | [abbbf28774b4](https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/abbbf28774b4e3dc03bdd3bfde06e4148f5fd482) | [dd9d56abe059](https://github.com/Evolution-X/system_sepolicy/commit/dd9d56abe0590484ae145337ae1e728db9b2d57a) | 2 |
-| `frameworks/base` | [faeec1083640](https://github.com/PocoF3Releases/frameworks_base/commit/faeec1083640f2b3982869c0de4d57c2f3ce4b1a) | [da7f9e011d0a](https://github.com/Evolution-X/frameworks_base/commit/da7f9e011d0ab4d4dca1ffa0a8ef671427f14405) | 8 |
+| `bootable/recovery` | `9f67850ac4a5d7787ca7543263bd47586a5bc80f` | [fbfd88cd3383](https://github.com/Evolution-X/bootable_recovery/commit/fbfd88cd338311e59a9c132485d63f9ec77fd9f3) | 13 |
+| `device/qcom/sepolicy_vndr/legacy-um` | `657627c7d1b1dcb42de2cc08e9ced9c5d1889b31` | [d8b5ffdf5107](https://github.com/LineageOS/android_device_qcom_sepolicy_vndr/commit/d8b5ffdf51074f0931096991d9e9a9294ad31c98) | 1 |
+| `system/sepolicy` | `abbbf28774b4e3dc03bdd3bfde06e4148f5fd482` | [dd9d56abe059](https://github.com/Evolution-X/system_sepolicy/commit/dd9d56abe0590484ae145337ae1e728db9b2d57a) | 2 |
+| `frameworks/base` | `faeec1083640f2b3982869c0de4d57c2f3ce4b1a` | [da7f9e011d0a](https://github.com/Evolution-X/frameworks_base/commit/da7f9e011d0ab4d4dca1ffa0a8ef671427f14405) | 8 |
 
 All 24 custom commits retain author identity, author date and subject. Framework
 and policy range-diffs are unchanged. EvolutionX had rewritten older framework
@@ -46,7 +46,7 @@ and Parts fixes, including their separate translation commits, are preserved.
 
 ## Recovery integration
 
-The canonical [local manifests](https://github.com/PocoF3Releases-Recovery/local_manifests/commit/1816695ed87b4f3b49f54859500a64d6d08a70d4)
+The canonical local manifests (historical `1816695ed87b4f3b49f54859500a64d6d08a70d4`)
 are current. Their deployed branch-tracking XML, apply runner and patch series
 match; no new pin or manifest-source change was needed. All six build/make
 linkfiles remain intact. After checkout, reapplied the four authored recovery

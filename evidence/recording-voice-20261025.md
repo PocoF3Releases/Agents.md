@@ -8,7 +8,7 @@ sources; only contract evidence and test results are recorded here.
 
 The primary HAL's cin_read (ELF VA 0x92140) expects compress_read to return the
 entire requested byte count. in_read (0x5a8b8) zero-fills the request on failure.
-This confirms the existing [tinycompress correction](https://github.com/PocoF3Releases/external_tinycompress/commit/eacefe332464fbb2f55f12d70b2e60fb244e05ca)
+This confirms the existing tinycompress correction (historical `eacefe332464fbb2f55f12d70b2e60fb244e05ca`)
 as a genuine legacy capture dependency. The installed 32-bit library matches the
 current build artifact exactly (SHA-256
 `7ca2bc349338a9c3274df327e74ba6a498000bfc61c210de1c3275debef73ac0`).
@@ -60,9 +60,9 @@ The user-requested hardware/xiaomi history split has an identical final source
 tree to the previously built/tested head. Independent review and mechanical tree
 comparison confirm no behavior change:
 
-- [Qualcomm native implementation](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6d8191fc778289e315d011171d64ce4dc27b5c73) contains no translation/resource changes.
-- [Unused summary translations](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b653ae1cbb59c26410eae3b1b22e0029781d254a) removes only 79 unused game_effect_summary entries, with no remaining references.
-- [Persistent initialization](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6429de66995b8083ff348bc2a2957ead3b833d4d) stays separate.
+- Qualcomm native implementation (historical `6d8191fc778289e315d011171d64ce4dc27b5c73`) contains no translation/resource changes.
+- Unused summary translations (historical `b653ae1cbb59c26410eae3b1b22e0029781d254a`) removes only 79 unused game_effect_summary entries, with no remaining references.
+- Persistent initialization (historical `6429de66995b8083ff348bc2a2957ead3b833d4d`) stays separate.
 
 The branch was pushed with an explicit expected-head lease and read back. No
 redundant APK/ROM rebuild was needed for a tree-identical history change. Earlier

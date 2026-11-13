@@ -10,7 +10,7 @@ This records the first two findings. The [follow-up](kernel-correctness-followup
 
 ## Identity and scope
 
-Audited [aosp-17 source 3d374cb](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3d374cb35915256513a2dbccb921d9fbf1259c4b), tree `ed5849318f3d1c18892b17326d2f29b6562ede8d`. Workhub started at [0f12ead](https://github.com/PocoF3Releases/Agents.md/commit/0f12ead08d54bf9b020e4b9ee4e57daa8c67d8f1). The source was clean and the remote kernel head matched before investigation. Current changes are uncommitted; these links identify the baseline, not a published fix.
+Audited aosp-17 source 3d374cb (historical `3d374cb35915256513a2dbccb921d9fbf1259c4b`), tree `ed5849318f3d1c18892b17326d2f29b6562ede8d`. Workhub started at [0f12ead](https://github.com/PocoF3Releases/Agents.md/commit/0f12ead08d54bf9b020e4b9ee4e57daa8c67d8f1). The source was clean and the remote kernel head matched before investigation. Current changes are uncommitted; these links identify the baseline, not a published fix.
 
 Production config copied from the prior isolated strict build: SHA-256 `6a3c2dff85db6e80d35aed7efa82c9b5950687f975c975d5fcee6b49a8a39c48`. `CONFIG_IOMMU_API=y`, `CONFIG_IOMMU_SUPPORT=y`, `CONFIG_ARM_SMMU=y`, `CONFIG_CC_WERROR=y`. Toolchain: checkout Android Clang 21.0.0, r563880c, build 14054515, LLVM revision `5e96669f06077099aa41290cdb4c5e6fa0f59349`. Source and toolchain commands ran inside Linux. Existing ROM output and previous isolated output were preserved.
 

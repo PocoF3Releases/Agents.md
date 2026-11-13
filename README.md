@@ -38,14 +38,14 @@ Windows reinstall: [recover WSL/sources](operations/workstation-recovery.md),
 then [tools](operations/host-tooling.md). Private dumps, keys, edits and research
 outputs still need an offline backup.
 
-## Read less, retain the details
+## Retrieve only the needed topic
 
 ```bash
 python3 scripts/context.py --list
 python3 scripts/context.py --search 'gesture vibration'
 python3 scripts/context.py haptics --list-sections
 python3 scripts/context.py guidance --section 'Shared contract for Astra and Sol' --max-bytes 2500
-python3 scripts/context.py haptics --startup --sources
+python3 scripts/context.py audio --section 'Retained UI behavior' --max-bytes 4000
 python3 scripts/check.py
 ```
 

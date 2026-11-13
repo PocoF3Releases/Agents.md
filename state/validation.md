@@ -40,11 +40,9 @@ scoped checks; not full A17 UI acceptance. [Scope](../memory/xiaomiparts-device-
 
 ## V-PROXIMITY
 
-**Recorded temporary device test and user confirmation.** Alioth the recorded candidate
-MIUS timeout correction stopped the observed idle error and delivered 0/5 cm
-near/far events. User reported proximity working during a call. This does not
-cover every call app/device; production uses the extraction/blob fix without
-root. [Guard and ownership](../memory/xiaomiparts-device-ux.md#alioth-ultrasound-proximity).
+**Recorded temporary device test; user-confirmed call behavior.** MIUS timeout fix
+returned 0/5 cm near/far events. Production uses extraction/blob integration without
+root; other call apps/devices are unverified. [Owner](../memory/xiaomiparts-device-ux.md#alioth-ultrasound-proximity).
 
 ## V-CAMERA
 
@@ -112,20 +110,18 @@ checks pass; full source manifest and physical endpoints remain uncertified.
 
 ## V-INDEX
 
-**Historical A17, September 2026.** [Recorded checks, snapshot and limits](../operations/repoindex.md#active-build-tree-and-historical-indexes).
-No new A17 indexing or benchmark here.
+**Historical September 2026.** [Build-tree index scope](../operations/repoindex.md#active-build-tree-and-historical-indexes).
 
 ## V-REF-INDEX
 
-**2026-10-25, host/source-checked.** Both bundles passed deep checks; standalone suite: 81 tests.
-[Audit and scope](../operations/repoindex.md#checked-coverage-and-speed).
-Implementation hashes passed; other files use metadata. No ROM/device test or
-future freshness guarantee.
+**2026-10-25 — host/source only.** Both reference bundles passed deep checks;
+standalone suite: 81 tests. [Coverage, measurements and limits](https://github.com/PocoF3Releases/references_code/blob/main/docs/VALIDATION.md).
+No ROM/device pass or future freshness guarantee.
 
 ## V-KNOWLEDGE
 
-[Guidance](../references/openai-guidance.md) applied; [routing](../references/cold-start-checks.md)
-tested locally. These are not paired Astra/Sol runs, API-cost or device tests.
+[Guidance](../references/openai-guidance.md) and [retrieval fixtures](../references/cold-start-checks.md)
+are local documentation checks, not live-model, API-cost or device tests.
 
 ## V-RECOVERY
 
@@ -134,8 +130,8 @@ WSL export/import, credential recovery or ROM build. Backups need restore testin
 
 ## Availability
 
-Selected sanitized evidence is supplied; raw dumps, logs, clips, projects and
-private backups are not. Request only needed artifacts. Archives authorize no work.
+Only sanitized evidence is bundled; raw diagnostics/private backups are not.
+Historical records authorize no work.
 
 ## V-PBRP
 
@@ -157,10 +153,9 @@ No new device test.
 
 ## V-HBM-RECOVERY
 
-**2026-10-09 — host-tested.** Common the recorded candidate: actual display utility
-compiled with JDK 21/Android stubs; settings/sysfs failure, boot retry, normal
-disable and no-backup cases pass. Baseline the recorded candidate reproduces false success.
-No APK/device test or `~/evo/out` access. [Behavior](../memory/xiaomiparts-device-ux.md#hbm-brightness-recovery--october-9-maintenance).
+**2026-10-09 — host only.** Actual display utility compiled with JDK21/Android stubs;
+failure, retry, disable and no-backup cases pass. Baseline reproduced false success.
+No APK/device or out access. [Behavior](../memory/xiaomiparts-device-ux.md#hbm-brightness-recovery--october-9-maintenance).
 
 ## V-PBRP-20261009
 
@@ -228,3 +223,10 @@ boot restored; partition unchanged. No full conformance/release.
 
 [Refresh/blur](../evidence/source-refresh-20261112.md) ·
 [max-FPS](../evidence/max-fps-recording-20261112.md). Source/host only.
+
+## V-SOURCE-20261113
+
+**2026-11-13 — source/Git/host checked.** [Final source refresh](../evidence/source-refresh-20261113.md):
+50 repos/105 heads, 41 zero-behind upstream routes, 44 build routes, 47 preserved
+checkouts and four exact recovery patch replays. Current EvoX manifest/zstd selected.
+No Android build, flash or new runtime acceptance in this refresh.

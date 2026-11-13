@@ -34,17 +34,17 @@ Boot-time violation logs had rotated, so the check was static plus grant state.
 
 ## Corrections (no grant changes)
 
-- [DSPVolumeSynchronizer](https://github.com/PocoF3Releases/hardware_xiaomi/commit/7fbfe54cf0262481f9a2aa6520f0d4530796b6a7):
+- DSPVolumeSynchronizer (historical `7fbfe54cf0262481f9a2aa6520f0d4530796b6a7`):
   removed the allowlist. It listed two normal permissions, one that was never
   requested, and INTERACT_ACROSS_USERS_FULL, which is not privileged and is
   already held by the system UID.
-- [Camera](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/5bf7082784a3ff4793618fb68a956f7f0ca94901):
+- Camera (historical `5bf7082784a3ff4793618fb68a956f7f0ca94901`):
   removed the unrequested WRITE_MEDIA_STORAGE entry, the undefined Mediatek
   APU permission, and blocks for the unshipped Mimoji and Scanner apps.
 - QTI `system/etc/permissions/privapp-permissions-qti.xml` is no longer
   extracted or shipped
-  ([vendor](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/16c1af95bb3e23bc0e82e884fd67fa8a14a39c52),
-  [common](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/83b33a6bc456f95508ae6039436520d7bea65ed2)).
+  (vendor (historical `16c1af95bb3e23bc0e82e884fd67fa8a14a39c52`),
+  common (historical `83b33a6bc456f95508ae6039436520d7bea65ed2`)).
   Its packages are either not shipped or installed on system_ext, which has
   its own allowlists.
 

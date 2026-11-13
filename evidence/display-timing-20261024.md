@@ -71,9 +71,9 @@ rebuild is separate from the temporary runtime-property acceptance.
 
 ## Published implementation and integration checks
 
-- [Common property selection](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/802d6e421bec85f51727c8b1f6d0a1543f65601e)
+- Common property selection (historical `802d6e421bec85f51727c8b1f6d0a1543f65601e`)
   preserves all four original phase values by default.
-- [Alioth work-duration scheduling](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
+- Alioth work-duration scheduling (historical `7c7229bdb805456900b817ebf023aab69bcb94a8`)
   selects the tested budgets. Both are on `aosp-17`; no recovery-only commits
   were pushed to the ROM branches.
 
@@ -154,7 +154,7 @@ as a verified improvement.
 
 ## Final published fix and restoration
 
-[Limit work-duration tuning to 120 Hz](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
+Limit work-duration tuning to 120 Hz (historical `7c7229bdb805456900b817ebf023aab69bcb94a8`)
 is published on `aosp-17`. The main branch contains only the display fix, without
 local recovery-only commits. The common property-selection commit remains unchanged.
 Both source worktrees are clean and the recovery patch preflight passes.

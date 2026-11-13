@@ -1,6 +1,6 @@
 # Native Android 17 EvolutionX recovery
 
-Checkpoint: **2026-10-20**. Active work is `~/evo/bootable/recovery`, built
+Source checkpoint: **2026-11-13**; runtime evidence below remains dated. Active work is `~/evo/bootable/recovery`, built
 with the ROM. Standalone PBRP is a separate project and is not the source or
 acceptance target for these changes. [Sources](../state/repositories.yaml),
 [verification](../state/validation.md#v-evox-native-recovery-20261014), and
@@ -8,7 +8,11 @@ acceptance target for these changes. [Sources](../state/repositories.yaml),
 
 ## Repository ownership
 
-Recovery-only sources and the local manifest live in [PocoF3Releases-Recovery](https://github.com/PocoF3Releases-Recovery). Shared framework/device sources use the normal PocoF3Releases repositories plus four authored [mail patches and apply command](https://github.com/PocoF3Releases-Recovery/local_manifests#readme). After repo sync, run `python3 .repo/local_manifests/apply-recovery-patches.py` before building. Preflight, repeated application and dirty-worktree rejection passed; resulting trees exactly reproduce the approved recovery implementation. No new build or device acceptance is implied.
+Recovery-only sources and the patch bundle live in
+[PocoF3Releases-Recovery](https://github.com/PocoF3Releases-Recovery). Shared
+framework/device repositories remain ROM sources with four local authored patches.
+Follow the single [sync, preflight and apply workflow](../operations/framework-manifest.md#recovery-overlay).
+Current public heads and local overlay identities are separate in the source ledger.
 
 ## Existing-key storage and installation
 
@@ -89,18 +93,11 @@ No driver clock tuning or experimental asynchronous/atomic flip path remains.
 ## Source and build discipline
 
 Preserve imported authorship and separate implementation, compatibility/policy
-and translation topics. Approved published heads survived the 1,265-project
-resync; 15 upstream projects advanced. [Manifest integration](../operations/framework-manifest.md)
-tracks fork branches explicitly. Build/make overrides must preserve the six
-upstream linkfiles and project groups, or a future sync loses `build/envsetup.sh`.
-
-Current product remains `lineage_alioth-cp2a-user`. Use incremental builds for
-implementation/fixes; reserve `m installclean` for final release preparation.
-`repo sync -j50` is the requested sync parallelism, not a Soong job setting.
-This full build used eight local jobs and two high-memory jobs without OOM.
-The bundled Android 17 D8 reports an SDK-37 warning; do not substitute a random
-compiler. The completed ROM boot/app smoke tests showed no crash/VerifyError,
-but that is not proof of every dex/API path.
+and translation topics. Keep source ownership and post-sync patch application in the
+[maintained workflow](../operations/framework-manifest.md). Use the checkout's
+toolchain and authorized user-build target; source checks alone do not certify
+a new recovery image. Keep implementation, compatibility/policy and translation
+topics separate, preserving upstream authorship.
 
 Bundled Magisk v31.0 and checked Enable ADB were restored from preserved native
 recovery history as separate features. Magisk uses checksum-verified official
@@ -118,12 +115,15 @@ For Virtual A/B clean installs, boot the installed OTA target successfully and c
 
 ## Current source replay
 
-The [November 5 source refresh](../evidence/source-refresh-20261105.md) preserves
-the enhanced native recovery and reapplies its four authored framework/device
-patches on the updated ROM bases. The runner and series remain installed together;
-postflight reports zero pending patches. This is source replay evidence, not a
-new recovery image or device acceptance. The kernel intake remains held as recorded.
+The [November 13 source check](../evidence/source-refresh-20261113.md) verifies all
+four unchanged published mail patches against the current ROM branch heads.
+Temporary-index application reproduces the exact live trees for all three
+projects; runner preflight reports zero pending patches. No recovery build,
+flash, decryption or runtime acceptance was repeated in that check. Older kernel
+intake holds are dated evidence, not the current source-selection rule; parked
+investigations remain parked unless the user resumes them.
 
-The November 5 LZ4 snapshot experiment and full-OTA codec opt-in were withdrawn.
-Previous Virtual A/B/vendor-ramdisk selection and COW v2 remain; enhanced recovery
-is unchanged. [Build options and limits](../evidence/build-options-20261105.md).
+The November 5 LZ4 snapshot/full-OTA experiment was withdrawn. Preserve the
+existing Virtual A/B/vendor-ramdisk selection and COW v2; do not enable that
+experiment as part of the recovery patch workflow.
+[Build options and limits](../evidence/build-options-20261105.md).

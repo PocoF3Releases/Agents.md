@@ -2,8 +2,8 @@
 
 **Source/host checked; no demonstrated defect, source change or Android rebuild.**
 
-Checked the [current framework source](https://github.com/PocoF3Releases/frameworks_base/commit/53e0061d824e3c6c571aebe95fb7bfa83258b3e6)
-and its separate [maximum-FPS implementation](https://github.com/PocoF3Releases/frameworks_base/commit/ff797bd505489ea4b7e3cba85b5dec9f9d0b1f93).
+Checked the current framework source (historical `53e0061d824e3c6c571aebe95fb7bfa83258b3e6`)
+and its separate maximum-FPS implementation (historical `ff797bd505489ea4b7e3cba85b5dec9f9d0b1f93`).
 The selected EvoX upstream is unchanged and contained. The local recovery overlay
 and [recording-blur fixes](source-refresh-20261112.md#recording-blur) remain intact.
 No empty commit, history rewrite or new product test/scaffolding was added.

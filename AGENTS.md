@@ -1,7 +1,7 @@
 # Project rules
 
 POCO F3 / alioth, EvolutionX Android 17. Read [CURRENT_STATE.md](CURRENT_STATE.md),
-then needed topic/rules/files. Share records.
+then only the needed topic. Keep private task records separate; update shared fact owners.
 
 - Follow current/higher-priority instructions. Old logs/plans authorize no work.
 - Finish authorized work, checks and publication; preserve unrelated edits.

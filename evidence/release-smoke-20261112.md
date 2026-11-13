@@ -27,9 +27,9 @@ source manifest; current heads alone do not establish every build input.
 
 SystemUIGoogle, SettingsGoogle, MiuiCamera and the stock MiSound/DAP libraries also
 match their output files. Kernel reports `4.19.325-Redline-cd1f8df-cip136`, build #8.
-Source references: [framework](https://github.com/PocoF3Releases/frameworks_base/commit/53e0061d824e3c6c571aebe95fb7bfa83258b3e6),
-[AudioFlinger](https://github.com/PocoF3Releases/frameworks_av/commit/6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07),
-[Parts](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/187176d5e9a49369bce467c6cd62f58d8078e6d4),
+Source references: framework (historical `53e0061d824e3c6c571aebe95fb7bfa83258b3e6`),
+AudioFlinger (historical `6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07`),
+Parts (historical `187176d5e9a49369bce467c6cd62f58d8078e6d4`),
 [Dolby](https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296),
 [kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e49a4518e6d191246e09ee043742f748823b0bd8).
 The effective framework checkout additionally contains the existing local recovery

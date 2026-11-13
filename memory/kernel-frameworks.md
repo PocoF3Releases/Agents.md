@@ -38,7 +38,7 @@ Upstream dependencies already provide the absent-kernel-attribute ENOENT handlin
 
 GPU donor/game experiments stay parked; see [graphics](gaming-graphics.md). Thermal protection stays enabled; diagnostic root modules are not production dependencies.
 
-Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; [current fingerprint lifetime/lockout implementation](https://github.com/PocoF3Releases/hardware_xiaomi/commit/807111f89c95838abf8432e1b09f62ae4165cde5) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
+Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; current fingerprint lifetime/lockout implementation (historical `807111f89c95838abf8432e1b09f62ae4165cde5`) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
 
 ## Connectivity boundaries
 

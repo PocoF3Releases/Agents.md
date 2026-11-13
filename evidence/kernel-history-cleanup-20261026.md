@@ -20,7 +20,7 @@ All 107 protected commits retain byte-identical patches, original messages,
 author/committer identities and dates. Ancestor rewrites necessarily change some
 commit hashes. Imported authorship and attribution are retained.
 
-Final source: [edb46ba39783](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/edb46ba397834c339d4341bb8664935c1fdcbf4b).
+Final source: `edb46ba397834c339d4341bb8664935c1fdcbf4b`.
 Its complete tree is `7c7b5da89267d3f962a20768b9d3b8c73ff94509`, exactly matching
 the implementation checkpoint before the three warning-policy changes. No real
 implementation was removed. No system-side source or thermal protection changed.

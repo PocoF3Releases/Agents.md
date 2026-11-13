@@ -87,7 +87,7 @@ private logs or original binaries are included in this knowledge record.
 
 ## Diagnostic correction and outstanding acceptance
 
-The [published frameworks/av correction](https://github.com/PocoF3Releases/frameworks_av/commit/eecb939f5835ad998f04f34e3b760c9511b920f0) casts the libcutils int8_t support
+The published frameworks/av correction (historical `eecb939f5835ad998f04f34e3b760c9511b920f0`) casts the libcutils int8_t support
 property to bool before ostream output. Previously the dump emitted a control
 byte instead of numeric 0/1. This changes diagnostic formatting only. A host
 regression compiled the actual production expression: baseline failed, corrected

@@ -10,7 +10,7 @@ This records source preparation, not a new ROM release or device acceptance.
 - Rebased the recovery libselinux Rust-binding addition on the new upstream
   public-policy type-transition fix. Range-diff confirms the recovery patch's
   payload and original authorship are preserved.
-  [Published SELinux integration](https://github.com/PocoF3Releases-Recovery/android_external_selinux/commit/1bf27a46b9da80724eb23eeb213b3b6b02002c57).
+  Published SELinux integration (historical `1bf27a46b9da80724eb23eeb213b3b6b02002c57`).
 - Reapplied the four authored recovery patches: one framework patch, one Alioth
   patch and two common-device patches. Their shared ROM forks remain free of the
   recovery-only additions; the authored series lives in the

@@ -100,7 +100,7 @@ Kernel sources were restored cleanly and the clean-source Image rebuilt successf
 
 ## Published anti-flicker policy
 
-[alioth: Avoid low-brightness adaptive refresh flicker](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/041a887023405ae7aa805fd323f1eb8fb1b692d3)
+alioth: Avoid low-brightness adaptive refresh flicker (historical `041a887023405ae7aa805fd323f1eb8fb1b692d3`)
 adds only Alioth FrameworkResOverlayDevice resources: brightness threshold 55,
 ambient threshold -1 and blocking-zone rate 120. It uses Android's existing
 DisplayModeDirector brightness-zone policy; it is not per-mode gamma calibration.
@@ -138,7 +138,7 @@ RRO was performed: the source change takes effect in the next ROM build.
 ## Final restoration and evidence
 
 The phone returned to the unchanged installed production kernel
-[1e45b8c](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c).
+`1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c`.
 Boot-partition hash matched the original; SELinux was Enforcing. Original brightness,
 refresh preferences, timeout and enhanced P3 profile were restored. All three test
 DeviceConfig keys were removed; real battery reporting restored. The private APK
@@ -191,7 +191,7 @@ The built libdisplayconfig.qti is not assumed identical to the stock prebuilt.
 **Seen:** packet-level comparison decoded 13 stock panel command properties. None
 was absent in the current K11A DTS. On-command payload differences include B7 20 to
 B7 10 at offset 06, from the existing authored
-[dimming-speed change](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/eea2df3b2f29fdc953d123d24d6d31664a1fc084),
+dimming-speed change (historical `eea2df3b2f29fdc953d123d24d6d31664a1fc084`),
 which changes the frame-count speed rather than proving a persistent calibration
 error. Other differences include the existing D1 2E replay/settle handling during
 switching and doze exit. Neither was reverted. Stock DFPS-level handlers in the

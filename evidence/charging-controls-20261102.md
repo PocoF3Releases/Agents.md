@@ -2,11 +2,11 @@
 
 ## Published input-validation correction
 
-[1846f92](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1846f927ad7ca1e32d9b2c478b667de17d95791e),
+`1846f927ad7ca1e32d9b2c478b667de17d95791e`,
 `power: supply: qcom: Reject unrepresentable restricted currents`.
 One guard in `drivers/power/supply/qcom/battery.c`, independent of fast-charge
 policy or bypass proposals. The source parent is
-[7285847](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7285847f4a2af70e52e7b41a22485307d6a018c9).
+`7285847f4a2af70e52e7b41a22485307d6a018c9`.
 
 **Source-checked:** `restrict_cur_store` parses `unsigned long`, then assigns an
 `int restricted_current` and passes that integer to `vote`. On arm64,

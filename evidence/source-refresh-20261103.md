@@ -14,16 +14,16 @@ resources and other manifest-selected applications.
 Fetched all 43 maintained build forks and their 40 selected upstream mappings.
 Rebased three published branches while retaining imported authorship:
 
-- [frameworks/base](https://github.com/PocoF3Releases/frameworks_base/commit/d3879b2b79fe8d6c0f49d10ba0b5af0b5057781b):
+- frameworks/base (historical `d3879b2b79fe8d6c0f49d10ba0b5af0b5057781b`):
   replayed nine unique feature patches on the current Evolution X base. Dropped
   the now-upstream ColorOS callback import; retained recording/blur controls,
   thermal listener registration, NFC shell dispatch, vendor camera opt-in,
   torch recovery and USB gadget lifecycle handling. Removed the unreferenced
   root-level saved mail patch in a separate cleanup commit.
-- [hardware/xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi/commit/fff3348c2d9837ad278e8e701b638022f35a6028):
+- hardware/xiaomi (historical `fff3348c2d9837ad278e8e701b638022f35a6028`):
   imported the upstream eSIM translation update; all 85 existing patches remain
   patch-equivalent, including Dolby, DSPVolume, fingerprint, sensors and haptics.
-- [NXP NFC](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/2ef0542a86ac3b12c13b8281e3b01816202a15a4):
+- NXP NFC (historical `2ef0542a86ac3b12c13b8281e3b01816202a15a4`):
   integrated upstream unsupported-firmware feature handling and preserved the
   client-queue teardown correction without overlapping behavior changes.
 
@@ -47,7 +47,7 @@ worktree before sync. It is excluded from the active build tree and publication.
 ## Kernel intake held
 
 The kernel remains at the previously published
-[Redline head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c).
+Redline head (historical `d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c`).
 A separate upstream intake candidate and script-generated config changes are
 unpublished: required regression work was platform-blocked. The dependent
 kernel build was stopped; it is not a passing build or verified new release.

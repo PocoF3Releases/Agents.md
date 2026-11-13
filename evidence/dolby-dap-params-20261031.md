@@ -33,11 +33,11 @@ exactly; do not repeat it as range evidence.
   `dap_cpdp_headphone_virtualizer_steerer_source_distance_set` 4..64,
   `dap_cpdp_volume_leveler_amount_set` 0..10, `surround_boost_set` 0..96.
   All tuned values lie inside. No public reverb-amount setter exists.
-- [Slider commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/540bd0e7cc2ac1e09bb7cc0e4bd9381451858d3b) adds
+- Slider commit (historical `540bd0e7cc2ac1e09bb7cc0e4bd9381451858d3b`) adds
   per-profile sliders: IEQ amount (107, shown with an IEQ preset), background
   ducking (109, under dialogue enhancer) and virtual speaker distance (113,
   headphone virtualizer). Dialogue strength keeps the upstream 1..12 subset.
-- [Final commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/78334404dfa794f7f1c7d139acc1d2d87d166891) completes
+- Final commit (historical `78334404dfa794f7f1c7d139acc1d2d87d166891`) completes
   101-116: GEQ enable (106) switch, reverb amount (115) and leveler amount
   (116) sliders. The QDSP `capi_v2_dap_cpdp.so` (Hexagon, decompiled with
   Ghidra) clamps `rs_amount` 0..16 and leveler amount 0..10, but the DAX
@@ -50,7 +50,7 @@ exactly; do not repeat it as range evidence.
 
 ## Validation
 
-[hardware_xiaomi 3e77cc0](https://github.com/PocoF3Releases/hardware_xiaomi/commit/3e77cc01266b45539d6fe3ddc62c1c15104322ff)
+hardware_xiaomi 3e77cc0 (historical `3e77cc01266b45539d6fe3ddc62c1c15104322ff`)
 and Russian strings 3f799c3. XiaomiDolby built cleanly. The persistent app
 cannot take a package update, so the test APK was bind-mounted over its
 system path (system_file label, Enforcing). Grouped Tone / Voice and loudness /
@@ -68,7 +68,7 @@ The next ROM build is needed to ship the changes.
 
 ## Deeper recheck — speaker route
 
-[UI commit](https://github.com/PocoF3Releases/hardware_xiaomi/commit/ab7a012708621560b1fa480b98d5f025f1924423) adds an
+UI commit (historical `ab7a012708621560b1fa480b98d5f025f1924423`) adds an
 Equalizer-tab notice while the GEQ switch is off (with Turn on), one shared
 check/cross switch on every tab and a Games section heading.
 

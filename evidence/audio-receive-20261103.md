@@ -2,11 +2,11 @@
 
 Three independent kernel changes retain the production audio ABI and tuning:
 
-- [APR transport bound](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f643345d193b1b473f1e92fb61dad003f769424c)
+- APR transport bound (historical `f643345d193b1b473f1e92fb61dad003f769424c`)
   rejects a packet whose advertised length exceeds its RPMSG buffer.
-- [AFE fixed replies](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/00e702683eed5cbe6155cd7243aace870a58ced8)
+- AFE fixed replies (historical `00e702683eed5cbe6155cd7243aace870a58ced8`)
   requires the four MIUS notification words and complete LPASS vote handle.
-- [Memory-service replies](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c)
+- Memory-service replies (historical `d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c`)
   requires complete ASM command/status and AFE/ASM mapping handles before reads
   or completion-state changes. Previously a missing ASM status could count as
   successful unmapping. These are source-demonstrated error paths; spontaneous

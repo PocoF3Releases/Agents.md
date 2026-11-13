@@ -18,7 +18,7 @@ separate main-organization hardware/interfaces branch is also current. No
 empty rewrites were made to already-current repositories; private signing and
 camera-development repositories were excluded.
 
-[Published framework head](https://github.com/PocoF3Releases/frameworks_base/commit/53e0061d824e3c6c571aebe95fb7bfa83258b3e6)
+Published framework head (historical `53e0061d824e3c6c571aebe95fb7bfa83258b3e6`)
 contains the latest selected
 [EvoX base](https://github.com/Evolution-X/frameworks_base/commit/c51e18250230cba3de5708e8034ae3d3c92e26f4)
 and eleven retained feature commits. Range-diff/patch IDs preserve ten unchanged
@@ -42,7 +42,7 @@ uses cross-window listeners. The old recording flag did not notify those
 consumers; the shared animation helper could retain its radius/early wakeup,
 and legacy shade cleanup was gated on unrelated feature flags.
 
-The [consolidated recording-blur implementation](https://github.com/PocoF3Releases/frameworks_base/commit/c26c5983f985010b9a6dc9fd7979da4fe7ee33ad)
+The consolidated recording-blur implementation (historical `c26c5983f985010b9a6dc9fd7979da4fe7ee33ad`)
 adds process-local suppression to the existing hidden cross-window helper and
 connects it to the common recording state. Live/late dialog, toast and transition
 consumers receive the effective state. User settings and the current underlying

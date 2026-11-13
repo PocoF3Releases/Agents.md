@@ -3,7 +3,7 @@
 ## Confirmed F2FS correction
 
 Published and persistently installed:
-[7285847](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7285847f4a2af70e52e7b41a22485307d6a018c9),
+`7285847f4a2af70e52e7b41a22485307d6a018c9`,
 `f2fs: Initialize field sizes for legacy statistics attributes`.
 One source line; no configuration, HAL, device-tree or ABI-layout change.
 

@@ -9,18 +9,18 @@ remains separate evidence; previous tests are not silently counted as reruns.
 Repository: [kernel_xiaomi_sm8250](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250),
 branch `aosp-17`. Three feature commits retain all preceding history:
 
-- [DSP status bounds](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ed20fff193f8b036ccbf8b036e02fcd0566bd66f):
+- DSP status bounds (historical `ed20fff193f8b036ccbf8b036e02fcd0566bd66f`):
   get-parameter and path-delay responses require a complete status word before
   reading it; optional no-wait debug logging also avoids a partial-word read.
   Valid four-byte status responses and zero-payload events retain their behavior.
   Rejection releases the session lock. No dormant in-band API redesign.
-- [GEM attachment transaction](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bf99671f63481343370bc7a48d30c52d478251f9):
+- GEM attachment transaction (historical `bf99671f63481343370bc7a48d30c52d478251f9`):
   obtain a replacement attachment before releasing the old one. Allocation failure
   returns its error and preserves recoverable old ownership instead of leaving
   an ERR_PTR while reporting success. Successful replacement clears the unmapped
   scatterlist; later mapping failures can retry or destroy safely. The selected
   ION exporter permits independent concurrent attachments.
-- [Video EOS ownership](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ba20abb9cf2d7ef4cf60fa4f25bfb925298dae80):
+- Video EOS ownership (historical `ba20abb9cf2d7ef4cf60fa4f25bfb925298dae80`):
   mark queued only after HFI accepts; stop on the first failed submission. Hold
   the EOS mutex across STOP insertion and unwind, and release mapped memory
   before deleting a failed STOP node. Earlier accepted nodes remain owned by

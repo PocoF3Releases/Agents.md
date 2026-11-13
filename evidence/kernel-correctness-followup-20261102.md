@@ -4,7 +4,7 @@
 
 ## Source identity
 
-Baseline remains [aosp-17 3d374cb](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3d374cb35915256513a2dbccb921d9fbf1259c4b). Published head: [aosp-17 1cfe734](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e). The published tree retains exactly the tested C-file bytes. Tested baseline-to-final patch SHA-256: `422ea99ccfeadabb24113d4f0a589dfd25b3d9aabe6aa79120da63f70c5afc0c`.
+Baseline remains aosp-17 3d374cb (historical `3d374cb35915256513a2dbccb921d9fbf1259c4b`). Published head: aosp-17 1cfe734 (historical `1cfe734008290c228abf15a8f8ae67a03d52fc1e`). The published tree retains exactly the tested C-file bytes. Tested baseline-to-final patch SHA-256: `422ea99ccfeadabb24113d4f0a589dfd25b3d9aabe6aa79120da63f70c5afc0c`.
 
 Only three C files change: `drivers/iommu/iommu.c`, `drivers/gpu/msm/kgsl.c`, `drivers/iommu/dma-mapping-fast.c`: **14 insertions, 4 deletions**. Five independent private patches replay onto baseline files and reproduce all three worktree files byte-for-byte. No source change preceded its old-code counterexample. No ABI/declaration/config/security/thermal or system-side source change, warning suppression, documentation-only kernel patch, new boot parameter or production debugging flag was introduced.
 
@@ -46,11 +46,11 @@ Published as five independent commits; no history rewrite or force-push:
 
 | Finding | Published fix | Authorship |
 | --- | --- | --- |
-| F1 | [iommu: Remove duplicate ida_free in iommu_group_alloc](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/38c65b4986b8457ce101f1e4e86f808e1444e974) | Yuan Can; upstream backport |
-| F2 | [iommu: Fix error unwind in iommu_group_alloc()](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7e1964203e1ab2b78e13c01bcae3fa9420990ecf) | Jason Gunthorpe; unchanged upstream fix |
-| F3 | [msm: kgsl: Return worker creation failures](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3bf6863fd0d30c149077134abe5533e3ad213680) | Local fix |
-| F4 | [msm: kgsl: Stop the owned worker before core teardown](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/631598f0a1b10c711b052777e1955f81c4f64b76) | Local fix |
-| F5 | [iommu: fast: Reject atomic allocations without a pool](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cfe734008290c228abf15a8f8ae67a03d52fc1e) | Local fix |
+| F1 | iommu: Remove duplicate ida_free in iommu_group_alloc (historical `38c65b4986b8457ce101f1e4e86f808e1444e974`) | Yuan Can; upstream backport |
+| F2 | iommu: Fix error unwind in iommu_group_alloc() (historical `7e1964203e1ab2b78e13c01bcae3fa9420990ecf`) | Jason Gunthorpe; unchanged upstream fix |
+| F3 | msm: kgsl: Return worker creation failures (historical `3bf6863fd0d30c149077134abe5533e3ad213680`) | Local fix |
+| F4 | msm: kgsl: Stop the owned worker before core teardown (historical `631598f0a1b10c711b052777e1955f81c4f64b76`) | Local fix |
+| F5 | iommu: fast: Reject atomic allocations without a pool (historical `1cfe734008290c228abf15a8f8ae67a03d52fc1e`) | Local fix |
 
 F1/F2 retain Yuan Can and Jason Gunthorpe's upstream patch metadata as recorded in the first audit. For F3–F5, matching exact upstream/vendor fixes were searched but not established; they remain local fixes, not falsely attributed human backports. The existing Qualcomm implementation and its original authorship are untouched. F4 follows the existing kernel helper's flush/stop semantics without freeing the embedded worker. No upstream architecture replacement or wholesale new driver was imported.
 

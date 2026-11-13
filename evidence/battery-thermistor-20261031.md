@@ -44,7 +44,7 @@ on this charge-pump (BQ2597x) phone.
 ## Implemented fix — kernel 7d559e9
 
 The maintainer confirmed a non-stock pack; genuine packs are no longer made, so
-pack thermistor data is not relied on. [7d559e9](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7d559e98d4d948a94c2cc68cefa0e2a4ba5afb6b)
+pack thermistor data is not relied on. `7d559e98d4d948a94c2cc68cefa0e2a4ba5afb6b`
 reports at least the hottest valid zone in `qcom,replacement-batt-temp-zones`
 (alioth: `quiet_therm`, `charger_therm0`) only while the replacement fallback is
 active. It feeds POWER_SUPPLY_PROP_TEMP (software JEITA, healthd), the `bms`

@@ -35,7 +35,7 @@ recorded device checks with new runtime acceptance.
 
 ## Corrected finding
 
-[Full-cycle envelope settling](https://github.com/PocoF3Releases/hardware_xiaomi/commit/e08273f42a55ac1af328f09b7a9dcfd33f6e080b)
+Full-cycle envelope settling (historical `e08273f42a55ac1af328f09b7a9dcfd33f6e080b`)
 changes only `vibrator/aw8697/PrimitiveSynth.cpp`. The old stop condition checked
 instantaneous model velocity after one cycle. It could stop near a zero-crossing
 while the next free oscillation still exceeded the stated 5% peak threshold.

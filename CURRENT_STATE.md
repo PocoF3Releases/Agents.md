@@ -1,32 +1,29 @@
 # Current state
 
-Checkpoint: **2026-11-12**. [Android 17 status](state/android17-status.md).
+Source checkpoint: **2026-11-13**. [Verified source refresh](evidence/source-refresh-20261113.md).
+41 upstream routes, 44 build routes and four recovery patches pass source/host
+checks. This adds no Android build or device acceptance.
 
-- **Haptics:** installed HAL checks pass enforcing; tick fallback fix built. Scale-zero gap remains. [Scope](memory/haptics.md).
-- **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
-- **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
-- **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO active; manual mismatch remains.
-- **Audio/Parts:** [Audio](evidence/alioth-audio-features-20261112.md) · [Parts](evidence/parts-full-review-20261112.md): scoped checks pass.
-- **Kernel:** [USB fixes](evidence/kernel-usb-lifetime-20261112.md): Alioth tested; Dagu hardware unverified.
-- **Releases:** [November 4 published; November 12 candidate](state/releases.md).
+- **Recovery:** native ROM recovery in `~/evo`; use the [sync/patch workflow](operations/framework-manifest.md).
+  PIN/local ZIP acceptance is dated; password/Weaver remain unverified.
+- **Parts/audio:** [November 12 checks](state/validation.md#v-parts) retain their dated artifact scope.
+- **Other limits:** haptics scale-zero/physical calibration and the manual display
+  color mismatch remain in their topic owners.
+- **Release status:** [November 4 published; November 12 candidate](state/releases.md).
 
 | Task | Read |
 | --- | --- |
-| Project history / decisions | [Working memory](memory/project-history.md) |
-| Native ROM recovery | [EvoX recovery](memory/evox-recovery.md) |
-| Custom recovery / PBRP | [Recovery development](memory/pbrp-recovery.md) |
-| Vibrator | [Haptics](memory/haptics.md) |
-| Dolby / AC-4 / audio | [Audio](memory/dolby-audio.md) |
-| Camera | [Camera](memory/miuicamera.md) |
-| Parts / touch / proximity | [Device UX](memory/xiaomiparts-device-ux.md) |
+| Exact current heads / acceptance | [Source ledger](state/repositories.yaml) · [Validation](state/validation.md) |
+| Sync / native recovery | [Workflow](operations/framework-manifest.md) · [Recovery](memory/evox-recovery.md) |
+| Parts / touch / thermal / sensors | [Device UX](memory/xiaomiparts-device-ux.md) |
+| Dolby / MiSound / codecs | [Audio](memory/dolby-audio.md) |
+| Haptics | [Vibrator](memory/haptics.md) |
+| Camera | [Finalized camera](memory/miuicamera.md) |
 | Kernel / rootdir | [Platform](memory/kernel-frameworks.md) |
-| Hardware inventory | [Subsystem map](memory/alioth-subsystems.md) |
-| GPU / games / frame generation | [Graphics](memory/gaming-graphics.md) |
-| Changelog / builds | [Releases](state/releases.md) |
-| First chat / install skill | [Onboarding](operations/first-chat.md) |
-| Windows / WSL reinstall | [Recovery](operations/workstation-recovery.md) |
-| Host / Android tools | [Tools](operations/host-tooling.md) |
-| Source search | [Ready indexes](operations/repoindex.md) |
-| Exact source / test scope | [Sources](state/repositories.yaml) · [Validation](state/validation.md) |
+| GPU / display / games | [Graphics](memory/gaming-graphics.md) |
+| Changelog / artwork | [Releases](state/releases.md) · [Artwork](operations/release-artwork.md) |
+| Source search / reverse engineering | [Ready indexes](operations/repoindex.md) · [Binary correlation](operations/alioth-reverse-engineering.md) |
+| Host recovery / tools | [Restore](operations/workstation-recovery.md) · [Tools](operations/android-tooling.md) |
+| Resume / editing knowledge | [Continuity](operations/continuity.md) · [Maintenance](operations/maintenance.md) |
 
-Optional search: [INDEX.yaml](INDEX.yaml). Read [archive](archive/README.md) only for provenance.
+Use [INDEX.yaml](INDEX.yaml) for more topics. History stays on demand.

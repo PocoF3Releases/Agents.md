@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Final source/recovery verification, November 13](source-refresh-20261113.md) | Current heads, complete upstream coverage, exact recovery replay; no new build/device pass |
 | [Maximum-FPS recording](max-fps-recording-20261112.md) | Codec bounds, legacy/Compose plumbing and independent blur preferences; no new defect found |
 | [ROM refresh and recording blur, November 12](source-refresh-20261112.md) | Latest selected sources, preserved custom series, local recovery patches and focused blur regressions |
 | [Dolby VoIP re-entry](dolby-voip-reentry-20261112.md) | Matched native queue-delay reproduction, independent quiet-window guard and verified recovery |
@@ -42,3 +43,7 @@ logs and original media are not bundled; request only a necessary missing artifa
 Historical identifiers and private diagnostic filenames are provenance, not bundled downloads. The archive is an empty skeleton; current records are linked above. [Framework override](../operations/framework-manifest.md) is available for future checkouts.
 
 - [Parts full-topic review — November 12](parts-full-review-20261112.md).
+
+Historical runtime strings, raw blocks and JSON stay as observed. Retired commit
+IDs may be plain text after a rewrite; they are provenance, not dead download links
+or current targets. Use the source ledger and retained feature table for live links.

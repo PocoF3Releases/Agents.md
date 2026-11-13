@@ -6,8 +6,8 @@ retains its original source and test scope.
 
 ## Published source and main installation
 
-[Final kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d63fdec72e32a820dde97eaac28ae7e9dc1234c6), `aosp-17`, is a normal fast-forward of the
-[previous sparse follow-up](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4517f4c402cdeb1f234e23ee61a6646393def8a6). Nineteen feature-separated commits preserve
+Final kernel (historical `d63fdec72e32a820dde97eaac28ae7e9dc1234c6`), `aosp-17`, is a normal fast-forward of the
+previous sparse follow-up (historical `4517f4c402cdeb1f234e23ee61a6646393def8a6`). Nineteen feature-separated commits preserve
 all prior implementations and upstream authorship. Only 29 kernel C/header
 files changed; system-side sources, device trees, vendor files, production
 configuration and thermal protection are unchanged. No new tests, logs or
@@ -172,22 +172,22 @@ certification is claimed. Raw device logs and test sources stay private under
 
 | Change | Original author |
 | --- | --- |
-| [seq_file: Use typed RCU links in hlist iteration](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7520159fe818782ce0fea17af481071981d2d7d1) | johnmart19 |
-| [rculist_bl: Preserve RCU types in bit-locked list accessors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/46ef3f4bffacfdb16419cab259d89f41ec62adb0) | Julian Anastasov |
-| [fsnotify: Preserve connector and hlist SRCU types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7a139101a3fb39f187b442c391007c288fa80410) | johnmart19 |
-| [selinux: Read cache tails under their writer locks](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3e9b3ee8ccee85a8c44ff262fc8eaee014b6ccdc) | johnmart19 |
-| [qrtr: Snapshot radix slot identities through RCU](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7d49bae5cf6d95f1c95fc9483bde1359b7fc42dd) | johnmart19 |
-| [net: rmnet: Put the RCU qualifier on the slow-start callback](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/000f8e58a8a5bfb451cd87cbefa099255e236508) | johnmart19 |
-| [llc: Read the immutable receive callback from its pinned SAP](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9977b1024dfcf6ede0386970398464d10415a4c1) | johnmart19 |
-| [netfilter: Preserve RCU element typing while registering NAT protocols](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b4b0e20ca9d219e517aef4dc126ac7c7078fef60) | johnmart19 |
-| [net: sched: Preserve RCU chain link types under RTNL](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5f09f9cc99958d6617786c83ecd30a20c4723645) | johnmart19 |
-| [net: Initialize unpublished socket fields with their actual types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d41a1f230895d3a69153004ec7c0e94ee78979a9) | johnmart19 |
-| [xfrm: Read afinfo identity through the RCU accessor](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a37fc7e1a033d05a768dfdd0d405b7c63489ed0c) | johnmart19 |
-| [xfrm: avoid RCU warnings around the per-netns netlink socket](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/76cd2431dfce7e0570764c296cc8e598dc4434ff) | Sabrina Dubroca |
-| [binder: Match kernel-doc to current transaction and allocator contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e5f114e5cec0f72e9687071018017bf50b0ec8c2) | johnmart19 |
-| [block: Describe delay, service and device-number helper parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3386c6adbc8b4ca49013e522910e74532e0b53a4) | johnmart19 |
-| [PM: Document current domain, timer and wakeup callback parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/83aae92649d05b476092984e45b80a0c3a545fff) | johnmart19 |
-| [cpufreq: Describe sysfs and policy helper parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/61c220505c2857dbfa13ebca8253f7dd3e7af584) | johnmart19 |
-| [selinux: Document security-server state and output parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ebb912d81258e1e6729bbe04374dd1f7ddb2595f) | johnmart19 |
-| [selinux: Match AVC kernel-doc to stateful permission interfaces](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ada6ab3ad69f65fd58e714e095f2bfa1e8c12799) | johnmart19 |
-| [net: sched: Keep classifier protocol types through the UAPI boundary](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d63fdec72e32a820dde97eaac28ae7e9dc1234c6) | johnmart19 |
+| seq_file: Use typed RCU links in hlist iteration (historical `7520159fe818782ce0fea17af481071981d2d7d1`) | johnmart19 |
+| rculist_bl: Preserve RCU types in bit-locked list accessors (historical `46ef3f4bffacfdb16419cab259d89f41ec62adb0`) | Julian Anastasov |
+| fsnotify: Preserve connector and hlist SRCU types (historical `7a139101a3fb39f187b442c391007c288fa80410`) | johnmart19 |
+| selinux: Read cache tails under their writer locks (historical `3e9b3ee8ccee85a8c44ff262fc8eaee014b6ccdc`) | johnmart19 |
+| qrtr: Snapshot radix slot identities through RCU (historical `7d49bae5cf6d95f1c95fc9483bde1359b7fc42dd`) | johnmart19 |
+| net: rmnet: Put the RCU qualifier on the slow-start callback (historical `000f8e58a8a5bfb451cd87cbefa099255e236508`) | johnmart19 |
+| llc: Read the immutable receive callback from its pinned SAP (historical `9977b1024dfcf6ede0386970398464d10415a4c1`) | johnmart19 |
+| netfilter: Preserve RCU element typing while registering NAT protocols (historical `b4b0e20ca9d219e517aef4dc126ac7c7078fef60`) | johnmart19 |
+| net: sched: Preserve RCU chain link types under RTNL (historical `5f09f9cc99958d6617786c83ecd30a20c4723645`) | johnmart19 |
+| net: Initialize unpublished socket fields with their actual types (historical `d41a1f230895d3a69153004ec7c0e94ee78979a9`) | johnmart19 |
+| xfrm: Read afinfo identity through the RCU accessor (historical `a37fc7e1a033d05a768dfdd0d405b7c63489ed0c`) | johnmart19 |
+| xfrm: avoid RCU warnings around the per-netns netlink socket (historical `76cd2431dfce7e0570764c296cc8e598dc4434ff`) | Sabrina Dubroca |
+| binder: Match kernel-doc to current transaction and allocator contracts (historical `e5f114e5cec0f72e9687071018017bf50b0ec8c2`) | johnmart19 |
+| block: Describe delay, service and device-number helper parameters (historical `3386c6adbc8b4ca49013e522910e74532e0b53a4`) | johnmart19 |
+| PM: Document current domain, timer and wakeup callback parameters (historical `83aae92649d05b476092984e45b80a0c3a545fff`) | johnmart19 |
+| cpufreq: Describe sysfs and policy helper parameters (historical `61c220505c2857dbfa13ebca8253f7dd3e7af584`) | johnmart19 |
+| selinux: Document security-server state and output parameters (historical `ebb912d81258e1e6729bbe04374dd1f7ddb2595f`) | johnmart19 |
+| selinux: Match AVC kernel-doc to stateful permission interfaces (historical `ada6ab3ad69f65fd58e714e095f2bfa1e8c12799`) | johnmart19 |
+| net: sched: Keep classifier protocol types through the UAPI boundary (historical `d63fdec72e32a820dde97eaac28ae7e9dc1234c6`) | johnmart19 |

@@ -10,7 +10,7 @@ composables that import both symbols. No callback, layout, styling, animation
 or runtime policy was changed. This is an independent framework build fix;
 the native-recovery overlay stays separate and byte-for-byte identical.
 
-Published [c500f97ecbbe](https://github.com/PocoF3Releases/frameworks_base/commit/c500f97ecbbe1b1ead9dd5877b7f42f6709de36a) on `cnb`.
+Published `c500f97ecbbe1b1ead9dd5877b7f42f6709de36a` on `cnb`.
 Local framework HEAD `293ec873efba6023f6cd562215eb826569877b7e` includes the unchanged
 recovery overlay above that public fix. Its patch diff matches the original
 byte-for-byte, and the manifest patch runner reports zero pending patches.

@@ -7,11 +7,11 @@ authorship is preserved. No phone flashing or runtime test occurred in this batc
 
 ## Separate changes
 
-- [usb: gadget: mtp: Preserve descriptor endian types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/279d55e34b11e22927397392292d4a3e3697b178).
-- [usb: gadget: mtp: Validate event payloads without narrowing](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1c2bef7c6c1be6fdfc52edb028bbf42f2f317899).
-- [usb: gadget: mtp: Use typed null request pointers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9d16ee99a6ce8db9d256df56a006c662992d4e62).
-- [usb: gadget: mtp: Reject overflowing container lengths](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/551f22ba6901e59d692952d8766d5771c527211b).
-- [usb: dwc3: Correct Qualcomm DBM and GSI documentation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/90971a36383ff107cff55c7b37001eb6283d036b).
+- usb: gadget: mtp: Preserve descriptor endian types (historical `279d55e34b11e22927397392292d4a3e3697b178`).
+- usb: gadget: mtp: Validate event payloads without narrowing (historical `1c2bef7c6c1be6fdfc52edb028bbf42f2f317899`).
+- usb: gadget: mtp: Use typed null request pointers (historical `9d16ee99a6ce8db9d256df56a006c662992d4e62`).
+- usb: gadget: mtp: Reject overflowing container lengths (historical `551f22ba6901e59d692952d8766d5771c527211b`).
+- usb: dwc3: Correct Qualcomm DBM and GSI documentation (historical `90971a36383ff107cff55c7b37001eb6283d036b`).
 
 The Microsoft descriptor version now has its actual __le16 wire type. Container
 length selection happens in CPU order before conversion to __le32; saturation to

@@ -1,11 +1,10 @@
 # Alioth PitchBlack recovery
 
-Checkpoint: **2026-10-11** (source/patch replay; prior runtime evidence). Separate PBRP Android 14 userspace checkout at
-`~/pbrp-alioth`; ROM checkout is `~/evo`. Android 17 compatibility does not mean
-recovery userspace was rebased to Android 17. Read this topic only for recovery.
-Public source/ref identities belong in [Sources](../state/repositories.yaml),
-artifacts in [Releases](../state/releases.md), acceptance in
-[V-PBRP](../state/validation.md#v-pbrp).
+Historical standalone Android 14 PBRP checkpoint: **2026-10-11** source/patch replay;
+runtime acceptance is older. `~/pbrp-alioth` is separate from native ROM
+[recovery](evox-recovery.md). Android 17 compatibility is not a userspace rebase.
+Dated refs/results remain in [historical evidence](../evidence/recovery-system-overlay-20261009.md)
+and [V-PBRP](../state/validation.md#v-pbrp), outside the current source ledger.
 
 ## Implemented scope
 

@@ -6,8 +6,8 @@ its earlier mincore/SMEM and 119-error follow-up scope.
 
 ## Source and installed kernel
 
-[Final kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4517f4c402cdeb1f234e23ee61a6646393def8a6), branch `aosp-17`, is a fast-forward of the
-[October 27 baseline](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06). The 24 feature-separated commits preserve
+Final kernel (historical `4517f4c402cdeb1f234e23ee61a6646393def8a6`), branch `aosp-17`, is a fast-forward of the
+October 27 baseline (historical `68fe321774661c4150b80edd93f7ddc75f32ac06`). The 24 feature-separated commits preserve
 upstream authorship, dates and existing certification trailers; adaptations
 are identified in their messages. System sources, device trees, vendor files,
 production configuration, thermal protection, CFI, SCS and KFENCE are unchanged.
@@ -174,27 +174,27 @@ raw device logs, identifiers and proprietary dumps are not published.
 
 | Change | Original author |
 | --- | --- |
-| [netfilter: annotate NAT helper hook pointers with __rcu](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6a4ea2f441a0838a1773f87984701a8c7b9c1f32) | Sun Jian |
-| [netfilter: h323: Match RCU callback publication and snapshot types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5829b287adf5c61c3d939740bd8b92af6e8bce5f) | johnmart19 |
-| [netfilter: pptp: Match RCU callback publication and snapshot types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2d092c99ad6a229ccabd9b9ac1256bd2911e81a9) | johnmart19 |
-| [udp: Preserve RCU typing in tunnel offload snapshots](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/57cdc002f3ccb92b23dc147b90368154cbbf2e31) | Eric Dumazet |
-| [module.h: Annotate mod_kallsyms with __rcu](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/863843f72a3d7b461a01a01b833daa5468eabdea) | Madhuparna Bhowmik |
-| [module: Use proper RCU assignment in add_kallsyms().](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c0168c6a18bcc1f889d09a2235f1bd88065459af) | Sebastian Andrzej Siewior |
-| [bpf: Correct cgroup link kernel-doc parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b3ed285acceab3928fbfebb6d1f329eb598440dc) | johnmart19 |
-| [PM / QoS: Describe device requests and per-CPU update results](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/80ea0e3be91b166605cf645e5972e4fc14b43928) | johnmart19 |
-| [trace: ipc_logging: Correct read and return documentation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d91479b9d1c412cd2a81878a4ceb9a27f334ad48) | johnmart19 |
-| [keys: Match restriction documentation to current interfaces](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/04c4ee2f5a55fd76668d35c1b229abb0346250e2) | johnmart19 |
-| [net: Correct ICMP offset and delayed ACK timer documentation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a6078471894e5efa4e6c8498dd3712d19d610f9a) | johnmart19 |
-| [wlan: wma: Match data callback documentation to current contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0bb1b0f72def3da2c4c70d1d17b849cf0cf1b30b) | johnmart19 |
-| [wlan: hdd: Match cfg80211 documentation to current contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f5a16442654da8802e1957ecc1538c57af2df3df) | johnmart19 |
-| [wlan: csr: Correct roam configuration documentation](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f4f7be4b95db2cbd0e1e2dc6557df5dea2cdd6d6) | johnmart19 |
-| [sched: Match task identity and mm-owner RCU contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0fc9e049d1089dfa05a53a8e1f3117821f74dcf4) | johnmart19 |
-| [cred: Snapshot published credentials for identity assertions](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/991689a1e9fc65168f3bd5ebd305d277edb00030) | johnmart19 |
-| [keys: Snapshot session keyring identities through RCU](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/aa5f7f25b3ca6f7108c4617fde37ab12fbf8b8a7) | johnmart19 |
-| [netfilter: Read conntrack helper identity through RCU](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/28e02ca714897a1fd84c6d358e480ea056d1514b) | johnmart19 |
-| [netfilter: Match conntrack attach callback RCU publication](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f23f48505de90c92651948e9b0f0aa187084b535) | johnmart19 |
-| [bpf: Express JIT line offsets as byte-address arithmetic](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6a7e4ebdf0cbff8942984fa57c130dcb824ebf8f) | johnmart19 |
-| [soc: qcom: smem: Bound virtual-address translation offsets](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bfab667d4b37c9580dc2bac398758a3b5b2f36d3) | johnmart19 |
-| [mm: Keep mincore swap-cache mappings alive through page lookup](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a00cef2703e2fd315cf0f40aead6254008aa2b32) | johnmart19 |
-| [scripts: kernel-doc: Handle __always_unused parameter attributes](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/705708d28df6b8969b074bcf27e191ab92ad469b) | Randy Dunlap |
-| [clocksource/drivers/timer-of: Remove percpu irq related code](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4517f4c402cdeb1f234e23ee61a6646393def8a6) | Daniel Lezcano |
+| netfilter: annotate NAT helper hook pointers with __rcu (historical `6a4ea2f441a0838a1773f87984701a8c7b9c1f32`) | Sun Jian |
+| netfilter: h323: Match RCU callback publication and snapshot types (historical `5829b287adf5c61c3d939740bd8b92af6e8bce5f`) | johnmart19 |
+| netfilter: pptp: Match RCU callback publication and snapshot types (historical `2d092c99ad6a229ccabd9b9ac1256bd2911e81a9`) | johnmart19 |
+| udp: Preserve RCU typing in tunnel offload snapshots (historical `57cdc002f3ccb92b23dc147b90368154cbbf2e31`) | Eric Dumazet |
+| module.h: Annotate mod_kallsyms with __rcu (historical `863843f72a3d7b461a01a01b833daa5468eabdea`) | Madhuparna Bhowmik |
+| module: Use proper RCU assignment in add_kallsyms(). (historical `c0168c6a18bcc1f889d09a2235f1bd88065459af`) | Sebastian Andrzej Siewior |
+| bpf: Correct cgroup link kernel-doc parameters (historical `b3ed285acceab3928fbfebb6d1f329eb598440dc`) | johnmart19 |
+| PM / QoS: Describe device requests and per-CPU update results (historical `80ea0e3be91b166605cf645e5972e4fc14b43928`) | johnmart19 |
+| trace: ipc_logging: Correct read and return documentation (historical `d91479b9d1c412cd2a81878a4ceb9a27f334ad48`) | johnmart19 |
+| keys: Match restriction documentation to current interfaces (historical `04c4ee2f5a55fd76668d35c1b229abb0346250e2`) | johnmart19 |
+| net: Correct ICMP offset and delayed ACK timer documentation (historical `a6078471894e5efa4e6c8498dd3712d19d610f9a`) | johnmart19 |
+| wlan: wma: Match data callback documentation to current contracts (historical `0bb1b0f72def3da2c4c70d1d17b849cf0cf1b30b`) | johnmart19 |
+| wlan: hdd: Match cfg80211 documentation to current contracts (historical `f5a16442654da8802e1957ecc1538c57af2df3df`) | johnmart19 |
+| wlan: csr: Correct roam configuration documentation (historical `f4f7be4b95db2cbd0e1e2dc6557df5dea2cdd6d6`) | johnmart19 |
+| sched: Match task identity and mm-owner RCU contracts (historical `0fc9e049d1089dfa05a53a8e1f3117821f74dcf4`) | johnmart19 |
+| cred: Snapshot published credentials for identity assertions (historical `991689a1e9fc65168f3bd5ebd305d277edb00030`) | johnmart19 |
+| keys: Snapshot session keyring identities through RCU (historical `aa5f7f25b3ca6f7108c4617fde37ab12fbf8b8a7`) | johnmart19 |
+| netfilter: Read conntrack helper identity through RCU (historical `28e02ca714897a1fd84c6d358e480ea056d1514b`) | johnmart19 |
+| netfilter: Match conntrack attach callback RCU publication (historical `f23f48505de90c92651948e9b0f0aa187084b535`) | johnmart19 |
+| bpf: Express JIT line offsets as byte-address arithmetic (historical `6a7e4ebdf0cbff8942984fa57c130dcb824ebf8f`) | johnmart19 |
+| soc: qcom: smem: Bound virtual-address translation offsets (historical `bfab667d4b37c9580dc2bac398758a3b5b2f36d3`) | johnmart19 |
+| mm: Keep mincore swap-cache mappings alive through page lookup (historical `a00cef2703e2fd315cf0f40aead6254008aa2b32`) | johnmart19 |
+| scripts: kernel-doc: Handle __always_unused parameter attributes (historical `705708d28df6b8969b074bcf27e191ab92ad469b`) | Randy Dunlap |
+| clocksource/drivers/timer-of: Remove percpu irq related code (historical `4517f4c402cdeb1f234e23ee61a6646393def8a6`) | Daniel Lezcano |

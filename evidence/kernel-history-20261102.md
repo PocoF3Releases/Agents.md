@@ -9,7 +9,7 @@ Further own-series consolidation: [current 751-commit series](kernel-series-2026
 
 ## Published result
 
-[e26284f54187](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e26284f541876a3f3f9611740db500f00c7f3aea)
+`e26284f541876a3f3f9611740db500f00c7f3aea`
 is published on `aosp-17` at the same repository URL. The exact expected old
 tip `830fb30974c82ef91080e9295b90169bb97661da` protected the force-push.
 The Qualcomm/Lineage base `7646fd34cc76f1ff57f020aaa67b8e6a813db723` is unchanged.

@@ -81,7 +81,7 @@ this APK; support properties alone do not make them active integrations.
 The maintainer has no headphones for acceptance. These optional features were
 not newly enabled, exposed, or represented as verified fixes. No reproducible
 behavioral defect in the approved implemented paths was established by the newly
-recovered methods. [Comment cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/f70f79506831bf55b064974ca5a69a4c3bea3d8f)
+recovered methods. Comment cleanup (historical `f70f79506831bf55b064974ca5a69a4c3bea3d8f`)
 removes the obsolete incomplete-decompilation explanation for preserving speaker
 spatializer tuning. Runtime mapping, capability defaults and translations are
 unchanged. No proprietary code or library was copied into ROM sources.

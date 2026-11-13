@@ -21,11 +21,11 @@ candidate and paused hardware investigations remain excluded.
   author are preserved. Strict extracted-source regression: old code fails two
   cases, correction passes five plus ten adversarial cases. No ABI, format,
   layout or codec-capability changes.
-- [Thermal listener feature](https://github.com/PocoF3Releases/frameworks_base/commit/5c19617108cb079b4038b3c7c6c1fc21740bceeb):
+- Thermal listener feature (historical `5c19617108cb079b4038b3c7c6c1fc21740bceeb`):
   the existing no-HAL test now expects successful listener registration/removal,
   retaining zero callbacks and NaN headroom. The production implementation and
   thermal protection are unchanged.
-- [Service fixture compatibility](https://github.com/PocoF3Releases/frameworks_base/commit/419f23067ab17cf1afa598546e4fcf6af8da4157):
+- Service fixture compatibility (historical `419f23067ab17cf1afa598546e4fcf6af8da4157`):
   four inherited fixtures use current API signatures: display-touch capability
   stays false, and both pattern decoding and credential creation use the existing
   default 3x3 size. No test cases or assertions were removed, no skipped tests or

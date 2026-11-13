@@ -1,120 +1,60 @@
 # Android 17 implementation and verification status
 
-Source refresh: October 24, 2026. Earlier component acceptance remains dated below. This is a source and component acceptance record,
-not a new ROM release declaration. [Current heads](repositories.yaml) and the
-[post-sync audit](../evidence/post-sync-source-audit-20261011.json) own source identity.
-Older evidence revisions below are historical tested candidates, not branch tips.
+**Source checkpoint: November 13, 2026.** The [source ledger](repositories.yaml)
+owns current public/local identities. [Current verification](../evidence/source-refresh-20261113.md)
+is Git/source/host work; build/device acceptance remains dated in
+[validation](validation.md), not transferred to a new base by a rebase.
 
 ## Added and retained
 
-- XiaomiParts migrated from Java/XML screens to Kotlin/Compose, with compact
-  settings rows, adaptive layouts, consistent icons and selected icon circles.
-  Thermal controls remain expandable without repeating the selected profile.
-  Touch tuning, refresh controls, speaker cleaning and display controls remain.
-- Dolby follows Parts styling with compact game controls and icon selectors.
-  Approved branding and genre icons remain; no replacement UI experiment is pending.
-- MiSound replaces Dirac naming and implementation. Saved settings and both
-  current and legacy Quick Settings tiles work. The legacy component bridge is
-  intentional compatibility for existing tiles, not a second Dirac implementation.
-- MiSound DSP work runs on a process-owned worker; immutable state feeds the UI
-  and tiles. Accepted writes survive navigation, retries are bounded, and audio
-  service restart recovery preserves settings.
-  [Final compiled and installed candidate](../evidence/legacy-hardware-research-20261011.json).
-- Parts/Dolby/SystemUI translation gaps, including Kabyle, were addressed.
-  Placeholder, inheritance, duplicate-key and AAPT2 checks passed in the recorded
-  audit. MiSound, Hi-Fi and headset model names use canonical untranslated names.
-  [Translation audit and limits](../evidence/production-final-translations-20261011.json).
-- Compatible Gerrit changes retained original authorship: IWLAN service config,
-  FPC cancellation handling and flashlight recovery. Changes were adapted to
-  current code rather than blindly enabling capabilities.
-  [Component validation](../evidence/lineage-gerrit-applied-20261011.json).
-- Removed block writeback throttling configuration and its manual UFS latency
-  write. Kernel import and regeneration of all 12 defconfigs remain separate.
-  [Configuration verification](../evidence/wbt-removal-20261011.json).
+| Area | Retained implementation and owner |
+| --- | --- |
+| XiaomiParts | Kotlin/Compose, compact Settings rows, icon selectors, expandable thermal/touch controls and translations; [device UX](../memory/xiaomiparts-device-ux.md) |
+| Dolby / MiSound | Native stock effect controls, saved-state/communication recovery, independent translation commits and canonical branding; [audio](../memory/dolby-audio.md) |
+| Haptics | Stock-backed effects/primitives and bounded fallback; [vibrator](../memory/haptics.md) |
+| Camera | Finalized approved modes and compatibility guards; [camera](../memory/miuicamera.md) |
+| Kernel / device services | Redline, kernel/HAL contracts, rootdir/SELinux integration and preserved thermal protection; [platform](../memory/kernel-frameworks.md) |
+| Recovery | Native ROM recovery, PIN/read-only storage, local packages, checked installers and secure ADB action; [recovery](../memory/evox-recovery.md) |
+
+MiSound's legacy tile component is an intentional compatibility bridge, not a
+second Dirac backend. Model/headset branding stays untranslated; settings text
+and placeholders use the separate resource commits. Kernel imports preserve
+authorship; defconfigs are generated separately with the repository script.
 
 ## Removed or deliberately excluded
 
-Retired Parts Java/XML UI, unused proximity wrappers, unused resources and
-temporary implementation harnesses were removed where identified. Authored
-production test/documentation additions were omitted during cleanup; existing
-upstream regression tests, required sensor test HAL code, icon license notices
-and the explicitly non-product haptics renderer were retained.
+Retired Java/XML Parts UI, dead resources and identified obsolete services were
+removed in their recorded component audits. Do not restore rejected universal
+HIDL-to-AIDL shims, speculative allocator/linker replacements, aggressive realtime
+tuning or unused device/SKU features. Keep upstream tests, required sensor HAL
+code, icon licenses and explicitly non-product diagnostics.
 
-The unused Dolby documentation image and generated Alioth Python cache were
-removed in the recorded source audit. Approved production branding remains.
+The LZ4 OTA/snapshot experiment was withdrawn. It is not part of the current
+recovery workflow. Standalone PBRP and old repository snapshots are historical
+references, not active ROM dependencies.
 
-Do not reintroduce the rejected universal HIDL-to-AIDL shim, speculative allocator
-replacement, memory-stat rename, hardcoded API-numbered linker configuration or
-aggressive realtime scheduling. Source research found no need for these changes.
-The audited 845 common/alioth vendor ELF files had no text relocations.
-[Research findings](../evidence/legacy-hardware-research-20261011.json).
+## Current source verification
 
-Aggregation overlays with no current consumers, unverified swappiness and TP10
-tuning, popup-camera/UDFPS and other non-alioth changes were not applied.
-Flashlight recovery does not establish hardware intensity support.
+All 50 maintained repos/105 published heads were read back; all 41 configured
+upstream routes have zero missing commits. The resolved manifest binds 44 build
+routes. Four unchanged recovery patches reproduce the exact live overlay trees,
+and all three runner preflights pass. Existing local edits were preserved.
 
-## How history was cleaned
+Canonical upstream commits retain their IDs/messages; assisted fork-local changes
+use the current disclosure rule. Translation changes remain separate from feature
+implementations. Use [retained feature links](implementation-commits.md), not
+superseded fixup IDs, for current source navigation.
 
-The recorded first consolidation changed 205 Codex-attributed first-parent
-commits into 181 feature commits across 14 maintained branches. Incremental UI
-fixes were folded into their final feature implementations; unrelated changes and
-upstream authorship remained separate. Commit descriptions were rewritten against
-actual diffs rather than generic completion text.
+## Acceptance limits and future work
 
-A subsequent merge of translations into implementation commits was rejected and
-corrected. Translation changes remain standalone resource commits, consolidated
-by topic such as Parts device-control translations, without add/revert churn.
-Independent kernel imports and generated defconfigs remain separate.
+Recorded Parts/audio/module/phone checks remain scoped to their stated artifacts.
+Native-recovery PIN/local-package acceptance does not establish password, Weaver,
+every image target or every storage scheme. The latest source refresh adds no new
+ROM build, flash, CTS/VTS, acoustic/headset, car-projection or physical accessory
+certification. Source branch heads do not identify the installed build.
 
-Before/after production trees and modes were compared; history-only rewrites
-preserved approved behavior. Recovery refs and explicit expected-head
-force-with-lease were used for authorized rewrites, followed by remote checks.
-Earlier rewrite IDs are historical; use the source map for final heads.
-
-## What is verified
-
-- All 43 maintained build repositories were checked against their selected upstreams.
-  The four authored native-recovery patches remain local overlays on the normal
-  framework/device forks. [Current refresh and limits](../evidence/source-refresh-20261024.md).
-- Parts/Dolby recorded UI checks covered compact rows, selectors, icons, margins
-  and expanded/collapsed thermal controls on the phone. These are scoped visual
-  checks, not every possible screen/font-scale combination.
-- The final MiSound APK compiled and matched its installed hash. Saved toggles,
-  scenes, presets, navigation persistence, both tiles and automatic audioserver
-  restart recovery passed on an SDK 37 user build; original device settings were restored.
-- Current kernel/selected partition metadata passed host VINTF compatibility:
-  shipping API 30, FCM 7, kernel 4.19.325.
-  [Exact metadata scope](../evidence/vintf-compatibility-20261011.json).
-- Fingerprint cancellation, IWLAN binding and flashlight restart behavior have
-  the bounded component evidence linked above. No enrolled-fingerprint unlock,
-  carrier Wi-Fi calling or physical torch-strength fault certification is implied.
-
-## Remaining work and candidate opportunities
-
-The October 14 native-recovery run completed a fresh full production build,
-packaging/VINTF/APEX-policy checks and no-wipe secure recovery OTA installation.
-Android booted the new incremental under enforcing SELinux, with saved settings
-and data integrity preserved. [Exact scope](../evidence/evox-native-recovery-20261014.md).
-PIN unlock and signed ZIP installation passed with init/recovery/crypto enforced.
-Scrolling measured about 55–60 FPS and was user-approved. The user confirmed
-secure PIN unlock; password/Weaver, CTS/VTS and car projection remain unestablished.
-
-Framework sync selection is now explicit: the local override uses
-PocoF3Releases/cnb for both framework repositories. Targeted sync passed without
-changing their maintained heads. [Override and verification](../operations/framework-manifest.md)
-also correct the earlier inherited-default interpretation.
-
-Android Auto has a recorded framework registration fix, but wired/wireless
-projection on the rebuilt ROM remains unverified. MiSound headset-specific routes
-and live call bypass need suitable connected hardware/call conditions.
-
-Torch intensity, USB webcam, Smart 5G and power-off alarms remain research
-candidates requiring HAL, host, modem or RTC validation before enabling flags.
-No new implementation is promised or scheduled by this record. Battery bypass,
-platform spatializer/head tracking and full PWLE support remain unestablished.
-
-The repeated post-reboot ADB disappearance has an observed Windows host recovery
-procedure, not a proven universal USB/kernel fix. Recovery fastbootd acceptance
-remains separate from the completed full-ROM OTA and scoped app verification.
-
-[Current implementation commits](implementation-commits.md) links each retained feature to its repository.
+Display color mismatch, haptics scale-zero/physical calibration and untested
+peripheral paths remain in their topic owners. Do not enable torch intensity,
+platform spatializer/head tracking, battery bypass, unsupported panel modes or
+other speculative features from these notes alone. No new feature is promised or
+scheduled; paused/restricted investigations stay paused until properly resumed.

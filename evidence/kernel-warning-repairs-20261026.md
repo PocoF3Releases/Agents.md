@@ -7,9 +7,9 @@ source edits. No imported patch is relabeled with assistant authorship.
 
 ## Separate source changes
 
-- [Qualcomm IMEM mapping contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a2c4e490a5dbeb2bce42e6dd388e3698a637c4c7): retain `__iomem` through mappings and register accesses, release acquired OF-node references after mapping, and keep the SCM helper private. Register values, barriers and power-off/restart sequencing are unchanged. This is not a demonstrated fix for the intermittent shutdown hang.
-- [xHCI secondary event-ring contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fb3f44ae35d4637cc6857fcf45a90de613d27494): decode the saved event flag as little-endian before deriving its cycle bit, matching the subsequent comparison. Five same-file helpers become static; allocation parameter documentation is completed. Public secondary-interrupter interfaces remain unchanged. No performance benefit on little-endian Alioth is claimed.
-- [USB-core unused locals](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1ee79a4383f5bab1feca922a986f5f02eeea858f): remove an unused parent lookup and unread suspend result storage, retaining all feature requests, masks and return paths. This is source cleanup, not new suspend error handling.
+- Qualcomm IMEM mapping contracts (historical `a2c4e490a5dbeb2bce42e6dd388e3698a637c4c7`): retain `__iomem` through mappings and register accesses, release acquired OF-node references after mapping, and keep the SCM helper private. Register values, barriers and power-off/restart sequencing are unchanged. This is not a demonstrated fix for the intermittent shutdown hang.
+- xHCI secondary event-ring contracts (historical `fb3f44ae35d4637cc6857fcf45a90de613d27494`): decode the saved event flag as little-endian before deriving its cycle bit, matching the subsequent comparison. Five same-file helpers become static; allocation parameter documentation is completed. Public secondary-interrupter interfaces remain unchanged. No performance benefit on little-endian Alioth is claimed.
+- USB-core unused locals (historical `1ee79a4383f5bab1feca922a986f5f02eeea858f`): remove an unused parent lookup and unread suspend result storage, retaining all feature requests, masks and return paths. This is source cleanup, not new suspend error handling.
 
 The matching Qualcomm downstream and mainline USB event handling were reviewed;
 no exact drop-in human patch for this vendor combination was established. These

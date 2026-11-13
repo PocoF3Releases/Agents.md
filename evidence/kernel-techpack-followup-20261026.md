@@ -10,21 +10,21 @@ Repository: [kernel_xiaomi_sm8250](https://github.com/PocoF3Releases/kernel_xiao
 branch `aosp-17`. Four separate fixes are published by fast-forward; prior history
 and approved implementations remain ancestors:
 
-- [LSM short mapping replies](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ac47ab8823797c34157d7ad4069344bb2c5581f3):
+- LSM short mapping replies (historical `ac47ab8823797c34157d7ad4069344bb2c5581f3`):
   preserve LuK1337's authorship, date and original message from the
   [human upstream fix](https://github.com/LineageOS/android_kernel_qcom_sm8350/commit/2ade12f6b103f186b167d6f327d24afc7419ae4c).
   Four-byte replies no longer read a nonexistent second word. Only the source path
   was adapted; no AI attribution was added to the unchanged human implementation.
-- [SHS VMA lifetime](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2e4c2646b05eb275543bd52af320d796e12234b2):
+- SHS VMA lifetime (historical `2e4c2646b05eb275543bd52af320d796e12234b2`):
   retain object references and module pins for mapped/forked VMAs. Procfs can force
   file release during removal while mappings survive. Releases now use their own
   private object; faults reject retired generations; old closes cannot clear a new
   shared alias. Existing ABI and fault signal are retained.
-- [Video DMA ownership](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7c91a3ca81ef064f93512016bdb8299b5a203cfb):
+- Video DMA ownership (historical `7c91a3ca81ef064f93512016bdb8299b5a203cfb`):
   balance imported references, device maps and CPU access on failures; reject
   truncated IOVAs with an actual error; free valid zero-address mappings by
   attachment ownership rather than treating the address as an ownership flag.
-- [CVP spans and firmware addresses](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c356b4b212bc9f5cddb9432a8364d22c7c4fbefc):
+- CVP spans and firmware addresses (historical `c356b4b212bc9f5cddb9432a8364d22c7c4fbefc`):
   reject u32 address addition wrap and CVP payloads outside imported buffers.
   VIDC total-plane length semantics remain distinct from CVP payload spans.
 

@@ -12,7 +12,7 @@ maximum, matching its summary text.
 
 ## Correction
 
-[Refresh screens once on resume](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/84bd69b3e80eca03ce7d0b26efa99b4382232070):
+Refresh screens once on resume (historical `84bd69b3e80eca03ce7d0b26efa99b4382232070`):
 `OnResume` called the refresh explicitly when the owner was already resumed,
 although `addObserver` replays ON_RESUME. Each screen therefore read its
 sysfs/service state twice on first composition. No other defect was found.

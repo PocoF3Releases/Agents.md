@@ -3,8 +3,8 @@
 > Kernel links were updated to the [finalized history](kernel-history-map-20261027.json). Recorded test identities and measurements remain historical; corresponding rewritten commits are not claims of testing those hashes.
 
 **Source/build/host/device checked.** Thirteen separate commits extend
-[the previous tested head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7f23a5259ac1064b488a20875098a3f1189e2fe2)
-to [the published tested head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f462c99f563ccdd84c561137593579ea59b82951).
+the previous tested head (historical `7f23a5259ac1064b488a20875098a3f1189e2fe2`)
+to the published tested head (historical `f462c99f563ccdd84c561137593579ea59b82951`).
 System-side sources, production configuration, warning flags and thermal policy
 are unchanged. No suppression attributes, force casts, test files or Markdown
 were added to the production kernel. Original authorship/history is retained;
@@ -120,16 +120,16 @@ certification. Old GPU/display/shutdown and other driver limits remain open.
 
 | Commit |
 | --- |
-| [soc: qcom: msm_bus: bound bandwidth report appends to the page](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a4cbad68ca91be95ec2a8677aa26e0513bb4de84) |
-| [net: cnss2: match debug callbacks to their feature configuration](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e4b0f813a2b0870ae3e9f04f188d4a6fdca0170c) |
-| [net: cnss2: include the shared generic-netlink declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e143ec5f43258a7322bb832db7a177d4909dffd3) |
-| [platform: msm: sps: preserve the BAM MMIO address space](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/749bcd3bf0d1e5ddcd758538d169ee84092f432e) |
-| [platform: msm: sps: document BAM function parameters and callers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ec7575faa0e005cc5589bfd1593198462c1da0c9) |
-| [soc: qcom: scm: correct private boot-notification contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cc2be2b85f6bfa4f6336bb60d341f74871781804) |
-| [soc: qcom: secure_buffer: keep private bookkeeping local](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f3bbfc16b6104c1f921838f2b802e70731a183e3) |
-| [soc: qcom: msm_bus: keep implementation callbacks and state private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/93ee18d5453ca8c99c122399cba6b39b8a7a8232) |
-| [soc: qcom: msm_bus: remove unread vote bookkeeping](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ce4ab23d4a18951f2ea5f9f5602f278221b552a2) |
-| [soc: qcom: msm_bus: type device-tree cells as big endian](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/57f3f3213af693b2e559047af31b84af2a370e91) |
-| [soc: qcom: msm_bus: share rule-engine type contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/67766f559528414f47187434e3a757812c2dcca5) |
-| [soc: qcom: msm_bus: document bus helper parameters](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9d78e459f6e15ce6c7dbe7c1b408c6ae27e4be72) |
-| [soc: qcom: msm_bus: serialize bandwidth reports with client updates](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f462c99f563ccdd84c561137593579ea59b82951) |
+| soc: qcom: msm_bus: bound bandwidth report appends to the page (historical `a4cbad68ca91be95ec2a8677aa26e0513bb4de84`) |
+| net: cnss2: match debug callbacks to their feature configuration (historical `e4b0f813a2b0870ae3e9f04f188d4a6fdca0170c`) |
+| net: cnss2: include the shared generic-netlink declarations (historical `e143ec5f43258a7322bb832db7a177d4909dffd3`) |
+| platform: msm: sps: preserve the BAM MMIO address space (historical `749bcd3bf0d1e5ddcd758538d169ee84092f432e`) |
+| platform: msm: sps: document BAM function parameters and callers (historical `ec7575faa0e005cc5589bfd1593198462c1da0c9`) |
+| soc: qcom: scm: correct private boot-notification contracts (historical `cc2be2b85f6bfa4f6336bb60d341f74871781804`) |
+| soc: qcom: secure_buffer: keep private bookkeeping local (historical `f3bbfc16b6104c1f921838f2b802e70731a183e3`) |
+| soc: qcom: msm_bus: keep implementation callbacks and state private (historical `93ee18d5453ca8c99c122399cba6b39b8a7a8232`) |
+| soc: qcom: msm_bus: remove unread vote bookkeeping (historical `ce4ab23d4a18951f2ea5f9f5602f278221b552a2`) |
+| soc: qcom: msm_bus: type device-tree cells as big endian (historical `57f3f3213af693b2e559047af31b84af2a370e91`) |
+| soc: qcom: msm_bus: share rule-engine type contracts (historical `67766f559528414f47187434e3a757812c2dcca5`) |
+| soc: qcom: msm_bus: document bus helper parameters (historical `9d78e459f6e15ce6c7dbe7c1b408c6ae27e4be72`) |
+| soc: qcom: msm_bus: serialize bandwidth reports with client updates (historical `f462c99f563ccdd84c561137593579ea59b82951`) |

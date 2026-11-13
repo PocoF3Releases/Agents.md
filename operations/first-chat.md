@@ -5,9 +5,6 @@ The workhub provides context, not PC/device access.
 
 ## Install the optional AOSP skill
 
-October 9: the local skill was installed for Windows Codex and WSL Codex.
-This is a host checkpoint, not proof of discovery in every client/session.
-
 [skills/aosp-wsl/SKILL.md](../skills/aosp-wsl/SKILL.md) covers WSL quoting, bounded
 search, backport attribution and validation scope. Install in the active Codex
 host's skill folder; Windows and a WSL CLI may have different homes.
@@ -28,16 +25,11 @@ Docs plugins are optional; source work needs no extra MCP server.
 
 ## Verify access once
 
-- Confirm distro/checkout. Latest observed A17 root is `~/evo` (older: `~/evo17`);
-  verify the effective manifest rather than inferring Android version from a path.
-- Check relevant repos for branch, HEAD and local changes. Use [repoindex](repoindex.md)
-  when useful, checking freshness.
-- Verify needed [host tools](host-tooling.md)/[Android tools](android-tooling.md).
-  Checkout Clang/LLVM/JDK remain authoritative for builds.
-- Device work: select the ADB server seeing the phone and verify its installed
-  revision. Source review needs no device.
-- Verify authentication without exposing tokens. Record missing dumps/credentials
-  as limits; retain public references.
+Follow [continuity](continuity.md) for checkout, scope and task ownership. Inspect
+needed [host tools](host-tooling.md), [Android tools](android-tooling.md) and
+authentication without printing secrets. Checkout toolchains remain authoritative.
+For authorized device work, verify the ADB server and installed source/artifact;
+source review needs no phone. Missing tools/dumps are limits, not permission to install.
 
 ## Keep context small
 

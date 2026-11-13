@@ -7,13 +7,13 @@ public header, warning flag or device installation changed.
 
 ## Final commits
 
-- [ADM calibration failure reporting](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/400d43198c824b2ac0e74dbc2e523684a12d12de):
+- ADM calibration failure reporting (historical `400d43198c824b2ac0e74dbc2e523684a12d12de`):
   return `adm_set_pp_params()` status through `send_adm_cal_block()`. Previously,
   allocation/APR/timeout/DSP rejection failures returned success and
   `send_adm_cal_type()` marked the calibration used. The existing caller now
   avoids that false mark. Successful uploads and the legacy Dolby topology
   bypass retain their behavior.
-- [In-band parameter packet bounds](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3d374cb35915256513a2dbccb921d9fbf1259c4b):
+- In-band parameter packet bounds (historical `3d374cb35915256513a2dbccb921d9fbf1259c4b`):
   ADM, ASM and AFE V2/V3 now validate the payload against the 16-bit APR packet
   length minus its fixed header before addition/allocation/copy. The old
   32-bit addition could wrap allocation size or truncate the packet length.

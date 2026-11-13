@@ -1,8 +1,8 @@
 # Camera commit recheck — 24 October 2026
 
 **source-checked · ARM64-tested · temporarily device-tested**.
-The existing [device extractor](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/8c41b46ac69847a68cbb3717851f3546e8acca39)
-and [vendor HAL](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a9e382360adc8124f71f96590ff823b1fc688413)
+The existing device extractor (historical `8c41b46ac69847a68cbb3717851f3546e8acca39`)
+and vendor HAL (historical `a9e382360adc8124f71f96590ff823b1fc688413`)
 need no further production change after this review. Their remote heads were
 rechecked. The device commit changes only the extractor hook/helper; the vendor
 commit changes only `camera.qcom.so`. The local recovery overlay was not published

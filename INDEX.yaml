@@ -1,5 +1,5 @@
 schema_version: 1
-last_refreshed: '2026-11-12'
+last_refreshed: '2026-11-13'
 entrypoints:
   rules: AGENTS.md
   current_state: CURRENT_STATE.md
@@ -171,8 +171,8 @@ subsystems:
     - setup
     - codex
   pbrp:
-    title: Alioth custom recovery
-    status: maintained
+    title: Historical Alioth custom recovery
+    status: historical
     memory: memory/pbrp-recovery.md
     keywords:
     - pbrp

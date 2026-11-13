@@ -25,9 +25,9 @@ allowed upstream heads were checked again immediately before publication.
 | --- | --- | --- |
 | [PocoF3Releases-Recovery/android_hardware_interfaces](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0ba9bb69f66733f533baaafd0b417f61be63ab51) | `cnb` | `7f3788f397c1` |
 | [PocoF3Releases/android_hardware_nxp_nfc](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/0b8bf91ca3a41a207ccb7429a553dac771433ca2) | `lineage-24.0` | `0b8bf91ca3a4` |
-| [PocoF3Releases/frameworks_av](https://github.com/PocoF3Releases/frameworks_av/commit/406810da81b7a68d1f21e197d166dae67e6f0e69) | `cnb` | `406810da81b7` |
-| [PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base/commit/ef5eed4877fbab5038ca77291c5b917bc8112ce9) | `cnb` | `ef5eed4877fb` |
-| [PocoF3Releases/hardware_xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336) | `cnb` | `6762a5238e69` |
+| PocoF3Releases/frameworks_av (historical `406810da81b7a68d1f21e197d166dae67e6f0e69`) | `cnb` | `406810da81b7` |
+| PocoF3Releases/frameworks_base (historical `ef5eed4877fbab5038ca77291c5b917bc8112ce9`) | `cnb` | `ef5eed4877fb` |
+| PocoF3Releases/hardware_xiaomi (historical `6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336`) | `cnb` | `6762a5238e69` |
 | [PocoF3Releases/android_hardware_interfaces](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/f7a4ef196d0a5aa20e068630561aabbe85af7acb) | `cnb` | `580860c56531` |
 
 Five stacks retain all 101 feature commits with equivalent stable patch IDs and
@@ -84,7 +84,7 @@ This is source/host verification; the failed Android build has not been rerun.
 ## Kernel boundary
 
 The kernel remains at the previously published
-[Redline head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c).
+Redline head (historical `d5936f1e0ba3a1fbb2cc22ab3540cfb56788d38c`).
 The prior upstream intake is still held because required regression work was
 platform-restricted. It was not retried, rebased, built or published in this pass.
 Do not describe the kernel as updated to the latest upstream or infer new kernel,
