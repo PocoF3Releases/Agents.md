@@ -1,7 +1,7 @@
 # Sync maintained sources and native recovery
 
 Current heads are recorded once in the [source ledger](../state/repositories.yaml).
-The [November 13 verification](../evidence/source-refresh-20261113.md) checks
+The [November 14 verification](../evidence/source-refresh-20261114.md) checks
 upstream ancestry, effective routes and exact recovery-tree replay; older runtime
 acceptance stays in the [validation register](../state/validation.md).
 

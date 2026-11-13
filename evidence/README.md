@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Full source sync, November 14](source-refresh-20261114.md) | 1,265 projects synced, current upstream routes and exact restored recovery overlays; no rebuild |
 | [Legacy OpenAI attribution variants](attribution-variants-20261114.md) | 69 own credit corrections, unchanged source/ancestry and exact-tree link aliases |
 | [Final source/recovery verification, November 13](source-refresh-20261113.md) | Current heads, complete upstream coverage, exact recovery replay; no new build/device pass |
 | [Maximum-FPS recording](max-fps-recording-20261112.md) | Codec bounds, legacy/Compose plumbing and independent blur preferences; no new defect found |

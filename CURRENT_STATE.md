@@ -1,8 +1,8 @@
 # Current state
 
-Source checkpoint: **2026-11-14**; metadata-only follow-up. [Verified source refresh](evidence/source-refresh-20261113.md).
-41 upstream routes and four recovery patches retain their source/host checks.
-[Attribution aliases](evidence/attribution-variants-20261114.md) change no code or runtime acceptance.
+Source checkpoint: **2026-11-14**. [Full source sync](evidence/source-refresh-20261114.md):
+1,265 projects synced; all 41 configured upstream routes are current and four
+recovery patches reproduce the live trees. No new Android build/device acceptance.
 
 - **Recovery:** native ROM recovery in `~/evo`; use the [sync/patch workflow](operations/framework-manifest.md).
   PIN/local ZIP acceptance is dated; password/Weaver remain unverified.
