@@ -1,8 +1,8 @@
 # Current state
 
-Source checkpoint: **2026-11-13**. [Verified source refresh](evidence/source-refresh-20261113.md).
-41 upstream routes, 44 build routes and four recovery patches pass source/host
-checks. This adds no Android build or device acceptance.
+Source checkpoint: **2026-11-14**; metadata-only follow-up. [Verified source refresh](evidence/source-refresh-20261113.md).
+41 upstream routes and four recovery patches retain their source/host checks.
+[Attribution aliases](evidence/attribution-variants-20261114.md) change no code or runtime acceptance.
 
 - **Recovery:** native ROM recovery in `~/evo`; use the [sync/patch workflow](operations/framework-manifest.md).
   PIN/local ZIP acceptance is dated; password/Weaver remain unverified.

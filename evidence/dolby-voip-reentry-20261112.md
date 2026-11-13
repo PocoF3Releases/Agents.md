@@ -36,13 +36,13 @@ The final source passed 229 host groups: 29 extracted production Engine, twenty 
 
 | Item | Identity |
 | --- | --- |
-| Hardware base | [76d0e65](https://github.com/PocoF3Releases/hardware_xiaomi/commit/76d0e652f887818e60bcb90df3c2444e3f756425) |
+| Hardware base | [76d0e65](https://github.com/PocoF3Releases/hardware_xiaomi/commit/7b6e0eef1cf59df0e899febbada4a0726676752a) |
 | Final Engine SHA-256 | `8de8bdce7ea4871213e506394342ca04aa61fc4ca2fbfb2a7a27f62833b20006` |
 | Final effect SHA-256 | `f554c1d229ba8370e79320c3ce4904ba93f62131e68cdba04579082959f57ed0` |
 | Tested XiaomiDolby APK SHA-256 | `87b3f17063260709195adb20ab3b760279a1edae8fbac6aeac08fac7181027da` |
-| Published quiet-guard commit | [58125d0](https://github.com/PocoF3Releases/hardware_xiaomi/commit/58125d0c8936fdf222d06d88d2eef219278592ce) |
-| Published enable-ACK commit | [bdbc9ab](https://github.com/PocoF3Releases/hardware_xiaomi/commit/bdbc9abd79d59029cece45986e0c32241bd7de57) |
-| Freshly verified remote tip | [`cnb` → fd1e7be](https://github.com/PocoF3Releases/hardware_xiaomi/commit/bdbc9abd79d59029cece45986e0c32241bd7de57) |
+| Published quiet-guard commit | [58125d0](https://github.com/PocoF3Releases/hardware_xiaomi/commit/72d4b07f4f47f8ba953a872cbd4501b9979c7bde) |
+| Published enable-ACK commit | [bdbc9ab](https://github.com/PocoF3Releases/hardware_xiaomi/commit/169f444073c5e78618c2e88dbc669ae2278db398) |
+| Freshly verified remote tip | [`cnb` → fd1e7be](https://github.com/PocoF3Releases/hardware_xiaomi/commit/169f444073c5e78618c2e88dbc669ae2278db398) |
 
 ## Phone acceptance and remaining limits
 
@@ -58,7 +58,7 @@ The three original Dolby APK/OAT artifacts and two preference files were restore
 
 The old 203.313-ms interval preceded DMS enqueue; its queue added only 0.289 ms to native flag application. Native mode notification alone did not close the inspected gate. The earlier capture cannot identify the individual callback, getter or scheduling delay, or establish audible voice processing.
 
-[The mode-query fix](https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296) removes two diagnostic `getMode()` calls and tests the known processing phase before another eligibility query. After fresh communication classification, redundant reads could block on AudioService's routing lock or throw before Off. The initial fresh policy query, all MEDIA/quiet/ACK checks, ownership, native errors, profiles and translations remain unchanged. No thread or polling policy was added.
+[The mode-query fix](https://github.com/PocoF3Releases/hardware_xiaomi/commit/ff5dcf1f6695817e1ea1ebd20c3ae72ba16fa311) removes two diagnostic `getMode()` calls and tests the known processing phase before another eligibility query. After fresh communication classification, redundant reads could block on AudioService's routing lock or throw before Off. The initial fresh policy query, all MEDIA/quiet/ACK checks, ownership, native errors, profiles and translations remain unchanged. No thread or polling policy was added.
 
 Ten old/new actual-source groups reproduce delayed/skipped Off and verify the correction; all 229 retained regressions and three controller scheduling groups pass. The `XiaomiDolby` module passed in 661.82 seconds with Engine SHA-256 `35a3a636c5469e34a946fd4877ef554c82a5cc6b363d68a1229ae845a6633dd2` unchanged. Tested APK SHA-256: `69ae91a066c5ddfdcf3d39b5cc5d22438efe2b32c2b215a14ed9f6a0bb4248ed`.
 

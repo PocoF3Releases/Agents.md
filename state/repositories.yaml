@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-11-13'
+observed: '2026-11-14'
 scope: Current ROM/recovery repositories and maintained tools. Historical PBRP snapshots stay in their
   topic/evidence, not this active source ledger.
 workhub:
@@ -26,11 +26,11 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: fec77fbafbd6233a3523673265fb39ca4b2ce448
+    aosp-17: 4d2d09b979b1be06a2e932efc140f338fb4ecace
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/fec77fbafbd6233a3523673265fb39ca4b2ce448
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/4d2d09b979b1be06a2e932efc140f338fb4ecace
   local_a17:
-    head: f6887c3d10355bb24299647e138a11a9e7a51830
+    head: b9cfebff54832f5f8ad3bf892ebed675591f57e2
     kind: authored_recovery_overlay
     patches: 1
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
@@ -49,9 +49,9 @@ repositories:
   - vendor/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 7fab8d519fd62c244c54057c76a32380d5ef5398
+    aosp-17: bb5c512f7ea2ebd9d60e8ecd2f2f7d05cbca9fe6
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/bb5c512f7ea2ebd9d60e8ecd2f2f7d05cbca9fe6
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
   role: build_source
@@ -59,9 +59,9 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: b96d5fbe51a6d7ec74ecb500bd24437e3e12e131
+    aosp-17: f343c2313f682a13379703bcc9b977249fb1d22a
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b96d5fbe51a6d7ec74ecb500bd24437e3e12e131
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f343c2313f682a13379703bcc9b977249fb1d22a
   local_a17: matches_selected_ref
   observation: 'Canonical base: LineageOS/android_kernel_qcom_sm8250 lineage-20; current source identity
     is separate from dated device acceptance.'
@@ -87,9 +87,9 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: c40d1866051a6e23f9884cba036ed70f196e5296
+    cnb: ff5dcf1f6695817e1ea1ebd20c3ae72ba16fa311
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/ff5dcf1f6695817e1ea1ebd20c3ae72ba16fa311
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
@@ -130,9 +130,9 @@ repositories:
   - hardware/qcom-caf/sm8250/display
   selected_ref: cnb
   refs:
-    cnb: 50389bd776702a3a94d46be3027ce4e5a7c3b572
+    cnb: c5fc61a3b10702339c09310fd66562e6eaf19514
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/50389bd776702a3a94d46be3027ce4e5a7c3b572
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/c5fc61a3b10702339c09310fd66562e6eaf19514
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio
   role: build_source
@@ -140,9 +140,9 @@ repositories:
   - hardware/qcom-caf/sm8250/audio
   selected_ref: cnb
   refs:
-    cnb: bc6c2d90be389b1ea9811c8a4016a7d2cfda9489
+    cnb: 07446086af17e1edc1e6595f9bca27c460e2e55d
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/bc6c2d90be389b1ea9811c8a4016a7d2cfda9489
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/07446086af17e1edc1e6595f9bca27c460e2e55d
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media
   role: build_source
@@ -150,9 +150,9 @@ repositories:
   - hardware/qcom-caf/sm8250/media
   selected_ref: cnb
   refs:
-    cnb: 6773462f3e744462299c6ad9d72564fcceb56a0c
+    cnb: 07154d83a16dcfb3013d27b2ff70c50196e8c515
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/6773462f3e744462299c6ad9d72564fcceb56a0c
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/07154d83a16dcfb3013d27b2ff70c50196e8c515
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/android_hardware_nxp_nfc
   role: build_source
@@ -524,3 +524,4 @@ verification:
   published_heads_checked: 105
   canonical_routes_zero_behind: 41
   build_routes_checked: 44
+  metadata_followup: evidence/attribution-variants-20261114.md

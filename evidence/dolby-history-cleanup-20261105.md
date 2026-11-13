@@ -38,7 +38,7 @@ effect UUID, active HAL, thermal, security or kernel behavior was retuned.
 ## Current sources
 
 - [device/xiaomi/sm8250-common — 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745).
-- [vendor/xiaomi/sm8250-common — a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398).
+- [vendor/xiaomi/sm8250-common — a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/bb5c512f7ea2ebd9d60e8ecd2f2f7d05cbca9fe6).
 
 The [old-to-new map](dolby-history-map-20261105.csv) records provenance, not new
 test identities. Dropped rows map to the preceding retained state. Private

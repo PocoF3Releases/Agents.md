@@ -46,8 +46,8 @@ remaining contribution is reassigned to another author.
 | Repository path | Commits before → after | Current public source |
 | --- | --- | --- |
 | device/xiaomi/sm8250-common | 243 → 234 | [2838130a6fa0](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745) |
-| vendor/xiaomi/sm8250-common | 28 → 26 | [7fab8d519fd6](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398) |
-| device/xiaomi/alioth | 7 → 5 | [694d770254f8](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/694d770254f8233d7c75752a228852dc702acfa9) |
+| vendor/xiaomi/sm8250-common | 28 → 26 | [7fab8d519fd6](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/bb5c512f7ea2ebd9d60e8ecd2f2f7d05cbca9fe6) |
+| device/xiaomi/alioth | 7 → 5 | [694d770254f8](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/1a91378d4f962a4301a44454cb154346df9b0342) |
 | vendor/xiaomi/alioth | 5 → 3 | [ac728e26803b](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/ac728e26803b75edbaacd5fcf4f8e6922102ca7d) |
 | device/xiaomi/camera | 15 → 11 | [065f4af3e771](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/065f4af3e7716981e6fc0bf5e13e73f7983cfba0) |
 | vendor/xiaomi/camera | 7 → 6 | [61876c6e6953](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/61876c6e6953476e20bd8b6b27a07d9da9a7c4a3) |

@@ -1,5 +1,5 @@
 schema_version: 1
-last_refreshed: '2026-11-13'
+last_refreshed: '2026-11-14'
 entrypoints:
   rules: AGENTS.md
   current_state: CURRENT_STATE.md

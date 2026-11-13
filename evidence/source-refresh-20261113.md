@@ -20,9 +20,9 @@ needed. Historical branches remain snapshots, not current intake targets.
 | --- | --- |
 | Framework base | [5dec056e50a8](https://github.com/PocoF3Releases/frameworks_base/commit/5dec056e50a89199c4320161f197e6a856607509) |
 | Framework AV | [6f165815e06c](https://github.com/PocoF3Releases/frameworks_av/commit/6f165815e06ce56875cc41e22d499047db48f691) |
-| Xiaomi hardware | [c40d1866051a](https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296) |
+| Xiaomi hardware | [c40d1866051a](https://github.com/PocoF3Releases/hardware_xiaomi/commit/ff5dcf1f6695817e1ea1ebd20c3ae72ba16fa311) |
 | Common device / Parts | [b23466b7ef0f](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b23466b7ef0ff905e474e2ea61daaf57b3cdd2d6) |
-| Redline kernel | [b96d5fbe51a6](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b96d5fbe51a6d7ec74ecb500bd24437e3e12e131) |
+| Redline kernel | [b96d5fbe51a6](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/f343c2313f682a13379703bcc9b977249fb1d22a) |
 | Native recovery | [e6fae205afde](https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e6fae205afde9cd02e14f81fdfd87f8b0c589d8f) |
 | Recovery bundle | [c407ff85e340](https://github.com/PocoF3Releases-Recovery/local_manifests/commit/c407ff85e340e2d9c0b2765d76dd46a563261d80) |
 

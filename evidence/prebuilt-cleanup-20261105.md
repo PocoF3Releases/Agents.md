@@ -36,7 +36,7 @@ Hexagon DSP binaries are not ARM32 pruning candidates.
 | device/xiaomi/sm8250-common | [2838130a6fa0](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745) |
 | vendor/xiaomi/alioth | [ac728e26803b](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/ac728e26803b75edbaacd5fcf4f8e6922102ca7d) |
 | vendor/xiaomi/camera | [61876c6e6953](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/61876c6e6953476e20bd8b6b27a07d9da9a7c4a3) |
-| vendor/xiaomi/sm8250-common | [7fab8d519fd6](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398) |
+| vendor/xiaomi/sm8250-common | [7fab8d519fd6](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/bb5c512f7ea2ebd9d60e8ecd2f2f7d05cbca9fe6) |
 
 The two device checkouts retain their unchanged authored recovery overlays.
 Recovery patches and manifests require no content changes; new active identities

@@ -64,6 +64,8 @@ historical build/device source identities rather than transferring acceptance
 to the new base. Captured uname/build/version strings and raw log blocks
 retain their observed bytes; commit-link aliases are separate from runtime
 evidence. Untouched upstream imports keep their identity.
+Audit older Codex/OpenAI/ChatGPT credit spellings as well as the current tag;
+normalize only verified fork-local OpenAI credits, never blanket upstream history.
 Other clients disclose their actual assistance rather than claiming this model.
 The [November 13 migration](../evidence/assisted-by-migration-20261113.md) supersedes
 the historical Codex co-author convention and GitHub co-author recognition check.

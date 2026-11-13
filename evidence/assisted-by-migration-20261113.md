@@ -48,3 +48,11 @@ read-back. Existing local work is preserved; parked investigations stay parked.
 Observed kernel-version literals remain `4.19.325-Redline-2f2467b-cip136` and
 `4.19.325-Redline-cd1f8df-cip136` in their original dated evidence. No renamed
 commit alias is substituted into a version string from a tested binary.
+
+## Older OpenAI aliases
+
+The [November 14 follow-up](attribution-variants-20261114.md) corrects older
+Codex/OpenAI and own ChatGPT co-author spellings outside the first filter.
+Only verified fork-local credits change; canonical imports and other clients'
+identities remain intact. Commit-link aliases have equal complete trees and do
+not rewrite captured runtime strings or historical acceptance.

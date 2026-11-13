@@ -101,7 +101,7 @@ author dates and unrelated imported messages were preserved.
 | android_hardware_interfaces (recovery) | `0b8a8b3905ebc98f87004f23a18d245e516c8f8f` |
 | frameworks_av | `1e7787289cecdb5b029edfb6829ccee3965b6038` |
 | hardware_qcom-caf_sm8250_audio | `e5644bea36605d39bc1412f6b1d8f4c5ec029cc1` |
-| hardware_qcom-caf_sm8250_display | [50389bd77670](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/50389bd776702a3a94d46be3027ce4e5a7c3b572) |
+| hardware_qcom-caf_sm8250_display | [50389bd77670](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/c5fc61a3b10702339c09310fd66562e6eaf19514) |
 | hardware_qcom-caf_sm8250_media | `60f362cedc690153ac5fb5824327fec66361d598` |
 | android_hardware_interfaces | `810a827dcdfb8e7c7cdfda5b1d1e659bab5aa010` |
 

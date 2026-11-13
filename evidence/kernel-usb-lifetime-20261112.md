@@ -8,8 +8,8 @@ routing belongs in [the source ledger](../state/repositories.yaml).
 within the explicit scope below. Two independent kernel-only follow-ups to
 [the rebase checkpoint](kernel-final-review-20261112.md):
 
-- [PS5169 bfc6165](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2b2c6498c4a09480b73677b8c000e8ccf0f6f081): initialize work/hardware before publication; match callbacks to the live published supply under one mutex; withdraw access before draining work. Return the real pinctrl error and remove an unowned GPIO free.
-- [USBPD cd1f8df](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e49a4518e6d191246e09ee043742f748823b0bd8): stop every enqueue/rearm producer, wait admitted callers, drain system work/timer/private queue, then close PHY callbacks and release messages, Type-C objects and supply references.
+- [PS5169 bfc6165](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e171738285a6cb4242f083691f4ca5f3f6ae7e7a): initialize work/hardware before publication; match callbacks to the live published supply under one mutex; withdraw access before draining work. Return the real pinctrl error and remove an unowned GPIO free.
+- [USBPD cd1f8df](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a20721900680bee0a8df7732cef2251325e549bf): stop every enqueue/rearm producer, wait admitted callers, drain system work/timer/private queue, then close PHY callbacks and release messages, Type-C objects and supply references.
 
 Published on `PocoF3Releases/kernel_xiaomi_sm8250:aosp-17`. The previous human
 commits and authorship are unchanged; these are ordinary fast-forward follow-ups.

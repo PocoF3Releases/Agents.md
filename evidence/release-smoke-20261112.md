@@ -30,8 +30,8 @@ match their output files. Kernel reports `4.19.325-Redline-cd1f8df-cip136`, buil
 Source references: framework (historical `53e0061d824e3c6c571aebe95fb7bfa83258b3e6`),
 AudioFlinger (historical `6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07`),
 Parts (historical `187176d5e9a49369bce467c6cd62f58d8078e6d4`),
-[Dolby](https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296),
-[kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e49a4518e6d191246e09ee043742f748823b0bd8).
+[Dolby](https://github.com/PocoF3Releases/hardware_xiaomi/commit/ff5dcf1f6695817e1ea1ebd20c3ae72ba16fa311),
+[kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a20721900680bee0a8df7732cef2251325e549bf).
 The effective framework checkout additionally contains the existing local recovery
 overlay; its presence is not a new recovery runtime test.
 

@@ -12,7 +12,7 @@ candidate and paused hardware investigations remain excluded.
 
 ## Corrected implementations
 
-- [Qualcomm media range feature](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/6773462f3e744462299c6ad9d72564fcceb56a0c):
+- [Qualcomm media range feature](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/07154d83a16dcfb3013d27b2ff70c50196e8c515):
   encoder surface comparison now receives the same effective full-range flag as
   surface creation. Equal-size limited-to-full setup could miss reconfiguration;
   stable full-range setup could request unnecessary recreation. This branch is

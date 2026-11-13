@@ -51,7 +51,7 @@ this removal is a product choice, not a demonstrated bootloop fix.
 
 ## Current public commits
 
-- [device/xiaomi/alioth: f7a82eadfef6](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/694d770254f8233d7c75752a228852dc702acfa9).
+- [device/xiaomi/alioth: f7a82eadfef6](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/1a91378d4f962a4301a44454cb154346df9b0342).
 - [device/xiaomi/sm8250-common: 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745).
 - [build/make: 862350971ca3](https://github.com/PocoF3Releases-Recovery/android_build/commit/0acbb8a58c0514bb4c64e754037bd5936db7cd96).
 
