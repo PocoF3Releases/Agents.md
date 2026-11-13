@@ -1,5 +1,9 @@
 # Alioth Dolby and MiSound feature ownership — 2026-11-12
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 **Checkpoint:** the MiSound, Dolby and opt-in AudioFlinger scene-preservation changes are published, with host/build and bounded temporary phone validation. All original native/app artifacts, preference bytes and temporary test settings were restored. Physical headphone, acoustic and DSP-execution acceptance remain unverified. Historical results keep their original [audio](../memory/dolby-audio.md) and [validation](../state/validation.md#v-dolby) scope.
 
 ## Ownership and processing
@@ -17,25 +21,25 @@ Dolby and MiSound stay independently switchable. Saved requests remain distinct 
 
 ## Published MiSound changes
 
-The common-device `aosp-17` series ends at [a1c89c7](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/a1c89c7569931a157a262b416602fc8116263ac4): five independent implementation commits followed by a separate translation commit.
+The common-device `aosp-17` series ends at [cf641e3](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/cf641e33d6a4042ab23cd80e4757a6eae8c82c8d): five independent implementation commits followed by a separate translation commit.
 
 | Change | Behavior and source |
 | --- | --- |
-| Shared choice dialog | Stops accepting actions when its enabled gate changes: [a84cfca](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/a84cfca6cac436e9783826d6ef73a298e2757728). |
-| Headphone 3D | Normalized `SET_PARAM 20`, saved request, default Off. Requires exactly one eligible wired, opted-in USB or explicitly opted-in A2DP route. Unknown/multiple routes or observer failure fail closed. Legacy spatial bit `0x2` is required; supported platform Spatializer suppresses it even when inactive: [a0cd651](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/a0cd6515c60b0b2fc1b2d16eff5b88cc8d1cb1fa). |
-| Factory volume presets | Stock examples 1–3 use `SET_PARAM 14` before normalized enable 9, with ear-adjustment capability and headphone-route gates; default Off. Labels are Under 30, 30–60 and Over 60. No personal gains, hearing diagnosis or calibration are synthesized. The selector uses the existing headphone-choice icon: [1a5f0f1](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/1a5f0f1e2e725860baafea4639e2d2a0d1947ef7). |
-| Scene recovery | Native music-mode activation can reset scene 15 to Auto while requested-enable is false. Replay the saved scene after `SET_PARAM 4` and before enable, including startup and communication resume: [2297767](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2297767575935aa1e07a7f861d27a784ad1ea703). |
-| Existing HiFi ordering | Send HAL routing before FX8 rereads the changed property, inside the existing support gate. Alioth HiFi remains disabled: [200e78f](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/200e78f1079d9c611435953361e67ff3e10ef498). |
+| Shared choice dialog | Stops accepting actions when its enabled gate changes: [db0bcef](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db0bceff240e72c288126fd3c5f11e99f8ce760d). |
+| Headphone 3D | Normalized `SET_PARAM 20`, saved request, default Off. Requires exactly one eligible wired, opted-in USB or explicitly opted-in A2DP route. Unknown/multiple routes or observer failure fail closed. Legacy spatial bit `0x2` is required; supported platform Spatializer suppresses it even when inactive: [0de4f1c](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de4f1c37a49f464c87d5b7276285df5fc9c2826). |
+| Factory volume presets | Stock examples 1–3 use `SET_PARAM 14` before normalized enable 9, with ear-adjustment capability and headphone-route gates; default Off. Labels are Under 30, 30–60 and Over 60. No personal gains, hearing diagnosis or calibration are synthesized. The selector uses the existing headphone-choice icon: [3a2fcba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3a2fcba624a07a42472e363b40ebc3faba9e1e56). |
+| Scene recovery | Native music-mode activation can reset scene 15 to Auto while requested-enable is false. Replay the saved scene after `SET_PARAM 4` and before enable, including startup and communication resume: [0edd7eb](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0edd7eb3a4f8919411cd85803b0dde5ae7efa427). |
+| Existing HiFi ordering | Send HAL routing before FX8 rereads the changed property, inside the existing support gate. Alioth HiFi remains disabled: [85f3a38](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/85f3a386b3a7e67ef36b0882f1802061785ed0e6). |
 
 Optional 3D/ear flags clear on master Off, communication bypass, ineligible routes and owned teardown while saved requests survive. Lost control causes no foreign writes. Failed optional changes retain accepted preferences; observer retries do not consume the core owner's contention budget. Route eligibility reflects policy-selected media routing, not attribution of every playing track.
 
-Alioth [40b03d6](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/40b03d69edcb2db57cbdd91e455cc3ff7c8239b4) advertises only the proven legacy 3D bit `0x2` (value 2) and stock Bluetooth capability. It does not copy unknown stock bits `0x1`/`0x4`; platform spatializer support stays false. Existing ear-adjustment/USB gates remain. Two common-device and one alioth recovery overlays remain separate local commits with original authors/messages, excluded from the published audio series.
+Alioth [cba6d13](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/cba6d132c36a5bcba6d465a3553b4e6a200a9836) advertises only the proven legacy 3D bit `0x2` (value 2) and stock Bluetooth capability. It does not copy unknown stock bits `0x1`/`0x4`; platform spatializer support stays false. Existing ear-adjustment/USB gates remain. Two common-device and one alioth recovery overlays remain separate local commits with original authors/messages, excluded from the published audio series.
 
 The separate Parts translation commit adds 792 strings in 88 locale resource sets; nine regional variants inherit Android fallback. Structural checks and two independent AI wording reviews passed after one Frisian correction. Native-speaker signoff is unavailable.
 
 ## Published Dolby queued-readback correction
 
-The `hardware/xiaomi:cnb` series was fast-forward published at [cb7ab6c](https://github.com/PocoF3Releases/hardware_xiaomi/commit/cb7ab6c33b4bf96fbc0493602d08ac9e102ca621), from `ffd58fa1453077fbcf25321da321979d490d9a9e`. Its five commits are four implementation topics—Bass preservation, queued confirmation, dialogue range and GEQ units—followed by the separate 78-locale gain-format update. Fresh remote-tip verification matched the published identity.
+The `hardware/xiaomi:cnb` series was fast-forward published at [76d0e65](https://github.com/PocoF3Releases/hardware_xiaomi/commit/76d0e652f887818e60bcb90df3c2444e3f756425), from `ffd58fa1453077fbcf25321da321979d490d9a9e`. Its five commits are four implementation topics—Bass preservation, queued confirmation, dialogue range and GEQ units—followed by the separate 78-locale gain-format update. Fresh remote-tip verification matched the published identity.
 
 - **Bass/Virtual Bass:** DMS copies public Bass 111 into Virtual Bass 112. The setter reapplies only an explicitly saved Virtual Bass override and checks both readbacks before saving Bass. No override retains OEM coupling; failure invalidates the applied-profile cache for recovery.
 - **Dialogue:** setter, restore and UI bounds become 0–16, matching the DMS/native bounds; factory defaults stay unchanged.
@@ -79,7 +83,7 @@ Personal SoundID `SET_PARAM 23/24` needs a real matching headset/profile, valida
 
 Ordinary media output changes can move an active output-mix effect chain. Its synthetic DISABLE resets legacy MiSound's selected scene to Auto even though the saved request remains Music. Frameworks/av [6b8c30f](https://github.com/PocoF3Releases/frameworks_av/commit/6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07) preserves the exact opted-in, session-zero, offload-capable MiSound type/implementation during that move. It omits only the native synthetic DISABLE, retaining status checks, volume handling and HAL detachment. State is rechecked under the effect mutex; ordinary Off, stopping and release still disable. Preservation stays in the current move's local disposition, with rollback/terminal-failure cleanup, instead of arming stock SET22's uncancellable one-shot flag.
 
-Alioth [3af8173](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/3af817361852077b31944a37fe030608382eded3) enables `ro.vendor.audio.misound.preserve_on_move`; other devices default Off. Both pushes were fast-forward and fresh remote refs matched. Alioth's original authored 120-Hz recovery overlay was reparented locally, preserving author, committer, message and patch bytes; it was not published to the ROM branch.
+Alioth [fec77fb](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/fec77fbafbd6233a3523673265fb39ca4b2ce448) enables `ro.vendor.audio.misound.preserve_on_move`; other devices default Off. Both pushes were fast-forward and fresh remote refs matched. Alioth's original authored 120-Hz recovery overlay was reparented locally, preserving author, committer, message and patch bytes; it was not published to the ROM branch.
 
 The actual-source C++ sanitizer fixture passed 53/53 cases, covering state/Off races, rollback and terminal cleanup; the old implementation fails nineteen fixture expectations, not nineteen independent production defects. Seven frozen source files match the final commit. The `audioserver`/unchanged-Parts build passed in 249.9 seconds, producing tested audioserver SHA-256 `edefe5b5558d650de77ae3e0d0b0488b33c5772129f290adae62f4697bb6760f` from frozen patch SHA-256 `ed65c2d581d135ab56fed271c55928909f81f559cb604dfbd33748563cecaf6e`. Publication metadata does not represent another build.
 

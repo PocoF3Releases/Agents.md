@@ -1,5 +1,9 @@
 # Mini GMS and snapshot rollback — November 5, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 The maintainer selected the ROM's existing mini preset, retaining full Google
 Search and Pixel Launcher rather than pico's separate Google Go application.
 No custom GMS bundle or new GMS fork was introduced.
@@ -47,9 +51,9 @@ this removal is a product choice, not a demonstrated bootloop fix.
 
 ## Current public commits
 
-- [device/xiaomi/alioth: f7a82eadfef6](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f7a82eadfef6e78566ac550a167a26d11a4f1ff6).
-- [device/xiaomi/sm8250-common: 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125).
-- [build/make: 862350971ca3](https://github.com/PocoF3Releases-Recovery/android_build/commit/862350971ca32fdcfbb6f032487d9531ab94e80f).
+- [device/xiaomi/alioth: f7a82eadfef6](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/694d770254f8233d7c75752a228852dc702acfa9).
+- [device/xiaomi/sm8250-common: 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745).
+- [build/make: 862350971ca3](https://github.com/PocoF3Releases-Recovery/android_build/commit/0acbb8a58c0514bb4c64e754037bd5936db7cd96).
 
 ## Verification and limits
 

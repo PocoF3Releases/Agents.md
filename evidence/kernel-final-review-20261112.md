@@ -1,7 +1,11 @@
 # Kernel rebase and history review — November 12, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 `source-checked`, `host-tested`, `build-tested`, `device-tested` within the scopes below.
-Published [aosp-17 2f2467b](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2f2467b329845f370639f3498433b4f70475ce97), rebased over the current
+Published [aosp-17 2f2467b](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e91f4c2803c1a931f070d55c4c82148355662991), rebased over the current
 [LineageOS Qualcomm SM8250 base](https://github.com/LineageOS/android_kernel_qcom_sm8250/commit/e3f6acd662618dabb3a7a953e48743019badc373)
 with **46 new upstream commits**. System, device-tree, vendor and recovery sources were not modified.
 

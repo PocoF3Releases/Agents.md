@@ -45,23 +45,29 @@ for the task; copied notes do not synchronize account memory.
 ## Git and privacy
 
 Preserve unrelated work and upstream authorship. Use a component-scoped subject,
-factual body and actual validation. Codex edits use this trailer:
+factual body and actual validation. Codex-assisted changes use exactly one
+user-selected disclosure trailer:
 
 ```text
-Co-authored-by: codex <noreply@openai.com>
+Assisted-by: LLM - GPT-6.1 Sol Max
 ```
 
-Keep this Codex trailer last: the commit message must end at `>` with no
-following whitespace or newline. [Cleanup evidence](../evidence/coauthor-cleanup-20261031.md).
-Verify raw `git cat-file commit` bytes; Git
-commit/am tools may append a newline automatically. Preserve other trailers.
-Apply this convention to fork-local commits only. Keep shared upstream commit
-identities intact, including valid upstream trailers with a terminal newline.
-Verify GitHub `Commit.authors` recognition and zero-behind ancestry after cleanup.
-
-Other clients must retain their actual attribution rather than claiming Codex.
-Use public project identity/noreply attribution; no invented model identity or
-AI trailers on untouched upstream imports. Follow requested commit/push scope and
+Keep the disclosure in the final trailer block with no trailing spaces or blank
+paragraphs; one terminal LF is conventional. Preserve human authors, dates,
+co-authors, DCO sign-offs and other trailers. Do not list an LLM as a human
+co-author or invent a human sign-off. Apply attribution changes only within the
+authorized fork-local history. Resolve canonical upstream refs before rewriting;
+every upstream ancestor keeps its original object ID and message, including
+previously merged AI-assisted work. Validate each retained feature patch and
+canonical ancestry separately. A source rebase changes the tested tree: preserve
+historical build/device source identities rather than transferring acceptance
+to the new base. Captured uname/build/version strings and raw log blocks
+retain their observed bytes; commit-link aliases are separate from runtime
+evidence. Untouched upstream imports keep their identity.
+Other clients disclose their actual assistance rather than claiming this model.
+The [November 13 migration](../evidence/assisted-by-migration-20261113.md) supersedes
+the historical Codex co-author convention and GitHub co-author recognition check.
+Follow requested commit/push scope and
 verify the remote ref. Authorized history rewrites require a recovery copy and
 explicit expected-head `--force-with-lease`; saved heads alone justify no rewrite.
 

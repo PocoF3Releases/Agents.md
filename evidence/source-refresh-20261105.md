@@ -1,5 +1,9 @@
 # ROM and maintained-fork refresh — 2026-11-05
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 `source-checked`; documentation host checks are scoped below. No Android rebuild
 or new device acceptance was performed.
 
@@ -19,12 +23,12 @@ allowed upstream heads were checked again immediately before publication.
 
 | Repository | Branch | Published source |
 | --- | --- | --- |
-| [PocoF3Releases-Recovery/android_hardware_interfaces](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/7f3788f397c18d7fd36b797112fc531b5229066e) | `cnb` | `7f3788f397c1` |
+| [PocoF3Releases-Recovery/android_hardware_interfaces](https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0ba9bb69f66733f533baaafd0b417f61be63ab51) | `cnb` | `7f3788f397c1` |
 | [PocoF3Releases/android_hardware_nxp_nfc](https://github.com/PocoF3Releases/android_hardware_nxp_nfc/commit/0b8bf91ca3a41a207ccb7429a553dac771433ca2) | `lineage-24.0` | `0b8bf91ca3a4` |
 | [PocoF3Releases/frameworks_av](https://github.com/PocoF3Releases/frameworks_av/commit/406810da81b7a68d1f21e197d166dae67e6f0e69) | `cnb` | `406810da81b7` |
 | [PocoF3Releases/frameworks_base](https://github.com/PocoF3Releases/frameworks_base/commit/ef5eed4877fbab5038ca77291c5b917bc8112ce9) | `cnb` | `ef5eed4877fb` |
 | [PocoF3Releases/hardware_xiaomi](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336) | `cnb` | `6762a5238e69` |
-| [PocoF3Releases/android_hardware_interfaces](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/580860c5653153f13511b8ed46b7db9a02ca5490) | `cnb` | `580860c56531` |
+| [PocoF3Releases/android_hardware_interfaces](https://github.com/PocoF3Releases/android_hardware_interfaces/commit/f7a4ef196d0a5aa20e068630561aabbe85af7acb) | `cnb` | `580860c56531` |
 
 Five stacks retain all 101 feature commits with equivalent stable patch IDs and
 unchanged author names, emails, dates and full messages. Main and recovery

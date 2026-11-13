@@ -1,5 +1,9 @@
 # XiaomiParts full-topic review — November 12, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 Source-, host-, module- and temporarily device-tested. The audit covers shared UI,
 MiSound, thermal/touch, display, refresh controls, Clear Speaker, integration and
 localization. Existing icons, MiSound wordmark, saved-state contracts and legacy
@@ -12,13 +16,13 @@ correction. Earlier approved implementations remain ancestors.
 
 | Topic | Commit |
 | --- | --- |
-| Align shared controls with Settings | [333eaccc](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/333eaccc5d22f333d7c8d4b0cc027d0bc5425b1f) |
-| Sample MiSound audio mode once | [8f61c586](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/8f61c5863ad27bff79fae6f2b3ea7ad3e522107f) |
-| Keep refresh rules and tile state current | [323b02ab](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/323b02ab78d1b79925b18a89039cd0e5b2feecb2) |
-| Recover foreground thermal assignments | [8dda1e53](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/8dda1e530a9f65353dafee7b4679cfb88d4f63ba) |
-| Reconcile per-app touch tuning reliably | [1bc4bba8](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/1bc4bba8a6a3db7f84734e82bca2a1c3c07f90af) |
-| Stop speaker cleaning on ducking focus | [07d95c74](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/07d95c7473132a2b9f2f52a96fb5c8c1c4ec78fb) |
-| Correct device-control translations | [ff54c0c0](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/ff54c0c06f9219ad1cf44fed1d349cf9a7e2c69f) |
+| Align shared controls with Settings | [d57e4f78](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/d57e4f7875b6a2f052396b263d8c3be39ae9adbf) |
+| Sample MiSound audio mode once | [189b44e9](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/189b44e9df4dcdb8f9655fa04570ec8820c89b46) |
+| Keep refresh rules and tile state current | [fc53ed6a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/fc53ed6a35f6c719666e613b8622e11923d656e7) |
+| Recover foreground thermal assignments | [d5a55712](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/d5a55712416fe7619dc835e93255f8a88838df32) |
+| Reconcile per-app touch tuning reliably | [8c1ff171](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/8c1ff1712d24d7f9542ebe54462436085c4ab0c1) |
+| Stop speaker cleaning on ducking focus | [90c62b43](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/90c62b431213424a968c09c2c1ced3fc2410811e) |
+| Correct device-control translations | [b23466b7](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b23466b7ef0ff905e474e2ea61daaf57b3cdd2d6) |
 
 Two authored recovery overlays remain local, outside the ROM ref. Their patch
 bytes, author/committer metadata and messages were preserved when reparented.

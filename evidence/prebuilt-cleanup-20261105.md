@@ -1,5 +1,9 @@
 # Prebuilt closure and ABI cleanup — November 5, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 Scope: Alioth's installed proprietary payload and three matching Xiaomi
 extraction/vendor pairs. Inventory covered 1,321 Xiaomi source blobs, 3,122
 installed ELFs and 467 APKs. A missing direct reference was only a candidate,
@@ -28,11 +32,11 @@ Hexagon DSP binaries are not ARM32 pruning candidates.
 | Component | Current public commit |
 | --- | --- |
 | device/xiaomi/alioth | [7141e43eb9bf](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7141e43eb9bf6364282474f4ee45344863cd2ea7) |
-| device/xiaomi/camera | [ac369e25f015](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/ac369e25f0159c3fcc65110dfb64bb680e05a837) |
-| device/xiaomi/sm8250-common | [6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125) |
-| vendor/xiaomi/alioth | [431c6019fe1f](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/431c6019fe1f9c5c9a8741cd980462b2da1f8576) |
-| vendor/xiaomi/camera | [01543bb0d5b0](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/01543bb0d5b0e693022128ea5905ffb661e83fde) |
-| vendor/xiaomi/sm8250-common | [a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144) |
+| device/xiaomi/camera | [065f4af3e771](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/065f4af3e7716981e6fc0bf5e13e73f7983cfba0) |
+| device/xiaomi/sm8250-common | [2838130a6fa0](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745) |
+| vendor/xiaomi/alioth | [ac728e26803b](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/ac728e26803b75edbaacd5fcf4f8e6922102ca7d) |
+| vendor/xiaomi/camera | [61876c6e6953](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/61876c6e6953476e20bd8b6b27a07d9da9a7c4a3) |
+| vendor/xiaomi/sm8250-common | [7fab8d519fd6](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398) |
 
 The two device checkouts retain their unchanged authored recovery overlays.
 Recovery patches and manifests require no content changes; new active identities

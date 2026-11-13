@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-11-12'
+observed: '2026-11-13'
 scope: Maintained ROM, recovery and standalone PBRP repositories and maintainer-owned GitLab camera/tool
   sources. Source observations are not a flashed release manifest.
 workhub:
@@ -25,9 +25,9 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: ff54c0c06f9219ad1cf44fed1d349cf9a7e2c69f
+    aosp-17: b23466b7ef0ff905e474e2ea61daaf57b3cdd2d6
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/ff54c0c06f9219ad1cf44fed1d349cf9a7e2c69f
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/b23466b7ef0ff905e474e2ea61daaf57b3cdd2d6
   observation: 2026-11-12; six Parts implementation topics and a separate 90-file
     translation correction appended to the retained implementations. Tested Parts
     files match this public tip. Two unchanged authored recovery overlays remain
@@ -39,12 +39,12 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 3af817361852077b31944a37fe030608382eded3
+    aosp-17: fec77fbafbd6233a3523673265fb39ca4b2ce448
   local_a17:
-    head: c570491d670953a09de015fc33db57d010600676
+    head: f6887c3d10355bb24299647e138a11a9e7a51830
     reason: ROM public tip plus original authored 120-Hz recovery overlay
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/3af817361852077b31944a37fe030608382eded3
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/fec77fbafbd6233a3523673265fb39ca4b2ce448
   observation: 2026-11-12; stock headphone opt-ins and native MiSound output-move
     scene-preservation opt-in published. Original recovery overlay reparented locally
     with exact metadata and patch bytes. Opt-out/opt-in and bounded phone acceptance
@@ -55,10 +55,10 @@ repositories:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 431c6019fe1f9c5c9a8741cd980462b2da1f8576
+    aosp-17: ac728e26803b75edbaacd5fcf4f8e6922102ca7d
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/431c6019fe1f9c5c9a8741cd980462b2da1f8576
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/ac728e26803b75edbaacd5fcf4f8e6922102ca7d
   observation: 2026-11-05; final implementation history consolidated with exact
     source/payload identity and preserved attribution; scope and limits in
     evidence/final-implementations-20261105.md.
@@ -68,10 +68,10 @@ repositories:
   - vendor/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: a9a3cc77e0334842d1ffdbbc7771e4751e105144
+    aosp-17: 7fab8d519fd62c244c54057c76a32380d5ef5398
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398
   observation: 2026-11-05; final implementation history consolidated with exact
     source/payload identity and preserved attribution; scope and limits in
     evidence/final-implementations-20261105.md.
@@ -81,10 +81,10 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: cd1f8df56f66a012ad4a8b25f3d7a99cc6a5ddce
+    aosp-17: b96d5fbe51a6d7ec74ecb500bd24437e3e12e131
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cd1f8df56f66a012ad4a8b25f3d7a99cc6a5ddce
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b96d5fbe51a6d7ec74ecb500bd24437e3e12e131
   observation: 2026-11-12; two independent USBPD/PS5169 lifetime follow-ups
     after the latest Lineage rebase. Strict Alioth build, affected Alioth/Dagu
     Sparse and enforcing Alioth teardown checks pass. Dagu redriver hardware
@@ -95,16 +95,16 @@ repositories:
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: 9554477eb992b86115de4e4194953f8e30ba0c19
+    main: fbf07eeb324c0b2fd066577e29e34095d8d734e3
   commit_links:
-    main: https://github.com/PocoF3Releases/.github/commit/9554477eb992b86115de4e4194953f8e30ba0c19
+    main: https://github.com/PocoF3Releases/.github/commit/fbf07eeb324c0b2fd066577e29e34095d8d734e3
   observation: 2026-10-24; source identity checked.
 - repository: https://github.com/PocoF3Releases/references_code
   role: reference
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: 81f4ad1ca8e32f251e30dd33d64b945a4a37a021
+    main: 041e06eccdbd47330cc940238e379c8a34062986
     LA.UM.8.12.r1-11900-sm8250.0: ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: 953194cfd08d028c2ccd718f5d0374531d9716d2
@@ -119,7 +119,7 @@ repositories:
     vendor_xiaomi_frameworks: 56aa2e9ed68fb484f18401ffdbae2698bc453c06
     vendor_xiaomi_proprietary: d22a991cdb0fbb1c85d361a642e5f93a1fdd9f43
   commit_links:
-    main: https://github.com/PocoF3Releases/references_code/commit/81f4ad1ca8e32f251e30dd33d64b945a4a37a021
+    main: https://github.com/PocoF3Releases/references_code/commit/041e06eccdbd47330cc940238e379c8a34062986
     LA.UM.8.12.r1-11900-sm8250.0: https://github.com/PocoF3Releases/references_code/commit/ddf563c1d9ebfbc92452d7306a87e2c18ee40e7c
     android13-miui14-cn_beta: https://github.com/PocoF3Releases/references_code/commit/d301665e4c8d442a98cdc636c9f12e260bd1de0b
     art: https://github.com/PocoF3Releases/references_code/commit/953194cfd08d028c2ccd718f5d0374531d9716d2
@@ -141,10 +141,10 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: b533e52319d6a3ad59a85e61999fc4f6aa2a66a0
+    cnb: c40d1866051a6e23f9884cba036ed70f196e5296
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/b533e52319d6a3ad59a85e61999fc4f6aa2a66a0
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296
   observation: 2026-11-12; Dolby queued-enable, quiet-window and redundant mode-query
     fixes published. Host/module/temporary phone checks passed, preserving settings;
     exact scopes and the unproven general latency gain are recorded in
@@ -155,10 +155,10 @@ repositories:
   - device/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-17: ac369e25f0159c3fcc65110dfb64bb680e05a837
+    aosp-17: 065f4af3e7716981e6fc0bf5e13e73f7983cfba0
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_camera/commit/ac369e25f0159c3fcc65110dfb64bb680e05a837
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_camera/commit/065f4af3e7716981e6fc0bf5e13e73f7983cfba0
   observation: 2026-11-05; final implementation history consolidated with exact
     source/payload identity and preserved attribution; scope and limits in
     evidence/final-implementations-20261105.md.
@@ -168,29 +168,27 @@ repositories:
   - frameworks/av
   selected_ref: cnb
   refs:
-    cnb: 6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07
+    cnb: 6f165815e06ce56875cc41e22d499047db48f691
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/6b8c30f24b18f50bc28f6d9f24f98c33ec6e7e07
-  observation: 2026-11-12; opt-in MiSound scene preservation during output-mix
-    migration published. Seven final source files match the frozen module/runtime-tested
-    source; sanitizer, opt-out/opt-in, explicit Off and process/service-restart scope
-    are in evidence/alioth-audio-features-20261112.md. Original phone artifacts restored.
+    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/6f165815e06ce56875cc41e22d499047db48f691
+  observation: 2026-11-13; canonical EvoX cnb restored with six identical
+    feature patches and one new upstream Bluetooth codec fix. Earlier audio
+    tests retain their frozen source/artifact scope; this refreshed branch
+    has not been rebuilt or device-tested. See evidence/assisted-by-migration-20261113.md.
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
   source_tree_paths:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: 53e0061d824e3c6c571aebe95fb7bfa83258b3e6
+    cnb: 5dec056e50a89199c4320161f197e6a856607509
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/53e0061d824e3c6c571aebe95fb7bfa83258b3e6
-  observation: 2026-11-12; latest EvoX base and eleven feature commits retained; recording
-    blur lifecycle/restoration rechecked; evidence/source-refresh-20261112.md.
-    No Android build or device acceptance claimed for this source refresh.
-  local_a17:
-    head: 332ee2f9af887d030552ddb34a70dc364a416783
-    reason: Updated ROM public base plus authored recovery overlay
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/5dec056e50a89199c4320161f197e6a856607509
+  observation: 2026-11-13; canonical EvoX cnb restored; twelve upstream
+    commits and eleven unchanged feature patches integrated. Authored recovery
+    overlay replay is verified. No new Android build or device acceptance.
+    See evidence/assisted-by-migration-20261113.md.
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
   role: build_source
   source_tree_paths:
@@ -222,10 +220,10 @@ repositories:
   - hardware/qcom-caf/sm8250/media
   selected_ref: cnb
   refs:
-    cnb: d6b53be26bc48dab8ca703bfb0bdadc9d6c24517
+    cnb: 6773462f3e744462299c6ad9d72564fcceb56a0c
   local_a17: matches_selected_ref
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/d6b53be26bc48dab8ca703bfb0bdadc9d6c24517
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/6773462f3e744462299c6ad9d72564fcceb56a0c
   observation: 2026-11-05; effective encoder range flags corrected within the existing
     feature; original author/lifetime fix retained. Host and target build
     checks pass; no new device deployment; evidence/repo-review-20261105.md.
@@ -247,10 +245,10 @@ repositories:
   - vendor/qcom/opensource/usb
   selected_ref: aosp-17
   refs:
-    aosp-17: 724b2926d85c540652954a821e31a738fb6a0788
+    aosp-17: c16fd5cafb0e86917b3c0f15668ba2c88e2e6e8d
   local_a17: matches_selected_ref
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/724b2926d85c540652954a821e31a738fb6a0788
+    aosp-17: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/c16fd5cafb0e86917b3c0f15668ba2c88e2e6e8d
   observation: 2026-11-03; reset reconnect and initial bitmap fixes built and
     temporarily phone-tested; original HAL restored. Scope in evidence/usb-recovery-20261103.md.
 - repository: https://gitlab.com/johnmart19/vendor_xiaomi_camera
@@ -259,13 +257,13 @@ repositories:
   - vendor/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-17: 01543bb0d5b0e693022128ea5905ffb661e83fde
+    aosp-17: 61876c6e6953476e20bd8b6b27a07d9da9a7c4a3
   local_a17: matches_selected_ref
   observation: 2026-11-05; final implementation history consolidated with exact
     source/payload identity and preserved attribution; scope and limits in
     evidence/final-implementations-20261105.md.
   commit_links:
-    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/01543bb0d5b0e693022128ea5905ffb661e83fde
+    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/61876c6e6953476e20bd8b6b27a07d9da9a7c4a3
 - repository: https://github.com/johnmart19/repoindex
   role: tool
   source_tree_paths: []
@@ -282,10 +280,10 @@ repositories:
   - external/tinycompress
   selected_ref: lineage-24.0
   refs:
-    lineage-24.0: f55142aedd6392c667b5f9b48880641867100488
+    lineage-24.0: 1d4f503785d13fd5cd081f8bad8a34fab9ccc18b
   local_a17: matches_selected_ref
   commit_links:
-    lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/f55142aedd6392c667b5f9b48880641867100488
+    lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/1d4f503785d13fd5cd081f8bad8a34fab9ccc18b
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
 - repository: https://github.com/pbrp-alioth/android_bootable_recovery
@@ -334,9 +332,9 @@ repositories:
   - bootable/recovery
   selected_ref: cnb
   refs:
-    cnb: b7d818a1df52537646a73963885106c5a9e09505
+    cnb: e6fae205afde9cd02e14f81fdfd87f8b0c589d8f
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/b7d818a1df52537646a73963885106c5a9e09505
+    cnb: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/e6fae205afde9cd02e14f81fdfd87f8b0c589d8f
   local_a17: matches_selected_ref
   observation: 2026-10-31; rebased custom changes onto current selected upstream;
     authorship retained and public tip verified. Build-graph and host checks in
@@ -347,9 +345,9 @@ repositories:
   - build/make
   selected_ref: cnb
   refs:
-    cnb: 862350971ca32fdcfbb6f032487d9531ab94e80f
+    cnb: 0acbb8a58c0514bb4c64e754037bd5936db7cd96
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_build/commit/862350971ca32fdcfbb6f032487d9531ab94e80f
+    cnb: https://github.com/PocoF3Releases-Recovery/android_build/commit/0acbb8a58c0514bb4c64e754037bd5936db7cd96
   local_a17: matches_selected_ref
   observation: 2026-11-05; mini GMS / snapshot rollback scope in
     evidence/build-options-20261105.md; product graph passes, ROM rebuild pending.
@@ -359,9 +357,9 @@ repositories:
   - device/qcom/sepolicy_vndr/legacy-um
   selected_ref: cnb
   refs:
-    cnb: c1cb198db7a80b30a6338f48a22315ec3d5d9d31
+    cnb: bd967a44b89483ea35e5e72d712b9c1daa26ed3e
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/c1cb198db7a80b30a6338f48a22315ec3d5d9d31
+    cnb: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/bd967a44b89483ea35e5e72d712b9c1daa26ed3e
   local_a17: matches_selected_ref
   observation: 2026-10-31; rebased custom changes onto current selected upstream;
     authorship retained and public tip verified. Build-graph and host checks in
@@ -372,9 +370,9 @@ repositories:
   - external/boringssl
   selected_ref: cnb
   refs:
-    cnb: 21b7b20184c60a8653452e13c8bfcbcc1f9ea5d3
+    cnb: 5f86b8ac3dd25e4511f2369088bc54e52f412259
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_boringssl/commit/21b7b20184c60a8653452e13c8bfcbcc1f9ea5d3
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_boringssl/commit/5f86b8ac3dd25e4511f2369088bc54e52f412259
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -384,9 +382,9 @@ repositories:
   - external/bzip2
   selected_ref: cnb
   refs:
-    cnb: db60114736fcd25df65f0c12871bd69dd9ac31d5
+    cnb: 159033effbb66eb009e4eed0c8cddf2373af7719
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_bzip2/commit/db60114736fcd25df65f0c12871bd69dd9ac31d5
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_bzip2/commit/159033effbb66eb009e4eed0c8cddf2373af7719
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -396,9 +394,9 @@ repositories:
   - external/ntfs-3g
   selected_ref: cnb
   refs:
-    cnb: be07b5ebb1893193d1b682b50133e3ab461594c6
+    cnb: cb8dcca0e497a752ba8210bc431850489d663cb3
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_ntfs-3g/commit/be07b5ebb1893193d1b682b50133e3ab461594c6
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_ntfs-3g/commit/cb8dcca0e497a752ba8210bc431850489d663cb3
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -408,9 +406,9 @@ repositories:
   - external/rust/android-crates-io
   selected_ref: cnb
   refs:
-    cnb: 623f387a512dce4017bc792ff860f95f7825291d
+    cnb: 0d9aff42f02b9b781966cf09fcd6ea9a4a883475
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_android-crates-io/commit/623f387a512dce4017bc792ff860f95f7825291d
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_android-crates-io/commit/0d9aff42f02b9b781966cf09fcd6ea9a4a883475
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -420,9 +418,9 @@ repositories:
   - external/rust/cxx
   selected_ref: cnb
   refs:
-    cnb: e79d0f8a15f292951c7444b1842ffd0ca5ecaec8
+    cnb: dffda099d9952a7e01bcf9e0d9049be447b8f31b
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_cxx/commit/e79d0f8a15f292951c7444b1842ffd0ca5ecaec8
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_cxx/commit/dffda099d9952a7e01bcf9e0d9049be447b8f31b
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -432,9 +430,9 @@ repositories:
   - external/selinux
   selected_ref: cnb
   refs:
-    cnb: be44cb1d1b6026ce9aa9d73dbede2414c46829d0
+    cnb: fca71507a53690e1e970d51ec52d27b7d6e92e7b
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_selinux/commit/be44cb1d1b6026ce9aa9d73dbede2414c46829d0
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_selinux/commit/fca71507a53690e1e970d51ec52d27b7d6e92e7b
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -444,9 +442,9 @@ repositories:
   - external/sqlite
   selected_ref: cnb
   refs:
-    cnb: 208e726b43ce1218a07979532b5f551c1ee19772
+    cnb: 4004806b69e0a9c2363bff1571eb3f0765c2cb68
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_sqlite/commit/208e726b43ce1218a07979532b5f551c1ee19772
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_sqlite/commit/4004806b69e0a9c2363bff1571eb3f0765c2cb68
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -455,9 +453,9 @@ repositories:
   source_tree_paths: []
   selected_ref: cnb
   refs:
-    cnb: 580860c5653153f13511b8ed46b7db9a02ca5490
+    cnb: f7a4ef196d0a5aa20e068630561aabbe85af7acb
   commit_links:
-    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/580860c5653153f13511b8ed46b7db9a02ca5490
+    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/f7a4ef196d0a5aa20e068630561aabbe85af7acb
   observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
     Earlier build/device acceptance retains its recorded source and artifact scope.
   local_a17: matches_selected_ref
@@ -467,9 +465,9 @@ repositories:
   - hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: 7f3788f397c18d7fd36b797112fc531b5229066e
+    cnb: 0ba9bb69f66733f533baaafd0b417f61be63ab51
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/7f3788f397c18d7fd36b797112fc531b5229066e
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0ba9bb69f66733f533baaafd0b417f61be63ab51
   local_a17: matches_selected_ref
   observation: 2026-11-05; latest source replay in evidence/source-refresh-20261105.md.
     Earlier build/device acceptance retains its recorded source and artifact scope.
@@ -479,9 +477,9 @@ repositories:
   - hardware/libhardware_legacy
   selected_ref: cnb
   refs:
-    cnb: 2c7b16990d393165c7e347adb35f51e4f8ffd03f
+    cnb: 0b89dc8bc6091dacd2d06de66111256ea8db9a0e
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy/commit/2c7b16990d393165c7e347adb35f51e4f8ffd03f
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy/commit/0b89dc8bc6091dacd2d06de66111256ea8db9a0e
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -491,9 +489,9 @@ repositories:
   - system/apex
   selected_ref: cnb
   refs:
-    cnb: 390727e35e900478432815b6a77a510a965e2e87
+    cnb: 8e7d52d447156e9a577619caa9a4604677f07fc6
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_apex/commit/390727e35e900478432815b6a77a510a965e2e87
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_apex/commit/8e7d52d447156e9a577619caa9a4604677f07fc6
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -503,9 +501,9 @@ repositories:
   - system/extras
   selected_ref: cnb
   refs:
-    cnb: e5b2888a93a9c78779beec10b736bcdb203a553b
+    cnb: 49e4bcf8d350124d2ecd08c6873980eca58f4071
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_extras/commit/e5b2888a93a9c78779beec10b736bcdb203a553b
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_extras/commit/49e4bcf8d350124d2ecd08c6873980eca58f4071
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -515,9 +513,9 @@ repositories:
   - system/hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: c7992d2edc56c6449f3c001dcb1c96b32c5fafe4
+    cnb: 3b7c5feb9d4fedee0f391953461d192d1f181117
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hardware_interfaces/commit/c7992d2edc56c6449f3c001dcb1c96b32c5fafe4
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hardware_interfaces/commit/3b7c5feb9d4fedee0f391953461d192d1f181117
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -527,9 +525,9 @@ repositories:
   - system/hwservicemanager
   selected_ref: cnb
   refs:
-    cnb: c09958e6974cd933913978c817d9c6b1ef297ed6
+    cnb: e69c3f9288f2cd2a311ae3e9cf1422e3daf490d4
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hwservicemanager/commit/c09958e6974cd933913978c817d9c6b1ef297ed6
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hwservicemanager/commit/e69c3f9288f2cd2a311ae3e9cf1422e3daf490d4
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -539,9 +537,9 @@ repositories:
   - system/incremental_delivery
   selected_ref: cnb
   refs:
-    cnb: 1cb3901a1ca173abc0b5275d249602b26b39aae9
+    cnb: 99d803b894cc1530f87304cf77b9b025feeb470c
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_incremental_delivery/commit/1cb3901a1ca173abc0b5275d249602b26b39aae9
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_incremental_delivery/commit/99d803b894cc1530f87304cf77b9b025feeb470c
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -551,9 +549,9 @@ repositories:
   - system/keymaster
   selected_ref: cnb
   refs:
-    cnb: 35d808641acdaf3563029f4556f0ddda84ac0010
+    cnb: 5d516038ecacd2de88cba613e466c895fee8fb80
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_keymaster/commit/35d808641acdaf3563029f4556f0ddda84ac0010
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_keymaster/commit/5d516038ecacd2de88cba613e466c895fee8fb80
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -563,9 +561,9 @@ repositories:
   - system/libcppbor
   selected_ref: cnb
   refs:
-    cnb: c24c18e5e11106a0df1e78b4e76ad5854e61a21e
+    cnb: 96ed3744964e31a931c802cdc0b176d26dfa2d6d
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libcppbor/commit/c24c18e5e11106a0df1e78b4e76ad5854e61a21e
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libcppbor/commit/96ed3744964e31a931c802cdc0b176d26dfa2d6d
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -575,9 +573,9 @@ repositories:
   - system/libhidl
   selected_ref: cnb
   refs:
-    cnb: 99226330971ab596240d6efaad8dee92e457ab13
+    cnb: e1158fc1db7512c7abec728b6776b54d6e034ec2
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libhidl/commit/99226330971ab596240d6efaad8dee92e457ab13
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libhidl/commit/e1158fc1db7512c7abec728b6776b54d6e034ec2
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -587,9 +585,9 @@ repositories:
   - system/librustutils
   selected_ref: cnb
   refs:
-    cnb: 8c21d66429e42dffe7cbc56aac54796d9d6d8177
+    cnb: 680968bcbff2efba5206403668f0aece026c387e
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_librustutils/commit/8c21d66429e42dffe7cbc56aac54796d9d6d8177
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_librustutils/commit/680968bcbff2efba5206403668f0aece026c387e
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -599,9 +597,9 @@ repositories:
   - system/libvintf
   selected_ref: cnb
   refs:
-    cnb: 8f2d46d8de33be85f92084ad2bf49538207a32db
+    cnb: e65cc713cffe97433e0189cc3402a1234f84d97d
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libvintf/commit/8f2d46d8de33be85f92084ad2bf49538207a32db
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libvintf/commit/e65cc713cffe97433e0189cc3402a1234f84d97d
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -611,9 +609,9 @@ repositories:
   - system/logging
   selected_ref: cnb
   refs:
-    cnb: fd0b6192b70186fea5e65bd0f90cc5c9ba850337
+    cnb: 6efca1ea5ec3d56583e3d26c2334d9266e06b585
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_logging/commit/fd0b6192b70186fea5e65bd0f90cc5c9ba850337
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_logging/commit/6efca1ea5ec3d56583e3d26c2334d9266e06b585
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -623,9 +621,9 @@ repositories:
   - system/security
   selected_ref: cnb
   refs:
-    cnb: 3b28da961170c7192b0ff6a5d2b2f2dc3eafb5f8
+    cnb: 6c7b703a3a804a815dee22f43b2e0a7018da7bf6
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_security/commit/3b28da961170c7192b0ff6a5d2b2f2dc3eafb5f8
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_security/commit/6c7b703a3a804a815dee22f43b2e0a7018da7bf6
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -635,9 +633,9 @@ repositories:
   - system/sepolicy
   selected_ref: cnb
   refs:
-    cnb: 39adc027c66cb4b61b768ebef993c60f4c9b24ff
+    cnb: 35273169a560d934dabba4615dd81108d0b06b67
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/39adc027c66cb4b61b768ebef993c60f4c9b24ff
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/35273169a560d934dabba4615dd81108d0b06b67
   local_a17: matches_selected_ref
   observation: 2026-10-31; rebased custom changes onto current selected upstream;
     authorship retained and public tip verified. Build-graph and host checks in
@@ -648,9 +646,9 @@ repositories:
   - system/server_configurable_flags
   selected_ref: cnb
   refs:
-    cnb: e8d5ba401470fb8a982f8db775fc9747b3f22131
+    cnb: a9292a01b5d9b70bf04c350096bbf82066c820a7
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_server_configurable_flags/commit/e8d5ba401470fb8a982f8db775fc9747b3f22131
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_server_configurable_flags/commit/a9292a01b5d9b70bf04c350096bbf82066c820a7
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -660,9 +658,9 @@ repositories:
   - system/tools/aidl
   selected_ref: cnb
   refs:
-    cnb: fcbf49d306a2fa99d90c2626a8a1363799cf31a1
+    cnb: d1a01c5cfab496a8af29f04e9d766671b0279908
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_tools_aidl/commit/fcbf49d306a2fa99d90c2626a8a1363799cf31a1
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_tools_aidl/commit/d1a01c5cfab496a8af29f04e9d766671b0279908
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -672,9 +670,9 @@ repositories:
   - system/vold
   selected_ref: cnb
   refs:
-    cnb: e64e54fcee0e4172a21b38d5090e49b9c54458d9
+    cnb: b3d25274ed5690296848608e957747b0f5485645
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_vold/commit/e64e54fcee0e4172a21b38d5090e49b9c54458d9
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_vold/commit/b3d25274ed5690296848608e957747b0f5485645
   local_a17: matches_selected_ref
   observation: 2026-10-25; selected upstream checked and custom payload retained; component-build scope
     in evidence/source-refresh-20261025.md; no new device acceptance.
@@ -684,18 +682,18 @@ repositories:
   - .repo/local_manifests
   selected_ref: cnb
   refs:
-    cnb: a553a449d6a5881b6f3bda762320ba14121c3f2e
+    cnb: c407ff85e340e2d9c0b2765d76dd46a563261d80
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/local_manifests/commit/a553a449d6a5881b6f3bda762320ba14121c3f2e
+    cnb: https://github.com/PocoF3Releases-Recovery/local_manifests/commit/c407ff85e340e2d9c0b2765d76dd46a563261d80
   observation: 2026-10-24; source identity checked.
 - repository: https://github.com/PocoF3Releases-Recovery/.github
   role: organization_profile
   source_tree_paths: []
   selected_ref: main
   refs:
-    main: 269ea619b7deffe5fbc20db1a7dfa3c3b6d11b48
+    main: 0e82a02f633f7483c97a38149cb7b4399d4436a2
   commit_links:
-    main: https://github.com/PocoF3Releases-Recovery/.github/commit/269ea619b7deffe5fbc20db1a7dfa3c3b6d11b48
+    main: https://github.com/PocoF3Releases-Recovery/.github/commit/0e82a02f633f7483c97a38149cb7b4399d4436a2
   observation: 2026-10-24; source identity checked.
 workspace:
   android17_root: ~/evo

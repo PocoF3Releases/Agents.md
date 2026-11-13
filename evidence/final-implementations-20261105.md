@@ -1,5 +1,9 @@
 # Final implementation history — November 5, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 Continued the maintainer-requested review beyond the original Dolby range. Seven
 maintained device/vendor/control repositories were reviewed. Their selected
 fork histories shrink from **390 to 364 commits**, dropping 26 superseded steps.
@@ -41,12 +45,12 @@ remaining contribution is reassigned to another author.
 
 | Repository path | Commits before → after | Current public source |
 | --- | --- | --- |
-| device/xiaomi/sm8250-common | 243 → 234 | [6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125) |
-| vendor/xiaomi/sm8250-common | 28 → 26 | [a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144) |
-| device/xiaomi/alioth | 7 → 5 | [f7a82eadfef6](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/f7a82eadfef6e78566ac550a167a26d11a4f1ff6) |
-| vendor/xiaomi/alioth | 5 → 3 | [431c6019fe1f](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/431c6019fe1f9c5c9a8741cd980462b2da1f8576) |
-| device/xiaomi/camera | 15 → 11 | [ac369e25f015](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/ac369e25f0159c3fcc65110dfb64bb680e05a837) |
-| vendor/xiaomi/camera | 7 → 6 | [01543bb0d5b0](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/01543bb0d5b0e693022128ea5905ffb661e83fde) |
+| device/xiaomi/sm8250-common | 243 → 234 | [2838130a6fa0](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745) |
+| vendor/xiaomi/sm8250-common | 28 → 26 | [7fab8d519fd6](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398) |
+| device/xiaomi/alioth | 7 → 5 | [694d770254f8](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/694d770254f8233d7c75752a228852dc702acfa9) |
+| vendor/xiaomi/alioth | 5 → 3 | [ac728e26803b](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/ac728e26803b75edbaacd5fcf4f8e6922102ca7d) |
+| device/xiaomi/camera | 15 → 11 | [065f4af3e771](https://github.com/PocoF3Releases/device_xiaomi_camera/commit/065f4af3e7716981e6fc0bf5e13e73f7983cfba0) |
+| vendor/xiaomi/camera | 7 → 6 | [61876c6e6953](https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/61876c6e6953476e20bd8b6b27a07d9da9a7c4a3) |
 | hardware/xiaomi | 85 → 79 | [6762a5238e69](https://github.com/PocoF3Releases/hardware_xiaomi/commit/6762a5238e69c7b4b96f5c68f4b4b1ee9ff5e336) |
 
 [Old-to-new provenance](implementation-history-map-20261105.csv) distinguishes

@@ -1,11 +1,15 @@
 # USBPD and PS5169 lifetime fixes — November 12, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 `source-checked`, `host-tested`, `build-tested`; USBPD also `device-tested`
 within the explicit scope below. Two independent kernel-only follow-ups to
 [the rebase checkpoint](kernel-final-review-20261112.md):
 
-- [PS5169 bfc6165](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bfc6165298c9320acc447598e607e538d9d493d5): initialize work/hardware before publication; match callbacks to the live published supply under one mutex; withdraw access before draining work. Return the real pinctrl error and remove an unowned GPIO free.
-- [USBPD cd1f8df](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cd1f8df56f66a012ad4a8b25f3d7a99cc6a5ddce): stop every enqueue/rearm producer, wait admitted callers, drain system work/timer/private queue, then close PHY callbacks and release messages, Type-C objects and supply references.
+- [PS5169 bfc6165](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2b2c6498c4a09480b73677b8c000e8ccf0f6f081): initialize work/hardware before publication; match callbacks to the live published supply under one mutex; withdraw access before draining work. Return the real pinctrl error and remove an unowned GPIO free.
+- [USBPD cd1f8df](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e49a4518e6d191246e09ee043742f748823b0bd8): stop every enqueue/rearm producer, wait admitted callers, drain system work/timer/private queue, then close PHY callbacks and release messages, Type-C objects and supply references.
 
 Published on `PocoF3Releases/kernel_xiaomi_sm8250:aosp-17`. The previous human
 commits and authorship are unchanged; these are ordinary fast-forward follow-ups.

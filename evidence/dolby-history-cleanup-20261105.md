@@ -1,5 +1,9 @@
 # Original Dolby integration cleanup — November 5, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 The maintainer requested review of the original 23-commit Dolby integration,
 not another late removal commit. The range mixed hardware video OMX, Dolby
 software audio, effects, policy changes and unrelated display/thermal work.
@@ -33,8 +37,8 @@ effect UUID, active HAL, thermal, security or kernel behavior was retuned.
 
 ## Current sources
 
-- [device/xiaomi/sm8250-common — 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/6fed13f4da772d3f38253e8a33fd63cf255d8125).
-- [vendor/xiaomi/sm8250-common — a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/a9a3cc77e0334842d1ffdbbc7771e4751e105144).
+- [device/xiaomi/sm8250-common — 6fed13f4da77](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/2838130a6fa07154b16468ecc4bc06e7c77dd745).
+- [vendor/xiaomi/sm8250-common — a9a3cc77e033](https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/7fab8d519fd62c244c54057c76a32380d5ef5398).
 
 The [old-to-new map](dolby-history-map-20261105.csv) records provenance, not new
 test identities. Dropped rows map to the preceding retained state. Private

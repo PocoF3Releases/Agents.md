@@ -103,7 +103,7 @@ files. Packaging tools do not flash.
 Deliver `out/release-candidate/recovery_boot.img`, `recovery.zip`, `SHA256SUMS`.
 Installer signing uses existing signapk/public AOSP test keys, not private keys.
 Check ZIP CRC/payload hashes, Boot size/header and exact shipped policy before
-publication. Commit source with required co-author trailer; update patch series
+publication. Commit source with the required Assisted-by disclosure; update patch series
 and source-owned docs together. Verify remote branch/tag/release target and
 GitHub asset digests. The initial history squash was explicitly authorized;
 future updates do not inherit blanket force-push authorization.

@@ -1,5 +1,9 @@
 # Dolby rapid VoIP re-entry — 2026-11-12
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 **Status:** source-checked, host-tested, build-tested and temporarily device-tested. Original artifacts/preferences and temporary test state are restored; both implementation fixes are published with a freshly verified remote tip. This follows the [earlier audio audit](alioth-audio-features-20261112.md), which recorded two enable-confirmation rejections without aligned native traces.
 
 ## Reproduced cause
@@ -32,13 +36,13 @@ The final source passed 229 host groups: 29 extracted production Engine, twenty 
 
 | Item | Identity |
 | --- | --- |
-| Hardware base | [cb7ab6c](https://github.com/PocoF3Releases/hardware_xiaomi/commit/cb7ab6c33b4bf96fbc0493602d08ac9e102ca621) |
+| Hardware base | [76d0e65](https://github.com/PocoF3Releases/hardware_xiaomi/commit/76d0e652f887818e60bcb90df3c2444e3f756425) |
 | Final Engine SHA-256 | `8de8bdce7ea4871213e506394342ca04aa61fc4ca2fbfb2a7a27f62833b20006` |
 | Final effect SHA-256 | `f554c1d229ba8370e79320c3ce4904ba93f62131e68cdba04579082959f57ed0` |
 | Tested XiaomiDolby APK SHA-256 | `87b3f17063260709195adb20ab3b760279a1edae8fbac6aeac08fac7181027da` |
-| Published quiet-guard commit | [9002673](https://github.com/PocoF3Releases/hardware_xiaomi/commit/90026732dfb14fa64ac1d4595d1df4456e612e9d) |
-| Published enable-ACK commit | [fd1e7be](https://github.com/PocoF3Releases/hardware_xiaomi/commit/fd1e7be434943c1e13ba24578e6913e4c990c286) |
-| Freshly verified remote tip | [`cnb` → fd1e7be](https://github.com/PocoF3Releases/hardware_xiaomi/commit/fd1e7be434943c1e13ba24578e6913e4c990c286) |
+| Published quiet-guard commit | [58125d0](https://github.com/PocoF3Releases/hardware_xiaomi/commit/58125d0c8936fdf222d06d88d2eef219278592ce) |
+| Published enable-ACK commit | [bdbc9ab](https://github.com/PocoF3Releases/hardware_xiaomi/commit/bdbc9abd79d59029cece45986e0c32241bd7de57) |
+| Freshly verified remote tip | [`cnb` → fd1e7be](https://github.com/PocoF3Releases/hardware_xiaomi/commit/bdbc9abd79d59029cece45986e0c32241bd7de57) |
 
 ## Phone acceptance and remaining limits
 
@@ -54,7 +58,7 @@ The three original Dolby APK/OAT artifacts and two preference files were restore
 
 The old 203.313-ms interval preceded DMS enqueue; its queue added only 0.289 ms to native flag application. Native mode notification alone did not close the inspected gate. The earlier capture cannot identify the individual callback, getter or scheduling delay, or establish audible voice processing.
 
-[The mode-query fix](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b533e52319d6a3ad59a85e61999fc4f6aa2a66a0) removes two diagnostic `getMode()` calls and tests the known processing phase before another eligibility query. After fresh communication classification, redundant reads could block on AudioService's routing lock or throw before Off. The initial fresh policy query, all MEDIA/quiet/ACK checks, ownership, native errors, profiles and translations remain unchanged. No thread or polling policy was added.
+[The mode-query fix](https://github.com/PocoF3Releases/hardware_xiaomi/commit/c40d1866051a6e23f9884cba036ed70f196e5296) removes two diagnostic `getMode()` calls and tests the known processing phase before another eligibility query. After fresh communication classification, redundant reads could block on AudioService's routing lock or throw before Off. The initial fresh policy query, all MEDIA/quiet/ACK checks, ownership, native errors, profiles and translations remain unchanged. No thread or polling policy was added.
 
 Ten old/new actual-source groups reproduce delayed/skipped Off and verify the correction; all 229 retained regressions and three controller scheduling groups pass. The `XiaomiDolby` module passed in 661.82 seconds with Engine SHA-256 `35a3a636c5469e34a946fd4877ef554c82a5cc6b363d68a1229ae845a6633dd2` unchanged. Tested APK SHA-256: `69ae91a066c5ddfdcf3d39b5cc5d22438efe2b32c2b215a14ed9f6a0bb4248ed`.
 

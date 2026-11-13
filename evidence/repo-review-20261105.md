@@ -1,5 +1,9 @@
 # Maintained implementation review — November 5, 2026
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 This is scoped source/build/host/device evidence, not a whole-ROM certification.
 The [coverage table](repo-review-coverage-20261105.csv) pins 43 local build paths;
 the ROM-only interfaces variant, GitLab camera delivery and deployed manifests
@@ -8,7 +12,7 @@ candidate and paused hardware investigations remain excluded.
 
 ## Corrected implementations
 
-- [Qualcomm media range feature](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/d6b53be26bc48dab8ca703bfb0bdadc9d6c24517):
+- [Qualcomm media range feature](https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/6773462f3e744462299c6ad9d72564fcceb56a0c):
   encoder surface comparison now receives the same effective full-range flag as
   surface creation. Equal-size limited-to-full setup could miss reconfiguration;
   stable full-range setup could request unnecessary recreation. This branch is

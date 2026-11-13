@@ -1,11 +1,15 @@
 # USB recovery — 2026-11-03
 
+History note: commit links may use verified same-tree aliases. Literal logs,
+versions and recorded source IDs retain their original observed values; current
+routing belongs in [the source ledger](../state/repositories.yaml).
+
 `source-checked`, `host-tested`, `build-tested`, `device-tested` within this scope.
 
 ## Published fixes
 
-- [Reconnect after gadget reset](https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/2e8156b51d44cd8cd4d9546e332b776c12bb22bf): restore the selected controller after unbinding, serialize against function changes and report failures. Accept a verified same-controller FunctionFS rebind.
-- [Initialize queried functions](https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/724b2926d85c540652954a821e31a738fb6a0788): initialize the bitmap to NONE before a query can read it.
+- [Reconnect after gadget reset](https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/0f54e1bd62865d427f7d80b3d87230096f1540aa): restore the selected controller after unbinding, serialize against function changes and report failures. Accept a verified same-controller FunctionFS rebind.
+- [Initialize queried functions](https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/c16fd5cafb0e86917b3c0f15668ba2c88e2e6e8d): initialize the bitmap to NONE before a query can read it.
 - [Recover the framework proxy](https://github.com/PocoF3Releases/frameworks_base/commit/3e77a60e56eb1cc8bc0f7ac71dd6df4d11dd54ce): register Binder death handling, ignore obsolete death notifications and reacquire a missing proxy before requests.
 
 The original HAL reported reset success but left MIDI-only USB unbound across
