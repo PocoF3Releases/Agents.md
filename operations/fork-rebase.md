@@ -23,6 +23,12 @@ python3 ~/evo/.workhub/scripts/rebase_fork.py --repo ~/evo/kernel/xiaomi/sm8250 
   Then rerun with `--resume --push`. The old tip is pushed to
   `aosp-17-pre-rebase-YYYYMMDD` before a leased force-push.
 
+If upstream rewrote its branch (Evolution X force-pushes `cnb`), the merge-base
+is too old and would replay rewritten upstream commits. Pass `--old-base` with
+the last upstream commit directly under our commits.
+`scripts/check_fork_bases.py` shows this as large `behind` and `ours` counts.
+`git cherry <upstream> <fork>` then marks only our commits with `+`.
+
 ## What the verification guarantees
 
 - Every kept commit keeps its author, date and message.

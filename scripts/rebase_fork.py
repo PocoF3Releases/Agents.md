@@ -105,6 +105,8 @@ def main():
     ap.add_argument("--fork-remote", required=True)
     ap.add_argument("--fork-branch", default="aosp-17")
     ap.add_argument("--onto", help="rebase onto this commit instead of the upstream tip")
+    ap.add_argument("--old-base", help="last upstream commit under our commits; needed when "
+                    "upstream rewrote its branch (default: merge-base)")
     ap.add_argument("--resume", action="store_true", help="verify after a finished manual rebase")
     ap.add_argument("--check-cmd", help="extra command to run in the repo after verification")
     ap.add_argument("--push", action="store_true")
@@ -125,7 +127,9 @@ def main():
         git("fetch", "-q", a.fork_remote, f"+refs/heads/{a.fork_branch}:{fork_ref}")
         old_tip = git("rev-parse", fork_ref)
         new_base = git("rev-parse", (a.onto or up_ref) + "^{commit}")
-        old_base = git("merge-base", old_tip, up_ref)
+        old_base = git("rev-parse", (a.old_base or git("merge-base", old_tip, up_ref)) + "^{commit}")
+        if run("git", "merge-base", "--is-ancestor", old_base, old_tip, check=False).returncode:
+            raise SystemExit("--old-base is not an ancestor of the fork tip")
         if git("rev-list", "--merges", f"{old_base}..{old_tip}"):
             raise SystemExit("fork history above the upstream base is not linear")
         print(f"old base {old_base[:12]}  fork tip {old_tip[:12]}  new base {new_base[:12]}")
