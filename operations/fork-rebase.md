@@ -60,3 +60,19 @@ against a local test remote only.
 changed by us; the hunks do not overlap, and both objects compiled with Clang
 r563880c without warnings. Published `aosp-17` `eabea41`; old tip `fe16246` is
 `aosp-17-pre-rebase-20261122`. No full kernel build or device boot yet.
+
+## 2026-11-22 device, sepolicy and framework rebases
+
+`scripts/check_fork_bases.py` then found four more forks behind. Each was rebased
+with `rebase_fork.py`, verified and pushed with a `<branch>-pre-rebase-20261122`
+backup. Local recovery commits were reapplied afterwards with
+`apply-recovery-patches.py` (final check: zero pending).
+
+| Fork | Upstream | New tip | Notes |
+| --- | --- | --- | --- |
+| sm8250-common `aosp-17` | `lineage-24.0` `ae56501` | `fba277b` | GSI AVB keys dropped; erofs revert context adjusted |
+| legacy-um `cnb` | `lineage-24.0-legacy-um` `526280b` | `07eb3a0` | LSM wakeup label |
+| frameworks/av `cnb` | Evolution X `55743a7` | `d68ec22` | `--old-base afafd74`: drops the HIDL-store commit Evolution X withdrew |
+| frameworks/base `cnb` | Evolution X `aeb0a88` | `be4d559` | `--old-base e4f0493`: upstream rewrote `cnb`; 40 new commits by content, none touching our files |
+
+No build or device test of these tips yet.
