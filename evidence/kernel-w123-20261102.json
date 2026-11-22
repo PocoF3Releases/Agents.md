@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-02",
+  "repository": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250",
+  "branch": "aosp-17",
+  "head": "1fbfa02096f2a7e344375c2c465b184d0141af68",
+  "base": "89aca84b51ad0d68997d344cc159788edeace578",
+  "config_sha256": "6a3c2dff85db6e80d35aed7efa82c9b5950687f975c975d5fcee6b49a8a39c48",
+  "builds": {
+    "W123": {
+      "exit": 0,
+      "seconds": 665.6103932857513,
+      "lines": 30252,
+      "head": "1fbfa02096f2a7e344375c2c465b184d0141af68",
+      "config_sha256": "6a3c2dff85db6e80d35aed7efa82c9b5950687f975c975d5fcee6b49a8a39c48",
+      "arch/arm64/boot/Image_sha256": "49cf49aba9dbf232df8f65d8d3fc9027f8d8a69c2f33ac1aaef5bd9bea5e5837",
+      "vmlinux_sha256": "66d3fac35c20c34de9f7b01b2c6c97d67cb144e0034b0fb3bc7c844a7ecb9553"
+    },
+    "W1_Werror": {
+      "exit": 0,
+      "seconds": 147.42397093772888,
+      "lines": 58,
+      "head": "1fbfa02096f2a7e344375c2c465b184d0141af68",
+      "config_sha256": "6a3c2dff85db6e80d35aed7efa82c9b5950687f975c975d5fcee6b49a8a39c48",
+      "arch/arm64/boot/Image_sha256": "b0dcff8ab9732dc63110e71f2dc5cf6d9d3964dbfc351473551aedc3c54bdd9a",
+      "vmlinux_sha256": "926b88cc3cf91ed4336909569ee2390005762ade8537c7896194f45359f87cee"
+    }
+  },
+  "diagnostics": {
+    "objects": 3931,
+    "sources": 3883,
+    "failed_objects": [],
+    "occurrences": 4537295,
+    "unique": 150176,
+    "unique_c": 128447,
+    "by_flag": {
+      "-Wpadded": 13810,
+      "-Wcast-qual": 1881,
+      "-Wsign-conversion": 54510,
+      "-Wgnu-pointer-arith": 21327,
+      "-Wshorten-64-to-32": 13464,
+      "-Wimplicit-int-conversion": 10049,
+      "-Wswitch-default": 2101,
+      "-Wbad-function-cast": 532,
+      "-Wsign-compare": 7630,
+      "-Wcast-align": 7751,
+      "-Wpointer-arith": 2784,
+      "-Wshadow": 1226,
+      "-Wpadded-bitfield": 33,
+      "-Wpacked": 473,
+      "-Wmissing-field-initializers": 9558,
+      "-Wunused-macros": 2615,
+      "-Wenum-enum-conversion": 11,
+      "-Wfloat-conversion": 255,
+      "-Wbitfield-enum-conversion": 12,
+      "-Wstring-conversion": 5,
+      "-Wenum-compare-conditional": 144,
+      "unclassified": 5
+    },
+    "c_by_flag": {
+      "-Wsign-conversion": 48562,
+      "-Wshorten-64-to-32": 12867,
+      "-Wcast-qual": 1622,
+      "-Wsign-compare": 7489,
+      "-Wgnu-pointer-arith": 20202,
+      "-Wpadded": 2465,
+      "-Wswitch-default": 1965,
+      "-Wcast-align": 6631,
+      "-Wpointer-arith": 2693,
+      "-Wshadow": 1208,
+      "-Wbad-function-cast": 482,
+      "-Wimplicit-int-conversion": 9636,
+      "-Wmissing-field-initializers": 9554,
+      "-Wunused-macros": 2615,
+      "-Wpacked": 30,
+      "-Wfloat-conversion": 253,
+      "-Wenum-enum-conversion": 8,
+      "-Wbitfield-enum-conversion": 12,
+      "-Wstring-conversion": 4,
+      "-Wenum-compare-conditional": 144,
+      "unclassified": 5
+    },
+    "severity": {
+      "warning": 150176
+    }
+  },
+  "review": {
+    "source": "1fbfa02096f2a7e344375c2c465b184d0141af68",
+    "candidate": "FastRPC heap map/unmap failure propagation",
+    "regression": "183 checks; original 43 failures, candidate zero; ASan/UBSan stderr empty",
+    "reviewed_unchanged": [
+      {
+        "area": "arm64 DMA allocation shadow",
+        "reason": "inner atomic-pool page is consumed before early return; outer page is only used on the other allocation path"
+      },
+      {
+        "area": "KGSL dispatcher allocation failure shadow",
+        "reason": "inner queue cursor belongs to the early failure cleanup; outer cursor is initialized on successful allocation"
+      },
+      {
+        "area": "Wi-Fi WEXT status shadows",
+        "reason": "failed inner statuses return immediately; success does not depend on the shadowed outer value"
+      },
+      {
+        "area": "Qualcomm clock fractional divisors",
+        "reason": "F() encodes (2*h)-1; half divisors become exact integer register fields, not truncated hardware ratios"
+      },
+      {
+        "area": "zsmalloc fullness bitfield",
+        "reason": "stored states are 0..3; NR_ZS_FULLNESS is a loop/list sentinel rather than a stored state"
+      },
+      {
+        "area": "diag CRC length narrowing",
+        "reason": "decoded data length is checked against DIAG_MAX_REQ_SIZE before crc_check; upper bound fits 16 bits"
+      }
+    ],
+    "limits": [
+      "All diagnostics remain visible; no source warning flags changed.",
+      "Not all W=2/3 reports are correctness defects or reviewed.",
+      "Current phone is older 830fb30, no crash/warning markers in read-only dmesg; this does not validate candidate execution."
+    ],
+    "confirmed_fix": {
+      "commit": "1fbfa02096f2a7e344375c2c465b184d0141af68",
+      "path": "drivers/char/adsprpc.c",
+      "hunks": [
+        "Do not publish a failed DSP mapping RPC output",
+        "Preserve permission-assignment failure across rollback",
+        "Remove nested error shadow and preserve helper status in unmap caller"
+      ]
+    }
+  },
+  "sparse": {
+    "errors": 0,
+    "unchanged_context_warnings": 1,
+    "function": "context_alloc"
+  },
+  "regression": {
+    "checks": 183,
+    "original_failures": 43,
+    "final_failures": 0,
+    "sanitizer_findings": 0
+  },
+  "runtime": {
+    "observed_kernel": "4.19.325-Redline-830fb30-cip136",
+    "dmesg_lines": 11602,
+    "matched_crash_warning_markers": 0,
+    "fastrpc_error_lines": 0,
+    "new_kernel_installed": false
+  },
+  "github_codex_recognized": true
+}

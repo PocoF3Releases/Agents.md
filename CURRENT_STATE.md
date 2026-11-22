@@ -1,32 +1,30 @@
 # Current state
 
-Checkpoint: **2026-10-28**. [Android 17 status](state/android17-status.md).
+Source checkpoint **2026-11-21**. Published 44 branches with refreshed committer dates.
+All 41 canonical routes are current and the four recovery patches reproduce the local trees.
+Release-signed Alioth user build **Evolution X 12.4** packaged as `EvolutionX-17.0-20261121-alioth-12.4-Unofficial.zip`.
+[Source, OTA and recovery evidence](evidence/source-refresh-20261120.md).
 
-- **Haptics:** stock-backed HAL/PCM: seven effects, three primitives, LOW_TICK fallback. Installed identity unknown; no full RichTap/PWLE.
-- **Recovery:** no-wipe OTA, PIN/local ZIP checks passed; secure image restored. Scrolling improved; password/Weaver unverified. [Scope](memory/evox-recovery.md).
-- **Camera:** finalized; main 4K30/60 accepted, ultrawide 4K guarded. Ultrawide true 60fps is unproven.
-- **GPU/display:** [Scope](memory/gaming-graphics.md): anti-flicker RRO needs build; manual mismatch remains.
-- **Audio:** AC-4 stereo decode and audible playback confirmed on recorded A17 builds; other routes retain their limits.
-- **Sources:** [43-repo refresh](evidence/source-refresh-20261025.md); [kernel checks](evidence/kernel-redline-20261028.md).
-- **Releases:** October 25 published; October 28 next-build drafts prepared. [Releases](state/releases.md).
+- **Recovery:** native ROM recovery in `~/evo`; use the [sync/patch workflow](operations/framework-manifest.md).
+  PIN/local ZIP acceptance is dated; password/Weaver remain unverified.
+- **Parts/audio:** [November 12 checks](state/validation.md#v-parts) retain their dated artifact scope.
+- **Other limits:** haptics scale-zero/physical calibration and the manual display
+  color mismatch remain in their topic owners.
+- **Release status:** [November 4 published baseline](state/releases.md).
 
 | Task | Read |
 | --- | --- |
-| Project history / decisions | [Working memory](memory/project-history.md) |
-| Native ROM recovery | [EvoX recovery](memory/evox-recovery.md) |
-| Custom recovery / PBRP | [Recovery development](memory/pbrp-recovery.md) |
-| Vibrator | [Haptics](memory/haptics.md) |
-| Dolby / AC-4 / audio | [Audio](memory/dolby-audio.md) |
-| Camera | [Camera](memory/miuicamera.md) |
-| Parts / touch / proximity | [Device UX](memory/xiaomiparts-device-ux.md) |
+| Exact current heads / acceptance | [Source ledger](state/repositories.yaml) · [Validation](state/validation.md) |
+| Sync / native recovery | [Workflow](operations/framework-manifest.md) · [Recovery](memory/evox-recovery.md) |
+| Parts / touch / thermal / sensors | [Device UX](memory/xiaomiparts-device-ux.md) |
+| Dolby / MiSound / codecs | [Audio](memory/dolby-audio.md) |
+| Haptics | [Vibrator](memory/haptics.md) |
+| Camera | [Finalized camera](memory/miuicamera.md) |
 | Kernel / rootdir | [Platform](memory/kernel-frameworks.md) |
-| Hardware inventory | [Subsystem map](memory/alioth-subsystems.md) |
-| GPU / games / frame generation | [Graphics](memory/gaming-graphics.md) |
-| Changelog / builds | [Releases](state/releases.md) |
-| First chat / install skill | [Onboarding](operations/first-chat.md) |
-| Windows / WSL reinstall | [Recovery](operations/workstation-recovery.md) |
-| Host / Android tools | [Tools](operations/host-tooling.md) |
-| Source search | [Ready indexes](operations/repoindex.md) |
-| Exact source / test scope | [Sources](state/repositories.yaml) · [Validation](state/validation.md) |
+| GPU / display / games | [Graphics](memory/gaming-graphics.md) |
+| Changelog / artwork | [Releases](state/releases.md) · [Artwork](operations/release-artwork.md) |
+| Source search / reverse engineering | [Ready indexes](operations/repoindex.md) · [Binary correlation](operations/alioth-reverse-engineering.md) |
+| Host recovery / tools | [Restore](operations/workstation-recovery.md) · [Tools](operations/android-tooling.md) |
+| Resume / editing knowledge | [Continuity](operations/continuity.md) · [Maintenance](operations/maintenance.md) |
 
-Optional search: [INDEX.yaml](INDEX.yaml). Read [archive](archive/README.md) only for provenance.
+Use [INDEX.yaml](INDEX.yaml) for more topics. History stays on demand.

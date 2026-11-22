@@ -7,10 +7,10 @@ firmware or proprietary drivers changed. Diagnostic artifacts remain private.
 
 ## Separate source changes
 
-- [thermal: cpu_cooling: Remove unused cur_freq variable](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7b4eddb93f51f0b22e09f5878c2d30277207abd5).
-- [thermal: qcom: Correct TSENS symbol visibility](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/840bb9c615e343f78916429fd25718641d48efa7).
-- [gpu: msm: Preserve fault and allocation flag types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1d1d390f0c3ccd5385cba96fa33f1b46029731cb).
-- [drm: msm: sde: Correct CRTC helper input contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9e005e51d8b036e3b22e5ee80768f76bff471a86).
+- thermal: cpu_cooling: Remove unused cur_freq variable (historical `7b4eddb93f51f0b22e09f5878c2d30277207abd5`).
+- thermal: qcom: Correct TSENS symbol visibility (historical `840bb9c615e343f78916429fd25718641d48efa7`).
+- gpu: msm: Preserve fault and allocation flag types (historical `1d1d390f0c3ccd5385cba96fa33f1b46029731cb`).
+- drm: msm: sde: Correct CRTC helper input contracts (historical `9e005e51d8b036e3b22e5ee80768f76bff471a86`).
 
 The CPU-cooling import is Shaokun Zhang's exact upstream
 [e0fda7377d30](https://github.com/torvalds/linux/commit/e0fda7377d30685feaef4d93d9fdfde91c5d7d9a),

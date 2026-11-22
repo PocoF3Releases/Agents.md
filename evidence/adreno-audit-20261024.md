@@ -9,13 +9,13 @@ packages. Raw traces, disassemblies, maps, APKs and boot backups remain private.
 
 Repository: [kernel_xiaomi_sm8250](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250),
 branch `aosp-17`. Baseline:
-[b8fc2fc50a5c](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/59e8b951755e4ef16a0bfb24677d18670a40ad1a).
+`59e8b951755e4ef16a0bfb24677d18670a40ad1a`.
 
-- [7aeac751973b](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a342a8583ce27e0a7f67ee4436b3768e78a8b70d):
+- `a342a8583ce27e0a7f67ee4436b3768e78a8b70d`:
   preserve mapped footprints in 64 bits. A signed `int` made a 2-GiB footprint
   negative and a 4-GiB footprint zero before pagetable accounting. Mapping addresses
   and allocation limits are unchanged.
-- [12d26a785cf3](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/53606fade3c32708df416161827a1d5dd87d9d5b):
+- `53606fade3c32708df416161827a1d5dd87d9d5b`:
   emit per-process/global `gpu_mem_total` events. The tracepoint existed and was
   enabled, but KGSL did not emit it. Backported from Google's production 4.19
   [implementation](https://github.com/LineageOS/android_kernel_google_redbull/commit/43aff12c50062ec0e50a47859b2bc688e9686f61),
@@ -161,7 +161,7 @@ unchanged, and subsequent diagnostic APK updates did not show the scan prompt.
 A second lifetime review found that the trace backport charged a global buffer
 on its first successful mapping and deliberately retained that charge during
 per-pagetable teardown, but never subtracted it on final global-list removal.
-[d2c680676787](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/97dc957c03c4cdec55d2045381b6d80dadc8c7d9) fixes only that trace-counter imbalance in `kgsl_iommu_remove_global`.
+`97dc957c03c4cdec55d2045381b6d80dadc8c7d9` fixes only that trace-counter imbalance in `kgsl_iommu_remove_global`.
 The width fix and current DMA-BUF ownership/unwind remain intact; authorship and
 published history were preserved by adding a separate follow-up commit.
 

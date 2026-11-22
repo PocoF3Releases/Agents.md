@@ -8,14 +8,14 @@ configuration, thermal policy, firmware or userspace drivers changed.
 
 ## Separate fixes
 
-- [fuse: Correct BPF reply argument contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/265cd8a21635b229a4e1968e48bd55dadae94d2b).
-- [net/sysctl: remove leftover __user annotations on neigh_proc_dointvec*](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6914d230b94b0bf48a21615a8213a59581e68bc6).
-- [net: Declare the shared zerocopy iterator helper](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/dd1dd07e0460e35fe48d8c047004f42d38738484).
-- [bpf: Declare global calling-convention test targets](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/80e487c1a6a438bf090aaa90321dd4a364dd497c).
-- [qcacmn: Properly abstract the Linux bottom half interfaces](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2d2981a5b93d3d929e693e1336f736ea87a9dd91).
-- [wifi: cnss2: Correct event and QMI diagnostics](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/75d9915589cbe980ad21de3bdc399c93afb71756).
-- [drm: msm: rotator: Match private callback contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/320ff8c31ed53381fc362da1be117657f55cea2c).
-- [drm: msm: pll: Validate retained DFPS tables before use](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c3935abdcb21ca7831626ea2984d0ae0a52930ef).
+- fuse: Correct BPF reply argument contracts (historical `265cd8a21635b229a4e1968e48bd55dadae94d2b`).
+- net/sysctl: remove leftover __user annotations on neigh_proc_dointvec* (historical `6914d230b94b0bf48a21615a8213a59581e68bc6`).
+- net: Declare the shared zerocopy iterator helper (historical `dd1dd07e0460e35fe48d8c047004f42d38738484`).
+- bpf: Declare global calling-convention test targets (historical `80e487c1a6a438bf090aaa90321dd4a364dd497c`).
+- qcacmn: Properly abstract the Linux bottom half interfaces (historical `2d2981a5b93d3d929e693e1336f736ea87a9dd91`).
+- wifi: cnss2: Correct event and QMI diagnostics (historical `75d9915589cbe980ad21de3bdc399c93afb71756`).
+- drm: msm: rotator: Match private callback contracts (historical `320ff8c31ed53381fc362da1be117657f55cea2c`).
+- drm: msm: pll: Validate retained DFPS tables before use (historical `c3935abdcb21ca7831626ea2984d0ae0a52930ef`).
 
 The neighbour declaration patch is Christoph Hellwig's exact
 [c7388c1f8fb6](https://github.com/torvalds/linux/commit/c7388c1f8fb6d8687403e9554c873f9df4512797),

@@ -28,3 +28,16 @@ and tool schemas; these are not exact model tokens.
 Read more when needed to retain evidence/uncertainty and finish authorized work.
 Measure model tokens/cost/quality with matched tasks in the actual client; fixture
 results imply no performance percentage.
+
+## Continuation boundaries
+
+`scripts/check_continuity.py` checks the live Claude import graph and canonical
+skill links without crossing this workhub. Disposable Git fixtures reject
+force-added private task records, missing ignores, external/missing/cyclic
+imports and broken/outside skill links. Ordinary ignored task files remain local.
+See [continuity](../operations/continuity.md) for exact-task/checkout recovery.
+
+These are host/file/index checks. Native client discovery must be checked in the
+actual installed client from root and nested working directories. No fixture
+proves forced-compaction recovery, model behavior, native conversation import,
+account/model entitlement or browser/WSL permissions. No hooks are installed.

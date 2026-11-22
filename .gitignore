@@ -6,3 +6,5 @@ __pycache__/
 .env.*
 .codex/memories/
 .codex/auth.json
+# Private per-chat state; durable findings belong in maintained owners.
+/.codex/tasks/

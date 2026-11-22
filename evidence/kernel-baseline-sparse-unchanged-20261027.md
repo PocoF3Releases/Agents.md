@@ -1,6 +1,6 @@
 # Unchanged sparse error review
 
-Reviewed HEAD [current kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06) against the original baseline IDs in the [published error ledger](kernel-baseline-sparse-errors-20261027.json). All **115 unresolved error reports** are covered exactly once: **111 core and 4 driver**. Their classifications remain unresolved. No source/build/Git/device mutations or test reruns were performed.
+Reviewed HEAD current kernel (historical `68fe321774661c4150b80edd93f7ddc75f32ac06`) against the original baseline IDs in the [published error ledger](kernel-baseline-sparse-errors-20261027.json). All **115 unresolved error reports** are covered exactly once: **111 core and 4 driver**. Their classifications remain unresolved. No source/build/Git/device mutations or test reruns were performed.
 
 No new verified core/net lifetime or security defect was established in this pass. This is a finite source evaluation, not a declaration that the remaining errors are safe. The already-recorded optional Slimbus context-bank allocation/free device mismatch remains an unverified optional-route limitation; no active Kona impact or refactoring request is asserted.
 

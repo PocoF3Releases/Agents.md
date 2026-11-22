@@ -1,5 +1,5 @@
 schema_version: 1
-last_refreshed: '2026-10-25'
+last_refreshed: '2026-11-14'
 entrypoints:
   rules: AGENTS.md
   current_state: CURRENT_STATE.md
@@ -18,6 +18,16 @@ read_order:
   offload_or_write:
   - operations/maintenance.md
 subsystems:
+  continuity:
+    title: Instruction discovery and private task continuation
+    status: maintained
+    memory: operations/continuity.md
+    keywords: [resume, compaction, checkpoint, handoff, cwd, worktree, global instructions]
+  claude_code:
+    title: Claude Code WSL setup and workspace locations
+    status: maintained
+    memory: operations/claude-code.md
+    keywords: [claude, sonnet, opus, CLAUDE.md, wsl locations]
   inventory:
     title: Alioth and SM8250 subsystem inventory
     status: maintained
@@ -54,6 +64,8 @@ subsystems:
     memory: memory/dolby-audio.md
     keywords:
     - dolby
+    - misound
+    - soundid
     - ac4
     - ac-4
     - vndk
@@ -159,8 +171,8 @@ subsystems:
     - setup
     - codex
   pbrp:
-    title: Alioth custom recovery
-    status: maintained
+    title: Historical Alioth custom recovery
+    status: historical
     memory: memory/pbrp-recovery.md
     keywords:
     - pbrp
@@ -184,6 +196,16 @@ subsystems:
     - backup
     - restore
     - new pc
+  fork_rebase:
+    title: Rebase forks onto updated upstream bases
+    status: maintained
+    memory: operations/fork-rebase.md
+    keywords:
+    - rebase
+    - upstream
+    - lineage
+    - kernel rebase
+    - force-push
   tools:
     title: Android and analysis tools
     status: maintained

@@ -6,10 +6,10 @@ A higher-priority MiSound client set native music state to zero and released con
 The persistent owner regained control, but normal playback callbacks and reopening
 MiSound failed to restore requested processing. Cached state was stale.
 
-[consolidated MiSound fix](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87)
+consolidated MiSound fix (historical `0de236a93b3dc7dbb59e16219d234e7141c6bd87`)
 reconciles framework enable, native enable and music state on refresh and callbacks.
 Requested Off and Pause during calls remain authoritative. No tuning or UI changed.
-[Translations remain separate](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b653ae1cbb59c26410eae3b1b22e0029781d254a).
+Translations remain separate (historical `b653ae1cbb59c26410eae3b1b22e0029781d254a`).
 
 Two independent internal agents reviewed Dolby and MiSound; follow-up review found
 no actionable issue in this correction. No natural Dolby failure was reproduced.

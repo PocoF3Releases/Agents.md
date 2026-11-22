@@ -16,13 +16,13 @@ Android's existing single-step Choreographer recovery delays only the first
 blocked frame within an animation. The inspected runtime compiled both
 `bufferStuffingMultiRecovery()` and `bufferStuffingRecoveryThreshold()` as false.
 The original Alioth-scoped prototype enabled those paths together. Its exact
-values now live in the [shared SM8250 implementation](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0c2346d1bf9522de2aa4cc292c12185667ef968d).
+values now live in the shared SM8250 implementation (historical `0c2346d1bf9522de2aa4cc292c12185667ef968d`).
 The upstream cumulative-delay threshold is 100 ms; its check can permit one
 additional frame interval before further recovery delays stop.
 
 The common map lives under `configs/release`, outside global auto-discovery,
 and is included by Kona products for cp2a and normal aliases/descendants.
-Independent releases are unaffected. The [consolidated Alioth 120 Hz profile](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/7c7229bdb805456900b817ebf023aab69bcb94a8)
+Independent releases are unaffected. The consolidated Alioth 120 Hz profile (historical `7c7229bdb805456900b817ebf023aab69bcb94a8`)
 retains the prior final tree and stock panel timing. No framework or kernel
 source change, diagnostic APK or temporary module is added by these commits.
 The phone measurements below used the original Alioth-scoped configuration;
@@ -43,7 +43,7 @@ boot ART/OAT/VDEX files. All ten other system boot-classpath JARs matched the ph
 Only `classes5.dex` differed inside the framework JAR; its other entries matched.
 Runtime readback confirmed both flags true, and Perfetto recorded the multi-step
 recovery path executing in Settings. Installed kernel remained
-[the recorded baseline](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/59e8b951755e4ef16a0bfb24677d18670a40ad1a)
+the recorded baseline (historical `59e8b951755e4ef16a0bfb24677d18670a40ad1a`)
 (build 2); no kernel, DTBO or ROM partition was flashed for this framework test.
 
 | Artifact | SHA-256 |

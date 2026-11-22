@@ -6,8 +6,8 @@ original CPU investigation and test scope.
 
 ## Published source and installed kernel
 
-[Current kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06) on `aosp-17` is a fast-forward of the
-[prior acceptance](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e9b1eaf8af938cf9a7413f17e6f61d94fc2ffbcf). Twenty feature-separated commits preserve
+Current kernel (historical `68fe321774661c4150b80edd93f7ddc75f32ac06`) on `aosp-17` is a fast-forward of the
+prior acceptance (historical `e9b1eaf8af938cf9a7413f17e6f61d94fc2ffbcf`). Twenty feature-separated commits preserve
 original upstream authorship and dates. Only kernel sources and this workhub
 changed in this task; production configuration, system-side sources, thermal
 protection, CFI, SCS and KFENCE are retained. No new suppressions or blanket
@@ -164,23 +164,23 @@ contains no raw device logs, identifiers or proprietary dumps.
 
 | Change | Original author |
 | --- | --- |
-| [vservices: Enforce read and write modes before device I/O](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/81d28fb6041b4131d15a5ac6d40e33ff979fa69a) | johnmart19 |
-| [block: vservices: Convert errno values to block status](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/41b38abeb411d098469411791e7928fe378505ac) | johnmart19 |
-| [uio: Return an error event when polling an unavailable device](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/aa4fa3117fb5274deeba74591032bdb9205a0007) | johnmart19 |
-| [input: nanosic: Return a valid poll error mask](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2e85b2e98ce422f11e33cb92d30e2cc69c220568) | johnmart19 |
-| [media: dvb: Return valid poll masks on invalid or removed devices](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fc872f2c3cf530f64cd37ee1272e005d8fb729ea) | johnmart19 |
-| [soc: qcom: qbt: Return error events from invalid poll requests](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/31a79ae9260b9f1cccaed74a7859734f6dd1a468) | johnmart19 |
-| [usb: gadget: gsi: Return error events for unavailable control ports](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7e6efe62b8eafa0a42474b7230e08ec8de8d78c9) | johnmart19 |
-| [sysctl: Match writeback and IPv6 kernel-buffer handlers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/83829610449f132bd9b6be0df8f20d6129cca7e0) | johnmart19 |
-| [audit: Annotate the published audit daemon connection pointer](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c3abc609dfd9eaddd3158661901f5b78cbc3216b) | johnmart19 |
-| [keys: Match keyring reads to the kernel-buffer callback ABI](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7afa42cb144f2f1e07b1eb74119a944363de673c) | johnmart19 |
-| [cfi: Fall back to checked lookups when shadow allocation fails](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5879e54f793f336dbb027977b5684a133ccccd39) | Sami Tolvanen |
-| [cfi: Pass dereferenced shadow snapshots to lookup helpers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/85c19294df92cd487b0141eaa72e8c8987295326) | johnmart19 |
-| [tcp: Reject restricted defaults before acquiring congestion references](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e4d4ea54120c7bd3321bbb2cb03c1c317452dd9a) | Zhiling Zou |
-| [wlan: Read only the IPv6 word needed for transmit priority](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9fb98e031c308b019f76e30d125d2e0c73e55077) | johnmart19 |
-| [cfi: Match shadow retirement to scheduler-RCU readers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/65b360fbc2589446a23810f8ffdfaf64a9c79164) | johnmart19 |
-| [arm64: cpufeature: Fix handling of CTR_EL0.IDC field](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e53de41ab8c91e19444099fcf33b12410ddf3039) | Suzuki K Poulose |
-| [arm64: cpufeature: Spell out register fields for ID_ISAR4 and ID_PFR1](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/12b38807f8924b14c670e45af7b8a49a9885dc01) | Will Deacon |
-| [arm64: cpufeature: Add CPU capability for AArch32 EL1 support](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/01f9639339230eabed332426408654b92cfc9e48) | Will Deacon |
-| [arm64: cpufeature: Relax AArch32 system checks if EL1 is 64-bit only](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/3c0e40c4b15fde970756ac7f95480001e0fff3fb) | Will Deacon |
-| [arm64/cpufeature: Add remaining feature bits in ID_PFR0 register](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68fe321774661c4150b80edd93f7ddc75f32ac06) | Anshuman Khandual |
+| vservices: Enforce read and write modes before device I/O (historical `81d28fb6041b4131d15a5ac6d40e33ff979fa69a`) | johnmart19 |
+| block: vservices: Convert errno values to block status (historical `41b38abeb411d098469411791e7928fe378505ac`) | johnmart19 |
+| uio: Return an error event when polling an unavailable device (historical `aa4fa3117fb5274deeba74591032bdb9205a0007`) | johnmart19 |
+| input: nanosic: Return a valid poll error mask (historical `2e85b2e98ce422f11e33cb92d30e2cc69c220568`) | johnmart19 |
+| media: dvb: Return valid poll masks on invalid or removed devices (historical `fc872f2c3cf530f64cd37ee1272e005d8fb729ea`) | johnmart19 |
+| soc: qcom: qbt: Return error events from invalid poll requests (historical `31a79ae9260b9f1cccaed74a7859734f6dd1a468`) | johnmart19 |
+| usb: gadget: gsi: Return error events for unavailable control ports (historical `7e6efe62b8eafa0a42474b7230e08ec8de8d78c9`) | johnmart19 |
+| sysctl: Match writeback and IPv6 kernel-buffer handlers (historical `83829610449f132bd9b6be0df8f20d6129cca7e0`) | johnmart19 |
+| audit: Annotate the published audit daemon connection pointer (historical `c3abc609dfd9eaddd3158661901f5b78cbc3216b`) | johnmart19 |
+| keys: Match keyring reads to the kernel-buffer callback ABI (historical `7afa42cb144f2f1e07b1eb74119a944363de673c`) | johnmart19 |
+| cfi: Fall back to checked lookups when shadow allocation fails (historical `5879e54f793f336dbb027977b5684a133ccccd39`) | Sami Tolvanen |
+| cfi: Pass dereferenced shadow snapshots to lookup helpers (historical `85c19294df92cd487b0141eaa72e8c8987295326`) | johnmart19 |
+| tcp: Reject restricted defaults before acquiring congestion references (historical `e4d4ea54120c7bd3321bbb2cb03c1c317452dd9a`) | Zhiling Zou |
+| wlan: Read only the IPv6 word needed for transmit priority (historical `9fb98e031c308b019f76e30d125d2e0c73e55077`) | johnmart19 |
+| cfi: Match shadow retirement to scheduler-RCU readers (historical `65b360fbc2589446a23810f8ffdfaf64a9c79164`) | johnmart19 |
+| arm64: cpufeature: Fix handling of CTR_EL0.IDC field (historical `e53de41ab8c91e19444099fcf33b12410ddf3039`) | Suzuki K Poulose |
+| arm64: cpufeature: Spell out register fields for ID_ISAR4 and ID_PFR1 (historical `12b38807f8924b14c670e45af7b8a49a9885dc01`) | Will Deacon |
+| arm64: cpufeature: Add CPU capability for AArch32 EL1 support (historical `01f9639339230eabed332426408654b92cfc9e48`) | Will Deacon |
+| arm64: cpufeature: Relax AArch32 system checks if EL1 is 64-bit only (historical `3c0e40c4b15fde970756ac7f95480001e0fff3fb`) | Will Deacon |
+| arm64/cpufeature: Add remaining feature bits in ID_PFR0 register (historical `68fe321774661c4150b80edd93f7ddc75f32ac06`) | Anshuman Khandual |

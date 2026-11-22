@@ -65,6 +65,11 @@ Read AGENTS.md, CURRENT_STATE.md, then only the task's topic. The optional [Andr
 
 Use the saved effective manifest when available. For a clean checkout, follow [AOSP setup](https://source.android.com/docs/setup/start/requirements) and [source download](https://source.android.com/docs/setup/download), plus the selected Evolution X branch's instructions. Install its required host dependencies, Git LFS and the official Repo launcher. Keep signing keys private. Reauthenticate Git remotes using your chosen credential manager.
 
+For a signed Alioth build, restore the maintainer's private signing checkout to
+`vendor/evolution-priv/keys`. Before compiling, confirm
+`DEFAULT_SYSTEM_DEV_CERTIFICATE` selects a certificate in that checkout and
+`BUILD_VERSION_TAGS` includes `release-keys`.
+
 Current observed Android 17 manifest identity is owned by [Sources](../state/repositories.yaml). The October 9 `.repo/local_manifests` inspection was empty: the source map is therefore essential, but it is not a complete effective manifest. An existing public fork does not mean the current build still needs it.
 
 ```bash

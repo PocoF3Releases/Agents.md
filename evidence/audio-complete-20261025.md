@@ -5,12 +5,12 @@ Proprietary copies, disassembly, pseudocode and raw logs remain private.
 
 ## Consolidated MiSound implementation
 
-[0de236a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87)
+`0de236a93b3dc7dbb59e16219d234e7141c6bd87`
 combines native-state reconciliation and control-listener recovery in one commit.
 Both the public final tree and the local tree including recovery overlays are
 identical to their pre-consolidation equivalents. The native EQ string fix remains
 a separate existing change; translations/resources stay in
-[b653ae1](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b653ae1cbb59c26410eae3b1b22e0029781d254a).
+`b653ae1cbb59c26410eae3b1b22e0029781d254a`.
 
 Independent internal agents rechecked cumulative MiSound lifecycle and Dolby
 interaction. No additional controller change was justified. Fresh phone checks
@@ -80,8 +80,8 @@ vendor inputs. On the phone, isolated 32-bit initialization returned 116 without
 the file and zero with it. The file is unchanged, SHA-256:
 5493b05bf10d5f768a1511e521a9d69820d4c592953562d7901b948cb3cbad5a.
 
-[Vendor payload](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/3b312ac9d0a32daaff6785ee45d9f3a3715475f7) and
-[extraction entry](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/d6c19893590c1004e0a579c0ca9182b2ef2594c3)
+Vendor payload (historical `3b312ac9d0a32daaff6785ee45d9f3a3715475f7`) and
+extraction entry (historical `d6c19893590c1004e0a579c0ca9182b2ef2594c3`)
 add only this stock payload, its extraction entry and the generated
 copy rule. No flags, gains, calibration values, UI or new consumer are enabled.
 An independent sweep of 845 shipped vendor ELFs found only the 32-bit primary HAL

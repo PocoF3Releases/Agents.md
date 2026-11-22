@@ -2,12 +2,11 @@
 
 ## V-HAPTICS
 
-**2026-10-04 — scoped source/build/host/device tests.** Enforcing candidate:
-21 effect/strength checks, three primitives, timed amplitude/cancellation,
-AAC native/limited-HE1 and PCM refills pass. Temporary mount restored. No full
-RichTap/PWLE; app-facing RichTap unverified. LOW_TICK has October 8 commit-reported
-tests, installed identity unknown. September 30 acceptance is historical.
-[Scope](../evidence/haptics/2026-10-04.md).
+**2026-11-05 — installed HAL:** 15 VTS checks and 20 callback sequences pass,
+enforcing; eight artifacts match the build. Immediate tick fallback build-tested,
+not installed. Scale-zero/calibration/feel and RichTap/PWLE limits remain.
+[Record](../evidence/haptics/2026-11-05.md) ·
+[Nov 2 temporary tests](../evidence/haptics/2026-11-02.md).
 
 ## V-AC4
 
@@ -15,24 +14,23 @@ tests, installed identity unknown. September 30 acceptance is historical.
 explicit `OMX.dolby.ac4.decoder`, official 32-second stereo/48 kHz sample:
 800 inputs, 800 output buffers, **6144000 PCM bytes**, 5970795 nonzero,
 EOS/PASS, `audio/raw`, two channels, pcm-encoding=2. Diagnostic silent; user confirmed sound in an unidentified player.
-Opt-in and both-ABI syntax checks passed; other streams, multichannel/offload,
-apps and Dolby processing are outside scope.
-[Diagnostic](../evidence/ac4/README.md) · [full ABI/failure progression](../memory/dolby-audio.md).
+Opt-in/both-ABI syntax pass; other streams, multichannel/offload, apps and Dolby
+processing unverified.
+[Diagnostic](../evidence/ac4/README.md) · [ABI history](../memory/dolby-audio.md).
 
 ## V-PARTS
 
-**2026-09-24 — source-checked and user-confirmed.** System Profile:
-[3c30e7d](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/3c30e7d416cd91e51c1c95ce81d55b20e60c570c)
-approved visually; [db27251](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/db2725133559f011a1565663bb11de076790d73b)
-insufficient. Shared per-app implementation has no separate visual acceptance.
-[Scope](../memory/dolby-audio.md).
+**2026-11-12:** [source/host/module and temporary phone review](../evidence/parts-full-review-20261112.md)
+passes within its native/profile/MiSound/focus scope; originals restored,
+translations separate. [Installed release smoke](../evidence/release-smoke-20261112.md)
+adds scoped acceptance, not physical-headset/acoustic certification.
 
 ## V-UI
 
-**2026-09-24 — source-checked and pushed.** Common [e0fd9ba](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e0fd9bac1fa69915345f91a41257a4119e479b70) removes duplicate
-MiSound titles; hardware [59188cf](https://github.com/PocoF3Releases/hardware_xiaomi/commit/59188cfbdba67b63ecf1882cf6bba94cf33cf35a) restores reset buttons and current-locale
-profile labels. Resource/API/diff checks passed; no build/device test in those
-turns. Dolby README [3b8b33e](https://github.com/PocoF3Releases/hardware_xiaomi/commit/3b8b33ec182663b992cc4234c72a72fadf193a43) was documentation-only.
+**2026-11-12 — temporarily device checked.** Seven Parts screens and representative
+dialogs, RTL, font1.3 and landscape reviewed against current Settings. Title/Info
+separation and downward RTL expansion verified. [Source/artifact and limits](../evidence/parts-full-review-20261112.md).
+Earlier view-only revisions are historical; [current Compose guidance](../memory/xiaomiparts-device-ux.md).
 
 ## V-TOUCH
 
@@ -42,11 +40,9 @@ scoped checks; not full A17 UI acceptance. [Scope](../memory/xiaomiparts-device-
 
 ## V-PROXIMITY
 
-**Recorded temporary device test and user confirmation.** Alioth the recorded candidate
-MIUS timeout correction stopped the observed idle error and delivered 0/5 cm
-near/far events. User reported proximity working during a call. This does not
-cover every call app/device; production uses the extraction/blob fix without
-root. [Guard and ownership](../memory/xiaomiparts-device-ux.md#alioth-ultrasound-proximity).
+**Recorded temporary device test; user-confirmed call behavior.** MIUS timeout fix
+returned 0/5 cm near/far events. Production uses extraction/blob integration without
+root; other call apps/devices are unverified. [Owner](../memory/xiaomiparts-device-ux.md#alioth-ultrasound-proximity).
 
 ## V-CAMERA
 
@@ -94,40 +90,38 @@ was added. The correction is provided by an upstream dependency; it is not a mai
 
 ## V-DOLBY
 
-Historical transport ACKs do not prove acoustic DSP/VQE/game processing. Older
-MiSound probes were not fully restorative. [Scope](../memory/dolby-audio.md).
-[Follow-up](../evidence/audio-subsystem-followup-20261025.md): enforcing candidate
-recording/lifecycle checks and artifact restoration; physical endpoint limits remain.
+[Nov 12](../evidence/dolby-voip-reentry-20261112.md): host239/module,
+28VoIP/4MIC, media, Off/On/restarts pass; settings/originals restored.
+ACK/quiet/mode-query fixes; no general speedup proven.
+[Parts/native](../evidence/alioth-audio-features-20261112.md). Headphone/acoustic/DSP/
+ROM acceptance unverified; translations separate.
 
 ## V-PLATFORM
 
-[Crypto/library recheck](../evidence/kernel-crypto-lib-recheck-20261026.md):
-27 fixes preserved; QRNG exact-length repair passes W=1/Image, host and enforcing
-phone checks. Nine reviewed sparse reports stay visible; lock tests pass. Original
-boot restored; prior GPU/display/hardware limits linked there.
+[Crypto/library acceptance and limits](../evidence/kernel-crypto-lib-recheck-20261026.md):
+27 fixes preserved; QRNG repair passes Image/host/phone checks. Nine reviewed sparse
+reports remain visible. Original boot restored.
 
 ## V-RELEASE
 
-[Release ledger](releases.md) owns maintainer-supplied publication status.
-No next ZIP hash or exact included-commit manifest is established by source
-completion, a draft banner or a rebased commit date.
+[Ledger](releases.md): publication status.
+[November12](../evidence/release-smoke-20261112.md): ZIP hash and scoped installed
+checks pass; full source manifest and physical endpoints remain uncertified.
 
 ## V-INDEX
 
-**Historical A17, September 2026.** [Recorded checks, snapshot and limits](../operations/repoindex.md#active-build-tree-and-historical-indexes).
-No new A17 indexing or benchmark here.
+**Historical September 2026.** [Build-tree index scope](../operations/repoindex.md#active-build-tree-and-historical-indexes).
 
 ## V-REF-INDEX
 
-**2026-10-25, host/source-checked.** Both bundles passed deep checks; standalone suite: 81 tests.
-[Audit and scope](../operations/repoindex.md#checked-coverage-and-speed).
-Implementation hashes passed; other files use metadata. No ROM/device test or
-future freshness guarantee.
+**2026-10-25 — host/source only.** Both reference bundles passed deep checks;
+standalone suite: 81 tests. [Coverage, measurements and limits](https://github.com/PocoF3Releases/references_code/blob/main/docs/VALIDATION.md).
+No ROM/device pass or future freshness guarantee.
 
 ## V-KNOWLEDGE
 
-[Guidance](../references/openai-guidance.md) applied; [routing](../references/cold-start-checks.md)
-tested locally. These are not paired Astra/Sol runs, API-cost or device tests.
+[Guidance](../references/openai-guidance.md) and [retrieval fixtures](../references/cold-start-checks.md)
+are local documentation checks, not live-model, API-cost or device tests.
 
 ## V-RECOVERY
 
@@ -136,8 +130,8 @@ WSL export/import, credential recovery or ROM build. Backups need restore testin
 
 ## Availability
 
-Selected sanitized evidence is supplied; raw dumps, logs, clips, projects and
-private backups are not. Request only needed artifacts. Archives authorize no work.
+Only sanitized evidence is bundled; raw diagnostics/private backups are not.
+Historical records authorize no work.
 
 ## V-PBRP
 
@@ -147,8 +141,7 @@ Current repairs are V-PBRP-20261009; branch HEAD differs from October 7 assets.
 
 ## V-SOURCE-20261009
 
-**2026-10-09 — source-checked.** Maintained ROM heads/product integration and
-separate recovery source reviewed; prior recovery-core edits preserved. No new build/device test. [Scope](changelog-audit.md).
+**2026-10-09 — source-checked.** [Scope](changelog-audit.md); no build/device test.
 
 ## V-CHANGELOG
 
@@ -160,10 +153,9 @@ No new device test.
 
 ## V-HBM-RECOVERY
 
-**2026-10-09 — host-tested.** Common the recorded candidate: actual display utility
-compiled with JDK 21/Android stubs; settings/sysfs failure, boot retry, normal
-disable and no-backup cases pass. Baseline the recorded candidate reproduces false success.
-No APK/device test or `~/evo/out` access. [Behavior](../memory/xiaomiparts-device-ux.md#hbm-brightness-recovery--october-9-maintenance).
+**2026-10-09 — host only.** Actual display utility compiled with JDK21/Android stubs;
+failure, retry, disable and no-backup cases pass. Baseline reproduced false success.
+No APK/device or out access. [Behavior](../memory/xiaomiparts-device-ux.md#hbm-brightness-recovery--october-9-maintenance).
 
 ## V-PBRP-20261009
 
@@ -212,8 +204,29 @@ boot restored; partition unchanged. No full conformance/release.
 
 ## V-KERNEL-ACTIVE
 
-[Identity](../evidence/kernel-redline-20261028.md); [installed KGSL](../evidence/kgsl-backports-20261028.md).
+[Identity](../evidence/kernel-redline-20261028.md); [installed KGSL](../evidence/kgsl-backports-20261028.md); [battery floor](../evidence/battery-thermistor-20261031.md).
+[November 12 rebase](../evidence/kernel-final-review-20261112.md) and [USB lifetime follow-up](../evidence/kernel-usb-lifetime-20261112.md): strict builds and scoped enforcing phone checks pass; Dagu hardware/bulk-import limits remain.
 
 ## V-KGSL-20261028
 
 [KGSL evidence](../evidence/kgsl-backports-20261028.md).
+
+## V-KERNEL-W123-20261102
+
+[Whole audit and audio follow-up](../evidence/kernel-audio-boundaries-20261102.md).
+
+## V-USB-20261103
+
+[Scope](../evidence/usb-recovery-20261103.md).
+
+## V-SOURCE-20261112
+
+[Refresh/blur](../evidence/source-refresh-20261112.md) ·
+[max-FPS](../evidence/max-fps-recording-20261112.md). Source/host only.
+
+## V-SOURCE-20261113
+
+**2026-11-13 — source/Git/host checked.** [Final source refresh](../evidence/source-refresh-20261113.md):
+50 repos/105 heads, 41 zero-behind upstream routes, 44 build routes, 47 preserved
+checkouts and four exact recovery patch replays. Current EvoX manifest/zstd selected.
+No Android build, flash or new runtime acceptance in this refresh.

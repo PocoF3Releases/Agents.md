@@ -15,6 +15,8 @@
 
 Update owners, not session diaries. Link historical records rather than duplicating
 technical explanations. Imported drafts/old next steps are not assignments.
+Private per-chat continuation follows [this protocol](continuity.md); never add
+its task records or raw chat histories to public Git.
 
 Track heads only for PocoF3Releases, PocoF3Releases-Recovery and maintainer-owned sources/tools. Do not add
 upstream dependencies or retired forks to the repository ledger. Keep necessary
@@ -43,14 +45,31 @@ for the task; copied notes do not synchronize account memory.
 ## Git and privacy
 
 Preserve unrelated work and upstream authorship. Use a component-scoped subject,
-factual body and actual validation. Assistant edits use this trailer:
+factual body and actual validation. Codex-assisted changes use exactly one
+user-selected disclosure trailer:
 
 ```text
-Co-authored-by: codex <noreply@openai.com>
+Assisted-by: LLM - GPT-6.1 Sol Max
 ```
 
-Use public project identity/noreply attribution; no invented model identity or
-AI trailers on untouched upstream imports. Follow requested commit/push scope and
+Keep the disclosure in the final trailer block with no trailing spaces or blank
+paragraphs; one terminal LF is conventional. Preserve human authors, dates,
+co-authors, DCO sign-offs and other trailers. Do not list an LLM as a human
+co-author or invent a human sign-off. Apply attribution changes only within the
+authorized fork-local history. Resolve canonical upstream refs before rewriting;
+every upstream ancestor keeps its original object ID and message, including
+previously merged AI-assisted work. Validate each retained feature patch and
+canonical ancestry separately. A source rebase changes the tested tree: preserve
+historical build/device source identities rather than transferring acceptance
+to the new base. Captured uname/build/version strings and raw log blocks
+retain their observed bytes; commit-link aliases are separate from runtime
+evidence. Untouched upstream imports keep their identity.
+Audit older Codex/OpenAI/ChatGPT credit spellings as well as the current tag;
+normalize only verified fork-local OpenAI credits, never blanket upstream history.
+Other clients disclose their actual assistance rather than claiming this model.
+The [November 13 migration](../evidence/assisted-by-migration-20261113.md) supersedes
+the historical Codex co-author convention and GitHub co-author recognition check.
+Follow requested commit/push scope and
 verify the remote ref. Authorized history rewrites require a recovery copy and
 explicit expected-head `--force-with-lease`; saved heads alone justify no rewrite.
 
@@ -61,9 +80,18 @@ necessary sanitized excerpts with identity/scope. [Privacy boundary](../archive/
 
 ## Internal agents
 
-Use `gpt-6.1-sol` with medium reasoning for new internal agents, following the
-user's current preference. Allow at most four concurrent threads including the
-parent. This supersedes the earlier low-reasoning/Light preference.
+All assigned agents may use any relevant available skill within the current task.
+Include the [skill routing guide](agent-skills.md) in each delegation; read matching
+SKILL.md instructions and discover live tools. This grants no new subsystem work,
+credentials or override of runtime controls. Keep shared edits/build/device ownership
+explicit and completed lanes closed.
+
+In Codex, use `gpt-6.2-sol` with max reasoning for new internal agents. Allow at
+most ten concurrent agents including the parent. Give each agent the task scope,
+source revisions, relevant evidence, ownership and completion checks.
+Claude Code must select only models its runtime actually exposes; the Codex
+model override does not install GPT access there. Respect the active client's
+concurrency limit.
 
 ## Local checks
 

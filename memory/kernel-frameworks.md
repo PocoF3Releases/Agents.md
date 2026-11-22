@@ -6,7 +6,7 @@ Target: POCO F3 / alioth, SM8250/Kona / Snapdragon 870-class hardware; Android 1
 
 `device/xiaomi/alioth/BoardConfig.mk` includes common BoardConfigCommon.mk. Its device.mk inherits common kona.mk, includes camera/miuicamera.mk and inherits vendor/xiaomi/alioth. Common kona.mk packages XiaomiParts and inherits vendor/xiaomi/sm8250-common. Camera integration inherits vendor/xiaomi/camera. Both camera delivery trees remain mandatory. Alioth-specific configuration belongs in alioth; shared init/audio/media/SELinux and Parts belong in sm8250-common. Standalone hardware/xiaomi owns reusable Xiaomi/Dolby integration.
 
-An uploaded full-Git ZIP is usable only when supplied in the current environment. Inspect status and remote divergence; restore ZIP-lost executable bits and symlinks without discarding edits. The known common `.clang-format` target is `../../../build/soong/scripts/system-clang-format`. Do not commit extraction damage or reset to an old snapshot automatically. [Original workspace evidence](kernel-frameworks.md).
+For supplied Git ZIPs, inspect divergence and restore extraction-damaged modes/symlinks without discarding edits. The known common `.clang-format` target is `../../../build/soong/scripts/system-clang-format`. Do not commit extraction damage or reset to an old snapshot automatically. [Original workspace evidence](kernel-frameworks.md).
 
 ## Rootdir and compatibility lessons
 
@@ -34,20 +34,19 @@ Historical boot outcomes and then-unresolved Cirrus/ultrasound behavior and the 
 
 ## Current source ownership
 
-Upstream dependencies already provide the absent-kernel-attribute ENOENT handling and optional BPF iterator log-spam correction. Preserve these integration facts without tracking upstream heads or restoring retired fork overrides. Our Android 17 frameworks/base contains independent high-FPS screen recording and blur suppression; compare current behavior before replaying old patches.
+Upstream dependencies already provide the absent-kernel-attribute ENOENT handling and optional BPF iterator log-spam correction. Preserve these integration facts without tracking upstream heads or restoring retired fork overrides. Framework recording controls remain independent; [current replay and blur policy](../evidence/source-refresh-20261112.md) replace historical patch assumptions.
 
-The retired font override is not a build requirement. Verify packaged assets when font work is requested.
+GPU donor/game experiments stay parked; see [graphics](gaming-graphics.md). Thermal protection stays enabled; diagnostic root modules are not production dependencies.
 
-GPU donor-driver, Turnip and game-setting experiments were parked by the maintainer. No broadly validated Unity/Unreal optimization, F8 GPU-driver compatibility, frame-generation port or unlocked 120fps is established. Keep thermal protection intact. Experimental root modules are not production fixes or required recovery dependencies.
-
-Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; [current fingerprint lifetime/lockout implementation](https://github.com/PocoF3Releases/hardware_xiaomi/commit/807111f89c95838abf8432e1b09f62ae4165cde5) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
+Standalone hardware/xiaomi fixes: the historical candidate rejects invalid legacy sensor-list/poll results and propagates direct-channel errors; the historical candidate initializes fingerprint pointers and cleans failed opens; the historical candidate replaces unsafe delayed-session references with weak references and idempotent close; current fingerprint lifetime/lockout implementation (historical `807111f89c95838abf8432e1b09f62ae4165cde5`) initializes lockout state and stops authentication during lockout. Recorded validation is target syntax compilation (sensor arm/arm64) and diff checks, not device replacement or biometric certification.
 
 ## Connectivity boundaries
 
-High-FPS
-screen recording and recording-blur suppression are independent features/commits;
-neither should require the other. Verify WFD/ELF dependency rewrites against the
-active manifest instead of restoring them by age alone.
+[High-FPS recording](../evidence/max-fps-recording-20261112.md) and blur
+suppression remain independent. Suppression is
+device-opt-in and honors Keep blur effects; [listener/cleanup behavior and
+limits](../evidence/source-refresh-20261112.md#recording-blur). Verify WFD/ELF
+rewrites against the active manifest, not patch age.
 
 Common the historical candidate removed obsolete Bluetooth build configuration. Source policy
 and library presence were reviewed, but no Bluetooth audio headset or WFD sink
@@ -73,13 +72,11 @@ modernized; these are build maintenance, not user-visible performance claims.
 
 ## Current kernel source checks
 
-[Redline identity](../evidence/kernel-redline-20261028.md) is host-checked;
-only LOCALVERSION changes in all twelve generated configs. No branded Image
-was built/flashed. Main retains [strict W=1/Werror and enforcing phone acceptance](../evidence/kernel-sparse-errors-20261028.md),
-with taint0 after normal boot. All 16 errors/five requested contexts are closed;
-the [2,954-warning backlog](../evidence/kernel-sparse-backlog-20261028.md) is unreviewed.
-System sources and thermal/security settings are unchanged. [Prior CPU scope](../evidence/kernel-baseline-audit-20261027.md)
-is historical. Broader UBSan is parked; open findings are not certified safe.
+[November 12 rebase](../evidence/kernel-final-review-20261112.md): latest Lineage base, owned cleanup and 28 corrections; config adds only CMA_SYSFS. [USB lifetime follow-up](../evidence/kernel-usb-lifetime-20261112.md): strict/Sparse and Alioth real teardown checks pass; PS5169 is Dagu-only with hardware unverified. Audio/GPS/thermal-clamp restrictions stay parked. [Earlier correctness](../evidence/kernel-correctness-followup-20261102.md), [audio](../evidence/kernel-audio-boundaries-20261102.md) and [Sparse backlog](../evidence/kernel-sparse-backlog-20261028.md) retain their scopes; no full recount or bulk-import certification.
+
+[Full-series compatibility plan](../evidence/kernel-contract-plan-20261102.md): incomplete; boundary reproduction paused, ordinary consumer checks remain.
+
+[F2FS](../evidence/platform-recheck-20261102.md) / [charging inputs](../evidence/charging-controls-20261102.md): tested and installed; config unchanged.
 
 ## Intermittent shutdown investigation
 

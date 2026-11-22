@@ -4,14 +4,14 @@
 
 Alioth uses legacy Audio HAL 6.0 / DAX3-era components including `libhwdap.so`, `libswgamedap.so` and `libswvqe.so`. Blob presence, UUIDs and control acknowledgments do not establish audible processing. Do not assume modern spatializer support or transplant a Codec2 design.
 
-Standalone `hardware/xiaomi/dolby` owns app/UI and shared DMS policy; frameworks/av owns native lifecycle, flags and effect transport; common/device configuration owns genuine platform opt-ins. [Source ownership and observed heads](../state/repositories.yaml).
+Owners: `hardware/xiaomi/dolby` app/UI/DMS policy; frameworks/av native lifecycle, flags and transport; device configuration platform opt-ins. [Source heads](../state/repositories.yaml).
 
 
 ## Accepted AC-4 integration
 
 The opted-in OMX path uses `media.dolby_ac4_21_entry_tables`: stock table A is 256 bytes; B/C each have 21 entries / 84 bytes. Private request size is 452 bytes with tables at `0x1c`, `0x11c`, `0x170`; legacy size remains 444 bytes. The opted-in index is `0x6f400009`, not default `0x6f400008`. Keep the default shared enum and Codec2 behavior unchanged.
 
-Common [428db4a](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/428db4a8318ba1c109ced5526e2596d8d9e88279) enables the option; [e019493](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/e019493ff423ad760403e54beb692f92d9089ad2) packages `libstagefright_omx.vendor` and restores `/vendor/lib/vndk/libstagefright_omx.so` -> `/vendor/lib/libstagefright_omx.so`. Wrong index caused UnsupportedIndex `0x8000101a` / configure -1010. After that correction, `Error 4 in dlb_ac4dec_input_stage_open` came from the obfuscated helper-library lookup / `function_a`, `function_b`, `function_c` resolution, not bad table contents. [V-AC4](../state/validation.md#v-ac4) owns decoding, audible acceptance and test limits.
+Common [0a1453c](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0a1453cbd0a3bc185b92c6981a185813c42f6e8a) enables the option; [a757117](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/a757117e7cdd33b2f5e021175d371587e1ba1ad0) packages `libstagefright_omx.vendor` and restores `/vendor/lib/vndk/libstagefright_omx.so` -> `/vendor/lib/libstagefright_omx.so`. Wrong index caused UnsupportedIndex `0x8000101a` / configure -1010. After that correction, `Error 4 in dlb_ac4dec_input_stage_open` came from the obfuscated helper-library lookup / `function_a`, `function_b`, `function_c` resolution, not bad table contents. [V-AC4](../state/validation.md#v-ac4) owns decoding, audible acceptance and test limits.
 
 Do not import a complete legacy VNDK, redirect current OMX foundation to v33, or add an unproven foundation compatibility link. Shipped Dolby already uses `libstagefright_foundation-v33.so`; current OMX uses current foundation. Stock/Shipped Alioth decoder code/rodata matched after dependency rewriting. Marble's 64-bit Codec2 component is not this ABI; its B/C dimensions were not established. Audio and OMX services remain 32-bit; no 64-bit-only migration was delivered.
 
@@ -38,12 +38,10 @@ current vendor OMX uses current foundation by basename. `libxlog.so` is already
 packaged at `vendor/lib/vndk/libxlog.so`, referenced by audio and sound-trigger
 HALs. No evidence justified additional foundation or 64-bit VNDK symlinks.
 
-A historical config audit parsed all audio XMLs, resolved policy includes/routes,
-checked microphone-array lengths and both 769-path mixer graphs, and found
-monotonic volume curves. Sixteen obsolete COMP1/COMP2 controls were removed.
-Twenty effect libraries being mapped is not audible activation proof; idle DSP
-control-read errors must not be mistaken for an active-route failure. Bluetooth,
-USB, calls, recording and hotword paths require their actual endpoints.
+Historical checks passed XML/includes/routes, microphone-array lengths, both
+769-path mixer graphs and volume-curve monotonicity; sixteen obsolete COMP1/COMP2
+controls were removed. Mapped effects do not prove activation; idle DSP read errors
+do not prove active-route failure. External/hotword paths need actual endpoints.
 
 ## Final capture-library correction
 
@@ -122,3 +120,14 @@ The [subsequent closure](../evidence/audio-framework-closure-20261025.md) resolv
 Java gaps and covers 50 native inputs. Stock headphone 3D/SoundID are concrete
 optional gaps in Parts, not verified feature ports. The firmware dump contains no
 personal calibration; do not invent gains or enable them without endpoint tests.
+
+[DAP parameters](../evidence/dolby-dap-params-20261031.md): stock IDs 101-116,
+QDSP keys and ranges. [GEQ/locale fixes](../evidence/dolby-review-20261031.md):
+enable-failure reporting and separate translations, host/APK verified.
+[MiSound map](../evidence/misound-params-20261101.md); Dolby/MiSound coexist.
+
+[Routes](../evidence/audio-route-compatibility-20261102.md): GSM fix/limits.
+[Formats](../evidence/audio-formats-20261102.md): app/root PCM matrix and limits.
+
+
+[Nov12](../evidence/dolby-voip-reentry-20261112.md)

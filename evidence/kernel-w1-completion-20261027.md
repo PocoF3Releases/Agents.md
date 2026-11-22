@@ -2,7 +2,7 @@
 
 > Kernel links were updated to the [finalized history](kernel-history-map-20261027.json). Recorded test identities and measurements remain historical; corresponding rewritten commits are not claims of testing those hashes.
 
-**Source/build/host/device checked.** The earlier [1,138-diagnostic failure](kernel-main-install-20261027.md) is superseded by a successful full Image W=1 target at `40c7e956508d` ([final history](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b4830136af3fb5267814a77bd1e68ae4a14a4efd)). [Focused changes](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/compare/a028da5feaa05034c7cf8d3956cf36c94f25a961...40c7e956508d329580f457740b4ef5bd5efc7fac) retain approved implementations and original human authorship. Android system-side sources, production config, Werror, toolchain and thermal policy are unchanged. No warning-suppression flags/attributes, production test fixtures or feature disabling were added.
+**Source/build/host/device checked.** The earlier [1,138-diagnostic failure](kernel-main-install-20261027.md) is superseded by a successful full Image W=1 target at `40c7e956508d` (final history (historical `b4830136af3fb5267814a77bd1e68ae4a14a4efd`)). [Focused changes](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/compare/a028da5feaa05034c7cf8d3956cf36c94f25a961...40c7e956508d329580f457740b4ef5bd5efc7fac) retain approved implementations and original human authorship. Android system-side sources, production config, Werror, toolchain and thermal policy are unchanged. No warning-suppression flags/attributes, production test fixtures or feature disabling were added.
 
 ## Source and review
 
@@ -12,10 +12,10 @@ Driver fixes include failed GENI DMA submission cleanup, the minidump count decr
 
 Adapted human backports retain author/date/trailers and describe legacy deltas:
 
-- [Kees Cook: BPF code-address immediates](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/085c27fe0fac27e615bffcc5891fdb4b4aa4f920).
-- [He Ying: SMP panic-stop declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b780e75f5a5b48026b6c931cb283f2085330d6b6).
-- [Arnd Bergmann: remaining task-cache declaration](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/00f1fd6fe41956460b17f1df916864f63c3f20b6).
-- [Andy Shevchenko: hrtimer clock switch](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/75628430b1e54d056d3d85e9c09b711b4eece5a2).
+- Kees Cook: BPF code-address immediates (historical `085c27fe0fac27e615bffcc5891fdb4b4aa4f920`).
+- He Ying: SMP panic-stop declarations (historical `b780e75f5a5b48026b6c931cb283f2085330d6b6`).
+- Arnd Bergmann: remaining task-cache declaration (historical `00f1fd6fe41956460b17f1df916864f63c3f20b6`).
+- Andy Shevchenko: hrtimer clock switch (historical `75628430b1e54d056d3d85e9c09b711b4eece5a2`).
 
 ## Build and host regressions
 

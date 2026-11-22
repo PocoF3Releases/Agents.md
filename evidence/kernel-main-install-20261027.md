@@ -68,7 +68,7 @@ Image SHA-256:
 
 ## Phone acceptance and persistent deployment
 
-The tested source is `a028da5feaa0` ([final history](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc754b6127edd973434901d010fe5bd04e32bbd8)).
+The tested source is `a028da5feaa0` (final history (historical `bc754b6127edd973434901d010fe5bd04e32bbd8`)).
 The existing Magisk ramdisk was preserved; the candidate kernel and unpacked
 ramdisk hashes were checked before boot. On-device acceptance passes:
 
@@ -107,8 +107,8 @@ this task, and this record is not a complete production-release sign-off.
 
 ## Feature commits
 
-- [soc: qcom: service_notifier: correct private QMI descriptors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fcf509b9a2f04c4cabe5a41424b74fc90ab12882)
-- [soc: qcom: service_notifier: reject error handles on unregister](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5e5bc38864a4ea60cd9ac4cd53f27c7fe5be54f2)
-- [dma: qcom: gpi: preserve register address-space contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/87f62e240a823523e854e240a342669dcdf9832a)
-- [usb: gadget: ncm: decode MirrorLink version in CPU byte order](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bb606a6a396db0e8a489e829ac775b44f974f6b2)
-- [usb: gadget: uac1: reject missing controls in configfs reads](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc754b6127edd973434901d010fe5bd04e32bbd8)
+- soc: qcom: service_notifier: correct private QMI descriptors (historical `fcf509b9a2f04c4cabe5a41424b74fc90ab12882`)
+- soc: qcom: service_notifier: reject error handles on unregister (historical `5e5bc38864a4ea60cd9ac4cd53f27c7fe5be54f2`)
+- dma: qcom: gpi: preserve register address-space contracts (historical `87f62e240a823523e854e240a342669dcdf9832a`)
+- usb: gadget: ncm: decode MirrorLink version in CPU byte order (historical `bb606a6a396db0e8a489e829ac775b44f974f6b2`)
+- usb: gadget: uac1: reject missing controls in configfs reads (historical `bc754b6127edd973434901d010fe5bd04e32bbd8`)

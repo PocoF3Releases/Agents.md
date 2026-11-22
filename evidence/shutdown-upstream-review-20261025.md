@@ -3,7 +3,7 @@
 This is an upstream-replacement audit, separate from the earlier
 [phone acceptance](shutdown-investigation-20261025.md). The published kernel
 branch now contains the applied, build-tested and temporarily device-tested
-replacement series through [ee8cd976d579](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ca1a538b314b791b28bbe4e318be4f338cc21005).
+replacement series through `ca1a538b314b791b28bbe4e318be4f338cc21005`.
 The maintainer authorized the history rewrite; an explicit expected-head lease
 protected the push and a local backup preserves the former published stack.
 
@@ -72,12 +72,12 @@ prepared-series mapping are under `~/evo/.repo/upstream-shutdown-review-20261025
 
 The public replacement commits preserve original authorship:
 
-- [a1925f97b4b5](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2c2ac210b4d1476e58b542a7b7437767418f6a8c): Luc Van Oostenryck's generic per-CPU fix.
-- [14f8da1a63ff](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d02e7a86b2443567af8b54eb1f473f2d44b4dfd2): Mukesh Ojha's PMU declaration fix.
-- [d6914617fbe8](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/daf3b2adf2e6206df25c7314ffd85f25f1c3b19f): Ben Dooks's static-inline fix.
-- [ee8cd976d579](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ca1a538b314b791b28bbe4e318be4f338cc21005): remaining local ownership contracts.
+- `2c2ac210b4d1476e58b542a7b7437767418f6a8c`: Luc Van Oostenryck's generic per-CPU fix.
+- `d02e7a86b2443567af8b54eb1f473f2d44b4dfd2`: Mukesh Ojha's PMU declaration fix.
+- `daf3b2adf2e6206df25c7314ffd85f25f1c3b19f`: Ben Dooks's static-inline fix.
+- `ca1a538b314b791b28bbe4e318be4f338cc21005`: remaining local ownership contracts.
 
-The independent [timer repair](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1a8f7faa9d86c864ad81f598c71af7466eb62fcf)
+The independent timer repair (historical `1a8f7faa9d86c864ad81f598c71af7466eb62fcf`)
 is preserved unchanged. No approved feature, configuration or production policy
 was dropped. No test modules, fixtures or Markdown were added to the kernel.
 

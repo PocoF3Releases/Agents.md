@@ -2,7 +2,7 @@
 
 ## Frozen baseline
 
-The [accepted kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1efb0bf8d7a52abc450285c470bb34c28ad57dfd)
+The accepted kernel (historical `1efb0bf8d7a52abc450285c470bb34c28ad57dfd`)
 passes strict W=1/Werror and targeted phone checks. Its full unlimited C=2 run
 still emits **2,954 warning reports and zero errors** after the sixteen errors
 and five requested contexts were fixed. [Acceptance](kernel-sparse-errors-20261028.md).

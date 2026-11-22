@@ -79,9 +79,9 @@ The [Alioth timing audit](../evidence/display-timing-20261024.md) separates nati
 60/120 Hz panel support from SurfaceFlinger work budgets. The follow-up retains the original 60 Hz scheduling after GPU stress exposed
 small repeatable differences; only the 120 Hz latency reduction remains.
 Rendering and video checks are scoped, not a zero-jank or all-games guarantee.
-No 240 Hz or speculative panel overclock was accepted.
-The restored `~/references_code/android-t-qcom` and Qualcomm vendor snapshot are
-reference material, not replacement Android 17 framework dependencies.
+No panel overclock was accepted.
+Use the restored Android/Qualcomm references for comparison; current A17 sources
+decide integration.
 
 ## Refresh-switch backlog — October 25
 
@@ -131,8 +131,8 @@ calibration port was accepted. The published Alioth overlay holds adaptive refre
 at 120 Hz below Android brightness 55 using the existing blocking-zone policy.
 Explicit 60 Hz caps and verified Battery Saver behavior remain; thermal protection
 was retained. This avoids automatic pumping, not manual-mode optical mismatch.
-Runtime-equivalent policy and resource checks passed; the production RRO needs the
-next ROM build. Original device state and clean kernel sources/output were restored.
+Runtime-equivalent checks passed. On November 2 the installed RRO matches the build
+and its low-zone policy is active; see [checkpoint](../evidence/platform-recheck-20261102.md).
 
 The follow-up compensation audit confirmed the installed stock calibration XML
 and core Qualcomm color backend. Alioth's PCC-GABB threshold is zero; the inspected

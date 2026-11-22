@@ -14,7 +14,7 @@ legacy mismatch/errno check. The original installed 32-bit shared library failed
 nine of thirteen early-exit/buffer cases. This is controlled fault injection into
 library operations, not a claim that a physical DSP timeout was triggered.
 
-[The capture fix](https://github.com/PocoF3Releases/external_tinycompress/commit/6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9) supplies ETIMEDOUT on blocking poll timeout and ENODATA on blocking
+The capture fix (historical `6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9`) supplies ETIMEDOUT on blocking poll timeout and ENODATA on blocking
 EOF. On blocking early termination it clears only the unread buffer remainder,
 including hard-error and pause exits. Captured bytes and returned byte counts/
 negative errors are preserved. Full reads do no additional clearing; nonblocking
@@ -61,7 +61,7 @@ Original versus tested candidate library SHA-256:
 | ARM64 | e2e75639b24979a85a54d4dba13b51ec7a1879ffcd04b9ff4dbe943a7746d04e | 11b3f19c2801491cb52d8843bf681a4c25e96c939d04db77f967f7f18d4f60cd |
 
 The capture fix is a standalone tinycompress commit. The hardware/xiaomi
-[translation/resource cleanup](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b653ae1cbb59c26410eae3b1b22e0029781d254a)
+translation/resource cleanup (historical `b653ae1cbb59c26410eae3b1b22e0029781d254a`)
 remains separate and unchanged. Recovery source overlays and other audio features
 are not modified. Permanent inclusion requires the next full ROM build; the
 phone overlay is diagnostic only. After the overlay was removed, Android booted,
@@ -98,6 +98,6 @@ removed and both original library hashes were verified again. Android booted,
 audio mode was MODE_NORMAL and SELinux was Enforcing. All device diagnostic
 files, including the generated silent MP3, were removed.
 
-The [capture commit](https://github.com/PocoF3Releases/external_tinycompress/commit/6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9) is unchanged; translation/resource changes remain solely
+The capture commit (historical `6e5f9422ece80862ad578ddf5e07d2c1e6fdd6c9`) is unchanged; translation/resource changes remain solely
 in their existing separate hardware/xiaomi commit. No additional production
 correction was needed after this review.

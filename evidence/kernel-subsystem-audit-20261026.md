@@ -27,11 +27,11 @@ format mismatches. They are not all evidence of broken hardware.
 
 ## Separate repairs
 
-- [ACPI: Declare architecture post-init hook without CONFIG_ACPI](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1b4fcaae69685c035018b9396ac84afb09fffc49).
-- [seq_file: fix NULL pointer arithmetic warning](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/68b5c164b6dc42734f2063a9f4f245296255bcf7).
-- [Input: xiaomi: Validate touch ioctl and debug inputs](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7dbe1011d557c0059eb8678bdc56d69db720cde7).
-- [wifi: qcacld-3.0: Correct shared header search paths](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d7dbf5c7babed2e2f7f19144c4bf9caba75d0f4c).
-- [soc: qcom: spss: Report failed event result copies](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/52868ae0fd8cf11612a47f1f505d375486d0e80c).
+- ACPI: Declare architecture post-init hook without CONFIG_ACPI (historical `1b4fcaae69685c035018b9396ac84afb09fffc49`).
+- seq_file: fix NULL pointer arithmetic warning (historical `68b5c164b6dc42734f2063a9f4f245296255bcf7`).
+- Input: xiaomi: Validate touch ioctl and debug inputs (historical `7dbe1011d557c0059eb8678bdc56d69db720cde7`).
+- wifi: qcacld-3.0: Correct shared header search paths (historical `d7dbf5c7babed2e2f7f19144c4bf9caba75d0f4c`).
+- soc: qcom: spss: Report failed event result copies (historical `52868ae0fd8cf11612a47f1f505d375486d0e80c`).
 
 The ACPI repair selects only the two applicable header hunks from Arnd Bergmann's
 [upstream consolidation](https://github.com/torvalds/linux/commit/ad1a48301f659a02df5bff0a121d4a5c0411d36b).

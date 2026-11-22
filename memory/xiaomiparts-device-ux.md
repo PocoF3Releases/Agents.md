@@ -22,27 +22,32 @@ Keep the existing per-app service and four-value profile contract. Alioth aim/st
 
 ## Alioth ultrasound proximity
 
-Alioth the historical candidate patches the exact stock MIUS zero-result poll timeout branch to retry after its existing flush check and mutex unlock. Stock maps the eight-second idle timeout to EIO, causing repeated sensor-service errors. Preserve genuine errors and event handling. Extraction is guarded by stock/patched SHA-256, is idempotent and rejects unknown binaries; inspect extract-files for the exact hashes before operating on a new dump.
+The guarded stock MIUS fix retries its eight-second idle timeout after the flush
+check and mutex unlock, preserving real errors/events. Extraction accepts only
+known stock/patched hashes and is idempotent; inspect extract-files before a new
+dump. Temporary mount tests delivered near/far events (0/5 cm), and the maintainer
+confirmed one call. This does not certify every app/device or require a root mount.
 
-Recorded temporary mount stopped idle errors and delivered near/far events (0/5 cm); the maintainer reported proximity working in a call. This is scoped acceptance of that test, not proof for all call apps or other SM8250 devices. Keep the source extraction fix and packaged blob consistent; do not require a permanent root mount. Later AW8697 work is owned by [haptics](haptics.md).
+[November 2 audit](../evidence/proximity-contract-20261102.md): kernel callback
+lifetime fixed and phone-tested; the separate stock MIUS flush delay remains.
 
 ## HBM brightness recovery — October 9 maintenance
 
-Common the historical candidate preserves successful MIN/PEAK writes and independent Smooth Display changes across refresh-service recreation. the historical candidate validates/stages regional thermal maps, atomically publishes then restarts mi_thermald; preparation failure retains the active map/daemon. Stock limits remain unchanged. HBM disable keeps a brightness backup on settings failure, reports failure and retries during boot; failed sysfs disable retains enabled state. An off state without a backup never changes brightness. [Source evidence](../state/validation.md#v-source-20261009), [HBM tests](../state/validation.md#v-hbm-recovery).
+The historical implementation preserves successful MIN/PEAK writes and independent Smooth Display changes across refresh-service recreation. the historical candidate validates/stages regional thermal maps, atomically publishes then restarts mi_thermald; preparation failure retains the active map/daemon. Stock limits remain unchanged. HBM disable keeps a brightness backup on settings failure, reports failure and retries during boot; failed sysfs disable retains enabled state. An off state without a backup never changes brightness. [Source evidence](../state/validation.md#v-source-20261009), [HBM tests](../state/validation.md#v-hbm-recovery).
 
 ## October 10 touch controls
 
-Common the historical implementation routes zero response/sensitivity through the existing Alioth reset helper. FocalTech modes 2/3 accept 1–5, clamp raw zero to 1, and use firmware default 3. Explicit tuning and other-device dispatch are preserved.
+Common The historical implementation routes zero response/sensitivity through the existing Alioth reset helper. FocalTech modes 2/3 accept 1–5, clamp raw zero to 1, and use firmware default 3. Explicit tuning and other-device dispatch are preserved.
 
-the historical implementation replaces the expert slider with a tuning-mode selector, groups main/fine manual adjustments, and keeps edge protection independent. Off/preset/global-override states hide controls that do not apply. The page queries Alioth HAL ranges, reads the edge default, preserves old integer presets and manual values, and offers per-app reset without changing enable state. Help replaces the unrelated thermal information/search actions on this page. Firmware presets are alternatives to manual tuning, not quality rankings; maximum values are not universally better.
+The historical implementation replaces the expert slider with a tuning-mode selector, groups main/fine manual adjustments, and keeps edge protection independent. Off/preset/global-override states hide controls that do not apply. The page queries Alioth HAL ranges, reads the edge default, preserves old integer presets and manual values, and offers per-app reset without changing enable state. Help replaces the unrelated thermal information/search actions on this page. Firmware presets are alternatives to manual tuning, not quality rankings; maximum values are not universally better.
 
-The global responsiveness setting takes priority; saved per-app tuning is paused until it is disabled. Manual zero restores firmware defaults. Edge zero explicitly disables filtering; a new/reset Alioth profile uses the HAL default (2 in the inspected kernel). The global option does not change display refresh rate. New strings use Android resource fallback; retained locale files are untouched. Host state tests do not establish translated or rendered UI acceptance.
+The global responsiveness setting takes priority; saved per-app tuning is paused until it is disabled. Manual zero restores firmware defaults. Edge zero explicitly disables filtering; a new/reset Alioth profile uses the HAL default (2 in the inspected kernel). The global option does not change display refresh rate. New strings use Android resource fallback; retained locale files are untouched. Host tests do not verify translated/rendered UI.
 
 [Validation and deployment limits](../state/validation.md#v-device-20261010).
 
 ## Kotlin and Compose migration — October 10
 
-Common the historical candidate finishes eight feature-scoped commits: shared Compose/utilities, display, global touch polling, speaker, MiSound, refresh modes, thermal/touch/reference, and entry-point/resource cleanup. All source folders are Kotlin; old layouts/preference XML/custom preference views and unused drawables are removed. Keep translated strings/arrays, launcher/tile/profile icons and the cleaning tone. Default DP preferences, package keys, boot/manifest entry points, sysfs/HAL protocols and regional policy tables remain compatible.
+The historical implementation finishes eight feature-scoped commits: shared Compose/utilities, display, global touch polling, speaker, MiSound, refresh modes, thermal/touch/reference, and entry-point/resource cleanup. All source folders are Kotlin; old layouts/preference XML/custom preference views and unused drawables are removed. Keep translated strings/arrays, launcher/tile/profile icons and the cleaning tone. Default DP preferences, package keys, boot/manifest entry points, sysfs/HAL protocols and regional policy tables remain compatible.
 
 Use checkout-provided AndroidX and Soong’s matching Compose compiler (inspected UI 1.12.0-alpha01, Material3 1.5.0-alpha16, Kotlin/Compose compiler 2.2.0); do not introduce Gradle or replace platform modules. Screens refresh hardware-owned state on resume. Row switches and sliders carry accessible semantics. Profile detail formatting uses the non-formatting resource overload when no arguments exist, preserving literal percent text.
 
@@ -50,9 +55,11 @@ Use checkout-provided AndroidX and Soong’s matching Compose compiler (inspecte
 
 ## Production Compose adaptation — October 10
 
-Common the historical candidate aligns Parts with the maintainer’s ROM Settings: platform surface tokens and variable fonts, compact font-aware toolbars, grouped outer/inner corners, 2 dp row gaps, pill primary switches and check/cross thumbs. Thermal rows separate profile selection from touch actions. Touch keeps presets, manual main/fine controls and independent edge protection. Reference lists use official Material Symbols Rounded on tonal circles and in choice dialogs; Mi Sound presets use matching rounded outlines and EQ spectra; details use padded text and separate CPU panels. Choice radio groups scroll and dismiss on selection or Back. [Verification](../evidence/device-20261010.md#settings-aligned-compose-revision).
+The historical implementation aligns Parts with the maintainer’s ROM Settings: platform surface tokens and variable fonts, compact font-aware toolbars, grouped outer/inner corners, 2 dp row gaps, pill primary switches and check/cross thumbs. Thermal rows separate profile selection from touch actions. Touch keeps presets, manual main/fine controls and independent edge protection. Reference lists use official Material Symbols Rounded on tonal circles and in choice dialogs; Mi Sound presets use matching rounded outlines and EQ spectra; details use padded text and separate CPU panels. Choice radio groups scroll and dismiss on selection or Back. [Verification](../evidence/device-20261010.md#settings-aligned-compose-revision).
 
-Keep checkout dependencies: Material3 1.5.0-alpha16, runtime/UI 1.12.0-alpha01. Runtime 1.13.0-alpha01 release notes were checked (mutation-policy and saved-state APIs, minification flag syntax); using those APIs would require a separately reviewed shared SDK update. No shared prebuilt, build config or resource IDs changed for this adaptation.
+Keep Material3 1.5.0-alpha16 and runtime/UI 1.12.0-alpha01. Runtime
+1.13.0-alpha01 APIs need a separately reviewed shared SDK update. This UI
+adaptation changed no shared prebuilts, build configuration or resource IDs.
 
 [Production verification](../evidence/device-20261010.md#production-compose-adaptation) distinguishes staged XiaomiParts-only installation, actual system-UID checks and hardware readback from host fixtures. Reuse isolated compiler/dex tools with temporary outputs; never infer bounded work from a module dry run.
 
@@ -63,3 +70,11 @@ Feedback uses amplitude-capable Alioth touch waveforms, 14 ms non-repeating/40 m
 Production is tested through a staged single-app `/data/app` update with UID 1000/Enforcing. That update overrides later ROM base APKs: inspect `pm path` and remove the system-app update through package manager before ROM-base acceptance. Keep screenshots/recordings and raw preferences private; publish sanitized evidence. Original hardware/user settings are restored after tests.
 
 [Sound group/translation evidence](../evidence/evox-native-recovery-20261014.md#device-sound-category).
+
+Review fixes: [Oct 31](../evidence/parts-review-20261031.md) HBM rollback, refresh
+retries, EQ drafts, strings; [Nov 1](../evidence/parts-review-20261101.md) resume.
+
+## November 12 review
+
+[Final contracts/checks](../evidence/parts-full-review-20261112.md): six fixes plus
+separate translations; module/phone checked, originals restored. Physical limits remain.

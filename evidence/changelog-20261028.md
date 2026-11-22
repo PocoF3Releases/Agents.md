@@ -18,8 +18,8 @@ conservatively. Tree/semantic comparison is used rather than commit dates/counts
 
 The old kernel source object was rewritten, but its saved tree
 `a0b1c1a4d16c276ea8c9ec987d59ed6b3218aa85` exactly equals the retained
-[baseline equivalent](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/97dc957c03c4cdec55d2045381b6d80dadc8c7d9).
-That commit is an ancestor of the [current source](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c).
+baseline equivalent (historical `97dc957c03c4cdec55d2045381b6d80dadc8c7d9`).
+That commit is an ancestor of the current source (historical `1e45b8cc1cbb9229a464395b5a8e12d8b4bc349c`).
 Rewritten IDs and documentation-only commits are not new user features.
 
 ## Eligible new behavior
@@ -33,7 +33,7 @@ Rewritten IDs and documentation-only commits are not new user features.
 | Camera firmware/IRQ cleanup and hardware video EOS/STOP failure ownership | [Camera paths](kernel-techpack-completion-20261026.md), [EOS ownership](kernel-techpack-eos-gem-20261026.md) |
 | MTP length/compat handling, WLAN IPv6 reads and rejected-TCP-change resource leaks | [USB](kernel-mtp-dwc3-contracts-20261026.md), [CPU/network audit](kernel-baseline-audit-20261027.md) |
 | Swap-cache lifetime, partial hardware RNG reads and crypto-engine cleanup | [Swap lifetime](kernel-sparse-errors-20261028.md), [RNG tests](kernel-crypto-lib-recheck-20261026.md), [crypto audit](kernel-crypto-lib-audit-20261026.md) |
-| SPU unmount permission and perf timer cancellation lock cycle | [Common policy](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/f59ca6bca5f838cb0030cd5a4dd96d7ee1625083), [timer/provenance tests](shutdown-upstream-review-20261025.md) |
+| SPU unmount permission and perf timer cancellation lock cycle | Common policy (historical `f59ca6bca5f838cb0030cd5a4dd96d7ee1625083`), [timer/provenance tests](shutdown-upstream-review-20261025.md) |
 
 On October 28 the maintainer confirmed that intermittent shutdown hangs are no
 longer occurring. Both drafts omit a shutdown known-issue warning. Historical

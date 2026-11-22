@@ -37,15 +37,15 @@ release-wide functional certificate.
 
 ## Separate repairs
 
-- [ASoC: cs35l41: Preserve DSP raw register endian types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cace5faa4a777aeb61cf6607b89c735000b4e7a4).
-- [ASoC: cs35l41: Bound calibration control buffers and errors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/af86ab9f96535ef86776dcb29b3af7a40aeea31c).
-- [media: camera: Correct CDM helper ownership](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/9ca8795803a720f098a41f75454ee96ed009c87e).
-- [media: camera: Keep RAM and MMIO copy addresses distinct](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e609be40bfa354a2e13ec5600ff31ea58cf5ba84).
-- [media: vidc: Keep V4L2 callbacks private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e8d7f14e6104c183628f6cde960d28e2248ce303).
-- [media: vidc: Return native poll masks through the stack](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e59c9e97e6f0b95b43e15e3d4c4ac7408fdb5367).
-- [drm: dsi: Keep panel command builders private](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5b63c6196adee14a28b0a2981c8bbad8a2743e6e).
-- [drm: sde: Correct command encoder helper ownership](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0add194f924417363213166fcc36a350da80cfb0).
-- [net: rmnet: Share RCU-aware performance hook declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a7a655ccadb22fe516b7f0c84063b8f93a29ee95).
+- ASoC: cs35l41: Preserve DSP raw register endian types (historical `cace5faa4a777aeb61cf6607b89c735000b4e7a4`).
+- ASoC: cs35l41: Bound calibration control buffers and errors (historical `af86ab9f96535ef86776dcb29b3af7a40aeea31c`).
+- media: camera: Correct CDM helper ownership (historical `9ca8795803a720f098a41f75454ee96ed009c87e`).
+- media: camera: Keep RAM and MMIO copy addresses distinct (historical `e609be40bfa354a2e13ec5600ff31ea58cf5ba84`).
+- media: vidc: Keep V4L2 callbacks private (historical `e8d7f14e6104c183628f6cde960d28e2248ce303`).
+- media: vidc: Return native poll masks through the stack (historical `e59c9e97e6f0b95b43e15e3d4c4ac7408fdb5367`).
+- drm: dsi: Keep panel command builders private (historical `5b63c6196adee14a28b0a2981c8bbad8a2743e6e`).
+- drm: sde: Correct command encoder helper ownership (historical `0add194f924417363213166fcc36a350da80cfb0`).
+- net: rmnet: Share RCU-aware performance hook declarations (historical `a7a655ccadb22fe516b7f0c84063b8f93a29ee95`).
 
 CS35L41 is an observed bound amplifier on this phone. Raw DSP scratch/ack words
 retain big-endian types without changing encoded values. Scalar control buffers

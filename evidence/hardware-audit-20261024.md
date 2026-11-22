@@ -10,8 +10,8 @@ bounded checks with existing checkout tools.
 
 ## Useful production correction
 
-- [Device extractor](https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/8c41b46ac69847a68cbb3717851f3546e8acca39).
-- [Matching vendor HAL](https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/a9e382360adc8124f71f96590ff823b1fc688413).
+- Device extractor (historical `8c41b46ac69847a68cbb3717851f3546e8acca39`).
+- Matching vendor HAL (historical `a9e382360adc8124f71f96590ff823b1fc688413`).
 
 The local device tree includes its existing recovery overlay; the published ROM
 commit excludes that unrelated patch. No shared system-side source, camera ID,

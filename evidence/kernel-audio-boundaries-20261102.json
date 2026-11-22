@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-02",
+  "repository": "https://github.com/PocoF3Releases/kernel_xiaomi_sm8250",
+  "branch": "aosp-17",
+  "commits": {
+    "calibration": "400d43198c824b2ac0e74dbc2e523684a12d12de",
+    "packet_bounds": "3d374cb35915256513a2dbccb921d9fbf1259c4b"
+  },
+  "base": "1fbfa02096f2a7e344375c2c465b184d0141af68",
+  "strict_build": {
+    "head": "3d374cb35915256513a2dbccb921d9fbf1259c4b",
+    "mode": "strict",
+    "exit": 0,
+    "seconds": 119.70943522453308,
+    "config_sha256": "6a3c2dff85db6e80d35aed7efa82c9b5950687f975c975d5fcee6b49a8a39c48",
+    "image_sha256": "f5a9b756f76791494dfc0904ab88382acc48486ec31bb8b87c9b05df872cf61e",
+    "release": "4.19.325-Redline-3d374cb-cip136"
+  },
+  "w123": {
+    "scope": "techpack/audio/ with Kona autoconfiguration",
+    "audio_objects": 142,
+    "exit": 0,
+    "changed_file_comparison": [
+      {
+        "source": "q6adm.c",
+        "new_diagnostics": 0,
+        "removed_diagnostics": 0,
+        "relocated_existing": 1
+      },
+      {
+        "source": "q6afe.c",
+        "new_diagnostics": 0,
+        "removed_diagnostics": 3,
+        "relocated_existing": 0
+      },
+      {
+        "source": "q6asm.c",
+        "new_diagnostics": 0,
+        "removed_diagnostics": 0,
+        "relocated_existing": 0
+      }
+    ]
+  },
+  "sparse": {
+    "audio_checks": 142,
+    "preparation_checks": 2,
+    "diagnostics": 0
+  },
+  "host_regression": {
+    "before": {
+      "exit": 1,
+      "summary": "SUMMARY 856 checks 140 failures 227 cases",
+      "sanitizer_stderr": "",
+      "compile_warnings": 4
+    },
+    "candidate": {
+      "exit": 0,
+      "summary": "SUMMARY 856 checks 0 failures 227 cases",
+      "sanitizer_stderr": "",
+      "compile_warnings": 3
+    },
+    "preserved_packets": {
+      "compared_valid_cases": 125,
+      "different": [],
+      "comparison": "full captured packet bytes"
+    }
+  },
+  "production_config_changed": false,
+  "device_install": false,
+  "attribution_recognized": true
+}

@@ -4,8 +4,8 @@
 
 **Source/build/host/device checked; full strict gate remains failing.**
 Published 24 separate feature commits on `aosp-17`, from
-[the prior RNG fix](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/25ddc9a7d3619f9ab76b962b009679eaea3851a0)
-to [the tested head](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7f23a5259ac1064b488a20875098a3f1189e2fe2).
+the prior RNG fix (historical `25ddc9a7d3619f9ab76b962b009679eaea3851a0`)
+to the tested head (historical `7f23a5259ac1064b488a20875098a3f1189e2fe2`).
 All previous crypto/library changes remain ancestors. No system-side sources,
 configuration, thermal limits, compiler flags or warning suppressions changed.
 Tests and raw receipts remain private; no test code or Markdown entered the kernel.
@@ -134,27 +134,27 @@ and GPU/display/shutdown limits remain open.
 
 | Feature commit |
 | --- |
-| [init: consolidate prototypes in linux/init.h](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b839386f442786dde99dafff7d4977506e579ed6) |
-| [arm64: fix clang warning about TRAMP_VALIAS](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/a761472ac03d74b6328eda2c9b1fc4c160f1d9c3) |
-| [initrd: switch initrd loading to struct file based APIs](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/269f95115b9dae5233a3224a333f2fcb332c4e3f) |
-| [arm64: describe cache policy table without overlapping initializers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/93553cfea0d4449cce5d55018f9665e509f090fa) |
-| [arm64: share architecture hook and assembly entry declarations](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/34e0e064ec236d5a895a9dd0c3e764ea106ed281) |
-| [initrd: share the correct initial environment declaration](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/46d924ccef3f0bfbd213490a0fca5d6cf9576212) |
-| [init: declare architecture delay calibration hooks](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bc86d3127b7e64e3f3f9de0d9a260c9649e45b2a) |
-| [init: initialize task RCU pointers through their typed interface](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bdc509d486bebb09a0e566ebe2b8f538bf80b884) |
-| [misc: fastrpc: fix compat results and diagnostic lifetime contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ea0c6c5ff6e23e0d83e9f9ce5aa5babb001f1864) |
-| [clk: qcom: propagate RCG configuration read failures](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d3e83b0c8b7c28b6df03ece80fe439a5766c8047) |
-| [input: fpc: return the accepted vendor write length](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1cbf50b997aa49222742b49002833cf6a7a00f6d) |
-| [platform: msm: sps: unwind failed BAM interrupt setup](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/02a54e2cbd2791389b08d5ac734131b98dce0fa3) |
-| [platform: msm: ipa: validate MPM channel actions and results](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/801757c80a8e111ce3300c4e1ab3d902462ea9d5) |
-| [power: supply: bq2597x: preserve registration and ADC errors](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d3c5a37cd77d52cb4925220abd20bd05dcfe2a19) |
-| [power: supply: qc3: return actual thermal and voltage reset results](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/0e5cec45659273dbe013d98642d3f801febd2910) |
-| [soc: qcom: msm_bus: drop unused RPMh vote inputs](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/52b36389bbdb372c3f0013e458e5fc8ba8cc92cc) |
-| [sched: walt: match diagnostic formats to task accounting types](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/8a014b146405449fa91746c93343b44031ff9b3c) |
-| [sched: walt: use kernel buffer contracts in sysctl handlers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/61c5ec4cd226d6bc23c8062f788a3c5d3377f14f) |
-| [sched: keep private WALT and schedtune helpers local](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/b466404b5c883be8186a8dcc9ebed11630648df6) |
-| [sched: declare utilization callbacks as RCU pointers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/bcc7b58974bad98e2315c3cc9846609413814015) |
-| [sched: preserve RCU contracts for task groups and performance domains](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/cfe43625f8fa0330bce78f21e8efd7b5791ef812) |
-| [sched: complete shared consumer and current-task contracts](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/5d59c8cda3e10d2a4c775edb8f1339133e6c7765) |
-| [usb: gadget: ncm: complete bind status initialization](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/2cb886e3f7279c07a3bae1c34b8932f150ef1fee) |
-| [cfg80211: Change an 'else if' into an 'else' in cfg80211_calculate_bitrate_he](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/7f23a5259ac1064b488a20875098a3f1189e2fe2) |
+| init: consolidate prototypes in linux/init.h (historical `b839386f442786dde99dafff7d4977506e579ed6`) |
+| arm64: fix clang warning about TRAMP_VALIAS (historical `a761472ac03d74b6328eda2c9b1fc4c160f1d9c3`) |
+| initrd: switch initrd loading to struct file based APIs (historical `269f95115b9dae5233a3224a333f2fcb332c4e3f`) |
+| arm64: describe cache policy table without overlapping initializers (historical `93553cfea0d4449cce5d55018f9665e509f090fa`) |
+| arm64: share architecture hook and assembly entry declarations (historical `34e0e064ec236d5a895a9dd0c3e764ea106ed281`) |
+| initrd: share the correct initial environment declaration (historical `46d924ccef3f0bfbd213490a0fca5d6cf9576212`) |
+| init: declare architecture delay calibration hooks (historical `bc86d3127b7e64e3f3f9de0d9a260c9649e45b2a`) |
+| init: initialize task RCU pointers through their typed interface (historical `bdc509d486bebb09a0e566ebe2b8f538bf80b884`) |
+| misc: fastrpc: fix compat results and diagnostic lifetime contracts (historical `ea0c6c5ff6e23e0d83e9f9ce5aa5babb001f1864`) |
+| clk: qcom: propagate RCG configuration read failures (historical `d3e83b0c8b7c28b6df03ece80fe439a5766c8047`) |
+| input: fpc: return the accepted vendor write length (historical `1cbf50b997aa49222742b49002833cf6a7a00f6d`) |
+| platform: msm: sps: unwind failed BAM interrupt setup (historical `02a54e2cbd2791389b08d5ac734131b98dce0fa3`) |
+| platform: msm: ipa: validate MPM channel actions and results (historical `801757c80a8e111ce3300c4e1ab3d902462ea9d5`) |
+| power: supply: bq2597x: preserve registration and ADC errors (historical `d3c5a37cd77d52cb4925220abd20bd05dcfe2a19`) |
+| power: supply: qc3: return actual thermal and voltage reset results (historical `0e5cec45659273dbe013d98642d3f801febd2910`) |
+| soc: qcom: msm_bus: drop unused RPMh vote inputs (historical `52b36389bbdb372c3f0013e458e5fc8ba8cc92cc`) |
+| sched: walt: match diagnostic formats to task accounting types (historical `8a014b146405449fa91746c93343b44031ff9b3c`) |
+| sched: walt: use kernel buffer contracts in sysctl handlers (historical `61c5ec4cd226d6bc23c8062f788a3c5d3377f14f`) |
+| sched: keep private WALT and schedtune helpers local (historical `b466404b5c883be8186a8dcc9ebed11630648df6`) |
+| sched: declare utilization callbacks as RCU pointers (historical `bcc7b58974bad98e2315c3cc9846609413814015`) |
+| sched: preserve RCU contracts for task groups and performance domains (historical `cfe43625f8fa0330bce78f21e8efd7b5791ef812`) |
+| sched: complete shared consumer and current-task contracts (historical `5d59c8cda3e10d2a4c775edb8f1339133e6c7765`) |
+| usb: gadget: ncm: complete bind status initialization (historical `2cb886e3f7279c07a3bae1c34b8932f150ef1fee`) |
+| cfg80211: Change an 'else if' into an 'else' in cfg80211_calculate_bitrate_he (historical `7f23a5259ac1064b488a20875098a3f1189e2fe2`) |

@@ -1,0 +1,34 @@
+Use case: ads-marketing. Create ONE finished, high-end 16:9 landscape release banner, 1920x1080 composition, for Evolution X on POCO F3. This is a new November 12 update, not the old November 4 release.
+
+Reference image role: preserve the exact realistic overlapping black POCO F3 front/rear phone identity, camera geometry, rounded silhouettes and material quality from the provided prior banner. Do NOT preserve any old date, version, feature text or card count. The front phone's wallpaper should match the NEW environment. Place the phones on the left third, elegantly grounded on a low dark slab with consistent realistic perspective and clear separation from the text.
+
+Art direction: create a brand-new cinematic Arknights-inspired industrial/dystopian environment in black, charcoal, white and restrained crimson. A colossal elevated industrial transport terminal above a foggy megacity at stormy night, suspended bridges and gantries, monumental concrete buttresses, subtle rain and black wet-metal reflections, crisp red tactical strip lights. Dramatic depth and clean visual hierarchy, not busy generic neon cyberpunk. Phone area atmospheric; right text area calm, dark and readable. Rich natural materials, controlled highlights, no excessive bloom.
+
+Layout: bold Evolution X title upper right (Evolution in white, large red X), POCO F3 underneath, metadata/date clearly separated. Four coordinated premium angular charcoal cards in a clean 2x2 grid on the right, thin red keylines and clipped corners, generous interior spacing. Each card has one tasteful red line icon, a crisp bold white heading and readable light-gray bullet lines. No text overlaps devices, icons, borders or other text. No fake UI buttons. All cards aligned and balanced. Sharp typography, no rectangles or masking artifacts behind individual letters.
+
+Exact text, and ONLY this text:
+EVOLUTION X
+POCO F3
+ANDROID 17 • v12.4
+12 NOV 2026
+
+SYSTEM & STYLE
+• NothingOS Quick Settings
+• Island live-update options
+
+AUDIO CONTROLS
+• MiSound headphone options
+• Dolby voice-chat recovery
+
+DEVICE SETTINGS
+• Thermal & touch profile fixes
+• Safer speaker cleaning
+
+SYSTEM REFINEMENTS
+• Recording blur restoration
+• Mini Google apps
+• Redline USBPD & NFC fixes
+
+alioth • Redmi K40 • Mi 11X
+
+Hardware invariants: the rear vertical rounded camera island contains exactly THREE optical cameras and a separate circular microphone. One large top optical lens; a smaller optical lens at middle-LEFT; a round microphone at middle-RIGHT with visible rim and dark non-glass textured center; a bottom circular optical lens. Keep reference relative radii, spacing and metallic edging. The microphone must not become a fourth optical lens or disappear. Keep separate elongated flash on the outer-right strip. Front phone has ONE centered punch-hole. No extra lenses, melted geometry, fake brand labels or duplicated phone edges. Match the reference render convincingly. Keep readable POCO rear branding. Do not add a separate Haptics/Dolby/MiSound card beyond the single combined audio card. No refresh-rate, FPS, camera-quality, battery-life, performance or all-bugs-fixed marketing claims. No old November 4 features, download links, QR codes or watermarks.

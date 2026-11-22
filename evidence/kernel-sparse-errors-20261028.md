@@ -2,7 +2,7 @@
 
 ## Scope and final source
 
-[Final kernel](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1efb0bf8d7a52abc450285c470bb34c28ad57dfd),
+Final kernel (historical `1efb0bf8d7a52abc450285c470bb34c28ad57dfd`),
 `aosp-17`, is a fast-forward of the [prior acceptance](kernel-rcu-contracts-20261028.md).
 Fourteen feature-separated commits change kernel C/header files only. System
 sources, device trees, vendor files, production configuration and thermal
@@ -115,17 +115,17 @@ is claimed. Raw logs, fixtures, build commands and backups remain private under
 
 | Change | Author |
 | --- | --- |
-| [signal: Use owned sighand snapshots at the slab-reuse boundary](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c935130894de716dd2480d2924830159b7b5968f) | johnmart19 |
-| [memcg: Pin shmem swap mappings until the cache page is referenced](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/ac639b531c60545bd859c4454bdcf3bfccd97bac) | johnmart19 |
-| [pid: Match concurrent snapshots to the owned PID slot interface](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/d89cf23160bb8f2f9ed897d3417c65c07aad1be0) | johnmart19 |
-| [mm: Separate swap mapping ownership from transient RCU lookup](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/6a94d820864d442abe8eed73bd772715ece6e7fb) | johnmart19 |
-| [fs: carry fasync RCU types through queue slots and helpers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/55e032059ee0ccfa266e0f896fefdf0284723c11) | johnmart19 |
-| [posix_acl: preserve RCU cache-slot types across atomic updates](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/c6d59cf9f7008aeba6aaa6c7357b0e965af92f45) | johnmart19 |
-| [nexthop: Traverse the insertion tree under its writer lock](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/558346a28f79afc308a834311980d69d45f550ba) | johnmart19 |
-| [rbtree: Preserve checked RCU views of generic tree links](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/20ac3b3b364554154ed0cfd6ed9f2c68aa351ff3) | johnmart19 |
-| [vservices: axon: Pin service state only while its reference is live](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/daa47360d66be6094e440fa1d9ec17e421c78a0e) | johnmart19 |
-| [netfilter: Match netlink socket snapshots to namespace ownership](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/200136951f1dcb9bb04fb9ffc59672247eee6895) | johnmart19 |
-| [dcache: Keep inode lock release in the acquiring callers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/4b870804c81048cdc0c93325fc9d1d7a29a791a6) | johnmart19 |
-| [dcache: Keep move parent lock scopes explicit](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/e0fde1097a4a4bef1fa375ea7033d3729c24a14e) | johnmart19 |
-| [xfrm: Make state afinfo read-side ownership explicit in callers](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/38e10031823c27bc602f7409aad30685ae5505ab) | johnmart19 |
-| [slimbus: Preserve RAM and MMIO buffer provenance through SPS](https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/1efb0bf8d7a52abc450285c470bb34c28ad57dfd) | johnmart19 |
+| signal: Use owned sighand snapshots at the slab-reuse boundary (historical `c935130894de716dd2480d2924830159b7b5968f`) | johnmart19 |
+| memcg: Pin shmem swap mappings until the cache page is referenced (historical `ac639b531c60545bd859c4454bdcf3bfccd97bac`) | johnmart19 |
+| pid: Match concurrent snapshots to the owned PID slot interface (historical `d89cf23160bb8f2f9ed897d3417c65c07aad1be0`) | johnmart19 |
+| mm: Separate swap mapping ownership from transient RCU lookup (historical `6a94d820864d442abe8eed73bd772715ece6e7fb`) | johnmart19 |
+| fs: carry fasync RCU types through queue slots and helpers (historical `55e032059ee0ccfa266e0f896fefdf0284723c11`) | johnmart19 |
+| posix_acl: preserve RCU cache-slot types across atomic updates (historical `c6d59cf9f7008aeba6aaa6c7357b0e965af92f45`) | johnmart19 |
+| nexthop: Traverse the insertion tree under its writer lock (historical `558346a28f79afc308a834311980d69d45f550ba`) | johnmart19 |
+| rbtree: Preserve checked RCU views of generic tree links (historical `20ac3b3b364554154ed0cfd6ed9f2c68aa351ff3`) | johnmart19 |
+| vservices: axon: Pin service state only while its reference is live (historical `daa47360d66be6094e440fa1d9ec17e421c78a0e`) | johnmart19 |
+| netfilter: Match netlink socket snapshots to namespace ownership (historical `200136951f1dcb9bb04fb9ffc59672247eee6895`) | johnmart19 |
+| dcache: Keep inode lock release in the acquiring callers (historical `4b870804c81048cdc0c93325fc9d1d7a29a791a6`) | johnmart19 |
+| dcache: Keep move parent lock scopes explicit (historical `e0fde1097a4a4bef1fa375ea7033d3729c24a14e`) | johnmart19 |
+| xfrm: Make state afinfo read-side ownership explicit in callers (historical `38e10031823c27bc602f7409aad30685ae5505ab`) | johnmart19 |
+| slimbus: Preserve RAM and MMIO buffer provenance through SPS (historical `1efb0bf8d7a52abc450285c470bb34c28ad57dfd`) | johnmart19 |

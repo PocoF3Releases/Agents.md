@@ -11,7 +11,7 @@ On the phone, a twelve-second higher-priority takeover left music disabled and
 the low-priority observer owning the effect after the rival released it.
 Reopening MiSound repaired the state; a normal callback alone did not.
 
-[consolidated MiSound fix](https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/0de236a93b3dc7dbb59e16219d234e7141c6bd87)
+consolidated MiSound fix (historical `0de236a93b3dc7dbb59e16219d234e7141c6bd87`)
 retains the effect/control listener while contested. Control regain resets retries
 and recreates the effect, restoring saved tuning before enable. Replaced-handle
 callbacks are identity-guarded; audio-server down/up still discards dead handles.
@@ -20,7 +20,7 @@ readback fix; that implementation remains intact.
 
 Dolby required no source change. Its persistent owner already observes control and
 server transitions, invalidates acknowledgments and restores saved state.
-[Translations remain separate](https://github.com/PocoF3Releases/hardware_xiaomi/commit/b653ae1cbb59c26410eae3b1b22e0029781d254a).
+Translations remain separate (historical `b653ae1cbb59c26410eae3b1b22e0029781d254a`).
 
 ## Tests
 

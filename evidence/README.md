@@ -5,10 +5,27 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [Alioth clean build and source refresh, November 20–21](source-refresh-20261120.md) | Verified ROM and recovery refs, replayed patches and clean user OTA |
+| [Full source sync, November 14](source-refresh-20261114.md) | 1,265 projects synced, current upstream routes and exact restored recovery overlays; no rebuild |
+| [Legacy OpenAI attribution variants](attribution-variants-20261114.md) | 69 own credit corrections, unchanged source/ancestry and exact-tree link aliases |
+| [Final source/recovery verification, November 13](source-refresh-20261113.md) | Current heads, complete upstream coverage, exact recovery replay; no new build/device pass |
+| [Maximum-FPS recording](max-fps-recording-20261112.md) | Codec bounds, legacy/Compose plumbing and independent blur preferences; no new defect found |
+| [ROM refresh and recording blur, November 12](source-refresh-20261112.md) | Latest selected sources, preserved custom series, local recovery patches and focused blur regressions |
+| [Dolby VoIP re-entry](dolby-voip-reentry-20261112.md) | Matched native queue-delay reproduction, independent quiet-window guard and verified recovery |
+| [Audio features, November 12](alioth-audio-features-20261112.md) | Published MiSound/Dolby controls and native scene preservation, queued-write correction and bounded phone acceptance |
+| [ROM/fork refresh, November 5](source-refresh-20261105.md) | Latest upstream replay, NFC replacement and unchanged recovery patch bundle |
+| [ROM/fork refresh, November 3](source-refresh-20261103.md) | Updated bases, preserved recovery stack and held kernel intake |
 | [Audio Java/native closure](audio-framework-closure-20261025.md) | Exact bytecode recovery, native coverage, phone checks and optional headphone gaps |
+| [Permission audit](permissions-audit-20261101.md) | A17 privapp/default-grant cross-check, dead-entry removals, retained limits |
+| [Parts Kotlin review](parts-review-20261101.md) | Full Parts source review, single resume-refresh fix, APK bind-mount check |
+| [MiSound parameters](misound-params-20261101.md) | Native ID map, stock presets/EQ range, custom EQ device check, coexistence decision |
+| [Dolby DAP parameters](dolby-dap-params-20261031.md) | Stock ID map, QDSP keys, new switches and retained limits |
+| [Thermal HAL decision](thermal-hal-decision-20261031.md) | Stock Kona table RE, mi_thermald ownership, no-HAL rationale |
+| [Battery thermistor](battery-thermistor-20261031.md) | Replacement-pack ~85 kΩ excess, JEITA consequence, fix constraints |
 | [Subsystem inventory](subsystem-inventory-20261025.md) | 105-entry map, source/build counts, SKU and hardware distinctions |
 | [Cancelled Turnip evaluation](turnip-evaluation-20261025.md) | Actual driver selection, tests, slowdown, uncertainty and stock restoration |
 | [Native A17 recovery/full OTA](evox-native-recovery-20261014.md) | Resync, fresh user build, secure OTA, no-credential FBE and restoration |
+| [Haptics, 2026-11-01](haptics/2026-11-01.md) | Stock service/framework RE, .bin library map, HyperOS palette, new primitives |
 | [Haptics, 2026-10-04](haptics/2026-10-04.md) | Temporary final candidate, stock composition, PCM/AAC scope and restoration |
 | [Haptics, 2026-09-30](haptics/2026-09-30.md) | Installed baseline, corrected candidate, stock gains and user acceptance |
 | [AC-4 diagnostic](ac4/README.md) | Reusable decoder test and recorded PCM result |
@@ -27,3 +44,9 @@ record is not a test performed in the reader's new session. Raw dumps, private
 logs and original media are not bundled; request only a necessary missing artifact.
 
 Historical identifiers and private diagnostic filenames are provenance, not bundled downloads. The archive is an empty skeleton; current records are linked above. [Framework override](../operations/framework-manifest.md) is available for future checkouts.
+
+- [Parts full-topic review — November 12](parts-full-review-20261112.md).
+
+Historical runtime strings, raw blocks and JSON stay as observed. Retired commit
+IDs may be plain text after a rewrite; they are provenance, not dead download links
+or current targets. Use the source ledger and retained feature table for live links.
