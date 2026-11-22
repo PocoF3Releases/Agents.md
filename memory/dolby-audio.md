@@ -2,10 +2,9 @@
 
 ## Scope and ownership
 
-Alioth uses legacy Audio HAL 6.0 / DAX3-era components including `libhwdap.so`, `libswgamedap.so` and `libswvqe.so`. Blob presence, UUIDs and control acknowledgments do not establish audible processing. Do not assume modern spatializer support or transplant a Codec2 design.
+Alioth uses legacy Audio HAL 6.0 / DAX3-era components including `libhwdap.so`, `libswgamedap.so` and `libswvqe.so`. Blobs, UUIDs and control ACKs do not prove audible processing. Do not assume spatializer support or transplant Codec2 designs.
 
 Owners: `hardware/xiaomi/dolby` app/UI/DMS policy; frameworks/av native lifecycle, flags and transport; device configuration platform opt-ins. [Source heads](../state/repositories.yaml).
-
 
 ## Accepted AC-4 integration
 
@@ -19,7 +18,7 @@ Do not import a complete legacy VNDK, redirect current OMX foundation to v33, or
 
 Historical voice-chat symptoms were quieter/thinner speaker sound and delayed recovery. Relevant state includes communication playback/recording, route, DAP/offload, track flags, bypass/pregain, VQE and game DAP. Preserve the requested enabled preference while bypassing unsuitable processing and restoring media state. A coarse app-only bypass is not stock-equivalent. Keep calls, call screening and communication distinctions; confirm native state before persisting. Use opt-in VQE and acknowledged effect attachment/recovery, not competing controllers.
 
-Recorded signatures included `MODE_IN_COMMUNICATION`, `voice-speaker-stereo`, ACDB 10011 -> 15 and `SET_CONFIG ... Invalid argument`. Do not change ACDB mappings or copy a MIUI whitelist whose 16 kHz mono/property assumptions are absent. A vendor_init denial on `vendor_dolby_config_prop` explained configured qdsp but native `control=none, captured=0`; establish property/SELinux ownership before interpreting retries. Empty override XML may correctly mean native factory tuning. Historical package `co.aospa.dolby.xiaomi` used `.DolbySettingsActivity`, not an assumed DolbyService; recheck current source before commands.
+Recorded signatures included `MODE_IN_COMMUNICATION`, `voice-speaker-stereo`, ACDB 10011 -> 15 and `SET_CONFIG ... Invalid argument`. Do not change ACDB mappings or copy a MIUI whitelist whose 16 kHz mono/property assumptions are absent. A vendor_init denial on `vendor_dolby_config_prop` explained configured qdsp but native `control=none, captured=0`; establish property/SELinux ownership before interpreting retries. Empty override XML may correctly mean native factory tuning. Package `co.aospa.dolby.xiaomi` uses `.DolbySettingsActivity`, not a DolbyService; recheck source before commands.
 
 [V-DOLBY](../state/validation.md#v-dolby) separates historical transport ACKs from acoustic proof. Material 3/expressive UI must not imply unsupported audio capabilities.
 
@@ -127,7 +126,6 @@ enable-failure reporting and separate translations, host/APK verified.
 [MiSound map](../evidence/misound-params-20261101.md); Dolby/MiSound coexist.
 
 [Routes](../evidence/audio-route-compatibility-20261102.md): GSM fix/limits.
-[Formats](../evidence/audio-formats-20261102.md): app/root PCM matrix and limits.
-
-
-[Nov12](../evidence/dolby-voip-reentry-20261112.md)
+[Formats](../evidence/audio-formats-20261102.md): PCM matrix/limits.
+[Nov12](../evidence/dolby-voip-reentry-20261112.md) ·
+[Nov22 stock parity](../evidence/dolby-stack-audit-20261122.md), summary fix.

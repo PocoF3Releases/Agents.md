@@ -88,9 +88,9 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: 3f9c1f111e554efc63f6a318eb6d1e96c8e80564
+    cnb: e26f4c052ec56d46a1cab90d133478dec77b8a4c
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/3f9c1f111e554efc63f6a318eb6d1e96c8e80564
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/e26f4c052ec56d46a1cab90d133478dec77b8a4c
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
