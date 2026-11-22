@@ -86,6 +86,7 @@ rechecked before squashing, with no new defects found in:
 | .github (ROM) | fbf07ee | 828c52b | 12 → 3 |
 | .github (Recovery) | 0e82a02 | fea05aa | 3 → 1 |
 | references_code | 041e06e | afb115c | 7 → 1 |
+| Agents.md (this workhub) | 32fff8b | df180f0 | 230 → 8 |
 
 Counts above the upstream base exclude upstream commits. Every new tree equals
 its old tip. In hardware_xiaomi, the twelve commits credited with
@@ -97,3 +98,10 @@ standard trailer, display, hardware/interfaces and nxp_nfc needed no rewrite.
 Old tips stay as `<branch>-pre-rework-20261122`. The frameworks/base recovery
 patch was replayed onto the new head with zero pending patches. No build is
 claimed.
+
+The workhub's LLM commits were combined into one commit per run between the
+four human commits (October 14 artwork; October 28 display audits; October 30
+platform audit), which keep their patch, author, date and message. The 24
+commits that credited `Co-Authored-By: Claude` are in the last run, which carries
+both Assisted-by trailers. Workhub hashes cited in older evidence, such as
+`0f12ead`, resolve on `main-pre-rework-20261122`.
