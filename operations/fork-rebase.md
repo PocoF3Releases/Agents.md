@@ -51,3 +51,12 @@ back, rebased in 42 seconds. Its tree was byte-identical to the published tip an
 the defconfig check passed. A simulated upstream edit to `kernel/sched/tune.c`
 exercised the stop, resolve and `--resume` path. The push path was exercised
 against a local test remote only.
+
+## 2026-11-22 kernel rebase
+
+`lineage-20` gained `a5506b1` (fg-gen4 `of_node` leak) and `962c0fd` (ipv6
+`fib6_drop_pcpu_from`). All 350 fork commits replayed cleanly in 48 seconds onto
+`962c0fd`; verification and the defconfig check passed. Both files are also
+changed by us; the hunks do not overlap, and both objects compiled with Clang
+r563880c without warnings. Published `aosp-17` `eabea41`; old tip `fe16246` is
+`aosp-17-pre-rebase-20261122`. No full kernel build or device boot yet.

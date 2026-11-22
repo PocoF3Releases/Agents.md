@@ -60,12 +60,12 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: fe16246bccb9b3f0e7de06ac884fbf9f8ba09be8
+    aosp-17: eabea41ee6d8e864fbbb7a0f3471c5fdf7ea0151
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/fe16246bccb9b3f0e7de06ac884fbf9f8ba09be8
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/eabea41ee6d8e864fbbb7a0f3471c5fdf7ea0151
   local_a17: matches_selected_ref
   observation: 'Canonical base: LineageOS/android_kernel_qcom_sm8250 lineage-20; current source identity
-    is separate from dated device acceptance.'
+    is separate from dated device acceptance. Rebased 2026-11-22 onto 962c0fd; previous tip kept as aosp-17-pre-rebase-20261122.'
 - repository: https://github.com/PocoF3Releases/.github
   role: organization_profile
   source_tree_paths: []
