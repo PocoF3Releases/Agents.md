@@ -16,8 +16,9 @@ No device or vendor fork commit targeted another device; kernel removals are lis
 | vendor_xiaomi_camera (GitLab) | 61876c6 | 280f5ba | 6 → 5 |
 | kernel_xiaomi_sm8250 | 264bc8e | fe16246 | 796 → 350 over abd144b |
 
-Old tips remain on every remote as `aosp-17-pre-rework-20261122`;
-earlier evidence citing old hashes resolves there.
+The `<branch>-pre-rework-20261122` backup branches were removed from the
+remotes later that day (see [Branch cleanup](#branch-cleanup)). Old hashes cited
+in earlier evidence now resolve only in the local archives.
 
 Final trees are identical to the old tips except one intentional change in
 device_xiaomi_alioth: the gsm-mode route uses the stock `GSM mode Enable` control
@@ -95,7 +96,7 @@ topics with `Assisted-by: LLM - Opus 5.5 High`. Third-party commits and human
 commits (including the 2025 Dolby links and translations and the human `.github`
 update) keep their patch, author, date and message. Single-commit forks with the
 standard trailer, display, hardware/interfaces and nxp_nfc needed no rewrite.
-Old tips stay as `<branch>-pre-rework-20261122`. The frameworks/base recovery
+The frameworks/base recovery
 patch was replayed onto the new head with zero pending patches. No build is
 claimed.
 
@@ -104,4 +105,24 @@ four human commits (October 14 artwork; October 28 display audits; October 30
 platform audit), which keep their patch, author, date and message. The 24
 commits that credited `Co-Authored-By: Claude` are in the last run, which carries
 both Assisted-by trailers. Workhub hashes cited in older evidence, such as
-`0f12ead`, resolve on `main-pre-rework-20261122`.
+`0f12ead`, resolve in the local workhub archive ref.
+
+## Branch cleanup
+
+Stale branches were deleted from both organizations: 49 in all, kept as
+local `refs/archive/<branch>` refs first. They were the 22 rework backups and
+the superseded development branches: frameworks_av `bka` (every patch is in
+`aosp-16`), frameworks_base `ozo-unimplemented`, kernel `aosp-17-old_base` and
+recovery `legacy-native-recovery`. Also removed were the upstream mirror branches
+left in the recovery forks (`main`, `main-kernel`, `lineage-24.0`,
+`lineage-24.0-caf-sm8450`) and the references_code `LA.UM.8.12` branch, which
+`main` already contains. No manifest selected any of them.
+
+Each ROM repository now keeps its default Android 17 branch and, where one
+existed, `aosp-16`. The local archive refs sit in the matching `~/evo` checkout,
+in `~/references_code` and in the workhub, and the two organization profiles
+use bare archives in the private rework task directory. Pending a separate
+decision: the references_code reference-source branches (art, bionic, CLO/AOSP
+frameworks, external_dng_sdk, vendor_xiaomi_* and the MIUI 14 output) and the
+signing-key branches (`aosp-14`, `aosp-15`, `aosp-16-qpr2`, `aosp-17-old`),
+whose contents differ and exist nowhere else.
