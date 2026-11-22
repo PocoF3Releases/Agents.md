@@ -48,14 +48,16 @@ scoped queries do not prove a feature is absent.
 | Need | Mode |
 | --- | --- |
 | Path substring or glob | `files QUERY` |
-| Exact heuristic C/C++ header symbol | `symbol NAME` |
-| Literal anywhere in full .cpp/.cc implementations | `impl QUERY` |
-| Small indexed implementation range, even without live files | `source PATH --line N --limit 20` |
-| Live changes, regex, Java/Kotlin or other languages | `text QUERY --scope TOPIC`, explicit `--regex`, or scoped `rg` |
+| C/C++ declaration: type, macro, enumerator, typedef, prototype, function-pointer field | `symbol NAME` |
+| Literal in C/C++ (incl. headers), Java/Kotlin, AIDL/HAL, XML, mk/bp/rc/te, py/sh, proto/json/txt, dts | `impl QUERY` |
+| Small range of any indexed file, even without live files | `source PATH --line N --limit 20` |
+| Regex, live changes or camera tuning XML | `text QUERY --scope TOPIC`, explicit `--regex`, or scoped `rg` |
 | Current Android 17 behavior | Active source and relevant workhub acceptance |
 
 Body search includes complete function bodies, comments and strings; it is not
-compiler/overload analysis. Indexed UTF-8/NUL and newline normalization is disclosed
+compiler/overload analysis. Identical prebuilt/VNDK copies print once as
+`(+N identical copies)`. Since repoindex 2.2.0 (2026-11-22) indexed modes replace
+whole-tree grep; `scopes` lists 24 topics. Indexed UTF-8/NUL and newline normalization is disclosed
 in the tool's [format reference](https://github.com/johnmart19/repoindex/blob/main/docs/FORMAT.md).
 Live code remains untouched. Verify hits against live files when editing.
 
