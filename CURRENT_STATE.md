@@ -1,9 +1,9 @@
 # Current state
 
-Source checkpoint **2026-11-21**. Published 44 branches with refreshed committer dates.
-All 41 canonical routes are current and the four recovery patches reproduce the local trees.
-Release-signed Alioth user build **Evolution X 12.4** packaged as `EvolutionX-17.0-20261121-alioth-12.4-Unofficial.zip`.
-[Source, OTA and recovery evidence](evidence/source-refresh-20261120.md).
+Source checkpoint **2026-11-28**. Verified 46 maintained branches and 43
+upstream routes. All four native recovery patches reapply.
+The release-signed Alioth user OTA is `EvolutionX-17.0-20261128-alioth-12.4-Unofficial.zip`.
+[Source and build evidence](evidence/source-refresh-20261128.md).
 
 - **Recovery:** native ROM recovery in `~/evo`; use the [sync/patch workflow](operations/framework-manifest.md).
   PIN/local ZIP acceptance is dated; password/Weaver remain unverified.

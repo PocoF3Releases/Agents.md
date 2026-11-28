@@ -5,6 +5,7 @@ observations without requiring the original workstation or a raw log archive.
 
 | Record | Scope |
 | --- | --- |
+| [November 28 Alioth refresh](source-refresh-20261128.md) | Verified upstream ancestry, recovery patches and release-signed user OTA |
 | [Alioth clean build and source refresh, November 20–21](source-refresh-20261120.md) | Verified ROM and recovery refs, replayed patches and clean user OTA |
 | [Full source sync, November 14](source-refresh-20261114.md) | 1,265 projects synced, current upstream routes and exact restored recovery overlays; no rebuild |
 | [Legacy OpenAI attribution variants](attribution-variants-20261114.md) | 69 own credit corrections, unchanged source/ancestry and exact-tree link aliases |

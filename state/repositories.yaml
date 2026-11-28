@@ -1,5 +1,5 @@
 schema_version: 4
-observed: '2026-11-22'
+observed: '2026-11-28'
 history_rework: evidence/history-rework-20261122.md
 scope: Current ROM/recovery repositories and maintained tools. Historical PBRP snapshots stay in their
   topic/evidence, not this active source ledger.
@@ -14,11 +14,11 @@ repositories:
   - device/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: fba277bfc885a8163d2d681c19f46dc95b8ac5dd
+    aosp-17: 8686ef7565a95275a4131e17e6f9f7100c2703b6
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/fba277bfc885a8163d2d681c19f46dc95b8ac5dd
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_sm8250-common/commit/8686ef7565a95275a4131e17e6f9f7100c2703b6
   local_a17:
-    head: 7c4886bea7c0f00fd318bdb6bb7c36563a847235
+    head: d3ca16ba4c385ef5b1964b842607c18e4e8d99a1
     kind: authored_recovery_overlay
     patches: 2
 - repository: https://github.com/PocoF3Releases/device_xiaomi_alioth
@@ -27,11 +27,11 @@ repositories:
   - device/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 038e6869dc94545cfaa9cd80dd41debbf21c5b04
+    aosp-17: 337bc9a5a65154b436f3e4dd910b154d550f9a77
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/038e6869dc94545cfaa9cd80dd41debbf21c5b04
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_alioth/commit/337bc9a5a65154b436f3e4dd910b154d550f9a77
   local_a17:
-    head: f71f5ceb34b30dd14f8c85b71b780dc1ab88fe74
+    head: e63b7fec82b56c77b2a8928a3d7dbc46b9e654a3
     kind: authored_recovery_overlay
     patches: 1
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_alioth
@@ -40,9 +40,9 @@ repositories:
   - vendor/xiaomi/alioth
   selected_ref: aosp-17
   refs:
-    aosp-17: 3b1e171be2b163e1f751644611549a5d2f5c6ff2
+    aosp-17: e74fcf1153a7dab955e91de65b0eb582e951f6d9
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/3b1e171be2b163e1f751644611549a5d2f5c6ff2
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_alioth/commit/e74fcf1153a7dab955e91de65b0eb582e951f6d9
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common
   role: build_source
@@ -50,9 +50,9 @@ repositories:
   - vendor/xiaomi/sm8250-common
   selected_ref: aosp-17
   refs:
-    aosp-17: 75858901fb9bedd8ec9181307f488080102230f7
+    aosp-17: da891a8d9fc84e5fb230493bb17377c036cfc986
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/75858901fb9bedd8ec9181307f488080102230f7
+    aosp-17: https://github.com/PocoF3Releases/vendor_xiaomi_sm8250-common/commit/da891a8d9fc84e5fb230493bb17377c036cfc986
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250
   role: build_source
@@ -60,9 +60,9 @@ repositories:
   - kernel/xiaomi/sm8250
   selected_ref: aosp-17
   refs:
-    aosp-17: eabea41ee6d8e864fbbb7a0f3471c5fdf7ea0151
+    aosp-17: 576e2593cf8c361a7f7ea3f6133a8964cb9cb34d
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/eabea41ee6d8e864fbbb7a0f3471c5fdf7ea0151
+    aosp-17: https://github.com/PocoF3Releases/kernel_xiaomi_sm8250/commit/576e2593cf8c361a7f7ea3f6133a8964cb9cb34d
   local_a17: matches_selected_ref
   observation: 'Canonical base: LineageOS/android_kernel_qcom_sm8250 lineage-20; current source identity
     is separate from dated device acceptance. Rebased 2026-11-22 onto 962c0fd; previous tip kept as aosp-17-pre-rebase-20261122.'
@@ -88,9 +88,9 @@ repositories:
   - hardware/xiaomi
   selected_ref: cnb
   refs:
-    cnb: e26f4c052ec56d46a1cab90d133478dec77b8a4c
+    cnb: 3068f018dbd341e3b9d1fe3fc10cbd48997dccc1
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/e26f4c052ec56d46a1cab90d133478dec77b8a4c
+    cnb: https://github.com/PocoF3Releases/hardware_xiaomi/commit/3068f018dbd341e3b9d1fe3fc10cbd48997dccc1
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/device_xiaomi_camera
   role: build_source
@@ -98,9 +98,9 @@ repositories:
   - device/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-17: 3997dcf49cea91efe69b8207e1b7d2e8fff0592f
+    aosp-17: fc31247b8018cf6f5bf46d836b774556b935d10a
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_camera/commit/3997dcf49cea91efe69b8207e1b7d2e8fff0592f
+    aosp-17: https://github.com/PocoF3Releases/device_xiaomi_camera/commit/fc31247b8018cf6f5bf46d836b774556b935d10a
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/frameworks_av
   role: build_source
@@ -108,9 +108,9 @@ repositories:
   - frameworks/av
   selected_ref: cnb
   refs:
-    cnb: d68ec22d9a1717a3f07cd656e8b2782fd14c1df8
+    cnb: fa60bef03e46e3a41758c0f958a52ab7a0256378
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/d68ec22d9a1717a3f07cd656e8b2782fd14c1df8
+    cnb: https://github.com/PocoF3Releases/frameworks_av/commit/fa60bef03e46e3a41758c0f958a52ab7a0256378
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/frameworks_base
   role: build_source
@@ -118,11 +118,11 @@ repositories:
   - frameworks/base
   selected_ref: cnb
   refs:
-    cnb: be4d559e6d12599c019cde02ad7587a87120f64a
+    cnb: a11ed8d03dcfce791070bf74cbe080ea1f8fe1b0
   commit_links:
-    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/be4d559e6d12599c019cde02ad7587a87120f64a
+    cnb: https://github.com/PocoF3Releases/frameworks_base/commit/a11ed8d03dcfce791070bf74cbe080ea1f8fe1b0
   local_a17:
-    head: 4646fccf55968b4b641697559541263b6d050e51
+    head: 071cf73fd47071ffb38f727eb8905cf9a3a333b0
     kind: authored_recovery_overlay
     patches: 1
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display
@@ -131,9 +131,9 @@ repositories:
   - hardware/qcom-caf/sm8250/display
   selected_ref: cnb
   refs:
-    cnb: be760f5e4009110baa17225dbb62279a322bf2a3
+    cnb: cfff980c725984e750b6bec703977096f5e5efc4
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/be760f5e4009110baa17225dbb62279a322bf2a3
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_display/commit/cfff980c725984e750b6bec703977096f5e5efc4
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio
   role: build_source
@@ -141,9 +141,9 @@ repositories:
   - hardware/qcom-caf/sm8250/audio
   selected_ref: cnb
   refs:
-    cnb: 6c9ef07a12cc11447b0bde20cd81ca35f6181aa1
+    cnb: d5e9d2723f341962f11f22f074df486264c6e972
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/6c9ef07a12cc11447b0bde20cd81ca35f6181aa1
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_audio/commit/d5e9d2723f341962f11f22f074df486264c6e972
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media
   role: build_source
@@ -151,9 +151,9 @@ repositories:
   - hardware/qcom-caf/sm8250/media
   selected_ref: cnb
   refs:
-    cnb: 48bbfa6cb0c135213619830f4958c39a7b12f2aa
+    cnb: 18ed1f636e70e53cb86ec9af81804d31ab76b7e8
   commit_links:
-    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/48bbfa6cb0c135213619830f4958c39a7b12f2aa
+    cnb: https://github.com/PocoF3Releases/hardware_qcom-caf_sm8250_media/commit/18ed1f636e70e53cb86ec9af81804d31ab76b7e8
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/android_hardware_nxp_nfc
   role: build_source
@@ -171,9 +171,9 @@ repositories:
   - vendor/qcom/opensource/usb
   selected_ref: aosp-17
   refs:
-    aosp-17: 89fe78f1f7ecdd96de1fb69b8a5dc2ac3a59de9e
+    aosp-17: 13d94f8120cd7e964921769b616ca084790ce6ed
   commit_links:
-    aosp-17: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/89fe78f1f7ecdd96de1fb69b8a5dc2ac3a59de9e
+    aosp-17: https://github.com/PocoF3Releases/vendor_qcom_opensource_usb/commit/13d94f8120cd7e964921769b616ca084790ce6ed
   local_a17: matches_selected_ref
 - repository: https://gitlab.com/johnmart19/vendor_xiaomi_camera
   role: required_camera_prebuilts
@@ -181,9 +181,9 @@ repositories:
   - vendor/xiaomi/camera
   selected_ref: aosp-17
   refs:
-    aosp-17: 280f5bac32b538586a6b2402e367e2c0b1d3f1ca
+    aosp-17: 7b976e20608a1136355fefd354835b0d642a37a6
   commit_links:
-    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/280f5bac32b538586a6b2402e367e2c0b1d3f1ca
+    aosp-17: https://gitlab.com/johnmart19/vendor_xiaomi_camera/-/commit/7b976e20608a1136355fefd354835b0d642a37a6
   local_a17: matches_selected_ref
 - repository: https://github.com/johnmart19/repoindex
   role: tool
@@ -200,9 +200,9 @@ repositories:
   - external/tinycompress
   selected_ref: lineage-24.0
   refs:
-    lineage-24.0: 531b021946e01ae27ce57ca11472f80ad42bf3d6
+    lineage-24.0: 46b89c51700e40a5eb1d666013c7aa77099671b1
   commit_links:
-    lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/531b021946e01ae27ce57ca11472f80ad42bf3d6
+    lineage-24.0: https://github.com/PocoF3Releases/external_tinycompress/commit/46b89c51700e40a5eb1d666013c7aa77099671b1
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery
   role: build_source
@@ -210,9 +210,9 @@ repositories:
   - bootable/recovery
   selected_ref: cnb
   refs:
-    cnb: 0d5516376196558635230b4445b7178118ab1666
+    cnb: 77c305cb273c4002cdd295393df5588b949a7f56
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/0d5516376196558635230b4445b7178118ab1666
+    cnb: https://github.com/PocoF3Releases-Recovery/android_bootable_recovery/commit/77c305cb273c4002cdd295393df5588b949a7f56
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_build
   role: build_source
@@ -220,9 +220,9 @@ repositories:
   - build/make
   selected_ref: cnb
   refs:
-    cnb: b854a1d9c09703e55b9453c0ea1fb7dd2e5ba40d
+    cnb: b8de8b034af8da94b52a2b21928ea882cebf89be
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_build/commit/b854a1d9c09703e55b9453c0ea1fb7dd2e5ba40d
+    cnb: https://github.com/PocoF3Releases-Recovery/android_build/commit/b8de8b034af8da94b52a2b21928ea882cebf89be
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um
   role: build_source
@@ -230,9 +230,9 @@ repositories:
   - device/qcom/sepolicy_vndr/legacy-um
   selected_ref: cnb
   refs:
-    cnb: 07eb3a0219e25f8b2935612c88bf475829d2c655
+    cnb: b9ea4426d41e2af786fb7b6f757b43b44c8a0941
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/07eb3a0219e25f8b2935612c88bf475829d2c655
+    cnb: https://github.com/PocoF3Releases-Recovery/android_device_qcom_sepolicy_vndr_legacy-um/commit/b9ea4426d41e2af786fb7b6f757b43b44c8a0941
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_boringssl
   role: build_source
@@ -240,9 +240,9 @@ repositories:
   - external/boringssl
   selected_ref: cnb
   refs:
-    cnb: 758e7a9a3d32e4c25c62eb04eb96044d50b11f18
+    cnb: a4627d84ea9c427305b37e9f2316632650d13638
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_boringssl/commit/758e7a9a3d32e4c25c62eb04eb96044d50b11f18
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_boringssl/commit/a4627d84ea9c427305b37e9f2316632650d13638
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_bzip2
   role: build_source
@@ -250,9 +250,9 @@ repositories:
   - external/bzip2
   selected_ref: cnb
   refs:
-    cnb: e45b88b11def0a0d31299248e8cf56e417552f4b
+    cnb: 7189d6b77cb1bfd911aa35427669f32359d34563
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_bzip2/commit/e45b88b11def0a0d31299248e8cf56e417552f4b
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_bzip2/commit/7189d6b77cb1bfd911aa35427669f32359d34563
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_ntfs-3g
   role: build_source
@@ -260,9 +260,9 @@ repositories:
   - external/ntfs-3g
   selected_ref: cnb
   refs:
-    cnb: 8a90f40baea8fa43e0d093f9959bcf7cf1439536
+    cnb: 4dab2a170adaa5021995484571a91c46a4ebd0ee
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_ntfs-3g/commit/8a90f40baea8fa43e0d093f9959bcf7cf1439536
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_ntfs-3g/commit/4dab2a170adaa5021995484571a91c46a4ebd0ee
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_rust_android-crates-io
   role: build_source
@@ -270,9 +270,9 @@ repositories:
   - external/rust/android-crates-io
   selected_ref: cnb
   refs:
-    cnb: 3c7fd258df6a0e71d90088b3e4d868216b27e4bd
+    cnb: 540deb2cd7ee0e8fa83e98b2d285d06fe2955e0b
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_android-crates-io/commit/3c7fd258df6a0e71d90088b3e4d868216b27e4bd
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_android-crates-io/commit/540deb2cd7ee0e8fa83e98b2d285d06fe2955e0b
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_rust_cxx
   role: build_source
@@ -280,9 +280,9 @@ repositories:
   - external/rust/cxx
   selected_ref: cnb
   refs:
-    cnb: 15eeba7ae133037030fcc5d8636a1fd1e31e71f3
+    cnb: 05e8f15beab129bc052062ec974c2103502e6bef
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_cxx/commit/15eeba7ae133037030fcc5d8636a1fd1e31e71f3
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_rust_cxx/commit/05e8f15beab129bc052062ec974c2103502e6bef
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_selinux
   role: build_source
@@ -290,9 +290,9 @@ repositories:
   - external/selinux
   selected_ref: cnb
   refs:
-    cnb: 93cf3aa014e052b0bf9456041158a89049ad33ea
+    cnb: 06b9c9b55440318ab624bdcb3ec97611aa407159
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_selinux/commit/93cf3aa014e052b0bf9456041158a89049ad33ea
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_selinux/commit/06b9c9b55440318ab624bdcb3ec97611aa407159
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_external_sqlite
   role: build_source
@@ -300,18 +300,18 @@ repositories:
   - external/sqlite
   selected_ref: cnb
   refs:
-    cnb: 07e1ddbfefbbd4ac596c404ad8637755b766e792
+    cnb: 1cd2c86dc702da88a22dd1f038586952163f6350
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_external_sqlite/commit/07e1ddbfefbbd4ac596c404ad8637755b766e792
+    cnb: https://github.com/PocoF3Releases-Recovery/android_external_sqlite/commit/1cd2c86dc702da88a22dd1f038586952163f6350
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases/android_hardware_interfaces
   role: build_source
   source_tree_paths: []
   selected_ref: cnb
   refs:
-    cnb: ed0f0c941d637fd54b5374bc3bd34b64b9666f9b
+    cnb: 4dfca6cfcae8eca7aa6f362edde8fa19826cd68d
   commit_links:
-    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/ed0f0c941d637fd54b5374bc3bd34b64b9666f9b
+    cnb: https://github.com/PocoF3Releases/android_hardware_interfaces/commit/4dfca6cfcae8eca7aa6f362edde8fa19826cd68d
   observation: ROM publication is current; the active enhanced-recovery build selects the recovery-owned
     interfaces repository.
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces
@@ -320,9 +320,9 @@ repositories:
   - hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: 0fd4813ce4cc6d72c05c909ab01b6677299b5227
+    cnb: 9b8c13ee08195367e2dd1623e88a46a694e62119
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/0fd4813ce4cc6d72c05c909ab01b6677299b5227
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_interfaces/commit/9b8c13ee08195367e2dd1623e88a46a694e62119
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy
   role: build_source
@@ -330,9 +330,9 @@ repositories:
   - hardware/libhardware_legacy
   selected_ref: cnb
   refs:
-    cnb: d4c69230aa022d688f501979048c9364fa3ea099
+    cnb: 9daff824cade88955f64b5d158f8d37d555392fb
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy/commit/d4c69230aa022d688f501979048c9364fa3ea099
+    cnb: https://github.com/PocoF3Releases-Recovery/android_hardware_libhardware_legacy/commit/9daff824cade88955f64b5d158f8d37d555392fb
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_apex
   role: build_source
@@ -340,9 +340,9 @@ repositories:
   - system/apex
   selected_ref: cnb
   refs:
-    cnb: e3eb28fce97f9da2885508748b52660a27dca163
+    cnb: f0764b5cf7fc576a501ab8edc0e2085351a02d19
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_apex/commit/e3eb28fce97f9da2885508748b52660a27dca163
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_apex/commit/f0764b5cf7fc576a501ab8edc0e2085351a02d19
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_extras
   role: build_source
@@ -350,9 +350,9 @@ repositories:
   - system/extras
   selected_ref: cnb
   refs:
-    cnb: 63af18f0ddb4c9f1db538d0ed511536bc7deb73e
+    cnb: ec6dc3e90120f9cdc8b8b273f001e87af0d12325
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_extras/commit/63af18f0ddb4c9f1db538d0ed511536bc7deb73e
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_extras/commit/ec6dc3e90120f9cdc8b8b273f001e87af0d12325
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_hardware_interfaces
   role: build_source
@@ -360,9 +360,9 @@ repositories:
   - system/hardware/interfaces
   selected_ref: cnb
   refs:
-    cnb: 900a6c63b6d8944b31ecc011bd4483196e0ed7dc
+    cnb: f96e90a520d54d5cfe0293f2a9a2c07777f17e56
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hardware_interfaces/commit/900a6c63b6d8944b31ecc011bd4483196e0ed7dc
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hardware_interfaces/commit/f96e90a520d54d5cfe0293f2a9a2c07777f17e56
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_hwservicemanager
   role: build_source
@@ -370,9 +370,9 @@ repositories:
   - system/hwservicemanager
   selected_ref: cnb
   refs:
-    cnb: 138fca8c5c9edca555cf1440f4b18b5bbc701404
+    cnb: 4d227f23b4b91b1904c4af63681bc3c0f373ab8f
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hwservicemanager/commit/138fca8c5c9edca555cf1440f4b18b5bbc701404
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_hwservicemanager/commit/4d227f23b4b91b1904c4af63681bc3c0f373ab8f
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_incremental_delivery
   role: build_source
@@ -380,9 +380,9 @@ repositories:
   - system/incremental_delivery
   selected_ref: cnb
   refs:
-    cnb: 3fbcb7d4c7c98ea0d6a409504fb8e0779bc93017
+    cnb: 2bd0d18cf7ae41966582b93c7e3c097770842907
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_incremental_delivery/commit/3fbcb7d4c7c98ea0d6a409504fb8e0779bc93017
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_incremental_delivery/commit/2bd0d18cf7ae41966582b93c7e3c097770842907
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_keymaster
   role: build_source
@@ -390,9 +390,9 @@ repositories:
   - system/keymaster
   selected_ref: cnb
   refs:
-    cnb: 9dc5a09408336c0d7bdc83bc045f3531573e4693
+    cnb: 1a68a6b22bbb51447042eae2c353f9281455d6e3
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_keymaster/commit/9dc5a09408336c0d7bdc83bc045f3531573e4693
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_keymaster/commit/1a68a6b22bbb51447042eae2c353f9281455d6e3
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_libcppbor
   role: build_source
@@ -400,9 +400,9 @@ repositories:
   - system/libcppbor
   selected_ref: cnb
   refs:
-    cnb: bd018019d2e712e83328a1ad5f95133da6f64d85
+    cnb: 4de6616351d0d9bf59650dcbe73e72b23c77a4c7
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libcppbor/commit/bd018019d2e712e83328a1ad5f95133da6f64d85
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libcppbor/commit/4de6616351d0d9bf59650dcbe73e72b23c77a4c7
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_libhidl
   role: build_source
@@ -410,9 +410,9 @@ repositories:
   - system/libhidl
   selected_ref: cnb
   refs:
-    cnb: 10a321857eceab414a07a6408ead081bfac255d4
+    cnb: baf7a07f57fdeea4df1d18126e0b9ada13f2783c
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libhidl/commit/10a321857eceab414a07a6408ead081bfac255d4
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libhidl/commit/baf7a07f57fdeea4df1d18126e0b9ada13f2783c
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_librustutils
   role: build_source
@@ -420,9 +420,9 @@ repositories:
   - system/librustutils
   selected_ref: cnb
   refs:
-    cnb: cacfd0469ea731fb1b12daa383f27b340e8bbc82
+    cnb: 919d84458c81e5c144a5e373aeb1fe947ffe324b
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_librustutils/commit/cacfd0469ea731fb1b12daa383f27b340e8bbc82
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_librustutils/commit/919d84458c81e5c144a5e373aeb1fe947ffe324b
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_libvintf
   role: build_source
@@ -430,9 +430,9 @@ repositories:
   - system/libvintf
   selected_ref: cnb
   refs:
-    cnb: 22349bf996a54704dcd477bcc26e71c95456c3bc
+    cnb: f9beb4d0713b22b7afda414d73e0be5102fc7397
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libvintf/commit/22349bf996a54704dcd477bcc26e71c95456c3bc
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_libvintf/commit/f9beb4d0713b22b7afda414d73e0be5102fc7397
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_logging
   role: build_source
@@ -440,9 +440,9 @@ repositories:
   - system/logging
   selected_ref: cnb
   refs:
-    cnb: 6f9de22e6613036694ca6beaa762bbe2fdb20d1c
+    cnb: d29f49e8db151f88cb9d82794c9940b12f70a674
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_logging/commit/6f9de22e6613036694ca6beaa762bbe2fdb20d1c
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_logging/commit/d29f49e8db151f88cb9d82794c9940b12f70a674
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_security
   role: build_source
@@ -450,9 +450,9 @@ repositories:
   - system/security
   selected_ref: cnb
   refs:
-    cnb: beee58440c0da02645713a5a0590c9c6856802e4
+    cnb: 782168fe0ad3e36cf35dd53c4443f46e73bf6085
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_security/commit/beee58440c0da02645713a5a0590c9c6856802e4
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_security/commit/782168fe0ad3e36cf35dd53c4443f46e73bf6085
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy
   role: build_source
@@ -460,9 +460,9 @@ repositories:
   - system/sepolicy
   selected_ref: cnb
   refs:
-    cnb: c35aa6e550c9214f92faa7fb53724fc4981b9d27
+    cnb: 82e746fcc0b41d91a446d9effd4b0b595a6202f3
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/c35aa6e550c9214f92faa7fb53724fc4981b9d27
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_sepolicy/commit/82e746fcc0b41d91a446d9effd4b0b595a6202f3
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_server_configurable_flags
   role: build_source
@@ -470,9 +470,9 @@ repositories:
   - system/server_configurable_flags
   selected_ref: cnb
   refs:
-    cnb: 806ee037d5c2986fb916884d9ae3acc0a81f2eb3
+    cnb: f7e8f56cb94549d14f329eddc7bea0bc1c7cfcc5
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_server_configurable_flags/commit/806ee037d5c2986fb916884d9ae3acc0a81f2eb3
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_server_configurable_flags/commit/f7e8f56cb94549d14f329eddc7bea0bc1c7cfcc5
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_tools_aidl
   role: build_source
@@ -480,9 +480,9 @@ repositories:
   - system/tools/aidl
   selected_ref: cnb
   refs:
-    cnb: 828611a177921ba153271fcc01f67d206676bafc
+    cnb: a6f212cfd3939db4f214acf28431361aaa444940
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_tools_aidl/commit/828611a177921ba153271fcc01f67d206676bafc
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_tools_aidl/commit/a6f212cfd3939db4f214acf28431361aaa444940
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/android_system_vold
   role: build_source
@@ -490,9 +490,9 @@ repositories:
   - system/vold
   selected_ref: cnb
   refs:
-    cnb: 2484e9888a574f0bd71f51ae1eb787a500e69713
+    cnb: e110086ef9e36a3d67f7f3045ed0c395dbaadb28
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/android_system_vold/commit/2484e9888a574f0bd71f51ae1eb787a500e69713
+    cnb: https://github.com/PocoF3Releases-Recovery/android_system_vold/commit/e110086ef9e36a3d67f7f3045ed0c395dbaadb28
   local_a17: matches_selected_ref
 - repository: https://github.com/PocoF3Releases-Recovery/local_manifests
   role: build_source
@@ -500,9 +500,9 @@ repositories:
   - .repo/local_manifests
   selected_ref: cnb
   refs:
-    cnb: c21776df681566cec93192d3627916815063edef
+    cnb: 3bd120708f8b9db757e464eaf81e15604f906f0c
   commit_links:
-    cnb: https://github.com/PocoF3Releases-Recovery/local_manifests/commit/c21776df681566cec93192d3627916815063edef
+    cnb: https://github.com/PocoF3Releases-Recovery/local_manifests/commit/3bd120708f8b9db757e464eaf81e15604f906f0c
   observation: Published runner, XML and four mail patches match the live checkout; all three recovery
     overlay trees replay exactly.
 - repository: https://github.com/PocoF3Releases-Recovery/.github
@@ -519,10 +519,10 @@ workspace:
   local_overlays: Four published mail patches on three shared ROM repositories; local overlay heads are
     not public branch tips.
 verification:
-  evidence: evidence/source-refresh-20261120.md
-  scope: Published source ancestry, exact recovery overlays and clean Alioth user OTA verified. Device acceptance is pending.
+  evidence: evidence/source-refresh-20261128.md
+  scope: Maintained upstream ancestry, recovery replay and release-signed Alioth OTA verified.
   maintained_repositories_checked: 46
   published_heads_checked: 46
-  canonical_routes_zero_behind: 41
+  canonical_routes_zero_behind: 43
   build_routes_checked: 44
   metadata_followup: evidence/attribution-variants-20261114.md

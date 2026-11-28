@@ -31,7 +31,10 @@ the last upstream commit directly under our commits.
 
 ## What the verification guarantees
 
-- Every kept commit keeps its author, date and message.
+Replay project commits with the current Kyiv committer date. Preserve the author
+identity, author date, message and exact upstream commit objects.
+
+- Every kept commit keeps its author, author date and message.
 - Patches git found already upstream are dropped and counted.
 - Files changed only by us equal our old tip.
 - Files changed only upstream equal the new base.
